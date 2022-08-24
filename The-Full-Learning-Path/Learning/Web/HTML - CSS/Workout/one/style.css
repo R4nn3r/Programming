@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    display: flex;
+    align-items: flex-end;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ass {
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 200px;
+    border: 1px dashed green;
+
+}
+
+
+.container {
+    width: 300px;
+    padding: 5px;
+    margin: 7px 5px ;
+    /* border: 1px dashed green; */
+    border-radius: 5px;
+    background-color: rgba(0, 128, 0, 0.194);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+
+}
+
+.container:hover {
+    width: 305px;
+    padding: 7px;
+    margin: 8px 6px ;
+    border: 1px dashed green;
+    background-color: rgba(0, 128, 0, 0.194);
+    border-radius: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 5px 3px 5px rgb(0 0 0 / 32%)
+}
+
+
+.cat-photo {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.cat-photo img {
+    width: 45px;
+    display: block;
+    border-radius: 50%;
+}
+
+
+
+.cat-info {
+    display: inline-block;
+    margin-right: 40%;
+}
+
+.cat-name {
+    font-weight: 500;
+
+}
+
+.cat-username, .cat-status {
+    font-size: 12px;
+    color: gray;
+    font-weight: 500;
+}
+
+
+.cat-button {
+    display: inline-block;
+}
+
+.button {
+    border: 1px solid green;
+    background-color: green;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    transition: 0.4s ease-in-out;
+
+}
+
+
+.button:hover {
+    background-color: white;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: green;
+}
+
+
+
+
+/* Youtube part */
+
+.again {
+    border: 1px dashed red;
+    margin-right: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.video-card {
+    width: 350px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+}
+
+.thumbnail {
+    height: 94px;
+    width: 168px;
+    display: block;
+}
+
+.thumbnail-container,.video-info-grid  {
+    width: 100%;
+    vertical-align: top;
+}
+
+.thumbnail-container {
+    margin-right: 5px;
+}
+
+/* .video-time{
+    position: absolute;
+    bottom: 7px;
+    right: 4px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: 500;
+} */
+
+
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.channel-name, .video-stats {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #606060;
+}
+
+.channel-link {
+    color: #606060;
+}
+
+
+
+/* Another one lol */
+
+.again_ {
+    display: flex;
+    flex-direction: row;
+    border: 1px dashed orange;
+}
+
+
+.container_ {
+    margin: 5px;
+    width: 190px;
+    border: 1px dashed orange;
+
+}
+
+.photo img{
+    width: 100%;
+
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    margin: -7px 0;
+}
+
+.pic img {
+    width: 25px;
+    border-radius: 50%;
+    margin: 10px 9px 10px 0;
+}
+
+.cname {
+    font-size: 16px;  
+    font-weight: 500;
+}
+
+.username {
+    font-size: 10px;
+    color: #606060;
+}
+
+.button_1 {
+    margin: 10px 0;
+}
+
+.button_ {
+    background-color: rgba(140, 12, 12, 0.257);
+    padding: 2px 14px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.grid {
+    padding: 6px;
+    height: 95px;
+}

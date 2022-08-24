@@ -1,0 +1,6 @@
+#DataBase
+
+    To access mysql server on terminal
+        -> sudo mysql -u root -p
+            -> mynewpassword 
+            

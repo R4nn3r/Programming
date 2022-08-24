@@ -1,0 +1,43 @@
+HTML/CSS
+
+# Html structure Note 
+
+# Tag Reference
+
+    <html>	                Defines the root of an HTML document
+    <body>	                Defines the document's body
+    <h1> to <h6>            Defines HTML headings
+
+# Attributes
+
+    href        (<a href="https://www.w3schools.com" target="_blank">Visit W3Schools</a>) 
+                specifies the URL of the page the link goes to
+
+    src         (<img src="img_girl.jpg">)
+                specifies the path to the image to be displayed
+                    Absolute URL    src="https://www.w3schools.com/images/img_girl.jpg"
+                  # Relative URL    src="/images/img_girl.jpg"
+                
+    width and height    (<img src="img_girl.jpg" width="500" height="600">)
+                        provide size information for images
+
+    alt     (<img src="img_girl.jpg" alt="Girl with a jacket">)
+            tag specifies an alternate text for an image
+    
+    title       (<p title="I'm a tooltip">This is a paragraph.</p>)
+                Defines an extra information about the element (logo, icon, etc)
+
+# File Path 
+
+    Path	                                Description
+    <img src="picture.jpg">	The "           picture.jpg" file is located in the 
+                                            same folder as the current page
+    <img src="images/picture.jpg">	        The "picture.jpg" file is located in the 
+                                            images folder in the current folder
+    <img src="/images/picture.jpg">	        The "picture.jpg" file is located in the 
+                                            images folder at the root of the current web
+    <img src="../picture.jpg">	            The "picture.jpg" file is located in the 
+                                            folder one level up from the current folder
+
+# Button
+    <button type="button"> Click </button>

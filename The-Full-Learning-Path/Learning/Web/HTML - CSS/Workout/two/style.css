@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.cards {
+    padding: 5px;
+    margin: 100px;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.card {
+    background-color: rgb(250, 250, 210);
+    width: 270px;
+    margin: 0 150px 0 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.237);
+    margin: 5px;
+    padding: 25px;
+}
+
+.card a {
+    text-decoration: none;
+    color: rgb(255, 181, 9);
+}
+.card a:hover{
+    color: rgba(0, 0, 0, 0.716);
+}
+
+.name {
+    font-weight: 900;
+    color: #02152ec8;
+    font-size: 19px;
+}
+
+.state {
+    color: #02152ec8;
+    font-size: 14px;
+}
+
+.add_buy {
+    margin: 0;
+    padding: 20px 0;
+}
+
+.btn1, .btn_ {
+    color: #02152e;
+    padding: 10px;
+    margin: 0 10px 0 0;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    
+}
+
+.btn1 {
+    border: none;
+    height: 40px;
+    background-color:white;
+    border: 1px solid #ffb509;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn:hover {
+    background-color: #ffb509;
+    color: white;
+
+}
+
+.btn_ {
+    border: none;
+    height: 40px;
+    background-color: #ffb509;
+}
+
+
+.card_2 {
+    background-color: rgb(250, 250, 210);
+    width: 270px;
+    margin: 0 150px 0 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.237);
+    margin: 5px;
+    padding: 33px;
+}
+
+.Title {
+    font-weight: Bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+.ee_ {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    margin: -15px 0;
+    color: rgba(71, 71, 71, 0.753);
+}
+
+#info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin: 15px 0;
+    color: black;
+}
+
+.get {
+    margin: 45px 0;
+}
+
+.get_btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: BOld;
+    border-radius: 3px;
+    background-color: rgba(0, 128, 0, 0.793);
+    color: white;
+    border: 1px solid #00800050;
+    padding: 7px;  
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.get_btn:hover {
+    background-color: white;
+    color: #008000ca;
+    border: 1px solid #008000ca;
+}
+
+
+.card_3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(250, 250, 210);
+    width: 300px;
+    height: 251px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.237);
+    margin: 5px;
+    padding: 9px;
+}
+
+.box {
+    margin-top: 66px;
+}
+.state_{
+    margin: -10px;
+    color: orange;
+    font-size: 11px;
+}
+
+.Title_ {
+    font-weight: Bold;
+    color: #000000d7;
+    font-size: 16px;
+}
+
+.eee_ {
+    color: #000000d7;
+    font-size: 25px;
+    margin: -25px;
+}
+
+#info_ {
+    font-weight: normal;
+    font-size: 13px;
+    margin: -21px 0;
+    color: #000000a9;
+}
+
+.get2 {
+    margin: 45px 0;
+}
+
+.get_btn2 {
+    font-size: 13px;
+    font-weight: BOld;
+    width: 70px;
+    border-radius: 20px;
+    background-color: #008de5;
+    color: white;
+    border: 1px solid #008de5;
+    padding: 10px;  
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.get_btn2:hover {
+    background-color: white;
+    color: #008de5;
+    border: 1px solid #008de5;
+}
+
+
+.card_4 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(250, 250, 210);
+    width: 300px;
+    height: 251px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.237);
+    margin: 5px;
+    padding: 9px;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    margin: -19px 0;
+    padding: 0;
+}
+
+.price__ {
+    color: #a7a7a7db;
+    font-size: 16px;
+}
+
+.time {
+    font-size: 13px;
+    color: rgba(37, 124, 37, 0.745);
+}
+
+.hour {
+    font-size: 13px;
+    color: #5a5a5aea;
+}
+
+.hp {
+    color: rgba(255, 47, 47, 0.86);
+}
+
+
+.card_ {
+    margin: 10px;
+}
+
+.card-1 {
+    margin: 28px -13px;
+    padding: 10px;
+    width: 278px;
+}
+
+.first {
+    width: 115px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 15px;
+    margin: 5px 0;
+    border: 1px solid gray;
+    border-radius: 3px;
+
+}
+.second
+{
+    width: 115px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 15px;
+    margin: 5px 0;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+
+.email {
+    padding: 10px;
+    font-size: 15px;
+    display: block;
+    margin: 5px 0;
+    width: 92%;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.btn {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.552);
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

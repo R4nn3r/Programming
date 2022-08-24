@@ -1,0 +1,1765 @@
+# (Function) 
+
+    Function -> Arguments -> side effect
+    
+    
+    
+    print(object(s), separator=separator, end=end, file=file, flush=flush) 
+
+# Data Types and variables (Assigning)
+    -> Data Types
+            int = 0 , 1, ... numbers
+            string = "string",'one',"1"
+            bool = true or false
+            float = 0.1, 0.4, ... n.numbers  
+
+        Types Data in Python 
+            - numbers
+            - Strings
+            - tuple 
+            - list
+            - Dictionary
+            
+    -> variables
+            name = "name"
+            print (name)
+            or
+            print ("your name is" + str(name))
+
+    -> initializing variable directly
+            a = 5
+            
+            # printing value of a
+            print ("The value of a is: " + str(a))
+
+    -> Initializing variables using Conditional Operator
+            a = 1 if 20 > 10 else 0
+            
+            # Printing value of a
+            print("The value of a is: " , str(a))
+
+# Inputs and Outputs 
+    ->  input ( prompt )
+        print(output)
+        or
+        print("Whats your name? ")
+        name = input()
+        print("hi", name)
+
+        val = input("What is your name? ") // input
+        print ("Your Name is cool "+ str(val)) // output
+
+
+        NOTE:
+            input() converts the input into a string so to convert to a int
+                x = input("Enter Number One: ")
+                y = input("Enter Number Two: ")          
+
+                print("Type of x:" ,type(x))
+                x = int(x) 
+                y = int(y)    
+
+                z = x + y
+
+                print("Type of x:" ,type(x))      
+                print ("Sum: " , z)
+  
+# Operators 
+        +
+        -
+        *
+        /
+        ** -> exponential
+        // -> integer division 64 // 10 = 6 floor division results a whole number adjusted to the left
+        %  -> reminder 64 // 10 = 4
+
+    -> Membership Operator
+
+        - in 	
+            Returns True if a sequence with the specified 
+            value is present in the object	x in y	
+            
+                Eg. 
+                    x = ["apple", "banana"]
+
+                    print("banana" in x)
+
+            
+        - not in	
+            Returns True if a sequence with the specified
+            value is not present in the object	x not in y
+            
+                Eg.
+                    x = ["apple", "banana"]
+
+                    print("pineapple" not in x)
+
+# Flow (nested & chain) Conditionals 
+    Conditions 
+        -> (>, >=, <, <=, ==, !=)
+
+    -> if
+        if condition:
+            statement1
+        statement2
+
+        # Here if the condition is true, if block 
+        # will consider only statement1 to be inside 
+        # its block.
+
+
+    -> if-else
+        if (condition):
+            # Executes this block if
+            # condition is true
+        else:
+            # Executes this block if
+            # condition is false
+        
+    -> if-elif-else ladder
+        if (condition):
+            statement
+        elif (condition):
+            statement
+        .
+        .
+        else:
+            statement
+
+            example::
+                    height = input("Enter Your Height pls (meters 1.00 format): ")
+                    x = float(height)
+
+                    if x >= 1.88:
+                        print("Sorry your too tall. good for the ladies tho")
+                    elif x >= 1.55 and x <= 1.87:
+                        print ("Have a great time.")
+                    elif x > 0 and x <= 1.54:
+                        print("Sorry to short. maybe read those books")
+                    else:
+                        print("No service")
+    -> or, and, not
+
+    # Demonstrates chained comparisons
+
+    score = int(int("score: "))
+
+    if 90 <= score <= 100:
+        print("A")
+    elif 80 <= score <= 90:
+        print("B")
+    else:
+        print("F")    
+        
+    # Demonstrates fewer comparisons
+    
+    if score >= 90:
+        print("A")
+    elif score >= 80:
+        print("B")
+    else:
+        print("F")    
+        
+# Loops
+    -> For Loops
+        for _ in range(50):
+            print("meow")
+                -> Note: if your not gonna use the variable used 
+                        for counting then you can use _
+                
+        Note: In Python, for loops only implements the collection-based iteration.    
+        
+        for <variable> in range(start,stop,step):
+            <expression>
+            <expression>
+            
+        for x in range(start, stop, step): -> start, condition, update
+            print(x)
+        NOTE: 
+            by default the range can take a single number and tha will be the 
+            STOP condition the START will be 0 and the STEP will be 1
+        
+                -> For Loop using List, Dictionary, String
+                        # Iterating over a list
+                            print("List Iteration")
+                            l = ["geeks", "for", "geeks"]
+                            for i in l:
+                                print(i)
+                        
+                        # Iterating over a tuple (immutable)
+                            print("\nTuple Iteration")
+                            t = ("geeks", "for", "geeks")
+                            for i in t:
+                                print(i)
+                            
+                        # Iterating over a String
+                            print("\nString Iteration")
+                            s = "Geeks"
+                            for i in s:
+                                print(i)
+                        
+                        # Iterating over dictionary
+                        print("\nDictionary Iteration")
+                            d = dict()
+                            d['xyz'] = 123
+                            d['abc'] = 345
+                            for i in d:
+                                print("% s % d" % (i, d[i]))
+
+    -> While Loops
+
+            while expression:
+                statement(s)
+
+        Example
+
+            count = 0
+            while (count < 3):
+                count = count + 1
+                print("Hello Man")
+
+        # Single statement while block
+            count = 0
+            while (count < 5): count += 1; print("Hello Man")
+
+        -> While loop with else
+
+            # while-else loop
+                i = 0
+                while i < 4:
+                    i += 1
+                    print(i)
+                else:  # Executed because no break in for
+                    print("No Break\n")
+                
+                i = 0
+                while i < 4:
+                    i += 1
+                    print(i)
+                    break
+                else:  # Not executed as there is a break
+                    print("No Break")
+
+
+
+
+
+    -> ## Loop Control Statements
+
+        Continue Statement
+            Note: Python Continue Statement returns the control to the beginning 
+                  of the loop.
+
+                Example
+                    # Prints all letters except 'e' and 's'
+                        i = 0
+                        a = 'Yonatanafewerk's'
+                        
+                        while i < len(a):
+                            if a[i] == 'e' or a[i] == 's':
+                                i += 1
+                                continue
+                                
+                            print('Current Letter :', a[i])
+                            i += 1
+
+        Break Statement
+            Note: Python Break Statement brings control out of the loop.
+
+        Pass Statement
+            Note: Pass is also used for empty control statements, 
+                  functions, and classes.
+
+# Lists, Tuples, dicts and how to work with them 
+
+        -> Lists are just like dynamically sized arrays amd are indexed 0-n
+        
+            NOTE: Lists need not be homogeneous always which makes it the most powerful 
+            tool in Python. A single list may contain DataTypes like Integers, Strings, 
+            as well as Objects. Lists are mutable, and hence, they can be altered even 
+            after their creation.
+            
+        # (Having duplicate values)
+            List = [1, 2, 4, 4, 3, 3, 3, 6, 5]
+            
+        # mixed type of values
+        # (Having numbers and strings)
+            List = [1, 2, 'Geeks', 4, 'For', 6, 'Geeks']
+            
+            -> How to find the size of the list?
+                    - len(list_name)
+                    
+                    Eg. 
+                        fruits = ["orange", "apple", "banana", "lemon", 22022]
+
+                        print(len(fruits))
+
+                        for i in range(len(fruits)):
+                            print(fruits[i])
+                            
+            -> Using append() method
+            Elements can be added to the List by using the built-in append() function. Only one 
+            element at a time can be added to the list by using the append() method, for the addition
+            of multiple elements with the append() method, loops are used
+
+                        fruits.append('Mango')
+                        fruits.append('Jelbo')
+                        fruits.append('Pineapple')
+
+                            
+            -> Using insert() method
+            insert() method is used. Unlike append() which takes only one argument, the insert()
+            method requires two arguments(position, value).
+
+                        fruits.insert(0, 'Pine')
+                        fruits.insert(1, 'Papaye')
+            -> Using extend() method
+            extend(), this method is used to add multiple elements at the same time at the 
+            end of the list.
+
+                        fruits.extend(['one', 'two', 'three'])
+                
+            -> Accessing elements from the List
+            In order to access the list items refer to the index number. Use the index operator [ ] 
+            to access an item in a list. The index must be an integer. Nested lists are accessed 
+            using nested indexing.    
+                    -> iteration by item
+                        for i in fruits
+                            print(i)
+                              
+                    -> Negative indexing  
+                        Instead of having to compute the offset as in List[len(List)-3], it is enough
+                        to just write List[-3]. Negative indexing means beginning from the end, -1 
+                        refers to the last item, -2 refers to the second-last item, etc.
+                        
+                        for i in range(len(fruits)):
+                            print(fruits[-i])
+                            
+            -> Using remove() method
+            Elements can be removed from the List by using the built-in remove() function but an 
+            Error arises if the element doesn’t exist in the list.
+            
+            -> Using pop() method
+            Pop() function can also be used to remove and return an element from the list, but by 
+            default it removes only the last element of the list, to remove an element from a 
+            specific position of the List, the index of the element is passed as an argument to 
+            the pop() method
+                        fruits.pop()    # default removing of the last element of the list
+
+                        for i in range(1,6):
+                            fruits.pop(i)   # specified position of the element are removed
+                  
+                  
+                  
+        -> Dictionary
+            Eg. 
+            students = {
+                "Hermione":"Gryffindor",
+                "Harry":"Gryffindor",
+                "Ron":"Gryffindor",
+                "Draco":"Slytherin", 
+            }
+           
+            for i in students:
+                print(i, students[i], sep =", ")
+                
+                eg, lists with dictionary
+                
+                    students = [
+                        {"Name": "Hermione", "House":"Gryffindor","Patronus":"Otter"},
+                        {"Name": "Harry", "House":"Gryffindor","Patronus":"Stag"},
+                        {"Name": "Ron", "House":"Gryffindor","Patronus":"Jack Russell terrier"},
+                        {"Name": "Draco", "House":"Slytherin","Patronus": None},
+                    ]
+
+                    for i in students:
+                        print(i["Name"], i["House"], i["Patronus"], sep = ", ")
+    
+# Strings 
+
+         Note:
+            #string concatenation (putting strings togthere can be done in different ways)
+            
+            engineer = "" #some string assigned to the variable
+            
+            # a few ways to do it
+            print("Is your name engineer " + engineer) 
+            print("Is your name engineer {}".format(engineer))
+            print(f"Is your name engineer {engineer}")
+
+        String formatting 
+            num = 6
+            str = "i have {} Books!" . format(num)
+            print(str)
+            
+        common string Operators (For a = hello and b = world)
+            concatenation       a + b
+            Repetition          a*amount_in_number
+            slice               a[1] -> e
+            Range Slice         b[1:3] -> takes the cha from index value 1 - 3
+                                b[start:stop:step]
+            Insert slice        b[1:2] = 'Added'    # on to lists
+            Membership          [r]
+                     
+# String methods
+                name = '  Yonatan Afewerk  '
+                name2 = "   Yonatan afewerk teshome  ".strip().title()
+                name3 = input("  hello, world!   ").title().strip()
+
+                strip()
+                    It Removes every space before and after the string 
+                    print(name.strip()) #output     - Yonatan Afewerk
+                    
+                len() 
+                    It gives you length of the string
+                    print(len(name))   #output      - 19 
+                    
+                split()
+                    Takes a delimiter and splits the string starting from it
+                    print(name.split('o')) #output  - ['  Y', 'natan Afewerk  ']
+
+                    NOTE: Default on split() is a 'space'
+                title()
+                capitalize()
+                
+                replace("oldvalue", "newvalue")
+
+# File Handling 
+
+    open() function
+        File_object = open(r"File_Name", "Access_Mode")
+
+    Note: The file should exist in the same directory as the Python script, 
+    otherwise full address of the file should be written. 
+
+        file = open('geek.txt', 'r')
+        // statement(s)
+        file.close()
+
+
+    NOTE:
+        if you want to close the file in the pythonic way use 
+       
+                name = input("Enter Name: ")
+
+                with open("name.txt", 'a') as file:
+                    file.write(f"{name}\n")
+
+
+                with open("name.txt", 'r') as file:
+                    lines = file.readlines()
+
+                for line in lines:
+                    print(f"hello, {line.strip()}")
+
+        how to store info in file the read it store it in memory and use it
+
+                names = []
+                # with open("name.txt", 'a') as file:
+                #     file.write(f"{name}\n")
+
+
+                with open("name.txt", 'r') as file:
+                    for line in file:
+                        names.append(line.strip())
+
+
+                for name in sorted(names, reverse=True):
+                    print(f"hello, {name}")
+
+
+
+
+            Where the following mode is supported:
+
+            r: open an existing file for a read operation.
+            w: open an existing file for a write operation. If the file already contains some data then it will be overridden.
+            a:  open an existing file for append operation. It won’t override existing data.
+            r+:  To read and write data into the file. The previous data in the file will be overridden.
+            w+: To write and read data. It will override existing data.
+            a+: To append and read data from the file. It won’t override existing data.
+
+
+        read() mode
+            use file.read()
+
+                # Python code to illustrate read() mode
+                file = open("file.txt", "r")
+                print (file.read())
+
+                            
+                # Python code to illustrate read() mode character wise
+                file = open("file.txt", "r")
+                print (file.read(5))
+
+
+        write() mode
+
+            write() :   Inserts the string str1 in a single line in the text file.
+                        File_object.write(str1)
+
+            writelines() :  For a list of string elements, each string is inserted in the text file. Used to insert multiple strings at a single time.
+                            File_object.writelines(L) for 
+                            L = [str1, str2, str3]
+
+            file = open('file.txt', 'w')
+            file.write("This is the write command")
+            file.write("It allows us to write in a particular file")
+            file.close()
+
+            l = ['1. Hello World','2. Hello World','3. Hello World']
+
+            file = open('file.txt', 'a')
+            file.writelines(l)
+            file.close()
+
+        append() mode
+
+            file = open('file.txt', 'a')
+            file.write("\nThis is the write append 2 command")
+            file.write("It allows us to append txt in a particular file")
+            file.close()
+
+        split() using file handling
+
+            file = open('file_.txt', 'w')
+            file.write("Yonatan Afewerk Teshome Degefu Hayele Shenkuti")
+            file.write("\nLeading The tech world directly from Africa")
+            file.close()
+
+
+            with open('file_.txt', 'r') as file:
+                data = file.readlines()
+                for line in data:
+                    print(line.split())
+                    
+
+
+        Using a CSV a comma separated text file saved as File_Name.csv
+            NOTE: you can do it without using a dict as well
+            # name = input("Enter Name: ")
+            from audioop import reverse
+            names = {}
+            # with open("name.txt", 'a') as file:
+            #     file.write(f"{name}\n")
+
+
+            with open("name.csv") as file:
+                for line in file:
+                    line.rstrip()
+                    key, value = line.split(',')
+                    names[key] = value
+
+            for i in names:
+                print(f"{i} is in {names[i].rstrip()}")
+
+
+
+            how to use dicts and sort them usign a funciton and the 
+            key arg in sort() and using lambda
+
+            Ron,The Burrow
+            Draco,Malfoy Manor
+            Draco,Malfoy Manor
+    
+
+            students = []
+
+            with open("students.csv") as file:
+                for line in file:
+                    name , house = line.rstrip().split(',')
+                    student = {"Name":name , "House":house}
+                    students.append(student)
+                    
+            for student in sorted(students, key=lambda _: student['Name']):
+                print(f"{student['Name']} is in {student['House']}")
+
+
+            how to write and read using CSV module for better and adaptable code 
+
+            name,home
+            Ron,The Burrow
+            Draco,Mallow Manor
+            Harry,"Number Four,Privet Drive"
+
+                import csv
+                students = []
+
+                name = input("Name: ")
+                home = input("Home: ")
+
+                with open('student_.csv' , 'a') as file:
+                    writer = csv.DictWriter(file, fieldnames=['name', 'home'])
+                    writer.writerow({"name":name, "home":home})
+                    
+                    
+                with open('student_.csv') as file:
+                    reader = csv.DictReader(file)
+                    for row in reader:
+                        students.append({"Name":row["name"], "Home":row["home"]})
+                        
+
+                for student in sorted(students, key=lambda student: student['Name']):
+                    print(f"{student['Name']} is in {student['Home']}")
+
+# Modular Programming 
+    ->  is a block of related statements designed to perform a computational, 
+        logical, or evaluative task. 
+        
+            How do you create a function
+                def function_name(parameters):
+                    """docstring"""
+                    statement(s)
+                    return expression
+                    
+                Eg.
+                    # defining a function
+                    def fun():
+                        print("Fun function")
+                    
+                    #calling a function 
+                    fun()
+                    
+                    # defining a function
+                    def evenOdd(x):
+                        if (x % 2 == 0):
+                            print("even")
+                        else:
+                            print("odd")
+ 
+                    # Driver code to call the function
+                    evenOdd(2)
+                    evenOdd(3)
+            
+            How to structure functions 
+                eg.
+                 
+                Type 1
+                        define a function 
+                        call a function 
+                Type 2
+                        def main() function to drive the user defind functions
+                        def user() functions second
+                        call main()
+                            
+                            Eg.
+                                #defining a main()
+                                def main():
+                                    odd_even(4)
+                                    odd_even(5)
+                                #defining the users function
+                                def odd_even(x):
+                                    if (x % 2 == 0):
+                                        print("Even!")
+                                    elif (x % 2 == 1):
+                                        print("Odd!")
+                                    else:
+                                        print("Zero!")
+                                # calling the main function
+                                main()
+                        
+                                    
+    ->  Types of Arguments    
+
+            Default arguments
+                    A default argument is a parameter that assumes a default value 
+                    if a value is not provided in the function call 
+                    for that argument.
+
+            Keyword arguments
+                    The idea is to allow the caller to specify the argument name 
+                    with values so that caller does not need to remember the 
+                    order of parameters.
+
+            Docstring
+                    first string after the function is called the Document string or 
+                    Docstring in short. This is used to describe the functionality 
+                    of the function.
+
+            The return statement
+                    def square_value(num):
+                        """This function returns the square
+                        value of the entered number"""
+                        return num**2
+
+
+                    print(square_value(2))
+                    print(square_value(-4))
+
+# Global and Local variables 
+    GLobal 
+        These are variables that can be used across the 
+        program within all the function that may have been created. 
+
+    Local Variables
+        Only works in the function that has directly created it
+        wont work outside of the function 
+
+    
+    Tip: For the proposes of modular programming make sure to use 
+    local variables for function
+
+        + To use variables that are global within functions use the 
+          "global key"
+
+        
+    var = 10
+    lol = True
+
+    def fun():
+        global var
+
+        var = 11
+
+    fun()
+    print(var) -> Out put will be 11
+
+# Exception Handling using the (Try statement)
+    Error in Python can be of two types i.e. Syntax errors and Exceptions. Errors are the problems 
+    in a program due to which the program will stop the execution. On the other hand, exceptions are 
+    raised when some internal events occur which changes the normal flow of the program.
+        Exceptions: Exceptions are raised when the program is syntactically correct, but the code resulted 
+                    in an error. This error does not stop the execution of the program, however, it changes 
+                    the normal flow of the program.
+                    
+        NOTE:
+            Handling Exceptions with Try/Except/Finally 
+            We can handle errors by the Try/Except/Finally method. 
+                we write unsafe code in the try, 
+                fall back code in except and 
+                final code in finally block.
+                    
+                    
+
+        -> Try and Except Statement
+                syntax: 
+                
+                try:
+                    # Some Code
+                except:
+                    # Executed if error in the
+                    # try block
+                    
+                    -> Eg.
+                        try:
+                            # statement(s)
+                        except IndexError:
+                            # statement(s)
+                        except ValueError:
+                            # statement(s)
+
+                                        try:
+                                            x = int(input("Enter X: "))
+                                        except ValueError:
+                                            print("Invalid input")    :
+
+        -> Try with Else Clause
+
+                    syntax:
+                        try:
+                            # Some Code
+                        except:
+                            # Executed if error in the
+                            # try block
+                        else:
+                            # execute if no exception
+                    
+                        Eg.
+                            while True:
+                                try:
+                                    x = int(input("Enter X:"))
+                                except ValueError:
+                                    print("Please Enter only int's")
+                                else:
+                                    print(f"x = {x}")
+                                    break
+                                    
+                                or
+                        
+                            while True:
+                                try:
+                                    x = int(input("Enter X:"))
+                                    break
+                                except ValueError:
+                                    print("Please Enter only int's")
+                                    continue
+                                print(f"x = {x}")
+                    
+                    
+                    
+                    
+                    
+                    Eg: 
+                        try:
+                            # statement(s)
+                        except ZeroDivisionError:
+                            # statement(s)
+                        else:
+                            # statement(s)
+
+        -> Finally Keyword
+            syntax Eg: 
+                try:
+                    # Some Code.... 
+                except:
+                    # optional block
+                    # Handling of exception (if required)
+                else:
+                    # execute if no exception
+                finally:
+                    # Some code .....(always executed)
+                    
+                    
+                    
+            Some of the common built-in exceptions are other than above mention exceptions are:
+            
+                    Exception	            Description
+                    
+                    IndexError	            When the wrong index of a list is retrieved.
+                    AssertionError	        It occurs when the assert statement fails
+                    AttributeError	        It occurs when an attribute assignment is failed.
+                    ImportError	            It occurs when an imported module is not found.
+                    KeyError	            It occurs when the key of the dictionary is not found.
+                    NameError	            It occurs when the variable is not defined.
+                    MemoryError	            It occurs when a program runs out of memory.
+                    TypeError	            It occurs when a function and operation are applied in an incorrect type.
+                    
+        Note:
+        def main():
+            x = get_int("Enter x: ")
+            
+            print(f"x = {x}")
+
+        def get_int(prompt):
+            while True:
+                try:
+                    return int(input(prompt))
+                except ValueError:
+                    pass # you can use "continue" as well
+        main()
+
+        
+        -> EOFError handling 
+                Note: 
+                    while True:
+                        try:
+                            o_in = input(prompt).title()
+                            if o_in in order_list:
+                                total_p += order_list[o_in]
+                                print(f'Total: ${total_p:.2f}')
+                        except EOFError:
+                        break
+                    
+# Libraries
+    is a collection of related modules. It contains bundles of 
+    code that can be used repeatedly in different programs
+    
+    
+    # Importing math library works like this 
+    import math
+    
+    A = 16
+    print(math.sqrt(A))
+    
+    # Importing specific items
+    from math import sqrt, sin
+    
+    A = 16
+    B = 3.14
+    print(sqrt(A))
+    print(sin(B))
+
+
+    import statistics
+
+    num = [100, 100, 50, 50, 100]
+
+    print(statistics.mean(num))
+
+    -> The Random module
+
+            implements pseudo-random number generators for various distributions.
+                EG. use random.chose for a single value from a list
+            
+                Eg. (choices)
+            
+                import random 
+                colors = ["Red","Yellow","Green"]
+                                                                    - amount to be picked set in k
+                results = random.choices(colors, weights = [15,15,2], k = 5)
+                                                - chance of getting picked
+                Eg. (randint)
+                
+                num = random.randint(1, 5) -> chosen randomly through and also includes the 1,5
+
+                Eg. shuffle(x[, random])
+                    - shuffles inside the list it self but not into a variable 
+                    
+                Eg. sys
+                
+                import sys
+
+                n = len(sys.argv)
+
+                for i in sys.argv[1:]:
+                    print(f"He, {i}")
+                    print("He, He")
+        -> the sys (Takes argument from the terminal ) and cowsay library
+        
+        import cowsay 
+        import sys
+
+        if len(sys.argv) == 2:
+            cowsay.trex("Hello, " + sys.argv[1])
+            
+        
+        
+        -> using the request module 
+        Python requests module has several built-in methods to make Http requests to specified 
+        URI using GET, POST, PUT, PATCH or HEAD requests. 
+
+        Method	        Description
+
+        GET	            method is used to retrieve information from the given server using a given URI.
+        POST	        request method requests that a web server accepts the data enclosed in the 
+                        body of the request message, most likely for storing it
+        PUT	            method requests that the enclosed entity be stored under the supplied URI. 
+                        If the URI refers to an already existing resource, it is modified and if the URI 
+                        does not point to an existing resource, then the server can create the resource 
+                        with that URI.
+        DELETE	        method deletes the specified resource
+        HEAD	        method asks for a response identical to that of a GET request, but without 
+                        the response body.
+        PATCH	        It is used for modify capabilities. The PATCH request only needs to contain the changes to 
+                        the resource, not the complete resource
+                
+            - GET
+                 method is used to retrieve information from the given server using a given URI
+                 
+                 requests.get(url, params={key: value}, args)
+
+          - Response object
+            When one makes a request to a URI, it returns a response. This Response object in terms of 
+            python is returned by requests.method(), method being – get, post, put, etc. Response is a 
+            powerful object with lots of functions and attributes that assist in normalizing data or 
+            creating ideal portions of code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        eg. 
+            import requests 
+            import sys 
+            (from sys import argv, exit)
+            import json
+
+            if len(sys.argv) != 2: 
+            (you can use argv only since u import argv directly from sys)
+                sys.exit(1) (exit(1))
+                
+            Note: edit the list limit to get more response's 
+            response = requests.get(f"https://itunes.apple.com/search?entity=song&limit=1&term={sys.argv[1]}")
+
+            # print(json.dumps(response.json(), indent = 2))
+
+            o = response.json()
+
+            for result in o["results"]:
+                print("Track Name: ",result["trackName"])
+                print("Artist Name: ", result["artistName"])
+                print("Album Name: ",result["collectionName"])
+                print("Preview: ",result["previewUrl"])
+
+# Unit Testing 
+    
+    Import the function to test within the test_ file
+
+    using the assert method (the print function need to be inside 
+    the main function)
+
+    eg.
+
+        from twttr import shorten
+
+
+        def main():
+            test_twttr()
+            
+        def test_noreplacment():
+            assert shorten("twttr") == "twttr"
+
+        def test_lower():
+            assert shorten("twitter") == "twttr"
+
+        def test_upper():
+            assert shorten("TWITTER") == "TWTTR"
+            
+        def test_numbers():
+            assert shorten("0") == "0"
+            assert shorten("123") == "123"
+            assert shorten("-1") == "-1"
+            
+        def test_punctuation(): 
+            assert shorten("twitter,") == "twttr,"
+            
+
+        if __name__ == "__main__":
+            main()
+
+# GUI 
+
+    Tkinter ...  
+        from tkinter import *
+
+        # Window instance 
+            root = Tk()
+            root.title('Window Name')
+            root.configure(bg='color name')
+
+            root.geometry('1000x500')
+            root.resizable('False','False')
+
+
+            -> using class layout 
+                from tkinter import *
+
+
+                    # the calculations happens here
+
+                class root(Tk):
+                    def __init__(self):
+                        super(root, self).__init__()
+                    # the tkinter design  
+                        self.title('Calculator v.0.0')
+                        self.minsize(500,400)
+                            
+                    # text box for the output
+
+
+
+                root = root()
+                root.mainloop()
+
+        # Create Label
+            label_name = Label(root, text='Label Name', font=("font_name",10)).place(x=0,y=0)
+
+            -> if you want entry box after the label
+
+                label_name = Label(root, text='Label Name', font=("font_name",10)).place(x=0,y=0)
+                label_entry = Entry(root, font=("font_name",10), width=15).place(x=0,y=0))
+  
+        # Layout Managers
+            
+                # for simple layout
+            pack()
+
+                Pack geometry manager packs widgets relative to the earlier widget. 
+                Tkinter literally packs all the widgets one after the other in a window.  
+                We can use options like fill(X,Y,BOTH), expand(1,0), and side(left,right,top,bottom) to control this geometry 
+                manager.
+
+                # most used layout
+            grid(row = 0, column = 0, sticky = W, pady = 2`)
+
+                # not used that much
+            place(x=10,y=10), y=10
+
+        # Create Button
+            from tkinter import ttk
+
+            button_name = ttk.Button(root, text='Button' font=("font_name",10), command=connect_function).place(x=0,y=0)
+       
+        # Create TextBox
+            
+                # how to create and store data from the entry/ TextBox
+
+            label_ = Label(self, text="Name")
+            label_.grid(column=0,row=4)
+            entry = ttk.Entry(self, font=self.labelFont, width=20)
+            entry.focus() -> to get the writer in the box 
+            entry.grid(column=1,row=4)
+
+
+                -> to get the data 
+            entry.get() (from specific function to access the input)
+
+        # Create ComboBox
+
+            from tkinter.ttk import *       
+
+                combo = Combobox(root, width=20)
+                label_ = Label(root, text='ComboBox', font=("font_name",10)).place(x=0,y=0)
+                combo['values']= (1,2,3,4,5,'values')
+                combo.current(5) -> for the default value's index
+                combo.place(x=0,y=0)
+
+        # Create RadioButton
+
+            rad1 = ttk.Radiobutton(self, text='Red', value=1)
+            rad1.grid(column=0,row=6) -> Tip if u actually use the data use this structure
+             
+            rad1 = ttk.Radiobutton(self, text='Yellow', value=2).grid(column=1, row=6)
+            rad1 = ttk.Radiobutton(self, text='Black', value=3).grid(column=2, row=6)
+
+        # Create CheckButton
+
+            rad1 = ttk.Checkbutton(self, text='Red')
+            rad1.grid(column=0,row=6) -> Tip if u actually use the data use this structure
+             
+            rad1 = ttk.Checkbutton(self, text='Yellow').grid(column=1, row=6)
+            rad1 = ttk.Checkbutton(self, text='Black').grid(column=2, row=6)
+
+        # Create ScrollTextControl
+
+                from tkinter import scrolledtext
+
+                    scrollText = st.ScrolledText(self, width=30, height=10, wrap=WORD)
+                    scrollText.grid(column=0, row=8)
+
+        # Create LabelFrame
+
+            Use LabelFrame widget to group related widgets into one group.
+            Use ttk.LabelFrame(container, **option) to create a LabelFrame widget.
+
+                    # Labelframe (create frames with the instance and create widgets within the frame)
+                
+                Labelframe = ttk.Labelframe(self, text='Label Frame')
+                Labelframe.grid(column=0, row=9, padx=20, pady=40)
+                
+                ttk.Label(Labelframe, text="one").grid(column=0,row=0, pady=20, padx=20)
+                ttk.Label(Labelframe, text="two").grid(column=0,row=1 , pady=20, padx=20)
+                ttk.Label(Labelframe, text="three").grid(column=2,row=0 , pady=20, padx=20)
+                ttk.Label(Labelframe, text="four").grid(column=2,row=1 , pady=20, padx=20)
+                
+                    # Scroll text with in label frame
+                
+                scrollText = st.ScrolledText(Labelframe, width=30, height=10)
+                scrollText.grid(column=3, row=0)
+            
+        # Create Menu and Menuitems
+
+                menuBar = Menu(self)
+                self.config(menu = menuBar)
+                
+                file_menu = Menu(menuBar, tearoff=0)
+                menuBar.add_cascade(label='File', menu= file_menu)
+                file_menu.add_command(label='New')
+                file_menu.add_command(label='Exit')
+                file_menu.add_separator()
+                file_menu.add_command(label='Open')
+                
+                help_menu = Menu(menuBar, tearoff=0)
+                menuBar.add_cascade(label='Help', menu=help_menu)
+                help_menu.add_command(label='About')    
+                
+        # Create Menu Commands
+
+            menuBar = Menu(root)
+            root.config(menu = menuBar)
+
+            file_menu = Menu(menuBar, tearoff=0)
+            menuBar.add_cascade(label='File', menu=file_menu)
+            file_menu.add_command(label='Exit', command=root.destroy) 
+            (you can use other function as well)
+            file_menu.add_separator()
+
+        # Create Tab widget and adding widgets to tab
+
+                tab_control = ttk.Notebook(root)
+                tab1 = ttk.Frame(tab_control)
+                tab_control.add(tab1, text = 'Tab 1')
+
+                tab2 = ttk.Frame(tab_control)
+                tab_control.add(tab2, text = 'Tab 2')
+
+                tab_control.pack(expand=1, fill=BOTH)
+
+
+                Label(tab1, text = 'This from Tab 1').pack()
+                Label(tab2, text = 'This from Tab 2').pack()
+
+        # Create MessageBox
+                  ->  from tkinter import messagebox
+                 
+
+            button = ttk.Button(root, text='Click', command=message).pack()
+
+
+            def message(): 
+                messagebox.showinfo('Tab name', 'Message')          
+
+        # Create Multi ChoiceBox
+            from tkinter import messagebox
+
+                answer = messagebox.askyesnocancel('?', 'Do you want to retry').pack()
+        
+                if answer == True:
+                    self.destroy
+                else:
+                    print('Great')
+
+        # Create Create SpinBox
+
+                    spin = Spinbox(self, from_= 0 , to = 100).pack()
+
+        # Create Create Canvas adding image to the canvas
+               
+                from PIL import ImageTk, Image
+
+            canvas = Canvas(self, bg='yellow', height=450, width=300)
+            coord = 10, 50, 240, 210
+            canvas.pack(expand=1, fill=BOTH)
+            
+            img = Image.open('mountain.jpg')
+            canvas.image = ImageTk.PhotoImage(img)
+            canvas.create_image(0,0, image=canvas.image, anchor='nw')
+
+        # How to Embed Matplotlib
+                from matplotlib.figure import Figure
+                from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+
+
+
+                f = Figure(figsize=(5,5), dpi=100)
+                a = f.add_subplot(111)
+                
+                a.plot([1,2,3,4,5,6],[8,3,4,1,2,9])
+                
+                canvas = FigureCanvasTkAgg(f, self)
+
+                canvas.get_tk_widget().pack(side=BOTTOM, fill=BOTH, expand=1)    
+                
+                canvas._tkcanvas.pack(side=TOP, fill=BOTH, expand=1)    
+
+        # adding Legends and Navigation
+
+        # Browsing File
+
+        # MySQL Database connection
+
+        # inserting data to MySQL
+
+        # Create ListBox
+
+        # Color Chooser
+
+        # Tips 
+
+            How to import icon's into instance's  
+                root.wm_iconbitmap('icon_name.ico')
+
+# API (Applications programming interface)
+
+# Socket Programming       
+
+    CREATING the SERVER 
+        import socket
+        import threading  (a way of creating multiple threads in one program )
+
+        -> First create a PORT = 5050 (make sure the port is not used with other programs)
+        -> Second get the SERVER = socket.gethostbyname(socket.gethostname()) 
+        (manualy cmd(ipconfig) get the IPv4 address)
+
+        CREATE a socket object using: 
+            socket.socket(family, type), specifying the socket type as socket.SOCK_STREAM
+                -> the internet address family for IPv4 (socket.AF_INET)
+
+                  server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)       
+        Then BIND the socket with PORT and SERVER address
+                
+                ADDR = (SERVER, PORT) -> Needs to be in a tuple meaning Server then the port that running in it
+                server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                server.bind(ADDR)
+
+            # Handling clients (use function to make everything clean)  
+        HEADER = 64
+        FORMAT = 'utf-8'
+        DISCONNECT_MESSAGE = '!DISCONNECT'      
+
+
+        def handle_client(conn, addr):
+            print('[NEW CONNECTION] {addr} connected.')
+    
+            connected = True
+            while connected:
+                msg_length = conn.recv(HEADER).decode(FORMAT) # return's the length of the message
+                if msg_length: # to check if its not null
+                    msg_length = int(msg_length) # change that into an int
+                    msg = conn.recv(msg_length).decode(FORMAT) # and use the converted value as the amount of bytes (we r receiving)  
+                    
+                    if msg != DISCONNECT_MESSAGE:
+                        print(f"[{addr}] {msg}")
+                    else:
+                        connected = False
+                        
+            
+            conn.close()
+        
+
+            # START server 
+        def start():
+                server.listen()
+                while True:
+                    conn, addr = server.accept() # waits for a connection and stores the data in conn, addr
+                    thread = threading.Thread(target=handle_Client, args=(conn, addr))
+                    thread.start() # starts the Thread 
+                    print('[ACTIVE CONNECTIONS] {threading.active_count() - 1}') #(GOOD Practice) -1 is for the already running thread
+
+        print("[STARING] server is staring...")
+        start()
+
+    CREATING the CLIENT
+            import socket as soc
+
+            HEADER = 64
+            PORT = 5050
+            SERVER = '192.168.1.103' (could be different depending on the server your running from)
+            FORMAT = 'utf-8'
+            DISCONNECT_MESSAGE = '!DISCONNECT'
+            ADDR = (SERVER, PORT)
+
+
+                # connecting to the server 
+            client = soc.socket(soc.AF_INET, soc.SOCK_STREAM) 
+            client.connect(ADDR)
+
+                # sending a message to the server 
+
+            def send(msg):
+                message = msg.encode(FORMAT)
+                msg_length = len(message)
+                send_length = str(msg_length).encode(FORMAT)
+                send_length += b' ' * (HEADER - len(send_length))
+                client.send(send_length)
+                client.send(message)
+                        
+                    # message's 
+            send('Hello, world!')
+            send(DISCONNECT_MESSAGE) # to stop the connection   
+
+# Regular Expressions
+
+    is a sequence of characters that forms a search pattern. RegEx can be used to check if a 
+    string contains the specified search pattern.
+
+
+        Metacharacters
+            .           any character except a newline
+            *           0 or more repetitions
+            +           1 or more repetitions
+            ?           0 or 1 repetition
+            {m} m       repetitions
+            {m,n}       m–n repetitions
+            ^           matches the start of the string
+            $           matches the end of the string or
+                        just before the newline at the end
+                        of the string
+            []          set of characters
+            [^]         complementing the set
+
+        Special Sequences
+            \               esacpe character
+            \d              decimal digit
+            \D              not a decimal digit
+            \s              whitespace characters
+            \S              not a whitespace character
+            \w              word character … as well as
+                            numbers and the underscore
+            \W              not a word character
+            A|B             either A or B
+            (...)           a group
+            (?:...)         non-capturing version
+
+
+    re.search(pattern, string, flags=0)
+       
+            flags can be:
+                re.IGNORECASE
+                re.MULTILINE
+                re.DOTALL
+
+    # Walrus operator 
+
+        -> ( := )
+
+        import re
+
+        name = input("whats your name: ").strip()
+
+        if matches := re.search(r"^(.+), (.+)$", name):
+            last, first = matches.groups()
+            name = f"{first} {last}"
+
+        print(f"Hello, {name}")
+
+
+            Type use's:
+        re.match(pattern, string, flags=0)
+        re.fullmatch(pattern, string, flags=0)
+        re.findall(pattern, string, flags=0)
+        re.split(pattern, string, maxsplit=0, flags=0)
+        re.sub(pattern, repl, string, count=0, flags=0)
+
+
+        Ex.
+
+            import re
+
+            # yonatanafewerk@gmail.com
+
+            email = input("Whats your email: ").strip()
+
+            if re.search(r"^\w+@(\w+\.)?\w+\.(com|edu)$", email, re.IGNORECASE):
+                print("valid")
+            else:
+                print("invalid")
+
+# OOP
+    Tip:
+        Class 
+        Objects 
+            Setter 
+            Getter 
+            deletion
+
+
+
+
+    - Objects (instance)
+        Object is an instance of a Class. A class is like a blueprint while an instance 
+        is a copy of the class with actual values. 
+
+    - creating classes 
+            
+            The self
+                Class methods must have an extra first parameter in the method definition. 
+                We do not give a value for this parameter when we call the method, 
+                Python provides it
+
+           
+            # Creating class
+            class Dog(object): 
+                """A simple attempt to model a dog"""
+                
+                def __init__(self,name ,age):
+                    self.name = name
+                    self.age = age 
+                    
+                    
+                def sit(self):
+                    print(f"{self.name} is now Sitting!")
+                
+                def roll(self):
+                    print(f"{self.name} is now Rolling!!")
+
+
+            def main():
+                """Making and instance from a class"""
+                my_dog = Dog("lion", 2)
+                
+                
+                """Accessing attributes"""
+                print(f"Name: {my_dog.name}")
+                print(f"Age: {my_dog.age} Year's old.")
+                
+                """Calling methods"""
+                my_dog.sit()
+                my_dog.roll()
+                            
+            if __name__ == "__main__":
+                main()
+
+                
+
+        - Methods   (Function that is a part of a class is called a method)
+                __init__ method
+
+                __str__ method 
+                    -> when called outputs a string of the givin variable 
+
+
+        - Constructors
+            initialize(assign values) to the data members of the class when an object of the 
+            class is created. In Python the __init__() method is called the constructor and 
+            is always called when an object is created.
+                Ex. 
+                    def __init__(self):
+                        # body of the constructor
+
+        - Destructors
+            called when all references to the object have been deleted i.e when an object is 
+            garbage collected. 
+
+                Note : 
+                A reference to objects is also deleted when the object goes out of reference 
+                or when the program ends. 
+
+
+        Ex.
+            class student:
+                def __init__(self, name, house):        -> method
+                    self._name = name
+                    self._house = house
+                
+                def get_info(self):
+                    print(f"{self._name} from {self._house}")
+
+
+            def main():
+                name = input("Name: ") 
+                house = input("House: ")
+
+                student.get_info(student(name,house)) -> constructor call inside the function call
+
+            if __name__ == "__main__":
+                main()
+
+    - Setters and Getters 
+            - decorators 
+                -> are functions that modify the function of other functions
+
+        # getters 
+
+        @property
+        def name_(self):
+            return self._var
+
+        # setter
+
+        @name_.setter
+        def name_(self, name__):
+            // error / other checks
+            return self._name = name__
+
+                    Ex.
+                    class Student(object):
+                        def __init__(self, name, house):
+                            self.name = name
+                            self.house = house 
+
+                        def __str__(self):
+                            return f"{self.name} from {self.house}"
+
+                        @property
+                        def name(self):
+                            return self._name
+
+                        @name.setter
+                        def name(self, name):
+                            if not name:
+                                raise ValueError("Missing Name!")
+                            self._name = name
+
+                        @property
+                        def house(self):
+                            return self._house
+
+                        @house.setter
+                        def house(self, house):
+                            if house not in ["dire","harar","adis","adama"]:
+                                raise ValueError("Invalid house!")
+                            self._house = house 
+
+
+
+                    def main():
+                        student1 = get_student()
+                        print(student1)
+
+                    def get_student():
+                        name = input("Name: ")
+                        house = input("House: ")
+                        return Student(name, house)
+
+                    if __name__ == "__main__":
+                        main()
+
+    - class methods 
+
+        Note:
+
+           - A class method is a method which is bound to the class and not the object 
+             of the class.
+           - They have the access to the state of the class as it takes a class parameter 
+             that points to the class and not the object instance.
+           - It can modify a class state that would apply across all the instances of the class. 
+             For example, it can modify a class variable that would be applicable to all the 
+             instances.
+                    
+        Ex.
+            import random
+
+            class Hat(object):
+                houses = ["Gryffindor", "Hufflepuff", "Revenclaw", "Slytherin"]
+
+                @classmethod            -> decorator
+                def sort(cls,name):
+                    house = random.choice(cls.houses)
+                    print(f"{name} is in house {house}")
+
+
+            Hat.sort("Harry")
+
+    - Inheritance
+        Inheritance is the capability of one class to derive or inherit the properties 
+        from another class
+
+
+        Different types of Inheritance:
+            Single inheritance: 
+                When a child class inherits from only one parent class, it is
+                called single inheritance. We saw an example above.
+            Multiple inheritances: 
+                When a child class inherits from multiple parent classes, 
+                it is called multiple inheritances.
+            Multilevel Inheritance:
+                the base class and the derived class are further inherited into the new 
+                derived class. This is similar to a relationship representing a child and 
+                a grandfather. 
+            Hierarchical Inheritance: 
+                more than one derived class are created from a single base this type of 
+                inheritance is called hierarchical inheritance
+            Hybrid Inheritance: 
+
+            syntax:
+                Class BaseClass:
+                    {Body}
+                Class DerivedClass(BaseClass):
+                    {Body}
+
+            Ex. 
+                class person:
+                    def __init__(self, name, age, sex):
+                        self._name = name
+                        self._age = age
+                        self._sex = sex
+
+
+                class teacher(person):
+                    def __init__(self, name, age, sex, Id, dep):
+                        super().__init__(name, age, sex)
+                        self._Id = Id
+                        self._dep = dep
+
+
+                class stu(teacher):
+                    def __init__(self, name, age, sex, Id, dep, gpa):
+                        super().__init__(name, age, sex, Id, dep)
+                        self._gpa = gpa
+
+                per1 = person("Someone", 50, "M")
+
+                tech1 = teacher("Gemchies.T",38, "M", "101/Tech", "COmputer Engineering")
+
+                stu1 = stu("Yonatan Afewerk", 22, "M", "917/13", "Software engineering", 4.00)
+
+
+
+                print(per1._name)
+                print(tech1._name)
+                print(stu1._name)
+
+    - Overloading methods
+           https://www.youtube.com/watch?v=sxTmJE4k0ho ->(03:03:13)
+
+        operator overloading 
+            
+
+    - Static and class methods 
+        class methods 
+            Thus are Decorators that used for special methods 
+
+        Static methods 
+            used for the perpuose for creating import module's for your program
+
+
+        Ex. 
+            class school:
+                schools = []
+
+                def __init__(self, a):
+                    self.name = a
+                    self.schools.append(self)
+
+                @classmethod
+                def num_schools(cls):
+                    return f"{len(cls.schools)} school's are leasted"
+
+                @staticmethod
+                def signup(n):
+                    for _ in range(n):
+                        print("Student Signed In! Great Work!")
+                    
+
+            sch1 = school("Alemaya")
+            sch2 = school("harar")
+
+            print(school.num_schools())
+
+
+            school.signup(5)
+
+    - Private and public classes 
+
+        Note: Its not a python rule its just an argument you can choose to up hold for better readablity 
+        of the code
+
+        Private classes:
+            Classes that are Private for a particular program
+        while:
+            Public classes are classes that you can import for access and use and can be modified
+
+        class _name:        -> private 
+            // class code
+
+        class name:         -> public
+            // class code
+
+
+        # To import module from an other file 
+
+        from file_name import module_name
+        or 
+        import file_name 
+
+
+📘 Intermediate Python 📘
+
+# Optional Parameters
+# Static and Class Methods
+# Map Function
+# Filter Function
+# Lambda Function
+# Introduction to Collections
+# Named Tuple
+# Deque
+
+📙 Advanced Python 📙
+# Overview of Python
+# Dunder/Magic Methods
+# Metaclasses
+# Decorators
+# Generators
+# Context Managers
+
+
+
+
+# How to make a python program into an application 
+
+    pip install pyinstaller
+
+    pyinstaller --windowed --onefile --icon="pdf.ico" main.py

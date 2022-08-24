@@ -1,0 +1,9 @@
+
+-> mkdir indoor
+    to make a folder called indoor into your codespace.
+
+-> cd indoor
+    to change directories into that folder. You should now see your terminal prompt as indoor/ $. You can now execute
+
+-> code indoor.py
+    to make a file called indoor.py where you’ll write your program.

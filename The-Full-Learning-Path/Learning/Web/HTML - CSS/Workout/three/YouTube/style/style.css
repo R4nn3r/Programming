@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    border: 1px solid gray;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.search-bar {
+    display: block;
+}
+
+.video-card {
+    width: 300px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.thumbnail {
+    width: 300px;
+}
+
+.video-time{
+    position: absolute;
+    bottom: 7px;
+    right: 4px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.channel-profile-pic img {
+    border-radius: 50%;
+    width: 36px;
+    margin-top: 12px;
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+}
+
+.video-title {
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+
+.channel-name {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #606060;
+}
+
+.video-stats {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #606060;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,94 @@
+# HTML
+    <!-- -> Commenting --> 
+
+# Basic HTML
+
+        Headers                 (<h1></h1> -> upto <h6></h6> where they get smaller in size)
+        Links                   ( <link rel="stylesheet" href="#"> )
+                                ( <a href="Google.com" target="_blank">Googel</a> )
+                                        -> attribute = name
+        Paragraphs              ( <p>This is where you write your Paragraphs </p> )
+        Images                  ( <img src="source link" alt="info about image"> )
+        Inputs                  ( <input type="[text,checkbox,radio]" name="" value="" placeholder="">)
+        Div Container :         <div>  s allow us to group elements together and create 
+                                more complex layouts. 
+                    <div class="container">
+                        ... (maybe other multiple Div's)
+                    </div>
+
+        -> The HTML Structure 
+                <!DOCTYPE html>     Tells the browser to use a modern version of HTML. 
+                <html> 
+                    <head> 
+                    ... 
+                    </head>         <head>  contains everything that's  not visible  like  the 
+                                title and description(a.k.a. metadata) as well as links to fonts 
+                                and CSS stylesheets. 
+                    <body> 
+                    ... 
+                    </body>         <body>  contains everything that's  visible  like buttons,  text, images, etc. 
+                </html> 
+
+
+    # Advanced HTML
+            Semantic elements: (Are elements that clearly explain there content)
+                Headers         <header></header>
+                Nav             <nav></nav>
+                Main            <main></main>
+                Section         <section></section>
+                
+                Ex.
+                    <article>, <aside>, <details>, <figcaption>, <figure>, <footer>
+                    <mark>, <summary>, <time>
+
+# Basic Css 
+
+    -> link with your Html file with:
+                        <link rel="stylesheet" href="example.css">
+                    
+    Selectors:
+            elements        -> ( div {...})
+            class           -> (.class_name {...})
+            id              -> (#id_tag {...})
+    
+    # Advanced Css Selectors 
+
+
+    Box Model:
+        1. Margin = space on the outside    
+                        Ex.
+                            margin: 10px; (all around)
+                            margin: 10px 10px; (top/bottom and left/right)
+                            margin: top, right, bottom, left] 
+        2. Padding = space on the inside   
+                        Ex.
+                            Same as margin but inside :)
+        3. Border              
+                        Ex.
+                        border-width:  1px;   Sets the border width. 
+                        border-style:  solid;   Sets the border style (to a solid color). 
+                        border-color:  red;   Sets the border color. 
+                                or
+                        border:  width style color; 
+                        border:  1px  solid red  ; 
+                      
+# Tips For Layouts
+
+    To Create the Vertical Layouts 
+        ●  Use  <div>'s with  display  :  block  (most common) 
+        ●  Use flexbox with  flex-direction  :  column 
+        ●  Use CSS grid  with 1 column 
+
+    To Create the Horizontal Layouts 
+        ●  Use  <div>'s with  display  :  inline-block  (not recommended) 
+        ●  Use flexbox with  flex-direction  :  row 
+        ●  Use CSS grid with multiple columns 
+
+# Type of elements
+    Block elements                          -> They take the whole line
+    Inline-Block elements                   -> only takes space they need
+    Inline                                 
+
+
+
+# Responsive Design 

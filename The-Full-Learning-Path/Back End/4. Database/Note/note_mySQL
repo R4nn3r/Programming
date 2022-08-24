@@ -1,0 +1,474 @@
+commenting by -- 
+
+
+C.R.U.D
+
+CREATE -> READ -> UPDATE -> DELETE
+
+        Triks::
+                DESCRIBE table_name; -> gives you information about the table
+
+Some of The Most Important SQL Commands
+        SELECT - extracts data from a database
+        UPDATE - updates data in a database
+        DELETE - deletes data from a database
+        INSERT INTO - inserts new data into a database
+        CREATE DATABASE - creates a new database
+        ALTER DATABASE - modifies a database
+        CREATE TABLE - creates a new table
+        ALTER TABLE - modifies a table
+        DROP TABLE - deletes a table
+        CREATE INDEX - creates an index (search key)
+        DROP INDEX - deletes an index
+
+1. How to CREATE and setup database
+
+
+        -> How to CREATE a database 
+
+                CREATE DATABASE sql_table;
+                
+                -> How to drop a database 
+
+                        DROP DATABASE sql_table;
+
+
+        -> How to BACKUP a database to a folder in your pc 
+
+                BACKUP DATABASE sql_table
+                TO DISK = "filepath";
+
+
+        -> How to CREATE a TABLE and everything thats comes with that
+
+                CREATE TABLE table_name (
+                        column1 datatype,
+                        column2 datatype,
+                        column3 datatype,
+                        ....
+                        );
+
+                -> How to DROP, TRUNCATE the table 
+
+                        DROP TABLE table_name;
+
+                                Note:   Be careful before dropping a table. Deleting a table will 
+                                        result in loss of complete information stored in the table!
+
+                        TRUNCATE TABLE table_name;
+
+                                Note: truncate only deletes the info or recored within the table not the table itself
+
+                -> How to ALTER the table 
+
+                        -> ADD COLUMN 
+                                ALTER TABLE table_name
+                                ADD column_name datatype;
+
+                                -> DROP COLUMN
+                                        ALTER TABLE table_name
+                                        DROP COLUMN column_name;
+
+                        -> ALTER TABLES VALUE
+                                SQL server
+                                        ALTER TABLE table_name
+                                        ALTER COLUMN column_name datatype;
+                                
+                                My SQL
+                                        ALTER TABLE table_name
+                                        MODIFY COLUMN column_name datatype;
+                                        
+                        -> ADDING DEFAULT VALUES TO COLUMNS 
+                        ALTER TABLE <table_name> ADD DEFAULT <DEFAULT_VALUE> FOR <NAME_OF_COLUMN>
+
+                               EG.   ALTER TABLE student ADD DEFAULT 'None' For book_inhand
+                        
+                        -> UPDATE COLUMNS VALUE 
+
+                                UPDATE student
+                                SET major = "Bio"
+                                WHERE student_id = 1;
+
+                        -> DELETE RAWS VALUE     
+                                
+                                DELETE FROM student 
+                                WHERE student_id = 1;
+
+
+        -> SQL constraints 
+                SQL constraints are used to specify rules for the data in a table.
+
+
+                        -> The following constraints are commonly used in SQL:
+
+                                NOT NULL - Ensures that a column cannot have a NULL value
+                                UNIQUE - Ensures that all values in a column are different
+                                PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+                                FOREIGN KEY - Prevents actions that would destroy links between tables
+                                CHECK - Ensures that the values in a column satisfies a specific condition
+                                DEFAULT - Sets a default value for a column if no value is specified
+                                        major VARCHAR(20) DEFAULT 'undecuded'
+                                CREATE INDEX - Used to create and retrieve data from th e database very quickly
+
+                                Eg. 
+                                        CREATE TABLE table_name (
+                                                column1 datatype constraint,
+                                                column2 datatype constraint,
+                                                column3 datatype constraint,
+                                                ....
+                                                );
+
+        -> SQL Date Data Types
+
+                -> MySQL comes with the following data types for storing a date or a date/time value in the database:
+
+                        DATE - format YYYY-MM-DD
+                        DATETIME - format: YYYY-MM-DD HH:MI:SS
+                        TIMESTAMP - format: YYYY-MM-DD HH:MI:SS
+                        YEAR - format YYYY or YY
+
+                -> SQL Server comes with the following data types for storing a date or a date/time value in the database:
+
+                        DATE - format YYYY-MM-DD
+                        DATETIME - format: YYYY-MM-DD HH:MI:SS
+                        SMALLDATETIME - format: YYYY-MM-DD HH:MI:SS
+                        TIMESTAMP - format: a unique number
+
+
+                        Note: The date types are chosen for a column when you create a new table in your database!
+
+
+
+        -> How to CREATE VIEW statements 
+
+                CREATE VIEW view_name AS
+                SELECT column1, column2, ...
+                FROM table_name
+                WHERE condition;
+
+
+
+
+
+
+
+
+
+# INSERT INTO Syntax
+        It is possible to write the INSERT INTO statement in two ways:
+
+                1. Specify both the column names and the values to be inserted:
+
+                        INSERT INTO table_name (column1, column2, column3, ...)
+                        VALUES (value1, value2, value3, ...);
+                2. If you are adding values for all the columns of the table, you do not need to specify 
+                   the column names in the SQL query. However, make sure the order of the values is in the 
+                   same order as the columns in the table. Here, the INSERT INTO syntax would be as follows:
+
+                        INSERT INTO table_name
+                        VALUES (value1, value2, value3, ...);
+
+
+                Eg. 
+                        USE sql_database
+                        
+                        INSERT INTO table_one (Id,First_Name,Second_Name,Cgpa,Dob,added_colum,drop_table)
+                        VALUES 
+                                (
+                                        918,
+                                        'Yonatan',
+                                        'Afewerk',
+                                        4.00,
+                                        '2000-03-13',
+                                        'nothing',
+                                        'drop_record'
+                                ),
+                                (
+                                        919,
+                                        'Yonatan',
+                                        'Afewerk',
+                                        4.00,
+                                        '2000-03-13',
+                                        'nothing',
+                                        'drop_record'
+                                ),
+                                (
+                                        920,
+                                        'Yonatan',
+                                        'Afewerk',
+                                        4.00,
+                                        '2000-03-13',
+                                        'nothing',
+                                        'drop_record'
+                                );
+
+
+
+
+-
+2. How to Manipulate the DATABASE's'
+        USE -> SELECT -> FROM -> WHERE -> ORDER -> lIMIT
+                NOTE:   The syntax has and order so you cant interchange 
+                        the order cause its gonna be an error
+
+        -> USE database_name // USE is the key word
+                NOTE:   You can also double click the database for using that query 
+
+                -> SELECT column_by_name, column2_by_name
+                        * // to select all 
+                -> FROM database_name // FROM is a key word 
+                -> WHERE column_by_id = 1 // takes only the colum id 1
+                -> ORDER BY column_by_name // orders the list by the name
+                -> LIMIT 3,4            // where you limit the start and end of the datadraw
+
+        # The SELECT clause
+
+            -- SELECT first_name, last_name, points, 
+            -- points * 10 + 100 AS 'discount factor' -- to give it a name
+            -- FROM customers; -- to decide where the data comes from
+            -- WHERE customer_id = 1
+            -- ORDER BY first_name 
+
+            -- SELECT DISTINCT state -- to prevent fiching info that is duplicated 
+            -- FROM customers-- SELECT first_name, last_name, points, 
+            -- points * 10 + 100 AS 'discount factor' -- to give it a name
+            -- FROM customers; -- to decide where the data comes from
+            -- WHERE customer_id = 1
+            -- ORDER BY first_name 
+
+           
+            -- SELECT last_name, points, 
+                            points * 10 + 100 AS 'discount factor' -- to give it a name
+
+                       -- FROM customers; -- to decide where the data comes from
+                       -- WHERE customer_id = 1
+                       -- ORDER BY first_name 
+
+                    -- SELECT DISTINCT state -- to prevent fiching info that is duplicated use DISTINCT key word 
+                    -- FROM customers
+        # The WHERE clause
+                SELECT column1, column2, ...
+                FROM table_name
+                WHERE condition;
+                        (With integers)
+                SELECT *
+                FROM customers
+                where points > 3000 -- checkes against the customers list points using the conditions (<, <, <=,>=, !=, <>)
+                ORDER BY points 
+                -- LIMIT 2, 3 -- (jump)(list amount) 
+
+                        (with strings)
+                SELECT *
+                FROM state = 'va'       -- you can use ("double qoutes") and capital of small letters
+
+                        (with dates)
+                SELECT *    
+                FROM customers
+                where birth_date >= '1990-01-01'
+
+
+
+                                Operator	Description
+                                =	  ->      Equal	
+                                >	  ->      Greater than	
+                                <	  ->      Less than	
+                                >=	  ->      Greater than or equal	
+                                <=	  ->      Less than or equal	
+                                <>	  ->      Not equal. Note: In some versions of SQL this operator may be written as !=	
+                                BETWEEN	  ->      Between a certain range	
+                                LIKE	  ->      Search for a pattern	
+                                IN	  ->      To specify multiple possible values for a column
+                                ORDER BY  ->      keyword sorts the records in ascending order by default. 
+                                                To sort the records in descending(ascending) order, 
+                                                use the DESC(ASC) keyword -> ASC|DESC 
+                                                                
+
+        # The Operators in SQL for comparison (AND, OR, NOT) *AND has a higher order
+                The AND operator
+                SELECT *
+                FROM customers
+                WHERE birth_date > '1990-01-01' AND points > 1000 
+
+                The OR operator
+                SELECT *
+                FROM customers
+                WHERE birth_date > '1990-01-01' OR (points > 1000 AND state = 'va')
+
+                The NOT operator
+                SELECT *
+                FROM customers
+                WHERE NOT (birth_date > '1990-01-01' OR (points > 1000 AND state = 'va'))
+
+        # The operators in SQL (IN, BETWEEN, LIKE, REGEXP, IS NULL, ORDER BY, LIMIT )
+
+                - The IN operator
+                        SELECT *
+                        FROM customers
+                        WHERE state IN ('VA','FL','GA') 
+                        // The same as -> state = 'VA' OR state = 'FL' OR  state = 'GA'
+
+                - The BETWEEN operator
+                        SELECT *
+                        FROM customers
+                        WHERE birth_date BETWEEN '1990-01-01' AND '2000-01-01'
+                        // The same as -> birth_date >= '1990-01-01' AND birth_date <= '2000-01-01'
+
+                - The LIKE operator
+                        SELECT *
+                        FROM customers
+                        -- WHERE last_name LIKE 'b%' -> find a name that start with the letter b
+                        -- WHERE last_name LIKE 'brush%' -> find a name that strats with the word 'brush'
+                        -- WHERE last_name LIKE '%b%' -> find a name that contins(anywhere) the word 'b'
+                        -- WHERE last_name LIKE '%y' -> last letter of the name must be 'y'
+                        -- WHERE last_name LIKE '_y' -> "_" underscore represents a single charcter "%" percent rep any number of characters
+                                Note: If you prefix the LIKE with NOT it will do the reverse 
+
+                - The REGEXP operator
+                                Same as the LIKE '%b%' but you dont need the %
+                                        -> Where last_name REGEXP 'b'
+                                                - '^b' -> to make sure it starts with "b"
+                                                - 'b$' -> repersent the end of the string
+                                                - 'b | c | d' -> b or c or d
+                                                - '[dim]e' ('e[dim]') ('[a-h]e') -> d,i,m before the word 'e'
+
+                - The IS NULL operator
+                                -> WHERE phone IS NULL    
+                                        - to find a tuple that has a null value
+                                -> WHERE phone IS NOT NULL 
+                                        - to find a tuple that has a value
+
+                - The ORDER BY operator
+                        SELECT column1, column2, ...
+                        FROM table_name
+                        ORDER BY column1, column2, ... ASC|DESC;
+
+
+                        SELECT * , quantity * unit_price AS Total_Price
+                        FROM order_items
+                        WHERE order_id = 2 
+                        ORDER BY Total_Price DESC 
+
+
+                - The LIMIT operator
+                                SELECT *
+                                FROM customers 
+                                lIMIT 0,3       (start, end)
+                
+
+
+
+        # JOIN (Types ways to join single and mulitiple tables, databases,)
+
+                -> INNER JOIN
+                
+                        SELECT *
+                        FROM orders
+                        JOIN customers
+                                ON orders.customer_id = customers.customer_id
+                                        NOTE: customer_id is where the 2 tables join
+                        Eg.
+                        SELECT order_id, first_name, last_name, o.customer_id
+                        FROM orders o
+                        JOIN customers c
+                                ON o.customer_id = c.customer_id
+
+                -> JOINING across databases
+                        SELECT *
+                        FROM order_items oi
+                        JOIN sql_inventory.products p   ->the prefix of the products is the database its from
+                                ON oi.product_id = p.product_id
+
+                        NOTE: you only prefix the tables that are from a different database rather then the current
+
+                -> SELF JOINING Table to it self
+                        SELECT 
+                                e.employee_id,
+                                e.first_name,
+                                e.last_name,
+                                m.first_name AS Manager
+                        FROM employees e
+                        JOIN employees m
+                                ON e.reports_to = m.employee_id
+                        
+                -> JOINING mulitiple tables
+
+                        SELECT 
+                                o.order_id,
+                                o.order_date,
+                                c.first_name,
+                                c.last_name,
+                                os.name AS Status
+
+                        FROM orders o
+                        JOIN customers c
+                                ON o.customer_id = c.customer_id
+                        JOIN order_statuses os
+                                ON os.order_status_id = o.status
+                        ORDER BY o.order_id ASC
+
+                                NOTE: you can use JOIN multiple times to attach other tables as well
+                -> COMPOUND JOIN conditions
+                        
+                        SELECT * 
+                        FROM order_item_notes oi
+                        JOIN order_item_notes oin
+                                ON oi.order_id = oin.order_id
+                                AND oi.product_id = oin.product_id
+                
+                -> IMPLICIT JOIN syntax
+
+                        SELECT * 
+                        FROM  orders o
+                        JOIN customers c
+                                ON o.customer_id = c.customer_id;
+                        
+                        -- Implicit join syntacx --
+                        SELECT *
+                        FROM orders o, customers c
+                        WHERE o.customer_id = c.customer_id
+
+                -> OUTER JOIN
+                        SELECT 
+                                c.customer_id,
+                                c.first_name,
+                                o.order_id
+                        FROM  orders o
+                        RIGHT(LEFT) JOIN customers c 
+                                ON o.customer_id = c.customer_id
+                        ORDER BY C.customer_id ASC
+                        
+                                NOTE:   from order RIGHT join customers (OR)
+                                        from order LEFT join customers
+
+                -> OUTER JOINS ON multiple tables
+                        SELECT 
+                                c.customer_id,
+                                c.first_name,
+                                o.order_id,
+                                sh.name AS Shipper
+                        FROM customers c
+                        LEFT JOIN orders o
+                                ON c.customer_id = o.customer_id
+                        LEFT JOIN shippers sh
+                                ON o.shipper_id = sh.shipper_id
+                        ORDER BY c.customer_id ASC
+
+                                NOTE: Avoid RIGHT join as much as possible
+
+        -> Transact-SQL provides the following aggregate functions:
+
+                APPROX_COUNT_DISTINCT
+                AVG
+                CHECKSUM_AGG -> CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )  
+                COUNT
+                COUNT_BIG
+                GROUPING
+                GROUPING_ID
+                MAX
+                MIN
+                STDEV
+                STDEVP
+                STRING_AGG
+                SUM
+                VAR
+                VARP
