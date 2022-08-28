@@ -1,9 +1,8 @@
-word = "apple"
+word = "apple" 
 
-rev_word = word[::-1]
+rev = word[::-1]
 
-
-if word == rev_word:
-    print("Palindromes")
+if word == rev:
+    print("Palindrome")
 else:
-    print("Not a palindrom")
+    print("Not a palindrome")

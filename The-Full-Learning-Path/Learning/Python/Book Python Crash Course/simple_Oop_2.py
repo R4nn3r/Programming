@@ -20,13 +20,13 @@ class Car:
         if self.odometer_reading <= mileage:
             self.odometer_reading = mileage
         else:
-            print("Rolling the Odometer is punshiable by Law!")
+            print("Rolling the Odometer is punishable by Law!")
             
     def increment_odometer(self, miles):
         if miles > 0:              
             self.odometer_reading += miles
         else:
-            print("Rolling the Odometer is punshiable by Law!")
+            print("Rolling the Odometer is punishable by Law!")
 
 def main():
     """creating the instance for the class restaurant"""
