@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../Project"
+		},
+		{
+			"path": "../Impractical Python Projects"
 		}
 	],
 	"settings": {

@@ -211,6 +211,15 @@
             while expression:
                 statement(s)
 
+
+            Tip:
+                Using a Flag
+
+                    active = True
+
+                    while active:
+                        // codes
+
         Example
 
             count = 0
@@ -265,6 +274,9 @@
 
         Break Statement
             Note: Python Break Statement brings control out of the loop.
+        
+        continue statement
+            Note: Returns to the beginning of the loop
 
         Pass Statement
             Note: Pass is also used for empty control statements, 
@@ -352,6 +364,46 @@
                   
                   
         -> Dictionary
+            
+            Note: 
+            
+            -> The concept is we have key-value pair's 
+                        dict = {} -> empty dict
+                        dict = {"Key":"Value"}
+
+                    Accessing the Values within the dict
+                        -> print(dict["Key"])
+
+                    Adding to a dict
+                        -> dict["New_key"] = "New_value"
+
+                    modifying values 
+                        -> dict["Key"] = "other_value"
+
+                    Removing key-value paris
+                        -> del dict["key"]
+
+                    Tip: Methods in dict
+                        keys() : used to loop through a given dict
+                            Ex. for name in names.keys():
+                                    print(name.title())
+
+                        sets() : are also collection but where each element is always unique
+                            favorite_languages = {
+                                --snip--
+                                }
+                            
+                            for language in set(favorite_languages.values()):
+                                print(language.title())
+                            
+                                    -> do duplicate items will be used
+
+                            You can also Create set when a dict as all keys with no values
+                        
+                                languages = {'python', 'ruby', 'python', 'c'}
+                                    -> this is a set if you print the no duplicated items will be listed
+               
+
             Eg. 
             students = {
                 "Hermione":"Gryffindor",
@@ -602,7 +654,7 @@
                 for student in sorted(students, key=lambda student: student['Name']):
                     print(f"{student['Name']} is in {student['Home']}")
 
-# Modular Programming 
+# Modular Programming :Functions
     ->  is a block of related statements designed to perform a computational, 
         logical, or evaluative task. 
         
@@ -611,6 +663,9 @@
                     """docstring"""
                     statement(s)
                     return expression
+
+            How to call a function
+                function_name(argument)
                     
                 Eg.
                     # defining a function
@@ -671,10 +726,46 @@
                     with values so that caller does not need to remember the 
                     order of parameters.
 
-            Docstring
-                    first string after the function is called the Document string or 
-                    Docstring in short. This is used to describe the functionality 
-                    of the function.
+            Positional arguments and multiple function calls 
+                    If the are mutiple parameters for a given funciton and its has 
+                    multiple arguments python matches each argument in the function call
+                    with the parameter in the definition
+
+            string length argument
+                python allow functions to collect and arbitrary number of argumetns from
+                the calling function:
+                        Ex. 
+                        def str_len_arg(*arg):
+                            print(arg)
+
+                        str_len_arg(1,2,3,5)
+
+                                     Tip:
+                                        *toppings tells Python to make an
+                                        empty tuple called toppings and pack 
+                                        whatever values it receives into this
+                                        tuple.
+
+            
+            Using Arbitrary Keyword Arguments
+                        Ex. 
+                        def str_len_arg(**arg):
+                            print(arg)
+
+                        str_len_arg(1,2,3,5)
+
+                                     Tip:
+                                        **toppings tells Python to make an
+                                        empty dict and packs whatever values 
+                                        it receives into this dictionary.
+
+
+
+
+                  #  Docstring
+                            first string after the function is called the Document string or 
+                            Docstring in short. This is used to describe the functionality 
+                            of the function.
 
             The return statement
                     def square_value(num):
@@ -1428,6 +1519,8 @@
                 print("invalid")
 
 # OOP
+    # Making an object from a class is called instantiation
+
     Tip:
         Class 
         Objects 
@@ -1491,6 +1584,70 @@
                     -> when called outputs a string of the givin variable 
 
 
+        
+        # Modifying the Attribute Values
+                1 - Directly
+                        Ex.
+                            class Car:
+                            --snip--
+
+                            my_new_car = Car('audi', 'a4', 2019)
+                            print(my_new_car.get_descriptive_name())
+
+                            # access the attribute and set its value
+                            my_new_car.odometer_reading = 23
+                            my_new_car.read_odometer()
+
+                2- Through a Method
+                        Updating 
+                            Ex.
+                                    class Car:
+                                    --snip--
+                                        def update_odomete(self, mileage):
+                                            """
+                                            Set the odometer reading to the given value.
+                                            Reject the change if it attempts to roll the odometer back.
+                                            """
+                                            if mileage >= self.odometer_reading:
+                                            self.odometer_reading = mileage
+                                            else:
+                                            print("You can't roll back an odometer!")
+
+                                                                
+                                    my_new_car.update_odometer(23)
+                                    my_new_car.read_odometer()
+
+                        Incremening
+
+                            Ex.
+                                class Car:
+                                        --snip--
+                                        def increment_odometer(self, miles):
+                                            if miles > 0:
+                                                self.odometer_reading += miles
+                                            else:
+                                                print("Rolling the Odometer is punshiable by Law!")
+
+                                my_new_car.increment_odometer(45)
+                                my_new_car.read_odometer()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         - Constructors
             initialize(assign values) to the data members of the class when an object of the 
             class is created. In Python the __init__() method is called the constructor and 
@@ -1498,6 +1655,7 @@
                 Ex. 
                     def __init__(self):
                         # body of the constructor
+                    
 
         - Destructors
             called when all references to the object have been deleted i.e when an object is 
