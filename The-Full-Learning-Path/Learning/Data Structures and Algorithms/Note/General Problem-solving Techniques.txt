@@ -1,0 +1,56 @@
+
+# General problems solving 
+    - Always have a plan
+            This is perhaps the most important rule. You must always have a plan, rather
+            than engaging in directionless activity.
+
+            Without a plan, you are simply hoping for a lucky break, the equivalent
+            of the randomly typing monkey producing one of the plays of Shakespeare.
+            Lucky breaks are uncommon, and those that occur may still require a plan.
+
+            Planning also allows you to set intermediate goals and achieve them.
+            Without a plan, you have only one goal: solve the whole problem. Until you
+            have solved the problem, you won’t feel you have accomplished anything
+    
+    - Restate the Problem 
+            Restating a problem is like circling the base of a hill that you must
+            climb; before starting your climb, why not check out the hill from every angle
+            to see whether there’s an easier way up?
+
+
+    - Divide the Problem
+            Finding a way to divide a problem into steps or phases can make the problem
+            much easier.
+
+            For example, a section of code that employs a series of if statements inside a 
+            while loop that is itself inside a for loop will be more difficult to write—and 
+            to read—than a section of code that employs all those same control statements 
+            sequentially.
+
+    - Start with what you know 
+
+    - Reduce the problem
+            when faced with a problem you are unable to solve, you
+            reduce the scope of the problem, by either adding or removing constraints,
+            to produce a problem that you do know how to solve.
+
+    - Look for Analogies
+            An analogy, for our purposes, is a similarity between a current problem and a
+            problem already solved that can be exploited to help solve the current problem.
+            The similarity may take many forms. Sometimes it means the two problems
+            are really the same problem.
+
+    - Experiment
+            Sometimes the best way to make progress is to try things and observe the
+            results. Note that experimentation is not the same as guessing.
+
+            You hypothesize what will happen when certain code is executed, try it out, and 
+            see whether your hypothesis is correct. From these observations, you gain 
+            information that will help you solve the original problem.
+        
+    - Don’t Get Frustrated
+            The final technique isn’t so much a technique, but a maxim: Don’t get frustrated. 
+            When you are frustrated, you won’t think as clearly, you won’t work as
+            efficiently, and everything will take longer and seem harder. Even worse,
+            frustration tends to feed on itself, so that what begins as mild irritation ends
+            as outright anger.
