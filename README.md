@@ -48,4 +48,4 @@
 
 
 <h6>By <a href="https://t.me/Toyxna">Yonatan Afewerk Teshome</a></h6>
-<h6>Anything you see in this repo is done from my own good will i have no wish or intention on teaching anything only because i myself is learning most of it, If not all alone with a broken pc and a drive thats is to be someone that can support himself and the people he loves using something he has a deep love and passion for and thats programming creating something from nothing and there is nothing more intersting then talking and sharing you have with the people who have the some goals and plans</h6>
+Anything you see in this repo is done from my own good will i have no wish or intention on teaching anything only because i myself is learning most of it, If not all alone with a broken pc and a drive thats is to be someone that can support himself and the people he loves using something he has a deep love and passion for and thats programming creating something from nothing and there is nothing more interesting then talking and sharing what you have with people who have the some goals and plans
