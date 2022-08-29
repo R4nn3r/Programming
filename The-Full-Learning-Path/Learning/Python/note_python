@@ -1740,9 +1740,59 @@
             When you use inheritance, you can make your child classes retain what you 
             need and override anything you don’t need from the parent class.
 
-  
+    - Instances as Attributes
+            as the name dictates the class instance can be used as an attribute
+            for better modeling of real world attributes
 
-  
+            Ex. 
+                    # Second Class
+                    class User(object):
+                        """Simple user model"""
+                        def __init__(self, first_name, last_name):
+                            self.first_name = first_name
+                            self.last_name = last_name
+                        
+                            
+                        def describe_user(self):
+                            return f"First-Name: {self.first_name} \nLast-Name: {self.last_name}"
+                        
+                        def greet_user(self):
+                            return f"{self.last_name} {self.first_name} Weclome to Our Beautfull Hotel have a wonderfull Time!"
+                  
+                    # used as an attribute
+                    class Privileges():
+                        def __init__(self):
+                            self.privileges = ["can add post", "can delete post", "can ban user"]
+                        
+                        
+                            
+                        def show_privileges(self):
+                            print("Administrator") 
+                            for _ in self.privileges:
+                                print(f"{_} ", end="| ")
+                            print()
+                            
+                        
+                        
+                        #  inherits from the user class 
+                    class Admin(User):
+                        def __init__(self, first_name, last_name):
+                            super().__init__(first_name, last_name)
+                            self.privileges = Privileges()
+                        
+                       # """creating the instance for the class User"""
+                    user = User("abebe", "lema")
+                    user_ = Admin("Helina", "Yonatan")
+
+                        # Differnce when you call the instance with the method 
+                        # """calling the methods from the class"""
+
+                    print(user.greet_user())
+                    user_.privileges.show_privileges() 
+                        -> instance.(instance_attribute).method()
+
+
+
     - Overloading methods
            https://www.youtube.com/watch?v=sxTmJE4k0ho ->(03:03:13)
       
