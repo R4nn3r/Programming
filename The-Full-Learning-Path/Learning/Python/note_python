@@ -1633,21 +1633,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         - Constructors
             initialize(assign values) to the data members of the class when an object of the 
             class is created. In Python the __init__() method is called the constructor and 
@@ -1684,6 +1669,144 @@
 
             if __name__ == "__main__":
                 main()
+
+
+    - Inheritance
+        Inheritance is the capability of one class to derive or inherit the properties 
+        from another class
+
+
+        Different types of Inheritance:
+            Single inheritance: 
+                When a child class inherits from only one parent class, it is
+                called single inheritance. We saw an example above.
+            Multiple inheritances: 
+                When a child class inherits from multiple parent classes, 
+                it is called multiple inheritances.
+            Multilevel Inheritance:
+                the base class and the derived class are further inherited into the new 
+                derived class. This is similar to a relationship representing a child and 
+                a grandfather. 
+            Hierarchical Inheritance: 
+                more than one derived class are created from a single base this type of 
+                inheritance is called hierarchical inheritance
+            Hybrid Inheritance: 
+
+            syntax:
+                Class BaseClass:
+                    {Body}
+                Class DerivedClass(BaseClass):
+                    {Body}
+
+            Ex. 
+                class person:
+                    def __init__(self, name, age, sex):
+                        self._name = name
+                        self._age = age
+                        self._sex = sex
+
+
+                class teacher(person):
+                    def __init__(self, name, age, sex, Id, dep):
+                        """ is a special function that allows you to call a method from the parent class """
+                        super().__init__(name, age, sex)
+                        self._Id = Id
+                        self._dep = dep
+
+
+                class stu(teacher):
+                    def __init__(self, name, age, sex, Id, dep, gpa):
+                        super().__init__(name, age, sex, Id, dep)
+                        self._gpa = gpa
+
+                per1 = person("Someone", 50, "M")
+
+                tech1 = teacher("Gemchies.T",38, "M", "101/Tech", "COmputer Engineering")
+
+                stu1 = stu("Yonatan Afewerk", 22, "M", "917/13", "Software engineering", 4.00)
+
+
+
+                print(per1._name)
+                print(tech1._name)
+                print(stu1._name)
+
+    - Overriding methods from the parent class(superclass)
+        
+            When your create methods with the same name as the ones in the super
+            class python will disregard the parent class method and only pay attention 
+            to the method you define in the child(sub) class.
+
+            When you use inheritance, you can make your child classes retain what you 
+            need and override anything you don’t need from the parent class.
+
+  
+
+  
+    - Overloading methods
+           https://www.youtube.com/watch?v=sxTmJE4k0ho ->(03:03:13)
+      
+
+
+    - Static and class methods 
+        class methods 
+            Thus are Decorators that used for special methods 
+
+        Static methods 
+            used for the perpuose for creating import module's for your program
+
+
+        Ex. 
+            class school:
+                schools = []
+
+                def __init__(self, a):
+                    self.name = a
+                    self.schools.append(self)
+
+                @classmethod
+                def num_schools(cls):
+                    return f"{len(cls.schools)} school's are leasted"
+
+                @staticmethod
+                def signup(n):
+                    for _ in range(n):
+                        print("Student Signed In! Great Work!")
+                    
+
+            sch1 = school("Alemaya")
+            sch2 = school("harar")
+
+            print(school.num_schools())
+
+
+            school.signup(5)
+
+    - Private and public classes 
+
+        Note: Its not a python rule its just an argument you can choose to up hold for better readablity 
+        of the code
+
+        Private classes:
+            Classes that are Private for a particular program
+        while:
+            Public classes are classes that you can import for access and use and can be modified
+
+        class _name:        -> private 
+            // class code
+
+        class name:         -> public
+            // class code
+
+
+        # To import module from an other file 
+
+        from file_name import module_name
+        or 
+        import file_name 
+
+
+
 
     - Setters and Getters 
             - decorators 
@@ -1771,127 +1894,6 @@
 
             Hat.sort("Harry")
 
-    - Inheritance
-        Inheritance is the capability of one class to derive or inherit the properties 
-        from another class
-
-
-        Different types of Inheritance:
-            Single inheritance: 
-                When a child class inherits from only one parent class, it is
-                called single inheritance. We saw an example above.
-            Multiple inheritances: 
-                When a child class inherits from multiple parent classes, 
-                it is called multiple inheritances.
-            Multilevel Inheritance:
-                the base class and the derived class are further inherited into the new 
-                derived class. This is similar to a relationship representing a child and 
-                a grandfather. 
-            Hierarchical Inheritance: 
-                more than one derived class are created from a single base this type of 
-                inheritance is called hierarchical inheritance
-            Hybrid Inheritance: 
-
-            syntax:
-                Class BaseClass:
-                    {Body}
-                Class DerivedClass(BaseClass):
-                    {Body}
-
-            Ex. 
-                class person:
-                    def __init__(self, name, age, sex):
-                        self._name = name
-                        self._age = age
-                        self._sex = sex
-
-
-                class teacher(person):
-                    def __init__(self, name, age, sex, Id, dep):
-                        super().__init__(name, age, sex)
-                        self._Id = Id
-                        self._dep = dep
-
-
-                class stu(teacher):
-                    def __init__(self, name, age, sex, Id, dep, gpa):
-                        super().__init__(name, age, sex, Id, dep)
-                        self._gpa = gpa
-
-                per1 = person("Someone", 50, "M")
-
-                tech1 = teacher("Gemchies.T",38, "M", "101/Tech", "COmputer Engineering")
-
-                stu1 = stu("Yonatan Afewerk", 22, "M", "917/13", "Software engineering", 4.00)
-
-
-
-                print(per1._name)
-                print(tech1._name)
-                print(stu1._name)
-
-    - Overloading methods
-           https://www.youtube.com/watch?v=sxTmJE4k0ho ->(03:03:13)
-
-        operator overloading 
-            
-
-    - Static and class methods 
-        class methods 
-            Thus are Decorators that used for special methods 
-
-        Static methods 
-            used for the perpuose for creating import module's for your program
-
-
-        Ex. 
-            class school:
-                schools = []
-
-                def __init__(self, a):
-                    self.name = a
-                    self.schools.append(self)
-
-                @classmethod
-                def num_schools(cls):
-                    return f"{len(cls.schools)} school's are leasted"
-
-                @staticmethod
-                def signup(n):
-                    for _ in range(n):
-                        print("Student Signed In! Great Work!")
-                    
-
-            sch1 = school("Alemaya")
-            sch2 = school("harar")
-
-            print(school.num_schools())
-
-
-            school.signup(5)
-
-    - Private and public classes 
-
-        Note: Its not a python rule its just an argument you can choose to up hold for better readablity 
-        of the code
-
-        Private classes:
-            Classes that are Private for a particular program
-        while:
-            Public classes are classes that you can import for access and use and can be modified
-
-        class _name:        -> private 
-            // class code
-
-        class name:         -> public
-            // class code
-
-
-        # To import module from an other file 
-
-        from file_name import module_name
-        or 
-        import file_name 
 
 
 📘 Intermediate Python 📘

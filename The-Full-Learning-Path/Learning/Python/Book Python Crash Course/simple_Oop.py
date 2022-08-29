@@ -32,7 +32,7 @@ class User(object):
 def main():
     """creating the instance for the class restaurant"""
     restaurant = Restaurant("Ras Hotel", "Doro Wet")
-    restaurant_1 = Restaurant("Hiliton", "Ya Gurage Ketfo"+)
+    restaurant_1 = Restaurant("Hiliton", "Ya Gurage Ketfo")
     restaurant_2 = Restaurant("Hayat regency", "Ya Oromo genfo with Milk")
     
     """accessing the instances of the class Restaurants"""
