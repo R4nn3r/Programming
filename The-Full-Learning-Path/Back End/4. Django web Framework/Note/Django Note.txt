@@ -1,0 +1,38 @@
+# Creating a Virtual Environment
+
+    python -m venv ll_env 
+    or
+    python3 -m venv ll_env
+
+
+    - Activating the Virtual Environment
+           
+            source ll_env/bin/activate
+
+                To stop using a virtual environment, enter deactivate:
+
+# Creating a Project in Django
+
+    django-admin startproject learning_log . (project name)
+
+        Note:
+            The command at u tells Django to set up a new project called learning
+            _log. The dot at the end of the command creates the new project with a
+            directory structure that will make it easy to deploy the app to a server when
+            we’re finished developing it.
+
+# Creating the Database
+
+    python manage.py migrate
+
+
+# Viewing the Project
+
+    python manage.py runserver
+
+
+
+# Example Project set-up
+
+    - django-admin startprojects mysite
+
