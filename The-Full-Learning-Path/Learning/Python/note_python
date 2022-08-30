@@ -654,6 +654,36 @@
                 for student in sorted(students, key=lambda student: student['Name']):
                     print(f"{student['Name']} is in {student['Home']}")
 
+
+        - Storing Data
+                - Using json.dum() and json.load()
+
+                # Dump
+                import json 
+
+                numbers = [1,2,3,4,5,6,7,8,9,10]
+
+
+                filename = 'numbers.json'
+
+                with open(filename , "w") as file:
+                    json.dump(numbers, file)
+
+
+
+
+                # Load
+                import json 
+
+
+                filename = "numbers.json"
+
+
+                with open(filename) as f:
+                    numbers = json.load(f)
+                    
+                print(numbers)
+
 # Modular Programming :Functions
     ->  is a block of related statements designed to perform a computational, 
         logical, or evaluative task. 
@@ -1521,12 +1551,11 @@
 # OOP
     # Making an object from a class is called instantiation
 
-    Tip:
-        Class 
-        Objects 
-            Setter 
-            Getter 
-            deletion
+    NOte:
+        Chief among the principles of the object-oriented approach  
+                - Modularity 
+                - Abstraction 
+                - Encapsulation 
 
 
 
@@ -1794,23 +1823,23 @@
     - Importing Classes 
             Storing your classes in a module and then importing them into main program
             is one of the funcitonalites provided by python 
+        -> from -- import --- 
+
+                # To import module from an other file 
+
+                from file_name import module_name, module_name_2
+                or 
+                import file_name 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    NOTE::: 
+    - Styling Classes
+            #   Class names should be written in CamelCase
+            #   Don’t use underscores. Instance and module names should be written 
+                in lowercase with underscores between words.
+            #   Every class, method should have a docstring immediately following the class 
+                defi-nition.
 
 
     - Overloading methods
@@ -1869,14 +1898,7 @@
             // class code
 
 
-        # To import module from an other file 
-
-        from file_name import module_name
-        or 
-        import file_name 
-
-
-
+       
 
     - Setters and Getters 
             - decorators 
