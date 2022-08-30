@@ -1791,6 +1791,26 @@
                     user_.privileges.show_privileges() 
                         -> instance.(instance_attribute).method()
 
+    - Importing Classes 
+            Storing your classes in a module and then importing them into main program
+            is one of the funcitonalites provided by python 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     - Overloading methods
