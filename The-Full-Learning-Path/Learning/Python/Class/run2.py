@@ -1,7 +1,24 @@
-word = "dog"
-end = len(word)
-rev_word = word[::-1]
+count = 10
+pos_numbers = []
+neg_numbers = []
+zero =[]
 
-for i in range(end):
-     if word[i:] == rev_word[:end-i]and rev_word[end-i:]:
-         print(word[i:])
+
+while count != 0:
+    num = int(input("Enter Numbers: "))
+    if  num > 0:
+        pos_numbers.append(num)
+    elif num < 0:
+        neg_numbers.append(num)
+    else:
+        zero.append(num)
+    
+    count -= 1
+    
+choice = input("Negative(n) or positive(p) count: ").lower() 
+if choice == "n":
+    print("Negative: ",len(neg_numbers))
+elif choice == "p":
+    print("Positive: ", len(pos_numbers))
+    
+print(f"With {len(zero)} Zero's.")
