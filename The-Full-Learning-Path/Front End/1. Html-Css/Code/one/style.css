@@ -64,3 +64,90 @@ body {
     /* color:#ffe48d; */
     font-weight: 900;
 }
+
+
+
+.main {
+    height: 400px;
+    padding: 15px;
+    margin: 50px 0;
+}
+
+.main_section {
+    margin: 15px;
+    padding: 25px
+}
+
+.content_ {
+    height: 253px;
+    width: 177px;
+    display: inline-block;
+    margin: 7px;
+    vertical-align: top;
+}
+
+
+
+/* Another one lol */
+
+
+.container_ {
+    margin: 5px;
+    width: 100%;
+
+}
+
+.photo img{
+    width: 100%;
+
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    margin: -7px 0;
+}
+
+.pic img {
+    width: 25px;
+    border-radius: 50%;
+    margin: 10px 9px 10px 0;
+}
+
+.cname {
+    font-size: 16px;  
+    font-weight: 500;
+}
+
+.username {
+    font-size: 10px;
+    color: #606060;
+}
+
+.button_1 {
+    margin: 10px 0;
+}
+
+.button_ {
+    background-color: #98ff9847;
+    padding: 2px 14px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.grid {
+    padding: 6px;
+    height: 95px;
+}
+
+.boxx {
+    margin-left: 45px;
+    display: inline-block;
+    background-color: #98ff9847;
+
+}
+
+.button_1 a {
+    text-decoration: none;
+    color: green;
+}
