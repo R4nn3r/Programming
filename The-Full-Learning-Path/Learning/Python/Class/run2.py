@@ -1,11 +1,7 @@
-from run import *
+word = "dog"
+end = len(word)
+rev_word = word[::-1]
 
-
-def main():
-    roll = Die()
-
-    print(roll.roll_dice())
-        
-
-if __name__ == '__main__':
-    main()
+for i in range(end):
+     if word[i:] == rev_word[:end-i]and rev_word[end-i:]:
+         print(word[i:])
