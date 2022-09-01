@@ -5,11 +5,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color:cornsilk
+    background-image: url("./Background/sunset-1373171.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
-    border: 1px dashed red;
     margin: 5px;
     font-size: 13px;
     font-weight: 400;
@@ -20,7 +21,7 @@ body {
 }
 
 .container_left, .container_right{
-    border: 1px dashed red;
+    /* border: 1px dashed red; */
 }
 
 .container_left {
@@ -32,8 +33,6 @@ body {
 }
 
 .content {
-    border: 1px dashed black;
-    background-color: green;
     margin: 2px;
     display: flex;
     flex-direction: row;
@@ -41,10 +40,6 @@ body {
 }
 
 .content_right, .content_left {
-    border: 1px dashed black;
-    background-color: orange;
-    margin: 1px;
-    padding: 2px;
     width: 35%;
     display: flex;
     flex-direction: row;
@@ -55,17 +50,26 @@ body {
 
 .mail_ > a, .img_ > a {
     text-decoration: none;
-    counter-reset: black;
+    color: white;
     font-weight: 400;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+
 .img_2 > a > img {
-    border: 1px dashed black;
     border-radius: 50%;
     width: 40px;
 }
 
 .icon {
-    border: 1px dashed black;
-    width: 30px;
+    padding: 6px;
+    border-radius: 50%;
+    color: white;
+}
+
+.icon:hover {
+    background-color: rgba(255, 255, 255, 0.054);
 }
