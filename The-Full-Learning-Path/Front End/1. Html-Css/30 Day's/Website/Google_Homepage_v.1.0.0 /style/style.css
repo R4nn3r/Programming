@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../Background/sunset-1373171.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.container_left, .container_right{
+    /* border: 1px dashed red; */
+}
+
+.container_left {
+    width: 70%;
+}
+
+.container_right {
+    width: 30%;
+}
+
+.content {
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.content_right, .content_left {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.mail_ > a, .img_ > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.img_2 > a > img {
+    border-radius: 50%;
+    width: 30px;
+}
+
+.icon {
+    padding: 6px;
+    border-radius: 50%;
+    color: white;
+}
+
+.icon:hover {
+    background-color: rgba(255, 255, 255, 0.054);
+}
+
+
+
+.container_2 {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.top  {
+    margin-top: 70px;
+}
+
+
+.mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.search {
+    background-color: white;
+    border-radius: 60px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.search-input {
+    align-self: center;
+    justify-self: center;
+    border: none;
+    margin-left: 5px;
+    width: 500px;
+    outline: none;
+}
+
+
+.start >a > img {
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.end > a > img {
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding-right: 15px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom_box {
+    padding: 10px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bottom_box:hover {
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.054);
+}
+
+
+.logo {
+    border: 1px dashed white;
+    background-color: #fff;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+.plus {
+    color: #fff;
+    width: 100%;
+}
+
+
+
+.plus_logo {
+    color: black;
+    font-size: 15px;
+
+}
+
+.add {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+}
+
