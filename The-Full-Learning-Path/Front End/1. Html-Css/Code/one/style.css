@@ -14,14 +14,14 @@ body {
     font-size: 15px;
     font-weight: 500;
     margin: 5px;
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
     padding: 5px;
 }
 
 .flow-content {
     font-size: 13px;
     margin: 0 5px;
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
     padding: 10px;
     background-color:rgb(170, 213, 211);
 
@@ -37,7 +37,7 @@ body {
 }
 
 .grid-even-columns_ {
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
     background-color:rgba(148, 207, 148, 0.364);
     margin: 10px;
     padding: 10px;
@@ -46,20 +46,20 @@ body {
 }
 
 .about-services {
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
     gap: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
 .content-services {
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
     margin: 10px;
     padding: 10px;
 }
 
 .resume {
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
     margin: 10px;
     padding: 10px;
     display: inline-block;
@@ -97,7 +97,7 @@ body {
 
 .resume > p {
     font-size: 13px;
-    border: 1px dashed goldenrod;
+    /* border: 1px dashed goldenrod; */
 }
 
 .resume > a {
@@ -106,7 +106,7 @@ body {
     display: inline-block;
     border: 1px dashed red;
     padding: 5px 10px;
-    background-color: rgba(255, 155, 155, 0.195);
+    background-color: rgba(255, 155, 155, 0.435);
     font-weight: 900;
     font-size: 13px;
     transition: all 5ms ease-in-out;
@@ -125,7 +125,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
-    border: 1px dashed pink;
+    /* border: 1px dashed pink; */
     margin: 10px;
     padding: 10px;
 }
@@ -140,7 +140,7 @@ ul {
 
 
 .text {
-    border: 1px dashed brown;
+    /* border: 1px dashed brown; */
     margin: 10px;
     padding: 10px;
     font-weight: 400;
@@ -149,7 +149,7 @@ ul {
 }
 
 li {
-    border: 1px dashed brown;
+    /* border: 1px dashed brown; */
     margin: 5px;
     padding: 5px;
     font-weight: 900;
