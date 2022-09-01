@@ -5,3 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.word {
+    font-size: 100px;
+    text-align: center;
+    font-weight: 900;
+}
