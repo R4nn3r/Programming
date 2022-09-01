@@ -4,10 +4,68 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color:cornsilk
 }
 
-.word {
-    font-size: 100px;
-    text-align: center;
-    font-weight: 900;
+.container {
+    border: 1px dashed red;
+    margin: 5px;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.container_left, .container_right{
+    border: 1px dashed red;
+}
+
+.container_left {
+    width: 70%;
+}
+
+.container_right {
+    width: 30%;
+}
+
+.content {
+    border: 1px dashed black;
+    background-color: green;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.content_right, .content_left {
+    border: 1px dashed black;
+    background-color: orange;
+    margin: 1px;
+    padding: 2px;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.mail_ > a, .img_ > a {
+    text-decoration: none;
+    counter-reset: black;
+    font-weight: 400;
+}
+
+.img_2 > a > img {
+    border: 1px dashed black;
+    border-radius: 50%;
+    width: 40px;
+}
+
+.icon {
+    border: 1px dashed black;
+    width: 30px;
 }
