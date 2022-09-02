@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-from random_walk import RandomWalk as rw
+from random_walk_generator import RandomWalk as rw
 
     # make a random walk instance 
 walk = rw()
@@ -10,6 +10,6 @@ walk.fill_walk()
 
 plt.style.use("classic")
 fig, ax = plt.subplots()
-ax.scatter(walk.x_values, walk.y_values, s =5)
+ax.scatter(walk.x_values, walk.y_values, c="black", s =5)
 
 plt.show()

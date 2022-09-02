@@ -11,7 +11,7 @@ from random import choice
 
 class RandomWalk:
     """ A class that generates a random walks. """
-    def __init__(self, num_points = 5000):
+    def __init__(self, num_points = 50000):
         """ Initialize the walker."""
         self.num_points = num_points
         
