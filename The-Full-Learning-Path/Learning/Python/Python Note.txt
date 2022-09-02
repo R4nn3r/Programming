@@ -1986,6 +1986,56 @@
 
             Hat.sort("Harry")
 
+# Data Visualizaiton
+
+    python(3) -m pip install --user matplotlib
+
+
+    - Plotting a Simple Line Graph
+
+            import matplotlib.pyplot as plt 
+
+            squares = [1,4,9,16,25]
+            input_values = [1,2,3,4,5]
+
+            fig, ax = plt.subplots()    
+            ax.plot(squares)
+
+            plt.show()
+
+    - Changing the Label Type and Line Thickness
+
+                # set chart title and label axes
+            ax.set_title("Square Numbers", fontsize=13)
+            ax.set_xlabel("Value", fontsize=11)
+            ax.set_ylabel("Square of Value", fontsize=11)
+
+    - Using Built-in Styles 
+            Note:
+                    >>> import matplotlib.pyplot as plt
+                    >>> plt.style.available
+                    >>> (You can chose from the provided list)
+
+            plt.style.use('Solarize_Light2')
+
+    - using scatter() to plot points on the graph
+                
+                # plotting a series of points 
+            ax.scatter(input_values, squares, s=20, color="green")
+
+                # plotting a single point 
+            ax.scatter(x,y) -> Ex. (2,4)
+
+    - Calculating Data Automatically
+
+                x = range(1,11)
+                y = [i**2 for i in x]
+
+                ax.scatter(x, y, c=x, cmap=plt.cm.Blues, s=10)
+
+    - Saving the plots automatically 
+
+            plt.savefig('squares_plot.png', bbox_inches='tight')
 
 
 📘 Intermediate Python 📘
