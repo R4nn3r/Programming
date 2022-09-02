@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout's #2</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="content-hello">
+            <h1>Hello World!</h1>
+        </div>
+    </header>
+    
+
+    <!-- Intro to main-->
+    <div class="content">
+        <h1>The Guide to Layouts <span style="font-size:14px ;"></span style="font-weight:bold">ለመሆን እየሞከረ ነው።</h1>
+
+        <div class="note">
+        <h1 class ="title">Note</h1>
+
+             <p class="in-note">This is a simple website made by <em>Html/Css</em> to track my understanding of <em>grid</em> and other <em>concepts</em>.</p>
+        
+            <p class="in-note">Because this is my first time making a website it will have some problems here and
+                 there and that is the intended purpose to make mistake and break code to learn from it
+                in the process </p>
+        </div>
+
+        <div class="note">
+        <h1 class ="title, smaller" >Material to Reference</h1>
+
+            <p class="in-note">Some of the video content i enjoyed learning basic Html & css from, 
+                there are more as every programmer is told when starting out "Google it!" lol :)
+                <ul>
+                    <li><a href="https://youtu.be/rg7Fvvl3taU">Learn CSS Grid the easy way</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=3elGSZSWTbM">Flexbox or Grid -How to decide</a></li>
+                    <li><a href="https://youtu.be/G3e-cpL7ofc">Html and Css Full course</a></li>
+                </ul>
+            </p>
+       
+           <p class="in-note">Because videos have a certain amount of intertaing factor i think people should incorporate 
+            a more traditional mode of learning with in the given time of watching consuming the videos and for that 
+            i think <span><a href="https://www.w3schools.com/css/default.asp">W3Schools</a></span> to be a great complementing 
+        platform.</p>
+       </div>
+
+
+    </div>
+    
+
+    <!-- main section -->
+    <div class="grid-container">
+        <span style="font-size: 75px;">Layout's using Grid</span> 
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Grid Elements</h1>
+        
+                <div class="note">
+                     <p class="">A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
+                
+                    <p class="">Direct child element(s) of the grid container automatically becomes grid items.</p>
+            
+                </div>
+            </div>
+            
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Grid Container</h1>
+        
+                <div class="note">
+                     <p class="">To make an HTML element behave as a grid container, you have to set the display property to grid or inline-grid.
+                        Grid containers consist of grid items, placed inside columns and rows.</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Grid-template-columns Property</h1>
+        
+                <div class="note">
+                     <p class="">The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.
+                        The value is a space-separated-list, where each value defines the width of the respective column.</p>
+                    <p class="">Direct child element(s) of the grid container automatically becomes grid items.</p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Grid-template-rows Property</h1>
+        
+                <div class="note">
+                     <p class="">The grid-template-rows property defines the height of each row.</p>
+                
+                    <p class="">The value is a space-separated-list, where each value defines the height of the respective row:</p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Justify-content Property</h1>
+        
+                <div class="note">
+                     <p class="">The justify-content property is used to align the whole grid inside the container.</p>
+                
+                    <p class=""><strong> Note:</strong> The grid's total width has to be less than the container's width for the justify-content property to have any effect.</p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Align-content Property</h1>
+        
+                <div class="note">
+                     <p class="">The align-content property is used to vertically align the whole grid inside the container.</p>
+                
+                    <p class=""><strong> Note:</strong> The grid's total height has to be less than the container's height for the align-content property to have any effect.</p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Child Elements (Items)</h1>
+        
+                <div class="note">
+                     <p class="">A grid container contains grid items.</p>
+                
+                    <p class="">By default, a container has one grid item for each column, in each row, but you can style the grid items so that they will span multiple columns and/or rows.
+                    </p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Grid-column Property:</h1>
+        
+                <div class="note">
+                     <p class="">The grid-column property defines on which column(s) to place an item.</p>
+                
+                    <p class="">You define where the item will start, and where the item will end.</p>
+                    <p class=""><strong> Note:</strong> The grid-column property is a shorthand property for the grid-column-start and the grid-column-end properties. 
+                        To place an item, you can refer to line numbers, or use the keyword "span" to define how many columns the item will span.</p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Grid-row Property</h1>
+        
+                <div class="note">
+                     <p class="">The grid-row property defines on which row to place an item.</p>
+                
+                    <p class=""><strong> Note:</strong> The grid-row property is a shorthand property for the grid-row-start and the grid-row-end properties.
+                        To place an item, you can refer to line numbers, or use the keyword "span" to define how many rows the item will span:</p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Grid-area Property</h1>
+        
+                <div class="note">
+                     <p class="">The grid-area property can be used as a shorthand property for the grid-row-start, 
+                        grid-column-start, grid-row-end and the grid-column-end properties.</p>
+                
+                    <p class=""><strong> Note:</strong> The grid-row property is a shorthand property for the grid-row-start and the grid-row-end properties.
+                        To place an item, you can refer to line numbers, or use the keyword "span" to define how many rows the item will span:</p>
+            
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="content_in">
+                <h1>Naming Grid Items</h1>
+        
+                <div class="note">
+                     <p class="">The grid-area property can also be used to assign names to grid items.</p>
+                
+                    <p class=""><strong> Note:</strong> Named grid items can be referred to by the grid-template-areas property of the grid container.</p>
+            
+                </div>
+            </div>
+        </div>
+      </div>
+
+      
+
+<!-- Footer -->
+
+<footer class="footer">
+    <div class="content content_footer">
+
+        <div class="note ">
+        <h1 class ="title"><span class="by">By</span>Yonatan Afewerk Teshome</h1>
+
+            <div class="links">
+                <a href="https://github.com/R4nn3r" class="link_ href=""><img class="logo" src="./Icons/github.gif" alt=""> </a>
+                <a href="https://www.linkedin.com/in/yonatan-afewerk-1511661a0/" class="link_ href=""><img class="logo" src="./Icons/linkedin.gif" alt=""></a>
+                <a href="https://t.me/Toyxna" class="link_ href=""><img class="logo" src="./Icons/telegram.gif" alt=""></a>
+            </div>
+        </div>
+
+</footer>
+
+
+
+
+
+
+      <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("header").style.fontSize = "5px";
+          } else {
+            document.getElementById("header").style.fontSize = "15px";
+          }
+        }
+        </script>
+</body>
+</html>

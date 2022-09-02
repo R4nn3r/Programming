@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+
+body {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Abril Fatface', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    margin: 100px 0;
+    background-color: lightsteelblue;
+    padding: 10px;
+    display: grid;
+    gap: 1em;
+}
+
+
+.grid-item {
+    background-color: lavenderblush;
+    padding: 10px;
+    box-shadow: 5px 5px 1px black;
+
+}
+
+.content , h1, .note {
+    border: 1px dashed red;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.content {
+    display: grid;
+}
+
+.note {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.title {
+    font-family: Abril Fatface;
+    border: none;
+
+}
+
+.header {
+    border: 1px dashed green;
+    margin-bottom: 150px;
+}
+
+.content-hello {
+    margin-top: 0;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+.in-note {
+    margin: 10px;
+    padding: 10px;
+}
+
+.smaller {
+    font-family: Abril Fatface;
+
+}
+
+#header {
+    transition: 0.3s;
+}
+
+li {
+    list-style-type: none;
+    
+}
+
+.by {
+    font-size: 10px;
+}
+
+.links {
+    line-height: 25px;
+    font-weight: 400;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
+    width: 30px;
+
+}
+
+
+
+
+@media (min-width: 15em) {
+    .grid-container {
+        background-color: rgba(129, 172, 161, 0.437);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .content {
+        background-color: rgba(101, 136, 127, 0.179);
+    }
+    
+
+}
+
+
+@media (min-width: 30em) {
+    .grid-container {
+        background-color: rgb(61, 70, 81);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content {
+        background-color: rgba(61, 70, 81, 0.184);
+    }
+    .content_footer {
+        background-color: rgba(131, 171, 223, 0.238);
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+@media (min-width: 60em) {
+    .grid-container {
+        background-color: rgb(131, 171, 223);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .content {
+        background-color: rgba(131, 171, 223, 0.238);
+        grid-template-columns: 15% 1fr 1fr ;
+        gap: 1em;
+    }
+
+    .content_footer {
+        background-color: rgba(131, 171, 223, 0.238);
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+
+
+}
