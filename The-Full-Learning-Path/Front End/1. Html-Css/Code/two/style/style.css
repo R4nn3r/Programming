@@ -62,31 +62,11 @@ body {
 
 .links a {
     margin-left: 35px;
-    font-size: 14px;
 }
 
 .links a:hover {
-    font-weight: 500;
+    font-weight: 900;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .grid-container {
@@ -113,7 +93,7 @@ body {
 
 
 .grid-item {
-    padding: 2em;
+    padding: 5px;
     border: 1px dashed black;
     border-radius: .1rem;
     box-shadow: 2em 2.75em 2.3em rgba(116, 114, 114, 0.095);
@@ -168,6 +148,10 @@ body {
         'seven eight'
         'seven nine';
     }
+
+    .links {
+        visibility: hidden;
+    }
 }
 
 
@@ -182,6 +166,11 @@ body {
         'nine nine nine'
         ;
     }
+
+    .links a {
+        font-size: 10px;
+        visibility: visible;
+    }
 }
 
 @media (min-width: 50em) {
@@ -189,9 +178,36 @@ body {
         grid-auto-columns: 1fr;
         grid-template-areas: 
         'one one two three'
-        'four five five three'
+        'four five five five'
         'six six six seven'
         'eight nine nine seven'
         ;
     }
+    .links{
+        font-size: 10px;
+        visibility: visible;
+    }
+}
+
+
+/* Content */
+
+.top p {
+    border: 1px dashed green;
+    padding: 2px;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.card-one h1 {
+    font-size: 16px;
+    border: 1px dashed green;
+    padding: 2px;
+}
+
+
+.card-content {
+    border: 1px dashed green;
+    padding: 2px;
+    font-size: 13px;
 }
