@@ -30,15 +30,17 @@ body {
 }
 
 /* Header */
-.header {
-    padding: 5px;
-}
 
 .navbar-container {
-    border: 1px dashed black;
+    position: fixed;
+    width: 100%;
+    border: 1.5px solid rgba(53, 53, 53, 0.115);
+    background-color: rgba(166, 221, 240, 0.17);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 5px 5px 25px rgba(87, 87, 87, 0.204);
+
 }
 
 .logo {
@@ -48,7 +50,7 @@ body {
 }
 
 .logo img {
-    border: 1px dashed green;
+    /* border: 1px dashed green; */
     height: 75px;
     width: 75px;
     display: inline-block;
@@ -62,11 +64,20 @@ body {
 
 .links a {
     margin-left: 35px;
+    padding: 5px;
 }
 
 .links a:hover {
     font-weight: 900;
 }
+
+
+/* Hero */
+
+.hero {
+    padding: 50px;
+}
+
 
 
 .grid-container {
@@ -94,7 +105,7 @@ body {
 
 .grid-item {
     padding: 5px;
-    border: 1px dashed black;
+    /* border: 1px dashed black; */
     border-radius: .1rem;
     box-shadow: 2em 2.75em 2.3em rgba(116, 114, 114, 0.095);
 }
@@ -141,8 +152,8 @@ body {
 @media (min-width: 15em) {
     .grid-container {
         grid-template-areas: 
-        'one two'
-        'one three'
+        'one one'
+        'two three'
         'four five'
         'six six'
         'seven eight'
@@ -168,8 +179,10 @@ body {
     }
 
     .links a {
-        font-size: 10px;
+        font-size: 12px;
         visibility: visible;
+        font-weight: 400;
+
     }
 }
 
@@ -193,21 +206,21 @@ body {
 /* Content */
 
 .top p {
-    border: 1px dashed green;
-    padding: 2px;
+    /* border: 1px dashed green; */
+    padding: 5px;
     font-size: 12px;
     font-weight: 900;
 }
 
 .card-one h1 {
     font-size: 16px;
-    border: 1px dashed green;
-    padding: 2px;
+    /* border: 1px dashed green; */
+    padding: 5px;
 }
 
 
 .card-content {
-    border: 1px dashed green;
-    padding: 2px;
+    /* border: 1px dashed green; */
+    padding: 5px;
     font-size: 13px;
 }
