@@ -116,7 +116,17 @@ HTML (Hypertext Markup Language)
 
 # Layout 
 
-        # grid
+        # Grid 
+
+            Steps -
+                displayed: grid
+                gap
+                # setting a column up is good but just until you create a media query
+                grid-template-columns: repeat(4, 1fr);
+
+            
+
+
 
         
 
