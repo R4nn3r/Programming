@@ -124,7 +124,22 @@ HTML (Hypertext Markup Language)
                 # setting a column up is good but just until you create a media query
                 grid-template-columns: repeat(4, 1fr);
 
-            
+            # You can use 
+                grid-template-columns
+                grid-template-rows
+
+                # with grid row, col span
+                grid-row:
+                grid-column:
+
+            # or create and use 
+                grid-template-areas: 
+                    - create areas
+
+                attach the areas with the nth-child of element
+
+                    - create media query and create the layout as you see fit 
+                    by embedding the grid-template-areas in it
 
 
 
