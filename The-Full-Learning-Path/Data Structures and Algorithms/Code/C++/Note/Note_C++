@@ -1,0 +1,1282 @@
+/*variables
+        A variable is a name given to a memory location. It is the basic unit of storage in a program.
+
+        // Declaring a single variable
+        data type variable_name;
+                int num;
+
+        // Declaring multiple variables:
+        data type variable1_name, variable2_name, variable3_name;
+                int num, num2, num3;
+
+            // Declaring float variable
+                float simpleInterest;
+
+            // Declaring integer variable
+                int time, speed;
+
+            // Declaring character variable
+                char var;
+        Types of variables
+            There are three types of variables based on the scope of variables in C++:
+                    Local Variables
+                    Instance Variables
+                    Static Variables
+
+    class Example
+    {
+        static int a; // static variable
+        int b;        // instance variable
+    }
+
+    */
+
+/*ASCII
+        to get the number for a given char
+
+        cout << (int)'a' << endl; // 'a' -> 97
+        cout << (int)'A' << endl; // 'A' -> 65
+
+        to get the respected char to a number
+
+        cout << char(97) << endl; // -> a
+        cout << char(65) << endl; // -> A*/
+
+/*Loops
+    There are mainly two types of loops:
+        1.Entry Controlled loops: In this type of loops the test condition is tested before entering the loop body.
+        #For Loop and #While Loop are entry controlled loops.
+
+
+        #While Loop
+                initialization expression|int a = 1|;
+                while (test_expression|condition (a <= 50)|) // loop guard
+                {
+                    // statements
+
+                    update_expression(a++ or a--);
+                }
+
+        #For loop
+        for (initialization expr|start|; test expr|condition|; update expr|what you want to do icrement or decrement|)
+            {
+                // body of the loop
+                // statements we want to execute
+            }
+
+
+        2.Exit Controlled Loops: In this type of loops the test condition is tested or evaluated at the end of loop body. Therefore, the loop body will execute atleast once,
+        irrespective of whether the test condition is true or false.
+        do – while loop is exit controlled loop.
+
+            #do-while Loop
+                initialization expression;
+                do
+                {
+                    // statements
+
+                    update_expression;
+                } while (test_expression |condition|);
+
+            #infinite Loop
+                initialization expression;
+                for (;;) // ;; is the infinite loop condition
+                {
+                    //statements
+                }
+
+
+    ##Important Points:
+        *Use #for loop when number of iterations is known beforehand, i.e. the number of times the loop body is needed to be executed is known.
+        *Use #while loops where exact number of iterations is not known but the loop termination condition is known.
+        *Use #do while loop if the code needs to be executed at least once like in Menu driven programs*/
+
+/*Decision making
+    #if- else
+        #if
+            if(condition)
+            {
+                // Statements to execute if
+                // condition is true
+            }
+        #if- else
+            if (condition)
+            {
+                // Executes this block if
+                // condition is true
+            }
+            else
+            {
+                // Executes this block if
+                // condition is false
+            }
+        #nested-if
+            if (condition1)
+            {
+                // Executes when condition1 is true
+                    if (condition2)
+                    {
+                        // Executes when condition2 is true
+                    }
+            }
+
+    #switch
+        switch (expression)
+        {
+            case 1:
+            break;
+
+            case 2:
+            break;
+
+            case 3:
+            break;
+
+            default;
+        }
+
+
+    jump statements in c++
+
+        #break
+        This loop control statement is used to terminate the loop.As soon as the break statement is encountered
+        from within a loop, the loop iterations stop there, and control returns from the loop immediately to the
+        first statement after the loop.
+            Syntax: break;
+
+        #continue
+        This loop control statement is just like the break statement. The continue statement is opposite to that
+        of the break statement, instead of terminating the loop, it forces to execute the next iteration of the
+        loop.As the name suggests the continue statement forces the loop to continue or execute the next
+        iteration.
+            syntax: continue;
+
+            // loop from 1 to 10
+            for (int i = 1; i <= 10; i++) {
+                    if (i == 6)
+                        continue(break);
+
+                    else
+                        // otherwise print the value of i
+                        cout << i;
+        }*/
+
+/*input and output
+        Streams Objects in C++ are mainly of three types :
+            istream : Stream object of this type can only perform input operations from the stream
+            ostream : These objects can only be used for output operations.
+            iostream : Can be used for both input and output operations
+        #include <iostream>
+        i = input; o = output ==> stream;
+
+        Standard output stream (cout):
+        Usually the standard output device is the display screen.
+        The C++ cout statement is the instance of the ostream class. It is used to produce output
+        on the standard output device which is usually the display screen. The data needed to be
+        displayed on the screen is inserted in the standard output stream (cout)
+        using the insertion operator(<<).
+
+                cout << "the info you want to display on the screen" << endl;
+                eg.
+                #include <iostream>
+
+                using namespace std;
+
+                int main()
+                {
+                    char sample[] = "GeeksforGeeks"; // sample[] array the only reason its working is cause its not defined but if define the array with less then 14 char then it will give an error!
+
+                    cout << sample << " - A computer science portal for geeks";
+
+                    return 0;
+                }
+
+        standard input stream (cin):
+        Usually the input device in a computer is the keyboard. C++ cin statement
+        is the instance of the class istream and is used to read input from the standard input device which is
+        usually a keyboard.The extraction operator(>>) is used along with the object cin for reading inputs.
+        The extraction operator extracts the data from the object cin which is entered using the keyboard.
+
+                string input;
+                cout << "Input: "; // The displayed part on the screen that asks for the input
+                cin >> input; // the function that store the data into the "input" string variable
+
+
+
+        What is a buffer?
+        A temporary storage area is called a buffer. All standard input and output devices contain an
+        input and output buffer. In standard C/C++, streams are buffered, for example in the case of
+        standard input, when we press the key on the keyboard, it isn’t sent to your program, rather
+        it is buffered by the operating system till the time is allotted to that program.
+
+
+
+        Un-buffered standard error stream (cerr):
+        The C++ cerr is the standard error stream that is used
+        to output the errors. This is also an instance of the ostream class. As cerr in C++ is un-buffered
+        so it is used when one needs to display the error message immediately. It does not have any buffer
+        to store the error message and display it later.
+        The main difference between cerr and cout comes when you would like to redirect output using “cout”
+        that gets redirected to file if you use “cerr” the error doesn’t get stored in file.(This is what
+        un-buffered means ..It cant store the message)
+
+        buffered standard error stream (clog):
+        This is also an instance of ostream class and used to display errors but unlike cerr the error is first
+        inserted into a buffer and is stored in the buffer until it is not fully filled. or the buffer is not
+        explicitly flushed (using flush()). The error message will be displayed on the screen too.*/
+
+/*Operators
+    Operators are the foundation of any programming language. We can define operators as symbols
+    that help us to perform specific mathematical and logical computations on operands. In other words,
+    we can say that an operator operates the operands.
+
+    C/C++ has many built-in operators and can be classified into 6 types:
+
+        #Arithmetic Operators
+            These operators are used to perform arithmetic/mathematical operations on operands.
+            Examples: (+, -, *, /, %,++,–). Arithmetic operators are of two types:
+                a) Unary Operators: Operators that operate or work with a single operand are unary operators.
+                For example: Increment(++) and Decrement(--) Operators
+                        eg.     int val = 5;
+                                ++val;  // 6
+                                or
+                                int val = 5;
+                                --val;  // 4
+
+                b) Binary Operators: Operators that operate or work with two operands are binary operators.
+                For example: Addition(+), Subtraction(-), multiplication(*), Division(/) operators
+                        eg.     int a = 7;
+                                int b = 2;
+                                cout << a + b; // 9
+
+
+
+            #Relational Operators
+            These are used for the comparison of the values of two operands. For example, checking if one
+            operand is equal to the other operand or not, an operand is greater than the other operand or
+            not, etc. Some of the relational operators are (==, >= , <= )
+
+
+            #Logical Operators
+            Logical Operators are used to combining two or more conditions/constraints or to complement the
+            evaluation of the original condition in consideration. The result of the operation of a logical
+            operator is a Boolean value either true or false. (&&(and), ||(or), !(NOT!))
+
+                        eg.     (4 != 5) && (4 < 5);     // true
+
+
+
+            #Bitwise Operators
+            The Bitwise operators are used to perform bit-level operations on the operands. The operators are
+            first converted to bit-level and then the calculation is performed on the operands. The mathematical
+            operations such as addition, subtraction, multiplication, etc.
+                        eg.
+                                int a = 5, b = 9;   // a = 5(00000101), b = 9(00001001)
+                                cout << (a + b);   //  00001100
+                                cout <<(~a);       // 11111010 // 14-6
+
+
+
+
+            #Assignment Operators
+            Assignment operators are used to assigning value to a variable. The left side operand of the assignment
+            operator is a variable and the right side operand of the assignment operator is a value. The value on
+            the right side must be of the same data type as the variable on the left side otherwise the compiler
+            will raise an error.
+
+            Different types of assignment operators are shown below:
+            a. “=”: This is the simplest assignment operator. This operator is used to assign the value on the
+                right to the variable on the left.
+            b. “+=”: This operator is combination of ‘+’ and ‘=’ operators. This operator first adds the current
+                value of the variable on left to the value on the right and then assigns the result to the variable
+                on the left.
+            c. “-=”: This operator is a combination of ‘-‘ and ‘=’ operators. This operator first subtracts the value
+                on the right from the current value of the variable on left and then assigns the result to the variable
+                on the left.
+            d. “*=”:
+            e. “/=”:
+
+            #Other Operators
+                a. sizeof operator:
+                        sizeof()
+                b. Comma Operator:
+                c. Conditional Operator:
+
+        number operation functions:  //#inlcude <cmath>
+            1.pow(num1, num2):- this is num1 the power of num2
+            2.sqrt(num1):- this is square root on num1
+            3.round(num1):- this roundes the number
+            4.ceil(num1):- this roundes the number up
+            5.floor(num1):- this roundes the number down
+            6.fmax(numn1, num2):- this is output the max number between num1 and num2
+            7.fmin(numn1, num2):- this is output the min number between num1 and num2
+            8.sizeof(numn) :- this is output the size of thei int*/
+
+/*Arrays
+        An array in C/C++ or be it in any programming language is a collection of similar data items stored at
+        contiguous memory locations and elements can be accessed randomly using indices of an array.
+
+            #Array declaration in C/C++:
+
+                        eg.
+                            // Array declaration by specifying size
+                            int arr1[10]; // this means the arrays length is 10 and it can store 10 individual elements
+                                        // and its elements can be accessed referencing the index
+                                                    first index = 0
+                                                    last index = 9
+
+                            // With recent C/C++ versions, we can also
+                            // declare an array of user specified size
+                            int n = 10;
+                            int arr2[n];
+
+                #Array declaration by initializing elements
+                    int arr[] = { 10, 20, 30, 40 }
+
+                    // Compiler creates an array of size 4.
+                    // above is same as  "int arr[4] = {10, 20, 30, 40}"
+
+                #Array declaration by specifying size and initializing
+                    // elements
+                    int arr[6] = { 10, 20, 30, 40 }
+
+                    // Compiler creates an array of size 6, initializes first
+                    // 4 elements as specified by user and rest two elements as
+                    // 0. above is same as  "int arr[] = {10, 20, 30, 40, 0, 0}"
+
+            #Accessing Array Elements:
+                Array elements are accessed by using an integer index. Array index starts with 0 and goes till size of
+                array minus 1. Name of the array is also a pointer to the first element of array
+
+        #Multidimensional arrays (array of arrays.)
+            The types are:
+                            One dimensional array:
+                                    int one_d[10];
+
+                            Two dimensional array:
+                                    int two_d[10][20];
+
+                            Three dimensional array:
+                                    int three_d[10][20][30];
+
+                    The total number of elements that can be stored in a multidimensional array can be calculated by multiplying the size of all the dimensions.
+                            For example:
+                                        The array int two_d[10][20] can store total (10*20) = 200 elements.
+                                        Similarly array int three_d[5][10][20] can store total (5*10*20) = 1000 elements.
+
+                Two-Dimensional Array
+                    Two – dimensional array is the simplest form of a multidimensional array. We can see a two – dimensional array as an array of one – dimensional array for easier understanding.
+
+
+                    The basic form of declaring a two-dimensional array of size x, y:
+                    Syntax:
+                            data_type array_name[x][y];
+                            data_type: Type of data to be stored. Valid C/C++ data type.
+                            We can declare a two-dimensional integer array say ‘x’ of size 10,20 as:
+
+                                int x[10][20];
+                                -Elements in two-dimensional arrays are commonly referred to by x[i][j]
+                                where i is the row number and ‘j’ is the column number.
+                                -A two – dimensional array can be seen as a table with ‘x’ rows and ‘y’
+                                columns where the row number ranges from 0 to (x-1) and column number ranges
+                                from 0 to (y-1).
+                        Initializing Two – Dimensional Arrays:
+                                            There are two ways in which a Two-Dimensional
+                                            array can be initialized.
+                                                First Method:
+                                                            int x[3][4] = {0, 1 ,2 ,3 ,4 , 5 , 6 , 7 , 8 , 9 , 10 , 11}
+                                                Better Method:
+                                                            int x[3][4] = {{0,1,2,3}, {4,5,6,7}, {8,9,10,11}};
+                        Initializing Three-Dimensional Array:
+                                            Three-Dimensional array is the same as that of Two-dimensional arrays.
+                                            The difference is as the number of dimensions increases so the number
+                                            of nested braces will also increase.
+                                                Method 1:
+                                                            int x[2][3][4] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                                                                            11, 12, 13, 14, 15, 16, 17, 18, 19,
+                                                                            20, 21, 22, 23};
+                                                Better Method:
+                                                            int x[2][3][4] =
+                                                            {
+                                                                { {0,1,2,3}, {4,5,6,7}, {8,9,10,11} },
+                                                                { {12,13,14,15}, {16,17,18,19}, {20,21,22,23} }
+                                                            };
+
+                #DYNAMIC ARRAYS
+
+                eg.
+                int size;
+                cout << "size: ";
+                cin >> size;
+                // int anArray[size];
+
+                int *anArray = new int[size]; //creating the dynamic array
+
+                cout << "Enter The Numbers: " << endl;
+                for (int i = 0; i < size; i++)
+                {
+                    cin >> anArray[i];
+                }
+
+                for (int j = 0; j < size; j++)
+                {
+                    cout << *(anArray + j) << " " ;
+                }
+
+                delete [] anArray; // deleting the the data from the dynamic array
+	            anArray = NULL;
+
+
+                cout << endl << endl;
+                cout << anArray[3] << endl; // answere will be 0 cause its cleared
+
+
+
+
+
+
+
+
+
+                                                             */
+
+/*Structure
+        stores a collection of different types of data
+         #A structure contains number of data types grouped togthere these data types may be or may not be of same data type
+        //Declaration of structure
+
+        struct structure-name
+        {
+            datatype1 varname1;
+            datatype2 varname2;
+        }; // need the semicolum to end the structure
+
+
+
+        //then creating the object for that structure
+
+        struct structure-name var1, var2;
+
+
+ */
+
+/*Pointers
+    Whenever you see the & used with pointers, think of the words “address of.”
+    The & operator always produces the memory address of whatever it
+    precedes. The * operator, when used with pointers, either declares a pointer
+    or dereferences the pointer’s value. The dereference operator can be literally
+    translated to "value pointed by" .
+
+                    & the address of operator
+                    * the dereference operator
+                eg.
+                        ptr= &var;
+
+                    This would assign to variable ptr the address of variable var , since when
+                    preceding the name of the variable var with the ampersand ( & ) character we
+                    are no longer talking about the content of the variable, but about its address
+                    in memory.
+
+        Declaring Pointers:
+            #Is reserving a memory location for a pointer variable in the heap.
+            Syntax:
+            type * pointer_name ;
+            #to declare a pointer variable called p_age, do the following:
+            int * p_age;
+
+                    NOTE:
+                    the * appears before a pointer variable in only two places: when you
+                    declare a pointer variable and when you dereference a pointer variable (to find
+                    the data it points to).
+
+        eg.
+            int num = 123; // a regular integer variable
+            int *p_num; //declares an integer pointer
+
+            cout<< "num is " << num <<endl;
+            cout<< "the address of num is "<< &num <<endl;
+
+            p_num = &num;// puts address of num in p_num;
+            cout<< "*p_num is "<< *p_num <<endl; //prints value of num
+            cout<< "p_num is "<< p_num <<endl; //prints value of P_num
+
+        How to creat a pointer variable
+            int *pAge = &age;
+            double *pGpa = &gpa;
+            string *pName = &name;
+
+            How to dereference a pointer variable
+                while trying to pull the variable
+                    eg.
+                        cout << *pAge; // "*" dereferenc's the pointer
+                        cout << *&gpage; // "*" also dereferenc's the pointer you get the real value eg. 19
+                                        // "&gpa" you get the memory address*/
+
+/*Strings
+
+
+        Operations on strings
+                    #string_name.function()
+
+            #Input Functions
+                1. getline() :- This function is used to store a stream of characters as entered by the
+                                user in the object memory.
+                2. push_back() :- This function is used to input a character at the end of the string.
+                3. pop_back() :- Introduced from C++11(for strings), this function is used to delete the
+                                last character from the string.
+
+            #Capacity Functions
+                4.str_name.capacity() :- This function returns the capacity allocated to the string, which can be equal
+                                to or more than the size of the string. Additional space is allocated so that when the new characters
+                                are added to the string, the operations can be done efficiently.
+                5.str_name.resize() :- This function changes the size of string, the size can be increased or decreased.
+                6.str_name.length():-This function finds the length of the string
+                7.str_name.shrink_to_fit() :- This function decreases the capacity of the string and makes
+                                    it equal to the minimum capacity of the string. This operation is useful to save
+                                    additional memory if we are sure that no further addition of characters have to
+                                    be made
+                8.str_name[] :- to refer to the strings index
+                9.str_name.find("str to find", pos, len):-
+                10.str_name.substr(pos, len) :- a fuction that graps a sub string from a given string
+            #Iterator Functions
+                            NOTE (step)
+                                string str = " //statements ";
+                                std::string::iterator it;
+                                std::string::reverse_iterator it1;
+
+                            //not reverse
+                                for(it = str.begin(); it != str.end(); it++)
+                                cout << *it;
+                            //reverse
+                                for (it1 = str.rbegin(); it != str.rend(); it1++)
+                                cout << *it1;
+                8. begin() :- This function returns an iterator to beginning of the string.
+                9. end() :- This function returns an iterator to end of the string.
+                10. rbegin() :- This function returns a reverse iterator pointing at the end of string.
+                11. rend() :- This function returns a reverse iterator pointing at beginning of string.
+            #Manipulating Functions
+                12. copy(“char array”, len, pos) :- This function copies the substring in target character array mentioned in its arguments. It takes 3 arguments, target char array, length to be copied and starting position in string to start copying.
+                13. swap() :- This function swaps one string with other.
+
+
+
+        #Array of strings in c++(5 different ways to create)
+        1. Using Pointers:
+
+                        #Initialize array of pointer
+                                    const char *colour[4] = { "Blue", "Red", "Orange", "Yellow" };
+                                                                0       1       2         3
+                    NOTE:
+                    #The number of strings is fixed, but needn’t be. The 4 may be omitted,
+                    and the compiler will compute the correct size.
+                    #These strings are constants and their contents cannot be changed. Because string literals
+                    (literally, the quoted strings) exist in a read-only area of memory, we must specify “const”
+                    here to prevent unwanted accesses that may crash the program.
+
+        2. Using 2D array:
+        This method is useful when the length of all strings is known and a particular memory footprint is
+        desired. Space for strings will be allocated in a single block
+
+                        #Initialize 2D array
+                                    char colour[4][10] = { "Blue", "Red", "Orange", "Yellow" };
+                    NOTE
+                    #Both the number of strings and the size of strings are fixed. The 4, again,
+                    maybe left out, and the appropriate size will be computed by the compiler.
+                    The second dimension, however, must be given (in this case, 10), so that the
+                    compiler can choose an appropriate memory layout.
+                    #Each string can be modified but will take up the full space given by the second
+                    dimension. Each will be laid out next to each other in memory, and can’t change size.
+
+        3. Using the vector class:      //#include <vector>
+        The STL container Vector can be used to dynamically allocate an array that can vary in size.
+                    NOTE
+                    #Vectors are dynamic arrays, and allow you to add and remove items at any time.
+                    #Any type or class may be used in vectors, but a given vector can only hold one type.
+                    eg.
+                            #Declaring Vector of String type
+                                //Values can be added here using initializer-list syntax
+                                        vector<string> colour {"Blue", "Red", "Orange"};
+
+                                // Strings can be added at any time with push_back
+                                        colour.push_back("Yellow");
+                                // strings can be removed at any time with pop_back
+                                        colour.pop_back();
+
+        5. Using the array class:           //#include <array>
+        The STL container array can be used to allocate a fixed-size array. It may be used very similarly
+        to vector, but the size is always fixed.
+                            #Initialize array
+                                        array<string, 4> colour { "Blue", "Red", "Orange", "Yellow" };
+
+
+
+        ??????#Tokenizing a string            //#include <bits/stdc++.h>
+            Tokenizing a string denots #splitting a string with respect to some delimiter(s).
+                #Using stringstream
+                    A stringstream associates a string object with a stream allowing you to read
+                    from the string as if it were a stream.
+                    eg.
+                                string line = "The Ethiopian programmer is taking over the world!";
+
+                                // Vector of string to save tokens
+                                vector <string> tokens;
+
+                                // stringstream class check1
+                                stringstream check1(line);
+
+                                string intermediate;
+
+                                // Tokenizing w.r.t. space ' '
+                                while(getline(check1, intermediate, ' '))
+                                {
+                                    tokens.push_back(intermediate);
+                                }
+
+                                // Printing the token vector
+                                for(int i = 0; i < tokens.size(); i++)
+                                cout << tokens[i] << '\n';
+
+                #Using strtok()
+                    // Splits str[] according to given delimiters.
+                    // and returns next token. It needs to be called
+                    // in a loop to get all tokens. It returns NULL
+                    // when there are no more tokens.
+                                char * strtok(char str[], const char *delims);
+
+        ??????#strrchr() function
+        -In C++, strrchr() is a predefined function used for string handling. cstring is the header file
+        required for string functions.
+        -This function returns a pointer to the last occurrence of a character in a string.
+        -The character whose last occurrence we want to find is passed as the second argument to
+        the function and the string in which we have to find the character is passed as the first
+        argument to the function.
+
+            #Syntax:
+                    char *strrchr(const char *str, int c)
+                    //Here, str is the string and c is the character to be located.
+                    It is passed as its int promotion, but it is internally converted back to char.
+
+                NOTE
+                    Algorithm
+                            1. Pass the given string in the strchr() function and mention the
+                            character you need to point to.
+
+                            2. The function returns a value, print the value.
+                #Practical Application:
+                Since it returns the entire string after the last occurrence of a
+                particular character, it can be used to extract the suffix of a string. For e.g to know
+                the entire leading zeroes in a denomination when we know the first number. This example
+                is demonstrated below.
+
+
+        #stringstream           //#include <bits/stdc++.h>
+            A stringstream associates a string object with a stream allowing you to read from the string as
+            if it were a stream (like cin).
+                Basic methods are –
+                                    clear() — to clear the stream
+                                    str() — to get and set string object whose content is present in stream.
+                                    operator << — add a string to the stringstream object.
+                                    operator >> — read something from the stringstream object,*/
+
+/*Functions
+    A function is a set of statements that take inputs, do some specific computation and produces output.
+        The general form of a function is:
+
+                return_type function_name([ arg1_type arg1_name, ... ])  //make sure to give a name to the function based on what it does so it can be a clean code!
+                {
+                    //code
+                }
+            or
+                data_type fun_name() -> it can take parameters
+                {
+                    //code
+                }
+
+
+
+
+        Function Declaration:
+        A function declaration tells the compiler about the number of parameters function takes,
+        data-types of parameters, and return type of function. Putting parameter names in function
+        declaration is optional in the function declaration, but it is necessary to put them in the
+        definition.
+
+            #Default Arguments in C++
+                A default argument is a value provided in a function declaration that is automatically assigned by
+                the compiler if the caller of the function doesn’t provide a value for the argument with a default
+                value.
+            #Inline Functions in C++
+                C++ provides an inline functions to reduce the function call overhead. Inline function is a
+                function that is expanded in line when it is called. When the inline function is called whole
+                code of the inline function gets inserted or substituted at the point of inline function call.
+                This substitution is performed by the C++ compiler at compile time. Inline function may increase
+                efficiency if it is small.The syntax for defining the function inline is:
+
+                    inline return-type function-name(parameters)
+                    {
+                        // function code
+                    }
+                            NOTE
+                            Remember, inlining is only a request to the compiler, not a command. Compiler can ignore the request for inlining. Compiler may not perform inlining in such circumstances like:
+                                1) If a function contains a loop. (for, while, do-while)
+                                2) If a function contains static variables.
+                                3) If a function is recursive.
+                                4) If a function return type is other than void, and the return statement doesn’t exist in function body.
+                                5) If a function contains switch or goto statement.
+                                                    #Inline functions provide following advantages:
+                                                        1) Function call overhead doesn’t occur.
+                                                        2) It also saves the overhead of push/pop variables on the stack when function is called.
+                                                        3) It also saves overhead of a return call from a function.
+                                                        4) When you inline a function, you may enable compiler to perform context specific optimization
+                                                        on the body of function. Such optimizations are not possible for normal function calls. Other
+                                                        optimizations can be obtained by considering the flows of calling context and the called context.
+                                                        5) Inline function may be useful (if it is small) for embedded systems because inline can yield
+                                                        less code than the function call preamble and return.
+            #Return from void functions in C++
+            A void fun() can return another void function
+            EG.
+                // C++ code to demonstrate void()
+                // returning void()
+                #include<iostream>
+                using namespace std;
+
+                // A sample void function
+                void work()
+                {
+                    cout << "The void function has returned "
+                            " a void() !!! \n";
+                }
+
+                // Driver void() returning void work()
+                void test()
+                {
+                    // Returning void function
+                    return work();
+                }
+
+                int main()
+                {
+                    // Calling void function
+                    test();
+                    return 0;
+                }
+
+
+        NOTE
+
+        #how to use parameters in function eg. using  void
+
+                    void sayhi(string name, int age)
+                    {
+                        cout << "sayhi" << name << "age: " << age << endl;
+                    }
+
+                    int main()
+                    {
+                        sayhi("name", 60);        // you can pass the string in here
+                        return 0;
+                    }
+
+        #another way to make function is
+
+                    double cube(double number)
+                    {
+                        double result = num * num * num;
+                        return result;          // This tells c++ that the funciton has finshed and wont read any thing after the return value.
+                    }
+
+                    int main()
+                    {
+                        int x;
+                        cout << "Enter a num: ";
+                        cin >> x;
+
+                        double answer  = cube(x);
+                        cout << answer << endl;
+                        return 0;
+    #Function overloading
+        - is the process of creating function with the same name but with different return types
+
+        int sum(int a , int b)
+        {
+            int result = a + b;
+            return result;
+        }
+        double sum(double a, double b)
+        {
+            return a + b;
+        }
+        float sum(float a, float b, float c)
+        {
+            return a + b + c;
+        }
+
+    #Generic function and templates
+        using the same function for different data types by using templates
+        eg.
+
+        template<typename t>
+
+                        }*/
+
+/*Pointers & References
+        Pointers store address of variables or a memory location.
+                        // General syntax
+                        datatype *var_name;
+
+                        // An example pointer "ptr" that holds
+                        // address of an integer variable or holds
+                        // address of a memory whose value(s) can
+                        // be accessed as integer values through "ptr"
+                            int *ptr;
+                -To declare a pointer variable: When a pointer variable is
+                declared in C/C++, there must be a * before its name.
+                -To access the value stored in the address we use the unary operator (*)
+                that returns the value of the variable located at the address specified
+                by its operand. This is also called Dereferencing.
+            #Pointer Expressions and Pointer Arithmetic
+            A limited set of arithmetic operations can be performed on pointers. A pointer may be:
+
+
+            incremented ( ++ )
+            decremented ( — )
+            an integer may be added to a pointer ( + or += )
+            an integer may be subtracted from a pointer ( – or -= )
+                    Note :
+                    Pointers contain addresses. Adding two addresses makes no sense, because there is no
+                    idea what it would point to. Subtracting two addresses lets you compute the offset between
+                    these two addresses
+            Pointers and Multidimensional Arrays
+                Consider pointer notation for the two-dimensional numeric arrays.
+                consider the following declaration
+
+                int nums[2][3]  =  { {16, 18, 20}, {25, 26, 27} };
+                In general, nums[i][j] is equivalent to *(*(nums+i)+j)
+
+        #Opaque Pointer
+            syntax:
+                    struct STest* pSTest;
+
+            It is safe to assign NULL to an opaque pointer.
+                    pSTest = NULL;
+                                Applications :
+                                1.Modify the passed parameters in a function: If a function receives a reference to a
+                                variable, it can modify the value of the variable
+                                2.Avoiding a copy of large structures: Imagine a function that has to receive a large
+                                object. If we pass it without reference, a new copy of it is created which causes wastage
+                                of CPU time and memory. We can use references to avoid this.
+                                3.In For Each Loops to modify all objects : We can use references in for each loops to
+                                modify all elements
+                                4.For Each Loop to avoid the copy of objects: We can use references in each loop to avoid a
+                                copy of individual objects when objects are large
+
+
+        #VOID POINTERS
+            void print(void *ptr, char type) //start
+            {
+                switch (type) // switch between the types
+                {
+                    case 'i': //int
+                            cout << (*(int*)ptr) << endl;
+                            break;
+                    case 'c': //char
+                            cout << (*(char*)ptr) << endl;
+                            break;
+                }
+            }
+
+
+            int main()
+            {
+                int number = 5;
+
+                print(&number, 'i'); //function_name(address, dataType)
+                cout << endl;
+
+                char letter = 'A';
+
+                print(&letter, 'c'); //function_name(address, dataType)
+
+
+
+
+
+
+
+
+
+
+                                       */
+
+/*Object Oriented Programming
+
+        The is the process of creating your own data types.
+            #class is a user defined data type.
+
+
+            NOTE - How to create a class::
+                    class is: a new data type.
+                            is essentially a specification or a blueprint for a new data type in our program.
+
+                        step 1: // before the main function --> this is the class which is the blueprint! (template)
+                                class Book
+                                    {
+                                        Note: Access modifiers
+                                            -public: // can be accessed out side of the given class
+                                            -private: //cant be accessed out side of the given class
+                                            -protected: // you will have to set rules for the access
+
+                                        #all the members in a given class are private by default so make sure you
+                                        use the public: tag if you want to access them
+
+                                        public: // Member's
+                                                string title;
+                                                string author;
+                                                int pages;
+                                        // constructor functions
+                                            Book()
+                                            {
+
+                                            }
+
+
+                                    }; // need a semi-column
+
+                        step 2: // Then you create the object in the main function
+                                int main()
+                                {
+                                    Book book1;  // Book.book1 "Book is the class name: book1 is the object to be created based on the blueprint in the class"
+                                    book1.title = "Life of Us";
+                                    book1.author = "Yonatan afewerk";
+                                    book1.pages = 241;
+
+                                    return;
+                                }
+
+    NOTE: CONSTRUCTERS
+        default constructor is given if you dont create a new constructor
+
+        rules: CONSTRUCTERS
+            rule 1: it doesn't have return type
+            rule 2: a constructor of a class has the same name as the class itself
+            rule 3: a constructor should be public //at least for now
+
+
+
+        NOTE - Encapsulation
+            #Encapsulation is defined as wrapping up of data and information under a single unit
+            This a process of bundling Data to a group to prevent different class from accesing each other data
+            there are to method for that thus are:
+                            getters = get()
+                            setters = set()
+
+                eg.
+            //encapsulated data in the studnet class
+                private:
+                        string name;
+                        string email;
+                        string comment;
+                        int id;
+
+        //Encapsulation in class setting getters and setter
+                public:
+                        void setname(string Name) //setter
+                        {
+                            if (name.length() > 8)  //validation rule to set the name is set here and checked beofre the name is assinged
+                            name = Name;
+                        }
+                        string getname() //getter
+                        {
+                            return name;
+                        }
+                        void setemail(string Email) //setter
+                        {
+                            email = Email;
+                        }
+                        string getemail() //getter
+                        {
+                            return email;
+                        }
+                        void setcomment(string Comment) //setter
+                        {
+                            comment = Comment;
+                        }
+                        string getcomment() //getter
+                        {
+                            return comment;
+                        }
+                        void setid(int Id) //setter
+                        {
+                            if(Id > 1500)
+                            id = Id;
+                        }
+                        int getid() //getter
+
+                    cout << student1.getname() << " Your id was " << student1.getid() << endl; // how you use getters
+
+                    student1.setid(h); // how you use setters
+                    cout <<"But cause of new students its changed to " << student1.getid() << endl; // how to use getters
+
+        NOTE - Abstraction
+        Abstraction means displaying only essential information and hiding the details. Data abstraction refers to
+        providing only essential information about the data to the outside world, hiding the background details or
+        implementation.
+            Abstraction using Classes:
+            We can implement Abstraction in C++ using classes. Class helps us to group
+            data members and member functions using available access specifiers. A Class can decide which data member
+            will be visible to outside world and which is not.
+
+            Abstraction in Header files:
+            One more type of abstraction in C++ can be header files.
+
+            Abstraction using access specifiers:
+            Access specifiers are the main pillar of implementing abstraction in C++.
+            We can use access specifiers to enforce restrictions on class members. For example:
+                    -Members declared as public in a class, can be accessed from anywhere in the program.
+                    -Members declared as private in a class, can be accessed only from within the class.
+                    They are not allowed to be accessed from any part of code outside the class.
+
+
+
+            #Advantages of Data Abstraction:
+            Helps the user to avoid writing the low level code
+            Avoids code duplication and increases reusability.
+            Can change internal implementation of class independently without affecting the user.
+            Helps to increase security of an application or program as only important details are provided to the user.
+            eg.
+                class abstract_student  // class for abstraction this is a contract
+                {
+                virtual void askforclass() = 0;   // this is the method
+                                                // to make it obligatory -> bby making it a pure virtual function
+
+                };
+
+                class student: abstract_student // this how you make other classes sign to a abstraction class
+                {
+                    public:
+                            void askforclass() // the method implementation function
+                                {
+                                    if( condition)
+                                        //code
+                                    else
+                                        //code
+                                }
+
+                int main()
+                {
+                    student1.askforclass(); // this how you call the abstract function
+                }
+
+                };
+
+        NOTE - INHERITANCE
+        The capability of a class to derive properties and characteristics from another class is called Inheritance.
+            Sub Class: The class that inherits properties from another class is called Sub class or Derived Class.
+            Super Class:The class whose properties are inherited by sub class is called Base Class or Super class.
+
+        Why and when to use inheritance?
+            1.To avoid or reduce chances of error and data redundancy through writing code thats a duplicate
+                Implementing inheritance in C++:
+                For creating a sub-class which is inherited from the base class we have to follow the below syntax.
+                Syntax:
+                        class subclass_name : access_mode base_class_name
+                        {
+                            //body of subclass
+                        };
+                        --> subclass_name is the name of the sub class
+                        --> access_mode is the mode in which you want to inherit this sub class for example: public, private etc
+                        --> base_class_name is the name of the base class from which you want to inherit the sub class.
+
+                    eg.
+                        //Base class
+                        class Parent
+                        {
+                            public:
+                            int id_p;
+                        };
+
+                        // Sub class inheriting from Base Class(Parent)
+                        class Child : public Parent
+                        {
+                            public:
+                            int id_c;
+                        };
+
+
+        Note:
+        A derived class doesn’t inherit access to private data members. However, it does inherit a full parent
+        object, which contains any private members which that class declares.
+
+            #Modes of Inheritance:
+                        Public mode:
+                            If we derive a sub class from a public base class. Then the public member of the base class
+                            will become public in the derived class and protected members of the base class will become protected in
+                            derived class.
+                        Protected mode:
+                            If we derive a sub class from a Protected base class. Then both public member and protected
+                            members of the base class will become protected in derived class.
+                        Private mode:
+                            If we derive a sub class from a Private base class. Then both public member and protected
+                            members of the base class will become Private in derived class.
+
+            #Types of Inheritance in C++
+                    1. Single Inheritance:
+                    In single inheritance, a class is allowed to inherit from only one class.
+                    i.e. one sub class is inherited by one base class only.
+                        Syntax:
+                            class subclass_name : access_mode base_class
+                            {
+                            //body of subclass
+                            };
+                    2. Multiple Inheritance:
+                    Multiple Inheritance is a feature of C++ where a class can inherit from more
+                    than one classes. i.e one sub class is inherited from more than one base classes.
+                        Syntax:
+                            class subclass_name : access_mode base_class1, access_mode base_class2, ....
+                            {
+                            //body of subclass
+                            };
+                                    #Here, the number of base classes will be separated by a comma (‘, ‘)
+                                    and access mode for every base class must be specified.
+                    3. Multilevel Inheritance:
+                    In this type of inheritance, a derived class is created from another derived class.
+                    4. Hierarchical Inheritance:
+                    In this type of inheritance, more than one sub class is inherited from a single base class.
+                    i.e. more than one derived class is created from a single base class.
+                    5. Hybrid (Virtual) Inheritance:
+                    Hybrid Inheritance is implemented by combining more than one type of inheritance.
+                    For example: Combining Hierarchical inheritance and Multiple Inheritance.
+                    6. A special case of hybrid inheritance : Multipath inheritance:
+                    A derived class with two base classes and these two base classes have one common base class is
+                    called multipath inheritance. An ambiguity can arrise in this type of inheritance.
+
+        NOTE Polymorphism // many forms
+        The word polymorphism means having many forms.
+            In C++ polymorphism is mainly divided into two types:
+                                    Compile time Polymorphism
+                                                        -> Function overloading
+                                                        -> Operator overloading
+                                    Runtime Polymorphism
+                                                        -> Virtual Functions
+
+        #Compile time polymorphism:
+        This type of polymorphism is achieved by function overloading or operator overloading.
+
+                Function Overloading:
+                    When there are multiple functions with same name but different parameters then
+                    these functions are said to be overloaded. Functions can be overloaded by change in number of arguments
+                    or/and change in type of arguments. NOTE -> which funcation gets called will depend on the parameters passed
+                        The rules of function overloading
+                            1) Function declarations that differ only in the return type(same data type for the functions).
+                            2) Member function declarations with the same name and the name parameter-type-list cannot be overloaded
+                            if any of them is a static member function declaration.
+                            3) Parameter declarations that differ only in a pointer * versus an array [] are equivalent. That is, the array
+                            declaration is adjusted to become a pointer declaration. Only the second and subsequent array dimensions are
+                            significant in parameter types.
+                                        eg.
+                                            int fun(int *ptr);
+                                            int fun(int ptr[]); // redeclaration of fun(int *ptr)
+                            4) Parameter declarations that differ only in that one is a function type and the other is a pointer to the same
+                            function type are equivalent.
+                            5) Parameter declarations that differ only in the presence or absence of const and/or volatile are equivalent.
+                            That is, the const and volatile type-specifiers for each parameter type are ignored when determining which function
+                            is being declared, defined, or called.
+                Operator Overloading:
+                C++ also provide option to overload operators. For example, we can make the operator (‘+’) for string class to concatenate two
+                strings. We know that this is the addition operator whose task is to add two operands. So a single operator ‘+’ when placed
+                between integer operands , adds them and when placed between string operands, concatenates them.
+
+        #Runtime polymorphism:
+        This type of polymorphism is achieved by virtual Function Overriding.
+
+            Virtual Function: on the other hand occurs when a derived class has a definition for one of the member functions of the base
+            class. That base function is said to be overridden.
+            -> virtual void function
+
+
+    */
+
+/*Tips
+
+    //How to randomize numbers
+        int dice; // stores the random number
+        srand(time(0));
+        dice = rand()%10 + 1;
+        
+
+    // how to swap a values of two variables
+            //using a 3rd variable
+            int a = 20;
+            int b = 10;
+            int temp;
+
+            temp = a; // temp = 20
+            a = b; // a = 10
+            b = temp; // b = 20
+
+            //without using a 3rd variable
+            int a = 20;
+            int b = 10;
+
+            a = a + b; // a = 30
+            b = a - b; // b = 20
+            a = a - b; // a = 10
+
+
+    //How to use function and multiple arg for those functions with one arg being an array
+
+        int numMax(int Max[], int size)
+        {
+        int max = Max[0];
+        for(int j = 1; j < size; j++)
+        {
+            if(max < Max[j])
+                    max = Max[j];
+        }
+        return max;
+
+
+        }
+
+        int numMin(int Min[], int size)
+        {
+        int min = Min[0];
+        for(int i = 1; i < size; i++)
+        {
+            if(min > Min[i])
+                min = Min[i];
+        }
+            return min;
+        }
+
+        //doing the same thing but using pointes and a void function
+        void GetMinMax(int Numbers[], int size, int *Min, int *Max)
+        {
+            for(int j = 1; j < size; j++)
+            {
+            if(*Max < Numbers[j])
+                    *Max = Numbers[j];
+            if(*Min > Numbers[j])
+                    *Min = Numbers[j];
+            }
+
+            cout << "Max Number: " << *Max << endl;
+            cout << "Min Number: " << *Min << endl;
+        }
+        int main()
+        {
+            // int *ty = luckyNumbers+3;
+
+            int numbers[5] = {10,20,30,40,50};
+
+            cout << "Min Number: "<< numMin(numbers, 5) << endl;
+            cout << "Max Number: "<< numMax(numbers, 5) << endl;
+
+              cout << endl;
+
+            GetMinMax(numbers, 5, &Min, &Max);
+
+
+
+
+ */
