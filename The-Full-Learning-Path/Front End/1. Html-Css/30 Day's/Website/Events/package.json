@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "optimize-css":"postcss style.css --use autoprefixer cssnano postcss-pxtorem --output style.prod.css --no-map"
+    "optimize-css":"postcss src/style.css --use autoprefixer cssnano postcss-pxtorem --output dist/style.prod.css --no-map"
   },
   "author": "",
   "license": "ISC",
