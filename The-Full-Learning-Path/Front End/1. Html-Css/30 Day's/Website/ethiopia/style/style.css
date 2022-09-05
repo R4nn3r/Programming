@@ -6,7 +6,8 @@ body {
   color: #252525;
   line-height: 1.6;
   display: grid;
-  
+  grid-template: "header header header header" 10em "hero hero hero hero" 50vh ". main sidebar ." auto "footer footer footer footer" 10em/1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+  grid-column-gap: 1.5em;
 }
 
 header {
@@ -30,10 +31,6 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.3em;
 }
-
-.footer-title {
-  margin: 0;
-} 
 
 .hero {
   grid-area: hero;
@@ -127,7 +124,6 @@ footer {
   font-weight: bold;
 }
 
-
 @media (min-width: 15em) {
   body {
     grid-template: "header header header header" 10em "hero hero hero hero" 50vh ". sidebar sidebar ." auto ". main main ." auto "footer footer footer footer" 10em/1fr minmax(10em, 2fr) minmax(10em, 2fr) 1fr;
@@ -136,11 +132,12 @@ footer {
   }
   .hero-title {
     font-family: "Six Caps", sans-serif;
+    font-size: 6rem;
     color: #252525;
     text-transform: uppercase;
     letter-spacing: 0.3em;
     margin: 0;
-    font-size: 60px;
+    font-size: 65px;
   }
   .hero-subtitle {
     font-family: "Merriweather", serif;
@@ -154,10 +151,11 @@ footer {
   .header-title,
 .footer-title {
     font-family: "Six Caps", sans-serif;
+    font-size: 1rem;
     color: #e9d20f;
     text-transform: uppercase;
     letter-spacing: 0.3em;
-    font-size: 15px;
+    font-size: 20px;
   }
   main {
     grid-area: main;
@@ -202,78 +200,4 @@ footer {
     grid-template: "header header header header" 10em "hero hero hero hero" 50vh ". main sidebar ." auto "footer footer footer footer" 10em/1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
     grid-column-gap: 1.5em;
   }
-
-  .header-title,
-.footer-title {
-  font-family: "Six Caps", sans-serif;
-  font-size: 2.875rem;
-  color: #e9d20f;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-}
-
-
-  .hero-title {
-    font-size: 6rem;
-    letter-spacing: 0.3em;
-    margin: 0;
-  }
-  
-  .hero-subtitle {
-    font-size: 2.875rem;
-    font-weight: 300;
-    font-size: 20px;
-    text-align: center;
-  }
-
-
-    main {
-      grid-area: main;
-      margin-top: 200px;
-    }
-
-    aside {
-      margin-top: 200px;
-      grid-area: sidebar;
-      background: #e8e8e8;
-      padding: 2em;
-    }
-    aside p {
-      font-size: 14px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    footer {
-      grid-area: footer;
-    }
-
-    .card {
-      border: 1px solid rgba(75, 75, 75, 0.187);
-      display: grid;
-      grid-template: "img title" -webkit-min-content "img content" auto/1fr 3fr;
-      grid-template: "img title" min-content "img content" auto/1fr 3fr;
-      grid-column-gap: 1.5em;
-      padding: 1.5em;
-      margin-bottom: 1.5em;
-      transition: all 0.2s;
-      background-color: rgba(255, 255, 255, 0.695);
-    }
-
-    footer {
-      margin-top: 50px;
-      display: flex;
-    }
-    .links {
-      align-items: center;
-      text-align: center;
-      margin-right: 20px;
-    }
-    .links .logo {
-      height: 15px;
-      width: 15px;
-    }
-    .links a {
-      margin-left: 15px;
-    }
-  
 }/*# sourceMappingURL=style.css.map */
