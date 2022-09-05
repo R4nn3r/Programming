@@ -174,7 +174,7 @@ HTML (Hypertext Markup Language)
     - npm install postcss postcss-cli autoprefixer cssnano postcss-pxtorem --save-dev
     - Write the script 
           "scripts": {
-                "optimize-css":"postcss style.css --use autoprefixer cssnano postcss-pxtorem --output style.prod.css"
+                "optimize-css":"postcss style.css --use autoprefixer cssnano postcss-pxtorem --output style.prod.css --no-map"
             },
     - Run the script
         npm run optimize-css

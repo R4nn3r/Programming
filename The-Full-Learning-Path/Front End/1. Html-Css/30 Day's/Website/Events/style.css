@@ -318,6 +318,10 @@ body {
         visibility: visible;
         grid-template-columns: 1fr;
     }
+
+    .main {
+        margin-bottom: -0.9370000000000003rem;
+    }
    
 }
 
