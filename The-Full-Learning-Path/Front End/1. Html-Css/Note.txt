@@ -169,15 +169,18 @@ HTML (Hypertext Markup Language)
 
 
 
-# Optimization of the web site using npm packages
-    - npm init 
-    - npm install postcss postcss-cli autoprefixer cssnano postcss-pxtorem --save-dev
-    - Write the script 
-          "scripts": {
-                "optimize-css":"postcss style.css --use autoprefixer cssnano postcss-pxtorem --output style.prod.css --no-map"
-            },
-    - Run the script
-        npm run optimize-css
+
+# Best Practice to follow to get a better grip on the industry
+
+    # Optimization of the web site using npm packages
+        - npm init 
+        - npm install postcss postcss-cli autoprefixer cssnano postcss-pxtorem --save-dev
+        - Write the script 
+            "scripts": {
+                    "optimize-css":"postcss style.css --use autoprefixer cssnano postcss-pxtorem --output style.prod.css --no-map"
+                },
+        - Run the script
+            npm run optimize-css
 
 
-    - Deploy to git pages or netlify 
+        - Deploy to git pages or netlify 
