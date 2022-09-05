@@ -1,0 +1,19 @@
+.basic-grid {
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+
+.card {
+
+}
+
+.note p {
+    font-size: 14px;
+    border: 1px dashed green;
+    padding: 10px;
+    margin: 10px;
+    color: aliceblue;
+}
