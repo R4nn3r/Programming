@@ -1,0 +1,280 @@
+// Google font
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps');
+
+
+// ===== Variables ===== //
+
+// Fonts stuff
+$six-caps: 'Six Caps', sans-serif;
+$merriweather: 'Merriweather', serif;
+
+$ff-base: $merriweather;
+$ff-alt: $six-caps;
+
+$fs-base: 1rem;
+$fs-h1: 3.75rem;
+$fs-h2: 2.875rem;
+$fs-h3: 2.25rem;
+$fs-xl: 6rem;
+
+// Colours
+$black: #252525;
+$yellow: #e9d20f;
+$light-gray: #c2c2c2;
+$dark-gray: #e8e8e8;
+$white: #fff;
+
+
+// ===== Mixins ===== //
+
+@mixin font-base($font-size: $fs-base, $font-weight: 300, $color: $black) {
+  font: {
+    family: $ff-base;
+    size: $font-size;
+    weight: $font-weight;
+  }
+  color: $color;
+} 
+
+@mixin font-alt($font-size: $fs-base, $color: $black) {
+  font: {
+    family: $ff-alt;
+    size: $font-size;
+  }
+  color: $color;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+
+// ===== Styles ===== //
+
+body {
+  @include font-base;
+  line-height: 1.6;
+  
+  display: grid;
+  grid-template: 
+    "header header header header" 10em
+    "hero hero hero hero" 50vh
+    ". main sidebar ." auto
+    "footer footer footer footer" 10em 
+    / 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+  grid-column-gap: 1.5em;
+}
+
+header {
+  grid-area: header;
+}
+
+header,
+footer {
+  background: $black;
+  color: $yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title,
+.footer-title {
+  @include font-alt($color: $yellow, $font-size: $fs-h2 );
+}
+
+.hero {
+  grid-area: hero;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  @include font-alt($fs-xl);
+  margin: 0;
+}
+
+.hero-subtitle {
+  @include font-base($color: $white, $font-size: $fs-h2);
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+main {
+  grid-area: main;
+  margin-top: 200px;
+}
+
+aside {
+  margin-top: 200px;
+  grid-area: sidebar;
+  background: $dark-gray;
+  padding: 2em;
+
+    p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    }
+}
+
+footer {
+  grid-area: footer;
+}
+
+
+// Cards
+
+.card {
+    border: 1px solid rgba(75, 75, 75, 0.187);
+  display: grid;
+  grid-template:
+    "img title" min-content
+    "img content" auto / 1fr 3fr;
+  grid-column-gap: 1.5em;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.695);
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+  box-shadow:  5px 5px 1px rgba(193, 193, 193, 0.151);
+
+}
+
+
+
+.card-img {
+  grid-area: img;
+  max-width: 100%;
+}
+
+.card-title {
+    font-family: Arial, Helvetica, sans-serif;
+
+  grid-area: title;
+  margin: 0;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.card-content {
+    font-family: Arial, Helvetica, sans-serif;
+
+  grid-area: content;
+  font-size: 13px;
+  
+  a {
+    font-size: 0.75em;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $yellow;
+    font-weight: bold;
+  }
+}
+
+
+@media (min-width: 15em) {
+    body {
+        grid-template: 
+          "header header header header" 10em
+          "hero hero hero hero" 50vh
+          ". sidebar sidebar ." auto
+          ". main main ." auto
+          "footer footer footer footer" 10em 
+          / 1fr minmax(10em, 2fr) minmax(10em, 2fr) 1fr;
+        grid-column-gap: 0.5em;
+        justify-content: center
+      }
+
+      .hero-title {
+        @include font-alt($fs-xl);
+        margin: 0;
+        font-size: 65px;
+      }
+      
+      .hero-subtitle {
+        @include font-base($color: $white);
+        margin: 0;
+        font-size: 15px;
+        text-align: center;
+      }
+
+      .header-title,
+    .footer-title {
+  @include font-alt($color: $yellow);
+        font-size: 20px;
+}
+
+    main {
+        grid-area: main;
+    }
+    
+    aside {
+        margin-top: 270px;
+        grid-area: sidebar;
+        background: $dark-gray;
+        padding: 1em;
+      
+        p {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    
+        }
+     }
+
+
+     .card {
+        display: flex;
+        flex-direction: column;
+        
+        img {
+            margin-bottom: 25px;
+        }
+    }
+
+    footer {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .links {
+        align-items: center;
+        text-align: center;
+        margin-right: 20px;
+
+        .logo {
+            height: 15px;
+            width: 15px;
+        }
+  
+
+        a {
+            margin-left: 15px;
+
+        }
+    }
+      
+}
+
+
+
+@media (min-width: 50em) {
+    body {
+        grid-template: 
+          "header header header header" 10em
+          "hero hero hero hero" 50vh
+          ". main sidebar ." auto
+          "footer footer footer footer" 10em 
+          / 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+        grid-column-gap: 1.5em;
+      }
+}

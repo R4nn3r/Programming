@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps");
+body {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #252525;
+  line-height: 1.6;
+  display: grid;
+  
+}
+
+header {
+  grid-area: header;
+}
+
+header,
+footer {
+  background: #252525;
+  color: #e9d20f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title,
+.footer-title {
+  font-family: "Six Caps", sans-serif;
+  font-size: 2.875rem;
+  color: #e9d20f;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.footer-title {
+  margin: 0;
+} 
+
+.hero {
+  grid-area: hero;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-family: "Six Caps", sans-serif;
+  font-size: 6rem;
+  color: #252525;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-family: "Merriweather", serif;
+  font-size: 2.875rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+main {
+  grid-area: main;
+  margin-top: 200px;
+}
+
+aside {
+  margin-top: 200px;
+  grid-area: sidebar;
+  background: #e8e8e8;
+  padding: 2em;
+}
+aside p {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.card {
+  border: 1px solid rgba(75, 75, 75, 0.187);
+  display: grid;
+  grid-template: "img title" -webkit-min-content "img content" auto/1fr 3fr;
+  grid-template: "img title" min-content "img content" auto/1fr 3fr;
+  grid-column-gap: 1.5em;
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.695);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 1px rgba(193, 193, 193, 0.151);
+}
+
+.card-img {
+  grid-area: img;
+  max-width: 100%;
+}
+
+.card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  grid-area: title;
+  margin: 0;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.card-content {
+  font-family: Arial, Helvetica, sans-serif;
+  grid-area: content;
+  font-size: 13px;
+}
+.card-content a {
+  font-size: 0.75em;
+  text-decoration: none;
+}
+.card-content a:hover {
+  color: #e9d20f;
+  font-weight: bold;
+}
+
+
+@media (min-width: 15em) {
+  body {
+    grid-template: "header header header header" 10em "hero hero hero hero" 50vh ". sidebar sidebar ." auto ". main main ." auto "footer footer footer footer" 10em/1fr minmax(10em, 2fr) minmax(10em, 2fr) 1fr;
+    grid-column-gap: 0.5em;
+    justify-content: center;
+  }
+  .hero-title {
+    font-family: "Six Caps", sans-serif;
+    color: #252525;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin: 0;
+    font-size: 60px;
+  }
+  .hero-subtitle {
+    font-family: "Merriweather", serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+  }
+  .header-title,
+.footer-title {
+    font-family: "Six Caps", sans-serif;
+    color: #e9d20f;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 15px;
+  }
+  main {
+    grid-area: main;
+  }
+  aside {
+    margin-top: 270px;
+    grid-area: sidebar;
+    background: #e8e8e8;
+    padding: 1em;
+  }
+  aside p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .card img {
+    margin-bottom: 25px;
+  }
+  footer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .links {
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
+  }
+  .links .logo {
+    height: 15px;
+    width: 15px;
+  }
+  .links a {
+    margin-left: 15px;
+  }
+}
+@media (min-width: 50em) {
+  body {
+    grid-template: "header header header header" 10em "hero hero hero hero" 50vh ". main sidebar ." auto "footer footer footer footer" 10em/1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+    grid-column-gap: 1.5em;
+  }
+
+  .header-title,
+.footer-title {
+  font-family: "Six Caps", sans-serif;
+  font-size: 2.875rem;
+  color: #e9d20f;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+
+  .hero-title {
+    font-size: 6rem;
+    letter-spacing: 0.3em;
+    margin: 0;
+  }
+  
+  .hero-subtitle {
+    font-size: 2.875rem;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+  }
+
+
+    main {
+      grid-area: main;
+      margin-top: 200px;
+    }
+
+    aside {
+      margin-top: 200px;
+      grid-area: sidebar;
+      background: #e8e8e8;
+      padding: 2em;
+    }
+    aside p {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+
+    .card {
+      border: 1px solid rgba(75, 75, 75, 0.187);
+      display: grid;
+      grid-template: "img title" -webkit-min-content "img content" auto/1fr 3fr;
+      grid-template: "img title" min-content "img content" auto/1fr 3fr;
+      grid-column-gap: 1.5em;
+      padding: 1.5em;
+      margin-bottom: 1.5em;
+      transition: all 0.2s;
+      background-color: rgba(255, 255, 255, 0.695);
+    }
+
+    footer {
+      margin-top: 50px;
+      display: flex;
+    }
+    .links {
+      align-items: center;
+      text-align: center;
+      margin-right: 20px;
+    }
+    .links .logo {
+      height: 15px;
+      width: 15px;
+    }
+    .links a {
+      margin-left: 15px;
+    }
+  
+}/*# sourceMappingURL=style.css.map */
