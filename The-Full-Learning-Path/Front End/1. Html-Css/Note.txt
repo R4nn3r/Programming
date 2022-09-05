@@ -164,3 +164,17 @@ HTML (Hypertext Markup Language)
     Inline                                 
 
 # Responsive Design 
+
+
+
+
+
+# Optimization of the web site using npm packages
+    - npm init 
+    - npm install postcss postcss-cli autoprefixer cssnano postcss-pxtorem --save-dev
+    - Write the script 
+          "scripts": {
+                "optimize-css":"postcss style.css --use autoprefixer cssnano postcss-pxtorem --output style.prod.css"
+            },
+    - Run the script
+        npm run optimize-css
