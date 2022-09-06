@@ -113,7 +113,7 @@ HTML (Hypertext Markup Language)
             id              -> (#id_tag {...})
     
     # Advanced Css Selectors 
-
+            -> refer to the image or google for the table
 
     Box Model:
         1. Margin = space on the outside    
@@ -166,6 +166,78 @@ HTML (Hypertext Markup Language)
             underline  
             strong 
             italic
+            emphasis 
+            strike-through
+            HorizontalLine 
+
+     - Box-shadow 
+            property takes the following values, in order:
+
+                offset-x (how far to push the shadow horizontally from the element)
+                offset-y (how far to push the shadow vertically from the element)
+                blur-radius
+                spread-radius
+                color
+
+    - text-transform values change the example text "Transform me".
+
+                Value	                    Result
+
+                lowercase	                "transform me"
+                uppercase	                "TRANSFORM ME"
+                capitalize	                "Transform Me"
+                initial	                    Use the default value
+                inherit	                    Use the text-transform value from the parent element
+                none	                    Default: Use the original text
+
+
+    - Line-height
+
+    - Relative Position
+
+            it allows you to specify how CSS should move it relative to its current position 
+            in the normal flow of the page. It pairs with the CSS offset properties of left 
+            or right, and top or bottom    
+
+    - Absolute Positioning (Lock an Element to its Parent)
+                Note: this removes the element from the normal flow of the document, 
+                so surrounding items ignore it. 
+
+            You declare position relative on the element you want to lock the position with
+            then declare position absolute on the element to be positioned 
+
+    - Fixed Positioning (Lock an Element to the Browser Window)
+
+            Note: One key difference between the fixed and absolute positions is that an 
+            element with a fixed position won't move when the user scrolls.
+
+
+    - Float Property
+
+            Floating elements are removed from the normal flow of a document and pushed to 
+            either the left or right of their containing parent element. It's commonly used 
+            with the width property to specify how much horizontal space the floated element 
+            requires.
+
+    - z-index Property
+
+            property can specify the order of how elements are stacked on top of one another. 
+            It must be an integer (i.e. a whole number and not a decimal), and higher values 
+            for the z-index property of an element move it higher in the stack than those with
+            lower values.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
