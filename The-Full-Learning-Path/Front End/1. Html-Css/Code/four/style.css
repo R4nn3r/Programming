@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px dashed green;
+    text-align: center;
+    align-items: center;
+}
+
+main {
+    padding: 10px;
+    margin: 10px;
+    border: 1px dashed red;  
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgba(127, 255, 212, 0.155);
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 5px;
+    box-shadow: 15px 15px 30px rgba(85, 85, 120, 0.247);
+    padding: 15px;
+
+}
+
+img {
+    opacity: 0.5;
+    width: 350px;
+    border-radius: 5px;
+}
+img:hover {
+    opacity: 1;
+}
+

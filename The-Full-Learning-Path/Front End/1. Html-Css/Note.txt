@@ -6,12 +6,31 @@ HTML (Hypertext Markup Language)
 # Basic HTML
 
         Headers                 (<h1></h1> -> upto <h6></h6> where they get smaller in size)
-        Links                   ( <link rel="stylesheet" href="#"> )
-                                ( <a href="Google.com" target="_blank">Googel</a> )
+        Links                   ( <link rel="stylesheet" href="#"> ) stylesheet or css file
+                                ( <link rel="icon" href="#"> ) for icon of the site
+
+                                ( <a href="Google.com" target="_blank">Googel</a> ) link to google
                                         -> attribute = name
+
+        Internal Links          (   <a href="#contacts-header">Contacts</a>
+                                 ...
+                                    <h2 id="contacts-header">Contacts</h2>   )
         Paragraphs              ( <p>This is where you write your Paragraphs </p> )
         Images                  ( <img src="source link" alt="info about image"> )
-        Inputs                  ( <input type="[text,checkbox,radio]" name="" value="" placeholder="">)
+        Inputs                  ( <input type="[text,checkbox,radio]" name="" value="" placeholder="" required>)
+            Require a Field
+                (required added to inputs will result in the input being mandatory to fill in)
+
+            Creating radio and checkbox's
+                <label for="indoor">
+                    <input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor
+                </label>    -> (Checked makes the check active by default)
+                
+                <label for="energetic">
+                    <input id="energetic" type="checkbox" name="personality"> Energetic
+                </label>
+                   
+
         Div Container :         <div>  s allow us to group elements together and create 
                                 more complex layouts. 
                     <div class="container">
