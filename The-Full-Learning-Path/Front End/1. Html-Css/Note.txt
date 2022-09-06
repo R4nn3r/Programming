@@ -150,6 +150,24 @@ HTML (Hypertext Markup Language)
                     }
                 }
 
+# Applied Visual Design
+
+    - text-align property.
+
+            text-align: justify; spaces the text so that each line has equal width.
+
+            text-align: center; centers the text
+
+            text-align: right; right-aligns the text
+
+            And text-align: left; (the default) left-aligns the text.
+
+    - Tags
+            underline  
+            strong 
+            italic
+
+
 
 
 # Layout 
