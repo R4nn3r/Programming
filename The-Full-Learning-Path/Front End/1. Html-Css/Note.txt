@@ -227,18 +227,77 @@ HTML (Hypertext Markup Language)
             lower values.
 
 
+    - Center an Element Horizontally
+
+            - Using the margin Property
+
+                Another positioning technique is to center a block element horizontally. 
+                One way to do this is to set its margin to a value of auto.
+
+                        margin: auto;
+
+    - Gradual CSS Linear Gradient
+            background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+
+                    The first argument specifies the direction from which color transition starts - 
+                    it can be stated as a degree, where 90deg makes a horizontal gradient (from left to right)
+                     and 45deg makes a diagonal gradient (from bottom left to top right). The following 
+                     arguments specify the order of colors used in the gradient.
+
+            background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+
+            - using the gradient to create strips using the repeating-linear-gradient()
+                    Ex.
+                            background: repeating-linear-gradient(
+                                        45deg,
+                                        yellow 0px,
+                                        yellow 40px,
+                                        black 40px,
+                                        black 80px
+                                        );
+    - Transform
+        (using)
+                scale()
+                    - to change the scale of an element
+                            transform: scale(1);
+                skewX()
+                    - skew the selected elements along tis X axis by a given degree
+                            transform: skewX(-32deg);
+
+    - before and after 
+            ::before and ::after pseudo-elements. 
+                ::before creates a pseudo-element that is the first child of the selected element; 
+                ::after creates a pseudo-element that is the last child of the selected element. 
 
 
 
+    - @keyframes
+            animation-name: sets the name of the animation, which is later used by @keyframes to tell 
+                            CSS which rules go with which animations.
+
+            animation-duration sets the length of time for the animation.
 
 
+                    Ex. 
+                         #anim {
+                            animation-name: colorful;
+                            animation-duration: 3s;
+                        }
+
+                        @keyframes colorful {
+                            0% {
+                                background-color: blue;
+                        }
+                            100% {
+                                background-color: yellow;
+                            }
+                        }   
 
 
+            - Animate Elements Continually Using an Infinite Animation Count
 
-
-
-
-
+                    animation-iteration-count: 3;
+                    run continuously by setting that value to infinite.
 
 
 

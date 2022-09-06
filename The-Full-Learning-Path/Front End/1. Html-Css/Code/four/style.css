@@ -62,7 +62,6 @@ main {
 }
 
 .container {
-    background-color: rgba(127, 255, 212, 0.155);
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -72,14 +71,22 @@ main {
     box-shadow: 15px 15px 30px rgba(85, 85, 120, 0.247);
     padding: 15px;
     animation: move-down 2s;
-
+    /* background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+     */
+     background: repeating-linear-gradient(
+        45deg,
+        yellow 0px,
+        yellow 40px,
+        black 40px,
+        black 80px
+      );
 
 }
 
 img {
-    opacity: 0.5;
-    width: 350px;
-    border-radius: 5px;
+    opacity: 0.85;
+    width: 450px;
+    border-radius: 50%;
     animation: move-down 4s;
 
 }
