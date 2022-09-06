@@ -133,6 +133,25 @@ HTML (Hypertext Markup Language)
                         border:  width style color; 
                         border:  1px  solid red  ; 
 
+        
+    Using root to set variables (helps with Responsive in @media)
+                :root {
+                    --penguin-size: 300px;
+                    --penguin-skin: gray;
+                    --penguin-belly: white;
+                    --penguin-beak: orange;
+                }
+           
+           
+                @media (max-width: 350px) {
+                    :root {
+                        --penguin-size: 200px;
+                        --penguin-skin: black;
+                    }
+                }
+
+
+
 # Layout 
 
         # Grid 

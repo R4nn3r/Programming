@@ -3,6 +3,46 @@ body {
     padding: 0;
 }
 
+
+@keyframes move-up {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@keyframes move-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes move-to-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 45px;
@@ -31,6 +71,8 @@ main {
     border-radius: 5px;
     box-shadow: 15px 15px 30px rgba(85, 85, 120, 0.247);
     padding: 15px;
+    animation: move-down 2s;
+
 
 }
 
@@ -38,6 +80,8 @@ img {
     opacity: 0.5;
     width: 350px;
     border-radius: 5px;
+    animation: move-down 4s;
+
 }
 img:hover {
     opacity: 1;
