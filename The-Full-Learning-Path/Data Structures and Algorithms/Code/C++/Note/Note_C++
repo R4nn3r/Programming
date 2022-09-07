@@ -530,294 +530,6 @@
                                     operator << — add a string to the stringstream object.
                                     operator >> — read something from the stringstream object,*/
 
-/*Object Oriented Programming
-
-        The is the process of creating your own data types.
-            #class is a user defined data type.
-
-
-            NOTE - How to create a class::
-                    class is: a new data type.
-                            is essentially a specification or a blueprint for a new data type in our program.
-
-                        step 1: // before the main function --> this is the class which is the blueprint! (template)
-                                class Book
-                                    {
-                                        Note: Access modifiers
-                                            -public: // can be accessed out side of the given class
-                                            -private: //cant be accessed out side of the given class
-                                            -protected: // you will have to set rules for the access
-
-                                        #all the members in a given class are private by default so make sure you
-                                        use the public: tag if you want to access them
-
-                                        public: // Member's
-                                                string title;
-                                                string author;
-                                                int pages;
-                                        // constructor functions
-                                            Book()
-                                            {
-
-                                            }
-
-
-                                    }; // need a semi-column
-
-                        step 2: // Then you create the object in the main function
-                                int main()
-                                {
-                                    Book book1;  // Book.book1 "Book is the class name: book1 is the object to be created based on the blueprint in the class"
-                                    book1.title = "Life of Us";
-                                    book1.author = "Yonatan afewerk";
-                                    book1.pages = 241;
-
-                                    return;
-                                }
-
-    NOTE: CONSTRUCTERS
-        default constructor is given if you dont create a new constructor
-
-        rules: CONSTRUCTERS
-            rule 1: it doesn't have return type
-            rule 2: a constructor of a class has the same name as the class itself
-            rule 3: a constructor should be public //at least for now
-
-
-
-        NOTE - Encapsulation
-            #Encapsulation is defined as wrapping up of data and information under a single unit
-            This a process of bundling Data to a group to prevent different class from accesing each other data
-            there are to method for that thus are:
-                            getters = get()
-                            setters = set()
-
-                eg.
-            //encapsulated data in the studnet class
-                private:
-                        string name;
-                        string email;
-                        string comment;
-                        int id;
-
-        //Encapsulation in class setting getters and setter
-                public:
-                        void setname(string Name) //setter
-                        {
-                            if (name.length() > 8)  //validation rule to set the name is set here and checked beofre the name is assinged
-                            name = Name;
-                        }
-                        string getname() //getter
-                        {
-                            return name;
-                        }
-                        void setemail(string Email) //setter
-                        {
-                            email = Email;
-                        }
-                        string getemail() //getter
-                        {
-                            return email;
-                        }
-                        void setcomment(string Comment) //setter
-                        {
-                            comment = Comment;
-                        }
-                        string getcomment() //getter
-                        {
-                            return comment;
-                        }
-                        void setid(int Id) //setter
-                        {
-                            if(Id > 1500)
-                            id = Id;
-                        }
-                        int getid() //getter
-
-                    cout << student1.getname() << " Your id was " << student1.getid() << endl; // how you use getters
-
-                    student1.setid(h); // how you use setters
-                    cout <<"But cause of new students its changed to " << student1.getid() << endl; // how to use getters
-
-        NOTE - Abstraction
-        Abstraction means displaying only essential information and hiding the details. Data abstraction refers to
-        providing only essential information about the data to the outside world, hiding the background details or
-        implementation.
-            Abstraction using Classes:
-            We can implement Abstraction in C++ using classes. Class helps us to group
-            data members and member functions using available access specifiers. A Class can decide which data member
-            will be visible to outside world and which is not.
-
-            Abstraction in Header files:
-            One more type of abstraction in C++ can be header files.
-
-            Abstraction using access specifiers:
-            Access specifiers are the main pillar of implementing abstraction in C++.
-            We can use access specifiers to enforce restrictions on class members. For example:
-                    -Members declared as public in a class, can be accessed from anywhere in the program.
-                    -Members declared as private in a class, can be accessed only from within the class.
-                    They are not allowed to be accessed from any part of code outside the class.
-
-
-
-            #Advantages of Data Abstraction:
-            Helps the user to avoid writing the low level code
-            Avoids code duplication and increases reusability.
-            Can change internal implementation of class independently without affecting the user.
-            Helps to increase security of an application or program as only important details are provided to the user.
-            eg.
-                class abstract_student  // class for abstraction this is a contract
-                {
-                virtual void askforclass() = 0;   // this is the method
-                                                // to make it obligatory -> bby making it a pure virtual function
-
-                };
-
-                class student: abstract_student // this how you make other classes sign to a abstraction class
-                {
-                    public:
-                            void askforclass() // the method implementation function
-                                {
-                                    if( condition)
-                                        //code
-                                    else
-                                        //code
-                                }
-
-                int main()
-                {
-                    student1.askforclass(); // this how you call the abstract function
-                }
-
-                };
-
-        NOTE - INHERITANCE
-        The capability of a class to derive properties and characteristics from another class is called Inheritance.
-            Sub Class: The class that inherits properties from another class is called Sub class or Derived Class.
-            Super Class:The class whose properties are inherited by sub class is called Base Class or Super class.
-
-        Why and when to use inheritance?
-            1.To avoid or reduce chances of error and data redundancy through writing code thats a duplicate
-                Implementing inheritance in C++:
-                For creating a sub-class which is inherited from the base class we have to follow the below syntax.
-                Syntax:
-                        class subclass_name : access_mode base_class_name
-                        {
-                            //body of subclass
-                        };
-                        --> subclass_name is the name of the sub class
-                        --> access_mode is the mode in which you want to inherit this sub class for example: public, private etc
-                        --> base_class_name is the name of the base class from which you want to inherit the sub class.
-
-                    eg.
-                        //Base class
-                        class Parent
-                        {
-                            public:
-                            int id_p;
-                        };
-
-                        // Sub class inheriting from Base Class(Parent)
-                        class Child : public Parent
-                        {
-                            public:
-                            int id_c;
-                        };
-
-
-        Note:
-        A derived class doesn’t inherit access to private data members. However, it does inherit a full parent
-        object, which contains any private members which that class declares.
-
-            #Modes of Inheritance:
-                        Public mode:
-                            If we derive a sub class from a public base class. Then the public member of the base class
-                            will become public in the derived class and protected members of the base class will become protected in
-                            derived class.
-                        Protected mode:
-                            If we derive a sub class from a Protected base class. Then both public member and protected
-                            members of the base class will become protected in derived class.
-                        Private mode:
-                            If we derive a sub class from a Private base class. Then both public member and protected
-                            members of the base class will become Private in derived class.
-
-            #Types of Inheritance in C++
-                    1. Single Inheritance:
-                    In single inheritance, a class is allowed to inherit from only one class.
-                    i.e. one sub class is inherited by one base class only.
-                        Syntax:
-                            class subclass_name : access_mode base_class
-                            {
-                            //body of subclass
-                            };
-                    2. Multiple Inheritance:
-                    Multiple Inheritance is a feature of C++ where a class can inherit from more
-                    than one classes. i.e one sub class is inherited from more than one base classes.
-                        Syntax:
-                            class subclass_name : access_mode base_class1, access_mode base_class2, ....
-                            {
-                            //body of subclass
-                            };
-                                    #Here, the number of base classes will be separated by a comma (‘, ‘)
-                                    and access mode for every base class must be specified.
-                    3. Multilevel Inheritance:
-                    In this type of inheritance, a derived class is created from another derived class.
-                    4. Hierarchical Inheritance:
-                    In this type of inheritance, more than one sub class is inherited from a single base class.
-                    i.e. more than one derived class is created from a single base class.
-                    5. Hybrid (Virtual) Inheritance:
-                    Hybrid Inheritance is implemented by combining more than one type of inheritance.
-                    For example: Combining Hierarchical inheritance and Multiple Inheritance.
-                    6. A special case of hybrid inheritance : Multipath inheritance:
-                    A derived class with two base classes and these two base classes have one common base class is
-                    called multipath inheritance. An ambiguity can arrise in this type of inheritance.
-
-        NOTE Polymorphism // many forms
-        The word polymorphism means having many forms.
-            In C++ polymorphism is mainly divided into two types:
-                                    Compile time Polymorphism
-                                                        -> Function overloading
-                                                        -> Operator overloading
-                                    Runtime Polymorphism
-                                                        -> Virtual Functions
-
-        #Compile time polymorphism:
-        This type of polymorphism is achieved by function overloading or operator overloading.
-
-                Function Overloading:
-                    When there are multiple functions with same name but different parameters then
-                    these functions are said to be overloaded. Functions can be overloaded by change in number of arguments
-                    or/and change in type of arguments. NOTE -> which funcation gets called will depend on the parameters passed
-                        The rules of function overloading
-                            1) Function declarations that differ only in the return type(same data type for the functions).
-                            2) Member function declarations with the same name and the name parameter-type-list cannot be overloaded
-                            if any of them is a static member function declaration.
-                            3) Parameter declarations that differ only in a pointer * versus an array [] are equivalent. That is, the array
-                            declaration is adjusted to become a pointer declaration. Only the second and subsequent array dimensions are
-                            significant in parameter types.
-                                        eg.
-                                            int fun(int *ptr);
-                                            int fun(int ptr[]); // redeclaration of fun(int *ptr)
-                            4) Parameter declarations that differ only in that one is a function type and the other is a pointer to the same
-                            function type are equivalent.
-                            5) Parameter declarations that differ only in the presence or absence of const and/or volatile are equivalent.
-                            That is, the const and volatile type-specifiers for each parameter type are ignored when determining which function
-                            is being declared, defined, or called.
-                Operator Overloading:
-                C++ also provide option to overload operators. For example, we can make the operator (‘+’) for string class to concatenate two
-                strings. We know that this is the addition operator whose task is to add two operands. So a single operator ‘+’ when placed
-                between integer operands , adds them and when placed between string operands, concatenates them.
-
-        #Runtime polymorphism:
-        This type of polymorphism is achieved by virtual Function Overriding.
-
-            Virtual Function: on the other hand occurs when a derived class has a definition for one of the member functions of the base
-            class. That base function is said to be overridden.
-            -> virtual void function
-
-
-    */
-
 /*Tips
 
     //How to randomize numbers
@@ -1332,3 +1044,291 @@
 
 
                                        */
+
+/*Object Oriented Programming
+
+        The is the process of creating your own data types.
+            #class is a user defined data type.
+
+
+            NOTE - How to create a class::
+                    class is: a new data type.
+                            is essentially a specification or a blueprint for a new data type in our program.
+
+                        step 1: // before the main function --> this is the class which is the blueprint! (template)
+                                class Book
+                                    {
+                                        Note: Access modifiers
+                                            -public: // can be accessed out side of the given class
+                                            -private: //cant be accessed out side of the given class
+                                            -protected: // you will have to set rules for the access
+
+                                        #all the members in a given class are private by default so make sure you
+                                        use the public: tag if you want to access them
+
+                                        public: // Member's
+                                                string title;
+                                                string author;
+                                                int pages;
+                                        // constructor functions
+                                            Book()
+                                            {
+
+                                            }
+
+
+                                    }; // need a semi-column
+
+                        step 2: // Then you create the object in the main function
+                                int main()
+                                {
+                                    Book book1;  // Book.book1 "Book is the class name: book1 is the object to be created based on the blueprint in the class"
+                                    book1.title = "Life of Us";
+                                    book1.author = "Yonatan afewerk";
+                                    book1.pages = 241;
+
+                                    return;
+                                }
+
+    NOTE: CONSTRUCTORS
+        default constructor is given if you dont create a new constructor
+
+        rules: CONSTRUCTORS
+            rule 1: it doesn't have return type
+            rule 2: a constructor of a class has the same name as the class itself
+            rule 3: a constructor should be public //at least for now
+
+
+
+        NOTE - Encapsulation
+            #Encapsulation is defined as wrapping up of data and information under a single unit
+            This a process of bundling Data to a group to prevent different class from accessing each other data
+            there are to method for that thus are:
+                            getters = get()
+                            setters = set()
+
+                eg.
+            //encapsulated data in the student class
+                private:
+                        string name;
+                        string email;
+                        string comment;
+                        int id;
+
+        //Encapsulation in class setting getters and setter
+                public:
+                        void setname(string Name) //setter
+                        {
+                            if (name.length() > 8)  //validation rule to set the name is set here and checked beofre the name is assinged
+                            name = Name;
+                        }
+                        string getname() //getter
+                        {
+                            return name;
+                        }
+                        void setemail(string Email) //setter
+                        {
+                            email = Email;
+                        }
+                        string getemail() //getter
+                        {
+                            return email;
+                        }
+                        void setcomment(string Comment) //setter
+                        {
+                            comment = Comment;
+                        }
+                        string getcomment() //getter
+                        {
+                            return comment;
+                        }
+                        void setid(int Id) //setter
+                        {
+                            if(Id > 1500)
+                            id = Id;
+                        }
+                        int getid() //getter
+
+                    cout << student1.getname() << " Your id was " << student1.getid() << endl; // how you use getters
+
+                    student1.setid(h); // how you use setters
+                    cout <<"But cause of new students its changed to " << student1.getid() << endl; // how to use getters
+
+        NOTE - Abstraction
+            Abstraction means displaying only essential information and hiding the details. Data abstraction refers to
+            providing only essential information about the data to the outside world, hiding the background details or
+            implementation.
+                Abstraction using Classes:
+                We can implement Abstraction in C++ using classes. Class helps us to group
+                data members and member functions using available access specifiers. A Class can decide which data member
+                will be visible to outside world and which is not.
+
+                Abstraction in Header files:
+                One more type of abstraction in C++ can be header files.
+
+                Abstraction using access specifiers:
+                Access specifiers are the main pillar of implementing abstraction in C++.
+                We can use access specifiers to enforce restrictions on class members. For example:
+                        -Members declared as public in a class, can be accessed from anywhere in the program.
+                        -Members declared as private in a class, can be accessed only from within the class.
+                        They are not allowed to be accessed from any part of code outside the class.
+
+
+
+            #Advantages of Data Abstraction:
+            Helps the user to avoid writing the low level code
+            Avoids code duplication and increases reusability.
+            Can change internal implementation of class independently without affecting the user.
+            Helps to increase security of an application or program as only important details are provided to the user.
+            eg.
+                class abstract_student  // class for abstraction this is a contract
+                {
+                virtual void askforclass() = 0;   // this is the method
+                                                // to make it obligatory -> bby making it a pure virtual function
+
+                };
+
+                class student: abstract_student // this how you make other classes sign to a abstraction class
+                {
+                    public:
+                            void askforclass() // the method implementation function
+                                {
+                                    if( condition)
+                                        //code
+                                    else
+                                        //code
+                                }
+
+                int main()
+                {
+                    student1.askforclass(); // this how you call the abstract function
+                }
+
+                };
+
+        NOTE - INHERITANCE
+        The capability of a class to derive properties and characteristics from another class is called Inheritance.
+            Sub Class: The class that inherits properties from another class is called Sub class or Derived Class.
+            Super Class:The class whose properties are inherited by sub class is called Base Class or Super class.
+
+        Why and when to use inheritance?
+            1.To avoid or reduce chances of error and data redundancy through writing code thats a duplicate
+                Implementing inheritance in C++:
+                For creating a sub-class which is inherited from the base class we have to follow the below syntax.
+                Syntax:
+                        class subclass_name : access_mode base_class_name
+                        {
+                            //body of subclass
+                        };
+                        --> subclass_name is the name of the sub class
+                        --> access_mode is the mode in which you want to inherit this sub class for example: public, private etc
+                        --> base_class_name is the name of the base class from which you want to inherit the sub class.
+
+                    eg.
+                        //Base class
+                        class Parent
+                        {
+                            public:
+                            int id_p;
+                        };
+
+                        // Sub class inheriting from Base Class(Parent)
+                        class Child : public Parent
+                        {
+                            public:
+                            int id_c;
+                        };
+
+
+        Note:
+        A derived class doesn’t inherit access to private data members. However, it does inherit a full parent
+        object, which contains any private members which that class declares.
+
+            #Modes of Inheritance:
+                        Public mode:
+                            If we derive a sub class from a public base class. Then the public member of the base class
+                            will become public in the derived class and protected members of the base class will become protected in
+                            derived class.
+                        Protected mode:
+                            If we derive a sub class from a Protected base class. Then both public member and protected
+                            members of the base class will become protected in derived class.
+                        Private mode:
+                            If we derive a sub class from a Private base class. Then both public member and protected
+                            members of the base class will become Private in derived class.
+
+            #Types of Inheritance in C++
+                    1. Single Inheritance:
+                    In single inheritance, a class is allowed to inherit from only one class.
+                    i.e. one sub class is inherited by one base class only.
+                        Syntax:
+                            class subclass_name : access_mode base_class
+                            {
+                            //body of subclass
+                            };
+                    2. Multiple Inheritance:
+                    Multiple Inheritance is a feature of C++ where a class can inherit from more
+                    than one classes. i.e one sub class is inherited from more than one base classes.
+                        Syntax:
+                            class subclass_name : access_mode base_class1, access_mode base_class2, ....
+                            {
+                            //body of subclass
+                            };
+                                    #Here, the number of base classes will be separated by a comma (‘, ‘)
+                                    and access mode for every base class must be specified.
+                    3. Multilevel Inheritance:
+                    In this type of inheritance, a derived class is created from another derived class.
+                    4. Hierarchical Inheritance:
+                    In this type of inheritance, more than one sub class is inherited from a single base class.
+                    i.e. more than one derived class is created from a single base class.
+                    5. Hybrid (Virtual) Inheritance:
+                    Hybrid Inheritance is implemented by combining more than one type of inheritance.
+                    For example: Combining Hierarchical inheritance and Multiple Inheritance.
+                    6. A special case of hybrid inheritance : Multipath inheritance:
+                    A derived class with two base classes and these two base classes have one common base class is
+                    called multipath inheritance. An ambiguity can arrise in this type of inheritance.
+
+        NOTE Polymorphism // many forms
+        The word polymorphism means having many forms.
+            In C++ polymorphism is mainly divided into two types:
+                                    Compile time Polymorphism
+                                                        -> Function overloading
+                                                        -> Operator overloading
+                                    Runtime Polymorphism
+                                                        -> Virtual Functions
+
+        #Compile time polymorphism:
+        This type of polymorphism is achieved by function overloading or operator overloading.
+
+                Function Overloading:
+                    When there are multiple functions with same name but different parameters then
+                    these functions are said to be overloaded. Functions can be overloaded by change in number of arguments
+                    or/and change in type of arguments. NOTE -> which funcation gets called will depend on the parameters passed
+                        The rules of function overloading
+                            1) Function declarations that differ only in the return type(same data type for the functions).
+                            2) Member function declarations with the same name and the name parameter-type-list cannot be overloaded
+                            if any of them is a static member function declaration.
+                            3) Parameter declarations that differ only in a pointer * versus an array [] are equivalent. That is, the array
+                            declaration is adjusted to become a pointer declaration. Only the second and subsequent array dimensions are
+                            significant in parameter types.
+                                        eg.
+                                            int fun(int *ptr);
+                                            int fun(int ptr[]); // redeclaration of fun(int *ptr)
+                            4) Parameter declarations that differ only in that one is a function type and the other is a pointer to the same
+                            function type are equivalent.
+                            5) Parameter declarations that differ only in the presence or absence of const and/or volatile are equivalent.
+                            That is, the const and volatile type-specifiers for each parameter type are ignored when determining which function
+                            is being declared, defined, or called.
+                Operator Overloading:
+                C++ also provide option to overload operators. For example, we can make the operator (‘+’) for string class to concatenate two
+                strings. We know that this is the addition operator whose task is to add two operands. So a single operator ‘+’ when placed
+                between integer operands , adds them and when placed between string operands, concatenates them.
+
+        #Runtime polymorphism:
+        This type of polymorphism is achieved by virtual Function Overriding.
+
+            Virtual Function: on the other hand occurs when a derived class has a definition for one of the member functions of the base
+            class. That base function is said to be overridden.
+            -> virtual void function
+
+
+    */

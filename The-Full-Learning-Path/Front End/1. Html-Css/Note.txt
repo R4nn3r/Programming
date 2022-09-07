@@ -261,8 +261,11 @@ HTML (Hypertext Markup Language)
                     - to change the scale of an element
                             transform: scale(1);
                 skewX()
-                    - skew the selected elements along tis X axis by a given degree
+                    - skew the selected elements along the X axis by a given degree
                             transform: skewX(-32deg);
+
+                rotate()
+                    - rotate the selected elements by a given degree
 
     - before and after 
             ::before and ::after pseudo-elements. 
