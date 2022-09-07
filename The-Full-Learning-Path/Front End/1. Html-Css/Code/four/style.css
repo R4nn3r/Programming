@@ -1,17 +1,52 @@
 body {
-    padding: 10px;
-    margin: 10px;
+  margin: 0;
+  padding: 0;
+  font-family: monospace, 'Arial Narrow Bold', sans-serif;
+  color: #636363;
+    background-color: #FFF;
+}
 
-    background: repeating-linear-gradient(
-        45deg,
-        yellow 0px,
-        yellow 40px,
-        black 40px,
-        black 80px
-      );
 
-    background-repeat: no-repeat;
-    background-size: contain;
+article, figure {
+  padding: 2em;
+  width: 550px;
+  margin: auto;
+}
+
+figcaption {
+  background-color: rgba(253, 159, 159, 0.435);
+  width: 450px;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+span {
+  color: #262626;
+}
+
+h2 {
+  font-size: 14px;
+  color: #383838;
 
 }
 
+p {
+  font-size: 12px;
+}
+
+h1 {
+  color: #383838;
+
+  text-align: center;
+  font-size: 45px;
+  font-weight: bolder;
+}
+
+.figure {
+  border-radius:  0.25em;
+  padding: 0;
+  margin-bottom: 20px;
+}

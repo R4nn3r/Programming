@@ -18,6 +18,13 @@ HTML (Hypertext Markup Language)
         Paragraphs              ( <p>This is where you write your Paragraphs </p> )
         Images                  ( <img src="source link" alt="info about image"> )
         Inputs                  ( <input type="[text,checkbox,radio]" name="" value="" placeholder="" required>)
+        Audio 
+                                <audio id="meowClip" controls>
+                                    <source src="audio/meow.mp3" type="audio/mpeg">
+                                    <source src="audio/meow.ogg" type="audio/ogg">
+                                </audio>   
+
+        
             Require a Field
                 (required added to inputs will result in the input being mandatory to fill in)
 
@@ -62,6 +69,52 @@ HTML (Hypertext Markup Language)
                     <article>, <aside>, <details>, <figcaption>, <figure>, <footer>
                     <mark>, <summary>, <time>
 
+
+                    Note:
+    
+                           <article> is a sectioning element and is used to wrap independent, self-contained content. 
+                           The tag works well with blog entries, forum posts, or news articles.
+
+                           <section> is for grouping thematically related content. They can be used within each other, as 
+                           needed. For example, if a book is the article, then each chapter is a section. When there's no 
+                           relationship between groups of content, then use a <div>.
+                        - So,
+
+                            <div> - groups content 
+                            <section> - groups related content 
+                            <article> - groups independent, self-contained content
+                            <header> -  wrap introductory information or navigation links for 
+                                        its parent tag and works well for repeated content at the top on multiple 
+                                        pages.
+                    
+                            <figure> element and the related <figcaption>. Used together, these items wrap a 
+                                    visual representation (like an image, diagram, or chart) along with its caption. 
+                                    Wrapping these elements together gives a two-fold accessibility boost by semantically 
+                                    grouping related content and providing a text alternative explaining the figure
+
+                - Field-set and legends 
+                        Ex. 
+                            <form>
+                                <fieldset>
+                                    <legend>Choose one of these three items:</legend>
+                                    <input id="one" type="radio" name="items" value="one">
+                                    <label for="one">Choice One</label><br>
+                                    <input id="two" type="radio" name="items" value="two">
+                                    <label for="two">Choice Two</label><br>
+                                    <input id="three" type="radio" name="items" value="three">
+                                    <label for="three">Choice Three</label>
+                                </fieldset>
+                            </form>
+                            
+                - Date Picker
+
+                        <label for="pickdate">Preferred Date:</label>
+                        <input type="date" id="pickdate" name="date">
+   
+   
+   
+   
+   
     # Tag Reference
             <html>	                Defines the root of an HTML document
             <body>	                Defines the document's body
@@ -347,6 +400,22 @@ HTML (Hypertext Markup Language)
         Inline                                 
 
 # Responsive Design 
+    
+    - Media Query
+                (min max works for both height and width)
+            width is less than or equal to 100px:
+                @media (max-width: 100px) { /* CSS Rules */ }
+
+             height is more than or equal to 350px   
+                @media (min-height: 350px) { /* CSS Rules */ }
+
+
+
+
+
+
+
+
 
 
 
