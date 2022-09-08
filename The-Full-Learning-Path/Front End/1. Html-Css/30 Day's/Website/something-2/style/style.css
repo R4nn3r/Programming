@@ -1,0 +1,270 @@
+/* Reset */
+span {
+  color: #105e10;
+}
+
+/* Set core body defaults */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: monospace;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list], li,
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+header {
+  background-color: white;
+  border: 1px dashed rgba(16, 94, 16, 0.2392156863);
+  position: fixed;
+  width: 100%;
+  height: 62px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+}
+header .logo .logo-img {
+  width: 120px;
+  height: 120px;
+}
+header .navbar {
+  padding: 5px;
+}
+header .navbar a {
+  padding: 5px 10px;
+  font-weight: 500;
+}
+header .navbar a:hover {
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    visibility: hidden;
+  }
+  header {
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .web-title {
+    width: 120px;
+  }
+  header .logo {
+    font-size: 10px;
+  }
+  header .logo img {
+    margin-left: 35px;
+    width: 45px;
+    height: 45px;
+  }
+}
+main {
+  margin-top: 50px;
+  padding: 100px;
+}
+main .hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .hero .hero-title {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 40px;
+}
+main .hero .hero-text {
+  width: 600px;
+  margin: 10px;
+  padding: 10px;
+}
+main .buttons {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+main .buttons .btn {
+  width: 80px;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+main .buttons .btn:hover {
+  color: white;
+  border: 1px solid #000;
+  background-color: #105e10;
+}
+main .welcome {
+  margin-top: 155px;
+  margin-bottom: 45px;
+}
+main article {
+  padding: 100px;
+  display: grid;
+  grid-template-areas: "one one one" "two three four" "two five six";
+  gap: 1em;
+}
+main article .card:nth-child(1) {
+  grid-area: one;
+}
+main article .card:nth-child(2) {
+  grid-area: two;
+}
+main article .card:nth-child(3) {
+  grid-area: three;
+}
+main article .card:nth-child(4) {
+  grid-area: four;
+}
+main article .card:nth-child(5) {
+  grid-area: five;
+}
+main article .card:nth-child(6) {
+  grid-area: six;
+}
+
+img {
+  width: 100%;
+  padding: 30px;
+}
+
+@media (max-width: 500px) {
+  main {
+    margin-top: 140px;
+    margin-bottom: 140px;
+    padding: 10px;
+  }
+  main .hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .hero .hero-title {
+    width: 100%;
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 25px;
+  }
+  main .hero .hero-text {
+    width: 100%;
+    margin: 5px;
+    padding: 15px;
+  }
+  main .buttons {
+    padding: 10px;
+    gap: 2em;
+  }
+  main .buttons .btn {
+    width: 80px;
+    padding: 5px 10px;
+  }
+  main article {
+    padding: 0;
+    grid-template-areas: "one" "two " "three" "four" "five" "six";
+    gap: 2.5em;
+  }
+  main article .card-text {
+    text-align: center;
+  }
+}
+footer {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.117);
+}
+footer .footer-note {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .footer-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer-logo .logo-img-footer {
+  width: 110px;
+  height: 110px;
+}
+footer .footer-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .footer-left ul {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+}
+
+@media (max-width: 500px) {
+  footer {
+    padding: 10px;
+  }
+  footer .footer-note {
+    width: 100%;
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .logo-img-footer {
+    width: 120px;
+    height: 120px;
+  }
+  footer .foot-title {
+    padding: 15px;
+  }
+  footer .footer-left, footer ul, footer li {
+    width: 15px;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

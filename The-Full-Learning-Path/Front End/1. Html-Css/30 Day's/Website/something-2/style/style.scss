@@ -1,0 +1,353 @@
+/* Reset */
+
+span {
+    color: #105e10;
+}
+
+/* Set core body defaults */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  
+    font-family: monospace;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"], li,
+  ol[role="list"] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  
+  /* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  
+  header {
+    background-color: white;
+    border: 1px dashed #105e103d;
+    position: fixed;
+    width: 100%;
+    height: 62px;
+    top: 0;
+    left: 0;
+
+    // display
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    // background
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+
+        .logo-img {
+            // margin-right: 45px;
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    .navbar{
+        padding: 5px;
+
+        a {
+            padding: 5px 10px;
+            font-weight: 500;
+        }
+        a:hover {
+            font-weight: bold;
+        }
+    }
+}
+@media (max-width: 500px){
+    .navbar{
+        visibility: hidden;
+    }
+
+   header {
+    justify-content: space-between;
+    align-items: center;
+
+    .web-title {
+        width: 120px;
+    }
+
+    .logo{
+        font-size: 10px;
+            img {
+            margin-left: 35px;
+            width: 45px;
+            height: 45px;
+        }
+    }
+   }
+}
+
+
+// main 
+main {
+    margin-top: 50px;
+    padding: 100px;
+
+    .hero {
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .hero-title{
+            width: 100%;
+            margin: 10px;
+            padding: 10px;
+            font-size: 40px;
+            
+        }
+
+        .hero-text {
+            width: 600px;
+            margin: 10px;
+            padding: 10px;
+
+        }
+    }
+
+    .buttons {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+
+        .btn {
+            width: 80px;
+            padding: 5px 10px;
+            border: 1px solid #000;
+            color: black;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: white;
+            border: 1px solid #000;
+            background-color: #105e10;
+            
+        }
+    }
+
+    .welcome {
+        margin-top: 155px;
+        margin-bottom: 45px;
+
+    }
+
+    article {
+        padding: 100px;
+        display: grid;
+        grid-template-areas: 
+            'one one one'
+            'two three four'
+            'two five six';
+        gap: 1em;
+
+      
+
+        .card:nth-child(1){        
+            grid-area: one;           
+        }
+        .card:nth-child(2){
+            grid-area: two;
+        }
+        .card:nth-child(3){
+            grid-area: three;
+        }
+        .card:nth-child(4){
+            grid-area: four;
+        }
+        .card:nth-child(5){
+            grid-area: five;
+        }
+        .card:nth-child(6){
+            grid-area: six;
+        }
+      
+    }
+    
+}
+
+img {
+    width: 100%;
+    padding: 30px;
+}
+
+
+
+@media (max-width: 500px){
+    main {
+        margin-top: 140px;
+        margin-bottom: 140px;
+
+        padding: 10px;
+    
+        .hero {
+            text-align: center;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            .hero-title{
+                width: 100%;
+                margin: 0 10px;
+                padding: 5px;
+                font-size: 25px;
+                
+            }
+    
+            .hero-text {
+                width: 100%;
+                margin: 5px;
+                padding: 15px;
+    
+            }
+        }
+    
+        .buttons {
+            padding: 10px;
+            gap: 2em;
+    
+            .btn {
+                width: 80px;
+                padding: 5px 10px;
+            }
+    
+        }
+
+        article {
+            padding: 0;
+            grid-template-areas: 
+                'one'
+                'two '
+                'three'
+                'four'
+                'five'
+                'six';
+            gap: 2.5em;
+
+            .card-text {
+                text-align: center;
+            }
+          
+        }
+        
+    }
+
+}
+
+// footer
+
+footer {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.117);
+    .footer-note{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .logo-img-footer {
+            width: 110px;
+            height: 110px;
+        }
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+
+        ul {
+            display: flex;
+            gap: 15px;
+            flex-direction: row;
+        }
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    footer {
+        padding: 10px;
+    
+        .footer-note{
+            width: 100%;
+            display: block;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+
+          
+            .logo-img-footer {
+                width: 120px;
+                height: 120px;
+            }
+
+            .foot-title{
+                padding: 15px;
+            }
+        
+    
+        .footer-left, ul, li {
+            width: 15px;
+           visibility: hidden;
+            margin: 0;
+            padding: 0;
+        }
+    
+    }
+}
