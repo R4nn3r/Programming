@@ -406,6 +406,19 @@ HTML (Hypertext Markup Language)
                 Note: In CSS Grid, the parent element is referred to as 
                 the container and its children are called items.
 
+
+            - Size of Columns and Rows
+
+                    fr: sets the column or row to a fraction of the available space,
+
+                    auto: sets the column or row to the width or height of its content automatically,
+
+                    %: adjusts the column or row to the percent width of its container.
+
+                    Here's the code that generates the output in the preview:
+
+
+
             Steps -
                 displayed: grid
                 gap
