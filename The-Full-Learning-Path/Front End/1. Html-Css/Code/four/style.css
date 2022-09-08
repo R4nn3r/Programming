@@ -6,6 +6,21 @@ body {
     background-color: #FFF;
 }
 
+ul, li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
 
 article, figure {
   padding: 2em;
@@ -20,7 +35,8 @@ figcaption {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 span {

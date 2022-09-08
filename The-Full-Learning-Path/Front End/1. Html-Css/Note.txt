@@ -409,9 +409,12 @@ HTML (Hypertext Markup Language)
              height is more than or equal to 350px   
                 @media (min-height: 350px) { /* CSS Rules */ }
 
+    - Use a Retina Image for Higher Resolution Displays
 
-
-
+        The simplest way to make your images properly appear on High-Resolution Displays,
+        such as the MacBook Pros "retina display" is to define their width and height values 
+        as only half of what the original file is. Here is an example of an image that is only 
+        using half of the original height and width:
 
 
 
