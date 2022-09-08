@@ -356,8 +356,55 @@ HTML (Hypertext Markup Language)
                     run continuously by setting that value to infinite.
 
 # Layout 
+        # Flexbox
+            With flexbox, it's easy to center elements on the page and create 
+            dynamic user interfaces that shrink and expand automatically.
+
+                    Note: The direction is based on the flex-direction property.
+                (row)
+            justify-items (main axis horizontally)
+            align-items (cross axis vertically)
+            
+            - container
+
+                display: flexbox | inline-flex;
+                flex-direction: row | row-reverse | column | column-reverse;
+                flex-wrap: nowrap | wrap | wrap-reverse;
+                flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+                justify-content: flex-start | flex-end | center | space-between | space-around;
+                align-items: flex-start | flex-end | center | baseline | stretch;
+                align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+
+            -  items/elements
+
+                order: <integer>;
+                flex-grow: <number>; /* default 0 */
+                flex-shrink: <number>; /* default 1 */
+                flex-basis: <length> | auto; /* default auto */
+                flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+                align-self: auto | flex-start | flex-end | center | baseline | stretch;
+
+
+            - flex Shorthand Property
+
+                    Ex, 
+                        
+                    flex: 1 0 10px; 
+
+                    will set the item to 
+                        flex-grow: 1;, 
+                        flex-shrink: 0;,  
+                        flex-basis: 10px;.
+
+            - align-self
+                accepts the same values as align-items and will override any value set by the 
+                align-items property.
+
+
 
         # Grid 
+                Note: In CSS Grid, the parent element is referred to as 
+                the container and its children are called items.
 
             Steps -
                 displayed: grid
@@ -365,7 +412,7 @@ HTML (Hypertext Markup Language)
                 # setting a column up is good but just until you create a media query
                 grid-template-columns: repeat(4, 1fr);
 
-            # You can use 
+            # Use
                 grid-template-columns
                 grid-template-rows
 
@@ -417,10 +464,18 @@ HTML (Hypertext Markup Language)
         using half of the original height and width:
 
 
+    - Make Typography Responsive
+            Instead of using em or px to size text, you can use viewport units for responsive typography. 
+            Viewport units, like percentages, are relative units, but they are based off different items. 
+            Viewport units are relative to the viewport dimensions (width or height) of a device, and 
+            percentages are relative to the size of the parent container element.
 
+           The four different viewport units are: 
 
-
-
+                vw (viewport width): 10vw would be 10% of the viewport's width.
+                vh (viewport height): 3vh would be 3% of the viewport's height.
+                vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
+                vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
 
 
 
