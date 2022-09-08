@@ -44,7 +44,12 @@
              3. Extreme   
 </strong>
 
+<h2><strong>Data structure and Algorithm</strong></h2>
+This section is not part of the full stack dev path its from my Dsa course and i just thought it would be interesting to have it in the repo since Dsa kinda matters if you want to be a good dev.
 
+
+<hr>
+<br>
 
 
 <h6>By <a href="https://t.me/Toyxna">Yonatan Afewerk Teshome</a></h6>
