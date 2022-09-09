@@ -199,9 +199,61 @@ svg {
   margin-block-end: var(--size-700);
 }
 
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
 /* General styling  */
 body {
   font-size: var(--fs-body);
   font-family: var(--ff-body);
-  color: var(--clr-neutral-900);
+  color: var(--clr-primary-400);
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  line-height: 1;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-accent-400);
+  box-shadow: 0 1.25em 1em -1em var(--clr-accent-400);
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--clr-accent-300);
+}
+
+.button[data-type="inverted"] {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-accent-400);
+  box-shadow: 0 1.25em 1em -1em var(--clr-accent-500);
+}
+
+.button[data-type="inverted"]:hover,
+.button[data-type="inverted"]:focus-visible {
+  background-color: var(--clr-accent-300);
+  color: var(--clr-neutral-100);
 }
