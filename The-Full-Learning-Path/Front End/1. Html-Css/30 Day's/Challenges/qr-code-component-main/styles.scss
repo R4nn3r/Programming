@@ -9,7 +9,7 @@
     --fc-secondary: hsl(220, 15%, 55%);
 
 
-    --fs-primary: 10px;
+    --fs-primary: 9px;
 
 
     --ff-primary: 'Outfit', sans-serif;
@@ -34,11 +34,11 @@ body {
 
 
     .container {
-        width: 230px;
+        width: 220px;
         top: 0;
-        padding: 1em;
+        padding: 0.75em;
         background-color: var(--bg-secondary);
-        border-radius: 1em;
+        border-radius: 0.75em;
         box-shadow: 3rem 2.75rem 3rem -3rem rgb(143, 143, 143 / 0.25);
         margin-bottom: 120px;
 
@@ -46,13 +46,17 @@ body {
 
         .qr-code img {
             width: 100%;
-            border-radius: 1em;
-
+            border-radius: 0.75em;
         }
 
         .content {
             font-size: var(--fs-primary);
+            padding: 0.75em;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
 
             h1 {
@@ -61,7 +65,9 @@ body {
             }
 
             p {
+                margin-top: 0;
                 color: var(--fc-secondary);
+                font-size: 13px;
             }
         }
     }
