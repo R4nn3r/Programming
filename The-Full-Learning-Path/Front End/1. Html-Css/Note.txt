@@ -550,9 +550,6 @@ HTML (Hypertext Markup Language)
                 vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
                 vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
 
-
-
-
 # Best Practice to follow to get a better grip on the industry
 
     # Optimization of the web site using npm packages
@@ -567,3 +564,18 @@ HTML (Hypertext Markup Language)
 
 
         - Deploy to git pages or netlify 
+
+
+    # Making a website start to finish 
+
+        1: Have a good look at the design and try to figure out on some routes to can take
+           from 
+                - how you can structure the html to how you can style the page 
+                - what can be generalized and used in common
+                - how to use the media query to make the site responsive 
+                - and complication you may have going through writing the code 
+        2: npm create vite@latest
+            chose the options as needed
+                cd to the directory
+                    npm install
+                    npm run dev
