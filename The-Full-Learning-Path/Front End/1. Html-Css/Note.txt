@@ -578,4 +578,19 @@ HTML (Hypertext Markup Language)
             chose the options as needed
                 cd to the directory
                     npm install
+
                     npm run dev
+                        -> to run local host
+
+        3: Before staring you need to rest the default css styles 
+
+                -> https://gist.github.com/Asjas/4b0736108d56197fce0ec9068145b421
+
+
+                tip: Change this from what ever it was before 
+                        /* Remove default margin */
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            font: inherit;  -> (makes you style every element from the class)
+                        }
