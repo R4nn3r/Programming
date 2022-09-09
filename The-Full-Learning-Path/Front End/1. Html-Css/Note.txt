@@ -596,4 +596,7 @@ HTML (Hypertext Markup Language)
                             font: inherit;  -> (makes you style every element from the class)
                         }
 
-            
+        4:  Create custom set ups for the variable on :root sot it gets easier to
+            use for responsiveness and it does look better 
+
+                - Create utility functions 
