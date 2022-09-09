@@ -2,9 +2,9 @@
   --clr-primary-400: hsl(263, 55%, 52%);
   --clr-secondary-400: hsl(217, 19%, 35%);
   --clr-secondary-500: hsl(219, 29%, 14%);
-  --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-neutral-200: hsl(0, 0%, 81%);
-  --clr-neutral-300: hsl(210, 46%, 95%);
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-200: hsl(210 46% 95%);
+  --clr-neutral-300: hsl(0 0% 81%);
   --ff-primary: "Barlow Semi Condensed", sans-serif;
   --fw-400: 500;
   --fw-700: 600;
@@ -106,19 +106,22 @@ body {
   min-height: 100vh;
   font-family: var(--ff-primary);
   font-weight: var(--fw-400);
-  background-color: hsl(var(--clr-neutral-200));
+  background-color: var(--clr-neutral-200);
 }
 
 h1,
 h2,
-h3 {
+h3, p {
   font-weight: var(--fw-700);
 }
 
 .testimonial-grid {
   border-radius: 0.5rem;
-  padding: 2rem;
+  gap: 1.5rem;
   font-size: var(--fs-400);
+  padding-block: 2rem;
+  margin-inline: auto;
+  width: min(95%, 70em);
   display: grid;
   gap: 1em;
   grid-template-areas: "one" "two" "three" "four" "five";
@@ -159,12 +162,18 @@ h3 {
   line-height: 1.2;
 }
 .testimonial-grid .testimonial > p:last-of-type {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-400);
   opacity: 0.7;
+}
+
+.quote-container {
+  background-image: url("./images/favicon-32x32.png");
 }
 
 .testimonial {
   padding: 2em;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400)/0.25);
 }
 .testimonial .flex {
@@ -175,7 +184,8 @@ h3 {
 }
 .testimonial .flex .img img {
   border-radius: 50%;
-  width: 35px;
+  width: 1.75rem;
+  aspect-ratio: 1;
 }
 
 @media (min-width: 600px) {
