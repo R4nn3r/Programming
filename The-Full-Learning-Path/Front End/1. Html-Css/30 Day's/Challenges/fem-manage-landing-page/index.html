@@ -17,7 +17,158 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h4>Hello Vite App world this is my first time!</h4>
+    <!-- Header -->
+
+    <header class="primary-header">
+      <div class="container">
+        <a href="#"> <img src="./images/logo.svg" alt="Mange" /></a>
+
+        <nav class="prinary-navigation" aria-label="Primary">
+          <!-- ul>li*5>a -->
+          <ul role="list" class="nav-list">
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </nav>
+        <button class="button">Get Started</button>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      <section>
+        <div class="container">
+          <div class="even-columns">
+            <!-- column -1 -->
+            <div>
+              <h1 class="fs-primary-heading fw-bold">
+                Bring everyone together to build better products.
+              </h1>
+              <p>
+                Manage makes it simple for software teams to pan day-to-day
+                tasks while keeping the larger team goals in view.
+              </p>
+              <button class="button">Get Started</button>
+            </div>
+
+            <!-- column -2 -->
+            <div>
+              <img src="./images/illustration-intro.svg" alt="illustration" />
+            </div>
+        </div>
+      </section>
+
+      <!-- Middle  -->
+      <section>
+        <div class="even-columns">
+          <!-- column -1 -->
+          <div>
+            <h2 class="fs-secondary-heading fw-bold">
+              What's different about Manage?
+            </h2>
+            <p>
+              Manage provides all the functionality your team needs, without the
+              complexity. Our software is tailor-made for modern digital product
+              teams.
+            </p>
+          </div>
+
+          <!-- column -2 -->
+          <div>
+            <ul class="numbered-items" role="list">
+              <li>
+                <h3 class="fs-600 fw-bold">Track company-wide progress</h3>
+                <p>
+                  see how our day-to-day tasks fit into the wider vision. Go
+                  from tracking progress at the milestone level all teh way done
+                  to the smallest of details.NEver lose sight of the bigger
+                  picture again.
+                </p>
+              </li>
+              <li>
+                <h3 class="fs-600 fw-bold">Advanced build-in reports</h3>
+                <p>
+                  Set internal delivery estimates and track progress toward
+                  company goals. Our customizable dashboard helps you build out
+                  the reports you need to keep key stakeholders informed.
+                </p>
+              </li>
+              <li>
+                <h3 class="fs-600 fw-bold">Everything you need in one place</h3>
+                <p>
+                  Stop jumping from one service to another to communicate, store
+                  files, track tasks and share documents, Manage offers an
+                  all-in-one team productivity solution.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Carousel -->
+      <section class="carousel">
+        <h2 class="fs-secondary-heading">What they've said</h2>
+        <!-- carousel slide goes here -->
+        <button class="button">Get Started</button>
+      </section>
+
+      <!-- upper footer section -->
+      <section class="cta | bg-primary-400 text-neutral-100">
+        <div class="container">
+          <div class="even-columns">
+            <div>
+              <p class="lfs-secondary-heading fw-bold">
+                Simplify how your team works today.
+              </p>
+            </div>
+            <div>
+              <button class="button" data-type="inverted">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-neutral-900 text-neutral-100">
+      <div class="container">
+        <div class="even-columns">
+          <div>
+            <a href="#"> <img src="./images/logo.svg" alt="Mange" /></a>
+            <ul role="list" aria-label="Social Links">
+              <li><a aria-label="Facebook" href="#"></a></li>
+              <li><a aria-label="YouTube" href="#"></a></li>
+              <li><a aria-label="Twitter" href="#"></a></li>
+              <li><a aria-label="Pinterest" href="#"></a></li>
+              <li><a aria-label="Instagram" href="#"></a></li>
+            </ul>
+          </div>
+          <div>
+            <nav class="footer-nav">
+              <ul role="list" aria-label="Footer">
+                <li><a href="">Home</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Community</a></li>
+                <li><a href="">Privacy Policy</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <form action="">
+              <input type="email" /><button class="botton">Go</button>
+              <p>Copyright 2020. All Rights Reserved</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script type="module" src="/main.js"></script>
   </body>
