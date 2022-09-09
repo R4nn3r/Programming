@@ -199,4 +199,9 @@ svg {
   margin-block-end: var(--size-700);
 }
 
-/* header */
+/* General styling  */
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-neutral-900);
+}

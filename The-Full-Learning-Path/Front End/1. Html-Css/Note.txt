@@ -602,3 +602,5 @@ HTML (Hypertext Markup Language)
                 - Create utility classes  
 
         5: Create the Html structure 
+
+        6: General styling 
