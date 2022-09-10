@@ -228,7 +228,7 @@ input {
 
     position: absolute;
     inset: 7rem var(--size-400) auto;
-    max-width: 20rem;
+    max-width: 25rem;
     margin-left: auto;
 
     background: var(--clr-neutral-100);
@@ -413,6 +413,8 @@ input {
 /*  numbered items */
 .numbered-items {
   counter-reset: count;
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .numbered-items li {
@@ -437,26 +439,6 @@ input {
   grid-column: 1 / -1;
 }
 
-@media (min-width: 30em) {
-  .numbered-items__body {
-    grid-column: 2 / -1;
-  }
-}
-
-@media (max-width: 30em) {
-  .numbered-items div::after {
-    content: "";
-    display: block;
-    z-index: -1;
-    border-radius: 0.5em;
-    inset: 0 -100vw 0 0;
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    height: 35px;
-    width: 100%;
-    background-color: orange;
-  }
-}
 .numbered-items div::before {
   content: "0" counter(count);
   display: flex;
@@ -469,6 +451,29 @@ input {
   border-radius: 0.5em;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
+}
+
+@media (max-width: 30em) {
+  .numbered-items div::after {
+    --bg: var(--clr-accent-100);
+    content: "";
+    display: block;
+    z-index: -1;
+    border-radius: 0.5em 0 0 0.5em;
+    inset: 0 -100vw 0 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    height: 35px;
+    width: 100%;
+    background-color: var(--bg);
+    box-shadow: 5em 0 0 0 var(--bg);
+  }
+}
+
+@media (min-width: 30em) {
+  .numbered-items__body {
+    grid-column: 2 / -1;
+  }
 }
 
 /* utility classes */
@@ -529,6 +534,24 @@ input {
 /* .flow :not(:first-child) {
   outline: 3px solid lime;
 } */
+
+.text-center {
+  text-align: center;
+}
+
+.text-center p {
+  margin-inline: auto;
+}
+
+@media (max-width: 50em) {
+  .text-center-sm-only {
+    text-align: center;
+  }
+
+  .text-center-sm-only p {
+    margin-inline: auto;
+  }
+}
 
 .justify-self-end {
   justify-self: end;
