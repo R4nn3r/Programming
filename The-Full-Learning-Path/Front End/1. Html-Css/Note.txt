@@ -600,7 +600,10 @@ HTML (Hypertext Markup Language)
             use for responsiveness and it does look better 
 
                 - Create utility classes  
+                    -> make sure your utility list has low specificity 
 
         5: Create the Html structure 
 
         6: General styling 
+            - For Svg 
+                https://svgsprit.es/

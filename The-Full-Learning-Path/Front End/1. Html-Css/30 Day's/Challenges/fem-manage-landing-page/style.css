@@ -126,33 +126,20 @@ svg {
   }
 }
 
-/* Style */
-
-.container {
-  --max-width: 1110px;
-  --padding: 1rem;
-
-  width: min(var(--max-width), 100% - var(--padding) * 2);
-  margin-inline: auto;
-}
-
-.even-columns {
-  display: grid;
-  gap: 1rem;
-}
-
-@media (min-width: 50em) {
-  .even-columns {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-}
-
 /* General styling  */
 body {
   font-size: var(--fs-body);
   font-family: var(--ff-body);
   color: var(--clr-primary-400);
+}
+
+p:not([class]) {
+  max-width: 32ch;
+  opacity: 0.7;
+}
+
+p[data-width="wide"] {
+  max-width: 40ch;
 }
 
 .button {
@@ -168,7 +155,7 @@ body {
   font-size: var(--fs-button);
   color: var(--clr-neutral-100);
   background-color: var(--clr-accent-400);
-  box-shadow: 0 1.25em 1em -1em var(--clr-accent-400);
+  box-shadow: 0 0.85em 1em -1em var(--clr-accent-400);
 }
 
 .button:hover,
@@ -182,10 +169,25 @@ body {
   box-shadow: 0 1.25em 1em -1em var(--clr-accent-500);
 }
 
+.button[data-shadow="none"] {
+  box-shadow: none;
+  font-weight: var(--fw-bold);
+}
+
 .button[data-type="inverted"]:hover,
 .button[data-type="inverted"]:focus-visible {
   background-color: var(--clr-accent-300);
   color: var(--clr-neutral-100);
+}
+
+input {
+  border: none;
+  background-color: var(--clr-neutral-100);
+  padding: var(--size-200);
+  margin-right: 0.5em;
+  font-size: var(--fs-500);
+  outline: none;
+  border-radius: var(--size-200);
 }
 
 /* Mobile Nav */
@@ -279,7 +281,198 @@ body {
   }
 }
 
+/* footer navigation */
+.primary-footer {
+  --logo-color: var(--clr-neutral-100);
+}
+
+.primary-footer-wrapper {
+  display: grid;
+  padding: var(--size-200);
+  gap: var(--size-900);
+  grid-template-areas:
+    "form"
+    "nav"
+    "logo-social";
+}
+
+.primary-footer-logo-social {
+  grid-area: logo-social;
+
+  display: flex;
+  gap: var(--size-700);
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.primary-footer-nav {
+  grid-area: nav;
+}
+.primary-footer-form {
+  grid-area: form;
+
+  display: grid;
+  align-content: space-between;
+}
+.primary-footer-wrapper > * {
+  margin-inline: auto;
+}
+
+.footer-nav {
+  columns: 2;
+  gap: max(10vw, 2rem);
+}
+
+.footer-nav a {
+  text-decoration: none;
+}
+.footer-nav a:is(:hover, :focus) {
+  color: var(--clr-accent-400);
+}
+
+@media (min-width: 50em) {
+  .primary-footer-wrapper {
+    grid-template-areas: "logo-social nav form";
+  }
+
+  .primary-footer-logo-social {
+    gap: var(--size-700);
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 50em) {
+  .primary-footer-wrapper > * {
+    margin-inline: auto;
+  }
+}
+
+/* Social list */
+
+.social-list {
+  display: flex;
+  gap: var(--size-600);
+}
+.social-icon {
+  width: var(--size-600);
+  aspect-ratio: 1;
+  fill: var(--clr-neutral-100);
+}
+
+.social-list a:is(:hover, :focus) .social-icon {
+  fill: var(--clr-accent-400);
+}
+
+@media (min-width: 50em) {
+  .social-list {
+    display: flex;
+    gap: var(--size-400);
+  }
+  .social-icon {
+    width: var(--size-400);
+  }
+}
+
+.logo {
+  fill: var(--clr-neutral-100);
+}
+
+/* cta*/
+
+.cta {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+}
+
+@media (min-width: 50em) {
+  .cta {
+    text-align: left;
+  }
+}
+
+.back {
+  z-index: -1;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-image: url(./images/bg-tablet-pattern.svg),
+    url(./images/bg-tablet-pattern.svg);
+  background-position: -15em -5rem, 65rem -40rem;
+  /* background-image: url(./images/bg-simplify-section-desktop.svg);
+  background-position: 5rem -5rem; */
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
+/*  numbered items */
+.numbered-items {
+  counter-reset: count;
+}
+
+.numbered-items li {
+  counter-increment: count;
+}
+
+.numbered-items div {
+  display: grid;
+  position: relative;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  column-gap: var(--size-300);
+}
+
+.numbered-items__title {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  line-height: 1;
+}
+
+.numbered-items__body {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 30em) {
+  .numbered-items__body {
+    grid-column: 2 / -1;
+  }
+}
+
+@media (max-width: 30em) {
+  .numbered-items div::after {
+    content: "";
+    display: block;
+    z-index: -1;
+    border-radius: 0.5em;
+    inset: 0 -100vw 0 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    height: 35px;
+    width: 100%;
+    background-color: orange;
+  }
+}
+.numbered-items div::before {
+  content: "0" counter(count);
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  padding: 0 var(--size-400);
+  height: 35px;
+  border-radius: 0.5em;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
 /* utility classes */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -290,6 +483,65 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+@media (max-width: 50em) {
+  .even-columns-reverse {
+    grid-template-areas:
+      "two"
+      "one";
+  }
+
+  .even-columns-reverse div:nth-child(1) {
+    grid-area: one;
+  }
+  .even-columns-reverse div:nth-child(2) {
+    grid-area: two;
+  }
+}
+
+.flow * + * {
+  margin-top: var(--flow-spacer, 1.5em);
+}
+
+/* you can do it like this as well */
+/* or use it and wrap is in a :where() */
+/* .flow :not(:first-child) {
+  outline: 3px solid lime;
+} */
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.vertical-align-center {
+  align-items: center;
+}
+
+@media (min-width: 50em) {
+  .justify-self-end-md {
+    justify-self: end;
+  }
 }
 
 .text-primary-400 {
