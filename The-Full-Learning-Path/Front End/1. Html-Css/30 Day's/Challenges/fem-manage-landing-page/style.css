@@ -74,8 +74,11 @@
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
+a,
 ol[role="list"] {
   list-style: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Set core root defaults */
@@ -256,4 +259,18 @@ body {
 .button[data-type="inverted"]:focus-visible {
   background-color: var(--clr-accent-300);
   color: var(--clr-neutral-100);
+}
+
+.primary-header .container {
+  margin-top: 2em;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2em;
+  font-size: var(--fs-300);
 }
