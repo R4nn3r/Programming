@@ -21,19 +21,38 @@
 
     <header class="primary-header">
       <div class="container">
-        <a href="#"> <img src="./images/logo.svg" alt="Mange" /></a>
+        <div class="nav-wrapper">
+          <a href="#"> <img src="./images/logo.svg" alt="Mange" /></a>
 
-        <nav class="primary-navigation" aria-label="Primary">
-          <!-- ul>li*5>a -->
-          <ul role="list" class="nav-list">
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Community</a></li>
-          </ul>
-        </nav>
-        <button class="button">Get Started</button>
+          <!-- Mobile toggle  -->
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <span class="visually-hidden">Menu</span>
+            <img
+              src="./images/icon-hamburger.svg"
+              alt=""
+              class="icon-hamburger"
+            />
+            <img src="./images/icon-close.svg" alt="" class="icon-close" />
+          </button>
+
+          <nav class="primary-navigation" id="primary-navigation">
+            <!-- ul>li*5>a -->
+            <ul role="list" class="nav-list">
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </nav>
+          <button class="button | display-sm-none display-md-inline-flex">
+            Get Started
+          </button>
+        </div>
       </div>
     </header>
 
@@ -59,58 +78,60 @@
             <div>
               <img src="./images/illustration-intro.svg" alt="illustration" />
             </div>
+          </div>
         </div>
       </section>
 
       <!-- Middle  -->
       <section class="padding-block-900">
         <div class="container">
-           <div class="even-columns">
-          <!-- column -1 -->
-          <div>
-            <h2 class="fs-secondary-heading fw-bold">
-              What's different about Manage?
-            </h2>
-            <p>
-              Manage provides all the functionality your team needs, without the
-              complexity. Our software is tailor-made for modern digital product
-              teams.
-            </p>
-          </div>
+          <div class="even-columns">
+            <!-- column -1 -->
+            <div>
+              <h2 class="fs-secondary-heading fw-bold">
+                What's different about Manage?
+              </h2>
+              <p>
+                Manage provides all the functionality your team needs, without
+                the complexity. Our software is tailor-made for modern digital
+                product teams.
+              </p>
+            </div>
 
-          <!-- column -2 -->
-          <div>
-            <ul class="numbered-items" role="list">
-              <li>
-                <h3 class="fs-600 fw-bold">Track company-wide progress</h3>
-                <p>
-                  see how our day-to-day tasks fit into the wider vision. Go
-                  from tracking progress at the milestone level all teh way done
-                  to the smallest of details.NEver lose sight of the bigger
-                  picture again.
-                </p>
-              </li>
-              <li>
-                <h3 class="fs-600 fw-bold">Advanced build-in reports</h3>
-                <p>
-                  Set internal delivery estimates and track progress toward
-                  company goals. Our customizable dashboard helps you build out
-                  the reports you need to keep key stakeholders informed.
-                </p>
-              </li>
-              <li>
-                <h3 class="fs-600 fw-bold">Everything you need in one place</h3>
-                <p>
-                  Stop jumping from one service to another to communicate, store
-                  files, track tasks and share documents, Manage offers an
-                  all-in-one team productivity solution.
-                </p>
-              </li>
-            </ul>
+            <!-- column -2 -->
+            <div>
+              <ul class="numbered-items" role="list">
+                <li>
+                  <h3 class="fs-600 fw-bold">Track company-wide progress</h3>
+                  <p>
+                    see how our day-to-day tasks fit into the wider vision. Go
+                    from tracking progress at the milestone level all teh way
+                    done to the smallest of details.NEver lose sight of the
+                    bigger picture again.
+                  </p>
+                </li>
+                <li>
+                  <h3 class="fs-600 fw-bold">Advanced build-in reports</h3>
+                  <p>
+                    Set internal delivery estimates and track progress toward
+                    company goals. Our customizable dashboard helps you build
+                    out the reports you need to keep key stakeholders informed.
+                  </p>
+                </li>
+                <li>
+                  <h3 class="fs-600 fw-bold">
+                    Everything you need in one place
+                  </h3>
+                  <p>
+                    Stop jumping from one service to another to communicate,
+                    store files, track tasks and share documents, Manage offers
+                    an all-in-one team productivity solution.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        </div>
-       
       </section>
 
       <!-- Carousel -->
@@ -123,9 +144,9 @@
       <!-- upper footer section -->
       <section class="cta | text-neutral-100 bg-accent-400 padding-block-700">
         <div class="container">
-          <div class="even-columns ">
+          <div class="even-columns">
             <div>
-              <p class="fs-secondary-heading fw-bold ">
+              <p class="fs-secondary-heading fw-bold">
                 Simplify how your team works today.
               </p>
             </div>
@@ -137,6 +158,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer bg-neutral-900 text-neutral-100 padding-block-700">
       <div class="container">
         <div class="even-columns">
