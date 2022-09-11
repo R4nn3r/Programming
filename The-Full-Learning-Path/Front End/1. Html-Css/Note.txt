@@ -607,3 +607,19 @@ HTML (Hypertext Markup Language)
         6: General styling 
             - For Svg 
                 https://svgsprit.es/
+
+                .button {
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  line-height: 1;
+  border-radius: 0.5em;
+  padding: 1em 2em;
+
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-button);
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-accent-400);
+  box-shadow: 0 0.85em 1em -1em var(--clr-accent-400);
+}
