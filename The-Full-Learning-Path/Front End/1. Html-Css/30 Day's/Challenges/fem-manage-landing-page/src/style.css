@@ -247,7 +247,6 @@ p[data-width="wide"] {
   .mobile-nav-toggle {
     z-index: 1;
     display: block;
-    position: fixed;
     top: var(--size-600);
     right: var(--size-400);
     cursor: pointer;
