@@ -17,9 +17,8 @@ body {
   background-color: var(--bg-primary);
   display: flex;
   flex-direction: column;
-  gap: 2em;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 body .container {
   width: 220px;

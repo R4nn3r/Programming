@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+:root {
+  --ff-primary: "Inter", sans-serif;
+  --ff-secondary: "Lexend Deca", sans-serif;
+  --clr-background: hsl(233, 47%, 7%);
+  --clr-card-background: hsl(244, 38%, 16%);
+  --clr-accent: hsl(277, 64%, 61%);
+  --clr-fc-primary: hsl(0, 0%, 100%);
+  --clr-fc-secondary: hsla(0, 0%, 100%, 0.75);
+  --clr-fc-secondary-stat: hsla(0, 0%, 100%, 0.6);
+  --fs-primary: 15px;
+  --fw-primary-700: 700;
+  --fw-primary-400: 400;
+  --fw-secondary: 400;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+li,
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background-color: var(--clr-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title,
+.num {
+  color: var(--clr-fc-primary);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-primary-700);
+  line-height: 1.2;
+  font-size: 26px;
+}
+.card-title span,
+.num span {
+  color: var(--clr-accent);
+}
+
+.card-description {
+  color: var(--clr-fc-secondary);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-secondary);
+  font-size: 11px;
+}
+
+.list-type {
+  text-transform: uppercase;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-primary-400);
+  color: var(--clr-fc-secondary-stat);
+  font-size: var(--fs-primary);
+}
+
+.card {
+  background-color: var(--clr-card-background);
+  margin: 2em;
+  border-radius: 0.5em;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "top" "bottom";
+}
+
+.card-left {
+  grid-area: bottom;
+  margin: 2em 0;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.card-left .card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.card-left .card-list .num {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.card-left .card-list .list-type {
+  font-size: 12px;
+}
+
+.card-right {
+  grid-area: top;
+  width: 100%;
+  background-image: url(./images/image-header-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.card-right::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(277deg, 65%, 52%, 0.424);
+}
+
+@media (min-width: 40em) {
+  .card {
+    border-radius: 0.5em;
+    margin-bottom: 50px;
+    width: 750px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "bottom top";
+  }
+  .card-left {
+    margin-bottom: 0;
+    margin: 0 2em 0 0;
+    grid-area: bottom;
+    padding: 2em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .card-left .card-list {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
+  }
+  .card-left .card-list .num {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .card-left .card-list .list-type {
+    font-size: 10px;
+  }
+  .card-right {
+    grid-area: top;
+    width: 100%;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0.5em 0.5em 0;
+  }
+}/*# sourceMappingURL=style.css.map */
