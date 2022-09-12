@@ -1,0 +1,174 @@
+:root {
+  --crl-accent: hsl(158, 36%, 37%);
+  --crl-secondary-background: hsl(30, 38%, 92%);
+  --crl-primary-background: hsl(228, 12%, 48%);
+  --ff-primary: "Fraunces", serif;
+  --ff-secondary: "Montserrat", sans-serif;
+  --fw-primary-bold: 700;
+  --fw-secondary-light: 400;
+  --fw-secondary-regular: 300;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+body {
+  background-color: var(--crl-secondary-background);
+  margin-inline: auto;
+  margin-top: 100px;
+}
+
+.product-price {
+  color: var(--crl-accent);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-direction: row;
+}
+.product-price .price-current {
+  font-family: var(--ff-primary);
+}
+.product-price .price-old {
+  color: black;
+  text-decoration: line-through;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.product-type {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-secondary-regular);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.product-name {
+  font-family: var(--ff-primary);
+  margin: 0;
+}
+
+.product-description {
+  font-weight: var(--fw-secondary-regular);
+  line-height: 1.5;
+  font-family: var(--ff-secondary);
+  font-size: 13px;
+}
+
+.product-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--crl-accent);
+  font-family: var(--ff-secondary);
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  justify-content: center;
+  gap: 10px;
+}
+.product-btn img {
+  width: 15px;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  width: 350px;
+  border-radius: 0.5em;
+  margin-bottom: 100px;
+}
+.card .card-img img {
+  width: 100%;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.card .card-content {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}/*# sourceMappingURL=style.css.map */
