@@ -734,6 +734,9 @@
                 cout << anArray[3] << endl; // answere will be 0 cause its cleared
 
 
+            // How to get the size of any Array
+
+
 
 
 
@@ -745,14 +748,15 @@
 
 /* Structure
         stores a collection of different types of data
-         #A structure contains number of data types grouped togthere these data types may be or may not be of same data type
+        # A structure contains number of data types grouped together these data types may be 
+         or may not be of same data type
         //Declaration of structure
 
         struct structure-name
         {
             datatype1 varname1;
             datatype2 varname2;
-        }; // need the semicolum to end the structure
+        }; // need the semi-colum to end the structure
 
 
 
@@ -954,7 +958,31 @@
                     eg.
                         cout << *pAge; // "*" dereferenc's the pointer
                         cout << *&gpage; // "*" also dereferenc's the pointer you get the real value eg. 19
-                                        // "&gpa" you get the memory address*/
+                                        // "&gpa" you get the memory address
+             #include<iostream>
+
+                using namespace std;
+
+                int main(){
+
+                    int num = 10;
+                    // A pointer variable
+                    int *point_num;
+
+                    // putting the address of num in *p_num
+                    point_num = &num;
+
+                    cout << "Number is: (*point_num) = " << *point_num << endl; // Dereferencing the pointer
+                    cout << "It's Address is: (point_num) = " << point_num << endl; // Address on num in memory
+                    cout << &point_num << endl; // Address of the pointer it self
+
+                    return 0;
+
+                    // Pointer role is like of a shortcut "you create on desktop its just the address of 
+                    // app you want to use without going through you files to find it." so you use the address
+                    // to perform any of your executions instead of using more unnecessary memory space 
+                    // this is far more efficient and effective.
+                }*/
 
 /* Pointers & References
         Pointers store address of variables or a memory location.
@@ -971,7 +999,8 @@
                 -To access the value stored in the address we use the unary operator (*)
                 that returns the value of the variable located at the address specified
                 by its operand. This is also called Dereferencing.
-            #Pointer Expressions and Pointer Arithmetic
+
+        # Pointer Expressions and Pointer Arithmetic
             A limited set of arithmetic operations can be performed on pointers. A pointer may be:
 
 
@@ -979,18 +1008,20 @@
             decremented ( — )
             an integer may be added to a pointer ( + or += )
             an integer may be subtracted from a pointer ( – or -= )
+
                     Note :
-                    Pointers contain addresses. Adding two addresses makes no sense, because there is no
-                    idea what it would point to. Subtracting two addresses lets you compute the offset between
-                    these two addresses
-            Pointers and Multidimensional Arrays
+                        Pointers contain addresses. Adding two addresses makes no sense, because there is no
+                        idea what it would point to. Subtracting two addresses lets you compute the offset between
+                        these two addresses
+
+        # Pointers and Multidimensional Arrays
                 Consider pointer notation for the two-dimensional numeric arrays.
                 consider the following declaration
 
                 int nums[2][3]  =  { {16, 18, 20}, {25, 26, 27} };
                 In general, nums[i][j] is equivalent to *(*(nums+i)+j)
 
-        #Opaque Pointer
+        # Opaque Pointer
             syntax:
                     struct STest* pSTest;
 
@@ -1008,7 +1039,7 @@
                                 copy of individual objects when objects are large
 
 
-        #VOID POINTERS
+        # VOID POINTERS
             void print(void *ptr, char type) //start
             {
                 switch (type) // switch between the types
@@ -1033,6 +1064,9 @@
                 char letter = 'A';
 
                 print(&letter, 'c'); //function_name(address, dataType)
+
+                return 0;    
+            }
 
 
 
