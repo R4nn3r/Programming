@@ -550,7 +550,7 @@ HTML (Hypertext Markup Language)
                 vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
                 vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
 
-# Best Practice to follow to get a better grip on the industry
+# Best Practice to follow to get a better grip on the industry.
 
     # Optimization of the web site using npm packages
         - npm init 
