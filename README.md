@@ -1,7 +1,5 @@
 <h1><strong>Full-Learning-Path</strong></h1>
 
-[![wakatime](https://wakatime.com/badge/user/23b4b157-68e1-4806-bff0-29d434416678.svg)](https://wakatime.com/@23b4b157-68e1-4806-bff0-29d434416678)
-
 <h2><strong>FullStack-Development Start to Finish</strong></h2>
 
 <h3><strong>Quick Intro:</strong></h3>
