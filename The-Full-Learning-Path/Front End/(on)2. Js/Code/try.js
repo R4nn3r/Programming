@@ -1,5 +1,5 @@
 // alert("Hello world!");
-// console.log("Hello world!");
+console.log("Hello world!");
 
 let counter = 0;
 let count = document.getElementById("counter");
@@ -29,6 +29,7 @@ function hello() {
 const onbtn = document.getElementById("clickBtn");
 
 function handleClick(e) {
+  // console.log(e);
   console.log("Clicked");
   onbtn.innerHTML = "Clicked";
 
@@ -40,8 +41,46 @@ function handleClick(e) {
   }
 }
 
+onbtn.addEventListener("click", function (e) {
+  console.log(this);
+});
+
+onbtn.addEventListener("click", (e) => {
+  console.log(this);
+});
+
 onbtn.addEventListener("click", handleClick);
 
-onbtn.addEventListener("click", function (e) {
-  // Functions Code Goes here
+const color = document.querySelector(".circle");
+const sectionDiv = document.querySelector(".section_div");
+
+color.addEventListener("mouseover", function (e) {
+  if (color.classList.contains("circle-plus")) {
+    color.classList.remove("circle-plus");
+  } else {
+    color.classList.add("circle-plus");
+  }
+});
+
+color.addEventListener("click", function (e) {
+  if (color.classList.contains("circle-plus2")) {
+    color.classList.remove("circle-plus2");
+    sectionDiv.classList.remove("section_div-2");
+    sectionDiv.classList.add("section_div");
+  } else {
+    color.classList.add("circle-plus2");
+    sectionDiv.classList.add("section_div-2");
+    sectionDiv.classList.remove("section_div");
+  }
+});
+
+const Firstheading = document.querySelector(".first");
+console.log(Firstheading);
+
+Firstheading.addEventListener("mouseout", function (e) {
+  if (Firstheading.classList.contains("red")) {
+    Firstheading.classList.remove("red");
+  } else {
+    Firstheading.classList.add("red");
+  }
 });

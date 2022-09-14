@@ -1,5 +1,6 @@
 <h1><strong>Full-Learning-Path</strong></h1>
 
+[![wakatime](https://wakatime.com/badge/user/23b4b157-68e1-4806-bff0-29d434416678.svg)](https://wakatime.com/@23b4b157-68e1-4806-bff0-29d434416678)
 
 <h2><strong>FullStack-Development Start to Finish</strong></h2>
 
@@ -8,48 +9,48 @@
 
 <h2><strong>Front-End Sections</strong></h2>
 
-  1. **Html**/**Css**
-  2. **Js**
-  3. **Version** **Control**
-      - Git / Github
-  4. React
-      - Basic
-      - Advanced 
-  5. Principles of **UI**/**UX** design
-      - Figma
+1. **Html**/**Css**
+2. **Js**
+3. **Version** **Control**
+   - Git / Github
+4. React
+   - Basic
+   - Advanced
+5. Principles of **UI**/**UX** design
+   - Figma
 
-<strong>      
+<strong>
 
           Three Final Project's | All Completely Different:
               1. Easy
-              2. Medium to High 
+              2. Medium to High
               3. Extreme
+
 </strong>
 <h2><strong>Back-End Section</strong></h2>
 
-  1. Intro to Back-End Development
-  2. **Python**
-  3. Version Control
-  4. **Database**
-      - **MySql**
-      - Ms Sql Server
-  5. **Django**
-  6. **Api's**
-  
+1. Intro to Back-End Development
+2. **Python**
+3. Version Control
+4. **Database**
+   - **MySql**
+   - Ms Sql Server
+5. **Django**
+6. **Api's**
+
   <strong>
 
          Three Final Project's |All Completely Different:
              1. Easy
-             2. Medium to High 
-             3. Extreme   
+             2. Medium to High
+             3. Extreme
+
 </strong>
 
 <h2><strong>Data structure and Algorithm</strong></h2>
 This section is not part of the full stack dev path its from my Dsa course and i just thought it would be interesting to have it in the repo since Dsa kinda matters if you want to be a good dev.
 
-
 <hr>
 <br>
-
 
 <h6>By <a href="https://t.me/Toyxna">Yonatan Afewerk Teshome</a></h6>

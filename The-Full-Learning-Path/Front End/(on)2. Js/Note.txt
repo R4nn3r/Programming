@@ -6,7 +6,6 @@ JS
     for every action. JavaScript is also used in more traditional websites to provide
     various forms of interactivity and cleverness.
 
-
 # Events
 
     Event	            Description
@@ -38,7 +37,7 @@ JS
          }
 
          attach the function to the event by
-         
+
          var.addEventListener("click), functionName;
 
 
@@ -75,10 +74,28 @@ JS
 
     # Event Object 
 
+    var.addEventListener("click" , function(e) {}):
+
+        e -> is the event object 
+
+                Stores data in the event object 
+                to use within the function
+                    Ex.
+                      console.log(e);
+
+
     # Standard vs Arrow 
+        Standard:
+          onbtn.addEventListener("click", function(e){
+                console.log(this);
+            });
 
+        Arrow:
+            onbtn.addEventListener("click", (e) => {
+                console.log(this);
+            });
 
-
+                The whole global window object is logged
 
 # querySelector 
 
