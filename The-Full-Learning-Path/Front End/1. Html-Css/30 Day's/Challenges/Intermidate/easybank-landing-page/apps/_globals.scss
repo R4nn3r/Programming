@@ -37,7 +37,9 @@ body {
   text-rendering: optimizeSpeed;
   padding: 0;
   line-height: 1.5;
-  font-family: var(--ff-primary);
+  font-size: $fs-med;
+  font-family: $ff-primary;
+  color: $crl-neutral-100;
 }
 
 /* A elements that don't have a class get default styles */
@@ -78,13 +80,13 @@ select {
 
 // Utility classes
 .font-weight-bold {
-  font-weight: var(--fw-700);
+  font-weight: $fw-700;
 }
 .font-weight-regular {
-  font-weight: var(--fw-400);
+  font-weight: $fw-400;
 }
 .font-weight-light {
-  font-weight: var(--fw-300);
+  font-weight: $fw-300;
 }
 
 a,
@@ -92,4 +94,60 @@ li {
   list-style: none;
   text-decoration: none;
   color: inherit;
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-fd-row {
+    flex-direction: row;
+  }
+  &-fd-column {
+    flex-direction: column;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-se {
+    justify-content: space-between;
+  }
+
+  &-ac-c {
+    align-items: center;
+  }
+}
+
+// Buttons
+button {
+  font-size: $fs-sm;
+  font-weight: $fw-700;
+  color: $crl-neutral-400;
+  padding: 0.75rem 2.1875rem;
+  background: linear-gradient(45deg, $crl-accent-100, $crl-accent-200);
+  border: none;
+  border-radius: 5em;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+button:hover {
+  opacity: 0.75;
+}
+// Visibility
+.hide-for-mobile {
+  // hide for tablet and mobile devices
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  // hide for desktop browsers
+  @include breakpoint-up(large) {
+    display: none;
+  }
 }

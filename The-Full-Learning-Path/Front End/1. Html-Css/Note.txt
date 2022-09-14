@@ -766,3 +766,68 @@ HTML (Hypertext Markup Language)
         tip:
             use - to edit the blend on the background the backup bg-color 
             background-blend-mode
+
+
+# How to [Special Cases]?
+
+    # Hamburger Menu
+
+        Creating your own Menu icon using 
+            span 
+                (
+                    display: block;
+                    width: 26px;
+                    height: 2px;
+                    background-color: var(--crl-primary);
+                )
+
+    # mixins 
+        Steps: 
+           - Create breakpoints 
+
+                // 640px , 1024px, 1400px
+                $breakpoints-up: (
+                "medium": "40em",
+                "large": "64em",
+                "xlarge": "87.5em",
+                );
+
+                // 639px, 1023px. 1399px
+                $breakpoints-down: (
+                "small": "39.9375em",
+                "medium": "63.9375em",
+                "large": "84.4375em",
+                );
+
+            - Create mixins 
+
+                @mixin breakpoint-up($size) {
+                @media (min-width: map-get($breakpoints-up, $size)) {
+                    @content;
+                }
+                }
+                @mixin breakpoint-down($size) {
+                @media (max-width: map-get($breakpoints-down, $size)) {
+                    @content;
+                }
+                }
+
+            - Create utility classes for the viewport 
+                Ex, for visibility of menus (header styles)
+                    // Visibility
+                    .hide-for-mobile {
+                    // hide for tablet and mobile devices
+                    @include breakpoint-down(medium) {
+                        display: none;
+                    }
+                    }
+
+                    .hide-for-desktop {
+                    // hide for desktop browsers
+                    @include breakpoint-up(large) {
+                        display: none;
+                    }
+                    }
+
+            - Last step use the classes make your life easier :)
+            

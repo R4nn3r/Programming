@@ -1,2 +1,6 @@
-@use "variables";
-@use "globals";
+@import "variables";
+@import "mixins";
+@import "animation";
+
+@import "globals";
+@import "header";

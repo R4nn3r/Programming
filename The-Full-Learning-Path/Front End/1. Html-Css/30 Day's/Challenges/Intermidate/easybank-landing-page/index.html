@@ -16,6 +16,39 @@
     <link rel="stylesheet" href="./apps/style.css" />
   </head>
   <body>
+    <!-- Header -->
+    <header id="header" class="header">
+      <div class="overlay"></div>
+      <nav class="flex flex-jc-se flex-ac-c">
+        <a href="/" class="header__logo">
+          <img src="./images/logo.svg" alt="Easybank" />
+        </a>
+
+        <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+
+        <div class="header__links hide-for-mobile">
+          <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a
+          ><a href="#">Blog</a><a href="#">Careers</a>
+        </div>
+
+        <button class="header header__cta hide-for-mobile" type="button">
+          Request Invite
+        </button>
+      </nav>
+
+      <div class="header__menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+      </div>
+    </header>
+
     <script src="./apps/main.js"></script>
   </body>
 </html>
