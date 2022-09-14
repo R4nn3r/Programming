@@ -287,6 +287,7 @@ button:hover {
   opacity: 1;
 }
 .overlay {
+  visibility: hidden;
   position: fixed;
   top: 3.75rem;
   left: 0;
