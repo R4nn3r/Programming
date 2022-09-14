@@ -603,6 +603,9 @@ HTML (Hypertext Markup Language)
                             padding: 0;
                             font: inherit;  -> (makes you style every element from the class)
                         }
+                tip:
+                    add
+                    scroll-behavior: smooth;
 
         4:  Create custom set ups for the variable on :root sot it gets easier to
             use for responsiveness and it does look better 
@@ -620,6 +623,9 @@ HTML (Hypertext Markup Language)
                         - paste the sprit on it 
                           and use that to import svg on the site 
                           its better then just using and img 
+            - For sticky navbar's 
+                scroll-padding-top: 2em;
+                    So that the content doesn't slide under the navbar
 
 # Position's 
         # Relative (recommended for the parent element)
@@ -651,6 +657,11 @@ HTML (Hypertext Markup Language)
 
     - The ::after Pseudo-element
                     Insert's some content after the content of an element.
+
+
+    - :target 
+
+    - :only-child , :first-child , :last-child, only-of-type
 
 # !Important 
 
@@ -718,6 +729,4 @@ HTML (Hypertext Markup Language)
 
     - Creating Layouts
         
-
-
     - Content vs Layout 
