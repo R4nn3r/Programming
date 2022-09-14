@@ -82,6 +82,7 @@ body {
 
 .card-container .card {
   border-radius: 0.5em;
+  width: 320px;
   background-color: white;
 }
 .card-container .card hr {
@@ -106,6 +107,14 @@ body {
   padding: 1em;
   text-align: center;
 }
+.card-container .card .top img {
+  border-radius: 50%;
+  padding: 1px;
+  border: 1px solid white;
+  position: relative;
+  top: -4em;
+  margin-inline: auto;
+}
 .card-container .card .top .user {
   display: flex;
   gap: 1em;
@@ -122,6 +131,7 @@ body {
   display: flex;
   gap: 2em;
   padding: 1em 2em;
+  justify-content: center;
 }
 .card-container .card .bottom ul .type {
   font-size: 13px;

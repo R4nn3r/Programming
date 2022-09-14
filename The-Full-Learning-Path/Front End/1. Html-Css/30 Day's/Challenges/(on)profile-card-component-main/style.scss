@@ -84,6 +84,8 @@ body {
 .card-container {
   .card {
     border-radius: 0.5em;
+    width: 320px;
+
     background-color: white;
 
     hr {
@@ -109,6 +111,15 @@ body {
       padding: 1em;
       text-align: center;
 
+      img {
+        border-radius: 50%;
+        padding: 1px;
+        border: 1px solid white;
+        position: relative;
+        top: -4em;
+        margin-inline: auto;
+      }
+
       .user {
         display: flex;
         gap: 1em;
@@ -129,6 +140,7 @@ body {
         display: flex;
         gap: 2em;
         padding: 1em 2em;
+        justify-content: center;
 
         .type {
           font-size: 13px;
