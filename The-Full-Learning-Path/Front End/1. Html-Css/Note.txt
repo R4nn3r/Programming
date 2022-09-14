@@ -391,7 +391,7 @@ HTML (Hypertext Markup Language)
                         
                     flex: 1 0 10px; 
 
-                    will set the item to 
+                    will set the item(children) to 
                         flex-grow: 1;, 
                         flex-shrink: 0;,  
                         flex-basis: 10px;.
@@ -399,6 +399,14 @@ HTML (Hypertext Markup Language)
             - align-self
                 accepts the same values as align-items and will override any value set by the 
                 align-items property.
+
+            - min and max -content 
+
+                width: max-content;
+                    Try's to get to the smallest size without needing to wrap
+
+                width: min-content;
+                    Try's to get to the width of the longest single word
 
 
 
@@ -613,7 +621,6 @@ HTML (Hypertext Markup Language)
                           and use that to import svg on the site 
                           its better then just using and img 
 
-
 # Position's 
         # Relative (recommended for the parent element)
             position: relative;
@@ -626,6 +633,9 @@ HTML (Hypertext Markup Language)
             left: 0%;
             right: 0%;
 
+        # z-index 
+            You can use the z-index to layer elements 
+            but you need to have positions on the elements
 
 # pseudo elements and class's
     - ::first-line Pseudo-element
@@ -641,3 +651,73 @@ HTML (Hypertext Markup Language)
 
     - The ::after Pseudo-element
                     Insert's some content after the content of an element.
+
+# !Important 
+
+    - Inheritance 
+        Core Concept:
+            When you set a property for a parent mostly the children of that parent will get to
+            inherit those properties.
+           
+           # font-* properties are inherited
+
+            properties such as height, width, border, margin, padding, etc. are not inherited.
+           
+                Note: 
+                Form elements don;t follow the inheritance rule by default.
+                "inherit" keyword allows authors to explicitly specify inheritance. 
+                It works on both inherited and non-inherited properties.
+
+    - The Cascade 
+            The cascading algorithm determines how to find the value to apply
+            for each property for each document element.
+
+            Thus steps followed by the algo,
+                - Relevance
+                - Origin and importance
+                - Specificity
+                - Order of appearance 
+            
+
+            Note: 
+                Transitions and animations
+                    Property values set by animation @keyframes are more important than all 
+                    normal styles (those with no !important set).
+                    Property values being set in a transition take precedence over all other
+                    values set, even those marked with !important.
+
+    - Dealing with the box model
+
+            Tip:
+                *,
+                *::before,
+                ::after {
+                    box-sizing: border-box;
+                }
+
+            This means the padding and margin will be consider with the properties
+            that set your height and width 
+
+    - Specificity
+            If there are two or more CSS rules that point to the same element, the 
+            selector with the highest specificity value will "win", and its style 
+            declaration will be applied to that HTML element.
+
+
+        # There are four categories which define the specificity level of a selector:
+
+            Inline styles - Example: <h1 style="color: pink;">
+            IDs - Example: #navbar
+            Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+            Elements and pseudo-elements - Example: h1, :before
+
+    - Naming stuff
+
+            Make sure the name's are 
+                - Meaningful names
+
+    - Creating Layouts
+        
+
+
+    - Content vs Layout 

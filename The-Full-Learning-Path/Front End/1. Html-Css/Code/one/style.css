@@ -1,154 +1,47 @@
 @import url("https://fonts.googleapis.com/css?family=Unica+One|Vollkorn");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@700;800;900&display=swap");
 body {
-  font-size: 1rem;
-  text-align: center;
+  margin: 0;
+  padding: 0;
   font-family: "Vollkorn";
   line-height: 1.4;
   color: rgba(0, 0, 0, 0.7);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Unica One";
-  text-transform: uppercase;
-  line-height: 0.9;
-  color: #c31;
-}
-
-h2 {
-  margin-top: 1.2em;
-  margin-bottom: 0;
-}
-
-p {
-  margin-top: 0.25em;
-}
-
-a {
-  color: #c31;
-}
-
-.intro {
-  font-size: 5rem;
-}
-
-blockquote {
-  font-size: 2rem;
   color: black;
 }
 
-blockquote::before {
-  content: open-quote;
-}
-
-blockquote::after {
-  content: close-quote;
-}
-
-a[data-tool-tip] {
-  position: relative;
-}
-
-a[data-tool-tip]::after {
-  content: attr(data-tool-tip);
-  display: block;
-  position: absolute;
-  background-color: black;
-  color: white;
-  font-size: 0.85em;
-  padding: 0.5em 1em;
-  border-radius: 0.5em;
-  white-space: nowrap;
-  bottom: 0%;
-  left: 0%;
-  transform: scale(0);
-  transition: transform ease-out 150ms, bottom ease-out 150ms;
-}
-
-a[data-tool-tip]:hover::after {
-  transform: scale(1);
-  bottom: 100%;
-}
-
-.decorations {
-  padding: 7em;
-}
-
-.section-with-deco::before {
-  font-family: "Font Awesome 5 Free";
+.FlexBox {
+  padding: 0.5em;
+  font-family: "Lexend Deca", sans-serif;
+  color: #c31;
   font-weight: 900;
-  content: "\f0e7";
-  display: block;
-  margin-bottom: 5px;
+  text-shadow: 3px 3px 1px black;
+  font-size: 50px;
 }
 
-a[href$=".pdf"]::after {
-  font-family: "Font Awesome 5 Free";
-  content: " \f1c1";
+nav {
+  border: 1px dashed limegreen;
 }
 
-a[href^=http]::after {
-  font-family: "Font Awesome 5 Free";
-  content: " \f35d";
-  font-weight: 900;
-  font-size: 0.8em;
+ul {
+  border: 1px dashed orange;
 }
 
-.counters {
-  background: lightgray;
-  text-align: left;
-  padding: 5em 8em;
-  margin-top: 7em;
-  counter-reset: counter-name;
-}
-
-.section {
-  position: relative;
-}
-
-.section::before {
-  counter-increment: counter-name;
-  content: counter(counter-name);
-  position: absolute;
-  left: -3em;
-  border: 3px solid black;
-  background: white;
-  color: black;
-  border-radius: 50%;
-  top: -0.5em;
-  width: 2em;
-  height: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.counters {
-  counter-reset: order-list;
-}
-
-.counters ol {
+li {
   list-style: none;
-  position: relative;
+  border: 1px dashed red;
+  text-transform: uppercase;
+  font-family: "Unica One";
+  font-weight: 600;
 }
 
-.counters li::before {
-  counter-increment: order-list;
-  content: counter(order-list);
-  font-size: 0.8em;
-  color: #c31;
-  position: absolute;
-  padding: 2.5px;
-  left: -1px;
-  width: 1em;
-  height: 1em;
-  background: white;
-  border: 1px dashed #c31;
+.nav-links {
+  padding: 1em;
+  margin: 0.5em;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.links {
+  flex-grow: 1;
 }/*# sourceMappingURL=style.css.map */

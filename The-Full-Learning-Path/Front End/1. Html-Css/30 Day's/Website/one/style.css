@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css?family=Unica+One|Vollkorn");
+body {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Vollkorn";
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Unica One";
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: #c31;
+}
+
+h2 {
+  margin-top: 1.2em;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0.25em;
+}
+
+a {
+  color: #c31;
+}
+
+.intro {
+  font-size: 5rem;
+}
+
+blockquote {
+  font-size: 2rem;
+  color: black;
+}
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+}
+
+a[data-tool-tip] {
+  position: relative;
+}
+
+a[data-tool-tip]::after {
+  content: attr(data-tool-tip);
+  display: block;
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  white-space: nowrap;
+  bottom: 0%;
+  left: -4em;
+  transform: scale(0);
+  transition: transform ease-out 150ms, bottom ease-out 150ms;
+}
+
+a[data-tool-tip]:hover::after {
+  transform: scale(1);
+  bottom: 100%;
+}
+
+.decorations {
+  padding: 7em;
+}
+
+.section-with-deco::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0e7";
+  display: block;
+  margin-bottom: 5px;
+}
+
+a[href$=".pdf"]::after {
+  font-family: "Font Awesome 5 Free";
+  content: " \f1c1";
+}
+
+a[href^=http]::after {
+  font-family: "Font Awesome 5 Free";
+  content: " \f35d";
+  font-weight: 900;
+  font-size: 0.8em;
+}
+
+.counters {
+  background: lightgray;
+  text-align: left;
+  padding: 5em 8em;
+  margin-top: 7em;
+  counter-reset: counter-name;
+}
+
+.section {
+  position: relative;
+}
+
+.section::before {
+  counter-increment: counter-name;
+  content: counter(counter-name);
+  position: absolute;
+  left: -3em;
+  border: 3px solid black;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  top: -0.5em;
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.counters {
+  counter-reset: order-list;
+}
+
+.counters ol {
+  list-style: none;
+  position: relative;
+}
+
+.counters li::before {
+  counter-increment: order-list;
+  content: counter(order-list);
+  font-size: 0.8em;
+  color: #c31;
+  position: absolute;
+  padding: 2.5px;
+  left: -1px;
+  width: 1em;
+  height: 1em;
+  background: white;
+  border: 1px dashed #c31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  blockquote {
+    font-size: 1.5rem;
+    margin-bottom: 6em;
+    color: black;
+  }
+}/*# sourceMappingURL=style.css.map */
