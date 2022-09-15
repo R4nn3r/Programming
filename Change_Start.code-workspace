@@ -8,10 +8,13 @@
     },
     {
       "path": "../Impractical Python Projects"
+    },
+    {
+      "path": "../CS50 Web"
     }
   ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "Programming",
+    "liveServer.settings.multiRootWorkspaceName": "CS50 Web",
     "liveServer.settings.port": 5501
   }
 }
