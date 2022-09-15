@@ -13,6 +13,7 @@
     />
 
     <title>Frontend Mentor | Social proof section</title>
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -26,30 +27,77 @@
     </style>
   </head>
   <body>
-    10,000+ of our users love our products.
+    <section class="section">
+      <div class="flex-grid-one">
+        <div class="flex">
+          <h1 class="flex-title">10,000+ of our users love our products.</h1>
+          <p class="flex-description">
+            We only provide great products combined with excellent customer
+            service. See what our satisfied customers are saying about our
+            services.
+          </p>
+        </div>
+        <div class="flex-stars">
+          <div class="stars">
+            <img src="" alt="" class="stars-img" />
+            <p class="stars-con">Rated 5 Stars in Reviews</p>
+          </div>
+          <div class="stars">
+            <img src="" alt="" class="stars-img" />
+            <p class="stars-con">Rated 5 Stars in Guru</p>
+          </div>
+          <div class="stars">
+            <img src="" alt="" class="stars-img" />
+            <p class="stars-con">Rated 5 Stars in BestTech</p>
+          </div>
+        </div>
+      </div>
 
-    We only provide great products combined with excellent customer service.
-    See what our satisfied customers are saying about our services.
-    
-    Rated 5 Stars in Reviews
-    Rated 5 Stars in Report Guru
-    Rated 5 Stars in BestTech
-    
-    Colton Smith 
-    Verified Buyer
-    "We needed the same printed design as the one we had ordered a week prior.
-    Not only did they find the original order, but we also received it in time.
-    Excellent!"
-    
-    Irene Roberts 
-    Verified Buyer
-    "Customer service is always excellent and very quick turn around. Completely
-    delighted with the simplicity of the purchase and the speed of delivery."
-    
-    Anne Wallace 
-    Verified Buyer
-    "Put an order with this company and can only praise them for the very high
-    standard. Will definitely use them again and recommend them to everyone!"
+      <div class="flex-grid-two">
+        <div class="flex-card">
+          <div class="user-info">
+            <img src="./images/image-colton.jpg" alt="" class="user-img" />
+            <div class="user-details">
+              <p class="name">Colton Smith</p>
+              <p class="stat">Verified Buyer</p>
+            </div>
+          </div>
+          <p class="card-content">
+            "We needed the same printed design as the one we had ordered a week
+            prior. Not only did they find the original order, but we also
+            received it in time. Excellent!"
+          </p>
+        </div>
+        <div class="flex-card">
+          <div class="user-info">
+            <img src="./images/image-irene.jpg" alt="" class="user-img" />
+            <div class="user-details">
+              <p class="name">Irene Roberts</p>
+              <p class="stat">Verified Buyer</p>
+            </div>
+          </div>
+          <p class="card-content">
+            "Customer service is always excellent and very quick turn around.
+            Completely delighted with the simplicity of the purchase and the
+            speed of delivery."
+          </p>
+        </div>
+        <div class="flex-card">
+          <div class="user-info">
+            <img src="./images/image-anne.jpg" alt="" class="user-img" />
+            <div class="user-details">
+              <p class="name">Anne Wallace</p>
+              <p class="stat">Verified Buyer</p>
+            </div>
+          </div>
+          <p class="card-content">
+            "Put an order with this company and can only praise them for the
+            very high standard. Will definitely use them again and recommend
+            them to everyone!"
+          </p>
+        </div>
+      </div>
+    </section>
 
     <div class="attribution">
       Challenge by
