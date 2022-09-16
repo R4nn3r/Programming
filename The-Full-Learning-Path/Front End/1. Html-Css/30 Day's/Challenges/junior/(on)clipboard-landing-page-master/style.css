@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap");
+:root {
+  --crl-primary-100: hsl(171, 66%, 44%);
+  --crl-primary-200: hsl(233, 100%, 69%);
+  --crl-neutral-100: hsl(210, 10%, 33%);
+  --crl-neutral-200: hsl(202, 9%, 54%);
+  --fs-primary: 18px;
+  --ff-primary: "Bai Jamjuree", sans-serif;
+  --fw-primary-400: 400;
+  --fw-primary-600: 600;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+a,
+li,
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: var(--ff-primary);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-top {
+  margin-top: 7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+  width: 750px;
+  text-align: center;
+  gap: 1em;
+}
+.section-top img {
+  width: 150px;
+  margin-bottom: 2em;
+  align-self: center;
+}
+.section-top .section-top-half .button-section {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+  padding: 0.5em;
+}
+.section-top .section-top-half .button-section .btn-ios,
+.section-top .section-top-half .button-section .btn-mac {
+  font-family: var(--ff-primary);
+  padding: 1em 2em;
+  border-radius: 3em;
+  font-size: 16px;
+  color: white;
+  border: none;
+  font-weight: var(--fw-primary-600);
+  cursor: pointer;
+  box-shadow: 2.75em 2.75em 3em -3em red;
+}
+.section-top .section-top-half .button-section .btn-ios:hover,
+.section-top .section-top-half .button-section .btn-mac:hover {
+  opacity: 0.75;
+}
+.section-top .section-top-half .button-section .btn-ios {
+  background-color: var(--crl-primary-100);
+  box-shadow: 0.5em 1em 2em -0.5em rgba(90, 90, 90, 0.69);
+}
+.section-top .section-top-half .button-section .btn-mac {
+  background-color: var(--crl-primary-200);
+  box-shadow: 0.5em 1em 2em -0.5em rgba(90, 90, 90, 0.69);
+}
+
+.top-title {
+  font-size: 44px;
+  color: var(--crl-neutral-100);
+}
+
+.description {
+  padding: 0.5em;
+  font-size: 20px;
+  color: var(--crl-neutral-200);
+  margin-bottom: 1em;
+}
+
+.section-two {
+  margin-top: 12em;
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+  width: 750px;
+  text-align: center;
+  gap: 0.2em;
+}
+.section-two h1 {
+  font-size: 34px;
+}
+.section-two p {
+  font-size: 15;
+}
+
+.section-three {
+  margin: 0;
+  padding: 0;
+  padding: 1em;
+}
+.section-three .three-grid {
+  padding: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10em;
+}
+.section-three .three-grid .points {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 250px;
+  line-height: 1.5;
+}
+.section-three .three-grid .points h1 {
+  color: var(--crl-neutral-100);
+}
+.section-three .three-grid .points p {
+  color: var(--crl-neutral-200);
+}
+
+.four {
+  margin-top: 1em;
+}/*# sourceMappingURL=style.css.map */
