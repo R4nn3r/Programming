@@ -6,6 +6,7 @@
 
   --crl-neutral-100: hsl(210, 10%, 33%);
   --crl-neutral-200: hsl(202, 9%, 54%);
+  --crl-neutral-300: hsl(0, 0%, 89%);
 
   --fs-primary: 18px;
 
@@ -57,14 +58,6 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture,
-svg {
-  max-width: 100%;
-  display: block;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -211,4 +204,111 @@ body {
 
 .four {
   margin-top: 1em;
+}
+
+.small {
+  margin-bottom: 0;
+}
+
+.section-six {
+  padding: 0 5em;
+
+  .flex-cards {
+    display: flex;
+    gap: 1em;
+    padding: 2em;
+
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 400px;
+      height: 200px;
+
+      .img-card {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        color: var(--crl-neutral-100);
+      }
+      p {
+        color: var(--crl-neutral-200);
+      }
+    }
+  }
+}
+.small-box {
+  .flex-cards {
+    display: flex;
+    gap: 1em;
+    margin: 6em 0;
+
+    .card {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 250px;
+      gap: 1em;
+
+      .img-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        color: var(--crl-neutral-100);
+      }
+      p {
+        color: var(--crl-neutral-200);
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 10em;
+  background-color: var(--crl-neutral-300);
+  height: 150px;
+
+  .footer-section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: space-evenly;
+    padding: 3em;
+
+    .footer-logo {
+      width: 70px;
+      height: 70px;
+    }
+
+    .footer-nav ul {
+      display: flex;
+      gap: 2em;
+      width: 350px;
+      flex-wrap: wrap;
+      cursor: pointer;
+
+      li:hover {
+        color: var(--crl-primary-100);
+      }
+    }
+
+    .social-links ul {
+      display: flex;
+      gap: 2em;
+    }
+  }
 }

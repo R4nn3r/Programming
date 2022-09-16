@@ -4,6 +4,7 @@
   --crl-primary-200: hsl(233, 100%, 69%);
   --crl-neutral-100: hsl(210, 10%, 33%);
   --crl-neutral-200: hsl(202, 9%, 54%);
+  --crl-neutral-300: hsl(0, 0%, 89%);
   --fs-primary: 18px;
   --ff-primary: "Bai Jamjuree", sans-serif;
   --fw-primary-400: 400;
@@ -51,14 +52,6 @@ body {
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture,
-svg {
-  max-width: 100%;
-  display: block;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -194,4 +187,98 @@ body {
 
 .four {
   margin-top: 1em;
+}
+
+.small {
+  margin-bottom: 0;
+}
+
+.section-six {
+  padding: 0 5em;
+}
+.section-six .flex-cards {
+  display: flex;
+  gap: 1em;
+  padding: 2em;
+}
+.section-six .flex-cards .card {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+}
+.section-six .flex-cards .card .img-card {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-six .flex-cards .card h1 {
+  color: var(--crl-neutral-100);
+}
+.section-six .flex-cards .card p {
+  color: var(--crl-neutral-200);
+}
+
+.small-box .flex-cards {
+  display: flex;
+  gap: 1em;
+  margin: 6em 0;
+}
+.small-box .flex-cards .card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  gap: 1em;
+}
+.small-box .flex-cards .card .img-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.small-box .flex-cards .card h1 {
+  color: var(--crl-neutral-100);
+}
+.small-box .flex-cards .card p {
+  color: var(--crl-neutral-200);
+}
+
+.footer {
+  margin-top: 10em;
+  background-color: var(--crl-neutral-300);
+  height: 150px;
+}
+.footer .footer-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: space-evenly;
+  padding: 3em;
+}
+.footer .footer-section .footer-logo {
+  width: 70px;
+  height: 70px;
+}
+.footer .footer-section .footer-nav ul {
+  display: flex;
+  gap: 2em;
+  width: 350px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.footer .footer-section .footer-nav ul li:hover {
+  color: var(--crl-primary-100);
+}
+.footer .footer-section .social-links ul {
+  display: flex;
+  gap: 2em;
 }/*# sourceMappingURL=style.css.map */
