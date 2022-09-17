@@ -233,7 +233,7 @@ h6 {
     padding: 20px;
 
     .top-title {
-      font-size: 20px;
+      font-size: 25px;
       color: var(--crl-neutral-100);
     }
     .description {
@@ -317,7 +317,7 @@ h6 {
 }
 
 .section-five {
-  padding: 20px;
+  padding: 5px;
 
   .img-tab {
     display: flex;
@@ -491,7 +491,7 @@ h6 {
     justify-content: center;
     button {
       min-width: 200px;
-      padding: 1em 3em;
+      padding: 1em;
       border-radius: 5em;
       border: none;
       outline: 1px solid white;
@@ -538,7 +538,7 @@ h6 {
     }
     .button-section {
       display: flex;
-      padding: 1em 2em;
+      padding: 1em;
       gap: 0.75em;
       flex-direction: column;
     }
@@ -598,4 +598,14 @@ h6 {
       color: var(--crl-primary-100);
     }
   }
+}
+.btn-ios:hover {
+  opacity: 0.85;
+}
+.btn-mac:hover {
+  opacity: 0.85;
+}
+
+button {
+  cursor: pointer;
 }
