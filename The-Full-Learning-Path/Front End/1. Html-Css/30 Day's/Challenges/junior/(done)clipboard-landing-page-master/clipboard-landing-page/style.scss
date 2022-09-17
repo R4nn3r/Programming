@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&display=swap");
+
+:root {
+  --crl-primary-100: hsl(171, 66%, 44%);
+  --crl-bottom-101: hsl(171, 64%, 36%);
+
+  --crl-primary-200: hsl(233, 100%, 69%);
+  --crl-bottom-201: hsl(233, 54%, 53%);
+
+  --crl-neutral-100: hsl(210, 10%, 33%);
+  --crl-neutral-200: hsl(202, 9%, 54%);
+  --crl-neutral-300: hsla(0, 0%, 88%, 0.629);
+
+  --fs-primary: 18px;
+
+  --ff-primary: "Bai Jamjuree", sans-serif;
+
+  --fw-primary-400: 400;
+  --fw-primary-600: 600;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+//  utility classes
+.title-crl {
+  color: var(--crl-neutral-100);
+}
+
+.description-crl {
+  color: var(--crl-neutral-200);
+}
+.link-style {
+  color: var(--crl-neutral-100);
+}
+.link-style:is(:hover, :focus) {
+  color: var(--crl-primary-100);
+}
+
+.title-weight {
+  font-weight: var(--fw-primary-600);
+}
+.description-weight {
+  font-weight: var(--fw-primary-400);
+}
+@media (max-width: 30em) {
+  .flex-column {
+    flex-direction: column !important;
+  }
+}
+.button {
+  color: white;
+  padding: 1em 3em;
+  font-size: 16px;
+  font-weight: var(--fw-primary-600);
+  border-radius: 10em;
+  border: none;
+  cursor: pointer;
+  min-width: 240px;
+  margin-top: 0.5em;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+// General styles
+body {
+  min-height: 3808px;
+  display: flex;
+  justify-content: center;
+  font-family: var(--ff-primary);
+  background-image: url(images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  border-bottom: 151px solid rgb(245, 245, 245);
+}
+main {
+  max-width: 1440px;
+  width: 100%;
+  height: fit-content;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+// Header styles
+.header {
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .header-info {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    line-height: 1;
+    .header-title-top {
+      margin-bottom: 0.5em;
+      font-size: 40px;
+    }
+    .header-description-top {
+      margin-bottom: 1em;
+    }
+    .header-download-buttons {
+      display: flex;
+      padding: 0 1em;
+      flex-direction: row;
+      gap: 0.5em;
+      justify-content: center;
+      align-items: center;
+
+      .header-btn-ios {
+        background-color: var(--crl-primary-100);
+        border-bottom: 5px solid var(--crl-bottom-101);
+      }
+      .header-btn-max {
+        border-bottom: 5px solid var(--crl-bottom-201);
+        background-color: var(--crl-primary-200);
+      }
+    }
+  }
+
+  .header-des-section {
+    max-width: 600px;
+    padding: 1.5em;
+    margin-top: 10em;
+  }
+}
+
+@media (max-width: 45em) {
+  .header .header-info {
+    padding: 0 3em;
+    gap: 1em;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .header .header-info .header-download-buttons {
+    padding: 0;
+  }
+
+  .header .header-des-section {
+    max-width: 600px;
+    padding: 1.5em 2em;
+    margin-top: 8em;
+  }
+}
