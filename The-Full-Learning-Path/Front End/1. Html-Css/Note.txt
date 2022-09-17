@@ -730,3 +730,14 @@ HTML (Hypertext Markup Language)
     - Creating Layouts
         
     - Content vs Layout 
+
+# Background Images 
+    
+    # Steps 
+        create a parent and set the background img in css of the container 
+        and use flex to position the child
+
+    
+        tip:
+            use - to edit the blend on the background the backup bg-color 
+            background-blend-mode

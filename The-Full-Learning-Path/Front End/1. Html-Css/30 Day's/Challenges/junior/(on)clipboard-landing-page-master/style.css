@@ -81,204 +81,102 @@ body {
   align-items: center;
 }
 
-.section-top {
-  margin-top: 7em;
+.header {
+  background-image: url(./images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+  outline: 1px dashed red;
+  text-align: center;
+}
+.header .section-top {
+  outline: 1px dashed lime;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.header .section-top img {
+  width: 130px;
+}
+.header .section-top-half {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.header .section-top-half .top-title {
+  font-size: 40px;
+  color: var(--crl-neutral-100);
+}
+.header .section-top-half .description {
+  color: var(--crl-neutral-200);
+  max-width: 500px;
+  margin-inline: auto;
+  font-size: var(--fs-primary);
+}
+.header .button-section {
+  display: flex;
   padding: 1em;
-  width: 750px;
-  text-align: center;
-  gap: 1em;
-}
-.section-top img {
-  width: 150px;
-  margin-bottom: 2em;
-  align-self: center;
-}
-.section-top .section-top-half .button-section {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  justify-content: center;
-  padding: 0.5em;
-}
-.section-top .section-top-half .button-section .btn-ios,
-.section-top .section-top-half .button-section .btn-mac {
-  font-family: var(--ff-primary);
-  padding: 1em 2em;
-  border-radius: 3em;
-  font-size: 16px;
-  color: white;
-  border: none;
-  font-weight: var(--fw-primary-600);
-  cursor: pointer;
-  box-shadow: 2.75em 2.75em 3em -3em red;
-}
-.section-top .section-top-half .button-section .btn-ios:hover,
-.section-top .section-top-half .button-section .btn-mac:hover {
-  opacity: 0.75;
-}
-.section-top .section-top-half .button-section .btn-ios {
-  background-color: var(--crl-primary-100);
-  box-shadow: 0.5em 1em 2em -0.5em rgba(90, 90, 90, 0.69);
-}
-.section-top .section-top-half .button-section .btn-mac {
-  background-color: var(--crl-primary-200);
-  box-shadow: 0.5em 1em 2em -0.5em rgba(90, 90, 90, 0.69);
-}
-
-.top-title {
-  font-size: 44px;
-  color: var(--crl-neutral-100);
-}
-
-.description {
-  padding: 0.5em;
-  font-size: 20px;
-  color: var(--crl-neutral-200);
-  margin-bottom: 1em;
-}
-
-.section-two {
-  margin-top: 12em;
-  margin-bottom: 4em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  padding: 1em;
-  width: 750px;
-  text-align: center;
-  gap: 0.2em;
-}
-.section-two h1 {
-  font-size: 34px;
-}
-.section-two p {
-  font-size: 15;
-}
-
-.section-three {
-  margin: 0;
-  padding: 0;
-  padding: 1em;
-}
-.section-three .three-grid {
-  padding: 3em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10em;
-}
-.section-three .three-grid .points {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  width: 250px;
-  line-height: 1.5;
-}
-.section-three .three-grid .points h1 {
-  color: var(--crl-neutral-100);
-}
-.section-three .three-grid .points p {
-  color: var(--crl-neutral-200);
-}
-
-.four {
-  margin-top: 1em;
-}
-
-.small {
-  margin-bottom: 0;
-}
-
-.section-six {
-  padding: 0 5em;
-}
-.section-six .flex-cards {
-  display: flex;
-  gap: 1em;
-  padding: 2em;
-}
-.section-six .flex-cards .card {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 400px;
-  height: 200px;
-}
-.section-six .flex-cards .card .img-card {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section-six .flex-cards .card h1 {
-  color: var(--crl-neutral-100);
-}
-.section-six .flex-cards .card p {
-  color: var(--crl-neutral-200);
-}
-
-.small-box .flex-cards {
-  display: flex;
-  gap: 1em;
-  margin: 6em 0;
-}
-.small-box .flex-cards .card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 250px;
-  gap: 1em;
-}
-.small-box .flex-cards .card .img-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.small-box .flex-cards .card h1 {
-  color: var(--crl-neutral-100);
-}
-.small-box .flex-cards .card p {
-  color: var(--crl-neutral-200);
-}
-
-.footer {
-  margin-top: 10em;
-  background-color: var(--crl-neutral-300);
-  height: 150px;
-}
-.footer .footer-section {
-  display: flex;
-  align-items: center;
+  gap: 0.75em;
   flex-direction: row;
-  gap: 2em;
-  justify-content: space-evenly;
-  padding: 3em;
+  align-items: center;
+  justify-content: center;
 }
-.footer .footer-section .footer-logo {
-  width: 70px;
-  height: 70px;
+.header .button-section button {
+  min-width: 200px;
+  padding: 1em 3em;
+  border-radius: 5em;
+  border: none;
+  outline: 1px solid white;
+  color: white;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-primary-600);
 }
-.footer .footer-section .footer-nav ul {
-  display: flex;
-  gap: 2em;
-  width: 350px;
-  flex-wrap: wrap;
-  cursor: pointer;
+.header .button-section .btn-ios {
+  background-color: var(--crl-primary-100);
 }
-.footer .footer-section .footer-nav ul li:hover {
-  color: var(--crl-primary-100);
+.header .button-section .btn-mac {
+  background-color: var(--crl-primary-200);
 }
-.footer .footer-section .social-links ul {
-  display: flex;
-  gap: 2em;
+
+@media (max-width: 30em) {
+  .header {
+    background-image: url(./images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+  }
+  .header .section-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  .header .section-top img {
+    width: 120px;
+  }
+  .header .section-top-half {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .header .section-top-half .top-title {
+    font-size: 28px;
+    color: var(--crl-neutral-100);
+  }
+  .header .section-top-half .description {
+    color: var(--crl-neutral-200);
+  }
+  .header .button-section {
+    display: flex;
+    padding: 1em 2em;
+    gap: 0.75em;
+    flex-direction: column;
+  }
+  .header button {
+    padding: 1em;
+    border-radius: 5em;
+  }
 }/*# sourceMappingURL=style.css.map */
