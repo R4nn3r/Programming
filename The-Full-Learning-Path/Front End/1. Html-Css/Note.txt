@@ -627,6 +627,33 @@ HTML (Hypertext Markup Language)
                 scroll-padding-top: 2em;
                     So that the content doesn't slide under the navbar
 
+
+        <html lang="en">
+            <head>
+                <title>Hello</title>
+            </head>
+            <body>
+                <header>This is the header</header>
+                <nav>This is the nav</nav>
+                <main>This is the main</main>
+                <footer>This is the footer</footer>
+            </body>
+        </html>
+
+        <html lang="en">
+        <head>
+                <title>Hello</title>
+            </head>
+            <body>
+                <div role="banner">This is the header</div>
+                <div role="navigation">This is the nav</div>
+                <div role="main">This is the main</div>
+                <div role="contentinfo">This is the footer</div>
+            </body>
+        </html>
+
+        
+
 # Position's 
         # Relative (recommended for the parent element)
             position: relative;
