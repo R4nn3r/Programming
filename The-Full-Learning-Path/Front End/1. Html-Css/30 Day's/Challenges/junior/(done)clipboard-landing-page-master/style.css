@@ -516,9 +516,6 @@ h6 {
   flex-wrap: wrap;
   padding: 1em;
 }
-.footer .footer-nav ul li:hover {
-  color: var(--crl-primary-100);
-}
 
 @media (max-width: 40em) {
   .footer {
@@ -536,9 +533,6 @@ h6 {
     gap: 1em;
     flex-wrap: wrap;
   }
-  .footer .footer-nav ul li:hover {
-    color: var(--crl-primary-100);
-  }
 }
 .btn-ios:hover {
   opacity: 0.85;
@@ -550,4 +544,8 @@ h6 {
 
 button {
   cursor: pointer;
+}
+
+.footer-nav ul li:hover {
+  color: var(--crl-primary-100);
 }/*# sourceMappingURL=style.css.map */
