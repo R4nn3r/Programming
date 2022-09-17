@@ -81,6 +81,15 @@ body {
   font-family: var(--ff-primary);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--crl-neutral-100);
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -93,11 +102,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px;
-  outline: 1px dashed red;
   text-align: center;
 
   .section-top {
-    outline: 1px dashed lime;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,6 +198,109 @@ body {
     button {
       padding: 1em;
       border-radius: 5em;
+    }
+  }
+}
+
+.section-two {
+  margin-top: 8em;
+  padding: 40px;
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .top-title {
+    font-size: 30px;
+    color: var(--crl-neutral-100);
+  }
+  .description {
+    color: var(--crl-neutral-200);
+    text-align: center;
+    line-height: 1.5;
+
+    max-width: 700px;
+    padding: 1em;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 30em) {
+  .section-two {
+    .top-title {
+      font-size: 20px;
+      color: var(--crl-neutral-100);
+    }
+    .description {
+      color: var(--crl-neutral-200);
+      text-align: center;
+
+      font-size: 14px;
+    }
+  }
+}
+
+.section-three {
+  padding: 40px;
+  text-align: center;
+
+  .three-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    .img-desktop {
+      img {
+        width: 100%;
+      }
+    }
+
+    .points {
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      p {
+        margin-top: 1em;
+        color: var(--crl-neutral-200);
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 50em) {
+  .section-three {
+    padding: 40px;
+
+    .three-grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5em;
+
+      .img-desktop {
+        img {
+        }
+      }
+
+      .points {
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        p {
+          margin-top: 1em;
+          color: var(--crl-neutral-200);
+          max-width: 300px;
+        }
+      }
     }
   }
 }
