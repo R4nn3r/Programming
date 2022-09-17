@@ -147,6 +147,8 @@ main {
   padding-top: 6rem;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
   flex-wrap: wrap;
 }
 
@@ -195,6 +197,7 @@ main {
     max-width: 600px;
     padding: 1.5em;
     margin-top: 10em;
+    margin-bottom: 4em;
   }
 }
 
@@ -216,5 +219,37 @@ main {
     max-width: 600px;
     padding: 1.5em 2em;
     margin-top: 8em;
+  }
+}
+
+// Hero section
+.hero-section {
+  width: 100%;
+  height: 575px;
+  margin-bottom: 9.2rem;
+  display: flex;
+  justify-content: space-between;
+
+  .hero-section-img {
+    width: 50%;
+    height: 572px;
+    position: absolute;
+    left: 0;
+    background-image: url(images/image-computer.png);
+    background-position: right;
+    transition: all 0.3s ease-in-out;
+    background-repeat: no-repeat;
+  }
+  .hero-section-img:hover {
+    transform: scale(1.02);
+  }
+  .hero-section-info {
+    width: 50%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 4.25rem 6.9rem;
+    transition: all 0.3s ease-in-out;
   }
 }
