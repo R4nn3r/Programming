@@ -215,7 +215,7 @@ main {
 }
 .hero-section {
   width: 100%;
-  height: 575px;
+  height: 572px;
   margin-bottom: 9.2rem;
   display: flex;
   justify-content: space-between;
@@ -241,4 +241,10 @@ main {
   gap: 2em;
   padding: 4.25rem 6.9rem;
   transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 50em) {
+  .hero-section {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
