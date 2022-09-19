@@ -1,25 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
 :root {
   --ff-primary: "Public Sans", sans-serif;
-
   --fs-body: 18px;
-
   --fw-300: 300;
   --fw-400: 400;
   --fw-700: 700;
-
   --crl-primary: hsl(233, 26%, 24%);
-
   --crl-accent-100: hsl(136, 65%, 51%);
   --crl-accent-200: hsl(192, 70%, 51%);
-
   --crl-neutral-100: hsl(233, 8%, 62%);
   --crl-neutral-200: hsl(220, 16%, 96%);
   --crl-neutral-300: hsl(0, 0%, 98%);
   --crl-neutral-400: hsl(0, 0%, 100%);
 }
 
-// Reset the css
 /* Box sizing rules */
 *,
 *::before,
@@ -42,8 +36,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul[role=list],
+ol[role=list] {
   list-style: none;
 }
 
@@ -56,12 +50,15 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+  padding: 0;
   line-height: 1.5;
+  font-family: var(--ff-primary);
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -84,24 +81,25 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
-
-// Utility classes
 .font-weight-bold {
   font-weight: var(--fw-700);
 }
+
 .font-weight-regular {
   font-weight: var(--fw-400);
 }
+
 .font-weight-light {
   font-weight: var(--fw-300);
 }
@@ -111,80 +109,4 @@ li {
   list-style: none;
   text-decoration: none;
   color: inherit;
-}
-
-// General styles
-body {
-  font-family: var(--ff-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.container {
-  width: 100%;
-  max-width: 1440px;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-// Header styles
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 2em;
-  margin: 0;
-  height: 60px;
-  background-color: rgba(127, 204, 127, 0.303);
-  justify-content: space-evenly;
-
-  .main-page-logo {
-    padding: 0.5em;
-  }
-
-  .header-navbar .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 2em;
-    justify-content: space-evenly;
-
-    .link {
-      font-size: 13px;
-      color: var(--crl-neutral-100);
-      padding: 22px 0;
-      border-bottom: 2px solid white;
-
-      transition: border-bottom 0.2s;
-    }
-
-    .link:hover {
-      color: var(--crl-primary);
-      border-bottom: 2px solid var(--crl-accent-100);
-    }
-  }
-
-  .button-container {
-    .header-button {
-      border: none;
-      color: rgb(255, 255, 255);
-      font-size: 13px;
-      padding: 0.75em 1.5em;
-      border-radius: 2em;
-      cursor: pointer;
-      background: linear-gradient(
-        45deg,
-        var(--crl-accent-100),
-        var(--crl-accent-200)
-      );
-    }
-  }
-}
+}/*# sourceMappingURL=style.css.map */
