@@ -470,4 +470,14 @@ main {
 }
 .footer .footer-menu li a:hover {
   color: var(--crl-primary-100);
+}
+
+@media (max-width: 40em) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer .footer-menu ul {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }/*# sourceMappingURL=style.css.map */

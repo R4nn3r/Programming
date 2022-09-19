@@ -510,3 +510,14 @@ main {
     }
   }
 }
+
+@media (max-width: 40em) {
+  .footer {
+    flex-direction: column;
+
+    .footer-menu ul {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  }
+}
