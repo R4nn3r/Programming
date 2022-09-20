@@ -1,5 +1,6 @@
 .header {
   // Hamburger open styles
+
   &.open {
     .overlay {
       visibility: visible;
@@ -60,6 +61,7 @@
     position: absolute;
     width: calc(100% - 3rem);
     left: 50%;
+    z-index: 99999;
     transform: translate(-50%);
     a {
       display: block;
