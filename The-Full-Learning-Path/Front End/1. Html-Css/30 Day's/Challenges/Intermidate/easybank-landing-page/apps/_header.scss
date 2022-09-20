@@ -2,7 +2,7 @@
   // Hamburger open styles
   &.open {
     .overlay {
-      display: block;
+      visibility: visible;
     }
     .header__toggle {
       > span:first-child {
@@ -21,7 +21,10 @@
   }
 
   nav {
-    padding: 17px 24px;
+    position: relative;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+    background-color: $crl-neutral-400;
   }
   &__logo {
     img {
@@ -49,8 +52,15 @@
   &__menu {
     background-color: $crl-neutral-400;
     padding: 1.625rem;
-    outline: 1px dashed red;
-    margin: 2em;
+    border-radius: 5px;
+    // background-color: rgba(192, 238, 192, 0.427);
+
+    // position
+    margin-top: 1.5rem;
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translate(-50%);
     a {
       display: block;
       color: $crl-primary;
@@ -89,16 +99,12 @@
         }
       }
     }
-
-    &__cta {
-    }
   }
 }
 
 .overlay {
-  visibility: hidden;
   position: fixed;
-  top: 3.75rem;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
