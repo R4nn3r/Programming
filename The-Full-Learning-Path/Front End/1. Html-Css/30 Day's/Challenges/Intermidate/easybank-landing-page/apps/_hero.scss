@@ -1,6 +1,5 @@
 .hero {
-  background-color: $crl-neutral-300;
-
+  background-color: $veryLightGray;
   .container {
     @include breakpoint-up(large) {
       display: flex;
@@ -10,20 +9,31 @@
 
   &__image {
     position: relative;
-    background-image: url(../images/bg-intro-mobile.svg);
-    background-repeat: no-repeat;
+    background-image: url("../images/bg-intro-mobile.svg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
     min-height: 17.5rem;
 
+    @include breakpoint-up(medium) {
+      min-height: 25rem;
+      background-position: center 70%;
+    }
+
     @include breakpoint-up(large) {
       flex: 3;
-      //   background-image: url(../images/bg-intro-desktop.svg);
-      //   background-position: left center;
       order: 2;
-      min-height: 41rem;
+      height: 41rem;
       background-image: none;
+      //background-image: url('/images/bg-intro-desktop.svg');
+      //background-position: left center;
     }
+
+    &::before,
+    &::after {
+      //border: 1px solid magenta;
+    }
+
     &::before {
       @include breakpoint-up(large) {
         content: "";
@@ -37,15 +47,16 @@
         background-position: 0% 83%;
       }
     }
+
     &::after {
       content: "";
       position: absolute;
       width: 100%;
       height: 100%;
       background-image: url("../images/image-mockups.png");
-      background-size: 88%;
+      background-size: 93%;
       background-repeat: no-repeat;
-      background-position: center 89%;
+      background-position: center bottom;
 
       @include breakpoint-up(medium) {
         background-size: 52%;
@@ -63,31 +74,11 @@
 
   &__text {
     text-align: center;
-    // margin-top: 2em;
+
     @include breakpoint-up(large) {
       flex: 2;
       order: 1;
       text-align: left;
-    }
-    h1 {
-      line-height: 1.15;
-      font-weight: $fw-400;
-      color: $crl-primary;
-      font-size: $fs-lar;
-      margin-bottom: 1.5rem;
-
-      @include breakpoint-up(large) {
-        font-size: $fs-xlg;
-      }
-    }
-
-    p {
-      margin-bottom: 1.5rem;
-      line-height: 1.3;
-      font-size: $fs-sm;
-      @include breakpoint-up(large) {
-        font-size: $fs-med;
-      }
     }
   }
 }

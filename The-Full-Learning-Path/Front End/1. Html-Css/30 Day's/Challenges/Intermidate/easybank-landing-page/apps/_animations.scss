@@ -11,23 +11,22 @@
     visibility: visible;
     opacity: 0;
   }
-
   to {
     visibility: visible;
     opacity: 1;
   }
 }
-
 .fade-in {
-  animation: fade-in 0.5s ease-in forwards;
+  animation: fade-in 200ms ease-in-out forwards;
 }
+
 @keyframes fade-out {
   from {
     visibility: visible;
     opacity: 1;
   }
   99% {
-    visibility: hidden;
+    visibility: visible;
     opacity: 0;
   }
   to {
@@ -36,5 +35,5 @@
   }
 }
 .fade-out {
-  animation: fade-out 0.5s ease-in forwards;
+  animation: fade-out 200ms ease-in-out forwards;
 }

@@ -1,23 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+// Colors
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
 
-$ff-primary: "Public Sans", sans-serif;
-
-$fs-med: 18px;
-$fs-xmed: 24px;
-$fs-sm: 14px;
-$fs-lar: 37px;
-$fs-xlg: 52px;
-
-$fw-300: 300;
-$fw-400: 400;
-$fw-700: 700;
-
-$crl-primary: hsl(233, 26%, 24%);
-
-$crl-accent-100: hsl(136, 65%, 51%);
-$crl-accent-200: hsl(192, 70%, 51%);
-
-$crl-neutral-100: hsl(233, 8%, 62%);
-$crl-neutral-200: hsl(220, 16%, 96%);
-$crl-neutral-300: hsl(0, 0%, 98%);
-$crl-neutral-400: hsl(0, 0%, 100%);
+// Font Sizes
+$font-sm: 0.875rem; // 14px
+$font-med: 1.125rem; // 18px
+$font-lg: 1.25rem;
+$font-xlg: 3.25rem;
