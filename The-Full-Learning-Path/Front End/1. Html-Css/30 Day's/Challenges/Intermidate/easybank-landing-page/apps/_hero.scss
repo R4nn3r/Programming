@@ -43,9 +43,9 @@
       width: 100%;
       height: 100%;
       background-image: url("../images/image-mockups.png");
-      background-size: 90%;
+      background-size: 88%;
       background-repeat: no-repeat;
-      background-position: center bottom;
+      background-position: center 89%;
 
       @include breakpoint-up(medium) {
         background-size: 52%;
