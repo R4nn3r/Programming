@@ -64,10 +64,22 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .container {
   margin-inline: auto;
   max-width: 1440px;
   padding: 0 4em;
+}
+
+button {
+  cursor: pointer;
+  box-shadow: 0px 5px 17px rgba(159, 149, 149, 0.3490196078);
+}
+button:hover {
+  opacity: 0.75;
 }
 
 .header {
@@ -97,17 +109,84 @@ svg {
 }
 .header__button {
   border: none;
-  padding: 0.75em 3em;
+  padding: 0.95em 4em;
   border-radius: 3em;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   color: hsl(192deg, 100%, 9%);
   background-color: white;
-  font-size: 14px;
+  font-size: 13px;
 }
 @media (max-width: 39.9375em) {
   .header__button {
-    padding: 0.5em 2em;
-    font-size: 13px;
+    padding: 0.65em 2.5em;
+    font-size: 12px;
+  }
+}
+
+.section-hero {
+  background-color: hsl(193deg, 100%, 96%);
+}
+.section-hero .hero {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 2em;
+  flex-direction: row;
+}
+@media (max-width: 63.9375em) {
+  .section-hero .hero {
+    flex-direction: column;
+    gap: 1em;
+    padding: 5em 1em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.section-hero .hero__text {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 1.5em;
+  color: hsl(192deg, 100%, 9%);
+}
+.section-hero .hero__heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  max-width: 450px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+@media (max-width: 63.9375em) {
+  .section-hero .hero__heading {
+    font-size: 27px;
+  }
+}
+.section-hero .hero__para {
+  font-weight: 400;
+  font-size: 16px;
+}
+.section-hero .hero__button {
+  width: 50%;
+  border: none;
+  color: white;
+  font-weight: 700;
+  background-color: hsl(322deg, 100%, 66%);
+  padding: 1.3em 4em;
+  border-radius: 5em;
+}
+@media (max-width: 63.9375em) {
+  .section-hero .hero__button {
+    min-width: 275px;
+    align-self: center;
+  }
+}
+.section-hero .hero__figure {
+  margin-top: 2em;
+}
+@media (max-width: 63.9375em) {
+  .section-hero .hero__figure {
+    padding: 1em 2em;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -68,8 +68,21 @@ svg {
 // utilities
 
 // General
+body {
+  font-family: $ff-bc;
+}
+
 .container {
   margin-inline: auto;
   max-width: $wid-desktop;
   padding: 0 4em;
+}
+
+button {
+  cursor: pointer;
+  box-shadow: 0px 5px 17px #9f959559;
+
+  &:hover {
+    opacity: 0.75;
+  }
 }

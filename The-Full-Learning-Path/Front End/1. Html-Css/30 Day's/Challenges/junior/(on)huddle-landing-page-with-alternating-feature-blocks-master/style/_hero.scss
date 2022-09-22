@@ -1,0 +1,60 @@
+.section-hero {
+  background-color: $crl-bg-hero;
+  .hero {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 2em;
+    flex-direction: row;
+
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+      gap: 1em;
+      padding: 5em 1em;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      gap: 1.5em;
+      color: $crl-bg-footer;
+    }
+
+    &__heading {
+      font-family: $ff-heading;
+      font-size: 35px;
+      max-width: 450px;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      @include breakpoint-down(medium) {
+        font-size: 27px;
+      }
+    }
+    &__para {
+      font-weight: $fw-body-400;
+      font-size: $fs-body - 2px;
+    }
+    &__button {
+      width: 50%;
+      border: none;
+      color: white;
+      font-weight: $fw-body-700;
+      background-color: $crl-accent;
+      padding: 1.3em 4em;
+      border-radius: 5em;
+      @include breakpoint-down(medium) {
+        min-width: 275px;
+        align-self: center;
+      }
+    }
+    &__figure {
+      margin-top: 2em;
+      @include breakpoint-down(medium) {
+        padding: 1em 2em;
+      }
+    }
+  }
+}
