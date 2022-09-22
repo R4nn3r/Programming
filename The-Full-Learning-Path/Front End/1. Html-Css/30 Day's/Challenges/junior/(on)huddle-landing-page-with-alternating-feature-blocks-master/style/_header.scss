@@ -1,0 +1,38 @@
+.header {
+  background-color: $crl-bg-hero;
+
+  &__container {
+    display: flex;
+    gap: 0.5em;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @include breakpoint-down(small) {
+      padding: 2em 1em 2em 1em;
+    }
+  }
+  &__logo {
+    width: 175px;
+
+    @include breakpoint-down(small) {
+      width: 120px;
+    }
+  }
+
+  &__button {
+    border: none;
+    padding: 0.75em 3em;
+    border-radius: 3em;
+    font-family: $ff-bc;
+    font-weight: $fw-body-700;
+    color: $crl-bg-footer;
+    background-color: white;
+    font-size: 14px;
+    @include breakpoint-down(small) {
+      padding: 0.5em 2em;
+      font-size: 13px;
+    }
+  }
+}
