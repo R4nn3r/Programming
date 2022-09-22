@@ -1,4 +1,4 @@
-Version Control
+Version Control Using Git
 
 Git
     Version control system used to record changes to the code your writing.
