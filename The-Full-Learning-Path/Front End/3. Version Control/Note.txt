@@ -1,6 +1,19 @@
 Version Control
 
 Git
+    Version control system used to record changes to the code your writing.
+    by creating a repository on remote server and a local machine where you keep
+    your code safely.
+
+
+
+# Creating repository
+
+# Pull , commit , push and clone methods 
+
+# How to create a branch and use different branches 
+
+    
 
 
 echo "# Learning-GIt" >> README.md
