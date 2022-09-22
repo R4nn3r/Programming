@@ -830,4 +830,10 @@ HTML (Hypertext Markup Language)
                     }
 
             - Last step use the classes make your life easier :)
+
+
+    # Box shadow 
+
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+                    (x) (y) (spread)   (color)
             

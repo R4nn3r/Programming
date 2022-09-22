@@ -502,7 +502,7 @@ button:hover::before,
   border-radius: 0.3125rem;
   overflow: hidden;
   background-color: hsl(0deg, 0%, 100%);
-  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 17px rgba(179, 179, 179, 0.21);
   transition: all 150ms ease-in-out;
 }
 .article__item:hover {

@@ -6,6 +6,7 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
+    // grid-template-columns: repeat(auto-fit, minmax(14.91rem, 1fr));
     gap: 1.875rem;
 
     @include breakpoint-up(medium) {
@@ -21,7 +22,8 @@
     border-radius: 0.3125rem;
     overflow: hidden;
     background-color: $white;
-    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+    // box-shadow: 0px 3px 12px rgba(197, 88, 88, 0.15);
+    box-shadow: 0px 8px 17px rgb(179 179 179 / 21%);
     transition: all 150ms ease-in-out;
 
     &:hover {
