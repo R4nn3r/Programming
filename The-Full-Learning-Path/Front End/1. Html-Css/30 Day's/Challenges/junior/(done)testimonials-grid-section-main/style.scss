@@ -23,7 +23,7 @@
   --fw-700: 600;
   --fs-300: 0.6875rem;
   --fs-400: 0.8125rem;
-  --fs-500: 1.25rem;
+  --fs-500: 1.1rem;
 }
 
 // mixins
@@ -262,8 +262,9 @@ body {
 .text-style-all {
   h1 {
     margin: 0.7em 0;
-    font-size: var(--fs-400);
+    font-size: var(--fs-500);
     opacity: 1;
+    line-height: 1.2;
   }
 
   p {
