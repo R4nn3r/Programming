@@ -76,6 +76,9 @@ body {
   margin-inline: auto;
   max-width: $wid-desktop;
   padding: 0 4em;
+  @include breakpoint-down(medium) {
+    padding: 0 2em;
+  }
 }
 
 button {

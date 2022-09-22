@@ -10,7 +10,7 @@
     @include breakpoint-down(medium) {
       flex-direction: column;
       gap: 1em;
-      padding: 5em 1em;
+      padding: 5em 1em 2em 1em;
       align-items: center;
       justify-content: center;
       text-align: center;
