@@ -1,0 +1,282 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+// Root
+:root {
+  --main-desktop-width: 1200px;
+  --main-mobile-width: 375px;
+  --crl-bg-100: hsl(263, 55%, 52%);
+  --crl-bg-200: hsl(217, 19%, 35%);
+  --crl-bg-300: hsl(219, 29%, 14%);
+  --crl-bg-400: hsl(0, 0%, 100%);
+
+  --crl-neutral-100: hsl(0, 0%, 81%);
+  --crl-neutral-200: hsl(210, 46%, 95%);
+
+  --fs-primary: 13px;
+
+  --ff-primary: "Barlow Semi Condensed", sans-serif;
+
+  --fw-primary-500: 500;
+  --fw-primary-600: 600;
+
+  --fw-400: 500;
+  --fw-700: 600;
+  --fs-300: 0.6875rem;
+  --fs-400: 0.8125rem;
+  --fs-500: 1.25rem;
+}
+
+// mixins
+// 640px, 1024px, 1400px
+$breakpoints-up: (
+  "medium": "40em",
+  "large": "64em",
+  "xlarge": "87.5em",
+);
+
+// 639px, 1023px, 1399px
+$breakpoints-down: (
+  "small": "39.9375em",
+  "medium": "63.9375em",
+  "large": "87.4375em",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+// How to use the mixins on the design
+@include breakpoint-down(medium) {
+  // styles go in here for anything below the width of "size medium = 63.9375"
+}
+
+// Utilities
+.crl-bg-100 {
+  background-color: var(--crl-bg-100);
+}
+.crl-bg-200 {
+  background-color: var(--crl-bg-200);
+}
+.crl-bg-300 {
+  background-color: var(--crl-bg-300);
+}
+.crl-bg-400 {
+  background-color: var(--crl-bg-400);
+}
+
+.text-100 {
+  background-color: var(--crl-neutral-100);
+}
+.text-200 {
+  background-color: var(--crl-neutral-200);
+}
+.border-ring-accent {
+  border: 2px solid #a775f1;
+}
+
+// Reset
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  //   font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+li,
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// General Styles
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+  background-color: var(--crl-neutral-200);
+}
+.main {
+  max-width: var(--main-desktop-width);
+  margin-inline: auto;
+
+  @include breakpoint-down(medium) {
+    padding: 2em;
+  }
+
+  @include breakpoint-up(large) {
+    padding: 7em;
+  }
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+  gap: 2em;
+
+  .one {
+    grid-area: one;
+  }
+  .two {
+    grid-area: two;
+  }
+  .three {
+    grid-area: three;
+  }
+  .four {
+    grid-area: four;
+  }
+  .five {
+    grid-area: five;
+  }
+  @include breakpoint-up(medium) {
+    // For 640px up devices
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "one one "
+      "two three"
+      "four four "
+      "five five";
+  }
+
+  @include breakpoint-up(large) {
+    // For 1024px up devices
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+
+  .testimonial {
+    border-radius: 0.5em;
+    padding: 2em;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem #5e5e5e5f;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+    &__flex,
+    .flex {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+
+      &__img {
+        img {
+          width: 30px;
+          border-radius: 50%;
+        }
+      }
+
+      &__info {
+        h3 {
+          font-size: var(--fs-400);
+          font-weight: var(--fw-primary-600);
+        }
+
+        p {
+          font-weight: var(--fw-primary-400);
+          font-size: var(--fs-300);
+        }
+      }
+    }
+    h3 {
+      font-weight: var(--fw-primary-600);
+      font-size: var(--fs-400);
+    }
+
+    p {
+      font-weight: var(--fw-primary-400);
+      font-size: 11px;
+      opacity: 0.5;
+    }
+  }
+}
+
+.text-style-all {
+  h1 {
+    margin: 0.7em 0;
+    font-size: var(--fs-400);
+    opacity: 1;
+  }
+
+  p {
+    opacity: 0.7;
+  }
+}
+
+.text-invert {
+  color: white;
+}
+
+.quote-logo {
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
