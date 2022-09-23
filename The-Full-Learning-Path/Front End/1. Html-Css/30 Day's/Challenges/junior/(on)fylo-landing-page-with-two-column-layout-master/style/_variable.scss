@@ -4,16 +4,16 @@ $wid-desktop: 1440px;
 $wid-mobile: 375px;
 
 // Colors
-$crl-dark-blue: hsl(243, 87%, 12%);
-$crl-blue: hsl(238, 22%, 44%);
+$crl-dark-blue: hsl(243, 87%, 12%); //footer
+$crl-blue: hsl(238, 22%, 44%); // last section before footer
 
 // Accent
-$acc-bright-blue: hsl(224, 93%, 58%);
-$acc-cyan: hsl(170, 45%, 43%);
+$acc-bright-blue: hsl(224, 93%, 58%); // button background
+$acc-cyan: hsl(170, 45%, 43%); // link accent
 
 // Neutral
 $neutral-blue: hsl(240, 75%, 98%);
-$neutral-gray: hsl(0, 0%, 75%);
+$neutral-gray: hsl(0, 0%, 75%); // after hero section background
 
 // Heading Font
 $ff-heading: "Raleway ", sans-serif;

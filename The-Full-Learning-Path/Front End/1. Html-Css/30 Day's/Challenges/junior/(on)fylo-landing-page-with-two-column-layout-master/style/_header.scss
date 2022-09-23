@@ -1,0 +1,29 @@
+.header {
+  font-family: $ff-body;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+
+  @include breakpoint-down(xsmall) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__logo {
+    img {
+      @include breakpoint-down(small) {
+        width: 100px;
+      }
+    }
+  }
+  &__nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
+    @include breakpoint-down(small) {
+      font-size: 13px;
+      gap: 1.5em;
+    }
+  }
+}
