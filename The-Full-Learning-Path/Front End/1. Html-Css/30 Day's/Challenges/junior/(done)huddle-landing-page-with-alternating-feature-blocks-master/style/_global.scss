@@ -66,6 +66,22 @@ svg {
 }
 
 // utilities
+.flex-start {
+  align-self: start;
+}
+
+.anchor {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: text-decoration 0.2s ease-in;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 // General
 body {

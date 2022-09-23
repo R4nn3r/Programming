@@ -36,6 +36,9 @@
     &__para {
       font-weight: $fw-body-400;
       font-size: $fs-body - 2px;
+      @include breakpoint-down(medium) {
+        padding: 1em;
+      }
     }
     &__button {
       width: 50%;
