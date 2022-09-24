@@ -1,29 +1,37 @@
 .hero {
-  @include breakpoint-up(medium) {
+  margin-bottom: 10em;
+
+  @include breakpoint-up(large) {
     display: flex;
     align-items: center;
     flex-direction: row;
   }
 
   &__figure {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     @include breakpoint-up(medium) {
       order: 2;
       width: 120%;
+      max-width: 740px;
     }
   }
 
   &__content {
+    width: 100%;
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     flex-direction: column;
     font-family: $ff-body;
     font-size: 16px;
     text-align: center;
 
-    @include breakpoint-up(medium) {
+    @include breakpoint-up(large) {
       padding-right: 0.5em;
       text-align: left;
+    }
+    @include breakpoint-up(medium) {
+      padding-right: 0.5em;
+      justify-content: center;
     }
 
     &__head {
@@ -45,15 +53,30 @@
       display: flex;
       flex-direction: column;
       gap: 0.75em;
-      @include breakpoint-up(medium) {
-        flex-direction: row;
+
+      @include breakpoint-up(small) {
+        justify-content: center;
       }
 
+      @include breakpoint-up(medium) {
+        flex-direction: row;
+        justify-content: center;
+      }
+      @include breakpoint-up(large) {
+        flex-direction: row;
+        justify-content: left;
+      }
       &__email {
         border: 1px solid gray;
-        outline: none;
         border-radius: 0.3em;
         padding: 1em;
+        &::placeholder {
+          opacity: 0.5;
+        }
+        &:focus {
+          border: 1px solid white;
+          outline: 1px solid $acc-bright-blue;
+        }
         @include breakpoint-up(medium) {
           width: 300px;
         }

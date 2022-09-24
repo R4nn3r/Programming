@@ -99,3 +99,13 @@ li {
   text-decoration: none;
   color: $crl-dark-blue;
 }
+
+.button {
+  cursor: pointer;
+  opacity: 1;
+  min-width: 178.5px;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

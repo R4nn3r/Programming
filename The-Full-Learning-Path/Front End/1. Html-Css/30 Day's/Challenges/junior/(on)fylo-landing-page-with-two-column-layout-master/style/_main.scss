@@ -1,0 +1,117 @@
+.main {
+  display: flex;
+  align-items: center;
+  background-color: $neutral-blue;
+  width: 100%;
+  color: $crl-dark-blue;
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+  }
+
+  &__article {
+    font-family: $ff-body;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    @include breakpoint-down(medium) {
+      order: 2;
+      gap: 3em;
+    }
+
+    &__heading {
+      font-family: $ff-heading;
+      font-size: 35px;
+
+      @include breakpoint-down(small) {
+        font-size: 20px;
+      }
+    }
+    &__para {
+      font-size: 15px;
+      padding-right: 6em;
+      @include breakpoint-down(small) {
+        padding-right: 0;
+      }
+    }
+    &__link {
+      max-width: 162px;
+      @include breakpoint-down(small) {
+        align-self: center;
+      }
+      &__text {
+        color: $acc-cyan;
+        border-bottom: 1px solid $acc-cyan;
+        display: flex;
+        gap: 0.5em;
+        font-size: 15px;
+        align-items: center;
+        &__icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &__testimonial {
+      border: 1px solid rgba(205, 205, 205, 0.512);
+      background-color: white;
+      border-radius: 0.5em;
+      padding: 1em 2em;
+      box-shadow: 0 2em 3em rgba(139, 139, 139, 0.265);
+
+      @include breakpoint-up(medium) {
+        width: 50%;
+      }
+
+      &__content {
+        font-family: $ff-body;
+        font-weight: $fw-b-400;
+        line-height: 1.75;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        font-size: 12px;
+        &::before {
+          content: "";
+          background-image: url(../images/icon-quotes.svg);
+          display: block;
+          height: 10px;
+          background-position: left top;
+          background-repeat: no-repeat;
+        }
+
+        &__poster {
+          display: flex;
+          line-height: 1.2;
+          gap: 0.5em;
+          align-items: center;
+
+          img {
+            width: 30px;
+            border-radius: 50%;
+          }
+
+          .detail {
+            &__name {
+              font-size: 10px;
+              font-family: $ff-heading;
+              font-weight: $fw-h-700;
+            }
+            &__stat {
+              font-size: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__figure {
+    margin-bottom: 2em;
+    @include breakpoint-up(medium) {
+      order: 2;
+      width: 100%;
+      max-width: 614px;
+    }
+  }
+}
