@@ -84,6 +84,17 @@ svg {
     padding: 2em 2em;
   }
 }
+.container__x {
+  padding: 0 4em;
+}
+@media (max-width: 39.9375em) {
+  .container__x {
+    padding: 2em 2em;
+  }
+}
+.container__y {
+  padding: 3em 0;
+}
 
 a,
 li {
@@ -119,5 +130,88 @@ li {
   .header__nav-links {
     font-size: 13px;
     gap: 1.5em;
+  }
+}
+
+@media (min-width: 40em) {
+  .hero {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.hero__figure {
+  margin-bottom: 1em;
+}
+@media (min-width: 40em) {
+  .hero__figure {
+    order: 2;
+    width: 120%;
+  }
+}
+.hero__content {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  font-family: " Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+@media (min-width: 40em) {
+  .hero__content {
+    padding-right: 0.5em;
+    text-align: left;
+  }
+}
+.hero__content__head {
+  color: hsl(243deg, 87%, 12%);
+  font-family: "Raleway ", sans-serif;
+  font-size: 25px;
+}
+@media (min-width: 40em) {
+  .hero__content__head {
+    font-size: 35px;
+  }
+}
+.hero__content__para {
+  color: hsl(243deg, 87%, 12%);
+}
+@media (min-width: 40em) {
+  .hero__content__para {
+    font-size: 18px;
+  }
+}
+.hero__content__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+@media (min-width: 40em) {
+  .hero__content__input {
+    flex-direction: row;
+  }
+}
+.hero__content__input__email {
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 0.3em;
+  padding: 1em;
+}
+@media (min-width: 40em) {
+  .hero__content__input__email {
+    width: 300px;
+  }
+}
+.hero__content__input__button {
+  color: white;
+  border-radius: 0.3em;
+  border: none;
+  background-color: hsl(224deg, 93%, 58%);
+  padding: 1em;
+  font-weight: 700;
+}
+@media (min-width: 40em) {
+  .hero__content__input__button {
+    padding: 1em 4em;
   }
 }/*# sourceMappingURL=style.css.map */

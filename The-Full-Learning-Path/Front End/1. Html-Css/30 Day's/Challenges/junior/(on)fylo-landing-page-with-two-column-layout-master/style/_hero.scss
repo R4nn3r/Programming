@@ -1,0 +1,74 @@
+.hero {
+  @include breakpoint-up(medium) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__figure {
+    margin-bottom: 1em;
+    @include breakpoint-up(medium) {
+      order: 2;
+      width: 120%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    font-family: $ff-body;
+    font-size: 16px;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+      padding-right: 0.5em;
+      text-align: left;
+    }
+
+    &__head {
+      color: $crl-dark-blue;
+      font-family: $ff-heading;
+      font-size: 25px;
+      @include breakpoint-up(medium) {
+        font-size: 35px;
+      }
+    }
+
+    &__para {
+      color: $crl-dark-blue;
+      @include breakpoint-up(medium) {
+        font-size: 18px;
+      }
+    }
+    &__input {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75em;
+      @include breakpoint-up(medium) {
+        flex-direction: row;
+      }
+
+      &__email {
+        border: 1px solid gray;
+        outline: none;
+        border-radius: 0.3em;
+        padding: 1em;
+        @include breakpoint-up(medium) {
+          width: 300px;
+        }
+      }
+      &__button {
+        color: white;
+        border-radius: 0.3em;
+        border: none;
+        background-color: $acc-bright-blue;
+        padding: 1em;
+        font-weight: $fw-h-700;
+        @include breakpoint-up(medium) {
+          padding: 1em 4em;
+        }
+      }
+    }
+  }
+}

@@ -82,6 +82,16 @@ svg {
   @include breakpoint-down(small) {
     padding: 2em 2em;
   }
+
+  &__x {
+    padding: 0 4em;
+    @include breakpoint-down(small) {
+      padding: 2em 2em;
+    }
+  }
+  &__y {
+    padding: 3em 0;
+  }
 }
 // General
 a,
