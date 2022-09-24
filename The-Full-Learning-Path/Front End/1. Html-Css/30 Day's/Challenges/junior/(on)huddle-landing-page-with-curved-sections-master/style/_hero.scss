@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  @include breakpoint-down(xsmall) {
+    flex-direction: column;
+    gap: 2em;
+  }
+  &__figure {
+    @include breakpoint-down(medium) {
+      width: 185px;
+    }
+    @include breakpoint-down(small) {
+      width: 125px;
+    }
+    @include breakpoint-down(xsmall) {
+      width: 185px;
+    }
+  }
+
+  &__button {
+    font-size: 16px;
+    border: 1px solid $crl-pink;
+    padding: 0.75em 2em;
+    background-color: white;
+    color: $crl-pink;
+    border-radius: 5em;
+    @include breakpoint-down(medium) {
+      font-size: 14px;
+    }
+    @include breakpoint-down(small) {
+      padding: 0.6em 2em;
+      font-size: 13px;
+    }
+  }
+}
