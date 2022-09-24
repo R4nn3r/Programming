@@ -1,5 +1,5 @@
 .hero {
-  margin-bottom: 10em;
+  margin-bottom: 8em;
 
   @include breakpoint-up(large) {
     display: flex;
@@ -69,7 +69,7 @@
       &__email {
         border: 1px solid gray;
         border-radius: 0.3em;
-        padding: 1em;
+        padding: 0.9em;
         &::placeholder {
           opacity: 0.5;
         }

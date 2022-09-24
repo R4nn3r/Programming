@@ -1,0 +1,68 @@
+.second-main {
+  color: white;
+  background-color: $crl-blue;
+  font-family: $ff-body;
+  .second-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+    gap: 2em;
+
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__article {
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+    }
+
+    &__heading {
+      font-size: 20px;
+      margin-bottom: 0.5em;
+      @include breakpoint-up(medium) {
+        font-size: 25px;
+      }
+    }
+
+    &__para {
+      width: 50%;
+      margin-bottom: 1em;
+      font-size: 15px;
+      @include breakpoint-down(medium) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__input {
+    @include breakpoint-down(small) {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+    }
+    &__email {
+      width: 100%;
+      border: 1px solid gray;
+      border-radius: 0.2em;
+      padding: 1em;
+      margin-bottom: 0.5em;
+      @include breakpoint-down(small) {
+        width: 250px;
+      }
+      &::placeholder {
+        opacity: 0.5;
+      }
+      &:focus {
+        border: 1px solid white;
+        outline: 1px solid $acc-bright-blue;
+      }
+    }
+    &__button {
+      border-radius: 0.2em;
+    }
+  }
+}

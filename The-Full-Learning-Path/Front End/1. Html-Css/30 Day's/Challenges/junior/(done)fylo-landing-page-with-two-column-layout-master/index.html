@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Fylo landing page with two column layout</title>
+    <!-- Links  -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="main-container">
+    <!-- Header Section -->
+    <header class="header container">
+      <figure class="header__logo">
+        <img src="./images/logo.svg" alt="Fylo Logo" />
+      </figure>
+      <nav class="header__navbar">
+        <ul class="header__nav-links">
+          <li>
+            <a href="#" class="header__nav-link">Features</a>
+          </li>
+          <li>
+            <a href="#" class="header__nav-link">Team</a>
+          </li>
+          <li>
+            <a href="#" class="header__nav-link">Sign In</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container__x">
+      <figure class="hero__figure">
+        <img
+          src="./images/illustration-1.svg"
+          alt="Illustration of 2 persons using a big folder"
+          class="hero__figure__illustration"
+        />
+      </figure>
+
+      <section class="hero__content">
+        <h1 class="hero__content__head">
+          All your files in one secure location, accessible anywhere.
+        </h1>
+        <p class="hero__content__para">
+          Fylo stores your most important files in one secure location. Access
+          them wherever you need, share and collaborate with friends, family,
+          and co-workers.
+        </p>
+
+        <div class="hero__content__input">
+          <input
+            type="email"
+            class="hero__content__input__email"
+            placeholder="Enter your email..."
+          />
+          <button class="hero__content__input__button button">
+            Get Started
+          </button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Main Section -->
+    <main class="main">
+      <main class="main-container">
+        <article class="main__article container">
+          <h1 class="main__article__heading">
+            Stay productive, wherever you are
+          </h1>
+          <div class="main__article__para">
+            <p>
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <hr style="margin: 0.5em 0" />
+            <p>
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required!
+            </p>
+          </div>
+
+          <div class="main__article__link">
+            <a href="#" class="main__article__link__text">
+              See how Fylo works
+              <img
+                src="./images/icon-arrow.svg"
+                alt=""
+                class="main__article__link__text__icon"
+              />
+            </a>
+          </div>
+
+          <div class="main__article__testimonial">
+            <article class="main__article__testimonial__content">
+              <p>
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </p>
+
+              <div class="main__article__testimonial__content__poster">
+                <img
+                  src="./images/avatar-testimonial.jpg"
+                  alt=""
+                  class="main__article__testimonial__content__poster__img"
+                />
+                <div class="detail">
+                  <p class="detail__name">Kyle Burton</p>
+                  <p class="detail__stat">Founder & CEO, Huddle</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <!-- Main section Illustration -->
+        <figure class="main__figure container">
+          <img
+            src="./images/illustration-2.svg"
+            alt="Illustration pf People being productive"
+            class="main__figure__illustration"
+          />
+        </figure>
+      </main>
+    </main>
+
+    <!-- Second Main Section -->
+    <section class="second-main container-all">
+      <div class="second-main-container container__x">
+        <article class="second-main__article">
+          <h1 class="second-main__article__heading">Get early access today</h1>
+          <p class="second-main__article__para">
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+        </article>
+        <div class="second-main__input">
+          <input
+            type="email"
+            class="second-main__input__email"
+            placeholder="email@example.com"
+          />
+          <button class="second-main__input__button button">
+            Get Started For Free
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer container">
+      <div class="container__x">
+        <figure class="footer__figure container__y">
+          <img src="./images/logo white.svg" alt="" />
+        </figure>
+
+        <div class="footer__content">
+          <div class="footer__left">
+            <p class="footer__left__phone">
+              <img src="./images/icon-phone.svg" alt="Phone" /> Phone:
+              +251-915-093-846
+            </p>
+            <p class="footer__left__email">
+              <img src="./images/icon-email.svg" alt="Email" /> example@fylo.com
+            </p>
+          </div>
+
+          <div class="footer__middle">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Jobs</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__right container__y">
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"
+                />
+              </svg>
+            </div>
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22,5.8a8.49,8.49,0,0,1-2.36.64,4.13,4.13,0,0,0,1.81-2.27,8.21,8.21,0,0,1-2.61,1,4.1,4.1,0,0,0-7,3.74A11.64,11.64,0,0,1,3.39,4.62a4.16,4.16,0,0,0-.55,2.07A4.09,4.09,0,0,0,4.66,10.1,4.05,4.05,0,0,1,2.8,9.59v.05a4.1,4.1,0,0,0,3.3,4A3.93,3.93,0,0,1,5,13.81a4.9,4.9,0,0,1-.77-.07,4.11,4.11,0,0,0,3.83,2.84A8.22,8.22,0,0,1,3,18.34a7.93,7.93,0,0,1-1-.06,11.57,11.57,0,0,0,6.29,1.85A11.59,11.59,0,0,0,20,8.45c0-.17,0-.35,0-.53A8.43,8.43,0,0,0,22,5.8Z"
+                />
+              </svg>
+            </div>
+            <div class="icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 2476 2476"
+              >
+                <path
+                  d="M825.4 1238c0-227.9 184.7-412.7 412.6-412.7 227.9 0 412.7 184.8 412.7 412.7 0 227.9-184.8 412.7-412.7 412.7-227.9 0-412.6-184.8-412.6-412.7m-223.1 0c0 351.1 284.6 635.7 635.7 635.7s635.7-284.6 635.7-635.7-284.6-635.7-635.7-635.7S602.3 886.9 602.3 1238m1148-660.9c0 82 66.5 148.6 148.6 148.6 82 0 148.6-66.6 148.6-148.6s-66.5-148.5-148.6-148.5-148.6 66.5-148.6 148.5M737.8 2245.7c-120.7-5.5-186.3-25.6-229.9-42.6-57.8-22.5-99-49.3-142.4-92.6-43.3-43.3-70.2-84.5-92.6-142.3-17-43.6-37.1-109.2-42.6-229.9-6-130.5-7.2-169.7-7.2-500.3s1.3-369.7 7.2-500.3c5.5-120.7 25.7-186.2 42.6-229.9 22.5-57.8 49.3-99 92.6-142.4 43.3-43.3 84.5-70.2 142.4-92.6 43.6-17 109.2-37.1 229.9-42.6 130.5-6 169.7-7.2 500.2-7.2 330.6 0 369.7 1.3 500.3 7.2 120.7 5.5 186.2 25.7 229.9 42.6 57.8 22.4 99 49.3 142.4 92.6 43.3 43.3 70.1 84.6 92.6 142.4 17 43.6 37.1 109.2 42.6 229.9 6 130.6 7.2 169.7 7.2 500.3 0 330.5-1.2 369.7-7.2 500.3-5.5 120.7-25.7 186.3-42.6 229.9-22.5 57.8-49.3 99-92.6 142.3-43.3 43.3-84.6 70.1-142.4 92.6-43.6 17-109.2 37.1-229.9 42.6-130.5 6-169.7 7.2-500.3 7.2-330.5 0-369.7-1.2-500.2-7.2M727.6 7.5c-131.8 6-221.8 26.9-300.5 57.5-81.4 31.6-150.4 74-219.3 142.8C139 276.6 96.6 345.6 65 427.1 34.4 505.8 13.5 595.8 7.5 727.6 1.4 859.6 0 901.8 0 1238s1.4 378.4 7.5 510.4c6 131.8 26.9 221.8 57.5 300.5 31.6 81.4 73.9 150.5 142.8 219.3 68.8 68.8 137.8 111.1 219.3 142.8 78.8 30.6 168.7 51.5 300.5 57.5 132.1 6 174.2 7.5 510.4 7.5 336.3 0 378.4-1.4 510.4-7.5 131.8-6 221.8-26.9 300.5-57.5 81.4-31.7 150.4-74 219.3-142.8 68.8-68.8 111.1-137.9 142.8-219.3 30.6-78.7 51.6-168.7 57.5-300.5 6-132.1 7.4-174.2 7.4-510.4s-1.4-378.4-7.4-510.4c-6-131.8-26.9-221.8-57.5-300.5-31.7-81.4-74-150.4-142.8-219.3C2199.4 139 2130.3 96.6 2049 65c-78.8-30.6-168.8-51.6-300.5-57.5-132-6-174.2-7.5-510.4-7.5-336.3 0-378.4 1.4-510.5 7.5"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--   
+   Get Started For Free Phone: +1-543-123-4567
+    example@fylo.com About Us Jobs Press Blog Contact Us Terms Privacy -->
+
+    <!-- <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer> -->
+  </body>
+</html>

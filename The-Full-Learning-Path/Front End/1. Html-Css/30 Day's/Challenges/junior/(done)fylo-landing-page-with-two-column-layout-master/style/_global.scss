@@ -86,13 +86,23 @@ svg {
   &__x {
     padding: 0 4em;
     @include breakpoint-down(small) {
-      padding: 2em 2em;
+      padding: 2em 1.5em;
     }
   }
   &__y {
     padding: 3em 0;
+    @include breakpoint-up(medium) {
+      padding: 0 0;
+    }
   }
 }
+.container-all {
+  padding: 3em 4em;
+  @include breakpoint-down(small) {
+    padding: 1em 0.5em;
+  }
+}
+
 // General
 a,
 li {
@@ -104,8 +114,19 @@ li {
   cursor: pointer;
   opacity: 1;
   min-width: 178.5px;
+  font-family: $ff-heading;
+  font-weight: $fw-h-700;
+  color: white;
+  border-radius: 0.3em;
+  border: none;
+  background-color: $acc-bright-blue;
+  padding: 1em;
 
   &:hover {
     opacity: 0.75;
   }
+}
+
+hr {
+  border: none;
 }
