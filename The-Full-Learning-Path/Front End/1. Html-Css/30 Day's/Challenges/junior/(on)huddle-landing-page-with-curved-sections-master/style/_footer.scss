@@ -1,0 +1,140 @@
+.footer {
+  color: white;
+  font-family: $ff-body;
+  &::before {
+    margin-top: 4em;
+    content: "";
+    display: block;
+    background-image: url(../images/bg-footer-top-desktop.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+
+    height: 150px;
+    @include breakpoint-down(small) {
+      background-image: url(../images/bg-footer-top-mobile.svg);
+      height: 100px;
+      background-size: cover;
+    }
+  }
+
+  &__container-grid {
+    background-color: $neutral-Cyan;
+
+    @include breakpoint-up(small) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "one two";
+    }
+    @include breakpoint-down(medium) {
+      display: grid;
+      gap: 4em;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "two"
+        "one";
+    }
+  }
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  &__text {
+    @include breakpoint-up(small) {
+      max-width: 50%;
+    }
+  }
+  &__con {
+    &__phone {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+    }
+    &__email {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+    }
+    p {
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  &__icon {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+    img {
+      width: 25px;
+    }
+  }
+}
+
+.bigger_icon {
+  width: 40px !important;
+}
+
+.left {
+  grid-area: one;
+}
+
+.right {
+  grid-area: two;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  &__heading {
+    text-transform: uppercase;
+    font-family: $ff-heading;
+  }
+
+  &__text {
+    font-family: $ff-body;
+    @include breakpoint-up(small) {
+      max-width: 65%;
+    }
+  }
+
+  &__input {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    @include breakpoint-up(small) {
+      flex-direction: row;
+      width: 100%;
+    }
+    input {
+      border: 1px solid $neutral-Cyan;
+      outline: none;
+      padding: 0.9em;
+      border-radius: 0.3em;
+      @include breakpoint-up(small) {
+        width: 50%;
+      }
+
+      &::placeholder {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__button {
+    color: white;
+    font-family: $ff-body;
+    font-weight: $fw-b-700;
+    border: none;
+    border-radius: 0.3em;
+    background-color: $crl-pink;
+    padding: 0.9em 2em;
+
+    @include breakpoint-down(small) {
+      align-self: flex-end;
+      width: 50%;
+    }
+  }
+}
