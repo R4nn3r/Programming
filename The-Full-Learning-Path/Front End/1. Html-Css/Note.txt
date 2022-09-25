@@ -837,3 +837,40 @@ HTML (Hypertext Markup Language)
         box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
                     (x) (y) (spread)   (color)
             
+
+    # To Structure Html properly
+
+        1-  The very first and important step is to go through the design properly.
+        2-  The second step is to wireframe the design in form of HTML 
+            block representation by the TLF (Top Left Flow) approach
+                
+                + The TLF approach works in the following manner:
+
+                        First, divide the design horizontally.
+                        Then divide the horizontal parts vertically.
+
+                Note:
+                    The proper way of using the TLF approach is to see whether the design block can 
+                    be divided horizontally. If YES, divide. If NO, see whether the design block can 
+                    be divided vertically. Repeat the same until all the design blocks have been covered.
+
+                    Tip:
+                        Always use comments ( Easy for us to remember in the future and to understand for others)
+                        Make use of proper semantic HTML Tags.  *****
+                                <article> 	Defines independent, self-contained content
+                                <aside> 	Defines content aside from the page content
+                                <details> 	Defines additional details that the user can view or hide
+                                <figcaption> 	Defines a caption for a <figure> element
+                                <figure> 	Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+                                <footer> 	Defines a footer for a document or section
+                                <header> 	Specifies a header for a document or section
+                                <main> 	Specifies the main content of a document
+                                <mark> 	Defines marked/highlighted text
+                                <nav> 	Defines navigation links
+                                <section> 	Defines a section in a document
+                                <summary> 	Defines a visible heading for a <details> element
+                                <time> 	Defines a date/time
+                        Avoid using deprecated HTML Tags.
+                        Validate your HTML code. 
+                        Avoid using unwanted HTML Elements.
+                        Always use the DOCTYPE Declaration.
