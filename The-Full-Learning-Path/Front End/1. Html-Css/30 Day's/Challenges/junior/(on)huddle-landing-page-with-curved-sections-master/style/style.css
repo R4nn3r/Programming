@@ -64,6 +64,11 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+.box {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
 .container {
   max-width: 69.375rem;
   margin: 0 auto;
@@ -162,6 +167,9 @@ li {
     gap: 2em;
   }
 }
+.header__figure {
+  width: 210px;
+}
 @media (max-width: 63.9375em) {
   .header__figure {
     width: 185px;
@@ -169,7 +177,7 @@ li {
 }
 @media (max-width: 39.9375em) {
   .header__figure {
-    width: 125px;
+    width: 115px;
   }
 }
 @media (max-width: 350px) {
@@ -180,8 +188,9 @@ li {
 .header__button {
   font-size: 16px;
   border: 1px solid hsl(322deg, 100%, 66%);
-  padding: 0.75em 2em;
+  padding: 0.6em 2em;
   background-color: white;
+  font-family: "Open Sans", sans-serif;
   color: hsl(322deg, 100%, 66%);
   border-radius: 5em;
 }
@@ -192,7 +201,78 @@ li {
 }
 @media (max-width: 39.9375em) {
   .header__button {
-    padding: 0.6em 2em;
-    font-size: 13px;
+    padding: 0.5em 1.85em;
+    font-size: 12px;
   }
+}
+
+.hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  color: hsl(192deg, 100%, 9%);
+}
+.hero__article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75em;
+  padding: 1em;
+  margin-bottom: 4em;
+}
+.hero__article__heading {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+}
+@media (min-width: 39.9375em) {
+  .hero__article__heading {
+    font-size: 35px;
+  }
+}
+@media (min-width: 64em) {
+  .hero__article__heading {
+    font-size: 40px;
+  }
+}
+.hero__article__para {
+  align-self: center;
+  font-size: 14px;
+  margin-bottom: 1em;
+}
+@media (min-width: 39.9375em) {
+  .hero__article__para {
+    font-size: 18px;
+    width: 525px;
+  }
+}
+.hero__article__button {
+  font-weight: 600;
+  min-width: 220px;
+  border-radius: 5em;
+  border: none;
+  background-color: hsl(322deg, 100%, 66%);
+  color: white;
+  padding: 0.95em 1em;
+  align-self: center;
+}
+@media (max-width: 350px) {
+  .hero__article__button {
+    min-width: 180px;
+  }
+}
+@media (min-width: 39.9375em) {
+  .hero__article__button {
+    font-size: 14px;
+  }
+}
+@media (min-width: 64em) {
+  .hero__article__button {
+    padding: 1.3em 5em;
+  }
+}
+.hero__figure {
+  margin-inline: auto;
+  padding: 1em;
 }/*# sourceMappingURL=style.css.map */
