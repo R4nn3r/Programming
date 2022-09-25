@@ -91,6 +91,10 @@ select {
   }
 }
 
+body {
+  overflow: hidden;
+}
+
 /* Utilities */
 .bg-cover {
   background-image: url(./images/bg-pattern-card.svg);
@@ -183,4 +187,36 @@ body {
 }
 .one p {
   font-size: 12px;
+}
+
+main::before {
+  content: "";
+  display: block;
+  background-image: url(./images/bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 1125px;
+  width: 100%;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  left: -34%;
+  top: -70%;
+  transform: rotate(65deg);
+}
+
+main::after {
+  content: "";
+  display: block;
+  background-image: url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 1000px;
+  width: 100%;
+  background-size: contain;
+  position: absolute;
+  z-index: -1;
+  top: 32%;
+  left: 54%;
+  transform: rotate(15deg);
 }
