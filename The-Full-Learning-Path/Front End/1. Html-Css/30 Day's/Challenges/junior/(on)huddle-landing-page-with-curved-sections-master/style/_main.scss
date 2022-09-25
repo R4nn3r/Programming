@@ -1,0 +1,206 @@
+.main {
+  color: $neutral-Cyan;
+  // status section
+  &__stat {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    color: $neutral-Cyan;
+    justify-content: space-around;
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+      gap: 5em;
+    }
+    &__info {
+      min-width: 180px;
+      &__num {
+        font-family: $ff-heading;
+        font-size: 55px;
+        @include breakpoint-up(small) {
+          font-size: 80px;
+        }
+      }
+      &__text {
+        font-family: $ff-body;
+        font-size: 14px;
+        @include breakpoint-up(small) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .people {
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(../images/icon-communities.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+
+        @include breakpoint-up(small) {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+    .message {
+      &::before {
+        content: "";
+        display: block;
+        background-image: url(../images/icon-messages.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+
+        @include breakpoint-up(small) {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+  }
+  // content section
+  &__content {
+    &__container {
+      display: flex;
+      gap: 9em;
+
+      @include breakpoint-down(small) {
+        flex-direction: column;
+        gap: 2em;
+      }
+    }
+    &__article {
+      @include breakpoint-down(small) {
+        text-align: center;
+        order: 2;
+      }
+
+      &__heading {
+        font-family: $ff-heading;
+        font-size: 40px;
+        margin: 0.5em 0;
+
+        @include breakpoint-down(small) {
+          font-size: 24px;
+          margin: 2em 0 0.75em 0;
+        }
+      }
+      &__para {
+        font-family: $ff-body;
+        max-width: 90%;
+        @include breakpoint-down(small) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  // color scheme styles
+  .bg-color {
+    background-color: $neutral-Blue;
+  }
+
+  .one {
+    &::before {
+      content: "";
+      display: block;
+      background-image: url(../images/bg-section-top-desktop-1.svg);
+      background-repeat: no-repeat;
+      width: 100%;
+      background-position: center;
+      height: 159px;
+      @include breakpoint-down(small) {
+        background-image: url(../images/bg-section-top-mobile-1.svg);
+        height: 113px;
+        background-size: cover;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      background-image: url(../images/bg-section-bottom-desktop-1.svg);
+      background-repeat: no-repeat;
+      width: 100%;
+      background-position: center;
+      height: 135px;
+      @include breakpoint-down(small) {
+        background-image: url(../images/bg-section-bottom-mobile-1.svg);
+        height: 113px;
+        background-size: cover;
+      }
+    }
+  }
+  .two {
+    &::before {
+      content: "";
+      display: block;
+      background-image: url(../images/bg-section-top-desktop-2.svg);
+      background-repeat: no-repeat;
+      width: 100%;
+      background-position: center;
+      height: 159px;
+      @include breakpoint-down(small) {
+        background-image: url(../images/bg-section-top-mobile-2.svg);
+        height: 113px;
+        background-size: cover;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      background-image: url(../images/bg-section-bottom-desktop-2.svg);
+      background-repeat: no-repeat;
+      width: 100%;
+      background-position: center;
+      height: 135px;
+      @include breakpoint-down(small) {
+        background-image: url(../images/bg-section-bottom-mobile-2.svg);
+        height: 113px;
+        background-size: cover;
+      }
+    }
+  }
+
+  // question section
+  &__question {
+    margin-top: 2em;
+    text-align: center;
+    @include breakpoint-up(large) {
+      margin-top: 5em;
+    }
+    &__container {
+      &__heading {
+        margin-bottom: 1em;
+        font-size: 30px;
+        font-family: $ff-heading;
+      }
+    }
+
+    &__button {
+      font-family: $ff-body;
+      font-weight: $fw-b-700;
+      padding: 1em 2em;
+      color: white;
+      border: none;
+      background-color: $crl-pink;
+      border-radius: 5em;
+
+      @include breakpoint-down(xsmall) {
+        min-width: 180px;
+      }
+      @include breakpoint-up(small) {
+        font-size: 14px;
+      }
+      @include breakpoint-up(large) {
+        padding: 1.3em 5em;
+      }
+    }
+  }
+}
