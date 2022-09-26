@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+    <!-- Link -->
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="box">
+    <main class="main">
+      <section class="main__container">
+        <div class="main__left shadow">
+          <figure class="main__left__figure">
+            <img src="./images/logo.svg" alt="Fylo Logo" />
+          </figure>
+
+          <div class="main__left__folders">
+            <div class="main__left__folders__folder">
+              <img
+                src="./images/icon-document.svg"
+                alt="Document"
+                class="icon"
+              />
+            </div>
+            <div class="main__left__folders__folder">
+              <img src="./images/icon-folder.svg" alt="Folder" class="icon" />
+            </div>
+            <div class="main__left__folders__folder">
+              <img src="./images/icon-upload.svg" alt="Upload" class="icon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="main__right shadow">
+          <div class="main__right__stat">
+            You've used <span class="bold">815 GB</span> of your storage
+          </div>
+          <div class="main__right__bar">
+            <div class="main__right__bar__fill">
+              <span class="white-dot"></span>
+            </div>
+          </div>
+          <div class="main__right__content bold flex__jc-sb">
+            <p>0 GB</p>
+            <p>1000 GB</p>
+          </div>
+
+          <div class="storage__box">
+            <div class="main__right__tag">
+              <h1>185 <span class="tagtext">GB LEFT</span></h1>
+
+              <div class="main__right__tag__triangle"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer> -->
+  </body>
+</html>
