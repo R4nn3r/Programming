@@ -46,7 +46,6 @@ img,
 picture,
 svg {
   max-width: 100%;
-  display: block;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -70,17 +69,45 @@ svg {
   max-width: 1440px;
   margin-inline: auto;
 }
+.bold {
+  font-weight: 700;
+}
+
+.flex {
+  &__jc-sb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 // General
 body {
+  color: white;
   background-color: hsl(229, 57%, 11%);
   background-image: url(../images/bg-desktop.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @include breakpoint-down(small) {
     background-image: url(../images/bg-mobile.png);
     background-size: cover;
   }
+}
+
+main {
+  margin: 2em;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.tagtext {
+  font-size: 10px;
+  color: $Grayish-Blue;
 }

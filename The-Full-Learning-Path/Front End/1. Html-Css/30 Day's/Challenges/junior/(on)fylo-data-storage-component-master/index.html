@@ -27,10 +27,55 @@
       }
     </style>
   </head>
-  <body>
-    <main class="main box container--pall-2"></main>
+  <body class="box">
+    <main class="main">
+      <section class="main__container">
+        <div class="main__left">
+          <figure class="main__left__figure">
+            <img src="./images/logo.svg" alt="Fylo Logo" />
+          </figure>
 
-    <!-- 185 GB Left 0 GB 1000 GB -->
+          <div class="main__left__folders">
+            <div class="main__left__folders__folder">
+              <img
+                src="./images/icon-document.svg"
+                alt="Document"
+                class="icon"
+              />
+            </div>
+            <div class="main__left__folders__folder">
+              <img src="./images/icon-folder.svg" alt="Folder" class="icon" />
+            </div>
+            <div class="main__left__folders__folder">
+              <img src="./images/icon-upload.svg" alt="Upload" class="icon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="main__right">
+          <div class="main__right__stat">
+            You've used <span class="bold">815 GB</span> of your storage
+          </div>
+          <div class="main__right__bar">
+            <div class="main__right__bar__fill">
+              <span class="white-dot"></span>
+            </div>
+          </div>
+          <div class="main__right__content bold flex__jc-sb">
+            <p>0 GB</p>
+            <p>1000 GB</p>
+          </div>
+
+          <div class="storage__box">
+            <div class="main__right__tag">
+              <h1>185 <span class="tagtext">GB LEFT</span></h1>
+
+              <div class="main__right__tag__triangle"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- <footer class="attribution">
       Challenge by
