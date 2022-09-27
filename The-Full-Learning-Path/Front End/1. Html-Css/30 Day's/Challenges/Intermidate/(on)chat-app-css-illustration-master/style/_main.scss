@@ -1,0 +1,272 @@
+.main {
+  padding: 2em;
+  &__container {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      background: linear-gradient(90deg, $crl-v, $crl-m);
+      position: absolute;
+      content: "";
+      top: -9.125rem;
+      right: initial;
+      left: -8.125rem;
+      transform: translateX(0);
+      z-index: -1;
+
+      height: 584px;
+      width: 301px;
+      border-radius: 0 0 55em 18em;
+      border-radius: 0 0 16em 16em;
+      @include breakpoint-up(large) {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 670px;
+        width: 500px;
+        border-radius: 0 0 16em 16em;
+        top: -9.125rem;
+        right: initial;
+        left: -8.125rem;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__mobile {
+    padding: 1em;
+    @include breakpoint-up(large) {
+      margin-right: 4em;
+    }
+    &__mobile {
+      border-radius: 1.8em;
+      min-height: 534px;
+      min-width: 259px;
+      outline: 1px solid rgba(196, 196, 196, 0.263);
+
+      background-color: white;
+      box-shadow: rgb(72 72 72 / 21%) 19px 20px 21px;
+
+      &__display {
+        border-radius: 1.5em;
+        min-height: 509px;
+        min-width: 212px;
+        outline: 1px solid rgba(196, 196, 196, 0.407);
+        background-color: $crl-bg-200;
+      }
+    }
+  }
+  &__text {
+    padding: 1em;
+    text-align: center;
+    @include breakpoint-up(large) {
+      width: 32%;
+      text-align: left;
+    }
+
+    &__heading {
+      font-size: 35px;
+      font-weight: $fw-500;
+      margin-bottom: 0.5em;
+      color: $text-heading;
+      line-height: 1.2;
+    }
+    &__para {
+      font-weight: $fw-400;
+      font-size: 14px;
+      color: $text-p;
+      line-height: 1.6;
+    }
+  }
+}
+
+// In mobile display style
+.display {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 60px;
+    background-color: white;
+    display: block;
+    border-radius: 5em;
+    top: 5px;
+    right: initial;
+    left: 89px;
+    transform: translateX(0);
+    transition: height 0.4s ease-in-out, width 0.4s ease-in-out,
+      top 0.4s ease-in-out, left 0.4s ease-in-out;
+
+    @include breakpoint-up(medium) {
+      border-radius: 0 0 10px 10px;
+      height: 22px;
+      width: 127px;
+      top: -3px;
+      left: 55px;
+    }
+  }
+
+  &__topbar {
+    border-radius: 1.5em 1.5em 0.25em 0.25em;
+    background: linear-gradient(45deg, $crl-v, $crl-m);
+
+    &__container {
+      padding: 2em 0.5em 0.75em 0.5em;
+      display: flex;
+      flex-direction: row;
+      gap: 1;
+      align-items: center;
+    }
+
+    &__user-detail {
+      font-size: 9px;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+      margin-right: 9.5em;
+      .name {
+        font-weight: $fw-500;
+        font-size: 11px;
+      }
+      .status {
+        font-size: 8px;
+        opacity: 0.75;
+      }
+    }
+
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      .dot {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: white;
+      }
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 0.5em;
+
+    &__dogs {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+      align-self: flex-end;
+      margin-top: 0.5em;
+
+      img {
+        border-radius: 8px;
+        width: 35px;
+      }
+    }
+
+    &__one {
+      width: 50%;
+      color: $text-m-violet;
+      background-color: $crl-bg-200;
+      border-radius: 10px 10px 10px 2px;
+      background-color: #dddddd8f;
+    }
+    &__two {
+      width: 70%;
+      color: $text-m-violet;
+      border-radius: 10px 10px 10px 2px;
+      background-color: #dddddd8f;
+    }
+    &__three {
+      width: 70%;
+      color: $text-d-violet;
+      align-self: flex-end;
+      border-radius: 10px 10px 2px 10px;
+      background-color: $crl-bg-100;
+      box-shadow: 4px 3px 4px #e1e1e1;
+    }
+    &__four {
+      width: 50%;
+      color: $text-d-violet;
+      border-radius: 10px 10px 2px 10px;
+      align-self: flex-end;
+      background-color: $crl-bg-100;
+      box-shadow: 4px 3px 4px #e1e1e1;
+    }
+    &__five {
+      width: 60%;
+      color: $text-m-violet;
+      border-radius: 10px 10px 10px 2px;
+      background-color: #dddddd8f;
+    }
+    &__rad {
+      display: flex;
+      gap: 0.5em;
+      align-items: center;
+      width: 80%;
+      justify-content: space-between;
+      color: $text-m-violet;
+      border-radius: 10px 10px 10px 2px;
+      color: white;
+      background: linear-gradient(90deg, $crl-m, $crl-v);
+    }
+
+    &__input {
+      border-radius: 5em;
+      padding: 0.2em;
+      background-color: white;
+      margin-top: 0.5em;
+      &__input {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        input {
+          border-radius: 5em;
+          padding: 10px;
+          font-size: 10px;
+          border: none;
+          outline: none;
+
+          &::placeholder {
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+
+    .tab {
+      padding: 0.5em;
+      align-items: center;
+      &__text {
+        font-size: 8px;
+        font-weight: $fw-400;
+      }
+    }
+  }
+}
+
+.money {
+  margin-right: 0.25em;
+  font-size: 14px;
+  font-weight: $fw-700;
+}
+.side {
+  display: flex;
+  gap: 0.5em;
+}
+.radio {
+  border: 1px solid $crl-bg-400;
+  background: transparent !important;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.arrow_two img {
+  cursor: pointer;
+}
