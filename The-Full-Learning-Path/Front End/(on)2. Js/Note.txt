@@ -1,1 +1,39 @@
 JS
+    JavaScript was introduced in 1995 as a way to add programs to web pages in the
+    Netscape Navigator browser. The language has since been adopted by all other
+    major graphical web browsers. It has made modern web applications possible—
+    applications with which you can interact directly without doing a page reload
+    for every action. JavaScript is also used in more traditional websites to provide
+    various forms of interactivity and cleverness.
+
+
+# Events
+
+    Event	            Description
+    onchange	        An HTML element has been changed
+    onclick	            The user clicks an HTML element
+    onmouseover	        The user moves the mouse over an HTML element
+    onmouseout	        The user moves the mouse away from an HTML element
+    onkeydown	        The user pushes a keyboard key
+    onload	            The browser has finished loading the page
+
+# querySelector 
+
+    The querySelector() method returns the first element that matches a CSS selector.
+    To return all matches (not only the first), use the querySelectorAll() instead.
+    Both querySelector() and querySelectorAll() 
+        Note 
+            throw a SYNTAX_ERR exception if the selector(s) is invalid.
+
+
+        # QuerySelector Methods:
+            The querySelector() Method
+
+            The querySelectorAll() Method
+
+        # GetElement Methods:
+            The getElementById() Method
+
+            The getElementsByTagName() Method
+
+            The getElementsByClassName() Method
