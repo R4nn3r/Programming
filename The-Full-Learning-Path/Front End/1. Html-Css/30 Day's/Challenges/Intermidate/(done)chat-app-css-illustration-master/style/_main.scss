@@ -44,18 +44,18 @@
       margin-right: 4em;
     }
     &__mobile {
-      border-radius: 1.8em;
-      min-height: 534px;
-      min-width: 259px;
+      border-radius: 1.35em;
+      min-height: 535px;
+      min-width: 260px;
       outline: 1px solid rgba(196, 196, 196, 0.263);
 
       background-color: white;
       box-shadow: rgb(72 72 72 / 21%) 19px 20px 21px;
 
       &__display {
-        border-radius: 1.5em;
-        min-height: 509px;
-        min-width: 212px;
+        border-radius: 1em;
+        min-height: 519px;
+        min-width: 244px;
         outline: 1px solid rgba(196, 196, 196, 0.407);
         background-color: $crl-bg-200;
       }
@@ -107,14 +107,14 @@
     @include breakpoint-up(medium) {
       border-radius: 0 0 10px 10px;
       height: 22px;
-      width: 127px;
+      width: 131px;
       top: -3px;
       left: 55px;
     }
   }
 
   &__topbar {
-    border-radius: 1.5em 1.5em 0.25em 0.25em;
+    border-radius: 1em 1em 0.25em 0.25em;
     background: linear-gradient(45deg, $crl-v, $crl-m);
 
     &__container {
