@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+// Width
+$wid-desktop: 1440px;
+$wid-mobile: 375px;
+
+$ff-primary: "Rubik", sans-serif;
+$fs-primary: 16px;
+
+// Font weight
+$fw-400: 400;
+$fw-500: 500;
+$fw-700: 700;
+
+// Text colors
+$text-p-violet: hsl(276, 100%, 81%); // sub-heading
+$text-m-violet: hsl(276, 55%, 52%); // chat on the left
+$text-d-violet: hsl(271, 15%, 43%); // chat on the right
+$text-ph: hsl(206, 6%, 79%); // placeholder
+$text-heading: #3e2753; // main heading
+$text-p: hsl(270, 7%, 64%); // paragraph
+
+// Gradients
+$crl-m: hsl(293, 100%, 63%); // one
+$crl-v: hsl(264, 100%, 61%); // two
+
+// Bg colors
+$crl-bg-100: hsl(0, 0%, 100%);
+$crl-bg-200: hsl(270, 20%, 96%); // app bg
+$crl-bg-300: hsl(271, 36%, 24%); // btn bg
+$crl-bg-400: hsl(289, 100%, 72%); // radio btn outline
