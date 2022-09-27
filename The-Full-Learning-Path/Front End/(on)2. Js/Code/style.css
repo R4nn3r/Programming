@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 1440px;
+  margin-inline: auto;
+  font-family: monospace;
+}
+
+.section {
+  text-align: center;
+  font-family: monospace;
+  font-size: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.section_div {
+  border: 1px dashed black;
+  padding: 0.5em 2em;
+  background-color: black;
+  color: yellow;
+  box-shadow: 8px 8px 0px yellow;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  flex: 0;
+}
+
+svg {
+  width: 85px;
+  cursor: pointer;
+}
+
+span {
+  color: white;
+  font-weight: normal;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+button {
+  border: none;
+  padding: 1em 2em;
+  gap: 1em;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: yellow;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: black;
+  color: yellow;
+}
+
+p {
+  border: 2px double yellow;
+  padding: 1em;
+  box-shadow: 8px 8px 0px black;
+}
