@@ -109,9 +109,9 @@ svg {
 
 .main {
   padding: 2em;
+  position: relative;
 }
 .main__container {
-  position: relative;
   z-index: 1;
 }
 .main__container::before {
@@ -133,13 +133,19 @@ svg {
     position: absolute;
     content: "";
     display: block;
-    height: 670px;
+    height: 770px;
     width: 500px;
     border-radius: 0 0 16em 16em;
     top: -9.125rem;
     right: initial;
     left: -8.125rem;
     transform: translateX(0);
+  }
+}
+@media (min-width: 87.5em) {
+  .main__container::before {
+    height: 970px;
+    width: 550px;
   }
 }
 .main__mobile {

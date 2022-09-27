@@ -1,7 +1,8 @@
 .main {
   padding: 2em;
+  position: relative;
+
   &__container {
-    position: relative;
     z-index: 1;
 
     &::before {
@@ -22,13 +23,17 @@
         position: absolute;
         content: "";
         display: block;
-        height: 670px;
+        height: 770px;
         width: 500px;
         border-radius: 0 0 16em 16em;
         top: -9.125rem;
         right: initial;
         left: -8.125rem;
         transform: translateX(0);
+      }
+      @include breakpoint-up(xlarge) {
+        height: 970px;
+        width: 550px;
       }
     }
   }
