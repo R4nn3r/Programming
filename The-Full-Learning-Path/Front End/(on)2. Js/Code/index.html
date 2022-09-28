@@ -30,17 +30,42 @@
         <div class="text">
           <h1>
             JavaScript <br />
-            <span>Day (#1)</span>
+            <span class="span"
+              >Day (#<span id="counter" class="num">1</span>)</span
+            >
           </h1>
         </div>
-        <button onclick="changeThebs()">Done</button>
       </div>
     </section>
 
     <main class="main">
-      <button onclick="countNum()">Count</button>
-      <p id="counter">1</p>
+      <h2 class="hello">Hello World!</h2>
+
+      <section class="check">
+        <h1 class="h1">JavaScript</h1>
+        <h5>
+          JavaScript was introduced in 1995 as a way to add programs to web
+          pages in the Netscape Navigator browser. The language has since been
+          adopted by all other major graphical web browsers. It has made modern
+          web applications possible— applications with which you can interact
+          directly without doing a page reload for every action. JavaScript is
+          also used in more traditional websites to provide various forms of
+          interactivity and cleverness.
+        </h5>
+        <div class="flex">
+          <button onclick="hello()">More</button>
+          <button onclick="countNum()">Add Day</button>
+        </div>
+      </section>
     </main>
+
+    <button
+      class="first"
+      id="clickBtn"
+      onclick="console.log('Just Got Clicked')"
+    >
+      Click
+    </button>
 
     <script src="./try.js"></script>
   </body>
