@@ -153,12 +153,13 @@ h5 {
 }
 
 .cs50 {
-  text-align: left;
   outline: 1px dashed black;
   padding: 2em;
   margin: 1em;
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
 }
 
 .count {
@@ -174,7 +175,7 @@ h5 {
   outline: 1px dashed red;
   padding: 1em;
   color: black;
-  width: 25%;
+  width: 15%;
   align-self: center;
   background-color: yellow;
 }
@@ -211,4 +212,8 @@ input::placeholder {
   color: black;
   background-color: yellow;
   box-shadow: 5px 5px 0px black;
+}
+
+.buttons h1 {
+  font-weight: normal;
 }

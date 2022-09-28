@@ -128,3 +128,15 @@ document.addEventListener("DOMContentLoaded", function () {
     alert(`Hello ${name}`);
   });
 });
+
+const doc = document.querySelector(".buttons");
+console.log(doc);
+
+const buttonsArr = doc.querySelectorAll("button");
+console.log(buttonsArr);
+
+buttonsArr.forEach(function (button) {
+  button.onclick = () => {
+    document.querySelector(".buttonsh").style.color = button.dataset.color;
+  };
+});
