@@ -165,7 +165,7 @@ h5 {
   outline: 1px dashed black;
   padding: 1em;
   color: white;
-  width: 25%;
+  width: 15%;
   align-self: center;
   background-color: black;
 }
@@ -183,4 +183,32 @@ h5 {
   align-self: center;
   width: 25%;
   padding: 1em;
+}
+
+form {
+  align-self: center;
+  outline: 1px dashed black;
+  padding: 1em;
+}
+
+input {
+  color: black;
+  outline: 1px dashed black;
+  border: none;
+  padding: 1em;
+  font-size: 15px;
+  background-color: yellow;
+  margin-bottom: 0.5em;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+.submit {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+  background-color: yellow;
+  box-shadow: 5px 5px 0px black;
 }

@@ -120,3 +120,11 @@ addCount.addEventListener("click", function () {
     val.classList.remove("count-plus");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = (document.querySelector("form").onsubmit = function () {
+    const name = document.querySelector("#name").value;
+    console.log(name);
+    alert(`Hello ${name}`);
+  });
+});

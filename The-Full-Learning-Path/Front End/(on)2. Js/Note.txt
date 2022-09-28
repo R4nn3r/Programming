@@ -113,11 +113,36 @@ JS
 
             The querySelectorAll() Method (selects everything)
 
-        # GetElement Methods:
-            The getElementById() Method
-
-            The getElementsByTagName() Method
-
-            The getElementsByClassName() Method
+      
 
 # DOM Manipulation 
+
+    Are Objects and the programming interface is the method 
+    and property of each object.
+        Method: action to be done 
+            Ex. add, or delete elements 
+        property: value to set or get 
+            Ex. like changing the content of an html element 
+
+        Ex 
+        getElementById is a method, 
+        while innerHTML is a property.
+
+        For Html:
+            <p id="demo"></p>
+        For Js: 
+            document.getElementById("demo").innerHTML = "Hello, world!";
+
+    # Finding HTML Elements , 
+                The getElementById() Method
+
+                The getElementsByTagName() Method
+
+                The getElementsByClassName() Method
+                
+    # Changing HTML Elements , 
+    # Adding and Deleting Elements,
+    # Adding Events Handlers,
+    # Finding HTML Objects
+       
+        https://www.w3schools.com/js/js_htmldom_document.asp
