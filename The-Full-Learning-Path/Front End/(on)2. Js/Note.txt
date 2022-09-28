@@ -17,6 +17,69 @@ JS
     onkeydown	        The user pushes a keyboard key
     onload	            The browser has finished loading the page
 
+
+    Events --> Actions 
+
+
+    # Inline Events 
+
+        Ex. 
+         <button class="clickBtn" onclick="console.log('Just Got Clicked')">Click</button>
+
+
+    # addEventListener 
+        var.addEventListener("click", function (e) {
+            // Functions Code Goes here
+         });
+
+         or 
+         function functionName(e) {
+            // Functions Code Goes here
+         }
+
+         attach the function to the event by
+         
+         var.addEventListener("click), functionName;
+
+
+        Ex.
+        const onbtn = document.getElementById("clickBtn");
+
+        onbtn.addEventListener("click", function (e) {
+        console.log("Clicked");
+
+        if (onbtn.classList.contains("red")) {
+            onbtn.classList.remove("red");
+        } else {
+            onbtn.classList.add("red");
+        }
+        });
+
+        Or using functions 
+
+        function handleClick(e) {
+            console.log("Clicked");
+            onbtn.innerHTML = "Clicked";
+
+            if (onbtn.classList.contains("red")) {
+                onbtn.classList.remove("red");
+                onbtn.innerHTML = "Click";
+            } else {
+                onbtn.classList.add("red");
+            }
+        }
+
+        onbtn.addEventListener("click", handleClick);
+
+
+
+    # Event Object 
+
+    # Standard vs Arrow 
+
+
+
+
 # querySelector 
 
     The querySelector() method returns the first element that matches a CSS selector.
@@ -37,3 +100,5 @@ JS
             The getElementsByTagName() Method
 
             The getElementsByClassName() Method
+
+# Dom 
