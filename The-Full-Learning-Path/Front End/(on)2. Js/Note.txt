@@ -15,7 +15,7 @@ JS
     onmouseout	        The user moves the mouse away from an HTML element
     onkeydown	        The user pushes a keyboard key
     onload	            The browser has finished loading the page
-
+    DOMContentLoaded	The browser has finished loading the pages
 
     Events --> Actions 
 
@@ -108,8 +108,10 @@ JS
 
         # QuerySelector Methods:
             The querySelector() Method
+                Selects the First element
+                    ".class", "#id", "h1-h4"(elements)
 
-            The querySelectorAll() Method
+            The querySelectorAll() Method (selects everything)
 
         # GetElement Methods:
             The getElementById() Method
@@ -118,4 +120,4 @@ JS
 
             The getElementsByClassName() Method
 
-# Dom 
+# DOM Manipulation 

@@ -74,13 +74,49 @@ color.addEventListener("click", function (e) {
   }
 });
 
-const Firstheading = document.querySelector(".first");
+const Firstheading = document.querySelector(".main");
 console.log(Firstheading);
 
-Firstheading.addEventListener("mouseout", function (e) {
+Firstheading.addEventListener("click", function (e) {
   if (Firstheading.classList.contains("red")) {
     Firstheading.classList.remove("red");
   } else {
     Firstheading.classList.add("red");
+  }
+});
+
+const result = Firstheading.querySelector("h2");
+console.log(result);
+
+const boxes = document.querySelectorAll(".box");
+console.log(boxes);
+
+boxes.forEach((r) => {
+  r.style.color = "Yellow";
+  r.style.fontWeight = "bold";
+  r.style.padding = "1em";
+  r.style.margin = "0.5em";
+  r.style.backgroundColor = "black";
+});
+
+const answer = document.querySelector(".cs50");
+console.log(answer);
+const val = answer.querySelector("#count");
+console.log(val);
+const addCount = answer.querySelector("button");
+console.log(addCount);
+let count_t = 0;
+
+addCount.addEventListener("click", function () {
+  count_t++;
+  val.innerHTML = count_t;
+
+  if (count_t % 2 == 0) {
+    if (count_t % 10 == 0) {
+      alert(`Number Divisible ${count_t} / 10 = ${count_t / 10}`);
+    }
+    val.classList.add("count-plus");
+  } else {
+    val.classList.remove("count-plus");
   }
 });

@@ -71,6 +71,7 @@ button {
   cursor: pointer;
   background-color: yellow;
   transition: all 0.2s ease-in-out;
+  box-shadow: 1px 5px 10px rgba(27, 27, 27, 0.278);
 }
 
 button:hover {
@@ -85,13 +86,13 @@ p {
 }
 
 .red {
-  background-color: red;
+  background-color: yellow;
   box-shadow: 5px 5px 0px black;
   transition: all 0.2s ease-in-out;
 }
 
 .red:hover {
-  background-color: yellow;
+  background-color: red;
   color: black;
 }
 
@@ -140,4 +141,46 @@ h5 {
 }
 .circle-plus2 {
   fill: purple;
+}
+
+.first {
+  margin-top: 1em;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.cs50 {
+  text-align: left;
+  outline: 1px dashed black;
+  padding: 2em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.count {
+  outline: 1px dashed black;
+  padding: 1em;
+  color: white;
+  width: 25%;
+  align-self: center;
+  background-color: black;
+}
+
+.count-plus {
+  outline: 1px dashed red;
+  padding: 1em;
+  color: black;
+  width: 25%;
+  align-self: center;
+  background-color: yellow;
+}
+
+.lastbtn {
+  align-self: center;
+  width: 25%;
+  padding: 1em;
 }
