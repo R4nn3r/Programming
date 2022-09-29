@@ -156,6 +156,15 @@ JS
         let name = ....;
         const name = ....;
 
+    # Function 
+
+        function example(parameters) {
+
+        }
+
+            > call the function 
+        example(arg)
+
 # Closures 
 # DOM (Document Object Model)
 # MVC Architecture
