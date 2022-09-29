@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 1440px;
+  margin-inline: auto;
+  font-family: monospace;
+}
+.container {
+  max-width: 500px;
+}
+
+.section {
+  margin-inline: auto;
+  text-align: center;
+  font-family: monospace;
+  font-size: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.section_div {
+  border: 1px dashed black;
+  padding: 0.5em 2em;
+  background-color: black;
+  color: yellow;
+  box-shadow: 8px 8px 0px yellow;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  flex: 0;
+}
+svg {
+  width: 85px;
+  cursor: pointer;
+}
+span {
+  color: white;
+  font-weight: normal;
+}
+
+.main {
+  padding: 1em;
+  margin: 4em 1em;
+  margin-inline: auto;
+}
+
+.heading {
+  background-color: black;
+  color: rgb(255, 255, 0);
+  padding: 0.5em;
+  display: inline-block;
+  outline: 1px double yellow;
+}
+
+.task {
+  margin-top: 0.5em;
+  height: 35px;
+  gap: 1em;
+  padding: 0.5em;
+}
+
+p {
+  width: 100%;
+  outline: 1px dashed black;
+  padding: 1em;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  flex-direction: column;
+}
+
+button {
+  width: 100%;
+  padding: 0.25em;
+  font-size: 10px;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: lavender;
+  box-shadow: 10px 10px 5px rgba(78, 78, 78, 0.176);
+}
+input {
+  font-size: 10px;
+  border: none;
+  padding: 0.5em;
+}
+
+.in_put {
+  width: -webkit-fill-available;
+  outline: 1px solid rgb(159, 159, 159);
+  border-radius: 0.2em;
+}
+
+.sub {
+  border: none;
+  background-color: black;
+  color: yellow;
+  border-radius: 0.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.sub:hover {
+  background-color: yellow;
+  color: black;
+  outline: 1px solid black;
+}
+
+.li {
+  margin: 0.5em;
+  /* background-color: lemonchiffon; */
+  /* box-shadow: 10px 10px 5px rgba(78, 78, 78, 0.176); */
+  padding: 1em;
+}
+
+li {
+  list-style: none;
+  margin: 0.5em;
+  /* background-color: rgb(150, 150, 150); */
+  color: black;
+  padding: 0.5em;
+}

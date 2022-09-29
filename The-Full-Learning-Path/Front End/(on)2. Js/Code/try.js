@@ -129,14 +129,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const doc = document.querySelector(".buttons");
-console.log(doc);
+const doc = document.querySelector(".buttonsh");
 
-const buttonsArr = doc.querySelectorAll("button");
-console.log(buttonsArr);
+const selectArr = document.querySelector("select");
 
-buttonsArr.forEach(function (button) {
-  button.onclick = () => {
-    document.querySelector(".buttonsh").style.color = button.dataset.color;
-  };
-});
+selectArr.onchange = function (e) {
+  doc.style.color = this.value;
+};

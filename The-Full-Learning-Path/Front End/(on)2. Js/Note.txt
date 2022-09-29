@@ -146,3 +146,16 @@ JS
     # Finding HTML Objects
        
         https://www.w3schools.com/js/js_htmldom_document.asp
+
+
+
+# Day 2 (Two)
+
+# Fundamentals of JavaScript
+    # Variables 
+        let name = ....;
+        const name = ....;
+
+# Closures 
+# DOM (Document Object Model)
+# MVC Architecture

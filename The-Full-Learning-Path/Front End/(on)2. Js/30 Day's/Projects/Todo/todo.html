@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="./javascript.svg" />
+    <link rel="icon" href="./images/javascript.svg" />
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning Js</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./apps/style.css" />
   </head>
   <body>
     <header class="section">
       <div class="section_div">
         <svg
-          onclick="hello()"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           aria-hidden="true"
@@ -35,25 +34,32 @@
               >Day (#<span id="counter" class="num">2</span>)</span
             >
           </h1>
+          <p>Building a Todo App</p>
         </div>
       </div>
     </header>
 
-    <main class="main container">
-      <form id="form">
+    <main class="main">
+      <section class="main__header">
+        <h1>Todo</h1>
+        <p>(list)</p>
+      </section>
+      <form class="main__inputarea">
         <input
-          class="textin"
-          type="text"
-          autofocus
-          placeholder="Enter Text"
           id="input"
+          autofocus
+          type="text"
+          class="main__inputarea__intxt"
+          placeholder="Add a Todo"
         />
-        <input class="submit" type="submit" />
+        <input type="submit" class="main__inputarea__inbtn" id="submit" />
       </form>
 
-      <ul class="list"></ul>
+      <section class="main__content" id="todo">
+        <div>Hello World!</div>
+      </section>
     </main>
 
-    <script src="./try3.js"></script>
+    <script src="./apps/main.js"></script>
   </body>
 </html>
