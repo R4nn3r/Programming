@@ -153,8 +153,9 @@ JS
 
 # Fundamentals of JavaScript
     # Variables 
-        let name = ....;
-        const name = ....;
+        let name = ....; and you can reassign the value
+        const name = ....; cant use it again
+        var name = ....; old not used 
 
     # Function 
 

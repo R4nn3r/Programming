@@ -33,6 +33,7 @@ form.onsubmit = () => {
 const form_2 = document.querySelector("#form_2");
 const button_2 = document.querySelector("#submit_2");
 const todo = form_2.querySelector("#input_2");
+const date = document.querySelector("#date");
 
 button_2.disabled = true;
 const todos = [];
@@ -47,8 +48,13 @@ todo.onkeyup = () => {
 const todo_2 = document.querySelector("#todo_2");
 
 form_2.onsubmit = function (e) {
-  todos.push(todo.value);
   const div_2 = document.createElement("div");
+  //   Reset the list
+  if (todo.value === "clear") {
+    todo_2.innerHTML = "";
+  } else {
+    todos.push(todo.value, date.value);
+  }
 
   todos.forEach(function (todoText) {
     div_2.innerHTML = todoText;
@@ -56,7 +62,7 @@ form_2.onsubmit = function (e) {
   });
 
   todo.value = "";
-  todo.placeholder = "Added! Got More?";
+  todo.placeholder = "Added! Got More? or write 'clear'";
   button_2.disabled = true;
 
   return false;

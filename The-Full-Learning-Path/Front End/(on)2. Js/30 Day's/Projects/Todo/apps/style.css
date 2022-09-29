@@ -182,4 +182,14 @@ span {
   background-color: black;
   box-shadow: 8px 8px 0px yellow;
   color: yellow;
+}
+
+.date {
+  border: 1px dashed yellow;
+  background-color: yellow;
+  outline: none;
+}
+
+.new-input {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */
