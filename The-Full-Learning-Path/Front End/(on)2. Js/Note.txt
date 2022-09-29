@@ -165,6 +165,18 @@ JS
             > call the function 
         example(arg)
 
+    # Array
+
+        const arr = ['one', 'two', 'three']
+
+        arr.push("new data')
+        arr.pop();
+
+    # Loops 
+    arr.forEach( function (param) {
+
+    });
+
 # Closures 
 # DOM (Document Object Model)
 # MVC Architecture

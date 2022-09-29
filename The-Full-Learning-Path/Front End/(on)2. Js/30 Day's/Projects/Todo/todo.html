@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./apps/style.css" />
   </head>
   <body>
+    <!-- Header -->
     <header class="section">
       <div class="section_div">
         <svg
@@ -39,10 +40,12 @@
       </div>
     </header>
 
+    <!-- Main Section -->
     <main class="main">
       <section class="main__header">
         <h1>Todo</h1>
         <p>(list)</p>
+        <h4>Using Unordered List</h4>
       </section>
       <form class="main__inputarea">
         <input
@@ -59,6 +62,31 @@
         <div>Hello World!</div>
       </section>
     </main>
+
+    <!-- Other method of a todo list -->
+    <section class="main">
+      <section class="main__header">
+        <h1>Todo</h1>
+        <p>(list)</p>
+        <p>2nd Type</p>
+        <h4>Using Array's & Loops</h4>
+      </section>
+      <form class="main__inputarea" id="form_2">
+        <input
+          id="input_2"
+          autofocus
+          type="text"
+          class="main__inputarea__intxt"
+          placeholder="Add a Todo"
+        />
+        <input type="submit" class="main__inputarea__inbtn" id="submit_2" />
+      </form>
+
+      <section class="main__content" id="todo_2">
+        <div>Hello World!</div>
+        <div>Again :)</div>
+      </section>
+    </section>
 
     <script src="./apps/main.js"></script>
   </body>
