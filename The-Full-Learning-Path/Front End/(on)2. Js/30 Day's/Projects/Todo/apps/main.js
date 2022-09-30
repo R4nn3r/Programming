@@ -1,92 +1,106 @@
-const button = document.querySelector("#submit");
-button.disabled = true;
+// Second Section
+const input_todo = document.querySelector("#todo-title");
+const button_todo = document.querySelector("#todo-button");
 
-const input = document.querySelector("#input");
-
-input.onkeyup = (e) => {
-  if (input.value.length > 0) {
-    button.disabled = false;
+button_todo.disabled = true;
+button_todo.style.opacity = 0.75;
+input_todo.onkeyup = (e) => {
+  if (input_todo.value.length > 0) {
+    button_todo.disabled = false;
+    button_todo.style.opacity = 1;
   } else {
-    button.disabled = true;
+    button_todo.style.opacity = 0.75;
+    button_todo.disabled = true;
   }
 };
-const form = document.querySelector("form");
 
-form.onsubmit = () => {
-  const textArea = document.querySelector("#todo");
-  console.log(textArea);
+let todos;
 
-  const div = document.createElement("section");
-
-  div.innerText = input.value;
-  console.log(div);
-
-  textArea.appendChild(div);
-
-  input.value = "";
-  input.placeholder = "Added! Got More?";
-  button.disabled = true;
-
-  return false;
-};
-
-const form_2 = document.querySelector("#form_2");
-const button_2 = document.querySelector("#submit_2");
-const todo = form_2.querySelector("#input_2");
-const date = document.querySelector("#date");
-
-button_2.disabled = true;
-let todos = [];
-
-todo.onkeyup = () => {
-  if (todo.value.length > 0) {
-    button_2.disabled = false;
-  } else {
-    button_2.disabled = true;
-  }
-};
-const todo_2 = document.querySelector("#todo_2");
-
-function doneTodo(event) {
-  console.log(event);
-  const doneButton = event.target;
-  const donebtnId = doneButton.id;
+// Retrieve localStorage
+const savedTodos = JSON.parse(localStorage.getItem("todos"));
+// Check if it's an array
+if (Array.isArray(savedTodos)) {
+  todos = savedTodos;
+} else {
+  todos = [
+    {
+      title: "Hello World!",
+      dueDate: "2022-30-10",
+      id: "id1",
+    },
+  ];
 }
 
-form_2.onsubmit = function (e) {
-  const div_2 = document.createElement("div");
-  const doneBtn = document.createElement("div");
-  doneBtn.className = "done";
-  doneBtn.onclick = doneTodo;
+// Creates a todo
+const createTodo = (title, dueDate) => {
+  const id = "" + new Date().getTime();
 
-  //   Reset the list
-  if (todo.value === "clear") {
-    todo_2.innerHTML = "";
-    todos = [];
-  } else {
-    const iden = new Date().getTime();
-    const todo_object = {
-      todo_txt: todo.value,
-      dueDate: date.value,
-      id: iden,
-    };
-    todos.push(todo_object);
-  }
-
-  todos.forEach(function (todoText) {
-    div_2.innerHTML = todoText.todo_txt + " " + todoText.dueDate;
-    doneBtn.id = todoText.id;
-
-    todo_2.appendChild(div_2);
-    div_2.appendChild(doneBtn);
+  todos.push({
+    title: title,
+    dueDate: dueDate,
+    id: id,
   });
 
-  todo.value = "";
-  todo.placeholder = "Done! 'clear'";
-  button_2.disabled = true;
-
-  return false;
+  saveTodos();
 };
 
-// todos.indexOf("element")
-// delete todos[0]
+// Deletes a todo
+const removeTodo = (idToDelete) => {
+  todos = todos.filter((todo) => {
+    // If the id of this todo matches idToDelete, return false
+    // For everything else, return true
+    if (todo.id === idToDelete) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+
+  saveTodos();
+};
+
+const saveTodos = () => {
+  localStorage.setItem("todos", JSON.stringify(todos));
+};
+
+// Controller
+const addTodo = () => {
+  const textbox = document.getElementById("todo-title");
+  const title = textbox.value;
+
+  const datePicker = document.getElementById("date-picker");
+  const dueDate = datePicker.value;
+
+  createTodo(title, dueDate);
+  render();
+};
+
+const deleteTodo = (event) => {
+  const deleteButton = event.target;
+  const idToDelete = deleteButton.id;
+
+  removeTodo(idToDelete);
+  render();
+};
+
+// View
+const render = () => {
+  // reset our list
+  document.getElementById("todo-list").innerHTML = "";
+
+  todos.forEach((todo) => {
+    const element = document.createElement("div");
+    element.innerText = todo.title + " " + todo.dueDate;
+
+    const deleteButton = document.createElement("div");
+    deleteButton.onclick = deleteTodo;
+    deleteButton.id = todo.id;
+    deleteButton.className = "done";
+    element.appendChild(deleteButton);
+
+    const todoList = document.getElementById("todo-list");
+    todoList.appendChild(element);
+  });
+};
+
+render();

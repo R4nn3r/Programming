@@ -40,54 +40,38 @@
       </section>
     </header>
 
-    <!-- Main Section -->
-    <main class="main">
-      <section class="main__header">
-        <h1>Todo</h1>
-        <p>(list)</p>
-        <h4>Using Unordered List</h4>
-      </section>
-      <form class="main__inputarea">
-        <input
-          id="input"
-          autofocus
-          type="text"
-          class="main__inputarea__intxt"
-          placeholder="Add a Todo"
-        />
-        <input type="submit" class="main__inputarea__inbtn" id="submit" />
-      </form>
-
-      <section class="main__content" id="todo"></section>
-    </main>
-
     <!-- Other method of a todo list -->
-    <section class="main">
+    <main class="main">
       <section class="main__header">
         <h1>Todo</h1>
         <p>(list)</p>
         <p>V.2.0</p>
         <h4>Using Array's, Loops & Objects</h4>
       </section>
-      <section><p>You can Create with date and Delete The task's</p></section>
-      <form class="main__inputarea" id="form_2">
+      <p>You can Create with date and Delete The task's</p>
+
+      <section class="main__inputarea" id="form_2">
         <input
-          id="input_2"
+          id="todo-title"
           autofocus
           type="text"
           class="main__inputarea__intxt new-input"
-          placeholder="Add a Todo"
+          placeholder="Add a Todo..."
         />
-        <input type="submit" class="main__inputarea__inbtn" id="submit_2" />
+        <button
+          onclick="addTodo()"
+          class="main__inputarea__inbtn"
+          id="todo-button"
+        >
+          Submit
+        </button>
+        <br />
         <hr />
-        <input class="date" id="date" type="date" />
-      </form>
-
-      <section class="main__content" id="todo_2">
-        <div>Hello World!</div>
-        <div>Again :)</div>
+        <input class="date" id="date-picker" type="date" />
       </section>
-    </section>
+
+      <section class="main__content" id="todo-list"></section>
+    </main>
 
     <script src="./apps/main.js"></script>
   </body>

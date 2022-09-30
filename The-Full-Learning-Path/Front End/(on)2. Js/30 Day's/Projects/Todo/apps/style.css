@@ -120,7 +120,7 @@ span {
 .main {
   background-color: white;
   padding: 1em;
-  margin: 4em 2em;
+  margin: 2em 2em;
   margin-inline: auto;
   max-width: 450px;
   box-shadow: 25px 27px 25px rgba(195, 195, 195, 0.34);
@@ -171,14 +171,14 @@ span {
   color: yellow;
 }
 .main__content {
-  margin-top: 3em;
+  margin-top: 2em;
   text-align: left;
   padding: 0.5em;
 }
 .main__content div {
   display: inline-flex;
   padding: 0.5em;
-  margin: 0.4em;
+  margin: 0.3em;
   background-color: black;
   box-shadow: 8px 8px 0px yellow;
   color: yellow;
@@ -191,8 +191,8 @@ span {
   background-image: url(../images/check.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  min-width: 25px;
-  min-height: 25px;
+  min-width: 20px;
+  min-height: 20px;
   box-shadow: 8px 8px 0px black;
   cursor: pointer;
 }
@@ -213,12 +213,13 @@ h1 {
 }
 
 button {
+  font-family: monospace;
   margin-left: 5px;
   outline: 1px dashed black;
   background-color: yellow;
   color: black;
   border: none;
-  padding: 0.2em;
+  padding: 0.35em;
   cursor: pointer;
   transition: all 0.2s ease-in;
 }
