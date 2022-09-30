@@ -102,6 +102,7 @@ const render = () => {
 
     const todoList = document.getElementById("todo-list");
     todoList.appendChild(element);
+    button_todo.disabled = true;
   });
 };
 

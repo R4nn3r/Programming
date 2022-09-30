@@ -59,57 +59,15 @@ a:not([class]) {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   max-width: 1440px;
   margin-inline: auto;
   font-family: monospace;
   text-align: center;
-  background-color: #a4c7b917;
-}
-
-.section {
-  text-align: center;
-  font-family: monospace;
-  font-size: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1em;
-}
-
-.section_div {
-  border: 1px dashed black;
-  padding: 0.5em 2em;
-  background-color: black;
-  color: yellow;
-  box-shadow: 8px 8px 0px yellow;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1em;
-  flex: 0;
-}
-.section_div-2 {
-  border: 1px dashed yellow;
-  padding: 0.5em 2em;
-  background-color: purple;
-  color: yellow;
-  box-shadow: 8px 8px 0px rgb(0, 0, 0);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1em;
-  flex: 0;
-}
-
-svg {
-  width: 90px;
-  cursor: pointer;
-}
-
-span {
-  color: white;
-  font-weight: normal;
+  background-color: #9b9653;
+  background-image: url(../images/placeholder-profile-cover-image.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -118,18 +76,23 @@ span {
 }
 
 .main {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3.5px);
+  border-radius: 5px;
+
   padding: 1em;
-  margin: 2em 2em;
+  margin: 4em 2em;
   margin-inline: auto;
   max-width: 450px;
-  box-shadow: 25px 27px 25px rgb(187 187 187 / 34%);
-  outline: 1px dashed yellow;
+  box-shadow: 25px 27px 25px rgb(118 118 118 / 47%);
+  outline: 1px solid rgba(173, 173, 173, 0.374);
   &__header {
     display: flex;
     align-items: center;
     gap: 0.5em;
-    background-color: black;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
     box-shadow: 8px 8px 0px yellow;
     color: yellow;
     text-align: left;
@@ -145,7 +108,8 @@ span {
     display: flex;
     align-items: center;
     gap: 0.5em;
-    background-color: black;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
     box-shadow: 8px 8px 0px yellow;
     color: yellow;
     text-align: left;
@@ -160,6 +124,7 @@ span {
     &__intxt {
       outline: 1px solid yellow;
       width: -webkit-fill-available;
+      border-radius: 1px;
     }
 
     &__inbtn {
@@ -167,6 +132,8 @@ span {
       cursor: pointer;
       background-color: yellow;
       font-weight: bold;
+
+      border-radius: 1px;
 
       &:hover {
         outline: 1px dashed yellow;
@@ -184,11 +151,12 @@ span {
     div {
       display: inline-flex;
       padding: 0.5em;
-      margin: 0.3em;
+      margin: 0.4em;
       background-color: black;
       box-shadow: 8px 8px 0px yellow;
       color: yellow;
       align-items: center;
+      border-radius: 4px;
 
       .done {
         margin-left: 10px;
@@ -211,6 +179,7 @@ span {
   background-color: yellow;
   outline: none;
   cursor: pointer;
+  border-radius: 2px;
 }
 
 .new-input {
