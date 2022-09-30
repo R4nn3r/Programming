@@ -182,12 +182,26 @@ span {
     padding: 0.5em;
 
     div {
-      display: inline-block;
+      display: inline-flex;
       padding: 0.5em;
       margin: 0.4em;
       background-color: black;
       box-shadow: 8px 8px 0px yellow;
       color: yellow;
+      align-items: center;
+
+      .done {
+        margin-left: 10px;
+        content: "";
+        display: inline-block;
+        background-image: url(../images/check.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-width: 25px;
+        min-height: 25px;
+        box-shadow: 8px 8px 0px black;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -196,8 +210,31 @@ span {
   border: 1px dashed yellow;
   background-color: yellow;
   outline: none;
+  cursor: pointer;
 }
 
 .new-input {
   width: 50%;
+}
+
+h1 {
+  font-size: 19px;
+}
+
+button {
+  margin-left: 5px;
+  outline: 1px dashed black;
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 0.2em;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: scale(1.2);
+    background-color: black;
+    color: yellow;
+    outline: 1px dashed yellow;
+  }
 }

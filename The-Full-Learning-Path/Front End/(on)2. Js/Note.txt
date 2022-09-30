@@ -174,9 +174,28 @@ JS
         arr.pop();
 
     # Loops 
-    arr.forEach( function (param) {
+        arr.forEach( function (param) {
 
-    });
+        });
+
+    # Objects 
+        Helps us group different values that are related together
+        let obj = {
+            title : "Title",
+            dueDate : "03-03-2202"
+        }
+        obj.title -> "Title"
+        object.dueDate -> "03-03-2202"
+
+        or 
+
+        obj['title']
+            - This makes using variables possible 
+
+                var = "title"
+                obj[var] -> "Title"
+
+        property-value pairs 
 
 # Closures 
 # DOM (Document Object Model)

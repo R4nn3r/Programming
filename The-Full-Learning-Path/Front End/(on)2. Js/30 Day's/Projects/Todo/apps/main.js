@@ -16,7 +16,7 @@ form.onsubmit = () => {
   const textArea = document.querySelector("#todo");
   console.log(textArea);
 
-  const div = document.createElement("div");
+  const div = document.createElement("section");
 
   div.innerText = input.value;
   console.log(div);
@@ -36,7 +36,7 @@ const todo = form_2.querySelector("#input_2");
 const date = document.querySelector("#date");
 
 button_2.disabled = true;
-const todos = [];
+let todos = [];
 
 todo.onkeyup = () => {
   if (todo.value.length > 0) {
@@ -47,22 +47,42 @@ todo.onkeyup = () => {
 };
 const todo_2 = document.querySelector("#todo_2");
 
+function doneTodo(event) {
+  console.log(event);
+  const doneButton = event.target;
+  const donebtnId = doneButton.id;
+}
+
 form_2.onsubmit = function (e) {
   const div_2 = document.createElement("div");
+  const doneBtn = document.createElement("div");
+  doneBtn.className = "done";
+  doneBtn.onclick = doneTodo;
+
   //   Reset the list
   if (todo.value === "clear") {
     todo_2.innerHTML = "";
+    todos = [];
   } else {
-    todos.push(todo.value, date.value);
+    const iden = new Date().getTime();
+    const todo_object = {
+      todo_txt: todo.value,
+      dueDate: date.value,
+      id: iden,
+    };
+    todos.push(todo_object);
   }
 
   todos.forEach(function (todoText) {
-    div_2.innerHTML = todoText;
+    div_2.innerHTML = todoText.todo_txt + " " + todoText.dueDate;
+    doneBtn.id = todoText.id;
+
     todo_2.appendChild(div_2);
+    div_2.appendChild(doneBtn);
   });
 
   todo.value = "";
-  todo.placeholder = "Added! Got More? or write 'clear'";
+  todo.placeholder = "Done! 'clear'";
   button_2.disabled = true;
 
   return false;
