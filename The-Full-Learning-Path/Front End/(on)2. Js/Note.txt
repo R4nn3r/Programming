@@ -1,4 +1,6 @@
 JS
+https://developer.mozilla.org/en-US/
+
     JavaScript was introduced in 1995 as a way to add programs to web pages in the
     Netscape Navigator browser. The language has since been adopted by all other
     major graphical web browsers. It has made modern web applications possible—
@@ -113,8 +115,6 @@ JS
 
             The querySelectorAll() Method (selects everything)
 
-      
-
 # DOM Manipulation 
 
     Are Objects and the programming interface is the method 
@@ -146,8 +146,6 @@ JS
     # Finding HTML Objects
        
         https://www.w3schools.com/js/js_htmldom_document.asp
-
-
 
 # Day 2 (Two)
 
@@ -249,11 +247,9 @@ JS
 
         property-value pairs 
 
-
-
 # Closures 
-# DOM (Document Object Model)
 
+# DOM (Document Object Model)
 
 # MVC Architecture
     (Model View Controller)

@@ -49,8 +49,8 @@ const createTodo = (title, dueDate) => {
 };
 
 // Deletes a todo
-function removeTodo(idToDelete) {
-  todos = todos.filter(function (todo) {
+const removeTodo = (idToDelete) => {
+  todos = todos.filter(todo => {
     if (todo.id === idToDelete) {
       return false;
     } else {
@@ -60,8 +60,8 @@ function removeTodo(idToDelete) {
   saveTodos();
 }
 
-function markChecked(todoId, checkId) {
-  todos.forEach(function (todo) {
+const markChecked = (todoId, checkId) =>{
+  todos.forEach( todo => {
     const lineThrough = document.getElementById(todo.id);
     if (lineThrough.classList.contains("list")) {
       console.log(lineThrough);
@@ -156,5 +156,4 @@ button.addEventListener("click", () => {
 
   main.classList.toggle("main__hidden");
 });
-
 

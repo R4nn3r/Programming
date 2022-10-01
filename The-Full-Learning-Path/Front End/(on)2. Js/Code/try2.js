@@ -1,26 +1,12 @@
-document.querySelector("#sub").disabled = true;
+let element = document.createElement('div');
+element.className = "section_div";
 
-const inputFiled = document.querySelector(".in_put");
 
-inputFiled.onkeyup = (e) => {
-  if (inputFiled.value.length > 0) {
-    document.querySelector("#sub").disabled = false;
-  } else {
-    document.querySelector("#sub").disabled = true;
-  }
-};
+let h1 = document.createElement('h1');
+h1.innerHTML = 'Hello World!';
 
-const input = (document.querySelector("form").onsubmit = () => {
-  const task = document.querySelector(".in_put").value;
-  console.log(task);
-  //   document.querySelector("#content").innerHTML = task;
+element.appendChild(h1);
 
-  const li = document.createElement("li");
-  li.innerHTML = task;
-  document.querySelector("#tasks").append(li);
-  document.querySelector(".in_put").value = "";
+const main = document.querySelector('.main');
 
-  document.querySelector("#sub").disabled = true;
-
-  return false;
-});
+main.appendChild(element);
