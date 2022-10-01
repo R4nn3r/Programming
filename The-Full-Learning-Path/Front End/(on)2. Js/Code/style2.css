@@ -66,11 +66,12 @@ body {
   background-blend-mode: difference;
   background-size: contain;
   font-family: monospace;
+  color: white;
 }
 
 
 .container {
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .section {
@@ -87,7 +88,7 @@ body {
 .section_div {
   padding: 0.5em 2em;
   background-color: #000000;
-  color: rgb(255, 255, 255);
+  color: inherit;
   box-shadow: 8px 8px 0px #616161;
   display: flex;
   flex-direction: row;
@@ -98,10 +99,10 @@ body {
 svg {
   width: 85px;
   cursor: pointer;
-  fill: black;
+  fill: inherit;
 }
 span {
-  color: white;
+    color: inherit;
   font-weight: normal;
 }
 
@@ -113,7 +114,7 @@ span {
 
 .heading {
   background-color: black;
-  color: rgb(255, 255, 0);
+  color: inherit;
   padding: 0.5em;
   display: inline-block;
   outline: 1px double yellow;
@@ -128,7 +129,7 @@ span {
 
 p {
   width: 100%;
-  outline: 1px dashed black;
+  outline: 1px dashed invert;
   padding: 1em;
 }
 
@@ -166,18 +167,19 @@ input {
   border-radius: 0.2em;
 }
 
-.sub {
-  border: none;
-  background-color: black;
-  color: yellow;
-  border-radius: 0.2em;
+.button {
+  border: 1px dashed white;
+  background-color: inherit;
+  color: inherit;
+  font-size: 15px;
   font-weight: bold;
+  padding: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-.sub:hover {
-  background-color: yellow;
-  color: black;
+.button:hover {
+  background-color: white;
+  color: inherit;
   outline: 1px solid black;
 }
 
@@ -194,4 +196,40 @@ li {
   /* background-color: rgb(150, 150, 150); */
   color: black;
   padding: 0.5em;
+}
+
+
+.theme {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  align-items: center;
+}
+
+.themePick {
+  width: 10px;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+  color: red;
+}
+.yellow {
+  background-color: yellow;
+  color: yellow;
+}
+.green {
+  background-color: green;
+color: green;
+}
+.lime {
+  background-color: lime;
+  color: lime;
+
+}
+.red {
+  background-color: red;
+  color: red;
+
 }
