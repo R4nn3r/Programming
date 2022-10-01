@@ -14,10 +14,14 @@ input_todo.onkeyup = (e) => {
   }
 };
 
+// Model
+
 let todos;
 
 // Retrieve localStorage
 const savedTodos = JSON.parse(localStorage.getItem("todos"));
+
+
 // Check if it's an array
 if (Array.isArray(savedTodos)) {
   todos = savedTodos;

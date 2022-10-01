@@ -253,4 +253,25 @@ JS
 
 # Closures 
 # DOM (Document Object Model)
+
+
 # MVC Architecture
+    (Model View Controller)
+
+        M:
+            -> Contains all the code that saved and manages data
+        V:
+            -> Contains all the code that manages visuals.
+                Render visuals using the data in the model 
+        C:
+            -> Connects the model and view together::
+                    1,  Responds to events from the view 
+                    2. Tells the model to update its data 
+
+# Local Storage 
+
+    localStorage.setItem("key","data");
+        -> Saves a string (data) and associates it with a key 
+    localStorage.geItem("key");
+        -> Returns the string using the associated key it's using 
+        
