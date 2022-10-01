@@ -178,6 +178,40 @@ JS
 
         });
 
+
+        function aboveFreezing(temps) {
+            // Assume we're using Fahrenheit
+            const tempsAboveFreezing = temps.filter(function (temp) {
+                return temp > 32;
+            });
+
+        return tempsAboveFreezing;
+        }
+
+        aboveFreezing([40, 67, 8, 29, 100, -3, 0]);
+
+        -> returns the numbers that are above 32
+
+            Ex.
+                function removeRed(foodarray) {
+                    return foodarray.filter(function (food) {
+                        return food.color != "red";
+                    });
+                }
+
+                let foods = [
+                { type: "apple", color: "red" },
+                { type: "mango", color: "mango" },
+                { type: "banana", color: "yellow" },
+                { type: "pin-apple", color: "light green" },
+                { type: "blood", color: "red" },
+                { type: "red-wine", color: "red" },
+                ];
+
+                removeRed(foods);
+
+
+
     # Objects 
         Helps us group different values that are related together
         let obj = {
