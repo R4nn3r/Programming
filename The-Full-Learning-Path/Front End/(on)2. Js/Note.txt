@@ -210,6 +210,24 @@ JS
 
                 removeRed(foods);
 
+    # Conditionals 
+            -> same as ever language in the book :)
+        if (true) {
+
+        }else {
+            
+        }
+
+        or
+
+        if (js >= python) {
+            console.log("Yes Js is wat better then Python!)
+        }else if (python <= Js){
+            console.log("Yes Js is wat better then Python!)
+        }else {
+            console.log("Yes Js is wat better then Python!)
+        };
+
 
 
     # Objects 
@@ -230,6 +248,8 @@ JS
                 obj[var] -> "Title"
 
         property-value pairs 
+
+
 
 # Closures 
 # DOM (Document Object Model)

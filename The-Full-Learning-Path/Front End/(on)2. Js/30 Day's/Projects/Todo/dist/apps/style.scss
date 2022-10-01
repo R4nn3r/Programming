@@ -1,3 +1,17 @@
+@keyframes oldDown {
+  0% {
+    opacity: 0;
+
+    transform: translateY(-15%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 // Reset
 /* Box sizing rules */
 *,
@@ -86,9 +100,10 @@ body {
   max-width: 400px;
   box-shadow: 25px 27px 25px rgb(118 118 118 / 47%);
   outline: 1px solid #9b965348;
-  transition: all 0.1s ease-in;
+  animation: oldDown 0.5s ease-in;
 
   &__hidden {
+    animation: oldUp 0.5s ease-in;
     display: none;
   }
 

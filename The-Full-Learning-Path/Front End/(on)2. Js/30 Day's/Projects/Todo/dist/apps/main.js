@@ -45,7 +45,6 @@ const createTodo = (title, dueDate) => {
 };
 
 // Deletes a todo
-// Deletes a todo
 function removeTodo(idToDelete) {
   todos = todos.filter(function (todo) {
     if (todo.id === idToDelete) {

@@ -1,3 +1,27 @@
+@-webkit-keyframes oldDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes oldDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15%);
+  }
+  50% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -86,9 +110,12 @@ body {
   max-width: 400px;
   box-shadow: 25px 27px 25px rgba(118, 118, 118, 0.47);
   outline: 1px solid rgba(155, 150, 83, 0.2823529412);
-  transition: all 0.1s ease-in;
+  -webkit-animation: oldDown 0.5s ease-in;
+          animation: oldDown 0.5s ease-in;
 }
 .main__hidden {
+  -webkit-animation: oldUp 0.5s ease-in;
+          animation: oldUp 0.5s ease-in;
   display: none;
 }
 .main__header {
