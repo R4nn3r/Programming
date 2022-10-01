@@ -274,4 +274,19 @@ JS
         -> Saves a string (data) and associates it with a key 
     localStorage.geItem("key");
         -> Returns the string using the associated key it's using 
-        
+
+
+# Note: This
+
+    How to convert an Array to a string
+        -> JSON.stringify(array)
+
+                -> You can use this as an input as "data" in localStorage
+            
+    How to convert an string to an Array 
+        -> JSON.parse(string)
+
+                -> Ex. for localStorage cases where you converted an
+                        array-string to store you can parse it 
+                    
+                    const savedData = JSON.parse(localStorage.getItem(key))
