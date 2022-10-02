@@ -20,10 +20,14 @@ themePick3.type = 'checkbox';
 themePick3.id = 'themePick3';
 themePick3.className = 'themePick';
 
+let listOne = [];
+listOne.push(themePick1, themePick2, themePick3)
 
-themeSelector.appendChild(themePick1);
-themeSelector.appendChild(themePick2);
-themeSelector.appendChild(themePick3);
+for (let i = 0; i < listOne.length; i++) {
+  themeSelector.appendChild(listOne[i])
+}
+
+
 
 
 let h1 = document.createElement('h1');
@@ -72,3 +76,10 @@ themePick3.addEventListener("change", () => {
   background.classList.toggle('lime');
   
 });
+
+
+const name = "string";
+const age = 22;
+
+
+const tagline = 'MDN - Resources for developers, by developers';

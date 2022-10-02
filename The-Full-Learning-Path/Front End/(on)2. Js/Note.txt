@@ -7,6 +7,156 @@ https://developer.mozilla.org/en-US/
     applications with which you can interact directly without doing a page reload
     for every action. JavaScript is also used in more traditional websites to provide
     various forms of interactivity and cleverness.
+# Fundamentals of JavaScript
+    # Variables 
+        let name = ....; and you can reassign the value
+        const name = ....; cant use it again
+        var name = ....; old not used 
+
+
+        - Note
+            Always use unless you know you 
+            need to change the variable 
+
+    # Data Types
+
+        - Primitive 
+            string, numbers, boolean
+            null, undefined, symbol 
+
+        Ex.
+            const name = "string";
+            const age = number;
+            const isBool = true/false;
+            const x = null;
+            const y = undefined;
+
+    # Strings and String methods 
+
+        const string = "string";
+
+            String Methods:
+                .length
+                    const stringLength = string.length 
+               
+                .includes , .startsWith and .endsWith 
+                        Ex.
+                            const browserType = 'mozilla';
+
+                            if (browserType.includes('zilla')) {
+                            console.log('Found zilla!');
+                            } else {
+                            console.log('No zilla here!');
+                            }
+              
+                .indexOf
+                .slice(a, b)
+                        'a' index at which to start extracting
+                        'b' index at which to stop extracting. 
+
+                .toLowerCase() and toUpperCase() 
+                .replace(x, y)
+
+                    -> replace 'x' with 'z'
+
+                    Note that replace(), 
+                    like many string methods, doesn't change the string
+                    it was called on, but returns a new string.
+
+
+                    -> replaceAll(x ,y)
+                                - Finds all the occurs of x and changes with y
+
+    # Array
+
+        const arr = ['one', 'two', 'three']
+
+        arr.push("new data')
+        arr.pop();
+
+    # Function 
+
+        function example(parameters) {
+
+        }
+
+            > call the function 
+        example(arg)
+
+    # Loops 
+        arr.forEach( function (param) {
+
+        });
+
+
+        function aboveFreezing(temps) {
+            // Assume we're using Fahrenheit
+            const tempsAboveFreezing = temps.filter(function (temp) {
+                return temp > 32;
+            });
+
+        return tempsAboveFreezing;
+        }
+
+        aboveFreezing([40, 67, 8, 29, 100, -3, 0]);
+
+        -> returns the numbers that are above 32
+
+            Ex.
+                function removeRed(foodarray) {
+                    return foodarray.filter(function (food) {
+                        return food.color != "red";
+                    });
+                }
+
+                let foods = [
+                { type: "apple", color: "red" },
+                { type: "mango", color: "mango" },
+                { type: "banana", color: "yellow" },
+                { type: "pin-apple", color: "light green" },
+                { type: "blood", color: "red" },
+                { type: "red-wine", color: "red" },
+                ];
+
+                removeRed(foods);
+
+    # Conditionals 
+            -> same as ever language in the book :)
+        if (true) {
+
+        }else {
+            
+        }
+
+        or
+
+        if (js >= python) {
+            console.log("Yes Js is wat better then Python!)
+        }else if (python <= Js){
+            console.log("Yes Js is wat better then Python!)
+        }else {
+            console.log("Yes Js is wat better then Python!)
+        };
+
+    # Objects 
+        Helps us group different values that are related together
+        let obj = {
+            title : "Title",
+            dueDate : "03-03-2202"
+        }
+        obj.title -> "Title"
+        object.dueDate -> "03-03-2202"
+
+        or 
+
+        obj['title']
+            - This makes using variables possible 
+
+                var = "title"
+                obj[var] -> "Title"
+
+        property-value pairs 
+
 
 # Events
 
@@ -149,103 +299,6 @@ https://developer.mozilla.org/en-US/
 
 # Day 2 (Two)
 
-# Fundamentals of JavaScript
-    # Variables 
-        let name = ....; and you can reassign the value
-        const name = ....; cant use it again
-        var name = ....; old not used 
-
-    # Function 
-
-        function example(parameters) {
-
-        }
-
-            > call the function 
-        example(arg)
-
-    # Array
-
-        const arr = ['one', 'two', 'three']
-
-        arr.push("new data')
-        arr.pop();
-
-    # Loops 
-        arr.forEach( function (param) {
-
-        });
-
-
-        function aboveFreezing(temps) {
-            // Assume we're using Fahrenheit
-            const tempsAboveFreezing = temps.filter(function (temp) {
-                return temp > 32;
-            });
-
-        return tempsAboveFreezing;
-        }
-
-        aboveFreezing([40, 67, 8, 29, 100, -3, 0]);
-
-        -> returns the numbers that are above 32
-
-            Ex.
-                function removeRed(foodarray) {
-                    return foodarray.filter(function (food) {
-                        return food.color != "red";
-                    });
-                }
-
-                let foods = [
-                { type: "apple", color: "red" },
-                { type: "mango", color: "mango" },
-                { type: "banana", color: "yellow" },
-                { type: "pin-apple", color: "light green" },
-                { type: "blood", color: "red" },
-                { type: "red-wine", color: "red" },
-                ];
-
-                removeRed(foods);
-
-    # Conditionals 
-            -> same as ever language in the book :)
-        if (true) {
-
-        }else {
-            
-        }
-
-        or
-
-        if (js >= python) {
-            console.log("Yes Js is wat better then Python!)
-        }else if (python <= Js){
-            console.log("Yes Js is wat better then Python!)
-        }else {
-            console.log("Yes Js is wat better then Python!)
-        };
-
-
-
-    # Objects 
-        Helps us group different values that are related together
-        let obj = {
-            title : "Title",
-            dueDate : "03-03-2202"
-        }
-        obj.title -> "Title"
-        object.dueDate -> "03-03-2202"
-
-        or 
-
-        obj['title']
-            - This makes using variables possible 
-
-                var = "title"
-                obj[var] -> "Title"
-
-        property-value pairs 
 
 # Closures 
 
@@ -270,7 +323,6 @@ https://developer.mozilla.org/en-US/
         -> Saves a string (data) and associates it with a key 
     localStorage.geItem("key");
         -> Returns the string using the associated key it's using 
-
 
 # Note: This
 
