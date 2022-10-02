@@ -62,11 +62,18 @@ https://developer.mozilla.org/en-US/
                             }
               
                 .indexOf
+
+                .startsWitt()
+                    determines whether a string begins with the characters 
+                    of a specified string, returning true or false as 
+                    appropriate.
+                    
                 .slice(a, b)
                         'a' index at which to start extracting
                         'b' index at which to stop extracting. 
 
                 .toLowerCase() and toUpperCase() 
+
                 .replace(x, y)
 
                     -> replace 'x' with 'z'

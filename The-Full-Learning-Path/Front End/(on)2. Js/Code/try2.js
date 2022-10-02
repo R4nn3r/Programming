@@ -107,11 +107,10 @@ const joined = arr.join(' ');
 console.log(joined)
 
 const list = document.querySelector('.output');
-const totalBox = document.querySelector('.output p');
+const totalBox = document.querySelector('.output');
 let total = 0;
 // list.innerHTML = '';
 // totalBox.textContent = '';
-// number 1
 const products = [
                 'Underpants:6.99',
                 'Socks:5.99',
@@ -119,28 +118,29 @@ const products = [
                 'Trousers:31.99',
                 'Shoes:23.99',
 ]
-// number 2
+
 for (let x in products){
 	 // number 3
    const product = products[x].split(":")
-   console.log(product)
 
     const name = product[0]
     const price = Number(product[1])
-    console.log(name + " -> " + price)
-}
+    const itemText = `${name} — $${price}`;
+    total += price;
 
- 
 
-  // number 4
-
-  // number 5
-  let itemText = 0;
-
+  
   const listItem = document.createElement('li');
   listItem.textContent = itemText;
   list.appendChild(listItem);
 
-// number 6
 
-// totalBox.textContent = 'Total: $' + total.toFixed(2);
+totalBox.textContent = `Total: $${total.toFixed(2)}`;
+
+}
+
+
+let myArray = [ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ];
+
+myArray.pop();
+console.log(myArray);
