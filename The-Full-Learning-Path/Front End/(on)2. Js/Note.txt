@@ -31,6 +31,18 @@ https://developer.mozilla.org/en-US/
             const x = null;
             const y = undefined;
 
+            console.log(typeof name); // string
+
+        # Conversion between string and number 
+            string -> number 
+                const myString = "123";
+                const myNum = Number(myString);
+
+            number -> string 
+            const myNum2 = 123;
+            const myString2 = myNum2.toString();
+
+
     # Strings and String methods 
 
         const string = "string";
@@ -69,10 +81,59 @@ https://developer.mozilla.org/en-US/
 
     # Array
 
-        const arr = ['one', 'two', 'three']
+        Arrays are generally described as "list-like objects";
 
-        arr.push("new data')
-        arr.pop();
+                # Creating Array's 
+                    const shopping = ['bread', 'milk', 'cheese', 
+                    'hummus', 'noodles'];
+                    const sequence = [1, 1, 2, 3, 5, 8, 13];
+                    const random = ['tree', 795, [0, 1, 2]];   
+
+                    console.log(shopping);
+
+                # Accessing elements from the array 
+                    
+                        const arr = ['one', 'two', 'three']
+
+                        console.log(arr[0]);
+                    Using loops 
+                
+                    for (x in arr){
+                        console.log(arr[x]);
+                    }
+
+                # Methods 
+
+                    .length 
+
+                    .push (end of array), unshift (start of array)
+                        arr.push("new data')
+                        
+                    .pop (end of array), shift (start of array)
+                        arr.pop(); // removes 'three'
+
+                    .indexOf("value")
+                        arr.indexOf("two")  // 1
+
+                    .splice(a, b)
+                            'a' = start 
+                            'b' = end
+                        arr.splice(indexOf("value"), 1)
+
+                # Multidimensional Arrays
+                    const random = ['tree', 795, [0, 1, 2]];
+                    random[2][2];
+
+                # Converting between strings and arrays 
+                        const data = 'Manchester,London,Liverpool,Birmingham,
+                        Leeds,Carlisle';
+
+                    .split()
+
+                            const arr = data.split(',');
+
+                    .join() or toString()
+                            const joined = arr.join(',');
 
     # Function 
 

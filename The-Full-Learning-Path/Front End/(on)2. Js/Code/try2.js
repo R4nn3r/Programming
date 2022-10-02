@@ -78,8 +78,69 @@ themePick3.addEventListener("change", () => {
 });
 
 
-const name = "string";
-const age = 22;
+const letter = "Letter to my heart!";
+
+const letterArray = letter.split(" ")
+
+console.log(letterArray);
+
+for(words in letterArray){
+    let x = letterArray[words]
+    x = "changes"
+  console.log(x , words);
+}
+
+const random = ['tree', 795, [0, 1, 2]];
+console.log(random[2][3])
+
+// random.splice(random.indexOf(795), 1);
+console.log("Loops \n=========================")
 
 
-const tagline = 'MDN - Resources for developers, by developers';
+const data = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle'
+const arr = data.split(',');
+for (x in arr) { 
+  console.log(arr[x])
+}
+
+const joined = arr.join(' ');
+console.log(joined)
+
+const list = document.querySelector('.output');
+const totalBox = document.querySelector('.output p');
+let total = 0;
+// list.innerHTML = '';
+// totalBox.textContent = '';
+// number 1
+const products = [
+                'Underpants:6.99',
+                'Socks:5.99',
+                'T-shirt:14.99',
+                'Trousers:31.99',
+                'Shoes:23.99',
+]
+// number 2
+for (let x in products){
+	 // number 3
+   const product = products[x].split(":")
+   console.log(product)
+
+    const name = product[0]
+    const price = Number(product[1])
+    console.log(name + " -> " + price)
+}
+
+ 
+
+  // number 4
+
+  // number 5
+  let itemText = 0;
+
+  const listItem = document.createElement('li');
+  listItem.textContent = itemText;
+  list.appendChild(listItem);
+
+// number 6
+
+// totalBox.textContent = 'Total: $' + total.toFixed(2);
