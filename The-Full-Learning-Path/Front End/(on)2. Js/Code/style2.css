@@ -69,8 +69,8 @@ body {
   color: white;
 }
 
-
 .container {
+  margin-inline: auto;
   max-width: 600px;
 }
 
@@ -102,7 +102,7 @@ svg {
   fill: inherit;
 }
 span {
-    color: inherit;
+  color: inherit;
   font-weight: normal;
 }
 
@@ -198,7 +198,6 @@ li {
   padding: 0.5em;
 }
 
-
 .theme {
   display: flex;
   flex-direction: column;
@@ -221,15 +220,18 @@ li {
 }
 .green {
   background-color: green;
-color: green;
+  color: green;
 }
 .lime {
   background-color: lime;
   color: lime;
-
 }
 .red {
   background-color: red;
   color: red;
+}
 
+.class {
+  background-color: inherit;
+  padding: 1em;
 }
