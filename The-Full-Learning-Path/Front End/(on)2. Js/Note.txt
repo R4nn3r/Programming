@@ -199,6 +199,14 @@ https://developer.mozilla.org/en-US/
             # AND   &&
             # OR    ||
             # NOT   !
+            # Ternary operator 
+                    
+                condition ? doThisIfTrue : doThisIfFalse
+
+                let z = 10
+
+                const color = z > 5 ? "green" : "red";
+
 
         # Switch 
         
@@ -216,6 +224,7 @@ https://developer.mozilla.org/en-US/
                 default:
                     actually, just run this code
             }
+
 
 
 

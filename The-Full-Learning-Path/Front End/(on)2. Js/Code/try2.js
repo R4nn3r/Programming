@@ -305,6 +305,8 @@ const checkFilter = todos
 // console.log(checkFilter);
 
 const select = document.querySelector("select");
+const label = document.querySelector("label");
+label.style.marginLeft = "1em";
 const para = document.querySelector("p");
 
 select.addEventListener("change", function (e) {
@@ -332,3 +334,19 @@ select.addEventListener("change", function (e) {
       para.textContent = " ";
   }
 });
+
+const y = "10";
+
+if (y === 10) {
+  console.log(y, " is 10");
+} else if (y > 10 || y < 10) {
+  console.log(x, " is less or more the 10");
+} else if (y == 10) {
+  console.log("x is not 10");
+}
+
+const z = 10;
+
+const color = z > 10 ? "green" : "yellow";
+
+console.log(color);
