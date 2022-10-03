@@ -42,7 +42,6 @@ https://developer.mozilla.org/en-US/
             const myNum2 = 123;
             const myString2 = myNum2.toString();
 
-
     # Strings and String methods 
 
         const string = "string";
@@ -67,7 +66,7 @@ https://developer.mozilla.org/en-US/
                     determines whether a string begins with the characters 
                     of a specified string, returning true or false as 
                     appropriate.
-                    
+
                 .slice(a, b)
                         'a' index at which to start extracting
                         'b' index at which to stop extracting. 
@@ -89,6 +88,11 @@ https://developer.mozilla.org/en-US/
     # Array
 
         Arrays are generally described as "list-like objects";
+                # Constructing an array
+                    const arrayName = new Array();
+
+                        Ex.
+                            const numbers = new Array(1,2,3,4,5);
 
                 # Creating Array's 
                     const shopping = ['bread', 'milk', 'cheese', 
@@ -109,6 +113,17 @@ https://developer.mozilla.org/en-US/
                         console.log(arr[x]);
                     }
 
+                # Destructuring
+                    const FullName = ["Yonatan","Afewerk"]
+
+                    const [firstName, lastName] = FullName
+
+                # Adding to arrays 
+
+                    ArrayName[index] = "New Data" (will change the data in that index value)
+                    ArrayName.push("New Data")
+                    ArrayName.unshift("New Data")
+
                 # Methods 
 
                     .length 
@@ -127,6 +142,12 @@ https://developer.mozilla.org/en-US/
                             'b' = end
                         arr.splice(indexOf("value"), 1)
 
+                    .concat()
+                        merge two or more arrays. This method does not change the 
+                        existing arrays, but instead returns a new array.
+
+                            const arr3 = arr1.concat(arr2)
+
                 # Multidimensional Arrays
                     const random = ['tree', 795, [0, 1, 2]];
                     random[2][2];
@@ -142,6 +163,12 @@ https://developer.mozilla.org/en-US/
                     .join() or toString()
                             const joined = arr.join(',');
 
+                # Checks 
+
+                    Array.isArray(arr) will return true if the array exists 
+
+    # Conditionals 
+
     # Function 
 
         function example(parameters) {
@@ -151,60 +178,91 @@ https://developer.mozilla.org/en-US/
             > call the function 
         example(arg)
 
-    # Loops 
-        arr.forEach( function (param) {
+    # Loops and iteration 
 
-        });
+        # For Loop
 
+            for (initializer; condition; increment) {
+                code
+            }
 
-        function aboveFreezing(temps) {
-            // Assume we're using Fahrenheit
-            const tempsAboveFreezing = temps.filter(function (temp) {
-                return temp > 32;
-            });
+            Ex. 
+                for (let step = 0; step < 5; step++) {
+                    // Runs 5 times, with values of step 0 through 4.
 
-        return tempsAboveFreezing;
-        }
-
-        aboveFreezing([40, 67, 8, 29, 100, -3, 0]);
-
-        -> returns the numbers that are above 32
-
-            Ex.
-                function removeRed(foodarray) {
-                    return foodarray.filter(function (food) {
-                        return food.color != "red";
-                    });
+                    console.log(`Walking east ${step+1} step`);
                 }
 
-                let foods = [
-                { type: "apple", color: "red" },
-                { type: "mango", color: "mango" },
-                { type: "banana", color: "yellow" },
-                { type: "pin-apple", color: "light green" },
-                { type: "blood", color: "red" },
-                { type: "red-wine", color: "red" },
-                ];
+        # do...while Loop
 
-                removeRed(foods);
+            initializer 
+            do{
+                code 
+                increment
+            }
+            while (condition);
 
-    # Conditionals 
-            -> same as ever language in the book :)
-        if (true) {
+            Ex.
+                let i = 0;
+                do {
+                    i += 1;
+                    console.log(i);
+                } while (i < 5);
+       
+        # While 
 
-        }else {
+            initializer 
+            while(condition) {
+                code 
+                increment
+            }
             
-        }
+            Ex.
+                let n = 0;
+                let x = 0;
+                while (n < 3) {
+                    n++;
+                    x += n;
+                }
 
-        or
 
-        if (js >= python) {
-            console.log("Yes Js is wat better then Python!)
-        }else if (python <= Js){
-            console.log("Yes Js is wat better then Python!)
-        }else {
-            console.log("Yes Js is wat better then Python!)
-        };
+        # Statements
+            # Labeled 
+
+                label:
+                    statement(s)
+
+                        Ex.
+                            markLoop:
+                            while (theMark) {
+                                doSomething();
+                            }
+            # Break 
+            # Continue
+
+            # for...in 
+
+                for (variable in object){
+                    statement
+                };
+
+            # for...of 
+
+                for (variable of object){
+                    statement
+                };
+
+                    Ex.
+                    const arr = [3, 5, 7];
+                    arr.foo = 'hello';
+
+                    for (const i in arr) {
+                    console.log(i); // logs "0", "1", "2", "foo"
+                    }
+
+                    for (const i of arr) {
+                    console.log(i); // logs 3, 5, 7
+                    }
 
     # Objects 
         Helps us group different values that are related together
@@ -226,6 +284,45 @@ https://developer.mozilla.org/en-US/
         property-value pairs 
 
 
+        # Destructuring Objects 
+
+            const dataTypes = {
+                strings: "string",
+                null: "null",
+                numbers: [1,2,3,4],
+                boolen: {
+                    one: true,
+                    two: false,
+                }
+            }
+
+                # Add to already existing object
+                dataTypes.email = "email@example.com";
+
+            const {strings,oull ,boolen: {one}, email} = dataTypes;
+
+        # Creating objects withing Arrays 
+            const array = [
+                {objects},
+                {object},
+            ];
+
+        # Working with JSON
+
+            How to convert an Array to a string(JSON format)
+                    -> JSON.stringify(array)
+
+                            -> You can use this as an input as "data" in localStorage
+                        
+            How to convert an string to an Array 
+                    -> JSON.parse(string)
+
+                            -> Ex. for localStorage cases where you converted an
+                                    array-string to store you can parse it 
+                                    
+                                const savedData = JSON.parse(localStorage.getItem(key))
+
+                            
 # Events
 
     Event	            Description
@@ -394,15 +491,4 @@ https://developer.mozilla.org/en-US/
 
 # Note: This
 
-    How to convert an Array to a string
-        -> JSON.stringify(array)
-
-                -> You can use this as an input as "data" in localStorage
-            
-    How to convert an string to an Array 
-        -> JSON.parse(string)
-
-                -> Ex. for localStorage cases where you converted an
-                        array-string to store you can parse it 
-                    
-                    const savedData = JSON.parse(localStorage.getItem(key))
+ 
