@@ -169,6 +169,56 @@ https://developer.mozilla.org/en-US/
 
     # Conditionals 
 
+        # if--else 
+
+            if (condition) {
+                /* code to run if condition is true */
+            } else {
+                /* run some other code instead */
+            }
+
+                or without the else 
+
+            if (condition) {
+                /* code to run if condition is true */
+            }
+        
+        # else if 
+
+                if (condition) {
+                    /* code to run if condition is true */
+                } else if (condition) {
+                    /* run some other code instead */
+                } else {
+                    /* run some other code instead */
+                }
+
+
+        # Logical operators 
+
+            # AND   &&
+            # OR    ||
+            # NOT   !
+
+        # Switch 
+        
+            switch (expression) {
+                case choice1:
+                    run this code
+                    break;
+
+                case choice2:
+                    run this code instead
+                    break;
+
+                // include as many cases as you like
+
+                default:
+                    actually, just run this code
+            }
+
+
+
     # Function 
 
         function example(parameters) {
@@ -225,7 +275,6 @@ https://developer.mozilla.org/en-US/
                     x += n;
                 }
 
-
         # Statements
             # Labeled 
 
@@ -263,6 +312,107 @@ https://developer.mozilla.org/en-US/
                     for (const i of arr) {
                     console.log(i); // logs 3, 5, 7
                     }
+
+        # High Order array methods
+            const array = ["one","two","three","four","five"]
+
+            # forEach method
+
+                array.forEach((element, index) => {
+                    // some operations on the element
+                    // maybe you want to use the index of the element
+                });
+
+            # map method 
+                ->  Biggest difference from forEach method is that it has 
+                    return of another array so it is possible to chain with 
+                    other methods 
+
+                const returnedArr = array.map(currentEle => {
+                    // some operation on currentEle
+                })
+
+                    # Chain Example 
+
+                        const checkFilter = todos.filter((todo) => {
+                            if (todo.isCompleted === true) {
+                            return true;
+                            }
+                        }).map((todo) => {
+                            return todo.text;
+                        });
+
+                        console.log(checkFilter);
+
+
+            # reduce method 
+                -> to compute a single values based on the data stored in an array
+
+                const reducedVal = array.reduce(callback, initialVal);
+
+
+                    Ex.
+                        var array = ["a", "b", "c", "d", "e"];
+
+                        function add(x, y) {
+                            return x + y;
+                        }
+
+                        const stringed = array.reduce(add);
+
+                                a b
+                                ab c
+                                abc d
+                                abcd e
+                                -> output abcde
+
+
+                        or
+
+                        const stringed = array.reduce(add, "A");
+
+                                A a
+                                Aa b
+                                Aab c
+                                Aabc d
+                                Aabcd e
+
+                                 -> output Aabcde
+
+            # filer method 
+                 extract a sub-array from a larger array, 
+                 based on some common property. 
+
+                    const filteredArr = array.filter(callback);
+
+
+                    Ex.
+                        const fixedArray = NewArray.filter((arr) => {
+                            if (!arr.startsWith("C")) {
+                                return true;
+                            }
+                        });
+          
+            # sort 
+                assumes that all the array elements are String by default, and sorts 
+                the elements based on the UTF-16 code values
+
+                    const demo = [100, 20, 89, 3, 17];
+                    demo.sort(); 
+
+                    // output = [100, 17, 20, 3, 89]
+
+                    to make it work properly 
+
+                    const sortedArray = demo.sort((a, b) => {
+                        return a - b;
+                    });
+
+                        If callback(a, b) returns less than 0, a comes before b.
+                        If callback(a, b) returns 0, a and b are left at their current index.
+                        If callback(a, b) returns greater than 0, b comes before a
+
+                    console.log(sortedArray);
 
     # Objects 
         Helps us group different values that are related together

@@ -83,7 +83,7 @@ const random = ["tree", 795, [0, 1, 2]];
 // console.log(random[2][3])
 
 // random.splice(random.indexOf(795), 1);
-console.log(" \n=========================");
+// console.log(" \n=========================");
 
 const data = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
 const arr = data.split(",");
@@ -147,7 +147,7 @@ let myArray = [
 
 // }
 
-console.log("=================================================");
+// console.log("=================================================");
 
 const fruits = new Array("Orange", "Mango", "Banana", "Apple", "Grapes");
 
@@ -156,11 +156,11 @@ fruits.push("New Fruit 'Back'");
 fruits[7] = "New Fruit 'index 0";
 
 const NewArray = myArray.concat(fruits);
-console.log(NewArray);
+// console.log(NewArray);
 
-for (n of NewArray) {
-  console.log(n);
-}
+// for (n of NewArray) {
+//   console.log(n);
+// }
 
 const person = {
   frisNname: "John",
@@ -234,3 +234,97 @@ const todos = [
 //   // Runs 5 times, with values of step 0 through 4.
 //   console.log(`Walking east ${step+1} step`);
 // }
+
+// NewArray.forEach((element, index) => {
+//   console.log(element + " -> " + index);
+// });
+
+const array2 = NewArray.map((element) => {
+  if (!element.startsWith("C")) {
+    return element;
+  }
+});
+
+// console.log(array2);
+
+var vararr = ["a", "b", "c", "d", "e"];
+
+const add = (x, y) => {
+  // console.log(x, y);
+  return x + y;
+};
+
+const stringed = vararr.reduce(add, "Added");
+
+// console.log(stringed);
+
+const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let sum = 0;
+const adder = (x, y) => {
+  return x + y;
+};
+
+// console.log(num.reduce(adder));
+
+const fixedArray = NewArray.filter((arr) => {
+  if (!arr.startsWith("C")) {
+    return true;
+  }
+});
+
+// console.log(fixedArray);
+
+const demo = [100, 20, 89, 3, 17];
+
+// console.log(demo.sort());
+
+const sortedArray = demo.sort((a, b) => {
+  // console.log(a, b);
+  return a - b;
+});
+
+// console.log(sortedArray);
+
+todos.forEach((todo) => {
+  if (todo.isCompleted === false) {
+    // console.log(todo);
+  }
+});
+
+const checkFilter = todos
+  .filter((todo) => {
+    if (todo.isCompleted === true) {
+      return true;
+    }
+  })
+  .map((todo) => {
+    return todo.text;
+  });
+
+// console.log(checkFilter);
+
+const select = document.querySelector("select");
+const para = document.querySelector("p");
+
+select.addEventListener("change", function (e) {
+  const choice = select.value;
+  // console.log(choice);
+
+  switch (choice) {
+    case "sunny":
+      para.textContent = "Sunny";
+      break;
+    case "rainy":
+      para.textContent = "Rainy";
+      break;
+    case "snowing":
+      para.textContent = "Snowing";
+      break;
+    case "overcast":
+      para.textContent = "Overcast";
+      break;
+    default:
+      para.textContent = "Unknown";
+  }
+});
