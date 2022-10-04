@@ -446,12 +446,33 @@ const email = document.querySelector("#email");
 const btn = document.querySelector("#btn");
 console.log(btn);
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
   const nameIn = name.value;
   const emailIn = email.value;
   const msg = document.querySelector(".msg");
+  const msg1 = document.querySelector(".msg1");
 
-  msg.innerHTML = nameIn + " " + emailIn;
+  if (nameIn === "" || emailIn === "") {
+    msg1.textContent = "Please Fill The Form!";
+    msg1.style.backgroundColor = "red";
+    msg1.style.borderRadius = "5px";
+    msg1.style.padding = "5px";
+    msg1.style.color = "white";
+
+    setTimeout(() => {
+      msg1.remove();
+    }, 3000);
+  } else {
+    const nameArray = nameIn.split(" ");
+    msg.innerHTML = `<h1>Welcome! ${nameArray[0]}</h1>`;
+    msg.style.backgroundColor = "white";
+    msg.style.border = "1px solid white";
+    msg.style.borderRadius = "5px";
+    msg.style.padding = "5px";
+    msg.style.color = "black";
+    // return false;
+    console.log("Success!");
+  }
 });
 
 const items = document.querySelectorAll(".item");
@@ -461,11 +482,11 @@ items.forEach((item) => console.log(item));
 const li = document.querySelector("li");
 const ul = document.querySelector("#users");
 // ul.remove();
-// ul.lastElementChild.remove();
 
-ul.firstElementChild.textContent = "Hello World!";
+ul.firstElementChild.textContent = "Hello World! Fill the Form and Sign Up.";
 
-ul.children[1].innerText = "Hello Man!";
-
-ul.lastElementChild.innerHTML = "<h1>Welcome!</h1>";
 console.log(li);
+
+setTimeout(function () {
+  myFunc("param1", "param2");
+}, 2000);

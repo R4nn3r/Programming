@@ -809,4 +809,20 @@ https://developer.mozilla.org/en-US/
 
 # Note: This
 
- 
+    # setTimeout
+
+        method calls a function after a number of milliseconds.
+        
+        1 second = 1000 milliseconds.
+
+
+        setTimeout(function () {
+            myFunc("param1", "param2");
+        }, milliseconds);
+
+            Ex.
+                setTimeout(function, milliseconds, param1, param2, ...)
+
+                    setTimeout(() => {
+                        msg1.remove();
+                    }, 3000);
