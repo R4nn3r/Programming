@@ -1,0 +1,108 @@
+.main {
+  padding: 2em;
+  background-color: $crl-d-blue;
+  margin: 1em;
+  border-radius: 2em;
+  max-width: 370px;
+  box-shadow: 10px 15px 10px #0000001f;
+  @include breakpoints-down(small) {
+    margin: 1.5em;
+    border-radius: 1em;
+  }
+  //   Rating
+  .r-section {
+    &__log {
+      background-color: $crl-l-gray;
+      width: 44px;
+      height: 44px;
+      font-size: $fs-paragraph;
+      border-radius: 50%;
+      transition: transform 1.5s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+
+    &__question {
+    }
+    &__para {
+      font-size: $fs-paragraph;
+      color: $crl-m-gray;
+    }
+    &__rating {
+      &__list {
+        padding: 0.25em;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0.5em 0;
+        &__rate {
+          background-color: $crl-l-gray;
+          width: 44px;
+          height: 44px;
+          font-size: $fs-paragraph;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background-color 0.3s ease-in, color 0.3s ease-out,
+            transform 0.3s ease-in-out;
+          box-shadow: 10px 10px 10px #0000001f;
+
+          &:hover {
+            background-color: $crl-m-gray;
+            transform: scale(1.08);
+          }
+        }
+      }
+    }
+    &__button {
+      button {
+        border: none;
+        border-radius: 5em;
+        padding: 1em;
+        font-size: $fs-paragraph;
+        text-transform: uppercase;
+        font-weight: $fw-500;
+        color: white;
+        letter-spacing: 2px;
+        background-color: $crl-accent;
+        transition: background-color 0.3s ease-in, color 0.3s ease-out;
+        cursor: pointer;
+        box-shadow: 10px 15px 10px #0000001f;
+
+        @include breakpoints-up(medium) {
+          padding: 0.8em;
+        }
+        &:hover {
+          font-weight: $fw-400;
+          background-color: white;
+          color: $crl-accent;
+        }
+      }
+    }
+  }
+
+  //   Thank you
+
+  .t-section {
+    &__rating-info {
+      background-color: $crl-l-gray;
+      border-radius: 5em;
+      padding: 0.5em;
+
+      p {
+        display: flex;
+        padding: 0em 0.85em;
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: $crl-accent;
+        font-size: $fs-paragraph;
+      }
+    }
+    &__para {
+      font-size: $fs-paragraph;
+      color: $crl-m-gray;
+    }
+  }
+}

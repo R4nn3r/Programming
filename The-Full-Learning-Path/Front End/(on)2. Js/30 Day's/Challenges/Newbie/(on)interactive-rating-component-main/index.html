@@ -1,49 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Rating state start -->
+    <!-- Link -->
+    <link rel="stylesheet" href="./app/style/style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="container-grid">
+    <main class="main">
+      <!-- Rating state start -->
+      <section class="r-section flex flex__col">
+        <div class="r-section__log flex flex__ac-jc-c">
+          <img src="./images/icon-star.svg" alt="star" />
+        </div>
+        <div class="r-section__question">
+          <h1>How did we do?</h1>
+        </div>
+        <div class="r-section__para">
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+        <div class="r-section__rating">
+          <section
+            id="selection"
+            class="r-section__rating__list flex flex__row"
+          >
+            <li id="1" class="r-section__rating__list__rate flex flex__ac-jc-c">
+              1
+            </li>
+            <li id="2" class="r-section__rating__list__rate flex flex__ac-jc-c">
+              2
+            </li>
+            <li id="3" class="r-section__rating__list__rate flex flex__ac-jc-c">
+              3
+            </li>
+            <li id="4" class="r-section__rating__list__rate flex flex__ac-jc-c">
+              4
+            </li>
+            <li id="5" class="r-section__rating__list__rate flex flex__ac-jc-c">
+              5
+            </li>
+          </section>
+        </div>
+        <div class="r-section__button flex flex__ac-jc-c">
+          <button
+            id="button"
+            class="r-section__button__cta"
+            style="width: 100%"
+          >
+            Submit
+          </button>
+        </div>
+        <!-- Rating state end -->
+      </section>
 
-  How did we do?
+      <section class="t-section flex flex__col flex__center hidden">
+        <div class="t-section__log2">
+          <img src="./images/illustration-thank-you.svg" alt="Illustration" />
+        </div>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+        <div id="rating" class="t-section__rating-info"></div>
 
-  1 2 3 4 5
+        <div class="t-section__title">
+          <h1>Thank you!</h1>
+        </div>
 
-  Submit
+        <div class="t-section__para">
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </section>
+    </main>
 
-  <!-- Rating state end -->
+    <!-- 
+     Thank you state start 
 
-  <!-- Thank you state start -->
+    You selected Add rating here 
+    out of 5  Thank you state
+    end 
 
-  You selected <!-- Add rating here --> out of 5
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+    -->
 
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="./app/js/main.js"></script>
+  </body>
 </html>

@@ -784,9 +784,6 @@ https://developer.mozilla.org/en-US/
 
             title.setAttribute('class', 'highlight');
 
-
-# DOM (Document Object Model)
-
 # MVC Architecture
     (Model View Controller)
 
