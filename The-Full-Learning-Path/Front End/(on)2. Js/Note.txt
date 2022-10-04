@@ -717,10 +717,6 @@ https://developer.mozilla.org/en-US/
        
         https://www.w3schools.com/js/js_htmldom_document.asp
 
-# Day 2 (Two)
-
-
-
 # DOM (Document Object Model)
 
 # MVC Architecture
