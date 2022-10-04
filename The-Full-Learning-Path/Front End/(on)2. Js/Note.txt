@@ -539,6 +539,13 @@ https://developer.mozilla.org/en-US/
                     }
                 }
 
+                // instantiate object
+
+                const person1 = new Person("Jhon", "John", "4-3-1880");
+                const person2 = new Person("two", "two", "4-3-2750");
+
+                console.log(person2.getFullName());
+
         # Destructuring Objects 
 
             const dataTypes = {
@@ -576,8 +583,7 @@ https://developer.mozilla.org/en-US/
                                     array-string to store you can parse it 
                                     
                                 const savedData = JSON.parse(localStorage.getItem(key))
-
-                            
+                        
 # Events
 
     Event	            Description
@@ -686,36 +692,98 @@ https://developer.mozilla.org/en-US/
             The querySelectorAll() Method (selects everything)
 
 # DOM Manipulation 
+   Live DOM Viewer
+        https://software.hixie.ch/utilities/js/live-dom-viewer/
 
-    Are Objects and the programming interface is the method 
-    and property of each object.
-        Method: action to be done 
-            Ex. add, or delete elements 
-        property: value to set or get 
-            Ex. like changing the content of an html element 
+    Parts of the web browser 
+        - Navigator
+        - Window
+        - Document 
+    
 
-        Ex 
-        getElementById is a method, 
-        while innerHTML is a property.
 
-        For Html:
-            <p id="demo"></p>
-        For Js: 
-            document.getElementById("demo").innerHTML = "Hello, world!";
 
-    # Finding HTML Elements , 
-                The getElementById() Method
+        Are Objects and the programming interface is the method 
+        and property of each object.
+            Method: action to be done 
+                Ex. add, or delete elements 
+            property: value to set or get 
+                Ex. like changing the content of an html element 
 
-                The getElementsByTagName() Method
+                    Ex 
+                    getElementById is a method, 
+                    while innerHTML is a property.
 
-                The getElementsByClassName() Method
-                
-    # Changing HTML Elements , 
-    # Adding and Deleting Elements,
-    # Adding Events Handlers,
-    # Finding HTML Objects
-       
-        https://www.w3schools.com/js/js_htmldom_document.asp
+                    For Html:
+                        <p id="demo"></p>
+                    For Js: 
+                        document.getElementById("demo").innerHTML = "Hello, world!";
+
+        # Finding HTML Elements , 
+                    The getElementById() Method
+
+                    The getElementsByTagName() Method
+
+                    The getElementsByClassName() Method
+                    
+        # Changing HTML Elements , 
+        # Adding and Deleting Elements,
+        # Adding Events Handlers,
+        # Finding HTML Objects
+        
+            https://www.w3schools.com/js/js_htmldom_document.asp
+
+
+    # Selecting nodes 
+        
+        # document.querySelector() 
+              Method works for all just different input based on type \
+              and return only a single element 
+        # document.querySelectorAll()
+              Return all elements matching the search in an iterable list 
+            
+            # Other old ways 
+
+                .class
+                    document.getElementsByClassName("")
+                #id
+                    document.getElementById("")
+                tag
+                    document.getElementsByTagName("")
+    
+    # Creating nodes 
+
+        Steps:
+            1- Select the parent element you want to create into
+                const div = document.querySelector(div);
+
+            2- Create in element(s)
+
+                const title = document.createElement("h1")
+                const note = document.createElement("p")
+
+            3- append the childe to the parent 
+                div.appendChild(title)
+                div.appendChild(note)
+            
+    # Removing nodes 
+
+        node.removeChild(child)
+
+            Ex.
+                div.removeChild(note)
+        To remove the parent node itself 
+            div.remove();
+
+    # Manipulating styles 
+
+            title.style.color = "white";
+            title.style.backgroundColor = "black";
+
+        - Setting attributes 
+
+            title.setAttribute('class', 'highlight');
+
 
 # DOM (Document Object Model)
 

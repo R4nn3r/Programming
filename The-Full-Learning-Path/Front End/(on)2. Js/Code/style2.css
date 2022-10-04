@@ -235,3 +235,9 @@ li {
   background-color: black;
   padding: 1em;
 }
+
+.flex {
+  outline: 1px dashed white;
+  display: flex;
+  gap: 1em;
+}

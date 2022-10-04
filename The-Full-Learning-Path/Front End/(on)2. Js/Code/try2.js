@@ -405,3 +405,38 @@ const person3 = new Person("three", "three", "4-3-1022");
 const person4 = new Person("four", "four", "4-3-2022");
 
 console.log(person1);
+
+class Cars {
+  constructor(type, model, year, range, date) {
+    this.type = type;
+    this.model = model;
+    this.year = year;
+    this.range = range;
+    this.date = new Date(date);
+  }
+
+  GetTheModel() {
+    return this.model;
+  }
+  GetTheRange() {
+    return this.range;
+  }
+}
+
+const car1 = new Cars("Ford", "G56", "2020", "450Km", "5-5-1990");
+const car2 = new Cars("Jump", "Yx", "1990", "550Km", "5-5-1919");
+const car3 = new Cars("Tesla", "The", "1890", "950Km", "5-5-1985");
+
+console.log(car1);
+
+console.log(car3.GetTheModel());
+
+const logo = document.querySelector("TITLE");
+
+logo.textContent = "Learning Js";
+
+const day = document.querySelector("#counter");
+day.innerHTML = "7";
+
+const section = document.querySelector(".checker").remove();
+f;
