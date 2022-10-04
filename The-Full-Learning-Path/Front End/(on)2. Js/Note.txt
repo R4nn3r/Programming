@@ -7,6 +7,7 @@ https://developer.mozilla.org/en-US/
     applications with which you can interact directly without doing a page reload
     for every action. JavaScript is also used in more traditional websites to provide
     various forms of interactivity and cleverness.
+
 # Fundamentals of JavaScript
     # Variables 
         let name = ....; and you can reassign the value
@@ -193,7 +194,6 @@ https://developer.mozilla.org/en-US/
                     /* run some other code instead */
                 }
 
-
         # Logical operators 
 
             # AND   &&
@@ -206,7 +206,6 @@ https://developer.mozilla.org/en-US/
                 let z = 10
 
                 const color = z > 5 ? "green" : "red";
-
 
         # Switch 
         
@@ -225,17 +224,65 @@ https://developer.mozilla.org/en-US/
                     actually, just run this code
             }
 
-
-
-
     # Function 
 
-        function example(parameters) {
+        # Defining function 
+            1: 
+                                        |-> argument's 
+                function functionName(u, x) { 
+                    returns x + u; 
+                }
 
-        }
+                Calling 
+                    -> functionName(u, x)
+                                      |-> u, x parameters
+                    Ex.
+                        function myFunc(theArr) {
+                            theArr[0] = 30;
+                        }
 
-            > call the function 
-        example(arg)
+                        const arr = [45];
+
+                        console.log(arr[0]); // 45
+                        myFunc(arr);
+                        
+                        console.log(arr[0]); // 30
+
+                        
+            2:
+                const functionName = () => {
+                    let x = 1
+                    let u = 2
+
+                    returns x + u; 
+                }
+
+        # Closures 
+            inner function can be accessed only from 
+            statements in the outer function.
+
+            const addSqr = (k, l) => {
+                const square = (s) => {
+                    return s * s;
+                };
+
+                return square(k) + square(l);
+            };
+
+            const a = addSqr(3, 2);
+
+                Ex.
+
+                function A(x) {
+                    function B(y) {
+                        function C(z) {
+                            console.log(x + y + z);
+                        }
+                        C(3);
+                    }
+                    B(2);
+                }
+                A(1); // logs 6 (1 + 2 + 3)
 
     # Loops and iteration 
 
@@ -424,6 +471,7 @@ https://developer.mozilla.org/en-US/
                     console.log(sortedArray);
 
     # Objects 
+
         Helps us group different values that are related together
         let obj = {
             title : "Title",
@@ -442,6 +490,54 @@ https://developer.mozilla.org/en-US/
 
         property-value pairs 
 
+
+
+        # Objects Constructor functions and Prototypes  
+
+            // constructor function
+            function Person(fname, lname, dob) {
+                this.fname = fname;
+                this.lname = lname;
+                this.dob = new Date(dob);
+            }
+
+                // Creating prototypes functions 
+            Person.prototype.getFullName = function () {
+                return `${this.fname} ${this.lname}`;
+            };
+
+            Person.prototype.getBirthYear = function () {
+              return this.dob.getFullYear();
+            };
+
+            // instantiate object
+
+            const person1 = new Person("Jhon", "John", "4-3-1880");
+            const person2 = new Person("two", "two", "4-3-2750");
+            const person3 = new Person("three", "three", "4-3-1022");
+            const person4 = new Person("four", "four", "4-3-2022");
+
+            console.log(person1.getBirthYear());
+            console.log(person1.getFullName());
+
+        # Class (ES6)
+
+            -> Does the same things as the above code better looks kinda better 
+                and your create the prototypes with the class itself 
+
+                class Person {
+                    constructor(fname, lname, dob) {
+                        this.fname = fname;
+                        this.lname = lname;
+                        this.dob = new Date(dob);
+                    }
+                    getFullName() {
+                        return `${this.fname} ${this.lname}`;
+                    }
+                    getBirthYear() {
+                        return this.dob.getFullYear();
+                    }
+                }
 
         # Destructuring Objects 
 
@@ -624,7 +720,6 @@ https://developer.mozilla.org/en-US/
 # Day 2 (Two)
 
 
-# Closures 
 
 # DOM (Document Object Model)
 

@@ -335,18 +335,73 @@ select.addEventListener("change", function (e) {
   }
 });
 
-const y = "10";
+// const y = "10";
 
-if (y === 10) {
-  console.log(y, " is 10");
-} else if (y > 10 || y < 10) {
-  console.log(x, " is less or more the 10");
-} else if (y == 10) {
-  console.log("x is not 10");
+// if (y === 10) {
+//   console.log(y, " is 10");
+// } else if (y > 10 || y < 10) {
+//   console.log(x, " is less or more the 10");
+// } else if (y == 10) {
+//   console.log("x is not 10");
+// }
+
+const z = 11;
+
+const color = z > 10 ? "pink" : "yellow";
+
+// console.log(color);
+
+// switch (color) {
+//   case "green":
+//     console.log("green");
+//     break;
+//   case "yellow":
+//     console.log("yellow");
+//     break;
+//   case "red":
+//     console.log("red");
+//     break;
+//   default:
+//     console.log("unknown color");
+// }
+
+const addSqr = (k, l) => {
+  const square = (s) => {
+    return s * s;
+  };
+
+  return square(k) + square(l);
+};
+
+const a = addSqr(3, 2);
+
+console.log(a);
+
+const addNum = (num) => num * num;
+
+console.log(addNum(2));
+
+// Class
+
+class Person {
+  constructor(fname, lname, dob) {
+    this.fname = fname;
+    this.lname = lname;
+    this.dob = new Date(dob);
+  }
+  getFullName() {
+    return `${this.fname} ${this.lname}`;
+  }
+  getBirthYear() {
+    return this.dob.getFullYear();
+  }
 }
 
-const z = 10;
+// instantiate object
 
-const color = z > 10 ? "green" : "yellow";
+const person1 = new Person("Jhon", "John", "4-3-1880");
+const person2 = new Person("two", "two", "4-3-2750");
+const person3 = new Person("three", "three", "4-3-1022");
+const person4 = new Person("four", "four", "4-3-2022");
 
-console.log(color);
+console.log(person1);
