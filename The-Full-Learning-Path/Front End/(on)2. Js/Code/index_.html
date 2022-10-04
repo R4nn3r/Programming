@@ -55,17 +55,30 @@
       <p></p>
     </div>
 
-    <section class="container class flex checker">
-      <img
-        src="https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/dinosaurs-landing-pages/dinosaur-tyrannosaurus-t-rex-head-shoulders/2230126-3-eng-US/dinosaur-tyrannosaurus-t-rex-head-shoulders_wideexact_1230.jpg"
-        width="250px"
-        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
-      />
-      <p>
-        Here we will add a link to the
-        <a href="https://www.mozilla.org/">Mozilla homepage</a>
-      </p>
+    <section id="section" class="class flex checker form">
+      <div class="head">
+        <h1>Add User</h1>
+        <div class="msg"></div>
+      </div>
+      <div class="flex">
+        <label for="name">Name:</label>
+        <input type="text" class="name" id="name" />
+      </div>
+      <div class="flex">
+        <label for="email">Email:</label>
+        <input type="text" class="email" id="email" />
+      </div>
+      <div class="flex">
+        <input id="btn" class="btn" value="submit" type="submit" />
+      </div>
     </section>
+    <div class="lists">
+      <ul id="users">
+        <li class="item gap class-2">Item 1</li>
+        <li class="item gap class-2">Item 2</li>
+        <li class="item gap class-2">Item 3</li>
+      </ul>
+    </div>
 
     <script src="./try2.js"></script>
   </body>

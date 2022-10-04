@@ -232,12 +232,68 @@ li {
 }
 
 .class {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.788);
+  backdrop-filter: blur(1.5px);
+  border-radius: 0.5em;
+  /* padding: 1em; */
+}
+
+.class-2 {
+  background-color: rgba(0, 0, 0, 0.788);
+  backdrop-filter: blur(1.5px);
+  border-radius: 0.5em;
   padding: 1em;
 }
 
 .flex {
-  outline: 1px dashed white;
   display: flex;
+  flex-direction: column;
   gap: 1em;
+}
+
+.form {
+  margin-top: 2em;
+  padding: 3em;
+  max-width: 350px;
+  margin-inline: auto;
+  color: inherit;
+}
+
+input {
+  outline: 1px solid white;
+  font-size: 12px;
+  border-radius: 0.2em;
+}
+
+.btn {
+  margin-top: 1em;
+  padding: 0.7em;
+  color: black;
+  border: none;
+  background-color: white;
+  /* outline: 1px solid white; */
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 0.2em;
+}
+
+.btn:hover {
+  color: black;
+  background-color: yellow;
+}
+
+.gap {
+  margin-inline: auto;
+  max-width: 350px;
+  margin-top: 0.5em;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.gap:hover {
+  transform: scale(1.05);
+}
+
+li {
+  color: white;
 }

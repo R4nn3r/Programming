@@ -204,7 +204,7 @@ const {
   strings,
   oull,
   boolen: { one },
-  email,
+  // email,
 } = dataTypes;
 
 const todos = [
@@ -375,11 +375,11 @@ const addSqr = (k, l) => {
 
 const a = addSqr(3, 2);
 
-console.log(a);
+// console.log(a);
 
 const addNum = (num) => num * num;
 
-console.log(addNum(2));
+// console.log(addNum(2));
 
 // Class
 
@@ -404,7 +404,7 @@ const person2 = new Person("two", "two", "4-3-2750");
 const person3 = new Person("three", "three", "4-3-1022");
 const person4 = new Person("four", "four", "4-3-2022");
 
-console.log(person1);
+// console.log(person1);
 
 class Cars {
   constructor(type, model, year, range, date) {
@@ -427,9 +427,9 @@ const car1 = new Cars("Ford", "G56", "2020", "450Km", "5-5-1990");
 const car2 = new Cars("Jump", "Yx", "1990", "550Km", "5-5-1919");
 const car3 = new Cars("Tesla", "The", "1890", "950Km", "5-5-1985");
 
-console.log(car1);
+// console.log(car1);
 
-console.log(car3.GetTheModel());
+// console.log(car3.GetTheModel());
 
 const logo = document.querySelector("TITLE");
 
@@ -438,5 +438,34 @@ logo.textContent = "Learning Js";
 const day = document.querySelector("#counter");
 day.innerHTML = "7";
 
-const section = document.querySelector(".checker").remove();
-f;
+const sectionForm = document.querySelector("#section");
+console.log(sectionForm);
+
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
+const btn = document.querySelector("#btn");
+console.log(btn);
+
+btn.addEventListener("click", () => {
+  const nameIn = name.value;
+  const emailIn = email.value;
+  const msg = document.querySelector(".msg");
+
+  msg.innerHTML = nameIn + " " + emailIn;
+});
+
+const items = document.querySelectorAll(".item");
+
+items.forEach((item) => console.log(item));
+
+const li = document.querySelector("li");
+const ul = document.querySelector("#users");
+// ul.remove();
+// ul.lastElementChild.remove();
+
+ul.firstElementChild.textContent = "Hello World!";
+
+ul.children[1].innerText = "Hello Man!";
+
+ul.lastElementChild.innerHTML = "<h1>Welcome!</h1>";
+console.log(li);
