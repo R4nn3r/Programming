@@ -41,7 +41,7 @@ const sendIndex = (index) => {
     rating.appendChild(p);
   } else {
     const p = document.createElement("p");
-    p.textContent = `Sorry, if you didn't the experience.`;
+    p.textContent = `Sorry, if you didn't enjoy the experience.`;
     rating.appendChild(p);
   }
 };
