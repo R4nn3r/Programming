@@ -5,18 +5,16 @@
 
   &__container {
     background-color: white;
-    margin: 1em;
-    padding: 1em;
+    margin: 2em;
+    padding: 2em;
     border-radius: 1em;
     max-width: 800px;
     font-size: $fs-para;
     position: relative;
     box-shadow: 15px 15px 15px hsla(238, 29%, 16%, 0.137);
-
     @include breakpoints-up(medium) {
-      padding: 1em 0;
+      padding: 0em 0;
     }
-
     &:before {
       @include breakpoints-up(medium) {
         position: absolute;
@@ -28,7 +26,7 @@
         width: 165px;
         z-index: 1;
 
-        top: 155px;
+        top: 150px;
         left: -80px;
         right: initial;
         transform: translateX(0);
@@ -46,9 +44,13 @@
       height: 100px;
       position: relative;
     }
+    @include breakpoints-up(medium) {
+      padding: 0em 0em;
+      padding-top: 160px;
+    }
     &__img {
       height: 100%;
-      position: relative;
+      position: position;
 
       @include breakpoints-down(small) {
         height: 208%;
@@ -56,7 +58,7 @@
         top: initial;
         left: 8px;
         right: 0px;
-        bottom: 4px;
+        bottom: 14px;
         z-index: 5;
       }
       &__boxx {
@@ -66,10 +68,40 @@
         background-size: contain;
         background-repeat: no-repeat;
 
+        &::before {
+          position: absolute;
+          content: "";
+          background-image: url(../../images/bg-pattern-desktop.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 500px;
+          width: 500px;
+          z-index: 1;
+          top: -115px;
+          left: -128px;
+          right: initial;
+          transform: translateX(0);
+        }
+
         @include breakpoints-down(small) {
           background-image: url(../../images/illustration-woman-online-mobile.svg);
           width: 80%;
           height: 80%;
+
+          &::before {
+            position: absolute;
+            content: "";
+            background-image: url(../../images/bg-pattern-mobile.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 225px;
+            width: 225px;
+            z-index: 1;
+            top: 95px;
+            left: 24px;
+            right: initial;
+            transform: translateX(0);
+          }
         }
 
         @include breakpoints-up(medium) {
@@ -103,13 +135,16 @@
       }
       &__question {
         justify-content: space-between;
-        border-bottom: 1px solid $crl-div;
+        border-bottom: 2px solid $crl-div;
         padding: 0.5em 0;
         cursor: pointer;
 
         h4 {
+          font-size: 13px;
           font-weight: $fw-400;
           margin-right: 2em;
+          opacity: 0.85;
+
           transition: color 300ms ease-in-out;
           &:hover {
             color: $crl-txt-accent;
@@ -129,13 +164,4 @@
       }
     }
   }
-}
-
-.selected {
-  font-weight: $fw-700 !important;
-}
-
-.content {
-  color: $crl-txt-100;
-  max-width: 250px;
 }

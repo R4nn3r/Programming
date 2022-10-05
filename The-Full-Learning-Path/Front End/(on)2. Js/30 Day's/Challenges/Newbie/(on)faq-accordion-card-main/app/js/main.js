@@ -6,6 +6,9 @@ quest.forEach((q) => {
     const title = q.querySelector("h4");
     title.classList.toggle("selected");
 
+    const icon = q.querySelector("img");
+    icon.classList.toggle("rotate");
+
     const content = q.querySelector("#content");
     console.log(content);
     content.classList.toggle("hidden");

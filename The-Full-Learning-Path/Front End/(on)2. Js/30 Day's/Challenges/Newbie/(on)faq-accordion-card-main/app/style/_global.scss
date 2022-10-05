@@ -69,6 +69,7 @@ svg {
   margin-inline: auto;
   @include breakpoints-down(medium) {
     max-width: $wid-mobile;
+    overflow: hidden;
   }
 
   @include breakpoints-up(medium) {
@@ -114,8 +115,9 @@ svg {
 }
 
 .container-grid {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mx-auto {
   margin-left: auto;
@@ -126,11 +128,25 @@ svg {
   display: none;
 }
 
+.selected {
+  font-weight: $fw-700 !important;
+}
+
+.content {
+  color: $crl-txt-100;
+  max-width: 250px;
+  margin: 0.5em 0;
+  opacity: 0.6;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+
 // General
 body {
   font-family: $ff-primary;
   color: $crl-txt-100;
-
+  overflow: hidden;
   //   font-size: $fs-para;
   background: linear-gradient(180deg, $bg-gd-100, $bg-gd-200);
 }
