@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+//  Window Size
+$wid-desktop: 1440px;
+$wid-mobile: 375px;
+
+// Background Color
+$bg-gd-100: hsl(273, 75%, 66%);
+$bg-gd-200: hsl(240, 73%, 65%);
+
+// Text Style
+$ff-primary: "Kumbh Sans", sans-serif;
+$fs-para: 12px;
+
+$fw-400: 400;
+$fw-700: 700;
+
+// Text Color
+$crl-txt-100: hsl(238, 29%, 16%);
+$crl-txt-200: hsl(237, 12%, 33%);
+$crl-txt-300: hsl(240, 6%, 50%);
+$crl-txt-accent: hsl(14, 88%, 65%);
+$crl-div: hsl(240, 5%, 91%);

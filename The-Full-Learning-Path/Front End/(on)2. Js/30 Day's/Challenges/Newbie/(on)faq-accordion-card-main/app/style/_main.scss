@@ -1,0 +1,124 @@
+.main {
+  @include breakpoints-up(medium) {
+    overflow: hidden;
+  }
+
+  &__container {
+    background-color: white;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    max-width: 800px;
+    font-size: $fs-para;
+    position: relative;
+    box-shadow: 15px 15px 15px hsla(238, 29%, 16%, 0.137);
+
+    @include breakpoints-up(medium) {
+      padding: 1em 0;
+    }
+
+    &:before {
+      @include breakpoints-up(medium) {
+        position: absolute;
+        content: "";
+        background-image: url(../../images/illustration-box-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 160px;
+        width: 165px;
+        z-index: 1;
+
+        top: 155px;
+        left: -80px;
+        right: initial;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__section-left {
+    width: 300px;
+    height: 230px;
+    position: relative;
+
+    @include breakpoints-down(small) {
+      width: 290px;
+      height: 100px;
+      position: relative;
+    }
+    &__img {
+      height: 100%;
+      position: relative;
+
+      @include breakpoints-down(small) {
+        height: 208%;
+        position: absolute;
+        top: initial;
+        left: 8px;
+        right: 0px;
+        bottom: 4px;
+        z-index: 5;
+      }
+      &__boxx {
+        background-image: url(../../images/illustration-woman-online-desktop.svg);
+        width: 120%;
+        height: 120%;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include breakpoints-down(small) {
+          background-image: url(../../images/illustration-woman-online-mobile.svg);
+          width: 80%;
+          height: 80%;
+        }
+
+        @include breakpoints-up(medium) {
+          position: absolute;
+          right: 0px;
+        }
+      }
+    }
+  }
+
+  &__section-right {
+    text-align: center;
+    padding: 0 0 2em 0;
+
+    @include breakpoints-up(medium) {
+      max-width: 50%;
+      text-align: left;
+      padding: 2.5em;
+      margin: 2em 3em;
+    }
+
+    &__heading {
+      font-size: 25px;
+      margin-bottom: 1em;
+    }
+
+    &__box {
+      text-align: left;
+
+      &__questions {
+      }
+      &__question {
+        justify-content: space-between;
+        border-bottom: 1px solid $crl-div;
+        padding: 0.5em 0;
+        h4 {
+          font-weight: $fw-400;
+          margin-right: 2em;
+          cursor: pointer;
+          transition: color 300ms ease-in-out;
+          &:hover {
+            color: $crl-txt-accent;
+          }
+        }
+
+        img {
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}

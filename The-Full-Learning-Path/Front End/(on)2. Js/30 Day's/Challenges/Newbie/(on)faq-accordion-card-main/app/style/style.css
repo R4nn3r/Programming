@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+li,
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  margin-inline: auto;
+}
+@media (max-width: 63em) {
+  .container {
+    max-width: 375px;
+  }
+}
+@media (min-width: 40em) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+.flex {
+  display: flex;
+  gap: 1em;
+}
+@media (max-width: 39em) {
+  .flex {
+    flex-direction: column;
+  }
+}
+.flex__center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flex__col {
+  flex-direction: column;
+  align-items: left;
+  gap: 1em;
+}
+.flex__col-txt {
+  text-align: center;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5em;
+}
+.flex__row {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
+.flex__ac-jc-c {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-grid {
+  display: grid;
+  place-items: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(180deg, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+}
+
+@media (min-width: 40em) {
+  .main {
+    overflow: hidden;
+  }
+}
+.main__container {
+  background-color: white;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  max-width: 800px;
+  font-size: 12px;
+  position: relative;
+  box-shadow: 15px 15px 15px hsla(238deg, 29%, 16%, 0.137);
+}
+@media (min-width: 40em) {
+  .main__container {
+    padding: 1em 0;
+  }
+}
+@media (min-width: 40em) {
+  .main__container:before {
+    position: absolute;
+    content: "";
+    background-image: url(../../images/illustration-box-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 160px;
+    width: 165px;
+    z-index: 1;
+    top: 155px;
+    left: -80px;
+    right: initial;
+    transform: translateX(0);
+  }
+}
+.main__section-left {
+  width: 300px;
+  height: 230px;
+  position: relative;
+}
+@media (max-width: 39em) {
+  .main__section-left {
+    width: 290px;
+    height: 100px;
+    position: relative;
+  }
+}
+.main__section-left__img {
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 39em) {
+  .main__section-left__img {
+    height: 208%;
+    position: absolute;
+    top: initial;
+    left: 8px;
+    right: 0px;
+    bottom: 4px;
+    z-index: 5;
+  }
+}
+.main__section-left__img__boxx {
+  background-image: url(../../images/illustration-woman-online-desktop.svg);
+  width: 120%;
+  height: 120%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 39em) {
+  .main__section-left__img__boxx {
+    background-image: url(../../images/illustration-woman-online-mobile.svg);
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (min-width: 40em) {
+  .main__section-left__img__boxx {
+    position: absolute;
+    right: 0px;
+  }
+}
+.main__section-right {
+  text-align: center;
+  padding: 0 0 2em 0;
+}
+@media (min-width: 40em) {
+  .main__section-right {
+    max-width: 50%;
+    text-align: left;
+    padding: 2.5em;
+    margin: 2em 3em;
+  }
+}
+.main__section-right__heading {
+  font-size: 25px;
+  margin-bottom: 1em;
+}
+.main__section-right__box {
+  text-align: left;
+}
+.main__section-right__box__question {
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+  padding: 0.5em 0;
+}
+.main__section-right__box__question h4 {
+  font-weight: 400;
+  margin-right: 2em;
+  cursor: pointer;
+  transition: color 300ms ease-in-out;
+}
+.main__section-right__box__question h4:hover {
+  color: hsl(14deg, 88%, 65%);
+}
+.main__section-right__box__question img {
+  margin-right: 0.5em;
+}/*# sourceMappingURL=style.css.map */
