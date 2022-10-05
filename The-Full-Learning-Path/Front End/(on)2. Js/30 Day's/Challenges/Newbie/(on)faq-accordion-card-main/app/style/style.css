@@ -129,6 +129,7 @@ svg {
 
 body {
   font-family: "Kumbh Sans", sans-serif;
+  color: hsl(238deg, 29%, 16%);
   background: linear-gradient(180deg, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
 }
 
@@ -256,4 +257,13 @@ body {
 }
 .main__section-right__box__question img:hover {
   transform: scale(1.2);
+}
+
+.selected {
+  font-weight: 700 !important;
+}
+
+.content {
+  color: hsl(238deg, 29%, 16%);
+  max-width: 250px;
 }/*# sourceMappingURL=style.css.map */

@@ -130,3 +130,12 @@
     }
   }
 }
+
+.selected {
+  font-weight: $fw-700 !important;
+}
+
+.content {
+  color: $crl-txt-100;
+  max-width: 250px;
+}
