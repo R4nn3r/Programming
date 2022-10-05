@@ -238,11 +238,11 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid hsl(240deg, 5%, 91%);
   padding: 0.5em 0;
+  cursor: pointer;
 }
 .main__section-right__box__question h4 {
   font-weight: 400;
   margin-right: 2em;
-  cursor: pointer;
   transition: color 300ms ease-in-out;
 }
 .main__section-right__box__question h4:hover {
@@ -250,4 +250,10 @@ body {
 }
 .main__section-right__box__question img {
   margin-right: 0.5em;
+  transition: transform 200ms ease-in-out;
+  padding: 0.2em;
+  border-radius: 0.1em;
+}
+.main__section-right__box__question img:hover {
+  transform: scale(1.2);
 }/*# sourceMappingURL=style.css.map */

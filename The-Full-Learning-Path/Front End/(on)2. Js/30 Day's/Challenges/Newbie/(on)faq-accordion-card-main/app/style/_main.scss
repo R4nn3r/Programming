@@ -105,10 +105,11 @@
         justify-content: space-between;
         border-bottom: 1px solid $crl-div;
         padding: 0.5em 0;
+        cursor: pointer;
+
         h4 {
           font-weight: $fw-400;
           margin-right: 2em;
-          cursor: pointer;
           transition: color 300ms ease-in-out;
           &:hover {
             color: $crl-txt-accent;
@@ -117,6 +118,13 @@
 
         img {
           margin-right: 0.5em;
+          transition: transform 200ms ease-in-out;
+          padding: 0.2em;
+          border-radius: 0.1em;
+
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
     }
