@@ -16,14 +16,14 @@ $breakpoints-down: (
 );
 
 // mixin
-@mixin breakpoints-up($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
+@mixin breakpoints-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
     @content;
   }
 }
 
-@mixin breakpoints-down($size) {
-  @media (max-width: map-get($breakpoints-down, $size)) {
+@mixin breakpoints-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
     @content;
   }
 }
