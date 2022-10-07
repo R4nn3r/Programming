@@ -1,0 +1,125 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  @include breakpoints-down(small) {
+    flex-direction: column;
+    text-align: center;
+  }
+  &__article {
+    padding: 0.5em;
+    margin: 1em;
+    max-width: 475px;
+    align-self: center;
+
+    @include breakpoints-down(small) {
+      margin-top: 5em;
+    }
+    h1 {
+      font-weight: $fw-700;
+      font-size: 40px;
+      line-height: 1.1;
+      margin-bottom: 0.75em;
+      @include breakpoints-down(small) {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      font-weight: $fw-500;
+      font-size: 15px;
+      @include breakpoints-down(small) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__section {
+    @include breakpoints-up(medium) {
+      width: 500px;
+      max-width: calc(100% - 20px);
+    }
+
+    margin: 1em;
+    border-radius: 0.5em;
+    &__top {
+      border-radius: 0.5em;
+      padding: 1em;
+      background-color: $accent;
+      margin-bottom: 1em;
+      text-align: center;
+
+      box-shadow: 0px 5px 1px rgba(53, 52, 52, 0.273);
+    }
+    &__bottom {
+      border-radius: 0.5em;
+      padding: 0.5em;
+      margin-bottom: 0.75em;
+      color: $neutral-db;
+      text-align: center;
+    }
+    &__form {
+      background-color: white;
+      padding: 1.5em 2em;
+      border-radius: 0.5em;
+      box-shadow: 0px 5px 1px rgba(53, 52, 52, 0.273);
+
+      @include breakpoints-up(medium) {
+        padding: 2em;
+      }
+
+      div {
+        &:not(:last-child) {
+          margin: 1em 0;
+        }
+
+        input {
+          width: 100%;
+          padding: 1.1em 2em;
+          border-radius: 0.5em;
+          border: 1px solid rgb(212, 212, 212);
+          &:focus {
+            border: 1px solid $neutral-gb;
+            outline: none;
+          }
+
+          &::placeholder {
+            font-weight: $fw-600;
+          }
+        }
+      }
+
+      &__btn {
+        padding: 1.1em;
+        border-radius: 0.5em;
+        background-color: $crl-green;
+        color: white;
+        font-weight: $fw-600;
+        width: 100%;
+        border: none;
+
+        border-bottom: 3px solid rgba(0, 128, 0, 0.498);
+      }
+    }
+  }
+}
+
+// general
+.top__txt {
+  font-size: 14px;
+
+  span {
+    font-weight: $fw-400;
+  }
+}
+.bottom__txt {
+  font-size: 8px;
+  font-weight: $fw-400;
+  opacity: 0.75;
+  span {
+    opacity: 1;
+    color: red;
+    font-weight: $fw-700;
+    font-size: 9px;
+  }
+}
