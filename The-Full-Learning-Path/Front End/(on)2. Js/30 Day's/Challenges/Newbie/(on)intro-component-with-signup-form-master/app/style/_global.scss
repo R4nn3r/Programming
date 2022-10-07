@@ -79,11 +79,9 @@ body {
   background-color: $crl-red;
   color: white;
 
+  margin-inline: auto;
+
   @include breakpoints-down(small) {
     background-image: url(../../images/bg-intro-mobile.png);
   }
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

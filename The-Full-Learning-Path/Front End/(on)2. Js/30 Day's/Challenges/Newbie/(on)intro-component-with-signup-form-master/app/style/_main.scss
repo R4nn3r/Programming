@@ -1,8 +1,11 @@
 .main {
+  margin: 4em 0;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 2em;
-  @include breakpoints-down(small) {
+  margin-inline: auto;
+  @include breakpoints-down(medium) {
     flex-direction: column;
     text-align: center;
   }
@@ -74,6 +77,9 @@
         }
 
         input {
+          font-weight: $fw-600;
+          color: $neutral-db;
+          opacity: 0.65;
           width: 100%;
           padding: 1.1em 2em;
           border-radius: 0.5em;
@@ -99,6 +105,11 @@
         border: none;
 
         border-bottom: 3px solid rgba(0, 128, 0, 0.498);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.75;
+        }
       }
     }
   }
@@ -121,5 +132,19 @@
     color: red;
     font-weight: $fw-700;
     font-size: 9px;
+  }
+}
+
+.footer__text {
+  font-size: 8px;
+  font-weight: $fw-500;
+  .written {
+    text-decoration: none;
+    span {
+      opacity: 1;
+      color: red;
+      font-weight: $fw-700;
+      font-size: 11px;
+    }
   }
 }
