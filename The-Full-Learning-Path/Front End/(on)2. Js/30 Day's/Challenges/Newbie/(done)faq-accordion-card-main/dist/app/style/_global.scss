@@ -124,8 +124,8 @@ svg {
   margin-right: auto;
 }
 
-.hidden {
-  display: none;
+.visible {
+  display: block !important;
 }
 
 .selected {
@@ -133,6 +133,7 @@ svg {
 }
 
 .content {
+  display: none;
   color: $crl-txt-100;
   max-width: 250px;
   margin: 0.5em 0;
@@ -149,4 +150,5 @@ body {
   overflow: hidden;
   //   font-size: $fs-para;
   background: linear-gradient(180deg, $bg-gd-100, $bg-gd-200);
+  padding: 1em;
 }
