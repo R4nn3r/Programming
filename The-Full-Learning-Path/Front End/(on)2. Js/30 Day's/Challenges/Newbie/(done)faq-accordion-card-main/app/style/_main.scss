@@ -1,0 +1,70 @@
+.main {
+  .card {
+    background-color: white;
+    border-radius: 2em;
+    margin: 1em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+
+    @include breakpoints-down(small) {
+      flex-direction: column;
+    }
+
+    &__left {
+      outline: 1px dashed red;
+      min-width: 300px;
+      min-height: 300px;
+
+      @include breakpoints-down(small) {
+        min-width: 100px;
+        min-height: 100px;
+      }
+    }
+
+    &__right {
+      margin: 2em;
+      @include breakpoints-down(small) {
+        margin: 1em;
+      }
+      &__text {
+        padding: 1em;
+        &__title {
+          margin-bottom: 0.5em;
+        }
+
+        details {
+          font-size: $fs-para;
+
+          summary {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75em 0;
+            cursor: pointer;
+
+            &:hover {
+              color: $crl-txt-accent;
+            }
+
+            &::after {
+              content: "";
+              width: 10px;
+              height: 10px;
+              margin-left: 3em;
+              background-image: url(../../images/icon-arrow-down.svg);
+              background-repeat: no-repeat;
+            }
+          }
+
+          p {
+            max-width: 300px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -67,6 +67,80 @@ svg {
 body {
   font-family: "Kumbh Sans", sans-serif;
   color: hsl(238deg, 29%, 16%);
-  overflow: hidden;
   background: linear-gradient(180deg, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  color: hsl(240deg, 5%, 91%);
+  opacity: 0.45;
+}
+
+.main .card {
+  background-color: white;
+  border-radius: 2em;
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+}
+@media (max-width: 39em) {
+  .main .card {
+    flex-direction: column;
+  }
+}
+.main .card__left {
+  outline: 1px dashed red;
+  min-width: 300px;
+  min-height: 300px;
+}
+@media (max-width: 39em) {
+  .main .card__left {
+    min-width: 100px;
+    min-height: 100px;
+  }
+}
+.main .card__right {
+  margin: 2em;
+}
+@media (max-width: 39em) {
+  .main .card__right {
+    margin: 1em;
+  }
+}
+.main .card__right__text {
+  padding: 1em;
+}
+.main .card__right__text__title {
+  margin-bottom: 0.5em;
+}
+.main .card__right__text details {
+  font-size: 12px;
+}
+.main .card__right__text details summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em 0;
+  cursor: pointer;
+}
+.main .card__right__text details summary:hover {
+  color: hsl(14deg, 88%, 65%);
+}
+.main .card__right__text details summary::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-left: 3em;
+  background-image: url(../../images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+}
+.main .card__right__text details p {
+  max-width: 300px;
 }/*# sourceMappingURL=style.css.map */

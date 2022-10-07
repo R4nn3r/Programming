@@ -70,7 +70,16 @@ svg {
 body {
   font-family: $ff-primary;
   color: $crl-txt-100;
-  overflow: hidden;
-  //   font-size: $fs-para;
   background: linear-gradient(180deg, $bg-gd-100, $bg-gd-200);
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  color: $crl-div;
+  opacity: 0.45;
 }
