@@ -133,7 +133,7 @@ svg {
   font-weight: 700 !important;
 }
 
-.content {
+.contentStyle {
   display: none;
   color: hsl(238deg, 29%, 16%);
   max-width: 250px;
