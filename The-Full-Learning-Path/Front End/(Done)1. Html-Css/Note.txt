@@ -668,6 +668,33 @@ HTML (Hypertext Markup Language)
             You can use the z-index to layer elements 
             but you need to have positions on the elements
 
+    
+        # Types of Position's
+            # Static (default)
+
+            # Relative 
+                (look at is as an anchor everything below 
+                this will be positioned relative to this element )
+
+            # absolute 
+                removes the element from the normal flow of the page 
+
+                NOTE:
+                    The main difference between relative and absolute positioning 
+                    is that position: absolute will take a child element completely 
+                    out of the normal flow of the document. And that child will 
+                    be positioned in relation to the first parent element that has 
+                    its own position set.
+
+            # Fixed 
+                remove from normal flow -> place it in the same place in the viewport
+
+                    Tip:    A fixed element must have a top or bottom position set. 
+                            If it doesn’t, it will simply not exist on the page at all.
+
+            # sticky 
+                act like relative elements but on scroll change to fixed elements 
+
 # pseudo elements and class's
     - ::first-line Pseudo-element
              Note: The ::first-line pseudo-element can only be applied to 
@@ -873,3 +900,20 @@ HTML (Hypertext Markup Language)
                         Validate your HTML code. 
                         Avoid using unwanted HTML Elements.
                         Always use the DOCTYPE Declaration.
+
+# Flow layout 
+    Normal flow or flow layout is the awy that block and inline elemetns are displayed on A
+    page before any changes are made to their layout
+
+        # What are Block and inline elements
+
+            1- Block
+                    always takes up the full width available 
+                    (stretches out to the left and right as far as it can).
+
+                    footers, headers, main, section, div. form. nav, article, video...
+
+            2 - Inline 
+                    takes up as much width as necessary.
+
+                    a, button, input, img, select, span, 

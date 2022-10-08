@@ -34,6 +34,7 @@ h6 {
   font-weight: 900;
   text-shadow: 3px 3px 1px black;
   font-size: 50px;
+  margin-top: 2em;
 }
 
 nav {
@@ -51,12 +52,21 @@ li {
   font-weight: 600;
 }
 
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 9999;
+}
+
 .nav-links {
   padding: 1em;
   margin: 0.5em;
   display: flex;
   gap: 2em;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .links {
@@ -100,4 +110,34 @@ li {
     color: white;
     background-color: rgba(0, 0, 0, 0.611);
   }
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 1440px;
+  position: relative;
+}
+
+.parent {
+  position: relative;
+  background-color: purple;
+}
+
+.child {
+  background-color: magenta;
+  position: sticky;
+  top: 0;
+}
+div {
+  padding: 20px; // 15px 25px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  // overflow: hidden;
+  margin: 0;
+  min-height: 150px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  //text-transform: uppercase;
+  font-weight: normal;
 }
