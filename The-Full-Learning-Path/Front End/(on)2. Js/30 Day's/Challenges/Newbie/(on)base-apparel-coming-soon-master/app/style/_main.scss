@@ -1,0 +1,85 @@
+.main {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+
+  margin-inline: auto;
+  &__grid {
+    display: grid;
+    grid-template-columns: 83fr 61fr;
+
+    grid-template-areas:
+      "one two"
+      "three two";
+    gap: 0.5em;
+
+    @include breakpoints-down(small) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "one"
+        "two"
+        "three";
+    }
+    &__header {
+      grid-area: one;
+      padding: 5em 5em 1em 5em;
+
+      @include breakpoints-down(small) {
+        padding: 1.75em;
+
+        img {
+          width: 120px;
+        }
+      }
+    }
+
+    &__text {
+      grid-area: three;
+      padding: 1em 5em 5em 5em;
+
+      @include breakpoints-down(small) {
+        text-align: center;
+        padding: 2em 2em 2em 2em;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        color: $crl-dgr;
+        font-size: 4em;
+        font-weight: $fw-600;
+        width: min-content;
+        line-height: 1;
+        letter-spacing: 0.4em;
+        span {
+          font-weight: $fw-300;
+          color: $crl-red;
+        }
+
+        @include breakpoints-down(small) {
+          font-size: 3em;
+          width: 100%;
+        }
+      }
+
+      p {
+        color: $crl-red;
+        font-size: $fs-primary;
+        margin: 1em 0;
+        @include breakpoints-up(medium) {
+          margin-right: 20%;
+        }
+      }
+
+      &__article__form {
+        .email {
+        }
+      }
+    }
+
+    .card {
+      grid-area: two;
+      width: 100%;
+      &__img {
+        width: 100%;
+      }
+    }
+  }
+}
