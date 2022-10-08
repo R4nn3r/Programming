@@ -127,7 +127,7 @@ body {
   font-size: 13px;
 }
 .main__card {
-  max-width: 650px;
+  max-width: 700px;
   border-radius: 0.5em;
   background-color: white;
   margin: 0.5em;
@@ -162,7 +162,8 @@ body {
 .main__card__article {
   max-width: 550px;
   gap: 0.75em;
-  padding: 2em 3em;
+  margin: 0 1em;
+  padding: 2em 2em;
   color: hsl(217deg, 19%, 35%);
 }
 @media (max-width: 63em) {
