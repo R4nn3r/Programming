@@ -94,6 +94,7 @@ body {
 }
 @media (max-width: 63em) {
   .main {
+    margin: 1.5em 0;
     flex-direction: column;
     text-align: center;
   }
@@ -226,6 +227,7 @@ body {
 }
 
 .footer__text {
+  margin: 0 0.5em;
   font-size: 8px;
   font-weight: 500;
 }

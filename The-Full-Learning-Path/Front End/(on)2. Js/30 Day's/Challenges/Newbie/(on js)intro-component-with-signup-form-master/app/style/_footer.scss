@@ -1,0 +1,14 @@
+.footer__text {
+  margin: 0 0.5em;
+  font-size: 8px;
+  font-weight: $fw-500;
+  .written {
+    text-decoration: none;
+    span {
+      opacity: 1;
+      color: red;
+      font-weight: $fw-700;
+      font-size: 11px;
+    }
+  }
+}
