@@ -14,7 +14,7 @@
 
     @include breakpoints-down(medium) {
       flex-direction: column;
-      margin: 1em;
+      margin: 2em;
     }
 
     &__img {
