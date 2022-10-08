@@ -1,3 +1,19 @@
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+// Reset
 /* Box sizing rules */
 *,
 *::before,
@@ -9,12 +25,13 @@
 * {
   margin: 0;
   padding: 0;
+  //   font-size: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
+ul[role="list"],
 li,
-ol[role=list] {
+ol[role="list"] {
   list-style: none;
 }
 
@@ -36,8 +53,7 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -52,14 +68,49 @@ svg {
   html:focus-within {
     scroll-behavior: auto;
   }
+
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+//  Utilities
+.flex {
+  &__row {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__col {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.hidden {
+  opacity: 0;
+  animation: slide-in 1s ease-in-out;
+}
+
+// General
+body {
+  background-color: $crl-400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+}

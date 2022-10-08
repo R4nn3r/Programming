@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+
+    <!-- Link -->
+    <link rel="stylesheet" href="./app/style/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main container">
+      <section class="main__card">
+        <div class="main__card__img">
+          <div class="img"></div>
+          <!-- <img src="./images/drawers.jpg" alt="drawers picture" /> -->
+        </div>
+
+        <article class="main__card__article flex__col">
+          <div class="title">
+            <h1>
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+          </div>
+
+          <div class="detail">
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I've got some simple tips to
+              help you make any room feel complete.
+            </p>
+          </div>
+
+          <div class="user flex__row">
+            <div class="user__detail flex__row">
+              <img
+                src="./images/avatar-michelle.jpg"
+                alt="avatar for michelle appleton"
+              />
+              <div class="user__info">
+                <p class="name">Michelle Appleton</p>
+                <p class="date">28 Jun 2020</p>
+              </div>
+            </div>
+            <div id="shareBtn" class="user__share">
+              <div class="check">
+                <div>
+                  <p>SHARE</p>
+                </div>
+                <div>
+                  <img src="./images/icon-facebook.svg" alt="facebook" />
+                </div>
+                <div>
+                  <img src="./images/icon-twitter.svg" alt="" />
+                </div>
+                <div>
+                  <img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
+                </div>
+              </div>
+              <img src="./images/icon-share.svg" alt="share icon" />
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="">Yonatan Afewerk Teshome</a>.
+    </footer>
+
+    <script src="./app/js/main.js"></script>
+  </body>
+</html>
