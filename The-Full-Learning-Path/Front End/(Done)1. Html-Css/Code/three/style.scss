@@ -67,13 +67,19 @@ h1 {
 }
 
 // styles
+.body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
 .center {
-  margin-inline: auto !important;
+  //   margin-inline: auto !important;
+  max-width: 1440px;
+  margin: 0.25em;
+
+  outline: 1px dashed lime;
 }
 .grid {
-  max-width: 1440px;
-
-  margin: 0;
   padding: 0.5em;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -85,8 +91,8 @@ h1 {
   }
 
   &__container {
-    padding: 1em;
-    margin: 1.5em 1em;
+    padding: 0.5em;
+    margin: 1.5em 0.5em;
     display: flex;
     gap: 2em;
 
@@ -117,6 +123,8 @@ h1 {
   &__sidebar {
     background-image: url(./hero-desktop.jpg);
     background-repeat: no-repeat;
+    // background-position: center center;
+    background-clip: border-box;
     background-size: cover;
     max-width: 720px;
     width: 100%;
@@ -132,7 +140,7 @@ h1 {
     @include breakpoints-down(medium) {
       background-image: url(./hero-mobile.jpg);
     }
-    padding: 1em;
+    padding: 0.5em;
     display: flex;
     flex-direction: column;
     gap: 1em;
