@@ -917,3 +917,110 @@ HTML (Hypertext Markup Language)
                     takes up as much width as necessary.
 
                     a, button, input, img, select, span, 
+
+# Sass , Bem
+
+    # Sass Partials 
+        Creating partitions for the styles based on there structure
+            Ex.
+                Header  ->      _header.scss
+                Hero    ->      _hero.scss
+                Footer  ->      _footer.scss   
+
+        
+        For bigger projects you can even partition based on type of element 
+            Ex,
+
+                Typography   ->   _typography.scss
+                Reset   -> _reset.scss
+
+
+        Then create load them on main sass file called index 
+            Ex.
+                globals (folder)
+                    _index.scss 
+                        @forward "reset"
+                        @forward "typography"
+                
+
+                Main style scss 
+                    style.scss
+                        @forward "globals"
+
+    # Creating variables
+    
+        (CSS)
+        # Root
+
+            :root {
+                --ff-primary: monospace;
+                --txt-crl: blue;
+            }
+
+            to use the variables 
+                -> var(--txt-crl)
+
+        (SASS)
+
+            $ff-primary: monospace;
+            $txt-crl: blue;
+
+                to use the variables 
+                    -> $txt-crl
+
+    # Using custom modules 
+        Create a folder that contain the style 
+        and import whole folder as a module
+
+            Ex. 
+                utility
+                    _fonts.scss
+                        $font-color: blue;
+
+                    _colors.scss
+                
+                To import 
+                    @use "location of utility" as util;
+
+                            -> as util (is a namespace)
+                            -> you can use a wildcard 
+                                @use "location of utility" as *
+                                    
+                                    color: @font-color
+                    
+                    color: util.@font-color
+
+    # Using BEM (Block, Element, Modifier methodology)
+
+        BEM is a front-end naming method for organizing and naming CSS classes.
+            Block:
+                which holds everything (elements) inside and acts as a scope.
+
+            Element:
+                which acts as a specific part of the component.
+
+            Modifier:
+                which adds additional styles to a specific element(s).
+
+            
+            Ex.
+                (html)
+
+                    <div class="head">
+                        <div class="head__eye head__eye--left">(o)</div>
+                        <div class="head__eye head__eye--right">(o)</div>
+                    </div>
+
+                (scss)
+
+                    .head { -> block
+                        &__eye { -> element
+
+                            &--left{ -> modifier
+
+                            }
+                            &--right{
+                                
+                            }
+                        }
+                    }
