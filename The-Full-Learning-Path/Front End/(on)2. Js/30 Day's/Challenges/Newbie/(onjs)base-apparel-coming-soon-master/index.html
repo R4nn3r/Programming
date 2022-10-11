@@ -29,7 +29,7 @@
     </style>
   </head>
   <body class="linear-grad-100">
-    <main class="main">
+    <main class="main container">
       <div class="main__grid">
         <div class="main__grid__logo">
           <picture>
@@ -40,6 +40,21 @@
             />
           </picture>
           <img class="logo__desktop" src="./images/logo.svg" alt="logo" />
+        </div>
+        <div class="main__grid__female main__grid--right female-img">
+          <div class="main__grid__female__img">
+            <picture>
+              <source
+                srcset="./images/hero-desktop.jpg"
+                media="(min-width: 768px)"
+              />
+              <img
+                class="card__img"
+                src="./images/hero-mobile.jpg"
+                alt="Image of model"
+              />
+            </picture>
+          </div>
         </div>
 
         <article class="main__grid__left main__grid--left">
@@ -64,22 +79,6 @@
             </button>
           </form>
         </article>
-
-        <div class="main__grid__female main__grid--right female-img">
-          <div class="main__grid__female__img">
-            <picture>
-              <source
-                srcset="./images/hero-desktop.jpg"
-                media="(min-width: 768px)"
-              />
-              <img
-                class="card__img"
-                src="./images/hero-mobile.jpg"
-                alt="Image of model"
-              />
-            </picture>
-          </div>
-        </div>
       </div>
     </main>
     <!-- <footer>

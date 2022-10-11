@@ -1,5 +1,7 @@
 .main {
   font-size: $fs-primary;
+  margin-inline: auto;
+  color: $crl-dgr;
 
   @include breakpoints-down(small) {
     text-align: center;
@@ -7,23 +9,38 @@
   .main__grid {
     margin: 0;
     padding: 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: 57.5% 1fr;
+    grid-template-rows: 1fr;
+    @include breakpoints-up(medium) {
+      grid-template-areas: "one two";
+    }
 
     @include breakpoints-down(small) {
-      display: grid;
       justify-content: center;
       align-items: center;
       grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
     }
 
     &__logo {
+      // layout
+      @include breakpoints-up(medium) {
+        grid-area: one;
+        margin: 2em 5em;
+      }
       padding: 2em;
-
       display: flex;
       align-self: flex-start;
     }
 
     &__left {
+      // layout
+      @include breakpoints-up(medium) {
+        grid-area: one;
+        margin: 10em 5em;
+      }
+
       padding: 1em;
       max-width: 500px;
       width: 100%;
@@ -49,6 +66,7 @@
         }
 
         p {
+          color: $crl-red;
           @include breakpoints-down(small) {
             font-size: 1.25em;
           }
@@ -66,27 +84,32 @@
         .email {
           max-width: 400px;
           width: 100%;
-          padding: 1em;
+          padding: 1.25em;
           border: none;
           outline: 1px solid $crl-red;
           border-radius: 2em;
         }
         .cta {
           margin-left: -10%;
-          background-color: white;
           border: none;
           border-radius: 2em;
-          padding: 0.82em 2.5em;
-
+          padding: 1.05em 3em;
+          outline: 1px solid rgba(255, 157, 157, 0.433);
           cursor: pointer;
+
+          box-shadow: 5px 10px 20px #ffcccc;
         }
       }
     }
 
     &__female {
+      // layout
+      @include breakpoints-up(medium) {
+        grid-area: two;
+      }
+
       margin: 0;
       padding: 0;
-
       background-size: cover;
 
       img {
