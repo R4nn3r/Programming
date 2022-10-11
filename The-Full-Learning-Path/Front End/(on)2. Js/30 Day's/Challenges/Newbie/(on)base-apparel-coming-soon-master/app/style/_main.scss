@@ -1,0 +1,95 @@
+.main {
+  font-size: $fs-primary;
+
+  @include breakpoints-down(small) {
+    text-align: center;
+  }
+  .main__grid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+
+    &__logo {
+      padding: 2em;
+
+      display: flex;
+      align-self: flex-start;
+    }
+
+    &__left {
+      padding: 1em;
+      max-width: 500px;
+      width: 100%;
+      @include breakpoints-down(small) {
+        order: 3;
+        justify-self: center;
+      }
+
+      .description {
+        margin: 2em 0;
+        h1 {
+          line-height: 1.2;
+          font-size: 3.5em;
+          letter-spacing: 0.35em;
+          margin: 0.25em 0;
+          width: min-content;
+
+          @include breakpoints-down(small) {
+            font-size: 2.5em;
+            margin: 0.75em 0;
+            margin-inline: auto;
+          }
+        }
+
+        p {
+          @include breakpoints-down(small) {
+            font-size: 1.25em;
+          }
+        }
+      }
+
+      .form {
+        display: flex;
+        align-items: center;
+
+        @include breakpoints-down(small) {
+          justify-content: center;
+        }
+
+        .email {
+          max-width: 400px;
+          width: 100%;
+          padding: 1em;
+          border: none;
+          outline: 1px solid $crl-red;
+          border-radius: 2em;
+        }
+        .cta {
+          margin-left: -10%;
+          background-color: white;
+          border: none;
+          border-radius: 2em;
+          padding: 0.82em 2.5em;
+
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__female {
+      margin: 0;
+      padding: 0;
+
+      background-size: cover;
+
+      img {
+        @include breakpoints-down(small) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

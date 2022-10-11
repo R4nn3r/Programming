@@ -28,7 +28,60 @@
       }
     </style>
   </head>
-  <body>
+  <body class="linear-grad-100">
+    <main class="main">
+      <div class="main__grid">
+        <div class="main__grid__logo">
+          <picture>
+            <source
+              class="logo__mobile"
+              srcset="./images/logo-mobile.svg"
+              media="(min-width: 768px)"
+            />
+          </picture>
+          <img class="logo__desktop" src="./images/logo.svg" alt="logo" />
+        </div>
+
+        <article class="main__grid__left main__grid--left">
+          <div class="description">
+            <h1><span>WE'RE</span> COMING SOON</h1>
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up to date with announcements
+              and our launch deals.
+            </p>
+          </div>
+
+          <form class="form">
+            <input
+              required
+              class="email"
+              type="email"
+              placeholder="Email Address"
+            />
+            <button class="cta linear-grad-200">
+              <img src="./images/icon-arrow.svg" alt="arrow" />
+            </button>
+          </form>
+        </article>
+
+        <div class="main__grid__female main__grid--right female-img">
+          <div class="main__grid__female__img">
+            <picture>
+              <source
+                srcset="./images/hero-desktop.jpg"
+                media="(min-width: 768px)"
+              />
+              <img
+                class="card__img"
+                src="./images/hero-mobile.jpg"
+                alt="Image of model"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- <footer>
       <p class="attribution">
         Challenge by

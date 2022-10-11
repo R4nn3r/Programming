@@ -65,6 +65,32 @@ svg {
 }
 
 // Utilities
+.flex {
+  display: flex;
+  align-items: center;
+
+  gap: 1em;
+  @include breakpoints-down(medium) {
+    flex-direction: column;
+  }
+
+  &--column {
+    gap: 1em;
+    flex-direction: column;
+  }
+}
+.order {
+  @include breakpoints-down(small) {
+    .main__grid--left {
+      order: 3;
+    }
+  }
+}
+
+span {
+  font-weight: $fw-300;
+  color: $crl-red;
+}
 
 .container {
   max-height: 100vh;
@@ -74,4 +100,8 @@ svg {
 
 body {
   font-family: $ff-primary;
+}
+
+.main__logo {
+  display: block;
 }
