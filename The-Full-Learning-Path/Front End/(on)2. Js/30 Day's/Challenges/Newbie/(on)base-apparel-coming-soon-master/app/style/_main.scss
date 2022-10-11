@@ -7,10 +7,14 @@
   .main__grid {
     margin: 0;
     padding: 0;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr;
+    display: flex;
+
+    @include breakpoints-down(small) {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 1fr;
+    }
 
     &__logo {
       padding: 2em;
