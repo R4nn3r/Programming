@@ -86,7 +86,7 @@ h1 {
   grid-template-rows: repeat(5, 1fr);
 
   margin-inline: auto;
-  width: min(100%, 1000px);
+  width: min(100%, 1440px);
 
   @include breakpoints-down(medium) {
     grid-template-columns: repeat(1, 1fr);

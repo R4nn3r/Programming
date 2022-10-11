@@ -1026,13 +1026,41 @@ HTML (Hypertext Markup Language)
                     }
 
 
+# Mixins 
+
+    # Sass map
+    // 700px, 900px, 1440px
+
+        $breakpoints-up: (
+            "medium", 43.75em,
+            "large", 56.25em,
+            "xlarge", 90em,
+        )
+
+        $breakpoints-down: (
+            "medium", 43.5em,
+            "large", 56em,
+            "xlarge", 89.5em,
+        )
+
+    # mixins 
+
+    @mixin breakpoints-up($size){
+        @media(min-width: map-get($breakpoints-up, $size)){
+            @content;
+        }
+    }
+
+
+    @mixin breakpoints-down($size){
+        @media(max-width: map-get($breakpoints-down, $size)){
+            @content;
+        }
+    }
 
 
 
 
 
-
-
-
-“We suffer more often in imagination than in reality.”
-— Seneca
+"we suffer more often in imagination than in reality."
+-- Seneca 
