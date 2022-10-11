@@ -27,7 +27,7 @@
       // layout
       @include breakpoints-up(medium) {
         grid-area: one;
-        margin: 2em 5em;
+        margin: 1em 5em;
       }
       padding: 2em;
       display: flex;
@@ -68,7 +68,7 @@
         p {
           color: $crl-red;
           @include breakpoints-down(small) {
-            font-size: 1.25em;
+            font-size: 1.05em;
           }
         }
       }
@@ -79,6 +79,7 @@
 
         @include breakpoints-down(small) {
           justify-content: center;
+          margin-bottom: 4em;
         }
 
         .email {
