@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href=".app/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <h1>Hello World!</h1>
+      <form class="form" onsubmit="sendEmail(); reset(); return false;">
+        <div class="fname">
+          <input
+            type="name"
+            placeholder="Full Name"
+            name="fname"
+            id="fname"
+            required
+          />
+        </div>
+        <div class="sub">
+          <input
+            type="name"
+            placeholder="Subject"
+            name="sub"
+            id="sub"
+            required
+          />
+        </div>
+
+        <div class="email">
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            id="email"
+            required
+          />
+        </div>
+        <div class="text">
+          <textarea
+            class="myTextArea"
+            class="text"
+            id="text"
+            required
+          ></textarea>
+        </div>
+        <input type="submit" class="cta" />
+      </form>
+    </main>
+
+    <script src=".app/main.js"></script>
+  </body>
+</html>
