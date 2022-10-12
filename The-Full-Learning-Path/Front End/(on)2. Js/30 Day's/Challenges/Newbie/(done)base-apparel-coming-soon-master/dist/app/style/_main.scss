@@ -99,10 +99,15 @@
           .fa-exclamation-circle {
             position: absolute;
             top: 16px;
-            right: 60px;
             transform: scale(1.5);
             color: #ff5b5b;
             visibility: visible;
+
+            right: 60px;
+
+            @include breakpoints-up(large) {
+              right: 85px;
+            }
           }
 
           small {
@@ -122,10 +127,14 @@
           .fa-check-circle {
             position: absolute;
             top: 16px;
-            right: 60px;
             transform: scale(1.5);
             color: #78c842;
             visibility: visible;
+            right: 60px;
+
+            @include breakpoints-up(large) {
+              right: 85px;
+            }
           }
         }
 
@@ -152,15 +161,19 @@
         }
 
         .cta {
-          margin-left: -10%;
-          margin-top: -0.1em;
+          margin-left: -15%;
+          margin-top: -0.15em;
           border: none;
           border-radius: 2em;
-          padding: 1.05em 3em;
+          padding: 1.1em 3em;
           outline: 1px solid rgba(255, 157, 157, 0.433);
           cursor: pointer;
           z-index: 2;
           box-shadow: 5px 10px 20px #ffcccc;
+
+          svg {
+            width: 15px;
+          }
         }
       }
     }
