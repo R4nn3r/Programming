@@ -16,7 +16,10 @@
 
     <!-- Link -->
     <link rel="stylesheet" href="./app/style/style.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -36,17 +39,18 @@
             <source
               class="logo__mobile"
               srcset="./images/logo-mobile.svg"
-              media="(min-width: 768px)"
+              media="(max-width: 639px)"
             />
           </picture>
           <img class="logo__desktop" src="./images/logo.svg" alt="logo" />
         </div>
+
         <div class="main__grid__female main__grid--right female-img">
           <div class="main__grid__female__img">
             <picture>
               <source
                 srcset="./images/hero-desktop.jpg"
-                media="(min-width: 768px)"
+                media="(min-width: 639px)"
               />
               <img
                 class="card__img"
@@ -68,26 +72,34 @@
           </div>
 
           <form class="form">
-            <input
-              required
-              class="email"
-              type="email"
-              placeholder="Email Address"
-            />
+            <div class="form__control form-control">
+              <input
+                autofocus
+                class="email"
+                type="text"
+                placeholder="Email Address"
+              />
+              <i class="fas fa-exclamation-circle"></i>
+              <i class="fas fa-check-circle"></i>
+
+              <small>Error Report!</small>
+            </div>
+
             <button class="cta linear-grad-200">
-              <img src="./images/icon-arrow.svg" alt="arrow" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M1 1l8.836 8.836L1 18.671"
+                />
+              </svg>
             </button>
           </form>
         </article>
       </div>
     </main>
-    <!-- <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer> -->
+
+    <script src="./app/js/main.js"></script>
   </body>
 </html>

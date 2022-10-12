@@ -97,6 +97,8 @@ span {
   max-width: calc(100% - 30px);
   width: 100%;
   margin-bottom: 0.5em;
+
+  font-size: 14px;
 }
 
 .form-control > input::placeholder {
@@ -136,8 +138,42 @@ span {
 .form-control i {
   visibility: hidden;
   position: absolute;
-  top: 12px;
+  top: 9px;
   right: 10px;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 3px;
+  right: 10px;
+  left: initial;
+  font-size: 10px;
+  color: red;
+}
+.form-control.error small {
+  visibility: visible;
+}
+
+/* Style for when the form is valid or not */
+.error > input {
+  outline: 1px solid red;
+  border: 1px solid rgb(255, 0, 0);
+  background-color: rgb(255, 220, 220);
+}
+
+.error > input::placeholder {
+  color: red;
+}
+
+.success > input {
+  outline: 1px solid #2ecc71;
+  border: 1px solid #2ecc71;
+  background-color: rgb(218, 255, 188);
+}
+
+.success > input::placeholder {
+  color: green;
 }
 
 .form-control.success i.fa-check-circle {
@@ -148,11 +184,4 @@ span {
 .form-control.error i.fa-exclamation-circle {
   color: #e74c3c;
   visibility: visible;
-}
-
-.form-control small {
-  visibility: hidden;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
