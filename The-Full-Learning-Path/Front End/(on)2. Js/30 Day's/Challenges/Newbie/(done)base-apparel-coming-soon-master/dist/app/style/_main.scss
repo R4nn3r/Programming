@@ -1,0 +1,189 @@
+.main {
+  font-size: $fs-primary;
+  margin-inline: auto;
+  color: $crl-dgr;
+
+  @include breakpoints-down(small) {
+    text-align: center;
+  }
+  .main__grid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 57.5% 1fr;
+    grid-template-rows: 1fr;
+    @include breakpoints-up(medium) {
+      grid-template-areas: "one two";
+    }
+
+    @include breakpoints-down(small) {
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    &__logo {
+      // layout
+      @include breakpoints-up(medium) {
+        grid-area: one;
+        margin: 2.5vw 5vw;
+      }
+      padding: 2em;
+      display: flex;
+      align-self: flex-start;
+    }
+
+    &__left {
+      // layout
+      @include breakpoints-up(medium) {
+        grid-area: one;
+        margin: 12.5vw 6vw;
+      }
+
+      padding: 1em;
+      max-width: 500px;
+      width: 100%;
+      @include breakpoints-down(medium) {
+        max-width: 355px;
+      }
+      @include breakpoints-down(small) {
+        order: 3;
+        justify-self: center;
+      }
+
+      .description {
+        margin: 2em 0;
+        h1 {
+          line-height: 1.2;
+          font-size: 3.5em;
+          letter-spacing: 0.35em;
+          margin: 0.25em 0;
+          width: min-content;
+          @include breakpoints-down(medium) {
+            font-size: 2.5em;
+          }
+
+          @include breakpoints-down(small) {
+            font-size: 2.5em;
+            margin: 0.75em 0;
+            margin-inline: auto;
+          }
+        }
+
+        p {
+          color: $crl-red;
+          @include breakpoints-down(small) {
+            font-size: 1.05em;
+          }
+        }
+      }
+
+      .form {
+        display: flex;
+        align-items: flex-start;
+
+        @include breakpoints-down(medium) {
+          max-width: 300px;
+        }
+
+        @include breakpoints-down(small) {
+          justify-content: center;
+          margin-bottom: 4em;
+        }
+        .form-control.error {
+          input {
+            outline: 2px solid #ff5b5b;
+            width: 100%;
+          }
+          .fa-exclamation-circle {
+            position: absolute;
+            top: 16px;
+            right: 60px;
+            transform: scale(1.5);
+            color: #ff5b5b;
+            visibility: visible;
+          }
+
+          small {
+            font-size: 0.8em;
+            color: #ff5b5b;
+            visibility: visible;
+          }
+        }
+        .form-control.success {
+          input {
+            outline: 2px solid #78c842;
+            width: 100%;
+            &::placeholder {
+              color: #78c842;
+            }
+          }
+          .fa-check-circle {
+            position: absolute;
+            top: 16px;
+            right: 60px;
+            transform: scale(1.5);
+            color: #78c842;
+            visibility: visible;
+          }
+        }
+
+        &__control {
+          position: relative;
+          text-align: left;
+
+          input {
+            width: 100%;
+            padding: 1.25em;
+            border: none;
+            outline: 1px solid $crl-red;
+            border-radius: 2em;
+          }
+          i,
+          small {
+            visibility: hidden;
+          }
+        }
+        .green {
+          path {
+            stroke: #78c842;
+          }
+        }
+
+        .cta {
+          margin-left: -10%;
+          margin-top: -0.1em;
+          border: none;
+          border-radius: 2em;
+          padding: 1.05em 3em;
+          outline: 1px solid rgba(255, 157, 157, 0.433);
+          cursor: pointer;
+          z-index: 2;
+          box-shadow: 5px 10px 20px #ffcccc;
+        }
+      }
+    }
+
+    &__female {
+      // layout
+      @include breakpoints-up(medium) {
+        grid-area: two;
+      }
+
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+
+      img {
+        @include breakpoints-up(medium) {
+          min-height: 480px;
+          min-width: 350px;
+        }
+        @include breakpoints-down(small) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

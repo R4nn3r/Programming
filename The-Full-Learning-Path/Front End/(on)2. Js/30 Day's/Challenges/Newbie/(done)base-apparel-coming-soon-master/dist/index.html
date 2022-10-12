@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Link -->
+    <link rel="stylesheet" href="./app/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="linear-grad-100">
+    <main class="main container">
+      <div class="main__grid">
+        <div class="main__grid__logo">
+          <picture>
+            <source
+              class="logo__mobile"
+              srcset="./images/logo-mobile.svg"
+              media="(max-width: 639px)"
+            />
+          </picture>
+          <img class="logo__desktop" src="./images/logo.svg" alt="logo" />
+        </div>
+
+        <div class="main__grid__female main__grid--right female-img">
+          <div class="main__grid__female__img">
+            <picture>
+              <source
+                srcset="./images/hero-desktop.jpg"
+                media="(min-width: 639px)"
+              />
+              <img
+                class="card__img"
+                src="./images/hero-mobile.jpg"
+                alt="Image of model"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <article class="main__grid__left main__grid--left">
+          <div class="description">
+            <h1><span>WE'RE</span> COMING SOON</h1>
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up to date with announcements
+              and our launch deals.
+            </p>
+          </div>
+
+          <form class="form">
+            <div class="form__control form-control">
+              <input class="email" type="text" placeholder="Email Address" />
+              <i class="fas fa-exclamation-circle"></i>
+              <i class="fas fa-check-circle"></i>
+
+              <small>Error Report!</small>
+            </div>
+
+            <button class="cta linear-grad-200">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M1 1l8.836 8.836L1 18.671"
+                />
+              </svg>
+            </button>
+          </form>
+        </article>
+      </div>
+    </main>
+
+    <script src="./app/js/main.js"></script>
+  </body>
+</html>
