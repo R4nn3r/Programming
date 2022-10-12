@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,900;1,900&display=swap");
+
+*/ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  margin: 1em;
+  font-family: poppins;
+  background-color: rgb(196, 198, 192);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+}
+.header {
+  padding: 1em 1.5em;
+  background-color: rgb(230, 230, 230);
+}
+.header > h2 {
+  font-weight: 400;
+}
+
+span {
+  font-weight: 900;
+}
+
+.container {
+  margin: 1em;
+  background-color: white;
+  border-radius: 5px;
+  width: 400px;
+  max-width: 100%;
+  font-family: inherit;
+  overflow: hidden;
+
+  box-shadow: 10px 10px 5em rgba(0, 0, 0, 0.241);
+}
+
+.form {
+  padding: 1em 1.5em;
+  margin: 0.25em;
+}
+
+.form-control {
+  position: relative;
+  padding-bottom: 1em;
+}
+
+.form-control > input {
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  padding: 0.4em 1em;
+  max-width: calc(100% - 30px);
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.form-control > input::placeholder {
+  color: gray;
+
+  font-size: 0.85em;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em;
+  background-color: rgb(85, 85, 85);
+  border: none;
+
+  outline: 1px solid white;
+  border-radius: 5px;
+
+  color: white;
+  font-weight: 500;
+  font-size: 0.9em;
+
+  /* make is look better */
+
+  border-bottom: 2px solid rgb(0, 0, 0);
+  transition: letter-spacing 0.3s ease-in, background-color 0.3s ease-in;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(43, 43, 43);
+  letter-spacing: 1px;
+
+  border-bottom: 2px solid rgb(66, 66, 66);
+}
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

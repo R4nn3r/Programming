@@ -5,52 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href=".app/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+
+    <!-- link -->
+    <link rel="stylesheet" href="./app/style.css" />
   </head>
   <body>
-    <main class="main">
-      <h1>Hello World!</h1>
-      <form class="form" onsubmit="sendEmail(); reset(); return false;">
-        <div class="fname">
-          <input
-            type="name"
-            placeholder="Full Name"
-            name="fname"
-            id="fname"
-            required
-          />
-        </div>
-        <div class="sub">
-          <input
-            type="name"
-            placeholder="Subject"
-            name="sub"
-            id="sub"
-            required
-          />
+    <main class="main main container">
+      <div class="header">
+        <h2>Create <span>Account</span></h2>
+      </div>
+
+      <form class="form" id="form">
+        <div class="form-control">
+          <input type="text" placeholder="Username" id="usernmae" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error massage!</small>
         </div>
 
-        <div class="email">
-          <input
-            type="email"
-            placeholder="Email"
-            name="email"
-            id="email"
-            required
-          />
+        <div class="form-control">
+          <input type="email" placeholder="Email" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error massage!</small>
         </div>
-        <div class="text">
-          <textarea
-            class="myTextArea"
-            class="text"
-            id="text"
-            required
-          ></textarea>
+
+        <div class="form-control">
+          <input type="password" placeholder="Password" id="password1" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error massage!</small>
         </div>
-        <input type="submit" class="cta" />
+
+        <div class="form-control">
+          <input type="password" placeholder="Repeat Password" id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error massage!</small>
+        </div>
+
+        <button class="button">Submit</button>
       </form>
     </main>
 
-    <script src=".app/main.js"></script>
+    <script src="app/main.js"></script>
   </body>
 </html>
