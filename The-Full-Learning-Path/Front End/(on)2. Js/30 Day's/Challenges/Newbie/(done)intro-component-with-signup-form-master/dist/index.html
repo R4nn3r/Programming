@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Link -->
+    <link rel="stylesheet" href="./app/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <main class="main main-box">
+    <article class="main__article">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching
+        scripted tutorials is great, but understanding how developers think is
+        invaluable.
+      </p>
+    </article>
+
+    <section class="main__section">
+      <div class="main__section__top">
+        <h2 class="top__txt">
+          Try it free 7 days <span>then $20/mo. thereafter</span>
+        </h2>
+      </div>
+      <form id="form" class="main__section__form">
+        <div class="name">
+          <input
+            type="text"
+            name="name"
+            class="fname"
+            id="fname"
+            placeholder="First Name"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+
+          <p>First Name cannot be empty</p>
+        </div>
+        <div class="name">
+          <input
+            type="text"
+            name="name"
+            class="lname"
+            id="lname"
+            placeholder="Last Name"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+
+          <p>Last Name cannot be empty</p>
+        </div>
+        <div class="email">
+          <input
+            type="text"
+            name="email"
+            class="email"
+            id="email"
+            placeholder="Email Address"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+
+          <p>Email cannot be empty</p>
+        </div>
+        <div class="passcode">
+          <input
+            type="password"
+            name="password"
+            class="pass"
+            id="pass"
+            placeholder="Password"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+
+          <p>Password cannot be empty</p>
+        </div>
+        <button id="button" class="main__section__form__btn">
+          CLAIM YOUR FREE TRIAL
+        </button>
+        <div class="main__section__bottom">
+          <h3 class="bottom__txt">
+            By clicking the button, you are agreeing to our
+            <span>Terms and Services</span>
+          </h3>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="footer__text">
+    <p class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a class="written" href="https://github.com/R4nn3r" target="_blank">
+        <span>Yonatan Afewerk Teshome</span> </a
+      >.
+    </p>
+  </footer>
+  <body>
+    <script src="./app/js/main.js"></script>
+  </body>
+</html>
