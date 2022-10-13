@@ -67,8 +67,28 @@ svg {
 //  Utilities
 .main-box {
   max-width: 1440px;
+  margin-inline: auto;
 }
 
 // General
 body {
+  background: linear-gradient(135deg, rgb(136, 255, 0), yellow);
+  font-family: monospace;
+  //   display: grid;
+  //   place-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  .container {
+    background-color: white;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 0.5em;
+
+    max-width: 450px;
+
+    box-shadow: 2.75em 2.75em 3em -3em rgb(62 62 62 / 53%);
+  }
 }
