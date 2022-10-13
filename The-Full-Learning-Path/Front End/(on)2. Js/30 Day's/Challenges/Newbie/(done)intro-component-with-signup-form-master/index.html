@@ -16,6 +16,10 @@
 
     <!-- Link -->
     <link rel="stylesheet" href="./app/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -54,7 +58,9 @@
             id="fname"
             placeholder="First Name"
           />
-          <p></p>
+          <i class="fas fa-exclamation-circle"></i>
+
+          <p>First Name cannot be empty</p>
         </div>
         <div class="name">
           <input
@@ -64,17 +70,21 @@
             id="lname"
             placeholder="Last Name"
           />
-          <p></p>
+          <i class="fas fa-exclamation-circle"></i>
+
+          <p>Last Name cannot be empty</p>
         </div>
         <div class="email">
           <input
-            type="email"
+            type="text"
             name="email"
             class="email"
             id="email"
             placeholder="Email Address"
           />
-          <p></p>
+          <i class="fas fa-exclamation-circle"></i>
+
+          <p>Email cannot be empty</p>
         </div>
         <div class="passcode">
           <input
@@ -84,7 +94,9 @@
             id="pass"
             placeholder="Password"
           />
-          <p></p>
+          <i class="fas fa-exclamation-circle"></i>
+
+          <p>Password cannot be empty</p>
         </div>
         <button id="button" class="main__section__form__btn">
           CLAIM YOUR FREE TRIAL
