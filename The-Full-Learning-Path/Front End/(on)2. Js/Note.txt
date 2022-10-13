@@ -97,7 +97,7 @@ https://developer.mozilla.org/en-US/
 
     # Array
 
-        Arrays are generally described as "list-like objects";
+        # Arrays are generally described as "list-like objects";
                 # Constructing an array
                     const arrayName = new Array();
 
@@ -178,6 +178,37 @@ https://developer.mozilla.org/en-US/
                 # Checks 
 
                     Array.isArray(arr) will return true if the array exists 
+
+        # High Order array methods
+                const array = ["one","two","three","four","five"]
+
+                # forEach method
+
+                    array.forEach((element, index) => {
+                        // some operations on the element
+                        // maybe you want to use the index of the element
+                    });
+
+                # map method 
+                    ->  Biggest difference from forEach method is that it has 
+                        return of another array so it is possible to chain with 
+                        other methods 
+
+                    const returnedArr = array.map(currentEle => {
+                        // some operation on currentEle
+                    })
+
+                        # Chain Example 
+
+                            const checkFilter = todos.filter((todo) => {
+                                if (todo.isCompleted === true) {
+                                return true;
+                                }
+                            }).map((todo) => {
+                                return todo.text;
+                            });
+
+                            console.log(checkFilter);
 
     # Conditionals 
 
@@ -260,7 +291,7 @@ https://developer.mozilla.org/en-US/
                         console.log(arr[0]); // 30
 
                         
-            2:
+            2: (arrow way of Defining functions a bit cooler no difference tho)
                 const functionName = () => {
                     let x = 1
                     let u = 2
@@ -294,6 +325,85 @@ https://developer.mozilla.org/en-US/
                     B(2);
                 }
                 A(1); // logs 6 (1 + 2 + 3)
+
+        #  Scope and Functions (where the variables can be seen everywhere in your JavaScript code)
+            Types:
+                Block scope
+                Function scope
+                Global scope
+
+
+            # Block 
+                {
+                  let x = 2;
+                }
+                // x can NOT be used here
+
+
+            # Function  (Local)
+
+                Tip: 
+                    cause the variables only exist in the function they are declared 
+                    in you can have multiple variables with the same name but only 
+                    in different function!
+
+                // code here can NOT use carName
+
+                function myFunction() {
+                     let carName = "Volvo";
+                    // code here CAN use carName
+                }
+
+                // code here can NOT use carName
+
+            # Global
+                Note:
+                    Variables are declared outside on any block or function
+                    then they are said to be Global scoped cause every function 
+                    can access them at the same time!
+
+                1: 
+                    let carName = "Volvo";
+                    // code here can use carName
+
+                    function myFunction() {
+                        // code here can also use carName
+                    }
+
+                2:
+                   # Automatically global variables
+
+                        myFunction();
+
+                        // code here can use carName
+
+                        function myFunction() {
+                        carName = "Volvo";
+                        }
+
+        # Strict Mode!
+            Tips:
+                Blocks Automatically set Global Variables from working!
+                
+            "use strict"; Defines that JavaScript code should be executed in "strict mode".
+            
+            How to Declare it?
+                Strict mode is declared by adding "use strict"; 
+                to the beginning of a script or a function.
+
+                "use strict";
+                myFunction();
+
+                function myFunction() {
+                    y = 3.14;   // This will also cause an error because y is not declared
+                }
+
+
+
+
+
+
+
 
     # Loops and iteration 
 
@@ -380,36 +490,7 @@ https://developer.mozilla.org/en-US/
                     console.log(i); // logs 3, 5, 7
                     }
 
-        # High Order array methods
-            const array = ["one","two","three","four","five"]
-
-            # forEach method
-
-                array.forEach((element, index) => {
-                    // some operations on the element
-                    // maybe you want to use the index of the element
-                });
-
-            # map method 
-                ->  Biggest difference from forEach method is that it has 
-                    return of another array so it is possible to chain with 
-                    other methods 
-
-                const returnedArr = array.map(currentEle => {
-                    // some operation on currentEle
-                })
-
-                    # Chain Example 
-
-                        const checkFilter = todos.filter((todo) => {
-                            if (todo.isCompleted === true) {
-                            return true;
-                            }
-                        }).map((todo) => {
-                            return todo.text;
-                        });
-
-                        console.log(checkFilter);
+        
 
 
             # reduce method 
