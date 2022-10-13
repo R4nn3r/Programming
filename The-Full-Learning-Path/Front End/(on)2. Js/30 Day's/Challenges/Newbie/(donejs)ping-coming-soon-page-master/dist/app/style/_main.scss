@@ -38,7 +38,7 @@
       display: flex;
       gap: 0.75em;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       max-width: 575px;
       width: 100%;
       padding: 1.5em;
@@ -47,11 +47,39 @@
         flex-direction: column;
         max-width: 400px;
       }
+      .form-control {
+        width: 100%;
+
+        small {
+          display: none;
+        }
+      }
+      .form-control.error {
+        width: 100%;
+        text-align: left;
+        @include breakpoints-down(small) {
+          text-align: center;
+        }
+        input {
+          outline: 2px solid red;
+        }
+
+        small {
+          display: block;
+          margin-left: 1em;
+          color: red;
+        }
+      }
+      .form-control.success {
+        input {
+          outline: 2px solid rgb(158, 249, 101);
+        }
+      }
 
       .email {
         padding: 1em 1em;
-
-        width: 70%;
+        margin-bottom: 0.25em;
+        width: 100%;
         border-radius: 2.5em;
         border: none;
         outline: 1px solid $crl-gray;
@@ -85,6 +113,7 @@
         @include breakpoints-down(small) {
           width: 100%;
           font-size: 12px;
+          padding: 1.3em 1.5em;
         }
       }
     }
@@ -140,4 +169,8 @@ span {
 }
 strong {
   color: $crl-vd-blue;
+}
+
+small {
+  font-size: 11px;
 }

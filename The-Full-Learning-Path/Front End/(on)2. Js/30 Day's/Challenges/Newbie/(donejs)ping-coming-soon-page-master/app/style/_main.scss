@@ -1,0 +1,172 @@
+.main {
+  padding: 1em;
+  margin: 1em;
+  margin-inline: auto;
+  color: $crl-vd-blue;
+
+  &__article {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+
+    &__header {
+      line-height: 1.2;
+      h3 {
+        margin: 0.75em 0;
+        @include breakpoints-up(medium) {
+          font-size: 25px;
+        }
+      }
+      h1 {
+        font-weight: $fw-300;
+        color: $crl-gray;
+        margin-bottom: 0.25em;
+        @include breakpoints-up(medium) {
+          font-size: 45px;
+        }
+      }
+
+      p {
+        color: $crl-vd-blue;
+      }
+    }
+
+    &__form {
+      display: flex;
+      gap: 0.75em;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 575px;
+      width: 100%;
+      padding: 1.5em;
+
+      @include breakpoints-down(small) {
+        flex-direction: column;
+        max-width: 400px;
+      }
+      .form-control {
+        width: 100%;
+
+        small {
+          display: none;
+        }
+      }
+      .form-control.error {
+        width: 100%;
+        text-align: left;
+        @include breakpoints-down(small) {
+          text-align: center;
+        }
+        input {
+          outline: 2px solid red;
+        }
+
+        small {
+          display: block;
+          margin-left: 1em;
+          color: red;
+        }
+      }
+      .form-control.success {
+        input {
+          outline: 2px solid rgb(158, 249, 101);
+        }
+      }
+
+      .email {
+        padding: 1em 1em;
+        margin-bottom: 0.25em;
+        width: 100%;
+        border-radius: 2.5em;
+        border: none;
+        outline: 1px solid $crl-gray;
+        @include breakpoints-down(small) {
+          width: 100%;
+          padding: 1em 1em;
+        }
+
+        &::placeholder {
+          color: $crl-gray;
+        }
+      }
+
+      .cta {
+        padding: 1em 1.5em;
+        box-shadow: 2px 7px 13px #4f7df342;
+        width: 30%;
+        border-radius: 2.5em;
+        color: white;
+
+        border: none;
+        background-color: $crl-accent;
+        font-weight: $fw-600;
+
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.75;
+        }
+
+        @include breakpoints-down(small) {
+          width: 100%;
+          font-size: 12px;
+          padding: 1.3em 1.5em;
+        }
+      }
+    }
+  }
+
+  &__illustration {
+    max-width: 1000px;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 2.5em;
+    margin-bottom: 5em;
+  }
+
+  &__footer {
+    &__socials {
+      display: flex;
+      flex-direction: row;
+      gap: 0.75em;
+      align-items: center;
+      justify-content: center;
+      margin: 1.5em 0;
+
+      div {
+        width: 25px;
+        height: 25px;
+        color: $crl-accent;
+        outline: 1px solid white;
+        padding: 0.25em;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+        transition: color 0.3s ease-in, background-color 0.3s ease-in;
+
+        &:hover {
+          color: white;
+          background-color: $crl-accent;
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 10px;
+    }
+  }
+}
+
+span {
+  color: $crl-accent;
+}
+strong {
+  color: $crl-vd-blue;
+}

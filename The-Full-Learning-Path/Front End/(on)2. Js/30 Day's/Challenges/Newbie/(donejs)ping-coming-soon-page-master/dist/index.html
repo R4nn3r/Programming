@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+
+    <!-- Link -->
+    <link rel="stylesheet" href="./app/style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/5b12988027.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main container">
+      <article class="main__article center">
+        <div class="main__article__header">
+          <h3>PING <span>.</span></h3>
+
+          <h1>We are launching <strong>soon! </strong></h1>
+
+          <p>Subscribe and get notified</p>
+        </div>
+
+        <form class="main__article__form">
+          <div class="form-control">
+            <input
+              id="email"
+              type="text"
+              class="email"
+              placeholder="Your email address..."
+            />
+            <small>Error message!</small>
+          </div>
+
+          <input type="submit" value="Notify Me" class="cta" />
+        </form>
+      </article>
+
+      <div class="main__illustration">
+        <img src="./images/illustration-dashboard.png" alt="dashboard image" />
+      </div>
+
+      <article class="main__footer">
+        <div class="main__footer__socials">
+          <div class="facebook blue">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="twitter blue">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="pinterest blue">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <p>&copy; Copyright Ping. All rights reserved.</p>
+      </article>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/R4nn3r">Yonatan Afewerk Teshome</a>.
+      </p>
+    </footer>
+
+    <script src="./app/js/main.js"></script>
+  </body>
+</html>
