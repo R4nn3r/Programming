@@ -1,6 +1,11 @@
 JS
 https://developer.mozilla.org/en-US/
 
+    Tips:
+        (alt + left || right)
+             alt and the side keys to change position across single worlds!
+
+
     JavaScript was introduced in 1995 as a way to add programs to web pages in the
     Netscape Navigator browser. The language has since been adopted by all other
     major graphical web browsers. It has made modern web applications possible—
@@ -10,14 +15,17 @@ https://developer.mozilla.org/en-US/
 
 # Fundamentals of JavaScript
     # Variables 
+        -> the name scheme for the variables should always be in 
+           [ camelCase ]
+
         let name = ....; and you can reassign the value
-        const name = ....; cant use it again
-        var name = ....; old not used 
+        const name = ....; cant use it again (readonly variable)
+        var name = ....; old and not that good to use (you shouldn't)
 
 
         - Note
-            Always use unless you know you 
-            need to change the variable 
+            Always use (const) unless you know you 
+            need to change the variable and in that case use (let)
 
     # Data Types
 
@@ -44,6 +52,7 @@ https://developer.mozilla.org/en-US/
             const myString2 = myNum2.toString();
 
     # Strings and String methods 
+        String values are immutable, which means that they cannot be altered once created.
 
         const string = "string";
 
@@ -129,10 +138,10 @@ https://developer.mozilla.org/en-US/
 
                     .length 
 
-                    .push (end of array), unshift (start of array)
+                    .push (end of array), unshift() (start of array)
                         arr.push("new data')
                         
-                    .pop (end of array), shift (start of array)
+                    .pop (end of array), shift() (start of array)
                         arr.pop(); // removes 'three'
 
                     .indexOf("value")
@@ -149,7 +158,9 @@ https://developer.mozilla.org/en-US/
 
                             const arr3 = arr1.concat(arr2)
 
+
                 # Multidimensional Arrays
+                    
                     const random = ['tree', 795, [0, 1, 2]];
                     random[2][2];
 
@@ -805,7 +816,6 @@ https://developer.mozilla.org/en-US/
         -> Returns the string using the associated key it's using 
 
 # Note: This
-
     # setTimeout
 
         method calls a function after a number of milliseconds.
@@ -823,3 +833,29 @@ https://developer.mozilla.org/en-US/
                     setTimeout(() => {
                         msg1.remove();
                     }, 3000);
+
+# Freecodecamp 
+
+    - Basic JavaScript 
+
+        Tips 
+
+            Escaping Literal Quotes in String
+
+                const myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+
+            
+                or 
+
+                you can use ('') on the outside when using ("")
+                or vise versa 
+            
+            Escape Sequences in Strings
+                \'	single quote
+                \"	double quote
+                \\	backslash
+                \n	newline
+                \t	tab
+                \r	carriage return
+                \b	word boundary
+                \f	form feed
