@@ -586,146 +586,145 @@ https://developer.mozilla.org/en-US/
 
         Helps us group different values that are related together
 
-        # Accessing methods 
-            let obj = {
-                title : "Title",
-                dueDate : "03-03-2202"
-            }
-            obj.title -> "Title"
-            object.dueDate -> "03-03-2202"
-
-            or 
-
-            obj['title']
-                - This makes using variables possible 
-
-                    var = "title"
-                    obj[var] -> "Title"
-
-            property-value pairs 
-
-        # Objects Constructor functions and Prototypes  
-
-            // constructor function
-
-            function Person(fname, lname, dob) {
-                this.fname = fname;
-                this.lname = lname;
-                this.dob = new Date(dob);
-            }
-
-            // Creating prototypes functions 
-
-            Person.prototype.getFullName = function () {
-                return `${this.fname} ${this.lname}`;
-            };
-
-            Person.prototype.getBirthYear = function () {
-              return this.dob.getFullYear();
-            };
-
-            // instantiate object
-
-            const person1 = new Person("Jhon", "John", "4-3-1880");
-            const person2 = new Person("two", "two", "4-3-2750");
-            const person3 = new Person("three", "three", "4-3-1022");
-            const person4 = new Person("four", "four", "4-3-2022");
-
-            console.log(person1.getBirthYear());
-            console.log(person1.getFullName());
-
-        # Updating objects 
-            const ourDog = {
-                "name": "Camper",
-                "legs": 4,
-                "tails": 1,
-                "friends": ["everything!"]
-            };
-
-                # Change
-
-                    ourDog.name = "new name";
-                        or
-                            ourDog["name"] = "new name";
-
-                # add another properties 
-
-                    myDog.bark = "woof"
-                        or
-                          myDog["bark"] = "woof"
-
-                # Deleting properties
-
-                    delete myDog.tails
-                        or
-                          delete myDog["bark"]
-                          
-
-        # Class (ES6)
-        
-
-            -> Does the same things as the above code better looks kinda better 
-                and your create the prototypes with the class itself 
-
-                class Person {
-                    constructor(fname, lname, dob) {
-                        this.fname = fname;
-                        this.lname = lname;
-                        this.dob = new Date(dob);
-                    }
-                    getFullName() {
-                        return `${this.fname} ${this.lname}`;
-                    }
-                    getBirthYear() {
-                        return this.dob.getFullYear();
-                    }
+            # Accessing methods 
+                let obj = {
+                    title : "Title",
+                    dueDate : "03-03-2202"
                 }
+                obj.title -> "Title"
+                object.dueDate -> "03-03-2202"
+
+                or 
+
+                obj['title']
+                    - This makes using variables possible 
+
+                        var = "title"
+                        obj[var] -> "Title"
+
+                property-value pairs 
+
+            # Objects Constructor functions and Prototypes  
+
+                // constructor function
+
+                function Person(fname, lname, dob) {
+                    this.fname = fname;
+                    this.lname = lname;
+                    this.dob = new Date(dob);
+                }
+
+                // Creating prototypes functions 
+
+                Person.prototype.getFullName = function () {
+                    return `${this.fname} ${this.lname}`;
+                };
+
+                Person.prototype.getBirthYear = function () {
+                return this.dob.getFullYear();
+                };
 
                 // instantiate object
 
                 const person1 = new Person("Jhon", "John", "4-3-1880");
                 const person2 = new Person("two", "two", "4-3-2750");
+                const person3 = new Person("three", "three", "4-3-1022");
+                const person4 = new Person("four", "four", "4-3-2022");
 
-                console.log(person2.getFullName());
+                console.log(person1.getBirthYear());
+                console.log(person1.getFullName());
 
-        # Destructuring Objects 
+            # Updating objects 
+                const ourDog = {
+                    "name": "Camper",
+                    "legs": 4,
+                    "tails": 1,
+                    "friends": ["everything!"]
+                };
 
-            const dataTypes = {
-                strings: "string",
-                null: "null",
-                numbers: [1,2,3,4],
-                boolen: {
-                    one: true,
-                    two: false,
+                    # Change
+
+                        ourDog.name = "new name";
+                            or
+                                ourDog["name"] = "new name";
+
+                    # add another properties 
+
+                        myDog.bark = "woof"
+                            or
+                            myDog["bark"] = "woof"
+
+                    # Deleting properties
+
+                        delete myDog.tails
+                            or
+                            delete myDog["bark"]
+                            
+            # Class (ES6)
+            
+
+                -> Does the same things as the above code better looks kinda better 
+                    and your create the prototypes with the class itself 
+
+                    class Person {
+                        constructor(fname, lname, dob) {
+                            this.fname = fname;
+                            this.lname = lname;
+                            this.dob = new Date(dob);
+                        }
+                        getFullName() {
+                            return `${this.fname} ${this.lname}`;
+                        }
+                        getBirthYear() {
+                            return this.dob.getFullYear();
+                        }
+                    }
+
+                    // instantiate object
+
+                    const person1 = new Person("Jhon", "John", "4-3-1880");
+                    const person2 = new Person("two", "two", "4-3-2750");
+
+                    console.log(person2.getFullName());
+
+            # Destructuring Objects 
+
+                const dataTypes = {
+                    strings: "string",
+                    null: "null",
+                    numbers: [1,2,3,4],
+                    boolen: {
+                        one: true,
+                        two: false,
+                    }
                 }
-            }
 
-                # Add to already existing object
-                dataTypes.email = "email@example.com";
+                    # Add to already existing object
+                    dataTypes.email = "email@example.com";
 
-            const {strings,oull ,boolen: {one}, email} = dataTypes;
+                const {strings,oull ,boolen: {one}, email} = dataTypes;
 
-        # Creating objects withing Arrays 
-            const array = [
-                {objects},
-                {object},
-            ];
+            # Creating objects withing Arrays 
+                const array = [
+                    {objects},
+                    {object},
+                ];
 
-        # Working with JSON
+            # Working with JSON
 
-            How to convert an Array to a string(JSON format)
-                    -> JSON.stringify(array)
+                How to convert an Array to a string(JSON format)
+                        -> JSON.stringify(array)
 
-                            -> You can use this as an input as "data" in localStorage
-                        
-            How to convert an string to an Array 
-                    -> JSON.parse(string)
+                                -> You can use this as an input as "data" in localStorage
+                            
+                How to convert an string to an Array 
+                        -> JSON.parse(string)
 
-                            -> Ex. for localStorage cases where you converted an
-                                    array-string to store you can parse it 
-                                    
-                                const savedData = JSON.parse(localStorage.getItem(key))
-                        
+                                -> Ex. for localStorage cases where you converted an
+                                        array-string to store you can parse it 
+                                        
+                                    const savedData = JSON.parse(localStorage.getItem(key))
+                            
 # Events
 
     Event	            Description
