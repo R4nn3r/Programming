@@ -117,3 +117,103 @@ updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
 // updateRecords(recordCollection, 5439, "tracks", "");
 
 // console.log(recordCollection);
+
+// console.log(recordCollection);
+
+const a = 2;
+const b = 10;
+
+const sum = a + b;
+
+// console.log(sum);
+
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+
+// console.log(typeof total);
+// console.log(total);
+
+function multiplyAll(arr) {
+  let product = 1;
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+  // Only change code above this line
+
+  // console.log(product);
+  return product;
+}
+
+multiplyAll([
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+]);
+
+function summ(arr, n) {
+  // Only change code below this line
+  let added = 0;
+  if (n <= 0) {
+    return added;
+  } else {
+    return summ(arr, n - 1) + arr[n - 1];
+  }
+  // Only change code above this line
+}
+
+// console.log(summ([1, 2, 3, 4, 5], 2));
+
+// Setup
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  // Only change code below this line
+  for (let i = 0; i < contacts.length; i++) {
+    if (contacts[i]["firstName"] === name) {
+      if (prop in contacts[i]) {
+        return contacts[i][prop];
+      } else {
+        return "No such property";
+      }
+    }
+  }
+  return "No such contact";
+  // Only change code above this line
+}
+
+lookUpProfile("Akira", "jump");
+
+// console.log(lookUpProfile("Harry", "likes"));
+
+console.log(contacts[0]["firstName"]);

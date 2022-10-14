@@ -51,6 +51,13 @@ https://developer.mozilla.org/en-US/
             const myNum2 = 123;
             const myString2 = myNum2.toString();
 
+
+            or 
+            
+
+            var myInt = parseInt("10.256"); //10
+            var myFloat = parseFloat("10.256"); //10.256
+
     # Strings and String methods 
         String values are immutable, which means that they cannot be altered once created.
 
@@ -427,8 +434,7 @@ https://developer.mozilla.org/en-US/
 
     # Loops and iteration 
 
-        # For Loop
-            
+        # For Loop            
             for (initializer; condition; increment) {
                 code
             }
@@ -584,7 +590,9 @@ https://developer.mozilla.org/en-US/
                         If callback(a, b) returns greater than 0, b comes before a
 
                     console.log(sortedArray);
-
+        
+        # Replace Loops using Recursion 
+            
     # Objects 
 
         Helps us group different values that are related together
