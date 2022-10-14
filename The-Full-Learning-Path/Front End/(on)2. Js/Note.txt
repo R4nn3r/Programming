@@ -428,7 +428,7 @@ https://developer.mozilla.org/en-US/
     # Loops and iteration 
 
         # For Loop
-
+            
             for (initializer; condition; increment) {
                 code
             }
@@ -457,6 +457,9 @@ https://developer.mozilla.org/en-US/
                 } while (i < 5);
        
         # While 
+
+            Runs while a specified condition is true and stops once its 
+            false 
 
             initializer 
             while(condition) {
@@ -724,7 +727,13 @@ https://developer.mozilla.org/en-US/
                                         array-string to store you can parse it 
                                         
                                     const savedData = JSON.parse(localStorage.getItem(key))
-                            
+
+            # Testing Objects for Properties 
+
+                .hasOwnProperty(propName)
+                    returns true or false 
+                if the property is found or not.
+
 # Events
 
     Event	            Description
