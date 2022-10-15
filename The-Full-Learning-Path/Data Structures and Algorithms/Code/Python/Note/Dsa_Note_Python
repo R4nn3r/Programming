@@ -1,0 +1,71 @@
+# Recursion
+
+    Note:
+    recursive function uses LIFO (LAST IN FIRST OUT) Structure just like the stack data structure. 
+
+    The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called a recursive function.
+
+
+    # Properties 
+        - same operation multiple times
+        - smaller inputs to make the problem smaller
+        - Base condition is needed to stop the recursion 
+    
+
+    # How are problems solved with recursion 
+        idea is to represent a problem in terms of one or more smaller problems, and add one or more base conditions that stop the recursion.
+
+    # Overflow error
+        Stack overflow error occurs in recursions when the base case is not reached or not defined!
+
+
+    # Types of Recursions
+
+        # Direct 
+            Calls its self.
+        
+        # Indirectly
+            Calls another function 
+
+            Ex.
+                void indirectRecFun1()
+                {
+                    // Some code...
+
+                    indirectRecFun2();
+
+                    // Some code...
+                }
+                void indirectRecFun2()
+                {
+                    // Some code...
+
+                    indirectRecFun1();
+
+                    // Some code...
+                }
+
+        # Tailed vs Non-tailed 
+            when the recursive call is the last thing executed by the function 
+
+    # Problems of recursive functions 
+
+        - greater space requirement 
+        - greater time requirement 
+        - difficult code to understand 
+
+
+    # Summary of Recursion:
+            #   There are two types of cases in recursion i.e. recursive 
+                case and a base case.
+
+            #   The base case is used to terminate the recursive 
+                function when the case turns out to be true.
+
+            #   Each recursive call makes a new copy of that method in 
+                the stack memory.
+
+            #   Infinite recursion may lead to running out of stack memory.
+
+                Examples of Recursive algorithms: 
+                Merge Sort, Quick Sort, Tower of Hanoi, Fibonacci Series, Factorial Problem, etc.

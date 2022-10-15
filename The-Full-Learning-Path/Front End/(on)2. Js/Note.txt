@@ -264,6 +264,24 @@ https://developer.mozilla.org/en-US/
 
                 const color = z > 5 ? "green" : "red";
 
+                Ex.
+                    function checkEqual(a, b) {
+                        return a === b ? "Equal" : "Not Equal"
+                    }
+
+                    checkEqual(1, 2);
+
+
+                # Multiple ternary conditionals 
+
+                    function checkSign(num) {
+                        return num === 0 ? "zero"
+                            : num > 0 ? "positive"
+                            : "negative"
+                    }
+
+                    checkSign(10);
+
         # Switch 
 
             Note: tests a value and can have many case statement
@@ -1006,3 +1024,49 @@ https://developer.mozilla.org/en-US/
                 \r	carriage return
                 \b	word boundary
                 \f	form feed
+
+
+            # How generate random numbers 
+
+                Math.random()
+                    -> will return a decimal between 
+                        0  - < 1
+
+                Math.floor()
+
+
+                Range:
+                    formula:
+                        Math.floor(Math.random() * (max - min + 1)) + min
+
+                        Ex. 
+
+                            function randomRange(myMin, myMax) {
+
+                                return Math.floor(Math.random() * (myMax - myMin + 1))+ myMin;
+                            }                
+
+
+            # Parse function 
+                # parseInt 
+
+                    function convertToInteger(str) {
+                        return parseInt(str)
+                    }
+
+                    convertToInteger("56");
+
+
+                    # Using it with Radix 
+                        parseInt(string, radix);
+                        
+                            radix can be an integer between 2 and 36.
+
+                        Ex. 
+                            function convertToInteger(str) {
+                            return parseInt(str, 2)
+                            }
+
+                            console.log(convertToInteger("10011"));
+
+                # parseFloat

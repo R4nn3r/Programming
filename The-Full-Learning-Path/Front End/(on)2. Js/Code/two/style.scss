@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,500;1,200;1,300;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap");
+
 // Reset
 /* Box sizing rules */
 *,
@@ -73,11 +76,38 @@ svg {
 // General
 body {
   background: linear-gradient(135deg, rgb(136, 255, 0), yellow);
-  font-family: monospace;
   //   display: grid;
   //   place-items: center;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: 5em;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+header {
+  padding: 1em;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  align-items: center;
+  h1 {
+    font-family: "Poppins", sans-serif;
+
+    outline: 1px dashed black;
+    background-color: yellow;
+    padding: 0.1em;
+    font-size: 45px;
+  }
+
+  p {
+    line-height: 1.2;
+    font-size: 20px;
+    &::first-letter {
+      font-family: "Poppins", sans-serif;
+    }
+  }
 }
 
 .main {
@@ -86,7 +116,7 @@ body {
     margin: 1em;
     border-radius: 0.5em;
 
-    max-width: 450px;
+    max-width: 400px;
 
     box-shadow: 2.75em 2.75em 3em -3em rgb(62 62 62 / 53%);
   }
@@ -98,8 +128,10 @@ body {
   text-align: end;
   padding: 0.25em;
   border-radius: 0.5em 0.5em 0 0;
-
+  font-family: "Poppins", sans-serif;
   h1 {
+    font-weight: 900 italic;
+    border-radius: 0.2em 0.2em 0 0;
     padding: 0.1em;
     outline: 1px dashed white;
     font-style: italic;
@@ -108,4 +140,10 @@ body {
 
 .para {
   padding: 2em;
+  h2 {
+    font-weight: 400;
+  }
+  p {
+    font-weight: 300;
+  }
 }

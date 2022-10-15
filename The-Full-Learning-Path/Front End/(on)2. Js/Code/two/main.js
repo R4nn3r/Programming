@@ -216,4 +216,48 @@ lookUpProfile("Akira", "jump");
 
 // console.log(lookUpProfile("Harry", "likes"));
 
-console.log(contacts[0]["firstName"]);
+// console.log(contacts[0]["firstName"]);
+
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  // Only change code above this line
+}
+
+// console.log(randomRange(5, 10));
+
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+// console.log(convertToInteger("111001"));
+
+function checkSign(num) {
+  return num === 0 ? "zero" : num > 0 ? "positive" : "negative";
+}
+
+// console.log(checkSign(10));
+
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
+  }
+}
+
+// console.log(countdown(5));
+
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum > endNum) {
+    return [];
+  } else {
+    const numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+
+console.log(rangeOfNumbers(1, 10));
