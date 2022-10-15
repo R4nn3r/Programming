@@ -1,26 +1,47 @@
-def sum(num):
-    if num == 0:
-        return num 
+def fact(x):
+    """ n amount of factorials """
+    # base case 
+    if x <= 0:
+        return 1
     else:
-        return sum(num - 1) + num
+        return fact(x - 1) * x
 
-
-def fac(num): 
-    if num <= 1:
-        return num
+def fib(x):
+    """ n amount of fibonacci series  """
+    if x == 1 or x == 2:
+        return 1
+    elif x == 0:
+        return 0
     else:
-        return fac(num - 1) * num
+        return fib(x - 1) + fib(x - 2)
+
+def sum(x):
+    """ n amount of numbers sum """
+    # base case 
+    if x < 1:
+        return x
+    else:
+        # recursive case 
+        return sum(x - 1) + x
+
 
 def main():
-    # A recursive function that gives the sum of 
-    # the first n amount of numbers
+    # Fib series 
+    n = 6;
+    for i in range(n):
+        print(fib(i), end=' ')   # 0 1 1 2 3
+    print()
+    
+    # sum
+    print(sum(5)) # 15
 
-    print(sum(4))
+
+    # Factorial 
+    print(fact(10)) # 36....
 
 
-    print(fac(1))
-
-
+   
+    ...
 
 
 if __name__ == '__main__':
