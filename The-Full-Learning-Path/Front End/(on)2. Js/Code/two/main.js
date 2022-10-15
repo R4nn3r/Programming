@@ -393,3 +393,29 @@ select.onchange = function (e) {
     body.style.background = "black";
   }
 };
+
+const add = (num) => {
+  if (num <= 0) {
+    return [];
+  } else {
+    const numbers = add(num - 1);
+    numbers.unshift(num);
+    return numbers;
+  }
+};
+
+console.log(add(10));
+
+const fib = (num) => {
+  if (num <= 0) {
+    return 0;
+  } else if (num == 1 || num == 2) {
+    return 1;
+  } else {
+    return fib(num - 1) + fib(num - 2);
+  }
+};
+
+for (let i = 0; i < 10; i++) {
+  console.log(fib(i) + " ");
+}
