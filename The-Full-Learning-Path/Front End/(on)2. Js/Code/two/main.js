@@ -315,6 +315,18 @@ form.onsubmit = (e) => {
   }
 };
 
+form.onfocus = (e) => {
+  // text.placeholder = e.target.value;
+  console.log(e.type);
+};
+form.oncopy = (e) => {
+  console.log(e.type);
+  const bb = form.querySelector("button");
+  bb.disabled = false;
+};
+
+const body = document.querySelector("body");
+
 const btn = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
@@ -367,3 +379,17 @@ btn3.addEventListener("mouseover", function (e) {
 btn3.addEventListener("mouseleave", function (e) {
   btn3.classList.remove("nice");
 });
+
+const select = document.querySelector("select");
+console.log(select);
+
+select.onchange = function (e) {
+  console.log(e.target.value);
+  if (e.target.value === "one") {
+    body.style.background = "white";
+  } else if (e.target.value === "three") {
+    body.style.background = "linear-gradient(45deg , red, blue)";
+  } else if (e.target.value === "two") {
+    body.style.background = "black";
+  }
+};

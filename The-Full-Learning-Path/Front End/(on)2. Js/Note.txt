@@ -855,9 +855,9 @@ https://developer.mozilla.org/en-US/
 
         # Keyboard & input Events 
             # keydown & keyup
-            # keypress
             # focus & blur 
             # cut
+            # scroll
             # paste 
             # input 
             # change 
