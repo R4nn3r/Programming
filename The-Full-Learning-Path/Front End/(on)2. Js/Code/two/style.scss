@@ -373,3 +373,33 @@ header {
 hr {
   height: 5px;
 }
+
+.btn {
+  cursor: pointer;
+  border-radius: 0.25em;
+  display: block;
+  min-width: 100%;
+  width: 100%;
+  margin-bottom: 0.5em;
+  font-size: 15px;
+  padding: 0.7em;
+  width: 150px;
+}
+
+.nice {
+  font-size: 15px;
+  padding: 0.7em;
+  border: none;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  box-shadow: 0px 1px 0px red, 0px 2px 0px orange, 0px 3px 0px yellow,
+    0px 4px 0px green, 0px 5px 0px blue, 0px 6px 0px indigo, 0px 7px 0px violet;
+}

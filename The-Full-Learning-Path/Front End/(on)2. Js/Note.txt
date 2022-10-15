@@ -791,7 +791,7 @@ https://developer.mozilla.org/en-US/
 
             function functionName(e) {
                 // Functions Code Goes here
-            }
+            } (you can also user arrow functions)
 
             attach the function to the event by
 
@@ -829,9 +829,39 @@ https://developer.mozilla.org/en-US/
 
         # Event Parameter 
 
+            Ex. 
+                btn.addEventListener("click", (e) => {
+                    // This is where you use event parameters 
+                });
+
+            e.target
+            e.type
+                // width from the browsers window
+            e.clientX
+            e.clientY
+                // width from the element itself 
+            e.offsetX
+            e.offsetY
+            e.altKey, ctrlKey and shiftKey
+
         # Mouse events
+            # dblclick
+            # mousedown
+            # mouseup
+            # mousecenter
+            # mouseleave
+            # mouseover and mouseout
+            # mousemove
 
         # Keyboard & input Events 
+            # keydown & keyup
+            # keypress
+            # focus & blur 
+            # cut
+            # paste 
+            # input 
+            # change 
+            # submit 
 
     # Event Object 
 

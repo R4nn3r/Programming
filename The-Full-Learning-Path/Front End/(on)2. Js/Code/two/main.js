@@ -259,11 +259,39 @@ function rangeOfNumbers(startNum, endNum) {
     return numbers;
   }
 }
+const ul = document.querySelector(".ul");
 
 // console.log(rangeOfNumbers(1, 10));
 
-console.log(document.title);
+// console.log(document.title);
 document.title = "Title from Js file";
+
+const childUl = ul.children;
+
+// console.log(childUl);
+
+const divNew = document.createElement("div");
+divNew.innerHTML = "<h1>New Div</h1>  <br>";
+
+// ul.appendChild(divNew);
+
+divNew.setAttribute("class", "newDiv");
+divNew.setAttribute("id", "newDiv");
+
+// console.log(newDiv);
+
+const txt = document.createTextNode("Hello World!");
+
+divNew.appendChild(txt);
+
+const main = document.querySelector("main");
+const div1 = main.querySelector(".card");
+
+// console.log(main);
+// console.log(div1);
+
+const insertedNode = main.insertBefore(divNew, div1);
+// console.log(insertedNode);
 
 // Selecting elements
 const form = document.querySelector("form");
@@ -287,50 +315,55 @@ form.onsubmit = (e) => {
   }
 };
 
-const ul = document.querySelector(".ul");
+const btn = document.querySelector("#btn1");
+const btn2 = document.querySelector("#btn2");
+const btn3 = document.querySelector("#btn3");
 
 let odd = ul.querySelectorAll("li:nth-child(odd)");
 let even = ul.querySelectorAll("li:nth-child(even)");
-// console.log(even);
 
-for (let i = 0; i < even.length; i++) {
-  odd[i].innerText = "odd";
-  odd[i].style.backgroundColor = "gray";
+btn.addEventListener("click", () => {
+  // console.log(even);
 
-  even[i].innerText = "even";
-  even[i].style.backgroundColor = "lightgray";
+  for (let i = 0; i < even.length; i++) {
+    odd[i].innerText = "odd";
+    odd[i].style.backgroundColor = "gray";
+
+    even[i].innerText = "even";
+    even[i].style.backgroundColor = "lightgray";
+  }
+});
+btn2.addEventListener("click", () => {
+  // console.log(even);
+  const inul = ul.querySelector("ul");
+
+  const li = inul.querySelector("li");
+  li.style.backgroundColor = "red";
+
+  const nxtli = li.nextElementSibling;
+  nxtli.style.backgroundColor = "orange";
+});
+
+btn3.addEventListener("click", buttonClicked);
+
+function buttonClicked(e) {
+  if (e.altKey) {
+    console.log("You Just CLiked the button while holding Alt!");
+  } else if (e.shiftKey) {
+    console.log("You Just CLiked the button while holding shift!");
+  } else if (e.ctrlKey) {
+    console.log("You Just CLiked the button while holding ctrl!");
+  } else {
+    console.log("You Just CLiked the button while holding nothing, Sad!");
+  }
+
+  // const outPut = document.querySelector(".output");
+  // outPut.innerHTML = "<h3>Hello From click event!</h3>" + e.target.className;
 }
 
-const childUl = ul.children;
-
-console.log(childUl);
-const inul = ul.querySelector("ul");
-
-const li = inul.querySelector("li");
-li.style.backgroundColor = "red";
-
-const nxtli = li.nextElementSibling;
-nxtli.style.backgroundColor = "orange";
-
-const divNew = document.createElement("div");
-divNew.innerHTML = "<h1>New Div</h1>  <br>";
-
-// ul.appendChild(divNew);
-
-divNew.setAttribute("class", "newDiv");
-divNew.setAttribute("id", "newDiv");
-
-// console.log(newDiv);
-
-const txt = document.createTextNode("Hello World!");
-
-divNew.appendChild(txt);
-
-const main = document.querySelector("main");
-const div1 = main.querySelector(".card");
-
-console.log(main);
-console.log(div1);
-
-const insertedNode = main.insertBefore(divNew, div1);
-console.log(insertedNode);
+btn3.addEventListener("mouseover", function (e) {
+  btn3.classList.add("nice");
+});
+btn3.addEventListener("mouseleave", function (e) {
+  btn3.classList.remove("nice");
+});
