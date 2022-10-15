@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme1">
+    <div class="container">
+      <div class="box">
+        <div class="flex">
+          <div>
+            <h1>Made with &#128151;</h1>
+          </div>
+          <div class="themes">
+            <input value="theme1" class="check" type="checkbox" />
+            <input value="theme2" class="check" type="checkbox" />
+            <input value="theme3" class="check" type="checkbox" />
+            <input value="theme4" class="check" type="checkbox" />
+          </div>
+        </div>
+        <h2>#TODO V.3</h2>
+        <hr class="line" />
+        <hr class="lineplus" />
+        <blockquote class="blockquote">
+          <h3 class="blockquote__title">
+            Programming is my day-long obsession, <br />joy, and torment.
+          </h3>
+          <footer><i>Some guy on the internet</i> :)</footer>
+        </blockquote>
+        <div>
+          <p>
+            “True happiness is to enjoy the present, without anxious dependence
+            upon the future, not to amuse ourselves with either hopes or fears
+            but to rest satisfied with what we have, which is sufficient, for he
+            that is so wants nothing. The greatest blessings of mankind are
+            within us and within our reach. A wise man is content with his lot,
+            whatever it may be, without wishing for what he has not.”
+          </p>
+          <footer><i>― Seneca </i></footer>
+        </div>
+
+        <div class="todo">
+          <div class="todo__search">
+            <input
+              type="text"
+              class="input filter"
+              placeholder="Search Items..."
+            />
+          </div>
+
+          <div class="todo__add">
+            <div>
+              <input
+                type="text"
+                class="inputAdd input"
+                placeholder="Add Items..."
+              />
+            </div>
+            <button>Add</button>
+          </div>
+
+          <div class="todo__items">
+            <ul class="todo__items__ul">
+              <li>
+                Go to Work
+                <div class="remove">X</div>
+              </li>
+              <li>
+                Go to Work
+                <div class="remove">X</div>
+              </li>
+              <li>
+                Go to Work
+                <div class="remove">X</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

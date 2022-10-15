@@ -386,11 +386,11 @@ console.log(select);
 select.onchange = function (e) {
   console.log(e.target.value);
   if (e.target.value === "one") {
-    body.style.background = "white";
+    body.style.background = "#fff";
   } else if (e.target.value === "three") {
     body.style.background = "linear-gradient(45deg , red, blue)";
   } else if (e.target.value === "two") {
-    body.style.background = "black";
+    body.style.background = "#3e3e3e";
   }
 };
 
@@ -415,7 +415,19 @@ const fib = (num) => {
     return fib(num - 1) + fib(num - 2);
   }
 };
-
+const arra = [];
 for (let i = 0; i < 10; i++) {
-  console.log(fib(i) + " ");
+  arra.push(fib(i));
 }
+
+console.log(arra);
+
+const fact = (num) => {
+  if (num <= 0) {
+    return 1;
+  } else {
+    return fact(num - 1) * num;
+  }
+};
+
+console.log(fact(3));
