@@ -779,64 +779,70 @@ https://developer.mozilla.org/en-US/
         Ex. 
          <button class="clickBtn" onclick="console.log('Just Got Clicked')">Click</button>
 
-
     # addEventListener 
-        var.addEventListener("click", function (e) {
-            // Functions Code Goes here
-         });
 
-         or 
-         function functionName(e) {
-            // Functions Code Goes here
-         }
+        # Creating Event Listener's 
 
-         attach the function to the event by
+            var.addEventListener("click", function (e) {
+                // Functions Code Goes here
+            });
 
-         var.addEventListener("click), functionName;
+            or 
 
-
-        Ex.
-        const onbtn = document.getElementById("clickBtn");
-
-        onbtn.addEventListener("click", function (e) {
-        console.log("Clicked");
-
-        if (onbtn.classList.contains("red")) {
-            onbtn.classList.remove("red");
-        } else {
-            onbtn.classList.add("red");
-        }
-        });
-
-        Or using functions 
-
-        function handleClick(e) {
-            console.log("Clicked");
-            onbtn.innerHTML = "Clicked";
-
-            if (onbtn.classList.contains("red")) {
-                onbtn.classList.remove("red");
-                onbtn.innerHTML = "Click";
-            } else {
-                onbtn.classList.add("red");
+            function functionName(e) {
+                // Functions Code Goes here
             }
-        }
 
-        onbtn.addEventListener("click", handleClick);
+            attach the function to the event by
+
+            var.addEventListener("click), functionName;
 
 
+            Ex.
+            const onbtn = document.getElementById("clickBtn");
+
+            onbtn.addEventListener("click", function (e) {
+            console.log("Clicked");
+
+                if (onbtn.classList.contains("red")) {
+                    onbtn.classList.remove("red");
+                } else {
+                    onbtn.classList.add("red");
+                }
+            });
+
+            Or using functions 
+
+            function handleClick(e) {
+                console.log("Clicked");
+                onbtn.innerHTML = "Clicked";
+
+                if (onbtn.classList.contains("red")) {
+                    onbtn.classList.remove("red");
+                    onbtn.innerHTML = "Click";
+                } else {
+                    onbtn.classList.add("red");
+                }
+            }
+
+            onbtn.addEventListener("click", handleClick);
+
+        # Event Parameter 
+
+        # Mouse events
+
+        # Keyboard & input Events 
 
     # Event Object 
 
-    var.addEventListener("click" , function(e) {}):
+        var.addEventListener("click" , function(e) {}):
 
-        e -> is the event object 
+            e -> is the event object 
 
-                Stores data in the event object 
-                to use within the function
-                    Ex.
-                      console.log(e);
-
+                    Stores data in the event object 
+                    to use within the function
+                        Ex.
+                        console.log(e);
 
     # Standard vs Arrow 
         Standard:
@@ -909,7 +915,6 @@ https://developer.mozilla.org/en-US/
         
             https://www.w3schools.com/js/js_htmldom_document.asp
 
-
     # Selecting nodes 
         
         # document.querySelector() 
@@ -941,7 +946,17 @@ https://developer.mozilla.org/en-US/
             3- append the childe to the parent 
                 div.appendChild(title)
                 div.appendChild(note)
-            
+
+        # How to set attributes
+
+            div.className = "name"
+            div.id = "id"
+
+            or 
+
+            div.setAttribute("id", "id")
+            div.setAttribute("class", "name")
+
     # Removing nodes 
 
         node.removeChild(child)
@@ -959,6 +974,24 @@ https://developer.mozilla.org/en-US/
         - Setting attributes 
 
             title.setAttribute('class', 'highlight');
+
+    # Adding content to nodes 
+
+        # .innerHTML
+        # .innerText
+        # .textContent
+
+    # Traversing the Dom
+        # .parentElement 
+        # .parentNode
+        # .childNodes (".children" is better to use always!)
+        # .firstElementChild (.lastElementChild)
+        # .nextElementSibling (previousElementSibling)... 
+        # .insertBefore
+            // The Node.insertBefore() method inserts a node before a
+            // reference node as a child of a specified parent node.
+        
+                 let insertedNode = parentNode.insertBefore(newNode, referenceNode)
 
 # MVC Architecture
     (Model View Controller)
@@ -1048,7 +1081,7 @@ https://developer.mozilla.org/en-US/
 
 
             # Parse function 
-                # parseInt 
+                # parseInt Vs parseFloat
 
                     function convertToInteger(str) {
                         return parseInt(str)
@@ -1068,5 +1101,3 @@ https://developer.mozilla.org/en-US/
                             }
 
                             console.log(convertToInteger("10011"));
-
-                # parseFloat

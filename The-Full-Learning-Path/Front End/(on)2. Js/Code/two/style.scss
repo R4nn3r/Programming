@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,500;1,200;1,300;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap");
+@keyframes mov {
+  to {
+    background-position: 1600vh;
+  }
+}
 
 // Reset
 /* Box sizing rules */
@@ -67,43 +72,107 @@ svg {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 //  Utilities
-.main-box {
+.container {
   max-width: 1440px;
   margin-inline: auto;
+  padding: 0.5em 2em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
 }
 
 // General
 body {
-  background: linear-gradient(135deg, rgb(136, 255, 0), yellow);
+  min-height: 100vh;
+  background: white;
   //   display: grid;
   //   place-items: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   gap: 5em;
   font-family: "Josefin Sans", sans-serif;
 }
 
 header {
-  padding: 1em;
-  align-self: flex-start;
-  display: flex;
-  flex-direction: row;
-  gap: 0.25em;
-  align-items: center;
-  h1 {
-    font-family: "Poppins", sans-serif;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0 0 0.75em 0.75em;
+  line-height: 1.2;
 
-    outline: 1px dashed black;
-    background-color: yellow;
-    padding: 0.1em;
-    font-size: 45px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0%;
+  div {
+    color: white;
+
+    ul {
+      font-family: "Poppins", sans-serif;
+      font-style: italic;
+
+      li {
+        transition: background-image 0.3s ease-in-out;
+
+        a {
+          color: inherit;
+        }
+        &:hover {
+          background-image: linear-gradient(
+            90deg,
+            red,
+            orange,
+            yellow,
+            green,
+            blue,
+            indigo,
+            violet
+          );
+          background-clip: text;
+          color: transparent;
+        }
+      }
+    }
+  }
+
+  div > div {
+    max-width: min-content;
+    background-color: rgb(0, 0, 0);
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif;
+    outline: 1px dashed rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 0.25em;
+    width: min-content;
+    padding: 0.15em;
+    code {
+      background-image: linear-gradient(
+        90deg,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+      );
+      background-clip: text;
+      color: transparent;
+      animation: move 300s linear infinite;
+    }
   }
 
   p {
-    line-height: 1.2;
     font-size: 20px;
+
     &::first-letter {
       font-family: "Poppins", sans-serif;
     }
@@ -111,14 +180,18 @@ header {
 }
 
 .main {
+  margin-top: 2em;
   .card {
     background-color: white;
-    margin: 1em;
+    margin: 0.5em;
     border-radius: 0.5em;
+    max-width: 450px;
 
-    max-width: 400px;
+    @media (min-width: 690px) {
+      max-width: 300px;
+    }
 
-    box-shadow: 2.75em 2.75em 3em -3em rgb(62 62 62 / 53%);
+    box-shadow: 1em 1em 2em rgba(168, 168, 168, 0.53);
   }
 }
 
@@ -128,8 +201,15 @@ header {
   text-align: end;
   padding: 0.25em;
   border-radius: 0.5em 0.5em 0 0;
+
   font-family: "Poppins", sans-serif;
-  h1 {
+
+  // box shadow design
+  box-shadow: 0px 2px 0px red, 0px 4px 0px orange, 0px 6px 0px yellow,
+    0px 8px 0px green, 0px 10px 0px blue, 0px 12px 0px indigo,
+    0px 14px 0px violet;
+
+  h2 {
     font-weight: 900 italic;
     border-radius: 0.2em 0.2em 0 0;
     padding: 0.1em;
@@ -146,4 +226,150 @@ header {
   p {
     font-weight: 300;
   }
+}
+
+.main-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card1 {
+  min-width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    @media (max-width: 690px) {
+      flex-direction: column;
+      justify-content: center;
+
+      .para .form {
+        margin-top: 0.25em;
+        margin-inline: auto;
+      }
+
+      .para.one,
+      .para.two {
+        text-align: center;
+        margin-inline: auto;
+        padding: 1em;
+      }
+    }
+    @media (min-width: 690px) {
+      .para.one,
+      .para.two {
+        min-width: 200px;
+        padding: 1em;
+      }
+    }
+
+    p {
+      max-width: 500px;
+    }
+
+    .para {
+      margin-right: auto;
+      .form {
+        display: flex;
+        max-width: 300px;
+        gap: 0.5em;
+        flex-direction: column;
+        input,
+        textarea {
+          padding: 0.75em;
+          border-radius: 0.25em;
+          outline: none;
+          border: double 1px transparent;
+          background-image: linear-gradient(white, white),
+            linear-gradient(
+              to right,
+              red,
+              orange,
+              yellow,
+              green,
+              blue,
+              indigo,
+              violet
+            );
+          background-origin: border-box;
+          background-clip: padding-box, border-box;
+        }
+
+        textarea {
+          min-height: 75px;
+        }
+
+        button {
+          cursor: pointer;
+          border-radius: 0.25em;
+          padding: 0.75em;
+          border: none;
+          outline: white;
+          background-color: black;
+          color: white;
+
+          transition: box-shadow 0.3s ease-in;
+          &:hover {
+            border: double 1px transparent;
+            background-image: linear-gradient(white, white),
+              linear-gradient(
+                to right,
+                red,
+                orange,
+                yellow,
+                green,
+                blue,
+                indigo,
+                violet
+              );
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            color: black;
+            background-color: white;
+            box-shadow: 0px 1px 0px red, 0px 2px 0px orange, 0px 3px 0px yellow,
+              0px 4px 0px green, 0px 5px 0px blue, 0px 6px 0px indigo,
+              0px 7px 0px violet;
+          }
+        }
+      }
+    }
+
+    .para.one,
+    .para.two {
+      margin-right: auto;
+      max-width: 300px;
+    }
+  }
+}
+
+.card {
+  border: 1px solid rgba(188, 188, 188, 0.423);
+}
+
+.ul {
+  max-width: 450px;
+  margin: 1em;
+  padding: 1em;
+  margin-inline: auto;
+
+  ul {
+    background-color: azure;
+    border: 1px solid black;
+
+    li {
+      padding: 0.5em;
+      margin: 0.5em;
+      border: 1px solid black;
+    }
+  }
+}
+
+hr {
+  height: 5px;
 }

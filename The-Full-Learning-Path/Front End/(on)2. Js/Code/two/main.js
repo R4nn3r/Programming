@@ -260,4 +260,77 @@ function rangeOfNumbers(startNum, endNum) {
   }
 }
 
-console.log(rangeOfNumbers(1, 10));
+// console.log(rangeOfNumbers(1, 10));
+
+console.log(document.title);
+document.title = "Title from Js file";
+
+// Selecting elements
+const form = document.querySelector("form");
+
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
+const text = document.querySelector("#text");
+const p = form.querySelector("p");
+
+form.onsubmit = (e) => {
+  e.preventDefault();
+  if (name.value == "" || email.value == "") {
+    p.style.color = "red";
+    p.innerText = "Please fill every field!";
+  } else {
+    p.style.color = "lime";
+    name.value = "";
+    email.value = "";
+    text.value = "";
+    p.innerText = "Great!";
+  }
+};
+
+const ul = document.querySelector(".ul");
+
+let odd = ul.querySelectorAll("li:nth-child(odd)");
+let even = ul.querySelectorAll("li:nth-child(even)");
+// console.log(even);
+
+for (let i = 0; i < even.length; i++) {
+  odd[i].innerText = "odd";
+  odd[i].style.backgroundColor = "gray";
+
+  even[i].innerText = "even";
+  even[i].style.backgroundColor = "lightgray";
+}
+
+const childUl = ul.children;
+
+console.log(childUl);
+const inul = ul.querySelector("ul");
+
+const li = inul.querySelector("li");
+li.style.backgroundColor = "red";
+
+const nxtli = li.nextElementSibling;
+nxtli.style.backgroundColor = "orange";
+
+const divNew = document.createElement("div");
+divNew.innerHTML = "<h1>New Div</h1>  <br>";
+
+// ul.appendChild(divNew);
+
+divNew.setAttribute("class", "newDiv");
+divNew.setAttribute("id", "newDiv");
+
+// console.log(newDiv);
+
+const txt = document.createTextNode("Hello World!");
+
+divNew.appendChild(txt);
+
+const main = document.querySelector("main");
+const div1 = main.querySelector(".card");
+
+console.log(main);
+console.log(div1);
+
+const insertedNode = main.insertBefore(divNew, div1);
+console.log(insertedNode);
