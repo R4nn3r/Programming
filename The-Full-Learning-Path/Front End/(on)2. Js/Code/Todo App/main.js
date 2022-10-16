@@ -2,8 +2,18 @@ const themes = document.querySelector(".themes");
 const body = document.querySelector("body");
 const inputs = themes.querySelectorAll(".check");
 
-themes.addEventListener("change", (e) => {
-  body.classList.toggle(e.target.value);
+const themesArray = ["theme", "theme1", "theme2", "theme3", "theme4", "theme5"];
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+themes.addEventListener("click", (e) => {
+  console.log(e.target);
+  body.className = "";
+  body.classList.toggle(themesArray[getRandomInt(5, 0)]);
 });
 
 const btn = document.querySelector("#btnAdd");
@@ -22,15 +32,14 @@ btn.addEventListener("click", () => {
     p.innerText = input.value;
     li.appendChild(p);
 
-    const divRemove = document.createElement("div");
-    divRemove.className = "done";
-    divRemove.innerHTML = "x";
-    li.appendChild(divRemove);
+    const ir = document.createElement("i");
+    ir.className = "fa-regular fa-trash-can remove";
 
-    const divDone = document.createElement("div");
-    divDone.className = "remove";
-    divDone.innerHTML = "x";
-    li.appendChild(divDone);
+    const id = document.createElement("i");
+    id.className = "fa-solid fa-clipboard-check done";
+
+    li.appendChild(id);
+    li.appendChild(ir);
 
     const div = document.getElementById("items");
 
@@ -62,17 +71,13 @@ todo.addEventListener("click", (e) => {
 const filter = document.querySelector(".filter");
 const inputSearch = document.querySelector("#input");
 
-console.log(todo);
-
 inputSearch.onkeyup = (e) => {
   e.preventDefault();
   var text = e.target.value.toLowerCase();
   var items = todo.getElementsByTagName("li");
-  console.log(items);
 
   Array.from(items).forEach((item) => {
     let itemName = item.firstElementChild.textContent.toLowerCase();
-    console.log(itemName);
 
     if (itemName.indexOf(text) === -1) {
       item.style.display = "none";

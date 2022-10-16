@@ -6,20 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
+
+    <!-- Link -->
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/5b12988027.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body class="theme">
+  <body>
     <div class="container">
       <div class="box">
         <div class="flex">
           <div>
             <h1>Made with &#128151; and pain</h1>
           </div>
+          <div class="links">
+            <a href="https://github.com/R4nn3r" target="_blank">
+              <i class="fa-brands fa-github-alt"></i>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/yonatan-afewerk-1511661a0/"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://t.me/Yonatanafewerkteshome" target="_blank">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+          </div>
           <div class="themes">
-            <input value="theme1" class="check" type="checkbox" />
-            <input value="theme2" class="check" type="checkbox" />
-            <input value="theme3" class="check" type="checkbox" />
-            <input value="theme4" class="check" type="checkbox" />
+            <div class="themePicker">
+              <i class="fa-solid fa-swatchbook"></i>
+            </div>
           </div>
         </div>
         <h2>#TODO V.3</h2>
@@ -68,23 +87,7 @@
           </div>
 
           <div class="todo__items" id="items">
-            <ul class="todo__items__ul filter" id="todo">
-              <li>
-                <p class="para">One Check</p>
-                <div class="done">x</div>
-                <div class="remove">x</div>
-              </li>
-              <li>
-                <p class="para">Two test</p>
-                <div class="done">x</div>
-                <div class="remove">x</div>
-              </li>
-              <li>
-                <p class="para">Three works fine</p>
-                <div class="done">x</div>
-                <div class="remove">x</div>
-              </li>
-            </ul>
+            <ul class="todo__items__ul filter" id="todo"></ul>
           </div>
         </div>
       </div>

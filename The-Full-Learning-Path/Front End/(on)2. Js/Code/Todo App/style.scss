@@ -162,6 +162,7 @@ svg {
 
 a {
   text-decoration: none;
+  color: currentColor;
 }
 
 // utilities
@@ -261,7 +262,7 @@ h1 {
   font-weight: $fw-header;
 }
 h2 {
-  margin-top: 1em;
+  margin-top: 0.5em;
   font-size: $fs-big;
   font-weight: $fw-big;
   line-height: 1;
@@ -341,7 +342,7 @@ button {
 .flex {
   display: flex;
   flex-direction: row;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -411,37 +412,37 @@ button {
 }
 
 .remove {
-  background-color: rgb(211, 51, 51);
   max-width: min-content;
-  padding: 0.01em 0.5em;
+  padding: 0.25em 0.25em;
+
   border-radius: 0.25em;
   font-weight: 500;
   cursor: pointer;
-  border: 2px solid currentColor;
+  border: 1px solid currentColor;
+
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: white;
-    border: 2px solid red;
+    border: 1px solid red;
     color: red;
   }
 }
 
 .done {
   cursor: pointer;
-  background-color: green;
   max-width: min-content;
-  padding: 0.01em 0.5em;
+  padding: 0.25em 0.3em;
   border-radius: 0.25em;
   font-weight: 500;
   cursor: pointer;
-  border: 2px solid currentColor;
+  border: 1px solid currentColor;
   transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: white;
-    border: 2px solid green;
+    border: 1px solid green;
     color: green;
   }
 }
@@ -454,4 +455,37 @@ button {
 
 .lineThrough {
   text-decoration: line-through;
+  font-style: italic;
+}
+
+.themes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  gap: 0.75em;
+
+  a {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      rotate: 360deg;
+      scale: 1.5;
+    }
+  }
+}
+
+.themePicker {
+  i {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      rotate: 360deg;
+      scale: 1.5;
+    }
+  }
 }
