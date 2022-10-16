@@ -298,7 +298,7 @@ button {
   border: 1px solid currentColor;
 }
 .container {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   max-width: 1440px;
   margin-inline: auto;
 }
@@ -448,9 +448,11 @@ button {
 }
 
 .para {
+  overflow-wrap: break-word;
   font-weight: bold;
   opacity: 0.7;
   padding: 0 0.7em;
+  max-width: 75%;
 }
 
 .lineThrough {
