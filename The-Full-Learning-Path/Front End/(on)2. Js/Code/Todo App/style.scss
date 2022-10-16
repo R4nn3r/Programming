@@ -297,6 +297,7 @@ button {
   border: 1px solid currentColor;
 }
 .container {
+  overflow-x: hidden;
   max-width: 1440px;
   margin-inline: auto;
 }
@@ -326,8 +327,8 @@ button {
 
 .blockquote {
   border-left: 4px solid;
-  margin-left: 2em;
-  padding-left: 32px;
+  margin-left: 1em;
+  padding-left: 10px;
   width: 100%;
   line-height: 1.2;
   margin-bottom: 1em;
@@ -354,7 +355,9 @@ button {
 
 .todo {
   margin-top: 1em;
-
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
   &___search {
     margin: 0.5em 0;
   }
@@ -415,6 +418,8 @@ button {
   font-weight: 500;
   cursor: pointer;
   border: 2px solid currentColor;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: white;
@@ -424,6 +429,7 @@ button {
 }
 
 .done {
+  cursor: pointer;
   background-color: green;
   max-width: min-content;
   padding: 0.01em 0.5em;
@@ -431,6 +437,7 @@ button {
   font-weight: 500;
   cursor: pointer;
   border: 2px solid currentColor;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: white;
@@ -443,4 +450,8 @@ button {
   font-weight: bold;
   opacity: 0.7;
   padding: 0 0.7em;
+}
+
+.lineThrough {
+  text-decoration: line-through;
 }

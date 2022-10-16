@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="Screenshot from 2022-10-16 12-31-23.png" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,8 +48,9 @@
         <div class="todo">
           <div class="todo__search">
             <input
+              id="input"
               type="text"
-              class="input filter"
+              class="input"
               placeholder="Search Items..."
             />
           </div>
@@ -66,22 +68,19 @@
           </div>
 
           <div class="todo__items" id="items">
-            <ul class="todo__items__ul">
+            <ul class="todo__items__ul filter" id="todo">
               <li>
-                <p class="para">Go to Work</p>
+                <p class="para">One Check</p>
                 <div class="done">x</div>
                 <div class="remove">x</div>
               </li>
               <li>
-                <p class="para">Go to Work</p>
+                <p class="para">Two test</p>
                 <div class="done">x</div>
                 <div class="remove">x</div>
               </li>
               <li>
-                <p class="para">
-                  Go to Work Lorem ipsum dolor, sit amet consectetur adipisicing
-                  elit. Ad, corporis!
-                </p>
+                <p class="para">Three works fine</p>
                 <div class="done">x</div>
                 <div class="remove">x</div>
               </li>
