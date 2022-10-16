@@ -7,12 +7,12 @@
     <title>Todo App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="theme1">
+  <body class="theme">
     <div class="container">
       <div class="box">
         <div class="flex">
           <div>
-            <h1>Made with &#128151;</h1>
+            <h1>Made with &#128151; and pain</h1>
           </div>
           <div class="themes">
             <input value="theme1" class="check" type="checkbox" />
@@ -28,7 +28,9 @@
           <h3 class="blockquote__title">
             Programming is my day-long obsession, <br />joy, and torment.
           </h3>
-          <footer><i>Some guy on the internet</i> :)</footer>
+          <footer style="font-size: 13px">
+            <i>― Some guy on the internet</i> :)
+          </footer>
         </blockquote>
         <div>
           <p>
@@ -39,7 +41,7 @@
             within us and within our reach. A wise man is content with his lot,
             whatever it may be, without wishing for what he has not.”
           </p>
-          <footer><i>― Seneca </i></footer>
+          <footer style="font-size: 13px"><i>― Seneca </i></footer>
         </div>
 
         <div class="todo">
@@ -57,24 +59,31 @@
                 type="text"
                 class="inputAdd input"
                 placeholder="Add Items..."
+                id="text"
               />
             </div>
-            <button>Add</button>
+            <button id="btnAdd">Add</button>
           </div>
 
-          <div class="todo__items">
+          <div class="todo__items" id="items">
             <ul class="todo__items__ul">
               <li>
-                Go to Work
-                <div class="remove">X</div>
+                <p class="para">Go to Work</p>
+                <div class="done">x</div>
+                <div class="remove">x</div>
               </li>
               <li>
-                Go to Work
-                <div class="remove">X</div>
+                <p class="para">Go to Work</p>
+                <div class="done">x</div>
+                <div class="remove">x</div>
               </li>
               <li>
-                Go to Work
-                <div class="remove">X</div>
+                <p class="para">
+                  Go to Work Lorem ipsum dolor, sit amet consectetur adipisicing
+                  elit. Ad, corporis!
+                </p>
+                <div class="done">x</div>
+                <div class="remove">x</div>
               </li>
             </ul>
           </div>

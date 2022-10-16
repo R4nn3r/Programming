@@ -284,15 +284,17 @@ p {
   outline: none;
   font-size: $fs-header;
   font-weight: $fw-header;
+  color: currentColor;
+  border: 1px solid currentColor;
 }
 button {
+  font-size: $fs-header;
+  font-weight: $fw-header;
   cursor: pointer;
   padding: 0.5em 2em;
   margin-bottom: 0.5em;
-  background-color: inherit;
   outline: none;
-  font-size: $fs-header;
-  font-weight: $fw-header;
+  border: 1px solid currentColor;
 }
 .container {
   max-width: 1440px;
@@ -354,7 +356,7 @@ button {
   margin-top: 1em;
 
   &___search {
-    margin: 1em 0;
+    margin: 0.5em 0;
   }
 
   &__add {
@@ -378,17 +380,28 @@ button {
     }
   }
   &__items {
-    margin: 1em 0;
+    margin: 0.5em 0;
     &__ul {
+      display: flex;
+      gap: 0.5em;
+      flex-wrap: wrap;
       li {
+        width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+        gap: 0.5em;
 
         width: 100%;
         border: 1px solid currentcolor;
         margin-bottom: 0.25em;
         padding: 0.5em;
+
+        p {
+          width: 100%;
+          align-self: center;
+          margin-right: auto;
+        }
       }
     }
   }
@@ -397,8 +410,37 @@ button {
 .remove {
   background-color: rgb(211, 51, 51);
   max-width: min-content;
-  padding: 0.05em 0.5em;
+  padding: 0.01em 0.5em;
   border-radius: 0.25em;
   font-weight: 500;
-  text-transform: lowercase;
+  cursor: pointer;
+  border: 2px solid currentColor;
+
+  &:hover {
+    background-color: white;
+    border: 2px solid red;
+    color: red;
+  }
+}
+
+.done {
+  background-color: green;
+  max-width: min-content;
+  padding: 0.01em 0.5em;
+  border-radius: 0.25em;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid currentColor;
+
+  &:hover {
+    background-color: white;
+    border: 2px solid green;
+    color: green;
+  }
+}
+
+.para {
+  font-weight: bold;
+  opacity: 0.7;
+  padding: 0 0.7em;
 }
