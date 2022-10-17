@@ -1,0 +1,209 @@
+// Reset
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  //   font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+li,
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// utilities
+body {
+  font-family: $ff-primary;
+  font-size: $fs-para;
+  background-color: $neu-vlg-blue;
+  overflow-x: hidden;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+
+  &-col {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  &-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75em;
+  }
+
+  &-plus {
+    flex-wrap: wrap;
+  }
+
+  &-js-sb {
+    justify-content: space-between;
+  }
+
+  &-center {
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.impoText {
+  font-weight: 800;
+  color: $neu-vd-b;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: $crl-accent-blue;
+  }
+}
+.impoText2 {
+  font-weight: 800;
+  color: $neu-d-gb;
+  transition: color 0.2s ease-in;
+  cursor: pointer;
+  &:hover {
+    color: $crl-accent-blue;
+  }
+}
+
+.background {
+  cursor: pointer;
+  background-color: $neu-vlg-blue;
+  transition: color 0.2s ease-in, scale 0.2s ease-in;
+
+  &:hover {
+    background-color: $neu-lgb-1;
+    scale: 1.01;
+  }
+}
+
+.background2 {
+  cursor: pointer;
+  background-color: $neu-white;
+  transition: color 0.2s ease-in, scale 0.2s ease-in;
+
+  &:hover {
+    background-color: $neu-vlg-blue;
+    scale: 1.01;
+  }
+}
+
+.normText {
+  color: $neu-d-gb;
+  font-weight: $fw-500;
+}
+.linkText {
+  color: $neu-d-gb;
+  font-weight: $fw-500;
+  &:hover {
+    color: $crl-accent-blue;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.notif {
+  padding: 0.02em 0.65em;
+  border-radius: 0.35em;
+  font-size: 1rem;
+  cursor: pointer;
+
+  font-weight: $fw-800;
+  background-color: $crl-accent-blue;
+  color: $neu-white;
+
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    background-color: $crl-accent-red;
+  }
+}
+
+p {
+  color: $neu-d-gb;
+}
+
+.history {
+  color: $neu-g-blue;
+  font-size: 0.9rem;
+}
+
+.newMessage {
+  padding: 1em;
+  border-radius: 0.75em;
+
+  border: 1px solid $neu-lgb-1;
+}
+
+.marg-l {
+  margin-left: auto;
+}
+
+.not-img {
+  align-self: flex-start;
+  width: 55px;
+}
+
+i {
+  scale: 1.5;
+  margin-left: 0.7em;
+
+  &:hover {
+    scale: 1.75;
+  }
+}

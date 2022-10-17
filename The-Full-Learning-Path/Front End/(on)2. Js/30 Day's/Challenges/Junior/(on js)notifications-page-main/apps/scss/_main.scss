@@ -1,0 +1,80 @@
+.main {
+  &__box {
+    margin-top: 4em;
+    max-width: 750px;
+    border-radius: 0.75em;
+    padding: 2em;
+    margin-inline: auto;
+
+    background-color: $neu-white;
+
+    box-shadow: 0px 5px 10px #aaaaaa26;
+
+    @include breakpoints-down(small) {
+      border-radius: 0;
+      margin: 0.15em 0.15em;
+      padding: 1.5em 1em;
+    }
+
+    &__top {
+      h1 {
+        cursor: pointer;
+        font-size: 1.5rem;
+        @include breakpoints-down(small) {
+          font-size: 1.3rem;
+        }
+      }
+
+      h3 {
+        cursor: pointer;
+        font-size: 0.95rem;
+        @include breakpoints-down(small) {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    &__content {
+      margin-top: 2em;
+      .notification {
+        // border: 1px solid red;
+        padding: 1.25em;
+        border-radius: 0.75em;
+
+        @include breakpoints-down(small) {
+          padding: 1em 0.5em;
+        }
+        .user-img {
+          align-self: flex-start;
+          img {
+            max-width: 45px;
+            min-width: 45px;
+            @include breakpoints-down(small) {
+              max-width: 40px;
+              min-width: 40px;
+            }
+          }
+        }
+        .user-detail {
+          word-spacing: 1px;
+          line-height: 1.2;
+          align-self: flex-start;
+          .redDot {
+            p {
+              &::after {
+                content: "";
+                display: inline-block;
+                background-color: #f65351;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+
+                margin-left: 0.25em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
