@@ -1,3 +1,17 @@
+# Introduction to Data Structures
+
+Type of data structure :
+    1: Linear Data Structure
+    2: Non-Linear Data Structure.
+
+        Linear Data Structure:
+            Elements are arranged in one dimension ,also known as linear dimension.
+            Example: lists, stack, queue, etc.
+
+        Non-Linear Data Structure
+            Elements are arranged in one-many, many-one and many-many dimensions.
+            Example: tree, graph, table, etc.
+
 # Recursion
 
     Note:
