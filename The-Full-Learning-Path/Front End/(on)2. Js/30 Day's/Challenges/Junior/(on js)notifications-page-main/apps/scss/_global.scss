@@ -83,7 +83,7 @@ body {
   &-row {
     flex-direction: row;
     align-items: center;
-    gap: 0.75em;
+    gap: 1em;
   }
 
   &-plus {
@@ -206,4 +206,9 @@ i {
   &:hover {
     scale: 1.75;
   }
+}
+
+.impoText3 {
+  font-weight: $fw-800;
+  color: $crl-accent-blue;
 }
