@@ -1,51 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive card details form</title>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <!-- Link -->
+    <link rel="stylesheet" href="./apps/scss/style.css" />
 
-  000
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="firstTheme">
+    <main class="main container">
+      <div class="main__container">
+        <!-- right -->
+        <div class="main__container__left">
+          <picture>
+            <source
+              class="bg-desktop"
+              srcset="./images/bg-main-desktop.png"
+              media="(min-width: 39em)"
+            />
+            <img
+              class="bg-mobile"
+              src="./images/bg-main-mobile.png"
+              alt="Main Mobile Background"
+            />
+          </picture>
+        </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+        <!-- left -->
+        <article class="main__container__right">
+          <form class="main__container__right__form" id="form">
+            <!-- Card holder name -->
+            <div class="form-item f">
+              <label for="name">CARDHOLDER NAME </label>
+              <input
+                class="name"
+                id="name"
+                type="text"
+                placeholder="e.g. Jane Appleseed"
+              />
+            </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+            <!-- card number  -->
+            <div class="form-item f">
+              <label for="name">CARD NUMBER</label>
+              <input
+                class="cardnum"
+                id="cardnum"
+                type="text"
+                placeholder=" e.g. 1234 5678 9123 0000"
+              />
+            </div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+            <!-- dates and cvc -->
+            <div class="form-item">
+              <div class="date">
+                <div class="labels">
+                  <div>
+                    <label for="name">EXP. DATE (MM/YY)</label>
+                  </div>
+                  <div>
+                    <label for="name">CVC</label>
+                  </div>
+                </div>
 
-  CVC
-  e.g. 123
+                <div class="date-inputs">
+                  <input
+                    class="expday"
+                    id="expday"
+                    type="text"
+                    placeholder="MM"
+                  />
+                  <input
+                    class="expyear"
+                    id="expyear"
+                    type="text"
+                    placeholder="YY"
+                  />
+                  <input
+                    class="cvc"
+                    id="cvc"
+                    type="text"
+                    placeholder="e.g. 123"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- button -->
+            <button class="main__container__right__btn button" id="button">
+              Confirm
+            </button>
+          </form>
+        </article>
+      </div>
+    </main>
 
-  Confirm
+    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000   
+     Exp. Date (MM/YY) MM YY CVC
+     Confirm -->
 
-  <!-- Completed state start -->
+    <!-- Completed state start -->
 
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Thank you! We've added your card details Continue -->
+
+    <!-- <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer> -->
+  </body>
 </html>

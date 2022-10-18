@@ -65,3 +65,36 @@ svg {
 }
 
 // utilities
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.bg-mobile {
+  height: 100vh;
+
+  @include breakpoints-down(medium) {
+    width: 60%;
+    height: 100vh;
+  }
+}
+
+.bg-mobile {
+  @include breakpoints-down(small) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// General
+body {
+  background-color: var(--crl-main2);
+  background-image: url(../../images/plus.webp);
+  background-size: contain;
+  background-repeat: repeat;
+  max-height: 100vh;
+
+  font-family: $ff-primary;
+  font-size: $fs-main;
+  font-weight: 500;
+}

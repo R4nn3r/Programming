@@ -1,11 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap");
 
-$ff-primary: "Plus Jakarta Sans", sans-serif;
+$ff-primary: "Space Grotesk", sans-serif;
 
 $fw-500: 500;
-$fw-800: 800;
 
-$fs-para: 15px;
+$fs-main: 18px;
 
 .firstTheme {
+  // Primary
+  --active-b-from: hsl(249, 99%, 64%);
+  --active-b-to: hsl(278, 94%, 30%);
+
+  // error
+  --crl-er: hsl(0, 100%, 66%);
+
+  // colors
+  --main: hsl(0, 0%, 100%);
+  --lg-violet: hsl(270, 3%, 87%);
+  --dg-violet: hsl(279, 6%, 55%);
+  --crl-main: hsl(278, 68%, 11%);
+  --crl-main2: hsla(278, 68%, 11%, 0.181);
 }

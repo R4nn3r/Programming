@@ -1,79 +1,113 @@
 .main {
-  &__box {
-    margin-top: 4em;
-    max-width: 750px;
-    border-radius: 0.75em;
-    padding: 2em;
-    margin-inline: auto;
-
-    background-color: var(--neu-white);
-
-    box-shadow: 0px 5px 15px #40404022;
-
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     @include breakpoints-down(small) {
-      border-radius: 0;
-      margin: 0.15em 0.15em;
-      padding: 1.5em 1em;
+      flex-direction: column;
+      gap: 1em;
     }
-
-    &__top {
-      h1 {
-        cursor: pointer;
-        font-size: 1.5rem;
-        @include breakpoints-down(small) {
-          font-size: 1.3rem;
-        }
-      }
-
-      h3 {
-        cursor: pointer;
-        font-size: 0.95rem;
-        @include breakpoints-down(small) {
-          font-size: 0.85rem;
-        }
-      }
+    // left
+    &__left {
+      margin-right: auto;
+      width: 100%;
     }
+    // right
+    &__right {
+      @include breakpoints-up(medium) {
+        margin-right: 15rem;
+      }
+      margin: 0.5em;
+      padding: 0.5em;
+      &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
 
-    &__content {
-      margin-top: 2em;
-      .notification {
-        // border: 1px solid red;
-        padding: 1.25em;
-        border-radius: 0.75em;
+        max-width: 600px;
+        width: 100%;
 
-        @include breakpoints-down(small) {
-          padding: 1em 0.5em;
-        }
-        .user-img {
-          align-self: flex-start;
-          img {
-            max-width: 45px;
-            min-width: 45px;
-            @include breakpoints-down(small) {
-              max-width: 40px;
-              min-width: 40px;
+        .form-item {
+          label {
+            letter-spacing: 1px;
+            font-size: 0.75rem;
+            align-self: flex-start;
+          }
+          input {
+            align-self: flex-start;
+            padding: 0.75em;
+            width: 100%;
+            border-radius: 0.5em;
+            border: 1px solid var(--lg-violet);
+            outline: none;
+
+            font-family: $ff-primary;
+            font-size: 1rem;
+            font-weight: $fw-500;
+            &::placeholder {
+              font-family: $ff-primary;
+              font-size: 1rem;
+              font-weight: $fw-500;
+              color: var(--lb-violet);
+            }
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+              border-radius: 0.5em;
+              border: 1px solid;
+              border-image: linear-gradient(
+                  45deg,
+                  var(--active-b-from),
+                  var(--active-b-to)
+                )
+                2;
             }
           }
-        }
-        .user-detail {
-          word-spacing: 1px;
-          line-height: 1.2;
-          align-self: flex-start;
-          .redDot {
-            p {
-              &::after {
-                content: "";
-                display: inline-block;
-                background-color: #f65351;
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
 
-                margin-left: 0.25em;
+          .date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .labels {
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              gap: 2.5em;
+              margin-right: auto;
+            }
+            &-inputs {
+              display: flex;
+              flex-direction: row;
+              .expday {
+                width: 30%;
+                margin-right: 1em;
+              }
+              .expyear {
+                width: 30%;
+                margin-right: 2em;
               }
             }
           }
         }
+      }
+      &__btn {
+        margin-top: 1em;
+        width: 100%;
+        padding: 1em;
+
+        border: none;
+        outline: 1px solid transparent;
+
+        font-size: 1rem;
+        color: var(--main);
+        border-radius: 0.5em;
+        font-weight: $fw-500;
+        cursor: pointer;
+
+        background-color: var(--crl-main);
       }
     }
   }
