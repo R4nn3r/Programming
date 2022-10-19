@@ -52,7 +52,8 @@
           <form class="main__container__right__form" id="form">
             <!-- Card holder name -->
             <div class="form-item f">
-              <label for="name">CARDHOLDER NAME </label>
+              <label> CARDHOLDER NAME</label>
+
               <input
                 class="name"
                 id="name"
@@ -63,7 +64,8 @@
 
             <!-- card number  -->
             <div class="form-item f">
-              <label for="name">CARD NUMBER</label>
+              <label> CARD NUMBER</label>
+
               <input
                 class="cardnum"
                 id="cardnum"
@@ -75,16 +77,8 @@
             <!-- dates and cvc -->
             <div class="form-item">
               <div class="date">
-                <div class="labels">
-                  <div>
-                    <label for="name">EXP. DATE (MM/YY)</label>
-                  </div>
-                  <div>
-                    <label for="name">CVC</label>
-                  </div>
-                </div>
-
                 <div class="date-inputs">
+                  <label>EXP. DATE(MM/YY)</label>
                   <input
                     class="expday"
                     id="expday"
@@ -97,12 +91,16 @@
                     type="text"
                     placeholder="YY"
                   />
-                  <input
-                    class="cvc"
-                    id="cvc"
-                    type="text"
-                    placeholder="e.g. 123"
-                  />
+                  <div class="cvcmain">
+                    <label>CVC</label>
+
+                    <input
+                      class="cvc"
+                      id="cvc"
+                      type="text"
+                      placeholder="e.g. 123"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -114,10 +112,6 @@
         </article>
       </div>
     </main>
-
-    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000   
-     Exp. Date (MM/YY) MM YY CVC
-     Confirm -->
 
     <!-- Completed state start -->
 

@@ -74,7 +74,8 @@ svg {
   height: 100vh;
 
   @include breakpoints-down(medium) {
-    width: 60%;
+    min-width: 40%;
+    // width: 60%;
     height: 100vh;
   }
 }
@@ -88,10 +89,10 @@ svg {
 
 // General
 body {
-  background-color: var(--crl-main2);
-  background-image: url(../../images/plus.webp);
-  background-size: contain;
-  background-repeat: repeat;
+  background-color: var(--main);
+  // background-image: url(../../images/plus.webp);
+  // background-size: contain;
+  // background-repeat: repeat;
   max-height: 100vh;
 
   font-family: $ff-primary;
