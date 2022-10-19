@@ -8,11 +8,35 @@
   @include breakpoints-down(small) {
     flex-direction: column;
   }
+
+  &:before {
+    content: "";
+    background-image: url(../../images/bg-main-desktop.png);
+    background-size: cover;
+    width: 30%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    transition: width 0.35s ease-in-out, height 0.35s ease-in-out;
+
+    @include breakpoints-down(small) {
+      content: "";
+
+      background-image: url(../../images/bg-main-mobile.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: block;
+      height: 100%;
+      width: 100%;
+      z-index: -10;
+    }
+  }
 }
 
 .cards {
   width: 54%;
-  padding: 2rem;
   @include breakpoints-down(small) {
     width: 100%;
   }
@@ -22,11 +46,11 @@
   width: 46%;
   overflow: hidden;
   padding: 1em;
-  // animation: slide-down 1s linear;
+  animation: slide-down 1s linear;
 
   @include breakpoints-down(small) {
     width: 100%;
-    // animation: slide-up 1s linear;
+    animation: slide-up 1s linear;
   }
 
   .cardform {
@@ -125,5 +149,5 @@
 }
 
 .hidden {
-  // display: none;
+  display: none;
 }
