@@ -1,70 +1,51 @@
-// Theme Changer
-const checkBox = document.querySelector("#checkbox");
-const body = document.querySelector("body");
+// From validations
+const form = document.querySelector("form");
 
-const theme = ["light", "brown", "dark"];
+// inputs
+const name = form.querySelector(".name");
+const num = form.querySelector(".num");
+const mm = form.querySelector(".mm");
+const yy = form.querySelector(".yy");
+const cvc = form.querySelector(".cvcin");
 
-checkBox.addEventListener("change", (e) => {
-  body.className = theme[getRand()];
-});
+// button
+const btn = form.querySelector(".cardbtn");
 
-var getRand = (function () {
-  var nums = [0, 1, 2];
-  var current = [];
-  function rand(n) {
-    return (Math.random() * n) | 0;
-  }
-  return function () {
-    if (!current.length) current = nums.slice();
-    return current.splice(rand(current.length), 1);
-  };
-})();
+// on submit
+form.onsubmit = (e) => {
+  e.preventDefault();
 
-const userDetail = document.querySelectorAll(".user-detail");
-const markAll = document.querySelector(".linkText");
-const notification = document.querySelector("#notification");
+  const inputs = e.target.querySelectorAll("input");
 
-// Find and count the cards that have a redDot
-userDetail.forEach((item) => {});
-
-// Mark all the notifications as read
-markAll.addEventListener("click", () => {
-  userDetail.forEach((item) => {
-    const card = item.firstElementChild;
-    card.classList.remove("redDot");
-
-    const parent = card.parentElement.parentNode;
-
-    parent.classList.remove("background");
-    parent.classList.add("background2");
-    notification.innerHTML = "0";
-    notification.style.display = "none";
+  inputs.forEach((input) => {
+    if (input.className === "cvcin") {
+      if (input.value === "") {
+        input.style.outline = "1px solid red";
+        const error = input.nextElementSibling;
+        error.classList.remove("hidden");
+      } else {
+        input.style.outline = "1px solid green";
+        const error = input.nextElementSibling;
+        error.classList.add("hidden");
+      }
+    } else if (input.className !== "cardbtn") {
+      if (input.value === "") {
+        input.style.border = "1px solid red";
+        const error = input.parentElement.nextElementSibling;
+        error.classList.remove("hidden");
+      } else {
+        input.style.border = "1px solid green";
+        const error = input.parentElement.nextElementSibling;
+        error.classList.add("hidden");
+      }
+    }
   });
-});
 
-// Individual notification clearing
-const notCard = document.querySelectorAll(".notification");
-let n = 0;
-
-notCard.forEach((item) => {
-  const card = item.firstElementChild;
-  const parent = card.parentElement;
-
-  if (parent.classList.contains("background")) {
-    n += 1;
-  }
-});
-
-notCard.forEach((item) => {
-  // When selected remove redDot and change the background
-
-  item.addEventListener("click", (e) => {
-    item.classList.remove("background");
-    item.classList.add("background2");
-
-    const redDot2 = item.lastElementChild.firstElementChild;
-    redDot2.classList.remove("redDot");
-    n -= 1;
+  inputs.forEach((input) => {
+    if (input.className !== "cardbtn") {
+      if (input.value !== "") {
+        input.value = "";
+      }
+    }
   });
-});
-notification.innerHTML = n;
+};

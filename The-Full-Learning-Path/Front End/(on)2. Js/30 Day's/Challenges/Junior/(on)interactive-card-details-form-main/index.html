@@ -50,13 +50,21 @@
             <!-- cardholder -->
             <label class="cardname">
               CARDHOLDER NAME
-              <input type="text" placeholder="e.g. Jane Appleseed" />
+              <input
+                class="name"
+                type="text"
+                placeholder="e.g. Jane Appleseed"
+              />
             </label>
             <p class="error hidden">Can`t be blank</p>
             <!-- chard number  -->
             <label class="carnumber">
               CARD NUMBER
-              <input type="text" placeholder="e.g. 1234 5678 9123 0000" />
+              <input
+                class="num"
+                type="text"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
             </label>
             <p class="error hidden">Can`t be blank</p>
             <!-- card date detail -->
@@ -73,11 +81,16 @@
               <!-- cvc -->
               <label class="cvc">
                 CVC
-                <input type="text" name="cvc" placeholder="eg. 123" />
+                <input
+                  class="cvcin"
+                  type="text"
+                  name="cvc"
+                  placeholder="eg. 123"
+                />
                 <p class="error hidden">Can`t be blank</p>
               </label>
             </div>
-            <button class="cardbtn">Confirm</button>
+            <input type="submit" class="cardbtn" />
           </form>
         </div>
       </main>
@@ -92,5 +105,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </footer> -->
+
+    <script src="./apps/js/main.js"></script>
   </body>
 </html>
