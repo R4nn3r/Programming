@@ -1,145 +1,129 @@
-.main {
-  &__container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+.container {
+  max-width: 1440px;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoints-down(small) {
+    flex-direction: column;
+  }
+}
+
+.cards {
+  width: 54%;
+  padding: 2rem;
+  @include breakpoints-down(small) {
     width: 100%;
+  }
+}
 
-    @include breakpoints-down(small) {
+.main {
+  width: 46%;
+  overflow: hidden;
+  padding: 1em;
+  // animation: slide-down 1s linear;
+
+  @include breakpoints-down(small) {
+    width: 100%;
+    // animation: slide-up 1s linear;
+  }
+
+  .cardform {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    margin: 0.5em;
+
+    @include breakpoints-up(medium) {
+      max-width: 400px;
+    }
+    label {
+      display: flex;
       flex-direction: column;
-      gap: 5em;
-    }
-
-    @include breakpoints-up(large) {
-      gap: 5em;
-    }
-
-    @include breakpoints-up(xlarge) {
-      gap: 7em;
-    }
-
-    // left
-    &__left {
-      margin-right: auto;
-      width: 100%;
-      @include breakpoints-up(medium) {
-        width: 30%;
-      }
-      @include breakpoints-up(large) {
-        width: 50%;
-      }
-    }
-    // right
-    &__right {
-      @include breakpoints-up(medium) {
-        margin-right: 4rem;
-      }
-      @include breakpoints-up(large) {
-        margin-right: 6rem;
-      }
-      margin: 0.5em;
-      padding: 0.5em;
-      &__form {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-
-        @include breakpoints-up(medium) {
-          max-width: 330px;
-        }
-        @include breakpoints-up(large) {
-          max-width: 400px;
-        }
-
-        .form-item {
-          label {
-            letter-spacing: 1px;
-            font-size: 0.7rem;
-            align-self: flex-start;
-          }
-          input {
-            align-self: flex-start;
-            padding: 0.7em;
-            width: 100%;
-            border-radius: 0.5em;
-            border: 1px solid var(--lg-violet);
-            color: var(--dg-violet);
-            outline: none;
-
-            font-family: $ff-primary;
-            font-size: 1rem;
-            font-weight: $fw-500;
-            &::placeholder {
-              font-family: $ff-primary;
-              font-size: 1rem;
-              font-weight: $fw-500;
-              color: var(--lb-violet);
-            }
-            cursor: pointer;
-
-            &:hover,
-            &:focus {
-              border: 1px solid var(--active-b-from);
-            }
-          }
-
-          .date {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .labels {
-              width: 100%;
-              display: flex;
-              flex-direction: row;
-              gap: 2.8em;
-              margin-right: auto;
-            }
-            &-inputs {
-              display: flex;
-              flex-direction: row;
-              .expday {
-                max-width: 15%;
-                margin-right: 1em;
-              }
-              .expyear {
-                max-width: 18%;
-                margin-right: 2em;
-              }
-            }
-          }
-        }
-      }
-      &__btn {
-        width: 100%;
-        padding: 0.85em;
-
-        border: none;
-        outline: 1px solid transparent;
-
+      gap: 0.15em;
+      font-size: 0.75rem;
+      input {
+        font-family: $ff-primary;
         font-size: 1rem;
-        color: var(--main);
-        border-radius: 0.5em;
         font-weight: $fw-500;
-        cursor: pointer;
+        margin-top: 0.5em;
+        padding: 0.7em;
+        border-radius: 0.5em;
+        border: none;
+        outline: 1px solid var(--lg-violet);
 
-        background-color: var(--crl-main);
+        &::placeholder {
+          color: var(--lg-violet);
+          font-family: inherit;
+          font-size: 1rem;
+          font-weight: inherit;
+        }
       }
+    }
+
+    .card-date {
+      display: flex;
+      align-items: center;
+
+      label {
+        div {
+          gap: 1em;
+          display: flex;
+          margin-right: 2em;
+        }
+
+        .error {
+          margin-top: 0.25rem;
+        }
+      }
+      .cardmm,
+      .cvc {
+        width: 50%;
+
+        div input {
+          width: 100%;
+        }
+      }
+
+      .cvc {
+        .error {
+          text-align: end;
+        }
+      }
+    }
+  }
+  .cardbtn {
+    margin-top: 1em;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    border: none;
+    outline: 2px solid transparent;
+
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: $fw-500;
+    color: var(--main);
+    background-color: var(--crl-main);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--crl-main2);
+      outline: 2px solid var(--crl-main);
+      color: var(--crl-main);
     }
   }
 }
 
-.date-inputs {
-  position: relative;
-  label {
-    position: absolute;
-    top: -20px;
-  }
+//  error style
+.error {
+  margin-top: -0.25rem;
+  color: var(--crl-er);
+  font-size: 0.75rem;
+  animation: slide-right 1s linear;
 }
 
-.expyear {
-}
-
-.cvcmain {
+.hidden {
+  // display: none;
 }

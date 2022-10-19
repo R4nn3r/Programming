@@ -29,93 +29,62 @@
     </style>
   </head>
   <body class="firstTheme">
-    <main class="main container">
-      <div class="main__container">
-        <!-- right -->
-        <div class="main__container__left">
-          <picture>
-            <source
-              class="bg-desktop"
-              srcset="./images/bg-main-desktop.png"
-              media="(min-width: 39em)"
-            />
-            <img
-              class="bg-mobile"
-              src="./images/bg-main-mobile.png"
-              alt="Main Mobile Background"
-            />
-          </picture>
+    <div class="container">
+      <aside class="cards">
+        <div class="froncard">
+          <span>0000 0000 0000 0000</span>
+          <div class="carddetail">
+            <span>Jane Appleseed</span>
+            <span>00/00</span>
+          </div>
         </div>
 
-        <!-- left -->
-        <article class="main__container__right">
-          <form class="main__container__right__form" id="form">
-            <!-- Card holder name -->
-            <div class="form-item f">
-              <label> CARDHOLDER NAME</label>
+        <div class="backcard">
+          <span>000</span>
+        </div>
+      </aside>
 
-              <input
-                class="name"
-                id="name"
-                type="text"
-                placeholder="e.g. Jane Appleseed"
-              />
-            </div>
-
-            <!-- card number  -->
-            <div class="form-item f">
-              <label> CARD NUMBER</label>
-
-              <input
-                class="cardnum"
-                id="cardnum"
-                type="text"
-                placeholder=" e.g. 1234 5678 9123 0000"
-              />
-            </div>
-
-            <!-- dates and cvc -->
-            <div class="form-item">
-              <div class="date">
-                <div class="date-inputs">
-                  <label>EXP. DATE(MM/YY)</label>
-                  <input
-                    class="expday"
-                    id="expday"
-                    type="text"
-                    placeholder="MM"
-                  />
-                  <input
-                    class="expyear"
-                    id="expyear"
-                    type="text"
-                    placeholder="YY"
-                  />
-                  <div class="cvcmain">
-                    <label>CVC</label>
-
-                    <input
-                      class="cvc"
-                      id="cvc"
-                      type="text"
-                      placeholder="e.g. 123"
-                    />
-                  </div>
+      <main class="main">
+        <div>
+          <form class="cardform">
+            <!-- cardholder -->
+            <label class="cardname">
+              CARDHOLDER NAME
+              <input type="text" placeholder="e.g. Jane Appleseed" />
+            </label>
+            <p class="error hidden">Can`t be blank</p>
+            <!-- chard number  -->
+            <label class="carnumber">
+              CARD NUMBER
+              <input type="text" placeholder="e.g. 1234 5678 9123 0000" />
+            </label>
+            <p class="error hidden">Can`t be blank</p>
+            <!-- card date detail -->
+            <div class="card-date">
+              <!-- mm & yy -->
+              <label class="cardmm cardyy">
+                EXP. DATE (MM/YY)
+                <div>
+                  <input type="text" class="mm" placeholder="MM" />
+                  <input type="text" class="yy" placeholder="YY" />
                 </div>
-              </div>
+                <p class="error hidden">Can`t be blank</p>
+              </label>
+              <!-- cvc -->
+              <label class="cvc">
+                CVC
+                <input type="text" name="cvc" placeholder="eg. 123" />
+                <p class="error hidden">Can`t be blank</p>
+              </label>
             </div>
-            <!-- button -->
-            <button class="main__container__right__btn button" id="button">
-              Confirm
-            </button>
+            <button class="cardbtn">Confirm</button>
           </form>
-        </article>
-      </div>
-    </main>
-
-    <!-- Completed state start -->
-
-    <!-- Thank you! We've added your card details Continue -->
+        </div>
+      </main>
+    </div>
+    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
+    Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
+    e.g. 123 Confirm -->
 
     <!-- <footer class="attribution">
       Challenge by
