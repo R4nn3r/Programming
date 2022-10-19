@@ -9,6 +9,7 @@
     flex-direction: column;
   }
 
+  // side background added through a pseudo element
   &:before {
     content: "";
     background-image: url(../../images/bg-main-desktop.png);
@@ -37,8 +38,69 @@
 
 .cards {
   width: 54%;
+  position: relative;
   @include breakpoints-down(small) {
     width: 100%;
+  }
+
+  //  Front Card
+  .froncard {
+    // background
+    background-image: url(../../images/bg-card-front.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    // small devices
+    @include breakpoints-down(small) {
+      top: initial;
+      bottom: -25px;
+      left: 45%;
+      transform: translateX(-50%);
+    }
+
+    @include breakpoints-up(medium) {
+      top: initial;
+      bottom: 10px;
+      left: 150px;
+    }
+
+    .carddetail {
+    }
+  }
+
+  // Back Card
+  .backcard {
+    // background
+    background-image: url(../../images/bg-card-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    // small devices
+    @include breakpoints-down(small) {
+      bottom: 95px;
+      top: initial;
+      left: 60%;
+      transform: translateX(-50%);
+    }
+
+    // medium and up
+    @include breakpoints-up(medium) {
+      left: 250px;
+    }
+  }
+  // card size
+  .froncard,
+  .backcard {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    margin-bottom: 2em;
+
+    @include breakpoints-down(small) {
+      scale: 0.75;
+    }
   }
 }
 
@@ -46,11 +108,11 @@
   width: 46%;
   overflow: hidden;
   padding: 1em;
-  animation: slide-down 1s linear;
+  // animation: slide-down 1s linear;
 
   @include breakpoints-down(small) {
     width: 100%;
-    animation: slide-up 1s linear;
+    // animation: slide-up 1s linear;
   }
 
   .cardform {
