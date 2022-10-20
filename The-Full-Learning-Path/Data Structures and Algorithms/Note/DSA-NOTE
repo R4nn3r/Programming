@@ -158,13 +158,13 @@
                     T(n) = Math.max([t(statement1) + t(statement2)], [time(statement3)])
 
             - Loop statements 
-                - Linear
+                - Linear Time 
                     T(n) = runtime of the block * the number of repetition 
 
-                - Constant  
+                - Constant Time
                     O(1) cause its constant 
 
-                - Logarithmic
+                - Logarithmic Time
                     It will use log values (ex. binary search)
 
                 - Nested 
