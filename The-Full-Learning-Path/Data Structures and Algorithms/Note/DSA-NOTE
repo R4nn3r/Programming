@@ -187,8 +187,41 @@
 
             - Recursive functions ?
 
-# Asymptotic Analysis
+# Algorithm Analysis 
 
+    # Categories 
+
+        - Best Case 
+            data: Arranged in the most advantages order 
+            T(n): lower boundary 
+            input size: minimum input size 
+
+        - Average Case 
+            data: Arranged in random order 
+            T(n): optimal bound 
+            input size: random or average size 
+
+        - Worse Case [Used for complexity Analysis]
+            data: Arranged in the most disadvantages order 
+            T(n): upper boundary
+            input size: Infinite size 
+
+    # Order of magnitude 
+         The rate ate which the storage and time grows as the function of problem size (n) and its expressed in terms of tis relationship to some known function
+         [Asymptotic Analysis]
+
+# Types of Asymptotic Notations 
+    - Big-O
+    - Big-Omega 
+    - Big-Theta
+    - Little o(small o)
+
+# Big-O Notations
+
+        The most commonly used complexity for estimating 
+        the rate at which a function grows!
+
+    Definition 1: f (n) is O(g(n)) if there exist positive numbers c and N such that f (n) ≤ cg(n) for all n ≥ N.
 
 # Recursion
 
