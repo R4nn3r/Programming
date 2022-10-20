@@ -1084,7 +1084,15 @@ HTML (Hypertext Markup Language)
                     1rem = 16px
 
 # Css layouts Secret!
-    
+
+    - Relationship between parent and child?
+        Tip: 
+            - let the children dictate the height of the parent!
+            - and children's width should be auto 
+
+    - How child's margin impacts teh parent 
+    - Flex and grid impacts on the relationship of elements 
+
 
 
 "we suffer more often in imagination than in reality."
