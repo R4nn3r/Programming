@@ -1,0 +1,265 @@
+# Introduction to Data Structures
+
+    Type of data structure :
+    1: Linear Data Structure
+    2: Non-Linear Data Structure.
+
+            Linear Data Structure:
+                Elements are arranged in one dimension ,also known as linear dimension.
+                Example: lists, stack, queue, etc.
+
+            Non-Linear Data Structure
+                Elements are arranged in one-many, many-one and many-many dimensions.
+                Example: tree, graph, table, etc.
+
+# Basics
+
+    # Logic
+         Operators
+            - Conditional operator (A -> B) [Implication]
+            - Bi-conditional operator (A <-> B) [Bi-Implication]
+            - Negations operator (!A) means  not - !
+            - And or Or operators
+                and - &
+                or - |
+
+                (and) operators return true if and only if both operators are true.
+                (or) operators return true if at least one operator is true.
+                (not) operator inverts a situation or condition: if true it turns it false and vice-versa.
+       
+        Boolean Algebra
+            - Associativity [a + (b + c) = (a + b) + c)]
+                    A AND (B AND C) = (A AND B) AND C.
+                    A OR (B OR C) = (A OR B) OR C.
+
+            - Distributivity [a × (b + c) = (a × b) + (a × c)]
+                    A AND (B OR C) = (A AND B) OR (A AND C).
+                    A OR (B AND C) = (A OR B) AND (A OR C).
+
+
+            # Note:
+                Demorgan's Law
+                    ANDs can be transformed into ORs and vice versa!
+
+    # Counting
+        - Multiplying 
+                if an event happens in n different ways and another event happens in m different ways the number of different ways both events can happens is 
+                (n * m)
+
+        - Combinations 
+                - with rep
+                    C(n,r) = n - r - 1 / (n - 1)r
+                - without rep 
+                    C(n,r) = n! / (n - r) r!
+        - Permutations 
+                - with rep
+                    P(n,r) = n^r
+                - without rep 
+                    P(n,r) = n! / (n - r)!
+
+    # Probability
+
+            - Event 
+                    p(E) = |E| / |S|
+                        |E| = event 
+                        |S| = sample space : all the possible outcomes 
+
+            - Conditional 
+                the probability that event  A  has occurred in a trial of a random experiment for which it is known that event  B  has definitely occurred.
+
+                    p(A/B) = p(A n B) / p(B)
+
+            - Independent 
+                For: Events  A  and  B  are independent
+                    p(B) = p(B/A)
+
+                        p(A n B) = p(A) * p(B)
+                            -> if true then its independent
+
+    # Logarithm?
+        is the power to which a number muse be raised in order to get some other number.
+
+            How to write them?
+
+                in general you write log followed by the base num as a subscript 
+                the most common log are base 10 and natural log 
+                    Ex. Log
+                        Log a = r
+                    
+                    natural log 
+                        ln
+                        ln a = r
+
+            Rules of Log:
+                1.   br = a is the equivalent to logb a=r (This is the definition of a logarithm.)
+                2.   log 0 is undefined.
+                3.   log 1 = 0
+                4.   log (P*Q) = log P + log Q
+                5.   log (P/Q) = log P - log Q
+                6.   log (Pt) = t *log P
+                7.   10(log a) = a (in the case of natural logarithms, e(ln a) = a)
+                8.   log (10r) = r (in the case of natural logarithms, ln er = r)
+                9.   log (1/a) = -log a
+
+# Intro to Complexity Analysis 
+
+        
+    
+        1. Empirical complexity Analysis (Computational)
+            Computational complexity indicates how much effort is needed to apply an 
+            algorithm or how costly it is. and in most cases that is concerned with 
+            time and space.
+
+                time: is usually more  important!
+
+                The total running time of the program is considered it uses 
+                the system's time so it cant be used for measuring [efficiency!] 
+
+        2. Theoretical complexity Analysis (Asymptotic)
+            The process of calculating the running time of an algorithm in mathematical units to find the program's limitations, or “run-time performance.” 
+
+    # Running time of a program varies based on 
+        - Processor speed 
+        - current processor load 
+        - inputs size
+        - software environment!
+
+            
+            
+    # Efficiency depends on
+        - Execution speed 
+        - Amount of memory used
+
+# Whats is time complexity? 
+        To estimate how an algorithms performs regardless of the kind of the kind of machine it runs on.
+        This time complexity is defined as a function of the input size n using Big-O notation. n indicates the input size, while O is the worst-case scenario growth rate function. 
+
+# How to calculate the time complexity
+
+        Rules:
+            - Sequential statements -> O(1)
+                function def 
+                function return 
+                assignment 
+                arithmetic operations 
+                boolean 
+                i/o
+
+            - Conditional statements (worst case is considered)
+
+                Ex.
+                    if (isValid) {
+                        statement1;
+                        statement2;
+                    } else {
+                    statement3;
+                    }
+                
+                    T(n) = Math.max([t(statement1) + t(statement2)], [time(statement3)])
+
+            - Loop statements 
+                - Linear
+                    T(n) = runtime of the block * the number of repetition 
+
+                - Constant  
+                    O(1) cause its constant 
+
+                - Logarithmic
+                    It will use log values (ex. binary search)
+
+                - Nested 
+                    Ex.
+                            
+                        for (let i = 0; i < n; i++) {
+                            statement1;
+
+                            for (let j = 0; j < m; j++) {
+                                statement2;
+                                statement3;
+                            }
+                        }
+                    T(n) = Math.max([t(statement1) + t(statement2)], [time(statement3)])
+
+                    O(n^2)
+
+            - Function calls ? 
+                T(n) = 1+ time(parameters) + body time
+
+            - Recursive functions ?
+
+# Asymptotic Analysis
+
+
+# Recursion
+
+    Note:
+    recursive function uses LIFO (LAST IN FIRST OUT) Structure just like the stack data structure.
+
+    The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called a recursive function.
+
+
+    # Properties
+        - same operation multiple times
+        - smaller inputs to make the problem smaller
+        - Base condition is needed to stop the recursion
+
+
+    # How are problems solved with recursion
+        idea is to represent a problem in terms of one or more smaller problems, and add one or more base conditions that stop the recursion.
+
+    # Overflow error
+        Stack overflow error occurs in recursions when the base case is not reached or not defined!
+
+
+    # Types of Recursions
+
+        # Direct
+            Calls its self.
+
+        # Indirectly
+            Calls another function
+
+            Ex.
+
+            ```
+                void indirectRecFun1()
+                {
+                    // Some code...
+
+                    indirectRecFun2();
+
+                    // Some code...
+                }
+                void indirectRecFun2()
+                {
+                    // Some code...
+
+                    indirectRecFun1();
+
+                    // Some code...
+                }
+            ```
+        # Tailed vs Non-tailed
+            when the recursive call is the last thing executed by the function
+
+    # Problems of recursive functions
+
+        - greater space requirement
+        - greater time requirement
+        - difficult code to understand
+
+
+    # Summary of Recursion:
+            #   There are two types of cases in recursion i.e. recursive
+                case and a base case.
+
+            #   The base case is used to terminate the recursive
+                function when the case turns out to be true.
+
+            #   Each recursive call makes a new copy of that method in
+                the stack memory.
+
+            #   Infinite recursion may lead to running out of stack memory.
+
+                Examples of Recursive algorithms:
+                Merge Sort, Quick Sort, Tower of Hanoi, Fibonacci Series, Factorial Problem, etc.
