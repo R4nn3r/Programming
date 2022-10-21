@@ -1126,7 +1126,7 @@ HTML (Hypertext Markup Language)
     - Always start with a [Global] styling! 
     - Avoid fixed sizes 
     - Use media queries to add complexity
-    - Take advantage of modern Css
+    - Take advantage of modern css
 
 
 "we suffer more often in imagination than in reality."
