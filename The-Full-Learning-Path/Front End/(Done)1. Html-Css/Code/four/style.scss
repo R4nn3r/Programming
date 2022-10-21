@@ -79,11 +79,11 @@ body {
 
   p {
     padding: 0.75em;
-    animation: slide-down 6s linear;
+    // animation: slide-down 6s linear;
   }
   h1 {
     text-shadow: 0px 2px 0px red, 0px 4px 0px yellow, 0px 6px 0px green;
-    animation: slide-down 4s linear;
+    // animation: slide-down 4s linear;
   }
 }
 
@@ -104,7 +104,7 @@ body {
   h5,
   h6 {
     font-weight: 600;
-    animation: slide-down 4s linear;
+    // animation: slide-down 4s linear;
   }
 }
 
@@ -134,9 +134,106 @@ body {
 }
 
 .card {
-  animation: slide-down 6s linear;
+  // animation: slide-down 6s linear;
 
   p {
-    animation: slide-down 6s linear;
+    // animation: slide-down 6s linear;
+  }
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(5px);
+    rotate: 180deg;
+  }
+  10% {
+    transform: translateX(50px);
+  }
+  20% {
+    transform: translateX(100px);
+    rotate: -100deg;
+  }
+  30% {
+    transform: translateX(150px);
+  }
+  40% {
+    transform: translateX(200px);
+  }
+  50% {
+    rotate: 100deg;
+
+    transform: translateX(225px);
+  }
+  60% {
+    transform: translateX(250px);
+  }
+  70% {
+    rotate: -100deg;
+    transform: translateX(300px);
+  }
+  80% {
+    transform: translateX(350px);
+  }
+  90% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(538px);
+    rotate: 0deg;
+  }
+}
+
+.slide {
+  margin: 10em;
+  // display: inline-block;
+  display: flex;
+  justify-content: center;
+  input {
+    // opacity: 0;
+    // position: absolute;
+    display: none;
+
+    &:checked + label .ball {
+      width: 38px;
+      height: 18px;
+      transform: translateX(538px);
+      animation: loop 2s infinite alternate;
+      border-radius: 50% 0 50% 0;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    position: relative;
+    outline: 2px solid red;
+    border-radius: 50px;
+    background-color: lightblue;
+    width: 555px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25em;
+    i {
+      margin: 0 2px;
+      scale: 1;
+      color: currentColor;
+
+      &:last-of-type {
+        color: red;
+      }
+      &:first-of-type {
+        color: red;
+      }
+    }
+    .ball {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      outline: 2px solid red;
+      background-color: white;
+      // transition: transform 2s linear;
+    }
   }
 }
