@@ -1090,7 +1090,16 @@ HTML (Hypertext Markup Language)
 
         # Organized Css 
             - Group similar types
-            - comment code 
+            - Comment code 
+
+        # Refractor your code 
+            Tip: remember
+                - inheritance
+                - group styles that are the same!
+                    - group selectors at the top!
+
+        # Don't remove outlines [a must for accessibility]
+            -> if you do style focus states!
 
 
 # Css layouts Secret!
