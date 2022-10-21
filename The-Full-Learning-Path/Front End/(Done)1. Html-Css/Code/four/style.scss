@@ -1,14 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,700;0,900;1,900&display=swap");
 
+@keyframes slide-up {
+  0% {
+    opacity: 0.15;
+    transform: translateY(-200%);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateY(-50%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-25%);
+  }
+  60% {
+    opacity: 0.65;
+    transform: translateY(-15%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0.15;
+    transform: translateX(-200%);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateX(-50%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-25%);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translateX(-15%);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateX(-5%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(6%);
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: rgb(228, 228, 228);
+  margin: 0;
 
   @media (max-width: 768px) {
     text-align: center;
   }
 }
-.header {
+.header,
+.footer {
   font-weight: 900;
   font-style: italic;
   color: rgb(0, 0, 0);
@@ -16,18 +77,24 @@ body {
   background-color: #333;
   color: white;
 
+  p {
+    padding: 0.75em;
+    animation: slide-down 6s linear;
+  }
   h1 {
     text-shadow: 0px 2px 0px red, 0px 4px 0px yellow, 0px 6px 0px green;
+    animation: slide-down 4s linear;
   }
 }
 
 .wrapper {
-  max-width: 35rem;
+  max-width: 40rem;
   margin-inline: auto;
   padding-block: 2em;
   & > * {
     width: auto;
   }
+  padding: 1em;
 }
 
 .main {
@@ -37,6 +104,7 @@ body {
   h5,
   h6 {
     font-weight: 600;
+    animation: slide-down 4s linear;
   }
 }
 
@@ -45,8 +113,11 @@ body {
   //   display: flex;
   gap: 1em;
   padding: 0.25em;
-
+  @media (max-width: 40em) {
+    flex-direction: column;
+  }
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 3em 0;
 
   & > * {
     outline: 1px solid rgba(128, 128, 128, 0.207);
@@ -54,9 +125,18 @@ body {
     box-shadow: 15px 20px 15px rgba(158, 158, 158, 0.304);
     padding: 1em;
     // flex: 1;
+  }
 
-    p {
-      padding: 1em;
-    }
+  & > * {
+    background-color: lavender;
+    padding: 1.5em;
+  }
+}
+
+.card {
+  animation: slide-down 6s linear;
+
+  p {
+    animation: slide-down 6s linear;
   }
 }

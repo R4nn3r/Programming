@@ -1091,9 +1091,14 @@ HTML (Hypertext Markup Language)
             - and children's width should be auto 
 
     - How child's margin impacts teh parent 
+    
     - Flex and grid impacts on the relationship of elements 
+        Gird:
+            The parent has more control on the children cause 
+            your setting up a layout and the children live within that layout 
 
-
+        Flex:
+            The children affect the parent as well as there siblings 
 
 "we suffer more often in imagination than in reality."
 -- Seneca 
