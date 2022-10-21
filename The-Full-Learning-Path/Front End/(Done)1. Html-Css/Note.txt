@@ -1101,6 +1101,7 @@ HTML (Hypertext Markup Language)
         # Don't remove outlines [a must for accessibility]
             -> if you do style focus states!
 
+        # Text contrast must not be too low 
 
 # Css layouts Secret!
 
@@ -1118,6 +1119,15 @@ HTML (Hypertext Markup Language)
 
         Flex:
             The children affect the parent as well as there siblings 
+
+# Ways to make any page's responsive
+        Note: Every page is responsive from the start your breaking the page so you can solve it! thats the mind set you need to have.
+    
+    - Always start with a [Global] styling! 
+    - Avoid fixed sizes 
+    - Use media queries to add complexity
+    - Take advantage of modern Css
+
 
 "we suffer more often in imagination than in reality."
 -- Seneca 
