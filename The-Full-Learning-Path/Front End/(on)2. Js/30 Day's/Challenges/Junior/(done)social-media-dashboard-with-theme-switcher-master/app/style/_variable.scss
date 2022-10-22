@@ -68,12 +68,51 @@ $s-crl-yt: hsl(348, 97%, 39%);
 }
 
 .rainbow-theme {
-  --tob-bg: red;
-  --bg: orange;
-  --card-bg: yellow;
-  --text-h: green;
-  --text: blue;
+  --tob-bg: #121212;
+  --bg: #95b46a;
+  --card-bg: #709255;
+  --card-hf: #3e5622;
+  --text-h: #172815;
+  --text: #83781b;
 
   //   toggle
   --toggle: red, orange, yellow, green, blue, indigo, purple;
+  .card {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.109);
+  }
+  .card.instagram-br {
+    transition: background 0.8s ease-in-out;
+    &:hover,
+    &:focus {
+      .tag,
+      .insta {
+        color: var(--text-h);
+      }
+    }
+  }
+}
+
+.blue-theme {
+  --tob-bg: #121212;
+  --bg: #1a1d27;
+  --card-bg: #1e2749;
+  --card-hf: #273469;
+  --text-h: #9c9c9c;
+  --text: #fafaff;
+
+  //   toggle
+  --toggle: red, orange, yellow, green, blue, indigo, purple;
+  .card {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.109);
+  }
+  .card.instagram-br {
+    transition: background 0.8s ease-in-out;
+    &:hover,
+    &:focus {
+      .tag,
+      .insta {
+        color: var(--text-h);
+      }
+    }
+  }
 }

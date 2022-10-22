@@ -43,6 +43,8 @@
       //  theme-picker
 
       .theme {
+        display: flex;
+        gap: 1em;
         .themepicker {
           opacity: 0;
           display: none;
@@ -116,6 +118,20 @@
       }
       &__growth {
       }
+    }
+  }
+}
+
+// Random Theme
+.random {
+  cursor: pointer;
+  i {
+    color: var(--text);
+    transition: rotate 0.3s ease-in, scale 0.3s ease-in-out;
+    &:focus,
+    &:hover {
+      rotate: 360deg;
+      scale: 1.25;
     }
   }
 }

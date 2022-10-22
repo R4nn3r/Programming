@@ -207,6 +207,10 @@ svg {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+
+  .random {
+    justify-self: flex-end;
+  }
 }
 
 .social-tag {
@@ -241,7 +245,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
 
-  // Theme
+  // Theme transition
   transition: background-color 0.3s ease-in-out;
 }
 
