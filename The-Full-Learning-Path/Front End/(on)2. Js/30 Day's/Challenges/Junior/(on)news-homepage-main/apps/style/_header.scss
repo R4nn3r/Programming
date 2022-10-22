@@ -9,13 +9,29 @@
       @include breakpoints-down(small) {
         display: none;
       }
+
+      //   links
+      gap: 2em;
+      .link {
+        a {
+          text-decoration: none;
+          color: var(--neu-dg-blue);
+          transition: color 0.3s ease-in-out;
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: var(--s-red);
+          }
+        }
+      }
     }
   }
   &__ham {
     display: inline-block;
     cursor: pointer;
 
-    @include breakpoints-up(medium) {
+    @include breakpoints-up(small) {
       display: none;
     }
 
