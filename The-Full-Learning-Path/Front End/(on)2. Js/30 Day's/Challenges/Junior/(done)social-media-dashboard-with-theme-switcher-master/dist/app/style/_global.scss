@@ -1,0 +1,268 @@
+// Reset
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  //   font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+li,
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// utilities
+
+.main-container {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 2em;
+}
+
+.dash {
+  margin-inline: auto;
+
+  @include breakpoints-up(large) {
+    max-width: 80%;
+  }
+}
+.flex-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 2em;
+
+  @include breakpoints-down(small) {
+    flex-direction: column;
+  }
+}
+
+.flex-cards-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2em;
+
+  @include breakpoints-down(small) {
+    flex-direction: column;
+  }
+}
+
+.big-num {
+  color: inherit;
+  font-size: 3rem;
+  font-weight: $fw-700;
+}
+
+.card {
+  cursor: pointer;
+  // size
+
+  // display
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 2em 3em;
+  align-items: center;
+  text-align: center;
+
+  // box style
+  background-color: var(--card-bg);
+
+  // Text
+  font-weight: $fw-700;
+  line-height: 1.2;
+  .num {
+    font-size: 3rem;
+  }
+
+  .tag {
+    color: var(--text-h);
+    font-weight: $fw-400;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+  }
+
+  .status {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+
+  .status.green {
+    font-size: 0.75rem;
+    color: $l-green;
+  }
+  .status.red {
+    font-size: 0.75rem;
+    color: $b-red;
+  }
+
+  // border
+  border-radius: 0.45em;
+
+  // States styles
+  transition: scale 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    background-color: var(--card-hf);
+    scale: 1.025;
+  }
+}
+
+.card2 {
+  padding: 1em 1.5em;
+}
+
+.f-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+// Border Top
+.card.facebook-br {
+  border-top: 3px solid $s-crl-fb;
+}
+
+.card.twitter-br {
+  border-top: 3px solid $s-crl-tw;
+}
+
+.card.instagram-br {
+  position: relative;
+  border-radius: 0.45em;
+
+  &::after {
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    left: 1px;
+    right: 1px;
+    background: linear-gradient(to right, #fcc469, #df4996);
+    content: "";
+    z-index: -1;
+    border-radius: 0.45em;
+  }
+}
+
+.card.youtube-br {
+  border-top: 3px solid $s-crl-yt;
+}
+
+.row-sb {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .random {
+    justify-self: flex-end;
+  }
+}
+
+.social-tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75em;
+  font-size: 0.75rem;
+  color: var(--text-h);
+}
+i.facebook {
+  color: $s-crl-fb;
+  scale: 1.65;
+}
+i.twitter {
+  color: $s-crl-tw;
+  scale: 1.65;
+}
+i.instagram {
+  background: linear-gradient(to right, #fcc469, #df4996);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  scale: 1.65;
+}
+i.youtube {
+  color: $s-crl-yt;
+  scale: 1.65;
+}
+// General styles
+body {
+  font-family: $ff-primary;
+  background-color: var(--bg);
+  color: var(--text);
+
+  // Theme transition
+  transition: background-color 0.3s ease-in-out;
+}
+
+.overview {
+  margin: 2em 0 1.5em 0;
+}
+
+.arrow.green {
+  color: $l-green;
+  i {
+    rotate: 90deg;
+  }
+}
+
+.arrow.red {
+  color: $b-red;
+  i {
+    rotate: 270deg;
+  }
+}

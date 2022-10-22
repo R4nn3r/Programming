@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+    <!-- Link -->
+    <link rel="stylesheet" href="./app/style/style.css" />
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/5b12988027.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="blue-theme">
+    <main class="main main-container">
+      <section class="section dash">
+        <h1 class="mainHeader">Social Media Dashboard</h1>
+
+        <!-- Summary  -->
+        <div class="section__summary row-sb">
+          <div class="section__summary__left">
+            <p>Total Followers: 23,004</p>
+          </div>
+          <div class="section__summary__right row-sb">
+            <p class="themeType">Dark Mode</p>
+
+            <!-- Theme selector -->
+            <div class="theme">
+              <input type="checkbox" id="checkbox" class="themepicker" />
+              <label for="checkbox" class="label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+              <div class="random"><i class="fa-solid fa-paint-roller"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top section for the dashboard -->
+        <div class="section__top flex-cards">
+          <!-- Card's -->
+          <!-- 1 -->
+          <div class="card facebook-br">
+            <div class="top social-tag">
+              <i class="fa-brands fa-square-facebook facebook"></i>
+              <p>@nathanf</p>
+            </div>
+            <div class="middle">
+              <p class="num">1987</p>
+              <p class="tag">FOLLOWERS</p>
+            </div>
+            <div class="bottom">
+              <p class="status green">
+                <span class="arrow green"
+                  ><i class="fa-solid fa-caret-left"></i
+                ></span>
+                12 Today
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="card twitter-br">
+            <div class="top social-tag">
+              <i class="fa-brands fa-twitter twitter"></i>
+              <p>@nathanf</p>
+            </div>
+            <div class="middle">
+              <p class="num">1044</p>
+              <p class="tag">FOLLOWERS</p>
+            </div>
+            <div class="bottom">
+              <p class="status green">
+                <span class="arrow green"
+                  ><i class="fa-solid fa-caret-left"></i></span
+                >99 Today
+              </p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="card instagram-br">
+            <div class="top social-tag">
+              <i class="fa-brands fa-instagram instagram"></i>
+              <p class="insta">@realnathanf</p>
+            </div>
+            <div class="middle">
+              <p class="num">11K</p>
+              <p class="tag">FOLLOWERS</p>
+            </div>
+            <div class="bottom">
+              <p class="status green">
+                <span class="arrow green"
+                  ><i class="fa-solid fa-caret-left"></i></span
+                >1099 Today
+              </p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="card youtube-br">
+            <div class="top social-tag">
+              <i class="fa-brands fa-youtube youtube"></i>
+              <p>Nathan F.</p>
+            </div>
+            <div class="middle">
+              <p class="num">8239</p>
+              <p class="tag">SUBSCRIBERS</p>
+            </div>
+            <div class="bottom">
+              <p class="status red">
+                <span class="arrow red"
+                  ><i class="fa-solid fa-caret-left"></i></span
+                >144 Today
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Overview section for the dashboard  -->
+        <h2 class="overview">Overview - Today</h2>
+
+        <div class="section__bottom flex-cards-overview">
+          <!-- cards -->
+
+          <!-- 1 -->
+          <div class="card card2 flex-cards-overview">
+            <div class="info f-sb">
+              <div class="info__name">
+                <p>Page Views</p>
+              </div>
+              <div class="info__icon">
+                <i class="fa-brands fa-square-facebook facebook"></i>
+              </div>
+            </div>
+            <div class="num f-sb">
+              <div class="num__stat">
+                <p>87</p>
+              </div>
+              <div class="num__growth">
+                <p class="status green">
+                  <span class="arrow green"
+                    ><i class="fa-solid fa-caret-left"></i></span
+                  >3%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="card card2 flex-cards-overview">
+            <div class="info f-sb">
+              <div class="info__name">
+                <p>Likes</p>
+              </div>
+              <div class="info__icon">
+                <i class="fa-brands fa-square-facebook facebook"></i>
+              </div>
+            </div>
+            <div class="num f-sb">
+              <div class="num__stat">
+                <p>52</p>
+              </div>
+              <div class="num__growth">
+                <p class="status red">
+                  <span class="arrow red"
+                    ><i class="fa-solid fa-caret-left"></i
+                  ></span>
+                  2%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="card card2 flex-cards-overview">
+            <div class="info f-sb">
+              <div class="info__name">
+                <p>Likes</p>
+              </div>
+              <div class="info__icon">
+                <i class="fa-brands fa-instagram instagram"></i>
+              </div>
+            </div>
+            <div class="num f-sb">
+              <div class="num__stat">
+                <p>5462</p>
+              </div>
+              <div class="num__growth">
+                <p class="status green">
+                  <span class="arrow green"
+                    ><i class="fa-solid fa-caret-left"></i></span
+                  >2257%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="card card2 flex-cards-overview">
+            <div class="info f-sb">
+              <div class="info__name">
+                <p>Profile Views</p>
+              </div>
+              <div class="info__icon">
+                <i class="fa-brands fa-instagram instagram"></i>
+              </div>
+            </div>
+            <div class="num f-sb">
+              <div class="num__stat">
+                <p>52K</p>
+              </div>
+              <div class="num__growth">
+                <p class="status green">
+                  <span class="arrow green"
+                    ><i class="fa-solid fa-caret-left"></i></span
+                  >1375%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom half -->
+
+          <!-- 1 -->
+          <div class="card card2 flex-cards-overview">
+            <div class="info f-sb">
+              <div class="info__name">
+                <p>Retweets</p>
+              </div>
+              <div class="info__icon">
+                <i class="fa-brands fa-twitter twitter"></i>
+              </div>
+            </div>
+            <div class="num f-sb">
+              <div class="num__stat">
+                <p>117</p>
+              </div>
+              <div class="num__growth">
+                <p class="status green">
+                  <span class="arrow green"
+                    ><i class="fa-solid fa-caret-left"></i></span
+                  >303%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="card card2 flex-cards-overview">
+            <div class="info f-sb">
+              <div class="info__name">
+                <p>Likes</p>
+              </div>
+              <div class="info__icon">
+                <i class="fa-brands fa-twitter twitter"></i>
+              </div>
+            </div>
+            <div class="num f-sb">
+              <div class="num__stat">
+                <p>507</p>
+              </div>
+              <div class="num__growth">
+                <p class="status green">
+                  <span class="arrow green"
+                    ><i class="fa-solid fa-caret-left"></i></span
+                  >553%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="card card2 flex-cards-overview">
+            <div class="info f-sb">
+              <div class="info__name">
+                <p>Likes</p>
+              </div>
+              <div class="info__icon">
+                <i class="fa-brands fa-youtube youtube"></i>
+              </div>
+            </div>
+            <div class="num f-sb">
+              <div class="num__stat">
+                <p>107</p>
+              </div>
+              <div class="num__growth">
+                <p class="status red">
+                  <span class="arrow red"
+                    ><i class="fa-solid fa-caret-left"></i></span
+                  >19%
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="card card2 flex-cards-overview">
+            <div class="info f-sb">
+              <div class="info__name">
+                <p>Total Views</p>
+              </div>
+              <div class="info__icon">
+                <i class="fa-brands fa-youtube youtube"></i>
+              </div>
+            </div>
+            <div class="num f-sb">
+              <div class="num__stat">
+                <p>1407</p>
+              </div>
+              <div class="num__growth">
+                <p class="status red">
+                  <span class="arrow red"
+                    ><i class="fa-solid fa-caret-left"></i></span
+                  >12%
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="attribution normText">
+      Challenge by
+      <a
+        class="impoText"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Fem</a
+      >. made with &#128151; by
+
+      <a target="_blank" class="impoText" href="https://github.com/R4nn3r">
+        <i class="fa-brands fa-github-alt"></i>
+      </a>
+    </footer>
+    <script src="./app/js/main.js"></script>
+  </body>
+</html>
