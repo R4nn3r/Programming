@@ -1128,6 +1128,66 @@ HTML (Hypertext Markup Language)
     - Use media queries to add complexity
     - Take advantage of modern css
 
+# Accessibility 
+    - Ensure your site 
+    - Use high contrast colors 
+    - Provide Alt text for images 
+    - Use heading hierarchies 
+    - Add captions and transcripts to videos 
+    - Design forms carefully 
+
+
+# How to write semantically good html?
+
+    - Text content
+        - use proper heading and paragraph tags 
+    
+    - Using clear language 
+        - Don't use dashes 
+        - Expand abbreviations 
+        - Expand acronyms at least once or twice, then use the <abbr> tag to describe them. 
+   
+    - Page layout 
+            <header>
+                <h1>Header</h1>
+            </header>
+
+            <nav>
+                <!-- main navigation in here -->
+            </nav>
+
+            <!-- Here is our page's main content -->
+            <main>
+                <!-- It contains an article -->
+                <article>
+                    <h2>Article heading</h2>
+
+                    <!-- article content in here -->
+                </article>
+
+                <aside>
+                    <h2>Related</h2>
+
+                    <!-- aside content in here -->
+                </aside>
+            </main>
+
+            <!-- And here is our main footer that is used across all the pages of our website -->
+
+            <footer>
+                <!-- footer content in here -->
+            </footer>
+
+
+
+    Reasons 
+        - Easier to develop 
+        - Better on mobile 
+        - Good for SEO (Search Engine Optimization)
+
+
+
+
 
 "we suffer more often in imagination than in reality."
 -- Seneca 

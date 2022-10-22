@@ -1,0 +1,94 @@
+.main {
+}
+
+.section {
+  // Text
+  h1,
+  h2 {
+    line-height: 1;
+    margin-bottom: 0.25em;
+  }
+
+  &__summary {
+    // text
+    font-size: inherit;
+    font-weight: $fw-700;
+    color: var(--text-h);
+
+    // display
+
+    flex-wrap: wrap;
+
+    @include breakpoints-down(small) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+    }
+
+    &__left {
+    }
+    &__right {
+      @include breakpoints-down(small) {
+        border-top: 1px solid var(--text-h);
+        padding: 0.5em 0;
+        width: 100%;
+      }
+
+      //   display
+      gap: 1em;
+
+      //  theme-picker
+
+      .theme {
+        .themepicker {
+          opacity: 0;
+          display: none;
+          &:checked + .label .ball {
+            transform: translate(26px);
+          }
+        }
+        .label {
+          cursor: pointer;
+
+          background: linear-gradient(
+            45deg,
+            hsl(210, 78%, 56%),
+            hsl(146, 68%, 55%)
+          );
+          border-radius: 50px;
+
+          //   display
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+
+          padding: 3px;
+          gap: 0.5em;
+          i {
+            margin: 0 2px;
+            scale: 0.95;
+
+            &:last-of-type {
+              color: white;
+            }
+            &:first-of-type {
+              color: black;
+            }
+          }
+
+          .ball {
+            background-color: var(--bg);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+
+            // position
+            position: absolute;
+            transition: transform 0.2s linear;
+          }
+        }
+      }
+    }
+  }
+}

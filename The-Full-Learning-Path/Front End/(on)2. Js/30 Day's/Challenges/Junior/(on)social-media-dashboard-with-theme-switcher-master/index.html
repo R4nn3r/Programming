@@ -26,16 +26,46 @@
     </style>
 
     <!-- Link -->
+    <link rel="stylesheet" href="./app/style/style.css" />
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/5b12988027.js"
+      crossorigin="anonymous"
+    ></script>
+
     <script
       src="https://kit.fontawesome.com/5b12988027.js"
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
-    <!-- Social Media Dashboard
-  Total Followers: 23,004 -->
+  <body class="dark-theme">
+    <main class="main main-container">
+      <section class="section dash">
+        <h1>Social Media Dashboard</h1>
 
-    <!-- Dark Mode -->
+        <div class="section__summary row-sb">
+          <div class="section__summary__left">
+            <p>Total Followers: 23,004</p>
+          </div>
+          <div class="section__summary__right row-sb">
+            <p class="themeType">Dark Mode</p>
+            <!-- Theme selector -->
+            <div class="theme">
+              <input type="checkbox" id="checkbox" class="themepicker" />
+              <label for="checkbox" class="label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top section fo the dashboard -->
+        <div class="section-top"></div>
+      </section>
+    </main>
 
     <!-- @nathanf
   1987
@@ -104,5 +134,6 @@
         <i class="fa-brands fa-github-alt"></i>
       </a>
     </footer> -->
+    <script src="./app/js/main.js"></script>
   </body>
 </html>

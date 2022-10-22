@@ -65,5 +65,56 @@ svg {
 }
 
 // utilities
+
+.main-container {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 2em;
+}
+
+.dash {
+  margin-inline: auto;
+
+  @include breakpoints-up(large) {
+    max-width: 80%;
+  }
+}
+.flex-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  flex-wrap: wrap;
+
+  @include breakpoints-down(small) {
+    flex-direction: column;
+  }
+}
+
+.big-num {
+  color: inherit;
+  font-size: 3rem;
+  font-weight: $fw-700;
+}
+
+.card {
+  background-color: var(--card-bg);
+
+  &:hover,
+  &:focus {
+    background-color: var(--card-hf);
+  }
+}
+
+.row-sb {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// General styles
 body {
+  font-family: $ff-primary;
+  background-color: var(--bg);
+  color: var(--text);
 }
