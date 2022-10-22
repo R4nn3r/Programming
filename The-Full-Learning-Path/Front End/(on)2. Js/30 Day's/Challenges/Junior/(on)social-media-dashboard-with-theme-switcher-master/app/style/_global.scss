@@ -80,13 +80,18 @@ svg {
   }
 }
 .flex-cards {
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 2em;
+
+  @include breakpoints-down(small) {
+    flex-direction: column;
+  }
+}
+
+.flex-cards-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2em;
 
   @include breakpoints-down(small) {
@@ -151,6 +156,17 @@ svg {
   }
 }
 
+.card2 {
+  padding: 1em 1.5em;
+}
+
+.f-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 // Border Top
 .card.facebook-br {
   border-top: 3px solid $s-crl-fb;
@@ -184,27 +200,25 @@ svg {
   gap: 0.75em;
   font-size: 0.75rem;
   color: var(--text-h);
-
-  i.facebook {
-    color: $s-crl-fb;
-    scale: 1.65;
-  }
-  i.twitter {
-    color: $s-crl-tw;
-    scale: 1.65;
-  }
-  i.instagram {
-    background: linear-gradient(to right, #fcc469, #df4996);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    scale: 1.65;
-  }
-  i.youtube {
-    color: $s-crl-yt;
-    scale: 1.65;
-  }
 }
-
+i.facebook {
+  color: $s-crl-fb;
+  scale: 1.65;
+}
+i.twitter {
+  color: $s-crl-tw;
+  scale: 1.65;
+}
+i.instagram {
+  background: linear-gradient(to right, #fcc469, #df4996);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  scale: 1.65;
+}
+i.youtube {
+  color: $s-crl-yt;
+  scale: 1.65;
+}
 // General styles
 body {
   font-family: $ff-primary;
@@ -213,4 +227,8 @@ body {
 
   // Theme
   transition: background-color 0.3s ease-in-out;
+}
+
+.overview {
+  margin: 2em 0 1.5em 0;
 }

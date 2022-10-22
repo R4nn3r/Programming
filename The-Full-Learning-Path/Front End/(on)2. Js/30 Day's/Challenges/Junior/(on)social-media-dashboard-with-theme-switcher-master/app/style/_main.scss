@@ -6,6 +6,9 @@
   h1,
   h2 {
     line-height: 1;
+  }
+
+  .mainHeader {
     margin-bottom: 0.25em;
   }
 
@@ -94,5 +97,25 @@
 
   &__top {
     margin-top: 2.5em;
+  }
+
+  &__bottom {
+    .info {
+      &__name {
+        font-size: 0.85rem;
+        color: var(--text-h);
+      }
+      &__icon {
+        scale: 0.85;
+      }
+    }
+
+    .num {
+      &__stat {
+        font-size: 2rem;
+      }
+      &__growth {
+      }
+    }
   }
 }
