@@ -134,6 +134,12 @@ svg {
     letter-spacing: 3px;
   }
 
+  .status {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+
   .status.green {
     font-size: 0.75rem;
     color: $l-green;
@@ -144,7 +150,7 @@ svg {
   }
 
   // border
-  border-radius: 0.25em;
+  border-radius: 0.45em;
 
   // States styles
   transition: scale 0.3s ease-in-out;
@@ -176,9 +182,20 @@ svg {
 }
 
 .card.instagram-br {
-  border-top: 3px solid;
-  border-image: linear-gradient(to right, #fcc469, #df4996);
-  border-image-slice: 1;
+  position: relative;
+  border-radius: 0.45em;
+
+  &::after {
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    left: 1px;
+    right: 1px;
+    background: linear-gradient(to right, #fcc469, #df4996);
+    content: "";
+    z-index: -1;
+    border-radius: 0.45em;
+  }
 }
 
 .card.youtube-br {
@@ -230,4 +247,18 @@ body {
 
 .overview {
   margin: 2em 0 1.5em 0;
+}
+
+.arrow.green {
+  color: $l-green;
+  i {
+    rotate: 90deg;
+  }
+}
+
+.arrow.red {
+  color: $b-red;
+  i {
+    rotate: 270deg;
+  }
 }

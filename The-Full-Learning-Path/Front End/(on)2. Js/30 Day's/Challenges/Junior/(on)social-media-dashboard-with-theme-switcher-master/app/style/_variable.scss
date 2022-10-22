@@ -37,6 +37,17 @@ $s-crl-yt: hsl(348, 97%, 39%);
   .card {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.109);
   }
+
+  .card.instagram-br {
+    transition: background 0.8s ease-in-out;
+    &:hover,
+    &:focus {
+      .tag,
+      .insta {
+        color: var(--bg);
+      }
+    }
+  }
 }
 
 .light-theme {
