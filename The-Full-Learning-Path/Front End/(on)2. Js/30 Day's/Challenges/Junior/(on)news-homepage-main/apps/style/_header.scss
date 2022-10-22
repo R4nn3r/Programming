@@ -1,0 +1,41 @@
+.header {
+  //  Header Logo
+  &__logo {
+  }
+
+  // Header Navigation
+  &__nav {
+    &__links {
+      @include breakpoints-down(small) {
+        display: none;
+      }
+    }
+  }
+  &__ham {
+    display: inline-block;
+    cursor: pointer;
+
+    @include breakpoints-up(medium) {
+      display: none;
+    }
+
+    .line {
+      width: 35px;
+      height: 4px;
+      background-color: #333;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+  }
+}
+.change .line:nth-child(1) {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+.change .line:nth-child(2) {
+  opacity: 0;
+}
+
+.change .line:nth-child(3) {
+  transform: translate(0, -8px) rotate(45deg);
+}

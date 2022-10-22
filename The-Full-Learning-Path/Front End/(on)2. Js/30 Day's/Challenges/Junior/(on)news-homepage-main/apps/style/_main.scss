@@ -1,0 +1,137 @@
+.main {
+}
+
+.section {
+  // Text
+  h1,
+  h2 {
+    line-height: 1;
+  }
+
+  .mainHeader {
+    margin-bottom: 0.25em;
+  }
+
+  &__summary {
+    // text
+    font-size: inherit;
+    font-weight: $fw-700;
+    color: var(--text-h);
+
+    // display
+
+    flex-wrap: wrap;
+
+    @include breakpoints-down(small) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+    }
+
+    &__left {
+    }
+    &__right {
+      @include breakpoints-down(small) {
+        border-top: 1px solid var(--text-h);
+        padding: 0.75em 0;
+        width: 100%;
+      }
+
+      //   display
+      gap: 1em;
+
+      //  theme-picker
+
+      .theme {
+        display: flex;
+        gap: 1em;
+        .themepicker {
+          opacity: 0;
+          display: none;
+          &:checked + .label .ball {
+            transform: translate(26px);
+          }
+        }
+        .label {
+          cursor: pointer;
+
+          background: linear-gradient(
+            45deg,
+            hsl(210, 78%, 56%),
+            hsl(146, 68%, 55%)
+          );
+          border-radius: 50px;
+
+          //   display
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+
+          padding: 3px;
+          gap: 0.5em;
+          i {
+            margin: 0 2px;
+            scale: 0.95;
+
+            &:last-of-type {
+              color: white;
+            }
+            &:first-of-type {
+              color: black;
+            }
+          }
+
+          .ball {
+            background-color: var(--bg);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+
+            // position
+            position: absolute;
+            transition: transform 0.2s linear;
+          }
+        }
+      }
+    }
+  }
+
+  &__top {
+    margin-top: 2.5em;
+  }
+
+  &__bottom {
+    .info {
+      &__name {
+        font-size: 0.85rem;
+        color: var(--text-h);
+      }
+      &__icon {
+        scale: 0.85;
+      }
+    }
+
+    .num {
+      &__stat {
+        font-size: 2rem;
+      }
+      &__growth {
+      }
+    }
+  }
+}
+
+// Random Theme
+.random {
+  cursor: pointer;
+  i {
+    color: var(--text);
+    transition: rotate 0.3s ease-in, scale 0.3s ease-in-out;
+    &:focus,
+    &:hover {
+      rotate: 360deg;
+      scale: 1.25;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+// Width
+$max-wid: 1440px;
+$max-wid-m: 375px;
+
+// Common  variables
+$ff-primary: "Inter", sans-serif;
+
+$fw-400: 400;
+$fw-700: 700;
+$fw-800: 800;
+
+$fs-para: 15px;
+
+:root {
+  // Primary colors
+  --s-ora: hsl(35, 77%, 62%);
+  --s-red: hsl(5, 85%, 63%);
+
+  // Neutral colors
+  --neu-o-w: hsl(36, 100%, 99%);
+  --neu-g-blue: hsl(233, 8%, 79%);
+  --neu-dg-blue: hsl(236, 13%, 42%);
+  --neu-vd-blue: hsl(240, 100%, 5%);
+}
