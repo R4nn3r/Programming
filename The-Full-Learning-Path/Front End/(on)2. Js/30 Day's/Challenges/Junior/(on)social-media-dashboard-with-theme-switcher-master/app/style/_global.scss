@@ -80,10 +80,14 @@ svg {
   }
 }
 .flex-cards {
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 2em;
-  flex-wrap: wrap;
 
   @include breakpoints-down(small) {
     flex-direction: column;
@@ -97,12 +101,73 @@ svg {
 }
 
 .card {
+  cursor: pointer;
+  // size
+  max-width: 350px;
+
+  // display
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 2em 3em;
+  align-items: center;
+  text-align: center;
+
+  // box style
   background-color: var(--card-bg);
 
+  // Text
+  font-weight: $fw-700;
+  line-height: 1.2;
+  .num {
+    font-size: 3rem;
+  }
+
+  .tag {
+    color: var(--text-h);
+    font-weight: $fw-400;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+  }
+
+  .status.green {
+    font-size: 0.75rem;
+    color: $l-green;
+  }
+  .status.red {
+    font-size: 0.75rem;
+    color: $b-red;
+  }
+
+  // border
+  border-radius: 0.25em;
+
+  // States styles
+  transition: scale 0.3s ease-in-out;
   &:hover,
   &:focus {
     background-color: var(--card-hf);
+    scale: 1.025;
   }
+}
+
+// Border Top
+.card.facebook-br {
+  border-top: 3px solid $s-crl-fb;
+}
+
+.card.twitter-br {
+  border-top: 3px solid $s-crl-tw;
+}
+
+.card.instagram-br {
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #fcc469, #df4996);
+  border-image-slice: 1;
+}
+
+.card.youtube-br {
+  border-top: 3px solid $s-crl-yt;
 }
 
 .row-sb {
@@ -112,9 +177,40 @@ svg {
   justify-content: space-between;
 }
 
+.social-tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75em;
+  font-size: 0.75rem;
+  color: var(--text-h);
+
+  i.facebook {
+    color: $s-crl-fb;
+    scale: 1.65;
+  }
+  i.twitter {
+    color: $s-crl-tw;
+    scale: 1.65;
+  }
+  i.instagram {
+    background: linear-gradient(to right, #fcc469, #df4996);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    scale: 1.65;
+  }
+  i.youtube {
+    color: $s-crl-yt;
+    scale: 1.65;
+  }
+}
+
 // General styles
 body {
   font-family: $ff-primary;
   background-color: var(--bg);
   color: var(--text);
+
+  // Theme
+  transition: background-color 0.3s ease-in-out;
 }

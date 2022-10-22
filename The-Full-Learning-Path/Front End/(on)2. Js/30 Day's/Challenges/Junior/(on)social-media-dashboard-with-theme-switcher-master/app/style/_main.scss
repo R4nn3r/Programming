@@ -30,7 +30,7 @@
     &__right {
       @include breakpoints-down(small) {
         border-top: 1px solid var(--text-h);
-        padding: 0.5em 0;
+        padding: 0.75em 0;
         width: 100%;
       }
 
@@ -90,5 +90,9 @@
         }
       }
     }
+  }
+
+  &__top {
+    margin-top: 2.5em;
   }
 }

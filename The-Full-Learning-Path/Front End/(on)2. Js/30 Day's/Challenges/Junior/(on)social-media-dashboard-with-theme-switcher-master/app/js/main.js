@@ -8,9 +8,9 @@ const checkBox = document.querySelector("#checkbox");
 checkBox.addEventListener("change", () => {
   if (checkBox.checked) {
     body.className = "light-theme";
-    type.innerHTML = "Light Theme";
+    type.innerHTML = "Light Mode";
   } else {
     body.className = "dark-theme";
-    type.innerHTML = "Dark Theme";
+    type.innerHTML = "Dark Mode";
   }
 });
