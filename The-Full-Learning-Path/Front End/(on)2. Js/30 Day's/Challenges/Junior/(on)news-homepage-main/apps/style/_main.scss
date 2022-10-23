@@ -161,6 +161,12 @@
         h3 {
           font-size: 1.45rem;
           margin-bottom: 0.25em;
+          transition: color 0.3s ease-in-out;
+          cursor: pointer;
+          &:hover,
+          &:focus {
+            color: var(--s-ora);
+          }
         }
 
         p {
@@ -194,7 +200,7 @@
           transition: all 0.3s ease-in-out;
           &:hover,
           &:focus {
-            background-color: var(--neu-g-blue);
+            background-color: var(--neu-g-blue2);
             border-radius: 0 0.5em 0.5em 0;
             box-shadow: 10px 10px 14px hsla(0, 0%, 17%, 0.106);
             h1 {
@@ -220,6 +226,12 @@
             font-size: 1.25rem;
             font-weight: $fw-800;
             margin-bottom: 0.2em;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+            &:hover,
+            &:focus {
+              color: var(--s-ora);
+            }
           }
 
           p {

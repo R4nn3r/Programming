@@ -94,16 +94,29 @@ svg {
 
 // Cta
 .cta {
+  // size
+  padding: 0.85em 0.85em;
+  width: 50%;
+  border: none;
+
+  // text
   font-family: inherit;
   text-transform: uppercase;
-  border: none;
-  width: 50%;
   font-size: 1rem;
-  padding: 0.85em 0.85em;
   letter-spacing: 3px;
   color: var(--neu-o-w);
   font-weight: $fw-700;
+
+  // background
   background-color: var(--s-red);
+
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--neu-vd-blue);
+  }
 }
 
 //  Display Types
