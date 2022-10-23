@@ -71,15 +71,16 @@ svg {
 }
 
 .box {
-  padding: 4em 1em;
+  padding: 2.75em 1em 1.75em 1em;
   max-width: 1150px;
-  @include breakpoints-down(large) {
-    padding: 4em 3em;
-  }
 
   @include breakpoints-down(small) {
     padding: 1em 1.5em;
   }
+}
+
+.main.box {
+  padding: 0 1em;
 }
 // Typography
 .xbold {

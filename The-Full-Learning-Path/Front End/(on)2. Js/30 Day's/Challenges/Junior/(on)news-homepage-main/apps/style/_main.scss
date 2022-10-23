@@ -121,6 +121,46 @@
 
 .main {
   &__display-grid {
+    @include breakpoints-up(small) {
+      // Display
+      display: grid;
+      grid-template-columns: repeat(auto-fit);
+      grid-template-areas: "one one three" "two two three" "four four four";
+      gap: 2em;
+      .grid {
+        &:nth-child(1) {
+          grid-area: one;
+          margin: 0 !important;
+        }
+        &:nth-child(2) {
+          grid-area: two;
+          display: flex;
+          gap: 1em;
+          flex: 1;
+
+          div {
+            width: 100%;
+
+            h1 {
+              font-size: 3.5rem;
+            }
+          }
+        }
+        &:nth-child(3) {
+          max-width: 325px;
+          grid-area: three;
+          margin: 0 !important;
+        }
+        &:nth-child(4) {
+          margin: 0 !important;
+
+          grid-area: four;
+          display: flex;
+          gap: 0 !important;
+        }
+      }
+    }
+
     .grid {
       &:nth-child(1) {
         margin: 1em 0;
@@ -155,11 +195,11 @@
 
         h2 {
           color: var(--s-ora);
-          font-size: 1.85rem;
+          font-size: 1.75rem;
         }
 
         h3 {
-          font-size: 1.45rem;
+          font-size: 1.15rem;
           margin-bottom: 0.25em;
           transition: color 0.3s ease-in-out;
           cursor: pointer;
