@@ -182,6 +182,84 @@
           margin: 1em 0;
         }
       }
+
+      &:nth-child(4) {
+        margin-top: 3em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2em;
+
+        .card {
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover,
+          &:focus {
+            background-color: var(--neu-g-blue);
+            border-radius: 0 0.5em 0.5em 0;
+            box-shadow: 10px 10px 14px hsla(0, 0%, 17%, 0.106);
+            h1 {
+              color: var(--neu-dg-blue);
+            }
+          }
+
+          // Display
+          display: flex;
+          flex-direction: row;
+          gap: 2em;
+
+          h1 {
+            line-height: 1.1;
+            font-size: 2rem;
+            color: var(--neu-g-blue);
+
+            font-weight: $fw-800;
+            margin-bottom: 0.2em;
+          }
+
+          h2 {
+            font-size: 1.25rem;
+            font-weight: $fw-800;
+            margin-bottom: 0.2em;
+          }
+
+          p {
+            font-size: 1rem;
+            font-weight: $fw-400;
+            list-style: 1.2;
+            color: var(--neu-dg-blue);
+          }
+
+          //  cards
+          img {
+            min-width: 120px;
+            height: 100%;
+          }
+          // 1
+          &:first-child {
+            // outline: 2px solid red;
+            div {
+              // outline: 2px dashed lime;
+            }
+          }
+          // 2
+          &:nth-child(2) {
+            // outline: 2px solid red;
+
+            div {
+              // outline: 2px dashed lime;
+            }
+          }
+
+          //3
+          &:last-child {
+            // outline: 2px solid red;
+
+            div {
+              // outline: 2px dashed lime;
+            }
+          }
+        }
+      }
     }
   }
 }
