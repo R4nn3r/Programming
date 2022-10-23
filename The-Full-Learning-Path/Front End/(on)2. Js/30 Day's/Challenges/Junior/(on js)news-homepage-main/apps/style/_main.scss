@@ -124,8 +124,7 @@
     @include breakpoints-up(small) {
       // Display
       display: grid;
-      grid-template-columns: repeat(auto-fit);
-      grid-template-areas: "one one three" "two two three" "four four four";
+      grid-template-areas: "one one three" "two two three" "four five six";
       gap: 2em;
       .grid {
         &:nth-child(1) {
@@ -133,6 +132,7 @@
           margin: 0 !important;
         }
         &:nth-child(2) {
+          margin-bottom: 2em;
           grid-area: two;
           display: flex;
           gap: 1em;
@@ -143,20 +143,28 @@
 
             h1 {
               font-size: 3.5rem;
+              margin: 0 !important;
             }
           }
         }
         &:nth-child(3) {
-          max-width: 325px;
+          // max-width: 325px;
           grid-area: three;
-          margin: 0 !important;
+          margin-bottom: 2em !important;
         }
-        &:nth-child(4) {
-          margin: 0 !important;
 
-          grid-area: four;
-          display: flex;
-          gap: 0 !important;
+        // 1
+        .cardone {
+          // grid-area: four;
+        }
+        // 2
+        .cardtwo {
+          // grid-area: five;
+        }
+
+        //3
+        .cardthree {
+          // grid-area: six;
         }
       }
     }
@@ -166,6 +174,12 @@
         margin: 1em 0;
       }
       &:nth-child(2) {
+        // display
+        flex-direction: column;
+        @include breakpoints-up(large) {
+          flex-direction: row;
+        }
+
         h1 {
           line-height: 1.1;
           font-size: 3rem;
@@ -174,7 +188,7 @@
         }
 
         p {
-          font-size: 1.15rem;
+          font-size: 1rem;
           line-height: 1.5;
           font-weight: $fw-400;
           margin-bottom: 1em;
@@ -228,90 +242,69 @@
           margin: 1em 0;
         }
       }
-
-      &:nth-child(4) {
-        margin-top: 3em;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2em;
-
-        .card {
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-          &:hover,
-          &:focus {
-            background-color: var(--neu-g-blue2);
-            border-radius: 0 0.5em 0.5em 0;
-            box-shadow: 10px 10px 14px hsla(0, 0%, 17%, 0.106);
-            h1 {
-              color: var(--neu-dg-blue);
-            }
-          }
-
-          // Display
-          display: flex;
-          flex-direction: row;
-          gap: 2em;
-
-          h1 {
-            line-height: 1.1;
-            font-size: 2rem;
-            color: var(--neu-g-blue);
-
-            font-weight: $fw-800;
-            margin-bottom: 0.2em;
-          }
-
-          h2 {
-            font-size: 1.25rem;
-            font-weight: $fw-800;
-            margin-bottom: 0.2em;
-            transition: color 0.3s ease-in-out;
-            cursor: pointer;
-            &:hover,
-            &:focus {
-              color: var(--s-ora);
-            }
-          }
-
-          p {
-            font-size: 1rem;
-            font-weight: $fw-400;
-            list-style: 1.2;
-            color: var(--neu-dg-blue);
-          }
-
-          //  cards
-          img {
-            min-width: 120px;
-            height: 100%;
-          }
-          // 1
-          &:first-child {
-            // outline: 2px solid red;
-            div {
-              // outline: 2px dashed lime;
-            }
-          }
-          // 2
-          &:nth-child(2) {
-            // outline: 2px solid red;
-
-            div {
-              // outline: 2px dashed lime;
-            }
-          }
-
-          //3
-          &:last-child {
-            // outline: 2px solid red;
-
-            div {
-              // outline: 2px dashed lime;
-            }
-          }
-        }
-      }
     }
+  }
+}
+.card {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    h1 {
+      color: var(--neu-dg-blue);
+    }
+  }
+
+  // Display
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  @media (min-width: 39em) and (max-width: 63em) {
+    flex-direction: column;
+  }
+
+  @include breakpoints-down(small) {
+    margin: 3em 0;
+
+    &.cardone {
+      margin-top: 5em;
+    }
+  }
+
+  h1 {
+    line-height: 1.1;
+    font-size: 2rem;
+    color: var(--neu-g-blue);
+
+    font-weight: $fw-800;
+    margin-bottom: 0.2em;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: $fw-800;
+    margin-bottom: 0.5em;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: var(--s-ora);
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: $fw-400;
+    list-style: 1.2;
+    color: var(--neu-dg-blue);
+  }
+
+  //  cards
+  img {
+    min-width: 120px;
+    max-width: 100px;
+    width: 100%;
+    height: 100%;
   }
 }

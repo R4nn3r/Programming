@@ -1,6 +1,8 @@
 .header {
   //  Header Logo
-  margin-top: 1em;
+  @include breakpoints-down(small) {
+    margin-top: 1em;
+  }
   &__logo {
   }
 
