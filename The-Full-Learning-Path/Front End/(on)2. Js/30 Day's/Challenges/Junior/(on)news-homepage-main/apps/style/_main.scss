@@ -1,6 +1,3 @@
-.main {
-}
-
 .section {
   // Text
   h1,
@@ -122,16 +119,69 @@
   }
 }
 
-// Random Theme
-.random {
-  cursor: pointer;
-  i {
-    color: var(--text);
-    transition: rotate 0.3s ease-in, scale 0.3s ease-in-out;
-    &:focus,
-    &:hover {
-      rotate: 360deg;
-      scale: 1.25;
+.main {
+  &__display-grid {
+    .grid {
+      &:nth-child(1) {
+        margin: 1em 0;
+      }
+      &:nth-child(2) {
+        h1 {
+          line-height: 1.1;
+          font-size: 3rem;
+          font-weight: $fw-800;
+          margin-bottom: 0.4em;
+        }
+
+        p {
+          font-size: 1.15rem;
+          line-height: 1.5;
+          font-weight: $fw-400;
+          margin-bottom: 1em;
+          color: var(--neu-dg-blue);
+        }
+        button {
+          margin-bottom: 2em;
+        }
+      }
+      &:nth-child(3) {
+        // background
+        background-color: var(--neu-vd-blue);
+        padding: 0.5em 1.5em;
+        margin-bottom: 1em;
+
+        // text
+        color: var(--neu-o-w);
+
+        h2 {
+          color: var(--s-ora);
+          font-size: 1.85rem;
+        }
+
+        h3 {
+          font-size: 1.45rem;
+          margin-bottom: 0.25em;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          font-weight: $fw-400;
+          margin-bottom: 1em;
+          color: var(--neu-g-blue);
+        }
+
+        hr {
+          background-color: var(--neu-o-w);
+
+          margin: 2em 0;
+          height: 1px;
+          border: none;
+        }
+        div {
+          margin: 1em 0;
+        }
+      }
     }
   }
 }

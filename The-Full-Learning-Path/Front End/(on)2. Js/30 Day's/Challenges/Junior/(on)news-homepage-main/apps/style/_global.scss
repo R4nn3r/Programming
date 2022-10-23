@@ -78,7 +78,7 @@ svg {
   }
 
   @include breakpoints-down(small) {
-    padding: 3em 1.5em;
+    padding: 1em 1.5em;
   }
 }
 // Typography
@@ -94,8 +94,15 @@ svg {
 
 // Cta
 .cta {
+  font-family: inherit;
+  text-transform: uppercase;
   border: none;
-  padding: 1em 2em;
+  width: 50%;
+  font-size: 1rem;
+  padding: 0.85em 0.85em;
+  letter-spacing: 3px;
+  color: var(--neu-o-w);
+  font-weight: $fw-700;
   background-color: var(--s-red);
 }
 
