@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+$ff-primary: "Epilogue", sans-serif;
+
+$fw-500: 500;
+$fw-700: 700;
+
+$fs-para: 18px;
+
+// Colors
+.light-theme {
+  // neutral
+  --neu-bg: #fafafa;
+  --neu-light: #696969;
+  --neu-main: #141414;
+}
+.dark-theme {
+  // neutral
+  --neu-bg: #141414;
+  --neu-light: #fafafa;
+  --neu-main: #fafafa;
+}
+// Other Themes
+
+.blue-theme {
+  // neutral
+  --neu-bg: #eaf6ff;
+  --neu-light: #232528;
+  --neu-main: #2a2a72;
+}
+.yellow-theme {
+  // neutral
+  --neu-bg: #0f1d2d;
+  --neu-light: #f9ae11;
+  --neu-main: #fdcd09;
+}
+.purple-theme {
+  // neutral
+  --neu-bg: #f8f7f7;
+  --neu-light: #30374e;
+  --neu-main: #855492;
+}

@@ -1,0 +1,258 @@
+// Reset
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  //   font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+li,
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// utilities
+
+// sizing
+.navBox {
+  padding: 1.5em 2em;
+}
+
+.container {
+  max-width: 1440px;
+  max-height: 100vh;
+  margin-inline: auto;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+// Display
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  &-center {
+    align-items: center;
+    justify-self: center;
+  }
+  &-ac-c {
+    align-items: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-col {
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5em !important;
+    padding: 0.25em 2em;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+// Links
+a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: $fw-500;
+
+  // color
+  color: var(--neu-light);
+
+  // interaction
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  // dropDown icons alignment
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  &:hover,
+  &:active {
+    background-color: var(--neu-bg);
+    color: var(--neu-main);
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid var(--neu-main);
+    background-color: var(--neu-bg);
+    color: var(--neu-main);
+  }
+}
+
+// button
+button {
+  // size
+  border: none;
+  padding: 0.75em;
+  border-radius: 0.8em;
+
+  // text and color
+  font-size: 0.85rem;
+  color: var(--neu-main);
+  font-family: inherit;
+
+  // interaction
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta1,
+.cta2 {
+  background-color: var(--neu-bg);
+  width: 100px;
+}
+
+.cta1 {
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--neu-main);
+  }
+}
+.cta2 {
+  outline: 1px solid var(--neu-main);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--neu-bg);
+    background-color: var(--neu-main);
+  }
+}
+.cta3 {
+  outline: 1px solid var(--neu-main);
+  background-color: var(--neu-main);
+  color: var(--neu-bg);
+
+  font-weight: $fw-700;
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--neu-main);
+
+    background-color: var(--neu-bg);
+  }
+}
+
+// Hamburger Menu
+.hamburger {
+  // position
+  position: absolute;
+  z-index: 2;
+  left: initial;
+  right: 25px;
+  // display
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+
+  cursor: pointer;
+  .line {
+    width: 25px;
+    height: 4px;
+    background-color: var(--neu-main);
+    transition: 0.4s;
+  }
+  .line:first-child {
+    width: 15px;
+  }
+  .line:nth-child(2) {
+    width: 20px;
+  }
+
+  &.change {
+    .line:first-child {
+      width: 25px;
+      transform: translate(0, 9px) rotate(-45deg);
+    }
+    .line:nth-child(2) {
+      opacity: 0;
+    }
+    .line:last-child {
+      transform: translate(0, -8px) rotate(45deg);
+    }
+  }
+}
+
+//  Visibility
+.hidden-mobile {
+  @include breakpoints-down(medium) {
+    display: none;
+  }
+}
+.hidden-desktop {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
+
+// General styles
+body {
+  // Typography
+  font-family: $ff-primary;
+  font-size: $fs-para;
+  color: var(--neu-main);
+  background-color: var(--neu-bg);
+}

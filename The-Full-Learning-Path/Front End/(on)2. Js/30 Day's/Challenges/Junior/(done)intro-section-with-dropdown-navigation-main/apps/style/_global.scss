@@ -129,14 +129,14 @@ a {
   gap: 0.5em;
   &:hover,
   &:active {
-    background-color: #fff;
+    background-color: var(--neu-bg);
     color: var(--neu-main);
   }
 
   &:focus {
     outline: none;
-    border-bottom: 1px solid black;
-    background-color: #fff;
+    border-bottom: 1px solid var(--neu-main);
+    background-color: var(--neu-bg);
     color: var(--neu-main);
   }
 }
@@ -150,7 +150,7 @@ button {
 
   // text and color
   font-size: 0.85rem;
-  color: var(--neu-light);
+  color: var(--neu-main);
   font-family: inherit;
 
   // interaction
@@ -177,20 +177,22 @@ button {
   &:hover,
   &:focus,
   &:active {
-    background-color: white;
+    color: var(--neu-bg);
+    background-color: var(--neu-main);
   }
 }
 .cta3 {
   outline: 1px solid var(--neu-main);
   background-color: var(--neu-main);
-  color: white;
+  color: var(--neu-bg);
+
   font-weight: $fw-700;
   &:hover,
   &:focus,
   &:active {
     color: var(--neu-main);
 
-    background-color: white;
+    background-color: var(--neu-bg);
   }
 }
 
@@ -210,7 +212,7 @@ button {
   .line {
     width: 25px;
     height: 4px;
-    background-color: black;
+    background-color: var(--neu-main);
     transition: 0.4s;
   }
   .line:first-child {

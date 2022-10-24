@@ -1,0 +1,16 @@
+footer {
+  font-family: inherit;
+  font-weight: $fw-700;
+  padding: 5em 0;
+  a {
+    display: inline-block;
+  }
+  i {
+    cursor: pointer;
+    scale: 1.45;
+    margin-left: 0.5em;
+    &:hover {
+      scale: 1.75;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+.nav {
+  &__left {
+    .logo {
+      margin-right: 1em;
+    }
+  }
+}
+
+// Drop down navigation
+
+// closed Tree
+.linkTree {
+  position: relative;
+
+  .dropDown {
+    // hide
+    display: none;
+    // box
+    position: absolute;
+    border-radius: 0.5em;
+    background-color: var(--neu-bg);
+    box-shadow: 5px 5px 15px #00000021;
+    padding: 1em;
+
+    @include breakpoints-up(large) {
+      width: 140px;
+    }
+    // position
+    left: initial;
+    right: 0;
+    top: 40px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      margin-bottom: 0.35em;
+
+      img {
+        width: 12px;
+        // height: 15px;
+      }
+    }
+  }
+  .down-mob {
+    // hide
+    display: none;
+    // box
+    position: static;
+    background-color: var(--neu-bg);
+
+    padding: 1em;
+
+    box-shadow: 0 0 0 #ffffff21;
+  }
+}
+
+.linkTree_ {
+  position: relative;
+
+  .dropDown_ {
+    // hide
+    display: none;
+    // box
+    position: absolute;
+    border-radius: 0.5em;
+    background-color: var(--neu-bg);
+
+    box-shadow: 5px 5px 15px #00000021;
+    padding: 1em;
+
+    // position
+
+    top: 40px;
+    width: 120px;
+
+    li {
+      margin-bottom: 0.35em;
+    }
+  }
+  .down-mob_ {
+    // hide
+    display: none;
+    // box
+    position: static;
+    background-color: var(--neu-bg);
+
+    padding: 1em;
+
+    box-shadow: 0 0 0 #ffffff21;
+  }
+}
+// open Tree
+.treeDown {
+  display: block !important;
+}
+.arrow.up {
+  background-image: url(../../images/icon-arrow-up.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+}
+.arrow {
+  background-image: url(../../images/icon-arrow-down.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+}
+
+// Mobile Menu
+.nav__right {
+  &__mobile {
+    display: none;
+    @include breakpoints-down(medium) {
+      position: absolute;
+      background-color: var(--neu-bg);
+
+      width: 60%;
+      height: 100vh;
+      z-index: 1;
+
+      // background
+      box-shadow: -250px 0 250px rgb(0 0 0 / 16%);
+
+      left: initial;
+      right: 0;
+      top: 0;
+    }
+
+    &.open {
+      display: block;
+    }
+
+    .nav-list {
+      margin-top: 5em;
+
+      li {
+        margin-bottom: 0.5em;
+
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

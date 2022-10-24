@@ -18,7 +18,7 @@
     // box
     position: absolute;
     border-radius: 0.5em;
-    background-color: white;
+    background-color: var(--neu-bg);
     box-shadow: 5px 5px 15px #00000021;
     padding: 1em;
 
@@ -47,7 +47,8 @@
     display: none;
     // box
     position: static;
-    background-color: white;
+    background-color: var(--neu-bg);
+
     padding: 1em;
 
     box-shadow: 0 0 0 #ffffff21;
@@ -63,7 +64,8 @@
     // box
     position: absolute;
     border-radius: 0.5em;
-    background-color: white;
+    background-color: var(--neu-bg);
+
     box-shadow: 5px 5px 15px #00000021;
     padding: 1em;
 
@@ -81,7 +83,8 @@
     display: none;
     // box
     position: static;
-    background-color: white;
+    background-color: var(--neu-bg);
+
     padding: 1em;
 
     box-shadow: 0 0 0 #ffffff21;
@@ -114,7 +117,8 @@
     display: none;
     @include breakpoints-down(medium) {
       position: absolute;
-      background-color: white;
+      background-color: var(--neu-bg);
+
       width: 60%;
       height: 100vh;
       z-index: 1;
