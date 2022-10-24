@@ -22,7 +22,7 @@ Users should be able to:
 
 ### What I learned
 
-Basic Html/Css its only my first 2 week :)
+Basic Html/Css/js its only my first 2 week :)
 
 ### Useful resources
 
