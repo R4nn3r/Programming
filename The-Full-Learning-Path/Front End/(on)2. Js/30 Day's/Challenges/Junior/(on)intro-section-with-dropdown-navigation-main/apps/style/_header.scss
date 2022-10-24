@@ -21,8 +21,10 @@
     background-color: white;
     box-shadow: 5px 5px 15px #00000021;
     padding: 1em;
-    width: 140px;
 
+    @include breakpoints-up(large) {
+      width: 140px;
+    }
     // position
     left: initial;
     right: 0;
@@ -134,6 +136,10 @@
 
       li {
         margin-bottom: 0.5em;
+
+        a {
+          font-size: 1rem;
+        }
       }
     }
   }

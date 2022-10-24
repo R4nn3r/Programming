@@ -146,7 +146,6 @@ button {
   // size
   border: none;
   padding: 0.75em;
-  width: 100px;
   border-radius: 0.8em;
 
   // text and color
@@ -162,6 +161,7 @@ button {
 .cta1,
 .cta2 {
   background-color: var(--neu-bg);
+  width: 100px;
 }
 
 .cta1 {
