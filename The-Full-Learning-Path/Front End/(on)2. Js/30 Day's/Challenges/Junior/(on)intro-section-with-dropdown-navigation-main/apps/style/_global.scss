@@ -68,7 +68,7 @@ svg {
 
 // sizing
 .navBox {
-  padding: 2em;
+  padding: 1.5em 2em;
 }
 
 .container {
@@ -77,6 +77,9 @@ svg {
   margin-inline: auto;
 }
 
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
 // Display
 .flex {
   display: flex;
@@ -175,6 +178,12 @@ button {
 
 // Hamburger Menu
 .hamburger {
+  // position
+  position: absolute;
+  z-index: 2;
+  left: initial;
+  right: 25px;
+  // display
   display: flex;
   flex-direction: column;
   gap: 0.25em;
@@ -196,8 +205,7 @@ button {
   &.change {
     .line:first-child {
       width: 25px;
-
-      transform: translate(0, 8px) rotate(-45deg);
+      transform: translate(0, 9px) rotate(-45deg);
     }
     .line:nth-child(2) {
       opacity: 0;

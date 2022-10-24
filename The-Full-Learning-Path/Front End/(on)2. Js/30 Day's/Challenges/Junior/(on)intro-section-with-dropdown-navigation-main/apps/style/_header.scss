@@ -85,3 +85,28 @@
   width: 10px;
   height: 10px;
 }
+
+// Mobile Menu
+.nav__right {
+  &__mobile {
+    display: none;
+    @include breakpoints-down(small) {
+      position: absolute;
+      background-color: white;
+      width: 60%;
+      height: 100vh;
+      z-index: 1;
+
+      // background
+      box-shadow: -250px 0 200px rgb(0 0 0 / 56%);
+
+      left: initial;
+      right: 0;
+      top: 0;
+    }
+
+    &.open {
+      display: block;
+    }
+  }
+}
