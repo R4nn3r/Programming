@@ -16,10 +16,10 @@
 
     <!-- Link -->
     <link rel="stylesheet" href="./apps/style/style.css" />
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/5b12988027.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -33,11 +33,41 @@
     </style>
   </head>
   <body class="light-theme">
+    <nav class="nav flex flex-jc-sb navBox container">
+      <div class="nav__left flex flex-ac-c">
+        <div class="logo flex flex-center">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+
+        <div class="nav-list hidden-mobile">
+          <ul class="flex flex-ac-c">
+            <li><a href="#" class="link">Features</a></li>
+            <li><a href="#" class="link">Company</a></li>
+            <li><a href="#" class="link">Careers</a></li>
+            <li><a href="#" class="link">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav__right">
+        <div class="buttons hidden-mobile">
+          <button class="cta1">Login</button>
+          <button class="cta2">Register</button>
+        </div>
+
+        <div class="hamburger hidden-desktop" onclick="myFunction(this)">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </nav>
+
     <!-- Features Company Careers About Login Register Make remote work Get your team
     in sync, no matter your location. Streamline processes, create team rituals,
     and watch productivity soar. Learn more -->
 
-    <footer class="attribution normText">
+    <!-- <footer class="attribution normText">
       Challenge by
       <a
         class="impoText"
@@ -49,6 +79,7 @@
       <a target="_blank" class="impoText" href="https://github.com/R4nn3r">
         <i class="fa-brands fa-github-alt"></i>
       </a>
-    </footer>
+    </footer> -->
+    <script src="./apps/js/main.js"></script>
   </body>
 </html>

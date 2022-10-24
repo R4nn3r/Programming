@@ -66,6 +66,160 @@ svg {
 
 // utilities
 
+// sizing
+.navBox {
+  padding: 2em;
+}
+
+.container {
+  max-width: 1440px;
+  max-height: 100vh;
+  margin-inline: auto;
+}
+
+// Display
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  &-center {
+    align-items: center;
+    justify-self: center;
+  }
+  &-ac-c {
+    align-items: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+}
+
+// Links
+a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: $fw-500;
+
+  // color
+  color: var(--neu-light);
+
+  // interaction
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover,
+  &:active {
+    background-color: #fff;
+    color: var(--neu-main);
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid black;
+    background-color: #fff;
+    color: var(--neu-main);
+  }
+}
+
+// button
+button {
+  border: none;
+  padding: 0.75em;
+  width: 100px;
+  border-radius: 0.8em;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta1,
+.cta2 {
+  background-color: var(--neu-bg);
+}
+
+.cta1 {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 1px solid var(--neu-main);
+  }
+}
+.cta2 {
+  outline: 1px solid var(--neu-main);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: white;
+  }
+}
+.cta3 {
+  outline: 1px solid var(--neu-main);
+  background-color: var(--neu-main);
+  color: white;
+  font-weight: $fw-700;
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--neu-main);
+
+    background-color: white;
+  }
+}
+
+// Hamburger Menu
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+
+  cursor: pointer;
+  .line {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    transition: 0.4s;
+  }
+  .line:first-child {
+    width: 15px;
+  }
+  .line:nth-child(2) {
+    width: 20px;
+  }
+
+  &.change {
+    .line:first-child {
+      width: 25px;
+
+      transform: translate(0, 8px) rotate(-45deg);
+    }
+    .line:nth-child(2) {
+      opacity: 0;
+    }
+    .line:last-child {
+      transform: translate(0, -8px) rotate(45deg);
+    }
+  }
+}
+
+//  Visibility
+.hidden-mobile {
+  @include breakpoints-down(medium) {
+    display: none;
+  }
+}
+.hidden-desktop {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
+
 // General styles
 body {
+  // Typography
+  font-family: $ff-primary;
+  font-size: $fs-para;
+  color: var(--neu-main);
+  background-color: var(--neu-bg);
 }
