@@ -108,6 +108,11 @@ a {
   // interaction
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+
+  // dropDown icons alignment
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
   &:hover,
   &:active {
     background-color: #fff;
