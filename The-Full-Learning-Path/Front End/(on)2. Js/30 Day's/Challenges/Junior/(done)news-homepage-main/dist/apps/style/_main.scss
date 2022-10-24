@@ -1,0 +1,355 @@
+.section {
+  // Text
+  h1,
+  h2 {
+    line-height: 1;
+  }
+
+  .mainHeader {
+    margin-bottom: 0.25em;
+  }
+
+  &__summary {
+    // text
+    font-size: inherit;
+    font-weight: $fw-700;
+    color: var(--text-h);
+
+    // display
+
+    flex-wrap: wrap;
+
+    @include breakpoints-down(small) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+    }
+
+    &__left {
+    }
+    &__right {
+      @include breakpoints-down(small) {
+        border-top: 1px solid var(--text-h);
+        padding: 0.75em 0;
+        width: 100%;
+      }
+
+      //   display
+      gap: 1em;
+
+      //  theme-picker
+
+      .theme {
+        display: flex;
+        gap: 1em;
+        .themepicker {
+          opacity: 0;
+          display: none;
+          &:checked + .label .ball {
+            transform: translate(26px);
+          }
+        }
+        .label {
+          cursor: pointer;
+
+          background: linear-gradient(
+            45deg,
+            hsl(210, 78%, 56%),
+            hsl(146, 68%, 55%)
+          );
+          border-radius: 50px;
+
+          //   display
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+
+          padding: 3px;
+          gap: 0.5em;
+          i {
+            margin: 0 2px;
+            scale: 0.95;
+
+            &:last-of-type {
+              color: white;
+            }
+            &:first-of-type {
+              color: black;
+            }
+          }
+
+          .ball {
+            background-color: var(--bg);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+
+            // position
+            position: absolute;
+            transition: transform 0.2s linear;
+          }
+        }
+      }
+    }
+  }
+
+  &__top {
+    margin-top: 2.5em;
+  }
+
+  &__bottom {
+    .info {
+      &__name {
+        font-size: 0.85rem;
+        color: var(--text-h);
+      }
+      &__icon {
+        scale: 0.85;
+      }
+    }
+
+    .num {
+      &__stat {
+        font-size: 2rem;
+      }
+      &__growth {
+      }
+    }
+  }
+}
+
+.main {
+  &__display-grid {
+    @include breakpoints-up(small) {
+      // Display
+      display: grid;
+      grid-template-areas: "one one three" "two two three" "four five six";
+      gap: 2em;
+      .grid {
+        &:nth-child(1) {
+          grid-area: one;
+          margin: 0 !important;
+        }
+        &:nth-child(2) {
+          margin-bottom: 2em;
+          grid-area: two;
+          display: flex;
+          gap: 1em;
+          flex: 1;
+
+          div {
+            width: 100%;
+
+            h1 {
+              font-size: 3.5rem;
+              margin: 0 !important;
+              color: var(--neu-vd-blue);
+            }
+          }
+        }
+        &:nth-child(3) {
+          // max-width: 325px;
+          grid-area: three;
+          margin-bottom: 2em !important;
+        }
+      }
+    }
+
+    .grid {
+      &:nth-child(1) {
+        margin: 1em 0;
+      }
+      &:nth-child(2) {
+        // display
+        flex-direction: column;
+        @include breakpoints-up(large) {
+          flex-direction: row;
+        }
+
+        h1 {
+          color: var(--neu-vd-blue);
+
+          line-height: 1.1;
+          font-size: 3rem;
+          font-weight: $fw-800;
+          margin-bottom: 0.4em;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          font-weight: $fw-400;
+          margin-bottom: 1em;
+          color: var(--neu-dg-blue);
+        }
+        button {
+          margin-bottom: 2em;
+        }
+      }
+      &:nth-child(3) {
+        // background
+        background-color: var(--neu-vd-blue);
+        padding: 0.5em 1.5em;
+        margin-bottom: 1em;
+
+        // text
+        color: var(--neu-o-w);
+
+        h2 {
+          color: var(--s-ora);
+          font-size: 1.75rem;
+        }
+
+        h3 {
+          font-size: 1.15rem;
+          margin-bottom: 0.25em;
+          transition: color 0.3s ease-in-out;
+          cursor: pointer;
+          &:hover,
+          &:focus {
+            color: var(--s-ora);
+          }
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          font-weight: $fw-400;
+          margin-bottom: 1em;
+          color: var(--neu-g-blue);
+        }
+
+        hr {
+          background-color: var(--neu-o-w);
+
+          margin: 2em 0;
+          height: 1px;
+          border: none;
+        }
+        div {
+          margin: 1em 0;
+        }
+      }
+    }
+  }
+}
+
+// Last cards
+.card {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    h1 {
+      color: var(--neu-dg-blue);
+    }
+  }
+
+  // Display
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  @media (min-width: 39em) and (max-width: 63em) {
+    flex-direction: column;
+  }
+
+  @include breakpoints-down(small) {
+    margin: 3em 0;
+
+    &.cardone {
+      margin-top: 5em;
+    }
+  }
+
+  h1 {
+    line-height: 1.1;
+    font-size: 2rem;
+    color: var(--neu-g-blue);
+
+    font-weight: $fw-800;
+    margin-bottom: 0.2em;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: $fw-800;
+    margin-bottom: 0.5em;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: var(--s-ora);
+    }
+  }
+
+  p {
+    font-size: 0.95rem;
+    font-weight: $fw-400;
+    list-style: 1.2;
+    color: var(--neu-dg-blue);
+  }
+
+  //  cards
+  img {
+    min-width: 80px;
+    max-width: 75px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// card animation
+.inView {
+  animation: slide-up 3s ease-in-out;
+}
+.inView2 {
+  animation: slide-up 3.5s ease-in-out;
+}
+.inView3 {
+  animation: slide-up 4s ease-in-out;
+}
+
+// Hamburger Menu
+.hidden {
+  // hide
+  display: none;
+  position: absolute;
+  left: initial;
+  right: 0%;
+  background-color: rgb(255, 255, 255);
+  color: var(--neu-vd-blue);
+  font-weight: $fw-700;
+  padding: 1em;
+
+  width: 60%;
+  height: 100vh;
+  top: 0%;
+
+  // shadow
+  box-shadow: -245px 0px 250px rgba(0, 0, 0, 0.385);
+  &__menu {
+    margin-top: 7.5em;
+    .link {
+      a {
+        text-decoration: none;
+        color: var(--neu-dg-blue);
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--s-red);
+        }
+      }
+    }
+  }
+}
+
+.visible {
+  display: block;
+}
+.overflow {
+  overflow-y: hidden;
+}

@@ -31,7 +31,7 @@
       }
     </style>
   </head>
-  <body>
+  <body class="regular">
     <!-- Header -->
     <header class="header flex flex-rw-sb container box">
       <div class="header__logo">
@@ -54,6 +54,17 @@
           <div class="line"></div>
           <div class="line"></div>
           <div class="line"></div>
+        </div>
+
+        <!-- Hidden on Desktop  -->
+        <div class="hidden" id="hidden">
+          <ul class="hidden__menu flex flex-col">
+            <li class="link"><a href="#">Home</a></li>
+            <li class="link"><a href="#">New</a></li>
+            <li class="link"><a href="#">Popular</a></li>
+            <li class="link"><a href="#">Trending</a></li>
+            <li class="link"><a href="#">Categories</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -133,7 +144,6 @@
             <p>What happens when old PCs are given modern upgrades?</p>
           </div>
         </div>
-
         <!-- 2 -->
         <div class="card cardtwo flex-row flex">
           <div>
@@ -178,6 +188,10 @@
       <a target="_blank" class="impoText" href="https://github.com/R4nn3r">
         <i class="fa-brands fa-github-alt"></i>
       </a>
+      <p>
+        Don't click
+        <i class="fa-solid fa-person-booth crazy"></i>
+      </p>
     </footer>
     <script src="./apps/js/main.js"></script>
   </body>

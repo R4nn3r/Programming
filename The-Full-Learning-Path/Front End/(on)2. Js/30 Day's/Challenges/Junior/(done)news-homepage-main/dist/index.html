@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+    <!-- Link -->
+    <link rel="stylesheet" href="./apps/style/style.css" />
+
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/5b12988027.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="regular">
+    <!-- Header -->
+    <header class="header flex flex-rw-sb container box">
+      <div class="header__logo">
+        <!-- Logo -->
+        <img src="./assets/images/logo.svg" alt="W. Logo" />
+      </div>
+      <!-- Nav -->
+      <nav class="header__nav">
+        <!-- Desktop -->
+        <ul class="header__nav__links flex flex-row">
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"><a href="#">New</a></li>
+          <li class="link"><a href="#">Popular</a></li>
+          <li class="link"><a href="#">Trending</a></li>
+          <li class="link"><a href="#">Categories</a></li>
+        </ul>
+
+        <!-- Mobile -->
+        <div class="header__ham" id="hamburger" onclick="myFunction(this)">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <!-- Hidden on Desktop  -->
+        <div class="hidden" id="hidden">
+          <ul class="hidden__menu flex flex-col">
+            <li class="link"><a href="#">Home</a></li>
+            <li class="link"><a href="#">New</a></li>
+            <li class="link"><a href="#">Popular</a></li>
+            <li class="link"><a href="#">Trending</a></li>
+            <li class="link"><a href="#">Categories</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main container box dash">
+      <div class="main__display-grid">
+        <!-- 1 -->
+        <div class="grid">
+          <picture class="images">
+            <source
+              media="(max-width:39em)"
+              srcset="./assets/images/image-web-3-mobile.jpg"
+            />
+            <img
+              src="./assets/images/image-web-3-desktop.jpg"
+              alt="image of web 3"
+              class="hero-img"
+            />
+          </picture>
+        </div>
+
+        <!-- 2 -->
+        <div class="grid">
+          <div>
+            <h1>The Bright Future of Web 3.0?</h1>
+          </div>
+          <div>
+            <p>
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button class="cta">Read more</button>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="grid">
+          <div>
+            <h2>New</h2>
+          </div>
+
+          <div>
+            <h3>Hydrogen VS Electric Cars</h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <hr />
+          <div>
+            <h3>The Downsides of AI Artistry</h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </div>
+          <hr />
+
+          <div>
+            <h3>Is VC Funding Drying Up?</h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </div>
+        </div>
+
+        <!-- Last Cards section-->
+
+        <!-- 1 -->
+        <div class="card cardone flex-row flex">
+          <div>
+            <img src="./assets/images/image-retro-pcs.jpg" alt="retro pc" />
+          </div>
+          <div>
+            <h1>01</h1>
+            <h2>Reviving Retro PCs</h2>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="card cardtwo flex-row flex">
+          <div>
+            <img
+              src="./assets/images/image-top-laptops.jpg"
+              alt="top 10 laptops"
+            />
+          </div>
+          <div>
+            <h1>02</h1>
+            <h2>Top 10 Laptops of 2022</h2>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card cardthree flex-row flex">
+          <div>
+            <img
+              src="./assets/images/image-gaming-growth.jpg"
+              alt="The Gaming Growth"
+            />
+          </div>
+          <div>
+            <h1>03</h1>
+            <h2>The Growth of Gaming</h2>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution normText">
+      Challenge by
+      <a
+        class="impoText"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Fem</a
+      >. made with &#128151; by
+
+      <a target="_blank" class="impoText" href="https://github.com/R4nn3r">
+        <i class="fa-brands fa-github-alt"></i>
+      </a>
+      <p>
+        Don't click
+        <i class="fa-solid fa-person-booth crazy"></i>
+      </p>
+    </footer>
+    <script src="./apps/js/main.js"></script>
+  </body>
+</html>

@@ -144,6 +144,7 @@
             h1 {
               font-size: 3.5rem;
               margin: 0 !important;
+              color: var(--neu-vd-blue);
             }
           }
         }
@@ -167,6 +168,8 @@
         }
 
         h1 {
+          color: var(--neu-vd-blue);
+
           line-height: 1.1;
           font-size: 3rem;
           font-weight: $fw-800;
@@ -295,4 +298,58 @@
     width: 100%;
     height: 100%;
   }
+}
+
+// card animation
+.inView {
+  animation: slide-up 3s ease-in-out;
+}
+.inView2 {
+  animation: slide-up 3.5s ease-in-out;
+}
+.inView3 {
+  animation: slide-up 4s ease-in-out;
+}
+
+// Hamburger Menu
+.hidden {
+  // hide
+  display: none;
+  position: absolute;
+  left: initial;
+  right: 0%;
+  background-color: rgb(255, 255, 255);
+  color: var(--neu-vd-blue);
+  font-weight: $fw-700;
+  padding: 1em;
+
+  width: 60%;
+  height: 100vh;
+  top: 0%;
+
+  // shadow
+  box-shadow: -245px 0px 250px rgba(0, 0, 0, 0.385);
+  &__menu {
+    margin-top: 7.5em;
+    .link {
+      a {
+        text-decoration: none;
+        color: var(--neu-dg-blue);
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--s-red);
+        }
+      }
+    }
+  }
+}
+
+.visible {
+  display: block;
+}
+.overflow {
+  overflow-y: hidden;
 }

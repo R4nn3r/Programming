@@ -71,7 +71,7 @@ svg {
 }
 
 .box {
-  padding: 2.5em 1em 3.25em 1em;
+  padding: 2.5em 1.5em 3.25em 1.5em;
   max-width: 1150px;
 
   @include breakpoints-down(small) {
@@ -80,17 +80,7 @@ svg {
 }
 
 .main.box {
-  padding: 0 1em;
-}
-// Typography
-.xbold {
-  font-weight: $fw-800;
-}
-.bold {
-  font-weight: $fw-700;
-}
-.regular {
-  font-weight: $fw-700;
+  padding: 0 1.5em;
 }
 
 // Cta
@@ -143,4 +133,41 @@ body {
   background-color: var(--neu-o-w);
   font-family: $ff-primary;
   font-size: $fs-para;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: var(--neu-dg-blue);
+  transition: color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--s-red);
+  }
+}
+
+// animation
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateY(-25%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-50%);
+  }
+  75% {
+    opacity: 0.85;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
