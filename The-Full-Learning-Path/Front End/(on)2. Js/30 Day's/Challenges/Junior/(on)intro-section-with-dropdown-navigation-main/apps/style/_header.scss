@@ -40,6 +40,16 @@
       }
     }
   }
+  .down-mob {
+    // hide
+    display: none;
+    // box
+    position: static;
+    background-color: white;
+    padding: 1em;
+
+    box-shadow: 0 0 0 #ffffff21;
+  }
 }
 
 .linkTree_ {
@@ -63,6 +73,16 @@
     li {
       margin-bottom: 0.35em;
     }
+  }
+  .down-mob_ {
+    // hide
+    display: none;
+    // box
+    position: static;
+    background-color: white;
+    padding: 1em;
+
+    box-shadow: 0 0 0 #ffffff21;
   }
 }
 // open Tree
@@ -90,7 +110,7 @@
 .nav__right {
   &__mobile {
     display: none;
-    @include breakpoints-down(small) {
+    @include breakpoints-down(medium) {
       position: absolute;
       background-color: white;
       width: 60%;
@@ -98,7 +118,7 @@
       z-index: 1;
 
       // background
-      box-shadow: -250px 0 200px rgb(0 0 0 / 56%);
+      box-shadow: -250px 0 250px rgb(0 0 0 / 56%);
 
       left: initial;
       right: 0;
@@ -107,6 +127,14 @@
 
     &.open {
       display: block;
+    }
+
+    .nav-list {
+      margin-top: 5em;
+
+      li {
+        margin-bottom: 0.5em;
+      }
     }
   }
 }

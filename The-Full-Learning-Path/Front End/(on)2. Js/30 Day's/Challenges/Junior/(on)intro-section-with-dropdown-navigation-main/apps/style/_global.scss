@@ -97,6 +97,17 @@ svg {
   &-jc-sb {
     justify-content: space-between;
   }
+
+  &-col {
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5em !important;
+    padding: 0.25em 2em;
+
+    button {
+      width: 100%;
+    }
+  }
 }
 
 // Links
