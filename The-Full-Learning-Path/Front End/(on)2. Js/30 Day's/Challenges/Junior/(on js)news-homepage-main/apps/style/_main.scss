@@ -152,20 +152,6 @@
           grid-area: three;
           margin-bottom: 2em !important;
         }
-
-        // 1
-        .cardone {
-          // grid-area: four;
-        }
-        // 2
-        .cardtwo {
-          // grid-area: five;
-        }
-
-        //3
-        .cardthree {
-          // grid-area: six;
-        }
       }
     }
 
@@ -245,6 +231,8 @@
     }
   }
 }
+
+// Last cards
 .card {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -282,7 +270,7 @@
   }
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: $fw-800;
     margin-bottom: 0.5em;
     transition: color 0.3s ease-in-out;
@@ -294,7 +282,7 @@
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: $fw-400;
     list-style: 1.2;
     color: var(--neu-dg-blue);
@@ -302,8 +290,8 @@
 
   //  cards
   img {
-    min-width: 120px;
-    max-width: 100px;
+    min-width: 80px;
+    max-width: 75px;
     width: 100%;
     height: 100%;
   }
