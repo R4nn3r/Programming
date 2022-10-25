@@ -52,6 +52,7 @@
         &:hover,
         &:active {
           color: var(--cta-text);
+
           background-color: var(--crl-text);
         }
         &:focus {
@@ -68,12 +69,29 @@
         &:active {
           color: var(--crl-text);
           background-color: var(--cta-hover);
+
+          @include breakpoints-down(small) {
+            background: linear-gradient(
+              45deg,
+              var(--cta-mob-nav-100),
+              var(--cta-mob-nav-200)
+            );
+          }
         }
         &:focus {
           color: var(--crl-text);
           background-color: var(--cta-hover);
+
           outline: none;
           border-bottom: 2px solid var(--cta-text);
+
+          @include breakpoints-down(small) {
+            background: linear-gradient(
+              45deg,
+              var(--cta-mob-nav-100),
+              var(--cta-mob-nav-200)
+            );
+          }
         }
       }
     }
