@@ -2,11 +2,16 @@
   font-family: $ff-overpass;
 
   .container-hero {
-    padding-top: 2em;
+    padding-top: 3em;
   }
   &__article {
     text-align: center;
-    padding: 1em;
+    color: var(--crl-text);
+
+    @include breakpoints-up(medium) {
+      line-height: 3;
+    }
+
     h1 {
       font-size: 2rem;
       padding: 0 1em;
@@ -21,6 +26,7 @@
     p {
       padding: 0 1em;
       margin-bottom: 1em;
+
       @include breakpoints-up(medium) {
         font-size: 1.25rem;
         margin-bottom: 0;
@@ -38,7 +44,101 @@
     flex-wrap: wrap;
     .cta {
       width: 130px;
-      border: 1px solid red;
+
+      &:last-child {
+        border: 1px solid var(--crl-text);
+        background-color: transparent;
+
+        &:hover,
+        &:active {
+          color: var(--cta-text);
+          background-color: var(--crl-text);
+        }
+        &:focus {
+          color: var(--cta-text);
+          background-color: var(--crl-text);
+          outline: none;
+          border-bottom: 2px solid var(--crl-text-sh);
+        }
+      }
+      &:first-child {
+        color: var(--cta-text);
+        background-color: var(--crl-text);
+        &:hover,
+        &:active {
+          color: var(--crl-text);
+          background-color: var(--cta-hover);
+        }
+        &:focus {
+          color: var(--crl-text);
+          background-color: var(--cta-hover);
+          outline: none;
+          border-bottom: 2px solid var(--cta-text);
+        }
+      }
+    }
+  }
+}
+// Background
+body {
+  position: relative;
+
+  .container-hero {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -2;
+      left: 50%;
+      transform: translate(-50%);
+      background: linear-gradient(
+        45deg,
+        var(--cta-mob-nav-100),
+        var(--cta-mob-nav-200)
+      );
+      border-radius: 0 0 0 6em;
+      max-width: 1440px;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+
+      @include breakpoints-down(small) {
+        background: linear-gradient(
+          190deg,
+          var(--cta-mob-nav-100),
+          var(--cta-mob-nav-200)
+        );
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -2;
+      left: 50%;
+      transform: translate(-50%);
+
+      z-index: -1;
+      // background
+      // background-color: rgba(0, 255, 0, 0.343);
+      background-image: url(../../images/bg-pattern-intro-desktop.svg);
+      background-repeat: no-repeat;
+      background-position: 30% 51%;
+      background-size: 205%;
+      border-radius: 0 0 0 6em;
+      max-width: 1440px;
+      width: 100%;
+      height: 500px;
+
+      @include breakpoints-down(small) {
+        background-position: 30% 33%;
+        background-size: 295%;
+      }
     }
   }
 }

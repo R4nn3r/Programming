@@ -10,46 +10,48 @@
     }
     &__navbar {
       position: relative;
+
       .links {
         gap: 2em;
 
         a {
           // text
           font-size: 0.9rem;
+          color: var(--crl-text);
 
           //   interaction
           cursor: pointer;
           transition: all 0.3s ease-in;
           &:hover,
           &:active {
-            color: var(--cta-text);
+            color: var(--crl-heading);
           }
           &:focus {
-            color: var(--cta-text);
+            color: var(--crl-heading);
+
             outline: none;
-            border-bottom: 1px solid var(--cta-text);
+            border-bottom: 2px solid var(--crl-heading);
           }
         }
       }
       .drop-down {
         display: none;
+        position: absolute;
+        color: var(--crl-f-bg);
       }
       .drop-down.tree-down {
         display: block;
-        position: absolute;
-        rotate: 180deg;
-        bottom: 35px;
-        right: initial;
-        left: 0;
 
+        right: initial;
+        top: 35px;
         // text
         font-family: $ff-overpass;
         font-weight: $fw-ov-300;
-
         // box style
         padding: 1em 3em 1em 1em;
         border-radius: 0.5em;
         box-shadow: 5px 5px 15px #00000036;
+        background-color: var(--crl-text);
 
         li {
           width: 80px;
@@ -58,6 +60,7 @@
 
         // interaction
         a {
+          color: var(--crl-heading);
           &:hover,
           &:active {
             font-weight: $fw-ov-600;
@@ -65,7 +68,7 @@
           &:focus {
             font-weight: $fw-ov-600;
             outline: none;
-            border-bottom: 2px solid var(--cta-text);
+            border-bottom: 2px solid var(--crl-heading);
           }
         }
       }
@@ -102,8 +105,6 @@
           color: var(--cta-text);
         }
         &:focus {
-          color: var(--cta-text);
-
           outline: none;
           border-bottom: 2px solid var(--cta-text);
         }
@@ -114,7 +115,7 @@
 
 //  Arrows
 .arrow.opened {
-  background-image: url(../../images/icon-arrow-dark.svg);
+  background-image: url(../../images/icon-arrow-light.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -127,7 +128,8 @@
   height: 10px;
 }
 .arrow {
-  background-image: url(../../images/icon-arrow-dark.svg);
+  background-image: url(../../images/icon-arrow-light.svg);
+
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

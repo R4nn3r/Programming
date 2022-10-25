@@ -145,6 +145,8 @@ button {
   font-family: inherit;
   font-weight: $fw-ub-700;
   font-size: 0.95rem;
+  color: var(--crl-text);
+
   //   interaction
   cursor: pointer;
   transition: all 0.2s ease-in;

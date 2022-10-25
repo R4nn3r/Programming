@@ -11,6 +11,6 @@ function myFunction(x) {
 
 // Link Tree Opener
 function treeDown(x) {
-  x.nextElementSibling.classList.toggle("opened");
-  x.nextElementSibling.lastElementChild.classList.toggle("tree-down");
+  x.firstElementChild.classList.toggle("opened");
+  x.nextElementSibling.classList.toggle("tree-down");
 }
