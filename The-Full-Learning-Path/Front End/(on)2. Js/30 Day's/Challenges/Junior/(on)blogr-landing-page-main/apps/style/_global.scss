@@ -66,6 +66,92 @@ svg {
 
 // utilities
 
+// width's for different sections
+.container-main {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.container-header,
+.container-hero {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+// links
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Hamburger Menu
+.hamburger {
+  // position
+  position: absolute;
+  z-index: 2;
+  top: 61px;
+  left: initial;
+  right: 25px;
+  // display
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+
+  cursor: pointer;
+  .line {
+    width: 25px;
+    height: 4px;
+    background-color: var(--crl-f-bg);
+    transition: 0.4s;
+  }
+  .line:first-child {
+    width: 15px;
+  }
+  .line:nth-child(2) {
+    width: 20px;
+  }
+
+  &.change {
+    .line:first-child {
+      width: 25px;
+      transform: translate(0, 8px) rotate(-45deg);
+    }
+    .line:nth-child(2) {
+      opacity: 0;
+    }
+    .line:last-child {
+      transform: translate(0, -8px) rotate(45deg);
+    }
+  }
+}
+
+// Visibility
+.hidden-mobile {
+  @include breakpoints-down(medium) {
+    display: none !important;
+  }
+}
+.hidden-desktop {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
+
+// buttons
+button {
+  padding: 0.85em;
+  border: none;
+  border-radius: 2em;
+  font-family: inherit;
+  font-weight: $fw-ub-700;
+  font-size: 0.95rem;
+  //   interaction
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
 // General styles
 body {
+  font-size: $fs-para;
+  background-color: var(--crl-text);
 }
