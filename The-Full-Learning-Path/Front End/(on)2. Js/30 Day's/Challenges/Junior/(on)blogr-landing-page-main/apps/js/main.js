@@ -2,7 +2,7 @@
 const body = document.querySelector("body");
 
 // toggle the hamburger icons to closed and opened
-const navMobile = document.querySelector(".nav-mobile");
+const navMobile = document.querySelector(".nav-menu");
 function myFunction(x) {
   x.classList.toggle("change");
   navMobile.classList.toggle("open");

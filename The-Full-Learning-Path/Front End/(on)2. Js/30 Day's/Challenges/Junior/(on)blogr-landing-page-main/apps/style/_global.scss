@@ -77,7 +77,9 @@ svg {
   max-width: 1100px;
   margin-inline: auto;
 }
-
+.container-header {
+  height: 65px;
+}
 // links
 a {
   text-decoration: none;
@@ -127,13 +129,13 @@ a {
 
 // Visibility
 .hidden-mobile {
-  @include breakpoints-down(medium) {
+  @include breakpoints-down(lmedium) {
     display: none !important;
   }
 }
 .hidden-desktop {
-  @include breakpoints-up(large) {
-    display: none;
+  @include breakpoints-up(lmedium) {
+    display: none !important;
   }
 }
 
