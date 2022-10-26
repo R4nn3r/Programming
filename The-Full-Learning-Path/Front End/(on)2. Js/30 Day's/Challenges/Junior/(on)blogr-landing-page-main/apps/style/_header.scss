@@ -206,8 +206,8 @@
 
   // bg
   background-color: var(--crl-text);
-  border-radius: 0.65em;
   box-shadow: 5px 5px 15px #00000036;
+  border-radius: 0.65em 0.65em 0.65em 4em;
 
   // size
   width: 90%;
@@ -246,7 +246,8 @@
   .drop-down_.tree-down {
     display: block;
     // box style
-    border-radius: 0;
+    border-radius: 0.65em;
+
     background-color: var(--crl-f-text);
     box-shadow: none;
     text-align: center;
