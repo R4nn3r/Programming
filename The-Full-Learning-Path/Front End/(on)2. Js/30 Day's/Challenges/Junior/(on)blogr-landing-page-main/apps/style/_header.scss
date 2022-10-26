@@ -210,7 +210,7 @@
   box-shadow: 5px 5px 15px #00000036;
 
   // size
-  width: 92%;
+  width: 90%;
 
   .links {
     margin: 2em;
@@ -219,35 +219,50 @@
     display: flex;
     flex-direction: column;
 
-    border-bottom: 1px solid var(--crl-f-text);
+    // interaction
+    a {
+      color: var(--crl-heading);
+      &:hover,
+      &:active {
+        font-weight: $fw-ov-600;
+      }
+      &:focus {
+        font-weight: $fw-ov-600;
+        outline: none;
+        border-bottom: 2px solid var(--crl-heading);
+      }
+    }
   }
   .link {
     font-size: 1.25rem;
     &:last-child {
       margin-bottom: 1em;
     }
-    .drop-down {
-      display: none;
-    }
-    .drop-down.tree-down {
-      display: block;
-      position: absolute;
-      // box style
-      border-radius: 0;
-      padding: 1em;
-      background-color: var(--crl-f-text);
-      box-shadow: none;
-      text-align: center;
+  }
 
-      li {
-        width: 100%;
-        margin-bottom: 0.3em;
-      }
+  .drop-down_ {
+    display: none;
+  }
+  .drop-down_.tree-down {
+    display: block;
+    // box style
+    border-radius: 0;
+    background-color: var(--crl-f-text);
+    box-shadow: none;
+    text-align: center;
+
+    li {
+      font-size: 1.2rem;
+      width: 100%;
+      margin-bottom: 0.3em;
     }
   }
 
   .button {
-    margin: 2em 0;
+    margin: 2em;
+    padding: 2em 0 0;
+    border-top: 1px solid var(--crl-f-text);
+
     .btn {
       max-width: 140px;
       width: 100%;
@@ -266,7 +281,6 @@
       &:hover,
       &:active {
         color: var(--crl-text);
-        background-color: var(--cta-hover);
       }
       &:focus {
         color: var(--crl-text);
@@ -282,14 +296,9 @@
 
       &:hover,
       &:active {
-        color: var(--crl-text);
         outline: none;
-
-        border-bottom: 2px solid var(--crl-text);
       }
       &:focus {
-        color: var(--crl-text);
-
         outline: none;
         border-bottom: 2px solid var(--crl-text);
       }

@@ -1,5 +1,6 @@
 // Major Elements selectors
 const body = document.querySelector("body");
+const check = document.querySelectorAll(".check");
 
 // toggle the hamburger icons to closed and opened
 const navMobile = document.querySelector(".nav-menu");
@@ -12,5 +13,9 @@ function myFunction(x) {
 // Link Tree Opener
 function treeDown(x) {
   x.firstElementChild.classList.toggle("opened");
-  x.nextElementSibling.classList.toggle("tree-down");
+  check[0].classList.toggle("tree-down");
+}
+function treeDown_(x) {
+  x.firstElementChild.classList.toggle("opened");
+  check[1].classList.toggle("tree-down");
 }
