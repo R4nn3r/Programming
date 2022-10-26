@@ -70,6 +70,7 @@ svg {
 .container-main {
   max-width: 1440px;
   margin-inline: auto;
+  overflow-x: hidden;
 }
 
 .container-header,

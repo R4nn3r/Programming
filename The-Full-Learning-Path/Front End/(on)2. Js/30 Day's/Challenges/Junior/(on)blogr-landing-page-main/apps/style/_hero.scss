@@ -1,5 +1,9 @@
 .hero {
   font-family: $ff-overpass;
+  margin-bottom: 10em;
+  @include breakpoints-up(medium) {
+    margin-bottom: 15em;
+  }
 
   .container-hero {
     padding-top: 2em;
