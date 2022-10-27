@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@300;500;700&display=swap");
+
+$ff-overpass: "Overpass", sans-serif;
+
+$fw-ov-300: 300;
+$fw-ov-600: 600;
+
+$ff-ubuntu: "Ubuntu", sans-serif;
+
+$fw-ub-400: 400;
+$fw-ub-500: 500;
+$fw-ub-700: 700;
+
+// Font size
+$fs-para: 16px;
+
+.default-theme {
+  // Primary Colors
+  --cta-text: hsl(356, 100%, 66%);
+  --cta-hover: hsl(355, 100%, 74%);
+  --crl-heading: hsl(208, 49%, 24%);
+
+  // Neutral Colors
+  --crl-text: hsl(0, 0%, 100%);
+  --crl-text-sh: rgba(0, 0, 0, 0.226);
+  --crl-f-text: hsl(240, 2%, 79%);
+  --crl-b-copy: hsl(207, 13%, 34%);
+  --crl-f-bg: hsl(240, 10%, 16%);
+
+  // Gradient Schemes
+  //  Cta
+  --cta-mob-nav-100: hsl(13, 100%, 72%);
+  --cta-mob-nav-200: hsl(353, 100%, 62%);
+
+  //  Body
+  --bg-grad-100: #2c2d3f;
+  --bg-grad-200: #3f4164;
+}
