@@ -89,6 +89,113 @@
 // 2nd section of main
 .main__two {
   border: 1px dashed indigo;
-  background-color: rgba(255, 0, 0, 0.39);
-  padding: 1em;
+  background: linear-gradient(45deg, var(--bg-grad-100), var(--bg-grad-200));
+  margin-bottom: 5em;
+  border-radius: 0 7em;
+  //   Typography
+  font-family: $ff-overpass;
+  h1,
+  h2 {
+    color: var(--crl-text);
+  }
+  p {
+    color: var(--crl-f-text);
+  }
+  h1 {
+    margin-bottom: 0.5em;
+    color: var(--crl-f-bg);
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    line-height: 1.1;
+    font-size: 2rem;
+    margin-bottom: 0.35em;
+  }
+
+  @include breakpoints-down(small) {
+    h1 {
+      font-size: 1.75rem;
+    }
+    h2 {
+      font-size: 2rem;
+
+      margin-inline: auto;
+    }
+  }
+  &__box {
+    width: 100%;
+
+    // display
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+
+    &__articles {
+      padding: 2em;
+      .article {
+        padding: 2.5em;
+        margin: 1em;
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+    @include breakpoints-down(lmedium) {
+      flex-direction: column;
+      text-align: center;
+
+      &__articles {
+        padding: 1em;
+        margin: 0;
+        .article {
+          padding: 1em;
+          margin-bottom: 3em;
+        }
+      }
+    }
+
+    &__illustration {
+      width: 100%;
+      position: relative;
+      .illus-box {
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          display: block;
+          background-image: url(../../images/bg-pattern-circles.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 14.375rem;
+          height: 14.375rem;
+          transform: translate(40px, -28px);
+          scale: 3;
+
+          @include breakpoints-down(lmedium) {
+            transform: translate(37px, -10px);
+            scale: 2;
+          }
+        }
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        background-image: url(../../images/illustration-phones.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 14.375rem;
+        height: 14.375rem;
+        scale: 1.65;
+        transform: translate(73px, -134px);
+
+        @include breakpoints-down(lmedium) {
+          transform: translate(46px, -185px);
+        }
+      }
+    }
+  }
 }
