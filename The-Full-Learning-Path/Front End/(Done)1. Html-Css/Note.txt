@@ -165,9 +165,23 @@ HTML (Hypertext Markup Language)
             class           -> (.class_name {...})
             id              -> (#id_tag {...})
     
-    # Advanced Css Selectors 
+    # Advanced Css Selectors [ Combinator ]
             -> refer to the image or google for the table
 
+            - multiple element selectors
+                a, b, c
+            - descendant selectors
+                a b 
+            - child selectors
+                a > b
+            - adjacent sibling selectors
+                a + b
+            - attribute selectors
+                [a=b]
+            - pseudo class selectors 
+                a:b
+            - pseudo element selectors
+                a::b
     Box Model:
         1. Margin = space on the outside    
                         Ex.
@@ -202,6 +216,21 @@ HTML (Hypertext Markup Language)
                         --penguin-skin: black;
                     }
                 }
+
+# colors 
+    - HEX codes  [mostly used]
+        #ffffff -> white
+        -> every 2 values representation of the colors 
+            [red, green, blue]
+
+    - keywords  [while learning not for work cases]
+        red, green, lime , ,,,
+
+    - RGB
+        rgb(red, green, blue, opacity)
+
+    - HSL [Best one to use]
+        hsl(hue(deg), saturation, lightness, opacity)
 
 # Applied Visual Design
 
@@ -528,6 +557,8 @@ HTML (Hypertext Markup Language)
         Inline                                 
 
 # Responsive Design 
+
+
     
     - Media Query
                 (min max works for both height and width)
@@ -536,6 +567,11 @@ HTML (Hypertext Markup Language)
 
              height is more than or equal to 350px   
                 @media (min-height: 350px) { /* CSS Rules */ }
+
+            /* CSS */
+            @media (condition) {
+                /* Some CSS that'll run if the condition is met. */
+            }
 
     - Use a Retina Image for Higher Resolution Displays
 
@@ -557,6 +593,21 @@ HTML (Hypertext Markup Language)
                 vh (viewport height): 3vh would be 3% of the viewport's height.
                 vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
                 vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
+
+# Units 
+    - px
+
+    - em [relative]
+        It's a relative unit, equal to the font size of the current element.   
+
+    - rem [should use]
+        it's always relative to the root element, the <html> tag.All of the rems across your app will be taking their cues from that root HTML tag. By default, the HTML tag has a font size of 16px, so 1rem will be equal to 16px.
+
+    - percentages
+         used with width/height, as a way to consume a portion of the available space.
+         example:
+            parent [500*250]
+                - child [50%*50%] -> (250*125)
 
 # Best Practice to follow to get a better grip on the industry.
 
@@ -696,24 +747,29 @@ HTML (Hypertext Markup Language)
                 act like relative elements but on scroll change to fixed elements 
 
 # pseudo elements and class's
-    - ::first-line Pseudo-element
-             Note: The ::first-line pseudo-element can only be applied to 
-             block-level elements.
-
-    - ::first-letter Pseudo-element
-            Note: Same rule applies from the last 'Note'
+    Classes: target specific states
+        :focus, :hover, :active . ...
 
 
-    - The ::before Pseudo-element
-                Insert's some content before the content of an element.
+    Elements: target sub-elements
 
-    - The ::after Pseudo-element
-                    Insert's some content after the content of an element.
+        - The ::before Pseudo-element
+                    Insert's some content before the content of an element.
+
+        - The ::after Pseudo-element
+                        Insert's some content after the content of an element.
 
 
-    - :target 
+        - ::first-line Pseudo-element
+                Note: The ::first-line pseudo-element can only be applied to 
+                block-level elements.
 
-    - :only-child , :first-child , :last-child, only-of-type
+        - ::first-letter Pseudo-element
+                Note: Same rule applies from the last 'Note'
+
+        - :target 
+
+        - :only-child , :first-child , :last-child, only-of-type
 
 # !Important 
 
@@ -1190,3 +1246,17 @@ HTML (Hypertext Markup Language)
 
 "we suffer more often in imagination than in reality."
 -- Seneca 
+
+# Best Case Practice
+
+    # Units 
+        Typography -> use {rem}
+        box model -> use {px}
+        width/height -> based on the available space or fixed [chose accordingly]
+        color -> use {hsl}
+
+    # Font
+        The 3 most popular that are "web safe fonts":
+            Serif
+            Sans-serif
+            Monospace

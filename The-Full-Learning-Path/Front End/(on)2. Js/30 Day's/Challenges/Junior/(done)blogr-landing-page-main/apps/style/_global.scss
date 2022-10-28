@@ -34,7 +34,6 @@ body {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  overflow-x: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -67,98 +66,23 @@ svg {
 
 // utilities
 
-// width's for different sections
-.container-main {
-  max-width: 1440px;
-  margin-inline: auto;
-  overflow-x: hidden;
-}
-
-.container-header,
-.container-hero,
-.boxx_ {
-  max-width: 1100px;
-  margin-inline: auto;
-}
-.container-header {
-  height: 65px;
-}
-// links
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-// Hamburger Menu
-.hamburger {
-  // position
-  position: absolute;
-  z-index: 2;
-  top: 61px;
-  left: initial;
-  right: 25px;
-  // display
-  display: flex;
-  flex-direction: column;
-  gap: 0.25em;
-
-  cursor: pointer;
-  .line {
-    width: 25px;
-    height: 4px;
-    background-color: var(--crl-text);
-    transition: 0.4s;
-  }
-  .line:first-child {
-    width: 15px;
-  }
-  .line:nth-child(2) {
-    width: 20px;
-  }
-
-  &.change {
-    .line:first-child {
-      width: 25px;
-      transform: translate(0, 8px) rotate(-45deg);
-    }
-    .line:nth-child(2) {
-      opacity: 0;
-    }
-    .line:last-child {
-      transform: translate(0, -8px) rotate(45deg);
-    }
-  }
-}
-
-// Visibility
-.hidden-mobile {
-  @include breakpoints-down(lmedium) {
-    display: none !important;
-  }
-}
-.hidden-desktop {
-  @include breakpoints-up(lmedium) {
-    display: none !important;
-  }
-}
-
-// buttons
-button {
-  padding: 0.85em;
-  border: none;
-  border-radius: 2em;
-  font-family: inherit;
-  font-weight: $fw-ub-700;
-  font-size: 0.95rem;
-  color: var(--crl-text);
-
-  //   interaction
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-}
-
 // General styles
 body {
-  font-size: $fs-para;
-  background-color: var(--crl-text);
+  // font-size: $fs-para;
+  font-size: 20px;
+}
+
+.color {
+  color: #222;
+  background-color: hsl(180, 64%, 45%);
+  box-shadow: 10px 15px 0px hsl(180, 55%, 35%);
+}
+
+div {
+  width: 10rem;
+  height: 10rem;
+}
+
+h1 {
+  font-size: 2rem;
 }
