@@ -771,9 +771,9 @@ HTML (Hypertext Markup Language)
 
         - :only-child , :first-child , :last-child, only-of-type
 
-# !Important 
+#  Rendering Logic [!Important] 
 
-    - Inheritance 
+    # Inheritance 
         Core Concept:
             When you set a property for a parent mostly the children of that parent will get to
             inherit those properties.
@@ -786,6 +786,35 @@ HTML (Hypertext Markup Language)
                 Form elements don;t follow the inheritance rule by default.
                 "inherit" keyword allows authors to explicitly specify inheritance. 
                 It works on both inherited and non-inherited properties.
+
+    # Width Algorithms 
+         How elements react to the width algorithm is highly dependent on the type of element they are:
+            block elements have dynamic sizing (they are context aware) because they have 
+            a width of auto they grow as much as there able to.
+
+        # Keyword values 
+            - Measurements (100%, px, rem)
+            - Keywords (auto, fit-content, min/max-content)   
+
+                Note: when values are set by;
+                    parent: extrinsic
+
+                    child: intrinsic 
+
+            - min\max-Width
+    
+    # Height Algorithms
+        
+        
+    # Border Properties 
+        - border width
+        - border style [solid, dotted]
+        - border color
+
+
+
+
+
 
     - The Cascade 
             The cascading algorithm determines how to find the value to apply
@@ -835,9 +864,8 @@ HTML (Hypertext Markup Language)
             Make sure the name's are 
                 - Meaningful names
 
-    - Creating Layouts
         
-    - Content vs Layout 
+
 
 # Background Images 
     
@@ -1244,6 +1272,9 @@ HTML (Hypertext Markup Language)
 
 
 
+
+
+
 "we suffer more often in imagination than in reality."
 -- Seneca 
 
@@ -1254,6 +1285,7 @@ HTML (Hypertext Markup Language)
         box model -> use {px}
         width/height -> based on the available space or fixed [chose accordingly]
         color -> use {hsl}
+            -> make user the contrast ration is above the minimum value
 
     # Font
         The 3 most popular that are "web safe fonts":

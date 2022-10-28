@@ -70,19 +70,33 @@ svg {
 body {
   // font-size: $fs-para;
   font-size: 20px;
+  font-family: $ff-overpass;
+  padding: 1em;
 }
 
-.color {
-  color: #222;
-  background-color: hsl(180, 64%, 45%);
-  box-shadow: 10px 15px 0px hsl(180, 55%, 35%);
+.card {
+  background-color: hsl(195, 53%, 79%);
+  box-shadow: 5px 5px 20px hsla(195, 40%, 60%, 0.418);
+  padding: 1em;
+  border: 1px solid hsla(240, 9%, 58%, 0.344);
+  border-radius: 0.5em;
+  max-width: 550px;
+  margin: 10em auto;
 }
 
-div {
-  width: 10rem;
-  height: 10rem;
+.card_ {
+  background-color: hsl(355, 53%, 79%);
+  box-shadow: 5px 5px 0px hsla(355, 40%, 60%, 0.418);
+  padding: 0.5em;
+  text-align: center;
+  max-width: 65%;
+  border-radius: 0.5em;
+  margin-inline: auto;
+  transform: translateY(-2em);
 }
 
-h1 {
-  font-size: 2rem;
+p {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
 }
