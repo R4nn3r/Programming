@@ -858,7 +858,8 @@ HTML (Hypertext Markup Language)
             -> unlocks properties such as:
                     top, left, right, bottom
 
-        # Absolute  (relative to the parent or the body by default) [takes an element out of the original flow]
+        # Absolute  (relative to the parent or the body by default) [takes an element out of the original flow] 
+        overflow-wrap: break-word;
 
             position: absolute;
             top: 0%;
@@ -900,7 +901,27 @@ HTML (Hypertext Markup Language)
                 # sticky 
                     act like relative elements but on scroll change to fixed elements 
 
+        # Tips:
+         Center an element using position absolute 
 
+            There are 4 important ingredients for this trick to work:
+                absolute positioning (position: absolute)
+                Equal distances from each edge (ideally 0px)
+                A fixed size (defined width and height properties)
+                Hungry margins (margin: auto)
+
+                .box {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+
+                    bottom: 0px;
+                    width: 100px;
+                    height: 100px;
+                    margin: auto;
+                    background: green;
+                }
 
     - Dealing with the box model
 

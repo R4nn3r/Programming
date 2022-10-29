@@ -97,7 +97,10 @@ h1 {
   margin-bottom: 0.5em;
 }
 
-.intro-chunk strong {
+.intro-chunk strong,
+span,
+a {
+  text-decoration: none;
   color: deeppink;
 }
 .intro-chunk p {
@@ -119,13 +122,16 @@ h1 {
 }
 .indented-heading {
   width: fit-content;
-  padding: 15px 25px;
+  padding: 21px 25px;
   font-size: $fw-ub-700;
   background-color: hsl(45, 100%, 50%);
-  box-shadow: 0px 7px 0px hsl(40, 80%, 45%);
-  margin-left: -10px;
+  // box-shadow: 0px 7px 0px hsl(40, 80%, 45%);
+  border-bottom: 3px solid hsl(40, 80%, 45%);
+  margin-left: -40px;
   position: relative;
-  top: -40px;
+  z-index: 9999;
+  top: -46px;
+  border-radius: 37px 0 0 37px;
 }
 .indented-heading_ {
   font-size: 1rem;
@@ -135,11 +141,11 @@ h1 {
   box-shadow: 0px 7px 0px hsl(40, 80%, 45%);
   position: absolute;
   bottom: 0;
-  top: -277px;
-  left: 777px;
+  top: -300px;
+  left: 677px;
   right: 0;
-  z-index: 9999;
   overflow-wrap: break-word;
+  z-index: 9999;
 
   @media (max-width: 805px) {
     position: static;
@@ -153,4 +159,80 @@ h1 {
 p {
   line-height: 1.4;
   overflow-wrap: break-word;
+}
+
+.block {
+  position: relative;
+
+  margin: 5em 2em;
+  padding: 10px;
+  border: 5px solid hsl(0, 0%, 45%);
+  z-index: 9999;
+}
+
+.circle_ {
+  border: 5px solid hsl(0, 0%, 45%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background-color: hsl(0, 0%, 100%);
+
+  position: absolute;
+  top: -35px;
+  right: initial;
+  left: -35px;
+  z-index: 9999;
+}
+.circle__ {
+  border: 5px solid hsl(0, 0%, 45%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 45%);
+  position: absolute;
+  top: -35px;
+  right: initial;
+  left: 75px;
+  z-index: 9999;
+}
+.circle___ {
+  border: 5px solid hsl(0, 0%, 45%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(0, 0%, 45%);
+  position: absolute;
+  top: 75px;
+  left: -27px;
+  z-index: 9999;
+}
+
+//  Tool tip
+
+.tooltip-parent {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip-child {
+  display: none;
+  // top: -40px;
+  position: absolute;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.85rem;
+  width: 117px;
+  padding: 5px !important;
+  // left: inherit;
+  // right: -25px;
+}
+
+.tooltip-parent:hover .tooltip-child {
+  display: block;
+}
+a {
+  display: inline-block;
 }
