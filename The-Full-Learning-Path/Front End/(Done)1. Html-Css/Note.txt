@@ -852,27 +852,8 @@ HTML (Hypertext Markup Language)
                     clone
 
    # Position's 
-
-        # Relative (recommended for the parent element)
-            position: relative;
-            -> unlocks properties such as:
-                    top, left, right, bottom
-
-        # Absolute  (relative to the parent or the body by default) [takes an element out of the original flow] 
-        overflow-wrap: break-word;
-
-            position: absolute;
-            top: 0%;
-            bottom: 0%;
-            left: 0%;
-            right: 0%;
-
-        # z-index 
-            You can use the z-index to layer elements 
-            but you need to have positions on the elements
-
     
-            # Types of Position's
+        # Types of Position's
                 # Static (default)
 
                 # Relative 
@@ -882,7 +863,7 @@ HTML (Hypertext Markup Language)
                     and also unlocks properties such as:
                         top, left, right, bottom
 
-                # absolute 
+                # absolute (relative to the parent or the body by default) [takes an element out of the original flow] 
                     removes the element from the normal flow of the page 
 
                     NOTE:
@@ -892,6 +873,13 @@ HTML (Hypertext Markup Language)
                         be positioned in relation to the first parent element that has 
                         its own position set.
 
+
+                            position: absolute;
+                            top: 0%;
+                            bottom: 0%;
+                            left: 0%;
+                            right: 0%;
+
                 # Fixed 
                     remove from normal flow -> place it in the same place in the viewport
 
@@ -900,6 +888,42 @@ HTML (Hypertext Markup Language)
 
                 # sticky 
                     act like relative elements but on scroll change to fixed elements 
+
+        # Stacking Contexts
+
+            -> How elements get stacked is determined by the layout manager
+
+                - Flow Layout
+                    ->  Nothing stacks but if forced with a negative margins then
+                        the DOM order matters 
+        
+        # Creating stacking context 
+            -> give the element a position[!static] and z-index[!negative]
+            -> The isolation property - isolation: isolate; [creates a stack context]
+
+        # General Rule's 
+            - positioned elements will always render on top of non-positioned ones.
+            
+                summarize:
+
+                   - When all siblings are rendered in Flow layout, the DOM order controls how the background elements overlap, but the content will always float to the front.
+
+                   - If one sibling uses positioned layout, it will appear above its non-positioned sibling, no matter what the DOM order is.
+
+                   - If both siblings use positioned layout, the DOM order controls which element will be on top. Unlike in Flow layout, the content does not float to the front.
+
+        # z-index [ only works with positioned elements* -> but it does in Flexbox (as well as Grid].
+            -> Never use negative z-index values!!!
+
+            -> Managing z-index
+                - make sure you just don't throw z-index at every problem you face
+                check for the DOM order is another way to solve stacking problems before 
+                trying out z-index
+
+
+                Note: Be careful with swapping the DOM order to control rendering should be done 
+                on elements that are not interactive for cases where users interact with keyboard 
+
 
         # Tips:
          Center an element using position absolute 
