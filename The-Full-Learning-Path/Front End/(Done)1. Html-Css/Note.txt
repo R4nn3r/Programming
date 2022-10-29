@@ -787,6 +787,24 @@ HTML (Hypertext Markup Language)
                 "inherit" keyword allows authors to explicitly specify inheritance. 
                 It works on both inherited and non-inherited properties.
 
+    # The Cascade 
+            The cascading algorithm determines how to find the value to apply
+            for each property for each document element.
+
+            Thus steps followed by the algo,
+                - Relevance
+                - Origin and importance
+                - Specificity
+                - Order of appearance 
+            
+
+            Note: 
+                Transitions and animations
+                    Property values set by animation @keyframes are more important than all 
+                    normal styles (those with no !important set).
+                    Property values being set in a transition take precedence over all other
+                    values set, even those marked with !important.
+
     # Width Algorithms 
          How elements react to the width algorithm is highly dependent on the type of element they are:
             block elements have dynamic sizing (they are context aware) because they have 
@@ -804,35 +822,70 @@ HTML (Hypertext Markup Language)
             - min\max-Width
     
     # Height Algorithms
+        [bad to tinker with so just DON'T!]
         
-        
-    # Border Properties 
-        - border width
-        - border style [solid, dotted]
-        - border color
+    # The Box Model
+
+        The fours aspects the make up the box model Are:
+            - content
+            - padding [innerSpace]
+            - border
+                border vs outline 
+                    -> outline doesn’t affect the layout like [box-shadow]
+            - margin [outerSpace]
+                -> margins can have negative values they will pull the elements outside of there
+                parents
+
+                -> Note: margin-inline: auto [sets element to the center]
+                    but:
+                        only works for horizontal margin 
+                        only works with elements with explicit width
+
+        # Note :
+            [Box Sizing]
+                box-sizing by default has the property set to content-box and that will led to 
+                the page take only the content of elements into account when deciding there size
+                so we always make sure to set box-sizing to [border-box]
+
+                 Ex.
+                 /* Box sizing rules */
+                    *,
+                    *::before,
+                    *::after {
+                        box-sizing: border-box;
+                    }
+
+        # Margin collapses
+            -> Rules of margin collapse 
 
 
 
 
+        # Border Properties 
+            - border width
+            - border style [solid, dotted]
+            - border color
+
+    # The Flow Layout   
+        -> Flow is the default layout mode;; every element will use a display value of either
+        inline, block or inline-block and the default values depend on the tag!
 
 
-    - The Cascade 
-            The cascading algorithm determines how to find the value to apply
-            for each property for each document element.
+        - Note:
+            1, inline -elements always go with the flow with some exceptions given to what we 
+            call [replaced elements] ex, img, video, canvas and buttons(tho not replaced)
+            2, the browsers sees inline elements as text so they have [magic place: are a bit larger then the value you set cause text in a browser has space around it ]
+                solution:
+                    display: block [images, videos to have the correct size]
+                    line-height: 0 -> to the wrapping div
 
-            Thus steps followed by the algo,
-                - Relevance
-                - Origin and importance
-                - Specificity
-                - Order of appearance 
-            
+            Tip [inline Elements ot manipulate text inside a box]:
 
-            Note: 
-                Transitions and animations
-                    Property values set by animation @keyframes are more important than all 
-                    normal styles (those with no !important set).
-                    Property values being set in a transition take precedence over all other
-                    values set, even those marked with !important.
+                box-decoration-break takes two different values:
+                    slice (default)
+                    clone
+
+
 
     - Dealing with the box model
 
@@ -865,8 +918,6 @@ HTML (Hypertext Markup Language)
                 - Meaningful names
 
         
-
-
 # Background Images 
     
     # Steps 
