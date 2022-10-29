@@ -90,6 +90,7 @@ main {
 
 .title {
   padding: 10px;
+  overflow-wrap: break-word;
 }
 
 h1 {
@@ -107,6 +108,7 @@ h1 {
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0px 7px 0px hsl(0, 0%, 45%);
   padding-top: 10px;
+  position: relative;
 }
 .card p {
   font-weight: 300;
@@ -119,11 +121,36 @@ h1 {
   width: fit-content;
   padding: 15px 25px;
   font-size: $fw-ub-700;
-  background-color: hsl(50, 100%, 50%);
-  box-shadow: 0px 7px 0px hsl(50, 80%, 45%);
+  background-color: hsl(45, 100%, 50%);
+  box-shadow: 0px 7px 0px hsl(40, 80%, 45%);
   margin-left: -10px;
+  position: relative;
+  top: -40px;
+}
+.indented-heading_ {
+  font-size: 1rem;
+  padding: 5px 7px;
+  font-size: $fw-ub-700;
+  background-color: hsl(45, 100%, 50%);
+  box-shadow: 0px 7px 0px hsl(40, 80%, 45%);
+  position: absolute;
+  bottom: 0;
+  top: -277px;
+  left: 777px;
+  right: 0;
+  z-index: 9999;
+  overflow-wrap: break-word;
+
+  @media (max-width: 805px) {
+    position: static;
+  }
 }
 
 .card p {
   padding: 20px;
+}
+
+p {
+  line-height: 1.4;
+  overflow-wrap: break-word;
 }
