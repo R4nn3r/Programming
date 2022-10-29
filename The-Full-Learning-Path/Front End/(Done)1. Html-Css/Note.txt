@@ -891,39 +891,49 @@ HTML (Hypertext Markup Language)
 
         # Stacking Contexts
 
-            -> How elements get stacked is determined by the layout manager
+                -> How elements get stacked is determined by the layout manager
 
-                - Flow Layout
-                    ->  Nothing stacks but if forced with a negative margins then
-                        the DOM order matters 
-        
-        # Creating stacking context 
-            -> give the element a position[!static] and z-index[!negative]
-            -> The isolation property - isolation: isolate; [creates a stack context]
-
-        # General Rule's 
-            - positioned elements will always render on top of non-positioned ones.
+                    - Flow Layout
+                        ->  Nothing stacks but if forced with a negative margins then
+                            the DOM order matters 
             
-                summarize:
+            # Creating stacking context 
+                -> give the element a position[!static] and z-index[!negative]
+                -> The isolation property - isolation: isolate; [creates a stack context]
 
-                   - When all siblings are rendered in Flow layout, the DOM order controls how the background elements overlap, but the content will always float to the front.
+            # General Rule's 
+                - positioned elements will always render on top of non-positioned ones.
+                
+                    summarize:
 
-                   - If one sibling uses positioned layout, it will appear above its non-positioned sibling, no matter what the DOM order is.
+                    - When all siblings are rendered in Flow layout, the DOM order controls how the background elements overlap, but the content will always float to the front.
 
-                   - If both siblings use positioned layout, the DOM order controls which element will be on top. Unlike in Flow layout, the content does not float to the front.
+                    - If one sibling uses positioned layout, it will appear above its non-positioned sibling, no matter what the DOM order is.
 
-        # z-index [ only works with positioned elements* -> but it does in Flexbox (as well as Grid].
-            -> Never use negative z-index values!!!
+                    - If both siblings use positioned layout, the DOM order controls which element will be on top. Unlike in Flow layout, the content does not float to the front.
 
-            -> Managing z-index
-                - make sure you just don't throw z-index at every problem you face
-                check for the DOM order is another way to solve stacking problems before 
-                trying out z-index
+            # z-index [ only works with positioned elements* -> but it does in Flexbox (as well as Grid].
+                -> Never use negative z-index values!!!
+
+                -> Managing z-index
+                    - make sure you just don't throw z-index at every problem you face
+                    check for the DOM order is another way to solve stacking problems before 
+                    trying out z-index
 
 
-                Note: Be careful with swapping the DOM order to control rendering should be done 
-                on elements that are not interactive for cases where users interact with keyboard 
+                    Note: Be careful with swapping the DOM order to control rendering should be done 
+                    on elements that are not interactive for cases where users interact with keyboard 
 
+        # Overflow 
+            [x-y]
+                -> auto [recommended]
+                -> visible
+                -> hidden 
+                -> scroll
+
+            - Horizontal overflow
+
+                white-space is a property that lets us tweak how words and other inline/inline-block elements wrap. By setting it to nowrap, we instruct the container to never break lines. That, in tandem with overflow: auto, allows us to achieve a horizontally-scrollable element.
 
         # Tips:
          Center an element using position absolute 
@@ -977,7 +987,6 @@ HTML (Hypertext Markup Language)
             Make sure the name's are 
                 - Meaningful names
 
-        
 # Background Images 
     
     # Steps 
