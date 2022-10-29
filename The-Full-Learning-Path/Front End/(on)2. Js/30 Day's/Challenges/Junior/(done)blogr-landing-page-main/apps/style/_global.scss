@@ -69,44 +69,61 @@ svg {
 // General styles
 body {
   // font-size: $fs-para;
-  font-size: 20px;
-  font-family: $ff-overpass;
-  padding: 1em;
+  font-size: 1.125rem;
+  font-family: $ff-ubuntu;
 }
 
-.card {
-  background-color: hsl(195, 53%, 79%);
-  box-shadow: 5px 5px 20px hsla(195, 40%, 60%, 0.418);
-  padding: 1em;
-  outline: 2px dashed hsl(355, 53%, 79%);
-  border-radius: 0.5em;
-  max-width: 260px;
-  margin: 10em auto;
-}
-
-.card_ {
-  background-color: hsl(355, 53%, 79%);
-  box-shadow: 5px 5px 0px hsla(355, 40%, 60%, 0.418);
-  padding: 0.5em;
-  text-align: center;
-  max-width: 65%;
-  border-radius: 0.5em;
+.max-width-wrapper {
+  max-width: 800px;
   margin-inline: auto;
-  transform: translateY(-2em);
 }
 
-p {
-  color: black;
-  font-weight: bold;
-  font-size: 1rem;
+header {
+  padding: 50px 0 25px 0;
 }
 
-strong {
-  display: inline-block;
-  // display: inline;
-  padding: 5px 20px;
-  color: white;
-  font-size: 1rem;
-  background-color: red;
-  box-decoration-break: clone;
+main {
+  background-color: rgb(182, 194, 197);
+  padding-block: 50px;
+  border-top: 7px solid hsl(0, 0, 45%);
+}
+
+.title {
+  padding: 10px;
+}
+
+h1 {
+  margin-bottom: 0.5em;
+}
+
+.intro-chunk strong {
+  color: deeppink;
+}
+.intro-chunk p {
+  max-width: 480px;
+  padding: 10px;
+}
+.card {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 7px 0px hsl(0, 0%, 45%);
+  padding-top: 10px;
+}
+.card p {
+  font-weight: 300;
+}
+
+.card em {
+  font-weight: 500;
+}
+.indented-heading {
+  width: fit-content;
+  padding: 15px 25px;
+  font-size: $fw-ub-700;
+  background-color: hsl(50, 100%, 50%);
+  box-shadow: 0px 7px 0px hsl(50, 80%, 45%);
+  margin-left: -10px;
+}
+
+.card p {
+  padding: 20px;
 }

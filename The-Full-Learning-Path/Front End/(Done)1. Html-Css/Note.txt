@@ -856,8 +856,17 @@ HTML (Hypertext Markup Language)
                     }
 
         # Margin collapses
-            -> Rules of margin collapse 
 
+            -> Rules of margin collapse 
+                - margins only collapse in flow layouts 
+                - only adjacent elements collapse 
+                - the bigger margin wins 
+                - nesting doesn't prevent collapsing 
+                - margins can collapse in the same direction 
+            
+        
+
+                    
 
 
 
