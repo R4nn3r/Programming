@@ -1339,6 +1339,26 @@ HTML (Hypertext Markup Language)
     - Use heading hierarchies 
     - Add captions and transcripts to videos 
     - Design forms carefully 
+    - add aria-label
+            <button aria-label="Contact support">
+                <HelpCircle />
+            </button>
+        or use
+
+        .visually-hidden {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            border: 0;
+        }
+            -> and wrap content you want to hide visually but make it readable for 
+            screen readers as well
+
+
 
 # How to write semantically good html?
 

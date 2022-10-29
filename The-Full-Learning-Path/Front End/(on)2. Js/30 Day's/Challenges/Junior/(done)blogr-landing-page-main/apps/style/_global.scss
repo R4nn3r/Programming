@@ -91,10 +91,15 @@ main {
 .title {
   padding: 10px;
   overflow-wrap: break-word;
+  font-size: 1.4em;
 }
 
 h1 {
   margin-bottom: 0.5em;
+}
+
+.intro-chunk {
+  margin-top: 5em;
 }
 
 .intro-chunk strong,
@@ -104,6 +109,7 @@ a {
   color: deeppink;
 }
 .intro-chunk p {
+  font-size: 0.85em;
   max-width: 480px;
   padding: 10px;
 }
@@ -115,6 +121,7 @@ a {
 }
 .card p {
   font-weight: 300;
+  font-size: 1em;
 }
 
 .card em {
@@ -145,7 +152,7 @@ a {
   left: 677px;
   right: 0;
   overflow-wrap: break-word;
-  z-index: 9999;
+  z-index: 3;
 
   @media (max-width: 805px) {
     position: static;
@@ -167,7 +174,7 @@ p {
   margin: 5em 2em;
   padding: 10px;
   border: 5px solid hsl(0, 0%, 45%);
-  z-index: 9999;
+  z-index: 3;
 }
 
 .circle_ {
@@ -182,7 +189,7 @@ p {
   top: -35px;
   right: initial;
   left: -35px;
-  z-index: 9999;
+  z-index: 3;
 }
 .circle__ {
   border: 5px solid hsl(0, 0%, 45%);
@@ -194,7 +201,7 @@ p {
   top: -35px;
   right: initial;
   left: 75px;
-  z-index: 9999;
+  z-index: 3;
 }
 .circle___ {
   border: 5px solid hsl(0, 0%, 45%);
@@ -205,7 +212,7 @@ p {
   position: absolute;
   top: 75px;
   left: -27px;
-  z-index: 9999;
+  z-index: 3;
 }
 
 //  Tool tip
@@ -236,4 +243,35 @@ p {
 }
 a {
   display: inline-block;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.jc-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.navbar {
+  background-color: rgb(136, 168, 168);
+
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  h1 {
+    margin: 0;
+  }
 }
