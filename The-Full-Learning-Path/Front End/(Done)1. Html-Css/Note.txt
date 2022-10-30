@@ -445,13 +445,24 @@ HTML (Hypertext Markup Language)
                     width: min-content;
                         Try's to get to the width of the longest single word
 
+                - Ordering 
+                    -> Flipping flex-direction
+                            - row-reverse / column-reverse 
+
+                    -> Other Mechanisms 
+                        - order property [on individual children]
+                        - flex-wrap
 
                 
-            Note : -> Height and with are not hard rule's the flex algorithm usually doesn't break the rules to protect the content 
+            Note : 
+             -> Height and with are not hard rule's the flex algorithm usually doesn't break the rules to protect the content 
 
                 items vs content 
                     -> content: means the group of children with in a flex/grid parent
                     -> items: how the children interact along the cross axis 
+            -> When it comes between any layout modes positioned layouts always win! thats why as a general rule elements can't participate in multiple layout modes at once! [exception you can use relative and more or less sticky with flex]
+
+
         # Grid 
                 Note: In CSS Grid, the parent element is referred to as 
                 the container and its children are called items.
