@@ -448,6 +448,10 @@ HTML (Hypertext Markup Language)
 
                 
             Note : -> Height and with are not hard rule's the flex algorithm usually doesn't break the rules to protect the content 
+
+                items vs content 
+                    -> content: means the group of children with in a flex/grid parent
+                    -> items: how the children interact along the cross axis 
         # Grid 
                 Note: In CSS Grid, the parent element is referred to as 
                 the container and its children are called items.
