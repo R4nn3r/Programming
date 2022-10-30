@@ -385,60 +385,72 @@ HTML (Hypertext Markup Language)
                     run continuously by setting that value to infinite.
 
 # Layout 
-        # Flexbox
+        # Flexbox [controls the children of a parent box and turns the parent into a block]
+
             With flexbox, it's easy to center elements on the page and create 
             dynamic user interfaces that shrink and expand automatically.
 
-                    Note: The direction is based on the flex-direction property.
-                (row)
+                Note: The direction is based on the flex-direction property.
+                (row) and same goes to the column 
+            
             justify-items (main axis horizontally)
             align-items (cross axis vertically)
             
-            - container
+                - container
 
-                display: flexbox | inline-flex;
-                flex-direction: row | row-reverse | column | column-reverse;
-                flex-wrap: nowrap | wrap | wrap-reverse;
-                flex-flow: <‘flex-direction’> || <‘flex-wrap’>
-                justify-content: flex-start | flex-end | center | space-between | space-around;
-                align-items: flex-start | flex-end | center | baseline | stretch;
-                align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+                    display: flexbox | inline-flex;
+                    flex-direction: row | row-reverse | column | column-reverse;
+                    flex-wrap: nowrap | wrap | wrap-reverse;
+                    flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+                    justify-content: flex-start | flex-end | center | space-between | space-around;
+                    align-items: flex-start | flex-end | center | baseline | stretch;
+                    align-content: flex-start | flex-end | center | space-between | space-around | stretch;
 
-            -  items/elements
+                -  items/elements
 
-                order: <integer>;
-                flex-grow: <number>; /* default 0 */
-                flex-shrink: <number>; /* default 1 */
-                flex-basis: <length> | auto; /* default auto */
-                flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
-                align-self: auto | flex-start | flex-end | center | baseline | stretch;
+                    order: <integer>;
+                    flex-grow: <number>; /* default 0 */
+                        -> only grows when there is available space to consume without affecting the siblings  of the child 
 
+                    flex-shrink: <number>; /* default 1 */
+                        -> only works until it gets the minimum size the element can get without the content overflowing
 
-            - flex Shorthand Property
+                    flex-basis: <length> | auto; /* default auto */
+                        -> its just a width or height value that has priority over both tho 
 
-                    Ex, 
-                        
-                    flex: 1 0 10px; 
-
-                    will set the item(children) to 
-                        flex-grow: 1;, 
-                        flex-shrink: 0;,  
-                        flex-basis: 10px;.
-
-            - align-self
-                accepts the same values as align-items and will override any value set by the 
-                align-items property.
-
-            - min and max -content 
-
-                width: max-content;
-                    Try's to get to the smallest size without needing to wrap
-
-                width: min-content;
-                    Try's to get to the width of the longest single word
+                    flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+                    align-self: auto | flex-start | flex-end | center | baseline | stretch;
 
 
+                - flex Shorthand Property
 
+                        Ex, 
+                            
+                        flex: 1 0 10px; 
+
+                        will set the item(children) to 
+                            flex-grow: 1;, 
+                            flex-shrink: 0;,   
+                            flex-basis: 10px;. [works like width or height based on the direction]
+
+                - align-self
+                    accepts the same values as align-items and will override any value set by the 
+                    align-items property. [to the children by the parent]
+
+                - min and max -content 
+
+                    width: max-content;
+                        Try's to get to the smallest size without needing to wrap
+
+                    width: min-content;
+                        Try's to get to the width of the longest single word
+
+              
+
+            # Grow and shrink
+
+
+            Note : -> Height and with are not hard rule's the flex algorithm usually doesn't break the rules to protect the content 
         # Grid 
                 Note: In CSS Grid, the parent element is referred to as 
                 the container and its children are called items.
@@ -1358,8 +1370,6 @@ HTML (Hypertext Markup Language)
             -> and wrap content you want to hide visually but make it readable for 
             screen readers as well
 
-
-
 # How to write semantically good html?
 
     - Text content
@@ -1432,3 +1442,7 @@ HTML (Hypertext Markup Language)
             Serif
             Sans-serif
             Monospace
+
+
+# Modern Component Architecture 
+    -> Css Tutorial module 2
