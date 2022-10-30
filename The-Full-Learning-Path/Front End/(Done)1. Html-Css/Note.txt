@@ -445,11 +445,8 @@ HTML (Hypertext Markup Language)
                     width: min-content;
                         Try's to get to the width of the longest single word
 
-              
 
-            # Grow and shrink
-
-
+                
             Note : -> Height and with are not hard rule's the flex algorithm usually doesn't break the rules to protect the content 
         # Grid 
                 Note: In CSS Grid, the parent element is referred to as 

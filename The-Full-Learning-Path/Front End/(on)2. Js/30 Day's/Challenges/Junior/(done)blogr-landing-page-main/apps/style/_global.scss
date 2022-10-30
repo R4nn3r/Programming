@@ -316,3 +316,21 @@ a {
     }
   }
 }
+
+.card_ {
+  display: flex;
+  margin: 1em;
+  border: 2px solid red;
+
+  div {
+    padding: 10px;
+    background-color: rgb(152, 226, 152);
+    flex-grow: 1;
+    flex-basis: 0;
+    &:last-child {
+      flex-shrink: 1;
+
+      background-color: rgb(245, 255, 195);
+    }
+  }
+}
