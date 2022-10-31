@@ -393,3 +393,110 @@ a {
     background-color: azure;
   }
 }
+
+// flex
+.card-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  // style
+  background-color: azure;
+  box-shadow: 5px 10px 15px hsla(0, 0%, 27%, 0.244);
+  padding: 10px;
+  border-radius: 5px;
+  overflow: auto;
+  position: relative;
+
+  div {
+    padding: 10px;
+    border-radius: 5px;
+
+    &:first-child {
+      background-color: lavender;
+      flex: 1;
+      max-height: fit-content;
+      height: fit-content;
+
+      position: sticky;
+      top: 0;
+      left: 0;
+      background: rebeccapurple;
+    }
+    &:last-child {
+      background-color: azure;
+      flex: 1;
+      height: 0px;
+
+      p {
+        background-color: lavender;
+        padding: 10px;
+        margin-top: -10px;
+
+        position: sticky;
+        top: 0;
+        left: 0;
+        background: rebeccapurple;
+      }
+      // .list {
+      //   overflow: auto;
+      // }
+    }
+  }
+}
+
+// holly layout
+.wrapper_ {
+  border: 1px dashed black;
+
+  margin-block: 5em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .box_.header {
+    background-color: lavender;
+    padding: 15px;
+  }
+
+  .middle {
+    border: 1px dashed red;
+    background-color: pink;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+    @include breakpoints-down(small) {
+      flex-direction: column;
+    }
+
+    .box_ {
+      padding: 20px;
+      border: 1px dashed red;
+      &:first-child {
+        flex: 1 999999 200px;
+        background-color: rgb(128, 128, 232);
+        @include breakpoints-down(small) {
+          order: 2;
+        }
+      }
+      &:nth-child(2) {
+        flex: 1 1 500px;
+        @include breakpoints-down(small) {
+          order: 3;
+        }
+      }
+      &:last-child {
+        flex: 1 999999 200px;
+        background-color: rgb(128, 128, 232);
+      }
+    }
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 15px;
+
+    background-color: azure;
+  }
+}

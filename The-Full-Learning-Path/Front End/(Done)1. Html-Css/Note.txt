@@ -3,6 +3,465 @@ HTML (Hypertext Markup Language)
 # HTML
     <!-- -> Commenting --> 
 
+
+<!-- -> Major Topics --> 
+
+#  Rendering Logic [!Important] *****
+
+    # Inheritance 
+        Core Concept:
+            When you set a property for a parent mostly the children of that parent will get to
+            inherit those properties.
+           
+           # font-* properties are inherited
+
+            properties such as height, width, border, margin, padding, etc. are not inherited.
+           
+                Note: 
+                Form elements don;t follow the inheritance rule by default.
+                "inherit" keyword allows authors to explicitly specify inheritance. 
+                It works on both inherited and non-inherited properties.
+
+    # The Cascade 
+            The cascading algorithm determines how to find the value to apply
+            for each property for each document element.
+
+            Thus steps followed by the algo,
+                - Relevance
+                - Origin and importance
+                - Specificity
+                - Order of appearance 
+            
+
+            Note: 
+                Transitions and animations
+                    Property values set by animation @keyframes are more important than all 
+                    normal styles (those with no !important set).
+                    Property values being set in a transition take precedence over all other
+                    values set, even those marked with !important.
+
+    # Width Algorithms 
+         How elements react to the width algorithm is highly dependent on the type of element they are:
+            block elements have dynamic sizing (they are context aware) because they have 
+            a width of auto they grow as much as there able to.
+
+        # Keyword values 
+            - Measurements (100%, px, rem)
+            - Keywords (auto, fit-content, min/max-content)   
+
+                Note: when values are set by;
+                    parent: extrinsic
+
+                    child: intrinsic 
+
+            - min\max-Width
+    
+    # Height Algorithms
+        [bad to tinker with so just DON'T!]
+        
+    # The Box Model
+
+        The fours aspects the make up the box model Are:
+            - content
+            - padding [innerSpace]
+            - border
+                border vs outline 
+                    -> outline doesn’t affect the layout like [box-shadow]
+            - margin [outerSpace]
+                -> margins can have negative values they will pull the elements outside of there
+                parents
+
+                -> Note: margin-inline: auto [sets element to the center]
+                    but:
+                        only works for horizontal margin 
+                        only works with elements with explicit width
+
+        # Note :
+            [Box Sizing]
+                box-sizing by default has the property set to content-box and that will led to 
+                the page take only the content of elements into account when deciding there size
+                so we always make sure to set box-sizing to [border-box]
+
+                 Ex.
+                 /* Box sizing rules */
+                    *,
+                    *::before,
+                    *::after {
+                        box-sizing: border-box;
+                    }
+
+        # Margin collapses
+                When two block-level elements are adjacent or nested, their margins can overlap, or be absorbed.
+                
+            -> Rules of margin collapse 
+                - margins only collapse in flow layouts 
+                - only adjacent elements collapse 
+                - the bigger margin wins 
+                - nesting doesn't prevent collapsing 
+                - margins can collapse in the same direction 
+            
+        
+
+                    
+
+
+
+        # Border Properties 
+            - border width
+            - border style [solid, dotted]
+            - border color
+
+    # The Flow Layout   
+        -> Flow is the default layout mode;; every element will use a display value of either
+        inline, block or inline-block and the default values depend on the tag!
+
+
+        - Note:
+            1, inline -elements always go with the flow with some exceptions given to what we 
+            call [replaced elements] ex, img, video, canvas and buttons(tho not replaced)
+            2, the browsers sees inline elements as text so they have [magic place: are a bit larger then the value you set cause text in a browser has space around it ]
+                solution:
+                    display: block [images, videos to have the correct size]
+                    line-height: 0 -> to the wrapping div
+
+            Tip [inline Elements ot manipulate text inside a box]:
+
+                box-decoration-break takes two different values:
+                    slice (default)
+                    clone
+
+   # Position's 
+    
+        # Types of Position's
+                # Static (default)
+
+                # Relative 
+                    (look at this as an anchor everything below 
+                    this will be positioned relative to the element that has position: "relative" )
+
+                    and also unlocks properties such as:
+                        top, left, right, bottom
+
+                # absolute (relative to the parent or the body by default) [takes an element out of the original flow] 
+                    removes the element from the normal flow of the page 
+
+                    NOTE:
+                        The main difference between relative and absolute positioning 
+                        is that position: absolute will take a child element completely 
+                        out of the normal flow of the document. And that child will 
+                        be positioned in relation to the first parent element that has 
+                        its own position set.
+
+
+                            position: absolute;
+                            top: 0%;
+                            bottom: 0%;
+                            left: 0%;
+                            right: 0%;
+
+                # Fixed 
+                    remove from normal flow -> place it in the same place in the viewport
+
+                        Tip:    A fixed element must have a top or bottom position set. 
+                                If it doesn’t, it will simply not exist on the page at all.
+
+                # sticky 
+                    act like relative elements but on scroll change to fixed elements 
+
+        # Stacking Contexts
+
+                -> How elements get stacked is determined by the layout manager
+
+                    - Flow Layout
+                        ->  Nothing stacks but if forced with a negative margins then
+                            the DOM order matters 
+            
+            # Creating stacking context 
+                -> give the element a position[!static] and z-index[!negative]
+                -> The isolation property - isolation: isolate; [creates a stack context]
+
+            # General Rule's 
+                - positioned elements will always render on top of non-positioned ones.
+                
+                    summarize:
+
+                    - When all siblings are rendered in Flow layout, the DOM order controls how the background elements overlap, but the content will always float to the front.
+
+                    - If one sibling uses positioned layout, it will appear above its non-positioned sibling, no matter what the DOM order is.
+
+                    - If both siblings use positioned layout, the DOM order controls which element will be on top. Unlike in Flow layout, the content does not float to the front.
+
+            # z-index [ only works with positioned elements* -> but it does in Flexbox (as well as Grid].
+                -> Never use negative z-index values!!!
+
+                -> Managing z-index
+                    - make sure you just don't throw z-index at every problem you face
+                    check for the DOM order is another way to solve stacking problems before 
+                    trying out z-index
+
+
+                    Note: Be careful with swapping the DOM order to control rendering should be done 
+                    on elements that are not interactive for cases where users interact with keyboard 
+
+        # Overflow 
+            [x-y]
+                -> auto [recommended]
+                -> visible
+                -> hidden 
+                -> scroll
+
+            - Horizontal overflow
+
+                white-space is a property that lets us tweak how words and other inline/inline-block elements wrap. By setting it to nowrap, we instruct the container to never break lines. That, in tandem with overflow: auto, allows us to achieve a horizontally-scrollable element.
+
+        # Tips:
+         Center an element using position absolute 
+
+            There are 4 important ingredients for this trick to work:
+                absolute positioning (position: absolute)
+                Equal distances from each edge (ideally 0px)
+                A fixed size (defined width and height properties)
+                Hungry margins (margin: auto)
+
+                .box {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+
+                    bottom: 0px;
+                    width: 100px;
+                    height: 100px;
+                    margin: auto;
+                    background: green;
+                }
+
+    - Dealing with the box model
+
+            Tip:
+                *,
+                *::before,
+                ::after {
+                    box-sizing: border-box;
+                }
+
+            This means the padding and margin will be consider with the properties
+            that set your height and width 
+
+    - Specificity
+            If there are two or more CSS rules that point to the same element, the 
+            selector with the highest specificity value will "win", and its style 
+            declaration will be applied to that HTML element.
+
+
+        # There are four categories which define the specificity level of a selector:
+
+            Inline styles - Example: <h1 style="color: pink;">
+            IDs - Example: #navbar
+            Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+            Elements and pseudo-elements - Example: h1, :before
+
+    - Naming stuff
+
+            Make sure the name's are 
+                - Meaningful names
+
+# Ways to make any page's responsive
+        Note: Every page is responsive from the start your breaking the page so you can solve it! thats the mind set you need to have.
+    
+    - Always start with a [Global] styling! 
+    - Avoid fixed sizes 
+    - Use media queries to add complexity
+    - Take advantage of modern css
+
+# Accessibility 
+    - Ensure your site 
+    - Use high contrast colors 
+    - Provide Alt text for images 
+    - Use heading hierarchies 
+    - Add captions and transcripts to videos 
+    - Design forms carefully 
+    - add aria-label
+            <button aria-label="Contact support">
+                <HelpCircle />
+            </button>
+        or use
+
+        .visually-hidden {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            border: 0;
+        }
+            -> and wrap content you want to hide visually but make it readable for 
+            screen readers as well
+
+# How to write semantically good html?
+
+    - Text content
+        - use proper heading and paragraph tags 
+    
+    - Using clear language 
+        - Don't use dashes 
+        - Expand abbreviations 
+        - Expand acronyms at least once or twice, then use the <abbr> tag to describe them. 
+   
+    - Page layout 
+            <header>
+                <h1>Header</h1>
+            </header>
+
+            <nav>
+                <!-- main navigation in here -->
+            </nav>
+
+            <!-- Here is our page's main content -->
+            <main>
+                <!-- It contains an article -->
+                <article>
+                    <h2>Article heading</h2>
+
+                    <!-- article content in here -->
+                </article>
+
+                <aside>
+                    <h2>Related</h2>
+
+                    <!-- aside content in here -->
+                </aside>
+            </main>
+
+            <!-- And here is our main footer that is used across all the pages of our website -->
+
+            <footer>
+                <!-- footer content in here -->
+            </footer>
+
+
+
+    Reasons 
+        - Easier to develop 
+        - Better on mobile 
+        - Good for SEO (Search Engine Optimization)
+
+# Css layouts Secret!
+
+    - Relationship between parent and child?
+        Tip: 
+            - let the children dictate the height of the parent!
+            - and children's width should be auto 
+
+    - How child's margin impacts the parent 
+    
+    - Flex and grid impacts on the relationship of elements 
+        Gird:
+            The parent has more control on the children cause 
+            your setting up a layout and the children live within that layout 
+
+        Flex:
+            The children affect the parent as well as there siblings 
+
+# Best Practice to follow to get a better grip on the industry.
+
+    # Optimization of the web site using npm packages
+        - npm init 
+        - npm install postcss postcss-cli autoprefixer cssnano postcss-pxtorem --save-dev
+        - Write the script 
+            "scripts": {
+                    "optimize-css":"postcss style.css --use autoprefixer cssnano postcss-pxtorem --output style.prod.css --no-map"
+                },
+        - Run the script
+            npm run optimize-css
+
+
+        - Deploy to git pages or netlify 
+
+    # Making a website start to finish 
+
+        1: Have a good look at the design and try to figure out on some routes to can take
+           from 
+                - how you can structure the html to how you can style the page 
+                - what can be generalized and used in common
+                - how to use the media query to make the site responsive 
+                - and complication you may have going through writing the code 
+                - decide on how you can abstract more of your properties
+        2: npm create vite@latest
+            chose the options as needed
+                cd to the directory
+                    npm install
+
+                    npm run dev
+                        -> to run local host
+
+        3: Before staring you need to rest the default css styles 
+
+                -> https://gist.github.com/Asjas/4b0736108d56197fce0ec9068145b421
+
+
+                tip: Change this from what ever it was before 
+                        /* Remove default margin */
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            font: inherit;  -> (makes you style every element from the class)
+                        }
+                tip:
+                    add
+                    scroll-behavior: smooth;
+
+        4:  Create custom set ups for the variable on :root sot it gets easier to
+            use for responsiveness and it does look better 
+
+                - Create utility classes  
+                    -> make sure your utility list has low specificity 
+
+        5: Create the Html structure 
+
+        6: General styling 
+            - For Svg 
+                https://svgsprit.es/
+
+                    make a general.svg
+                        - paste the sprit on it 
+                          and use that to import svg on the site 
+                          its better then just using and img 
+            - For sticky navbar's 
+                scroll-padding-top: 2em;
+                    So that the content doesn't slide under the navbar
+
+        7: Make sure to use semantic elements
+
+            <html lang="en">
+                <head>
+                    <title>Hello</title>
+                </head>
+                <body>
+                    <header>This is the header</header>
+                    <nav>This is the nav</nav>
+                    <main>This is the main</main>
+                    <footer>This is the footer</footer>
+                </body>
+            </html>
+
+            <html lang="en">
+            <head>
+                    <title>Hello</title>
+                </head>
+                <body>
+                    <div role="banner">This is the header</div>
+                    <div role="navigation">This is the nav</div>
+                    <div role="main">This is the main</div>
+                    <div role="contentinfo">This is the footer</div>
+                </body>
+            </html>
+
+
+<!-- -> Basics --> 
+
 # Basic HTML
 
         Headers                 (<h1></h1> -> upto <h6></h6> where they get smaller in size)
@@ -452,7 +911,8 @@ HTML (Hypertext Markup Language)
                     -> Other Mechanisms 
                         - order property [on individual children]
                         - flex-wrap
-
+                        
+                - z-index [works in flex without using position]
                 
             Note : 
              -> Height and with are not hard rule's the flex algorithm usually doesn't break the rules to protect the content 
@@ -633,100 +1093,6 @@ HTML (Hypertext Markup Language)
             parent [500*250]
                 - child [50%*50%] -> (250*125)
 
-# Best Practice to follow to get a better grip on the industry.
-
-    # Optimization of the web site using npm packages
-        - npm init 
-        - npm install postcss postcss-cli autoprefixer cssnano postcss-pxtorem --save-dev
-        - Write the script 
-            "scripts": {
-                    "optimize-css":"postcss style.css --use autoprefixer cssnano postcss-pxtorem --output style.prod.css --no-map"
-                },
-        - Run the script
-            npm run optimize-css
-
-
-        - Deploy to git pages or netlify 
-
-
-    # Making a website start to finish 
-
-        1: Have a good look at the design and try to figure out on some routes to can take
-           from 
-                - how you can structure the html to how you can style the page 
-                - what can be generalized and used in common
-                - how to use the media query to make the site responsive 
-                - and complication you may have going through writing the code 
-                - decide on how you can abstract more of your properties
-        2: npm create vite@latest
-            chose the options as needed
-                cd to the directory
-                    npm install
-
-                    npm run dev
-                        -> to run local host
-
-        3: Before staring you need to rest the default css styles 
-
-                -> https://gist.github.com/Asjas/4b0736108d56197fce0ec9068145b421
-
-
-                tip: Change this from what ever it was before 
-                        /* Remove default margin */
-                        * {
-                            margin: 0;
-                            padding: 0;
-                            font: inherit;  -> (makes you style every element from the class)
-                        }
-                tip:
-                    add
-                    scroll-behavior: smooth;
-
-        4:  Create custom set ups for the variable on :root sot it gets easier to
-            use for responsiveness and it does look better 
-
-                - Create utility classes  
-                    -> make sure your utility list has low specificity 
-
-        5: Create the Html structure 
-
-        6: General styling 
-            - For Svg 
-                https://svgsprit.es/
-
-                    make a general.svg
-                        - paste the sprit on it 
-                          and use that to import svg on the site 
-                          its better then just using and img 
-            - For sticky navbar's 
-                scroll-padding-top: 2em;
-                    So that the content doesn't slide under the navbar
-
-
-        <html lang="en">
-            <head>
-                <title>Hello</title>
-            </head>
-            <body>
-                <header>This is the header</header>
-                <nav>This is the nav</nav>
-                <main>This is the main</main>
-                <footer>This is the footer</footer>
-            </body>
-        </html>
-
-        <html lang="en">
-        <head>
-                <title>Hello</title>
-            </head>
-            <body>
-                <div role="banner">This is the header</div>
-                <div role="navigation">This is the nav</div>
-                <div role="main">This is the main</div>
-                <div role="contentinfo">This is the footer</div>
-            </body>
-        </html>
-
 # pseudo elements and class's
     Classes: target specific states
         :focus, :hover, :active . ...
@@ -751,265 +1117,6 @@ HTML (Hypertext Markup Language)
         - :target 
 
         - :only-child , :first-child , :last-child, only-of-type
-
-#  Rendering Logic [!Important] *****
-
-    # Inheritance 
-        Core Concept:
-            When you set a property for a parent mostly the children of that parent will get to
-            inherit those properties.
-           
-           # font-* properties are inherited
-
-            properties such as height, width, border, margin, padding, etc. are not inherited.
-           
-                Note: 
-                Form elements don;t follow the inheritance rule by default.
-                "inherit" keyword allows authors to explicitly specify inheritance. 
-                It works on both inherited and non-inherited properties.
-
-    # The Cascade 
-            The cascading algorithm determines how to find the value to apply
-            for each property for each document element.
-
-            Thus steps followed by the algo,
-                - Relevance
-                - Origin and importance
-                - Specificity
-                - Order of appearance 
-            
-
-            Note: 
-                Transitions and animations
-                    Property values set by animation @keyframes are more important than all 
-                    normal styles (those with no !important set).
-                    Property values being set in a transition take precedence over all other
-                    values set, even those marked with !important.
-
-    # Width Algorithms 
-         How elements react to the width algorithm is highly dependent on the type of element they are:
-            block elements have dynamic sizing (they are context aware) because they have 
-            a width of auto they grow as much as there able to.
-
-        # Keyword values 
-            - Measurements (100%, px, rem)
-            - Keywords (auto, fit-content, min/max-content)   
-
-                Note: when values are set by;
-                    parent: extrinsic
-
-                    child: intrinsic 
-
-            - min\max-Width
-    
-    # Height Algorithms
-        [bad to tinker with so just DON'T!]
-        
-    # The Box Model
-
-        The fours aspects the make up the box model Are:
-            - content
-            - padding [innerSpace]
-            - border
-                border vs outline 
-                    -> outline doesn’t affect the layout like [box-shadow]
-            - margin [outerSpace]
-                -> margins can have negative values they will pull the elements outside of there
-                parents
-
-                -> Note: margin-inline: auto [sets element to the center]
-                    but:
-                        only works for horizontal margin 
-                        only works with elements with explicit width
-
-        # Note :
-            [Box Sizing]
-                box-sizing by default has the property set to content-box and that will led to 
-                the page take only the content of elements into account when deciding there size
-                so we always make sure to set box-sizing to [border-box]
-
-                 Ex.
-                 /* Box sizing rules */
-                    *,
-                    *::before,
-                    *::after {
-                        box-sizing: border-box;
-                    }
-
-        # Margin collapses
-
-            -> Rules of margin collapse 
-                - margins only collapse in flow layouts 
-                - only adjacent elements collapse 
-                - the bigger margin wins 
-                - nesting doesn't prevent collapsing 
-                - margins can collapse in the same direction 
-            
-        
-
-                    
-
-
-
-        # Border Properties 
-            - border width
-            - border style [solid, dotted]
-            - border color
-
-    # The Flow Layout   
-        -> Flow is the default layout mode;; every element will use a display value of either
-        inline, block or inline-block and the default values depend on the tag!
-
-
-        - Note:
-            1, inline -elements always go with the flow with some exceptions given to what we 
-            call [replaced elements] ex, img, video, canvas and buttons(tho not replaced)
-            2, the browsers sees inline elements as text so they have [magic place: are a bit larger then the value you set cause text in a browser has space around it ]
-                solution:
-                    display: block [images, videos to have the correct size]
-                    line-height: 0 -> to the wrapping div
-
-            Tip [inline Elements ot manipulate text inside a box]:
-
-                box-decoration-break takes two different values:
-                    slice (default)
-                    clone
-
-   # Position's 
-    
-        # Types of Position's
-                # Static (default)
-
-                # Relative 
-                    (look at this as an anchor everything below 
-                    this will be positioned relative to the element that has position: "relative" )
-
-                    and also unlocks properties such as:
-                        top, left, right, bottom
-
-                # absolute (relative to the parent or the body by default) [takes an element out of the original flow] 
-                    removes the element from the normal flow of the page 
-
-                    NOTE:
-                        The main difference between relative and absolute positioning 
-                        is that position: absolute will take a child element completely 
-                        out of the normal flow of the document. And that child will 
-                        be positioned in relation to the first parent element that has 
-                        its own position set.
-
-
-                            position: absolute;
-                            top: 0%;
-                            bottom: 0%;
-                            left: 0%;
-                            right: 0%;
-
-                # Fixed 
-                    remove from normal flow -> place it in the same place in the viewport
-
-                        Tip:    A fixed element must have a top or bottom position set. 
-                                If it doesn’t, it will simply not exist on the page at all.
-
-                # sticky 
-                    act like relative elements but on scroll change to fixed elements 
-
-        # Stacking Contexts
-
-                -> How elements get stacked is determined by the layout manager
-
-                    - Flow Layout
-                        ->  Nothing stacks but if forced with a negative margins then
-                            the DOM order matters 
-            
-            # Creating stacking context 
-                -> give the element a position[!static] and z-index[!negative]
-                -> The isolation property - isolation: isolate; [creates a stack context]
-
-            # General Rule's 
-                - positioned elements will always render on top of non-positioned ones.
-                
-                    summarize:
-
-                    - When all siblings are rendered in Flow layout, the DOM order controls how the background elements overlap, but the content will always float to the front.
-
-                    - If one sibling uses positioned layout, it will appear above its non-positioned sibling, no matter what the DOM order is.
-
-                    - If both siblings use positioned layout, the DOM order controls which element will be on top. Unlike in Flow layout, the content does not float to the front.
-
-            # z-index [ only works with positioned elements* -> but it does in Flexbox (as well as Grid].
-                -> Never use negative z-index values!!!
-
-                -> Managing z-index
-                    - make sure you just don't throw z-index at every problem you face
-                    check for the DOM order is another way to solve stacking problems before 
-                    trying out z-index
-
-
-                    Note: Be careful with swapping the DOM order to control rendering should be done 
-                    on elements that are not interactive for cases where users interact with keyboard 
-
-        # Overflow 
-            [x-y]
-                -> auto [recommended]
-                -> visible
-                -> hidden 
-                -> scroll
-
-            - Horizontal overflow
-
-                white-space is a property that lets us tweak how words and other inline/inline-block elements wrap. By setting it to nowrap, we instruct the container to never break lines. That, in tandem with overflow: auto, allows us to achieve a horizontally-scrollable element.
-
-        # Tips:
-         Center an element using position absolute 
-
-            There are 4 important ingredients for this trick to work:
-                absolute positioning (position: absolute)
-                Equal distances from each edge (ideally 0px)
-                A fixed size (defined width and height properties)
-                Hungry margins (margin: auto)
-
-                .box {
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    right: 0px;
-
-                    bottom: 0px;
-                    width: 100px;
-                    height: 100px;
-                    margin: auto;
-                    background: green;
-                }
-
-    - Dealing with the box model
-
-            Tip:
-                *,
-                *::before,
-                ::after {
-                    box-sizing: border-box;
-                }
-
-            This means the padding and margin will be consider with the properties
-            that set your height and width 
-
-    - Specificity
-            If there are two or more CSS rules that point to the same element, the 
-            selector with the highest specificity value will "win", and its style 
-            declaration will be applied to that HTML element.
-
-
-        # There are four categories which define the specificity level of a selector:
-
-            Inline styles - Example: <h1 style="color: pink;">
-            IDs - Example: #navbar
-            Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
-            Elements and pseudo-elements - Example: h1, :before
-
-    - Naming stuff
-
-            Make sure the name's are 
-                - Meaningful names
 
 # Background Images 
     
@@ -1331,104 +1438,6 @@ HTML (Hypertext Markup Language)
 
         # Text contrast must not be too low 
 
-# Css layouts Secret!
-
-    - Relationship between parent and child?
-        Tip: 
-            - let the children dictate the height of the parent!
-            - and children's width should be auto 
-
-    - How child's margin impacts teh parent 
-    
-    - Flex and grid impacts on the relationship of elements 
-        Gird:
-            The parent has more control on the children cause 
-            your setting up a layout and the children live within that layout 
-
-        Flex:
-            The children affect the parent as well as there siblings 
-
-# Ways to make any page's responsive
-        Note: Every page is responsive from the start your breaking the page so you can solve it! thats the mind set you need to have.
-    
-    - Always start with a [Global] styling! 
-    - Avoid fixed sizes 
-    - Use media queries to add complexity
-    - Take advantage of modern css
-
-# Accessibility 
-    - Ensure your site 
-    - Use high contrast colors 
-    - Provide Alt text for images 
-    - Use heading hierarchies 
-    - Add captions and transcripts to videos 
-    - Design forms carefully 
-    - add aria-label
-            <button aria-label="Contact support">
-                <HelpCircle />
-            </button>
-        or use
-
-        .visually-hidden {
-            position: absolute;
-            overflow: hidden;
-            clip: rect(0 0 0 0);
-            height: 1px;
-            width: 1px;
-            margin: -1px;
-            padding: 0;
-            border: 0;
-        }
-            -> and wrap content you want to hide visually but make it readable for 
-            screen readers as well
-
-# How to write semantically good html?
-
-    - Text content
-        - use proper heading and paragraph tags 
-    
-    - Using clear language 
-        - Don't use dashes 
-        - Expand abbreviations 
-        - Expand acronyms at least once or twice, then use the <abbr> tag to describe them. 
-   
-    - Page layout 
-            <header>
-                <h1>Header</h1>
-            </header>
-
-            <nav>
-                <!-- main navigation in here -->
-            </nav>
-
-            <!-- Here is our page's main content -->
-            <main>
-                <!-- It contains an article -->
-                <article>
-                    <h2>Article heading</h2>
-
-                    <!-- article content in here -->
-                </article>
-
-                <aside>
-                    <h2>Related</h2>
-
-                    <!-- aside content in here -->
-                </aside>
-            </main>
-
-            <!-- And here is our main footer that is used across all the pages of our website -->
-
-            <footer>
-                <!-- footer content in here -->
-            </footer>
-
-
-
-    Reasons 
-        - Easier to develop 
-        - Better on mobile 
-        - Good for SEO (Search Engine Optimization)
 
 
 
