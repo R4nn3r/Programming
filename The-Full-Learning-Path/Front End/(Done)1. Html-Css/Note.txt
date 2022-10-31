@@ -1449,6 +1449,8 @@ HTML (Hypertext Markup Language)
 "we suffer more often in imagination than in reality."
 -- Seneca 
 
+"Some days are easier and rest!"
+
 # Best Case Practice
 
     # Units 
