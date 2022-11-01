@@ -1034,7 +1034,7 @@ https://developer.mozilla.org/en-US/
         C:
             -> Connects the model and view together::
                     1,  Responds to events from the view 
-                    2. Tells the model to update its data 
+                    2.  Tells the model to update its data 
 
 # Local Storage 
 
