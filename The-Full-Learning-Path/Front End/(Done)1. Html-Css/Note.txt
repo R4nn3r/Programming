@@ -5,6 +5,9 @@ HTML (Hypertext Markup Language)
 
 
 <!-- -> Major Topics --> 
+# Major Rule's 
+    1, Flex box for single dimension layout (row, column)
+    2. Grid for multiple dimension layouts ( row and column together)
 
 #  Rendering Logic [!Important] *****
 
