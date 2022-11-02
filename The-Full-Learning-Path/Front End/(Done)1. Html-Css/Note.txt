@@ -462,6 +462,175 @@ HTML (Hypertext Markup Language)
                 </body>
             </html>
 
+# Bad practices
+
+    # Don't use px specially from text.
+
+        # rem (root em unit )
+
+            works based on the root font size 
+            if root font-size: 16px;
+                    1rem = 16px
+
+
+        # Overly complicated selectors 
+            
+        # Readable css 
+
+        # Organized Css 
+            - Group similar types
+            - Comment code 
+
+        # Refractor your code 
+            Tip: remember
+                - inheritance
+                - group styles that are the same!
+                    - group selectors at the top!
+
+        # Don't remove outlines [a must for accessibility]
+            -> if you do style focus states!
+
+        # Text contrast must not be too low 
+
+# Sass , Bem
+
+    # Sass Partials 
+        Creating partitions for the styles based on there structure
+            Ex.
+                Header  ->      _header.scss
+                Hero    ->      _hero.scss
+                Footer  ->      _footer.scss   
+
+        
+        For bigger projects you can even partition based on type of element 
+            Ex,
+
+                Typography   ->   _typography.scss
+                Reset   -> _reset.scss
+
+
+        Then create load them on main sass file called index 
+            Ex.
+                globals (folder)
+                    _index.scss 
+                        @forward "reset"
+                        @forward "typography"
+                
+
+                Main style scss 
+                    style.scss
+                        @forward "globals"
+
+    # Creating variables
+    
+        (CSS)
+        # Root
+
+            :root {
+                --ff-primary: monospace;
+                --txt-crl: blue;
+            }
+
+            to use the variables 
+                -> var(--txt-crl)
+
+        (SASS)
+
+            $ff-primary: monospace;
+            $txt-crl: blue;
+
+                to use the variables 
+                    -> $txt-crl
+
+    # Using custom modules 
+        Create a folder that contain the style 
+        and import whole folder as a module
+
+            Ex. 
+                utility
+                    _fonts.scss
+                        $font-color: blue;
+
+                    _colors.scss
+                
+                To import 
+                    @use "location of utility" as util;
+
+                            -> as util (is a namespace)
+                            -> you can use a wildcard 
+                                @use "location of utility" as *
+                                    
+                                    color: @font-color
+                    
+                    color: util.@font-color
+
+    # Using BEM (Block, Element, Modifier methodology)
+
+        BEM is a front-end naming method for organizing and naming CSS classes.
+            Block:
+                which holds everything (elements) inside and acts as a scope.
+
+            Element:
+                which acts as a specific part of the component.
+
+            Modifier:
+                which adds additional styles to a specific element(s).
+
+            
+            Ex.
+                (html)
+
+                    <div class="head">
+                        <div class="head__eye head__eye--left">(o)</div>
+                        <div class="head__eye head__eye--right">(o)</div>
+                    </div>
+
+                (scss)
+
+                    .head { -> block
+                        &__eye { -> element
+
+                            &--left{ -> modifier
+
+                            }
+                            &--right{
+                                
+                            }
+                        }
+                    }
+
+# Mixins 
+
+    # Sass map
+    // 700px, 900px, 1440px
+
+        $breakpoints-up: (
+            "medium", 43.75em,
+            "large", 56.25em,
+            "xlarge", 90em,
+        )
+
+        $breakpoints-down: (
+            "medium", 43.5em,
+            "large", 56em,
+            "xlarge", 89.5em,
+        )
+
+    # mixins 
+
+    @mixin breakpoints-up($size){
+        @media(min-width: map-get($breakpoints-up, $size)){
+            @content;
+        }
+    }
+
+
+    @mixin breakpoints-down($size){
+        @media(max-width: map-get($breakpoints-down, $size)){
+            @content;
+        }
+    }
+
 
 
 <!-- -> Basics --> 
@@ -1045,43 +1214,67 @@ HTML (Hypertext Markup Language)
         Inline-Block elements                   -> only takes space they need
         Inline                                 
 
-# Responsive Design 
+# Responsive and Behavioral CSS
+
+    # Responsive Design 
+            
+            [ is the idea that all clients will receive identical HTML files from the server but those HTML files will be flexible and will display differently on different devices.]
+
+            Ex:
+                Mobile devices have a 'device pixel ratio" it can be accessed in js with "window.devicePixelRatio"
+
+        # What to do?
+            - To make sure that our pages render correctly on mobile we need a meta tag:
+                    
+                    -> <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-    
-    - Media Query
-                (min max works for both height and width)
-            width is less than or equal to 100px:
-                @media (max-width: 100px) { /* CSS Rules */ }
-
-             height is more than or equal to 350px   
-                @media (min-height: 350px) { /* CSS Rules */ }
-
-            /* CSS */
-            @media (condition) {
-                /* Some CSS that'll run if the condition is met. */
-            }
-
-    - Use a Retina Image for Higher Resolution Displays
-
-        The simplest way to make your images properly appear on High-Resolution Displays,
-        such as the MacBook Pros "retina display" is to define their width and height values 
-        as only half of what the original file is. Here is an example of an image that is only 
-        using half of the original height and width:
+            - Mobile-first vs Desktop-first 
+                    Points to consider 
+                        - its easier to add than take away 
+                        - the approach must be consistent (don't use to start one and change it on a random element) 
+                        - consider the traffic 
+                    
+                    # mostly mobile first is better but considering some cases its not bad to start with a desktop 
 
 
-    - Make Typography Responsive
-            Instead of using em or px to size text, you can use viewport units for responsive typography. 
-            Viewport units, like percentages, are relative units, but they are based off different items. 
-            Viewport units are relative to the viewport dimensions (width or height) of a device, and 
-            percentages are relative to the size of the parent container element.
 
-           The four different viewport units are: 
+        - Media Query
+            Tip: (min max works for both height and width)
+                (media query's don't affect specificity)
 
-                vw (viewport width): 10vw would be 10% of the viewport's width.
-                vh (viewport height): 3vh would be 3% of the viewport's height.
-                vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
-                vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
+                @media -> at-rule
+                condition -> (min-width: 30em) || (max-width: 67em)
+                {} -> style content for that particular size 
+
+                    /* CSS */
+                    @media (condition) {
+                        /* Some CSS that'll run if the condition is met. */
+                    }
+
+        - Use a Retina Image for Higher Resolution Displays
+
+            The simplest way to make your images properly appear on High-Resolution Displays,
+            such as the MacBook Pros "retina display" is to define their width and height values 
+            as only half of what the original file is. Here is an example of an image that is only 
+            using half of the original height and width:
+
+
+        - Make Typography Responsive
+                Instead of using em or px to size text, you can use viewport units for responsive typography. 
+                Viewport units, like percentages, are relative units, but they are based off different items. 
+                Viewport units are relative to the viewport dimensions (width or height) of a device, and 
+                percentages are relative to the size of the parent container element.
+
+            The four different viewport units are: 
+
+                    vw (viewport width): 10vw would be 10% of the viewport's width.
+                    vh (viewport height): 3vh would be 3% of the viewport's height.
+                    vmin (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).
+                    vmax (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).
+
+
+    # Behavioral CSS
 
 # Units 
     - px
@@ -1258,144 +1451,6 @@ HTML (Hypertext Markup Language)
 
                     a, button, input, img, select, span, 
 
-# Sass , Bem
-
-    # Sass Partials 
-        Creating partitions for the styles based on there structure
-            Ex.
-                Header  ->      _header.scss
-                Hero    ->      _hero.scss
-                Footer  ->      _footer.scss   
-
-        
-        For bigger projects you can even partition based on type of element 
-            Ex,
-
-                Typography   ->   _typography.scss
-                Reset   -> _reset.scss
-
-
-        Then create load them on main sass file called index 
-            Ex.
-                globals (folder)
-                    _index.scss 
-                        @forward "reset"
-                        @forward "typography"
-                
-
-                Main style scss 
-                    style.scss
-                        @forward "globals"
-
-    # Creating variables
-    
-        (CSS)
-        # Root
-
-            :root {
-                --ff-primary: monospace;
-                --txt-crl: blue;
-            }
-
-            to use the variables 
-                -> var(--txt-crl)
-
-        (SASS)
-
-            $ff-primary: monospace;
-            $txt-crl: blue;
-
-                to use the variables 
-                    -> $txt-crl
-
-    # Using custom modules 
-        Create a folder that contain the style 
-        and import whole folder as a module
-
-            Ex. 
-                utility
-                    _fonts.scss
-                        $font-color: blue;
-
-                    _colors.scss
-                
-                To import 
-                    @use "location of utility" as util;
-
-                            -> as util (is a namespace)
-                            -> you can use a wildcard 
-                                @use "location of utility" as *
-                                    
-                                    color: @font-color
-                    
-                    color: util.@font-color
-
-    # Using BEM (Block, Element, Modifier methodology)
-
-        BEM is a front-end naming method for organizing and naming CSS classes.
-            Block:
-                which holds everything (elements) inside and acts as a scope.
-
-            Element:
-                which acts as a specific part of the component.
-
-            Modifier:
-                which adds additional styles to a specific element(s).
-
-            
-            Ex.
-                (html)
-
-                    <div class="head">
-                        <div class="head__eye head__eye--left">(o)</div>
-                        <div class="head__eye head__eye--right">(o)</div>
-                    </div>
-
-                (scss)
-
-                    .head { -> block
-                        &__eye { -> element
-
-                            &--left{ -> modifier
-
-                            }
-                            &--right{
-                                
-                            }
-                        }
-                    }
-
-# Mixins 
-
-    # Sass map
-    // 700px, 900px, 1440px
-
-        $breakpoints-up: (
-            "medium", 43.75em,
-            "large", 56.25em,
-            "xlarge", 90em,
-        )
-
-        $breakpoints-down: (
-            "medium", 43.5em,
-            "large", 56em,
-            "xlarge", 89.5em,
-        )
-
-    # mixins 
-
-    @mixin breakpoints-up($size){
-        @media(min-width: map-get($breakpoints-up, $size)){
-            @content;
-        }
-    }
-
-
-    @mixin breakpoints-down($size){
-        @media(max-width: map-get($breakpoints-down, $size)){
-            @content;
-        }
-    }
 
 # Responsive Typography
 
@@ -1412,38 +1467,6 @@ HTML (Hypertext Markup Language)
 
             font-size: clamp(28px, 16px+0.5vw, 40px)
                             min    preferred   max 
-
-# Bad practices
-
-    # Don't use px specially from text.
-
-        # rem (root em unit )
-
-            works based on the root font size 
-            if root font-size: 16px;
-                    1rem = 16px
-
-
-        # Overly complicated selectors 
-            
-        # Readable css 
-
-        # Organized Css 
-            - Group similar types
-            - Comment code 
-
-        # Refractor your code 
-            Tip: remember
-                - inheritance
-                - group styles that are the same!
-                    - group selectors at the top!
-
-        # Don't remove outlines [a must for accessibility]
-            -> if you do style focus states!
-
-        # Text contrast must not be too low 
-
-
 
 
 
