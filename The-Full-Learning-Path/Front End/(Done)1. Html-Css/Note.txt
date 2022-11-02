@@ -631,6 +631,16 @@ HTML (Hypertext Markup Language)
         }
     }
 
+# Color Picker
+    :has -> selector 
+
+        Ex. 
+        :root:has(#red:checked) {
+            --beige: hsla(0, 100%, 85%, 0.515);
+            --green-500: red;
+            --green-300: tomato;
+            --radio: hsl(167, 92%, 14%);
+        }
 
 
 <!-- -> Basics --> 

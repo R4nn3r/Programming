@@ -1,21 +1,22 @@
-// Major Elements selectors
-const body = document.querySelector("body");
-const check = document.querySelectorAll(".check");
+// Creating local storage
+const colorTheme = document.querySelectorAll("[name='theme']");
 
-// toggle the hamburger icons to closed and opened
-const navMobile = document.querySelector(".nav-menu");
-function myFunction(x) {
-  x.classList.toggle("change");
-  navMobile.classList.toggle("open");
-  body.classList.toggle("overflow-y-hidden");
-}
+//  Store
+const storeTheme = function (theme) {
+  localStorage.setItem("theme", theme);
+};
 
-// Link Tree Opener
-function treeDown(x) {
-  x.firstElementChild.classList.toggle("opened");
-  check[0].classList.toggle("tree-down");
-}
-function treeDown_(x) {
-  x.firstElementChild.classList.toggle("opened");
-  check[1].classList.toggle("tree-down");
-}
+colorTheme.forEach((themeOption) => {
+  themeOption.addEventListener("click", () => {
+    storeTheme(themeOption.id);
+  });
+});
+
+// Load it every time page is rendered
+const savedTheme = localStorage.getItem("theme");
+
+colorTheme.forEach((themeOption) => {
+  if (themeOption.id == savedTheme) {
+    themeOption.checked = true;
+  }
+});
