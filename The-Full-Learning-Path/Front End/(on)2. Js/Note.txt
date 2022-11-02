@@ -1043,6 +1043,36 @@ https://developer.mozilla.org/en-US/
     localStorage.geItem("key");
         -> Returns the string using the associated key it's using 
 
+
+
+    -> Ex: for a color picker :: saves the id of the clicked checkbox and when the page is loaded it changes the saved id's checkbox to checked 
+
+        // Creating local storage
+        const colorTheme = document.querySelectorAll("[name='theme']");
+
+        //  Store
+        const storeTheme = function (theme) {
+        localStorage.setItem("theme", theme);
+        };
+
+        colorTheme.forEach((themeOption) => {
+        themeOption.addEventListener("click", () => {
+            storeTheme(themeOption.id);
+        });
+        });
+
+        // Load it every time page is rendered
+        const savedTheme = localStorage.getItem("theme");
+
+        colorTheme.forEach((themeOption) => {
+        if (themeOption.id == savedTheme) {
+            themeOption.checked = true;
+        }
+        });
+        
+
+
+
 # Note: This
     # setTimeout
 
