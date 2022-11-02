@@ -463,6 +463,7 @@ HTML (Hypertext Markup Language)
             </html>
 
 
+
 <!-- -> Basics --> 
 
 # Basic HTML
@@ -847,7 +848,9 @@ HTML (Hypertext Markup Language)
                     run continuously by setting that value to infinite.
 
 # Layout 
-        # Flexbox [controls the children of a parent box and turns the parent into a block]
+    
+    # Flexbox 
+        [controls the children of a parent box and turns the parent into a block]
 
             With flexbox, it's easy to center elements on the page and create 
             dynamic user interfaces that shrink and expand automatically.
@@ -925,8 +928,7 @@ HTML (Hypertext Markup Language)
                     -> items: how the children interact along the cross axis 
             -> When it comes between any layout modes positioned layouts always win! thats why as a general rule elements can't participate in multiple layout modes at once! [exception you can use relative and more or less sticky with flex]
 
-
-        # Grid 
+    # Grid 
                 Note: In CSS Grid, the parent element is referred to as 
                 the container and its children are called items.
 
@@ -1025,7 +1027,7 @@ HTML (Hypertext Markup Language)
 
                     - create media query and create the layout as you see fit 
                     by embedding the grid-template-areas in it
-        
+  
 # Tips For Layouts
 
     To Create the Vertical Layouts 
