@@ -645,6 +645,55 @@ HTML (Hypertext Markup Language)
             --radio: hsl(167, 92%, 14%);
         }
 
+# Theme Tip: 
+
+        :root {
+            --hue: 270deg;  [you can add another value for the saturation --hue-sat: 270deg 20%]
+            --color-gray-100: hsl(var(--hue) 20% 95%);
+            --color-gray-300: hsl(var(--hue) 10% 75%);
+            --color-gray-500: hsl(var(--hue) 5% 50%);
+            --color-gray-700: hsl(var(--hue) 10% 30%);
+            --color-gray-900: hsl(var(--hue) 15% 15%);
+        }
+
+# The Magic of calc and Clamp 
+
+    ->  Both are [VALUES] so they can be used with 
+        every property that takes is numeric values 
+
+    # Calc
+        : calc takes in a value and puts out its calculated version plus you can mix units 
+            max-width: 100px;
+            width: calc(50% + 32px) // output: 82px
+
+        We can use 4 mathematical operators:
+            + (addition)
+            - (subtraction)
+            * (multiplication)
+            / (division)
+
+        
+        Tip: you can use calc for unit conversion 
+            -> font-size: calc(14 / 16 * 1rem)
+
+    # Clamp 
+        
+        : takes 3 values 
+            - min value (min-width)
+            - ideal value (width) 
+            - max value (max-width)
+        
+        
+            font-size: clamp(28px, 16px+0.5vw, 40px)
+                            min    preferred   max 
+
+    # min / max 
+    
+        .box {
+            padding: min(32px, 5vw);
+        }
+
+
 
 <!-- -> Basics --> 
 
@@ -1541,7 +1590,6 @@ HTML (Hypertext Markup Language)
 
                     a, button, input, img, select, span, 
 
-
 # Responsive Typography
 
         Instead of just using media query's to resize everything 
@@ -1558,6 +1606,14 @@ HTML (Hypertext Markup Language)
             font-size: clamp(28px, 16px+0.5vw, 40px)
                             min    preferred   max 
 
+# Viewport Units 
+
+    -> vh (viewport height) 
+        : refers to the largest possible size 
+    -> vw (viewport width)
+
+    -> vmin [shorter dimension]
+    -> vmax [longer dimension]
 
 
 
