@@ -68,5 +68,43 @@ svg {
 
 // General styles
 body {
-  font-family: $ff-primary;
+  font-family: $ff-overpass;
+}
+
+//  Studying
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+article {
+  border-radius: 8px;
+  padding: 8px;
+  background-color: lavender;
+}
+@media (min-width: 350px) {
+  main {
+    gap: 16px;
+    padding: 16px;
+  }
+  article {
+    border-radius: 16px;
+    padding: 16px;
+    background-color: paleturquoise;
+  }
+}
+
+@media (min-width: 500px) {
+  main {
+    gap: 32px;
+    padding: 32px;
+  }
+  article {
+    border-radius: 32px;
+    padding: 32px;
+    background-color: thistle;
+  }
 }

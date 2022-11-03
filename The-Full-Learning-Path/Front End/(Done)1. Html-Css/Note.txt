@@ -303,6 +303,9 @@ HTML (Hypertext Markup Language)
             -> and wrap content you want to hide visually but make it readable for 
             screen readers as well
 
+
+    -> How to make models accessible 
+
 # How to write semantically good html?
 
     - Text content
@@ -1247,8 +1250,6 @@ HTML (Hypertext Markup Language)
                     
                     # mostly mobile first is better but considering some cases its not bad to start with a desktop 
 
-
-
         - Media Query
             Tip: (min max works for both height and width)
                 (media query's don't affect specificity)
@@ -1262,13 +1263,92 @@ HTML (Hypertext Markup Language)
                         /* Some CSS that'll run if the condition is met. */
                     }
 
+            
+            -> Boolean logic in media queries
+
+                - You can use , and , or 
+
+                @media (hover: hover) and (pointer: fine) {
+                    /* styles */
+                }
+
+                or 
+
+                @media screen and (min-width: 600px) {
+                    /* styles */
+                }
+
+                    screen -> is a “media type”. In this case, we're saying that the styles should only apply when displaying the site/app on a screen. 
+
+            -> Preference-based media queries
+
+                for color schemes:
+                    @media (prefers-color-scheme: dark) {
+                        /* Dark-mode styles here */
+                    }
+
+                for motion:
+                    @media (prefers-reduced-motion: no-preference) {
+                        /* Animations here */
+                    }
+
+            -> Orientation [not better then using min/max but not bad to have in the tool box]
+
+                @media (orientation: portrait) {
+                    /* Styles for windows that are taller than they are wide */
+                }
+                @media (orientation: landscape) {
+                    /* Styles for windows that are wider than they are tall */
+                }
+
+        - Breakpoints 
+
+            Here are the groups I've identified:
+                0-550px — Mobile
+                550-1100px — Tablet
+                1100-1500px — Laptop
+                1500+px — Desktop
+
+            
+            -> Implementing breakpoints
+
+                    # Mobile First 
+
+                        /* Default: Phones from 0px to 549px */
+                        Then: 
+                            create breakpoints for:
+                                @media (min-width: 550px) {
+                                    /* Tablets */
+                                }
+                                @media (min-width: 1100px) {
+                                    /* Laptop */
+                                }
+                                @media (min-width: 1500px) {
+                                    /* Desktop */
+                                }
+
+
+
+                    # Desktop First
+                        /* Default: Desktop monitors, 1501px and up */
+                        Then: 
+                            create breakpoints for:
+                                @media (max-width: 1500px) {
+                                    /* Laptop */
+                                }
+                                @media (max-width: 1100px) {
+                                    /* Tablets */
+                                }
+                                @media (max-width: 550px) {
+                                    /* Phones */
+                                }
+
         - Use a Retina Image for Higher Resolution Displays
 
             The simplest way to make your images properly appear on High-Resolution Displays,
             such as the MacBook Pros "retina display" is to define their width and height values 
             as only half of what the original file is. Here is an example of an image that is only 
             using half of the original height and width:
-
 
         - Make Typography Responsive
                 Instead of using em or px to size text, you can use viewport units for responsive typography. 
