@@ -27,7 +27,6 @@ $fs-para: 16px;
   --crl-b-copy: hsl(207, 13%, 34%);
   --crl-f-bg: hsl(240, 10%, 16%);
 
-  // Gradient Schemes
   //  Cta
   --cta-mob-nav-100: hsl(13, 100%, 72%);
   --cta-mob-nav-200: hsl(353, 100%, 62%);
@@ -35,4 +34,27 @@ $fs-para: 16px;
   //  Body
   --bg-grad-100: #2c2d3f;
   --bg-grad-200: #3f4164;
+
+  // Gradient Schemes
+
+  --c-gradient-header: linear-gradient(
+    100deg,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  --c-gradient-header-mobile: linear-gradient(
+    190deg,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  --c-gradient-infras: linear-gradient(
+    to right,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
+  --c-gradient-infras-mobile: linear-gradient(
+    to bottom,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
 }

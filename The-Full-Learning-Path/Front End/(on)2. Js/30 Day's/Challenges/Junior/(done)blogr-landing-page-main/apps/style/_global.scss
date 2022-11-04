@@ -65,197 +65,39 @@ svg {
 }
 
 // utilities
+.body-wrapper {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 0 125px;
+}
+.h-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
 
-// @keyframes slowRotate {
-//   from {
-//     rotate: 0deg;
-//   }
-//   to {
-//     rotate: 360deg;
-//   }
-// }
-// @keyframes revSlowRotate {
-//   from {
-//     rotate: 360deg;
-//   }
-//   to {
-//     rotate: 00deg;
-//   }
-// }
-// @keyframes SlowUp {
-//   from {
-//     transform: translateY(-15%);
-//   }
-//   to {
-//     transform: translateY(0%);
-//   }
-// }
-// @keyframes SlowDown {
-//   from {
-//     transform: translateY(+15%);
-//   }
-//   to {
-//     transform: translateY(0%);
-//   }
-// }
+a {
+  font-family: $ff-ubuntu;
+  text-decoration: none;
+  color: inherit;
+  font-weight: $fw-ub-700;
+}
+// buttons
+button {
+  padding: 0.85em;
+  border: none;
+  border-radius: 2em;
+  font-family: inherit;
+  font-weight: $fw-ub-700;
+  font-size: 0.95rem;
+  color: var(--crl-text);
 
+  //   interaction
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
 // General styles
 body {
-  font-family: $ff-ubuntu;
-}
-:root {
-  --hue: 241deg;
-  --color-gray-100: hsl(var(--hue) 20% 95%);
-  --color-gray-300: hsl(var(--hue) 10% 75%);
-  --color-gray-500: hsl(var(--hue) 5% 50%);
-  --color-gray-700: hsl(var(--hue) 10% 30%);
-  --color-gray-900: hsl(var(--hue) 20% 15%);
-}
-
-//  Studying
-html {
-  --box-size: 85px;
-}
-
-.box {
-  width: var(--box-size);
-  height: var(--box-size);
-  /*
-    Here's a quick example, to get you started!
-    We use “--index”, a number from 1 to 16,
-    to derive the “hue” for each square.
-    
-    If you're not sure where to start,
-    try tweaking these numbers!
-    
-    One last tip: using a gradient instead
-    of a solid color opens lots of exciting
-    possibilities!
-  */
-
-  background: hsl(
-    calc(var(--index) * -5deg) calc(var(--index) * 100%) calc(var(--index) * 5%)
-  );
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin-inline: auto;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  // gap: 2px;
-
-  width: calc(var(--box-size) * 4);
-  height: calc(var(--box-size) * 4);
-}
-
-/*
-  Attach a unique index to each box.
-  Normally, we would do this in JS.
-*/
-
-.box:nth-of-type(1) {
-  border-radius: 50%;
-  rotate: 55deg;
-  background: linear-gradient(
-    calc(var(--index) * 45deg),
-    hsl(calc(245deg + var(--index) * -1deg) 100% 40%),
-    hsl(calc(750deg + var(--index) * 100deg) 100% 70%)
-  );
-  animation: revSlowRotate 0.5s linear;
-  animation-iteration-count: infinite;
-  --index: 1;
-}
-.box:nth-of-type(2) {
-  --index: 2;
-  animation: SlowUp 1s linear;
-  animation-iteration-count: infinite;
-}
-.box:nth-of-type(3) {
-  rotate: 45deg;
-  --index: 3;
-  animation: slowRotate 3s linear;
-  animation-iteration-count: infinite;
-}
-.box:nth-of-type(4) {
-  rotate: 275deg;
-  --index: 4;
-}
-.box:nth-of-type(5) {
-  rotate: 55deg;
-  --index: 5;
-  animation: slowRotate 3s linear;
-  animation-iteration-count: infinite;
-}
-.box:nth-of-type(6) {
-  --index: 6;
-  animation: SlowDown 1s linear;
-  animation-iteration-count: infinite;
-}
-.box:nth-of-type(7) {
-  rotate: 55deg;
-  border-radius: 50%;
-  --index: 7;
-  background: linear-gradient(
-    calc(var(--index) * 45deg),
-    hsl(calc(245deg + var(--index) * -1deg) 100% 40%),
-    hsl(calc(750deg + var(--index) * 100deg) 100% 70%)
-  );
-  animation: revSlowRotate 0.5s linear;
-  animation-iteration-count: infinite;
-}
-.box:nth-of-type(8) {
-  rotate: 45deg;
-  --index: 8;
-}
-.box:nth-of-type(9) {
-  rotate: 75deg;
-  animation: slowRotate 3s linear;
-  animation-iteration-count: infinite;
-  --index: 9;
-}
-.box:nth-of-type(10) {
-  rotate: 55deg;
-  --index: 10;
-}
-.box:nth-of-type(11) {
-  rotate: 245deg;
-  animation: slowRotate 3s linear;
-  animation-iteration-count: infinite;
-  --index: 11;
-}
-.box:nth-of-type(12) {
-  rotate: 75deg;
-  --index: 12;
-}
-.box:nth-of-type(13) {
-  rotate: 75deg;
-  animation: slowRotate 3s linear;
-  animation-iteration-count: infinite;
-  --index: 13;
-}
-.box:nth-of-type(14) {
-  rotate: 175deg;
-  border-radius: 50%;
-  --index: 14;
-  background: linear-gradient(
-    calc(var(--index) * 45deg),
-    hsl(calc(245deg + var(--index) * -1deg) 100% 40%),
-    hsl(calc(750deg + var(--index) * 100deg) 100% 70%)
-  );
-  animation: revSlowRotate 0.5s linear;
-  animation-iteration-count: infinite;
-}
-.box:nth-of-type(15) {
-  rotate: 345deg;
-  --index: 15;
-}
-.box:nth-of-type(16) {
-  rotate: 100deg;
-  --index: 16;
+  font-family: $ff-overpass;
 }
