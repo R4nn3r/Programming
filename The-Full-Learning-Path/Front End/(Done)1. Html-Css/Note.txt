@@ -688,12 +688,17 @@ HTML (Hypertext Markup Language)
                             min    preferred   max 
 
     # min / max 
+
     
+
         .box {
             padding: min(32px, 5vw);
-        }
+        } [or you can use max in similar fashion]
 
 
+    Tip:
+        -> use min to make pictures responsive
+            max-width: min(28rem, 100%)
 
 <!-- -> Basics --> 
 

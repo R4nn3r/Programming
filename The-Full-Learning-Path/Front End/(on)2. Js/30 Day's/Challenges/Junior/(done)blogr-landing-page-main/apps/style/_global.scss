@@ -150,7 +150,6 @@ html {
   flex-wrap: wrap;
   // gap: 2px;
 
-  border: clamp(0.25vw, 0.5vw, 3vw) solid red;
   width: calc(var(--box-size) * 4);
   height: calc(var(--box-size) * 4);
 }
