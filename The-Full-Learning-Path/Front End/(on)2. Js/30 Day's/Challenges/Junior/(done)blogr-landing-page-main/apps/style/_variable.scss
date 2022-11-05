@@ -27,16 +27,7 @@ $fs-para: 16px;
   --crl-b-copy: hsl(207, 13%, 34%);
   --crl-f-bg: hsl(240, 10%, 16%);
 
-  //  Cta
-  --cta-mob-nav-100: hsl(13, 100%, 72%);
-  --cta-mob-nav-200: hsl(353, 100%, 62%);
-
-  //  Body
-  --bg-grad-100: #2c2d3f;
-  --bg-grad-200: #3f4164;
-
   // Gradient Schemes
-
   --c-gradient-header: linear-gradient(
     100deg,
     hsl(13, 100%, 72%),
@@ -57,4 +48,7 @@ $fs-para: 16px;
     hsl(237, 17%, 21%),
     hsl(237, 23%, 32%)
   );
+
+  --pattern: url(../../images/bg-pattern-intro-desktop.svg);
+  --pattern-mobile: url(../../images/bg-pattern-intro-mobile.svg);
 }

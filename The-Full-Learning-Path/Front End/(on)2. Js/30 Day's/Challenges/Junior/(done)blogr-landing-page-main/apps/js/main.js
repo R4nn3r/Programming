@@ -17,13 +17,13 @@ const toggler = document.querySelectorAll(".toggler");
 toggler.forEach((toggle) => {
   toggle.addEventListener("click", (e) => {
     e.target.firstElementChild.classList.toggle("opened");
-    e.target.parentNode.lastElementChild.classList.toggle("closed");
+    e.target.parentNode.lastElementChild.classList.toggle("drop");
   });
 
   // blur event (only one dropdown can be active at a time)
-  toggle.addEventListener("blur", (event) => {
-    const arrowTwo = event.target.firstElementChild.classList.remove("opened");
-    const container =
-      event.target.parentNode.lastElementChild.classList.remove("closed");
-  });
+  // toggle.addEventListener("blur", (event) => {
+  //   const arrowTwo = event.target.firstElementChild.classList.remove("opened");
+  //   const container =
+  //     event.target.parentNode.lastElementChild.classList.remove("drop");
+  // });
 });
