@@ -67,6 +67,18 @@
         width: 100%;
         flex-direction: column;
 
+        nav {
+          width: 80%;
+
+          border-bottom: 1px solid var(--crl-text-sh);
+
+          ul {
+            text-align: center;
+            padding-bottom: 32px;
+            margin-inline: auto;
+          }
+        }
+
         ul {
           flex-direction: column;
         }
@@ -186,6 +198,9 @@
       p {
         font-size: 1.25rem;
         margin-bottom: 24px;
+        max-width: 70%;
+        text-align: center;
+        margin-inline: auto;
       }
     }
 
@@ -289,7 +304,8 @@
   box-shadow: 5px 5px 15px #00000036;
   width: 0;
   visibility: hidden;
-  max-height: 0;
+  height: calc(125px + 3.5rem);
+
   opacity: 0;
   translate: -15% 0;
   transition: all 0.5s ease;

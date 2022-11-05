@@ -21,9 +21,9 @@ toggler.forEach((toggle) => {
   });
 
   // blur event (only one dropdown can be active at a time)
-  // toggle.addEventListener("blur", (event) => {
-  //   const arrowTwo = event.target.firstElementChild.classList.remove("opened");
-  //   const container =
-  //     event.target.parentNode.lastElementChild.classList.remove("drop");
-  // });
+  toggle.addEventListener("blur", (event) => {
+    const arrowTwo = event.target.firstElementChild.classList.remove("opened");
+    const container =
+      event.target.parentNode.lastElementChild.classList.remove("drop");
+  });
 });
