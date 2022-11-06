@@ -27,3 +27,9 @@ toggler.forEach((toggle) => {
       event.target.parentNode.lastElementChild.classList.remove("drop");
   });
 });
+
+// Hamburger Menu
+function hamToggle(menu) {
+  menu.classList.toggle("close");
+  menu.parentNode.querySelector(".inactive").classList.toggle("negate");
+}

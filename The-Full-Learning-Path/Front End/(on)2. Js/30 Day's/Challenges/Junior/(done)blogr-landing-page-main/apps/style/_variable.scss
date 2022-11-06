@@ -51,4 +51,59 @@ $fs-para: 16px;
 
   --pattern: url(../../images/bg-pattern-intro-desktop.svg);
   --pattern-mobile: url(../../images/bg-pattern-intro-mobile.svg);
+
+  --menu: url(../../images/icon-hamburger.svg);
+  --menu-close: url(../../images/icon-close.svg);
+
+  --arrow-up: url(../../images/icon-arrow-light.svg);
+  --arrow-down: url(../../images/icon-arrow-light.svg);
+  --arrow-d-up: url(../../images/icon-arrow-dark.svg);
+  --arrow-d-down: url(../../images/icon-arrow-dark.svg);
+}
+
+.light-theme {
+  // Primary Colors
+  --cta-text: hsl(356, 100%, 66%);
+  --cta-hover: hsl(355, 100%, 74%);
+  --crl-heading: hsl(209, 23%, 82%);
+
+  // Neutral Colors
+  --crl-text: hsl(0, 0%, 8%);
+  --crl-text-sh: hsl(356, 100%, 66%);
+  --crl-f-text: hsl(240, 2%, 79%);
+  --crl-b-copy: hsl(207, 13%, 34%);
+  --crl-f-bg: hsl(0, 0%, 93%);
+
+  // Gradient Schemes
+  --c-gradient-header: linear-gradient(
+    100deg,
+    hsl(188, 100%, 96%),
+    hsl(0, 0%, 0%)
+  );
+  --c-gradient-header-mobile: linear-gradient(
+    190deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 0%, 0%)
+  );
+  --c-gradient-infras: linear-gradient(
+    to right,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
+  --c-gradient-infras-mobile: linear-gradient(
+    to bottom,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
+
+  --pattern: url(../../images/bg-pattern-intro-desktop.svg);
+  --pattern-mobile: url(../../images/bg-pattern-intro-mobile.svg);
+
+  --menu: url(../../images/icon-hamburger.svg);
+  --menu-close: url(../../images/icon-close.svg);
+
+  --arrow-up: url(../../images/icon-arrow-light.svg);
+  --arrow-down: url(../../images/icon-arrow-light.svg);
+  --arrow-d-up: url(../../images/icon-arrow-dark.svg);
+  --arrow-d-down: url(../../images/icon-arrow-dark.svg);
 }
