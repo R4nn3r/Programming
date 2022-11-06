@@ -1,7 +1,7 @@
 .header {
-  border-radius: 0px 0px 0px 75px;
+  border-radius: 0px 0px 0px 15vh;
   max-height: 100vh;
-  height: 525px;
+  height: 550px;
   color: var(--crl-text);
   isolation: isolate;
 
@@ -24,11 +24,22 @@
     align-items: center;
     gap: 4em;
     margin: 0 auto;
-    max-width: 80%;
-    padding: 75px 0;
+    padding: 70px 0 115px 0;
     justify-content: space-between;
     @include breakpoints-down(medium) {
-      max-width: 90%;
+      padding: 70px 0 60px 0;
+    }
+    &__logo {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        scale: 1.25;
+      }
+
+      path {
+        fill: var(--crl-text);
+      }
     }
     &__nav {
       justify-content: space-between;
@@ -88,7 +99,7 @@
         }
 
         ul a {
-          color: var(--crl-text);
+          color: var(--crl-f-text);
         }
       }
     }
@@ -168,7 +179,7 @@
             width: 100%;
             color: var(--crl-text);
             // background-color: var(--crl-text);
-            background: var(--c-gradient-header);
+            background: var(--cta-gradient);
             box-shadow: 5px 5px 15px #00000036;
 
             &:hover,
@@ -193,8 +204,8 @@
 
     &__article {
       h1 {
-        font-size: min(4rem, 12vw);
-        letter-spacing: -2px;
+        font-size: min(3.7rem, 14vw);
+        letter-spacing: -1px;
         line-height: 1;
         overflow-wrap: break-word;
         padding: 7px;
@@ -221,7 +232,7 @@
         width: 130px;
 
         &:last-child {
-          border: 1px solid var(--crl-text);
+          border: 2px solid var(--crl-text);
           background-color: transparent;
           box-shadow: 5px 5px 15px #00000036;
 
@@ -263,7 +274,7 @@
 
 //  Arrows
 .arrow.opened {
-  background-image: var(--arrow-up);
+  background-image: var(--arrow-down);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -280,7 +291,7 @@
   }
 }
 .arrow {
-  background-image: var(--arrow-d-up);
+  background-image: var(--arrow-up);
 
   background-position: center;
   background-size: contain;
@@ -303,7 +314,7 @@
   position: absolute;
   top: 55px;
   // box style
-  background-color: var(--crl-text);
+  background-color: var(--crl-f-bg);
   padding: 1em 3em 1em 1.5em;
   border-radius: 0.5em;
   box-shadow: 5px 5px 15px #00000036;
@@ -326,7 +337,7 @@
   ul a {
     font-family: $ff-overpass;
     font-weight: $fw-ov-300;
-    color: var(--crl-heading);
+    color: var(--crl-text);
   }
 
   @include breakpoints-down(medium) {

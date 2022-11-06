@@ -1,0 +1,55 @@
+.main {
+  margin-top: 135px;
+  &-container {
+    color: var(--crl-heading);
+  }
+
+  &__heading {
+    text-align: center;
+
+    h1 {
+      font-size: min(2.7rem, 6.95vw);
+    }
+  }
+
+  &__intro {
+    text-align: center;
+
+    // display
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-direction: column;
+
+    @include breakpoints-up(medium) {
+      flex-direction: row;
+    }
+
+    .illustration {
+      scale: 1.2;
+      @include breakpoints-up(medium) {
+        flex: 1;
+        order: 2;
+        scale: 1.4;
+        transform: translateX(180px);
+      }
+    }
+
+    &__articles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      h2 {
+        font-size: min(1.75rem, 6.5vw);
+        margin-bottom: 7px;
+      }
+
+      @include breakpoints-up(medium) {
+        text-align: left;
+        flex: 1;
+        order: 1;
+      }
+    }
+  }
+}
