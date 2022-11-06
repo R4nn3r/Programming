@@ -14,58 +14,6 @@ $fw-ub-700: 700;
 // Font size
 $fs-para: 16px;
 
-.default-theme {
-  // Primary Colors
-  --cta-text: hsl(356, 100%, 66%);
-  --cta-hover: hsl(355, 100%, 74%);
-  --crl-heading: hsl(208, 49%, 24%);
-
-  // Neutral Colors
-  --crl-text: hsl(0, 0%, 100%);
-  --crl-text-sh: hsl(208, 49%, 24%);
-  --crl-f-text: hsl(0, 0%, 19%);
-  --crl-b-copy: hsl(207, 13%, 34%);
-  --crl-f-bg: hsl(0, 0%, 100%);
-
-  // Gradient Schemes
-  --c-gradient-header: linear-gradient(
-    100deg,
-    hsl(13, 100%, 72%),
-    hsl(353, 100%, 62%)
-  );
-  --c-gradient-header-mobile: linear-gradient(
-    190deg,
-    hsl(13, 100%, 72%),
-    hsl(353, 100%, 62%)
-  );
-  --cta-gradient: linear-gradient(
-    190deg,
-    hsl(13, 100%, 72%),
-    hsl(353, 100%, 62%)
-  );
-  --c-gradient-infras: linear-gradient(
-    to right,
-    hsl(237, 17%, 21%),
-    hsl(237, 23%, 32%)
-  );
-  --c-gradient-infras-mobile: linear-gradient(
-    to bottom,
-    hsl(237, 17%, 21%),
-    hsl(237, 23%, 32%)
-  );
-
-  --pattern: url(../../images/light-theme/bg-pattern-intro-desktop.svg);
-  --pattern-mobile: url(../../images/light-theme/bg-pattern-intro-mobile.svg);
-
-  --menu: url(../../images/light-theme/icon-hamburger.svg);
-  --menu-close: url(../../images/light-theme/icon-close.svg);
-
-  --arrow-up: url(../../images/light-theme/icon-arrow-light.svg);
-  --arrow-down: url(../../images/light-theme/icon-arrow-light.svg);
-  --arrow-d-up: url(../../images/light-theme/icon-arrow-dark.svg);
-  --arrow-d-down: url(../../images/light-theme/icon-arrow-dark.svg);
-}
-
 .light-theme {
   // Primary Colors
   --cta-text: hsl(356, 100%, 66%);

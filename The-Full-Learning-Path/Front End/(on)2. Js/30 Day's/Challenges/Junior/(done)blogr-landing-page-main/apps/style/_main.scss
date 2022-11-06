@@ -1,4 +1,5 @@
 .main {
+  overflow: hidden;
   margin-top: 135px;
   &-container {
     color: var(--crl-heading);
@@ -9,6 +10,9 @@
 
     h1 {
       font-size: min(2.7rem, 6.95vw);
+    }
+    p {
+      font-size: 1.25rem;
     }
   }
 
@@ -49,6 +53,69 @@
         text-align: left;
         flex: 1;
         order: 1;
+      }
+    }
+  }
+  &__main {
+    margin: 240px 0;
+    color: var(--crl-text);
+    position: relative;
+    .box {
+      // bg
+      background: url(../../images/bg-pattern-circles.svg),
+        var(--c-gradient-infras-mobile);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 10%;
+
+      //  display
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0 10vh 0 10vh;
+      h2 {
+        font-size: min(1.75rem, 7.5vw);
+        margin-bottom: 7px;
+      }
+      p {
+        font-size: 1.05rem;
+
+        @include breakpoints-up(medium) {
+          max-width: 85%;
+        }
+      }
+      @include breakpoints-up(medium) {
+        flex-direction: row;
+        align-items: center;
+        background: url(../../images/bg-pattern-circles.svg),
+          var(--c-gradient-infras);
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .article-two {
+        margin: 50px 0 50px 0;
+        text-align: center;
+
+        @include breakpoints-up(medium) {
+          margin: 125px 0;
+          text-align: left;
+        }
+      }
+    }
+
+    .illu {
+      scale: 1.2;
+      margin-top: -150px;
+
+      @include breakpoints-up(medium) {
+        scale: 1;
+        margin-top: 0;
+
+        // position
+        position: absolute;
+        top: -70px;
       }
     }
   }
