@@ -91,6 +91,7 @@
           var(--c-gradient-infras);
         background-position: left;
         background-size: contain;
+        gap: 85px;
         background-repeat: no-repeat;
       }
 
@@ -106,11 +107,9 @@
     }
 
     .illu {
-      scale: 1.2;
       margin-top: -150px;
 
       @include breakpoints-up(medium) {
-        scale: 1;
         margin-top: 0;
 
         // position
