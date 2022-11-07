@@ -1,4 +1,6 @@
 .main {
+  position: relative;
+
   &__container {
     max-width: 735px;
     border-radius: 10px;
@@ -15,8 +17,9 @@
     text-align: center;
     padding: 40px;
     background-color: var(--bg-card);
+    // backdrop-filter: blur(3px);
     margin-inline: 25px;
-    box-shadow: 5px 5px 15px rgba(45, 45, 45, 0.173);
+    box-shadow: 5px 5px 15px rgba(32, 32, 32, 0.173);
     transition: all 0.3s ease-in-out;
 
     @include breakpoints-down(small) {
@@ -204,6 +207,7 @@
   text-align: left;
   h3 {
     margin-bottom: 21px;
+    color: var(--text-200);
 
     @include breakpoints-down(small) {
       margin-bottom: 7px;
@@ -222,6 +226,7 @@
   margin-bottom: 30px;
   text-align: start;
   cursor: pointer;
+  color: var(--text-200);
   transition: all 0.3s ease-in-out;
 
   @include breakpoints-down(small) {
@@ -250,13 +255,17 @@
     cursor: pointer;
     background-color: var(--pri-100);
     max-width: 200px;
-    min-width: 115px;
+    min-width: 150px;
     transition: all 0.3s ease-in-out;
     &:hover,
     &:active,
     &:focus {
       outline: none;
       background-color: var(--pri-200);
+    }
+
+    @media (max-width: 300px) {
+      min-width: 115px;
     }
   }
 }
@@ -265,4 +274,69 @@ span {
   font-weight: $fw-400;
   font-size: 1rem;
   color: var(--text-300);
+}
+
+.done {
+  --pri-100: hsl(0, 0%, 49%);
+  --pri-200: hsl(0, 0%, 37%);
+  opacity: 0.5;
+}
+
+.close {
+  text-align: end;
+}
+
+// Selected
+.selected {
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.selected.on {
+  scale: 1.05;
+  opacity: 1;
+  position: absolute;
+  top: -85px;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  .main__card {
+    p,
+    .tag,
+    h4 {
+      margin-bottom: 0;
+    }
+    h3,
+    p {
+      margin: 0;
+    }
+    .title,
+    .paragraph {
+      margin-bottom: 20px;
+    }
+  }
+  .in-card {
+    &-top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px;
+
+      @include breakpoints-up(medium) {
+        gap: 20px;
+        .tag {
+          margin-left: auto;
+        }
+      }
+    }
+    &-bottom {
+      margin-top: 30px;
+    }
+  }
+}
+
+.hide-add {
+  display: none;
 }

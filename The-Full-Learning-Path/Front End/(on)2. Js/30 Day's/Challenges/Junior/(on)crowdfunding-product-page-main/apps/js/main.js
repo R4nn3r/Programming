@@ -14,3 +14,17 @@ function bookMark(mark) {
     mark.querySelector(".bookmark").innerHTML = "Bookmark";
   }
 }
+
+// Projects Selection
+const selecting = document.querySelector(".selected");
+const body = document.querySelector("body");
+
+function selected(select) {
+  selecting.classList.toggle("on");
+  body.classList.toggle("overlay");
+}
+
+function closeMe(close) {
+  selecting.classList.toggle("on");
+  body.classList.toggle("overlay");
+}

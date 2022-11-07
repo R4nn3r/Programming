@@ -134,4 +134,21 @@ body {
   background-color: var(--bg);
   font-size: $fs-size;
   font-family: $ff-family;
+  transition: all 0.5s ease-in-out;
+
+  &.overlay {
+    &::before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.809);
+      position: absolute;
+      display: block;
+      max-height: 100vh;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
 }

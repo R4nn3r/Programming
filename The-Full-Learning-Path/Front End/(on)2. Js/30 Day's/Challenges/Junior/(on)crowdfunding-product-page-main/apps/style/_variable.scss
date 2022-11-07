@@ -29,20 +29,20 @@ $fw-700: 700;
 }
 .dark-theme {
   // Primary
-  --pri-100: #b97375;
-  --pri-200: #2d2d34;
+  --pri-100: hsl(176, 50%, 47%);
+  --pri-200: hsl(176, 72%, 28%);
 
   // Neutral
-  --neu-100: #ceb1be;
-  --neu-200: #b97375;
+  --neu-100: #cbcbcb;
+  --neu-200: #7e7e7e;
 
   //   background
-  --bg: #f1e4e8;
-  --bg-border: #b97375;
-  --bg-card: #e2dcde;
+  --bg: #171717;
+  --bg-border: #747474;
+  --bg-card: #201d1de3;
 
   //   Text
-  --text-100: #e2dcde;
-  --text-200: #2d2d34;
+  --text-100: #ffffff;
+  --text-200: #ffffff;
   --text-300: #ceb1be;
 }
