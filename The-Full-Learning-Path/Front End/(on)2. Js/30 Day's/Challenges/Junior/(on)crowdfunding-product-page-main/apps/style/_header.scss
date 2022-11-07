@@ -1,0 +1,27 @@
+.header {
+  background-image: url(../../images/image-hero-mobile.jpg);
+  max-height: 100vh;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoints-up(medium) {
+    background-image: url(../../images/image-hero-desktop.jpg);
+    max-height: 100vh;
+    height: 400px;
+    background-size: cover;
+  }
+  &__container {
+    padding-inline: 165px;
+    height: 76px;
+    align-items: end;
+
+    @include breakpoints-down(medium) {
+      padding-inline: 30px;
+    }
+    .logo {
+    }
+    .nav {
+    }
+  }
+}

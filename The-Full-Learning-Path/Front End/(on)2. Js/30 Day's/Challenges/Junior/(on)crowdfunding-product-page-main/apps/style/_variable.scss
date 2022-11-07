@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+$ff-family: "Commissioner", sans-serif;
+
+$fs-size: 16px;
+
+$fw-400: 400;
+$fw-500: 500;
+$fw-700: 700;
+
+.light-theme {
+  // Primary
+  --pri-100: hsl(176, 50%, 47%);
+  --pri-200: hsl(176, 72%, 28%);
+
+  // Neutral
+  --neu-100: hsl(0, 0%, 0%);
+  --neu-200: hsl(0, 0%, 48%);
+
+  //   background
+  --bg: hsl(0, 0%, 96%);
+  --bg-card: #fff;
+
+  //   Text
+  --text-100: #fff;
+  --text-200: hsl(0, 0%, 0%);
+  --text-300: hsl(0, 0%, 48%);
+}
+.dark-theme {
+  // Primary
+  --pri-100: hsl(176, 50%, 47%);
+  --pri-200: hsl(176, 72%, 28%);
+
+  // Neutral
+  --neu-100: hsl(0, 0%, 0%);
+  --neu-200: hsl(0, 0%, 48%);
+
+  //   background
+  --bg: hsl(0, 0%, 96%);
+  --bg-border: hsl(0, 5%, 85%);
+  --bg-card: #fff;
+
+  //   Text
+  --text-100: #fff;
+  --text-200: hsl(0, 0%, 0%);
+  --text-300: hsl(0, 0%, 48%);
+}

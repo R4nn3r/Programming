@@ -65,7 +65,75 @@ svg {
 }
 
 // utilities
+.flex-jc-sb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpoints-up(medium) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.flex {
+  display: flex;
+  gap: 35px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoints-down(small) {
+    gap: 7px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  color: var(--text-100);
+  font-weight: $fw-500;
+  transition: font-weight, text-decoration, border-bottom;
+  border-bottom: 1px solid transparent;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+
+  &:hover,
+  &:active {
+    font-weight: $fw-700;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid var(--text-300);
+    font-weight: $fw-700;
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoints-down(small) {
+    display: none !important;
+  }
+}
+.hide-for-desktop {
+  @include breakpoints-up(large) {
+    display: none !important;
+  }
+}
+
+.active.not {
+  display: none;
+}
 
 // General styles
 body {
+  background-color: var(--bg);
+  font-size: $fs-size;
+  font-family: $ff-family;
 }

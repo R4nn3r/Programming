@@ -1,0 +1,186 @@
+.main {
+  transition: all 0.5s ease-in-out;
+  &__container {
+    max-width: 735px;
+    border-radius: 10px;
+    position: relative;
+    transform: translateY(-100px);
+  }
+
+  &__card {
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+    background-color: var(--bg-card);
+    margin-inline: 25px;
+    h1 {
+      margin-bottom: 10px;
+      font-size: 1.75rem;
+      color: var(--text-200);
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 40px;
+      color: var(--text-300);
+    }
+
+    &__buttons {
+      position: relative;
+
+      .bookmarkParent {
+        background-color: var(--bg);
+        display: flex;
+        align-items: center;
+        border-radius: 5em;
+
+        &:hover,
+        &:active,
+        &:focus {
+          outline: none;
+          circle {
+            fill: var(--pri-200);
+          }
+          path {
+            fill: var(--text-100);
+          }
+
+          div {
+            color: var(--pri-200);
+          }
+        }
+      }
+
+      button,
+      .bookmark {
+        font-family: inherit;
+        font-weight: $fw-700;
+        color: var(--text-100);
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        max-width: 200px;
+        height: 56px;
+        border-radius: 5em;
+      }
+
+      .bookmark {
+        cursor: pointer;
+        max-width: 115px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--neu-200);
+        padding-inline: 20px;
+        background-color: var(--bg);
+        div {
+          flex: 1;
+        }
+      }
+
+      button {
+        cursor: pointer;
+        background-color: var(--pri-100);
+        max-width: 200px;
+        min-width: 150px;
+        flex: 1;
+        &:hover,
+        &:active,
+        &:focus {
+          outline: none;
+          background-color: var(--pri-200);
+        }
+      }
+
+      div {
+        height: 56px;
+        svg {
+          width: 56px;
+          height: 56px;
+        }
+      }
+    }
+
+    .decor {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .load-line {
+      margin-top: 40px;
+      height: 14px;
+      background-color: var(--bg);
+      border-radius: 10px;
+
+      .in-line {
+        height: 14px;
+        max-width: 75%;
+        border-radius: 10px;
+        background-color: var(--pri-100);
+      }
+    }
+  }
+}
+
+// flex
+.flex-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  gap: 35px;
+
+  @include breakpoints-down(small) {
+    flex-direction: column;
+    margin-inline: auto;
+    text-align: center;
+    max-width: min-content;
+  }
+
+  h1,
+  p {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    @include breakpoints-down(small) {
+      margin-bottom: 25px;
+    }
+  }
+  .flex-num {
+    flex: 1;
+
+    &:not(:last-child) {
+      border-right: 1px solid var(--bg-border);
+      @include breakpoints-down(small) {
+        border-right: none;
+        border-bottom: 1px solid var(--bg-border);
+      }
+    }
+  }
+}
+
+// Mark
+.marked {
+  circle {
+    fill: var(--pri-200);
+  }
+  path {
+    fill: var(--text-100);
+  }
+
+  .bookmark {
+    color: var(--pri-200);
+  }
+}
