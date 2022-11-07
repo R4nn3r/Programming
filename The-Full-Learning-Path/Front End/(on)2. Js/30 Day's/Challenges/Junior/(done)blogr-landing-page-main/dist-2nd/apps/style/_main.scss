@@ -1,0 +1,139 @@
+.main {
+  overflow: hidden;
+  margin-top: 135px;
+  &-container {
+    color: var(--crl-heading);
+  }
+
+  &__heading {
+    text-align: center;
+
+    h1 {
+      font-size: min(2.7rem, 6.95vw);
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__intro {
+    text-align: center;
+
+    // display
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-direction: column;
+
+    @include breakpoints-up(medium) {
+      flex-direction: row;
+    }
+
+    .illustration {
+      scale: 1.2;
+      @include breakpoints-up(medium) {
+        flex: 1;
+        order: 2;
+        scale: 1.4;
+        transform: translateX(180px);
+      }
+    }
+
+    &__articles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      h2 {
+        font-size: min(1.75rem, 6.5vw);
+        margin-bottom: 7px;
+      }
+
+      @include breakpoints-up(medium) {
+        text-align: left;
+        flex: 1;
+        order: 1;
+      }
+    }
+  }
+  &__intro.second {
+    justify-content: space-between;
+
+    .illustration {
+      @include breakpoints-up(medium) {
+        scale: 1.5;
+        order: 1;
+        transform: translateX(-170px);
+      }
+    }
+
+    &__articles {
+      @include breakpoints-up(medium) {
+        order: 2;
+      }
+    }
+  }
+
+  &__main {
+    margin: 240px 0;
+    color: var(--crl-text);
+    position: relative;
+    .box {
+      // bg
+      background: url(../../images/bg-pattern-circles.svg),
+        var(--c-gradient-infras-mobile);
+      background-repeat: no-repeat;
+      background-size: 694px auto, auto;
+      background-position: calc(-83% - 408px) -22rem, center;
+
+      //  display
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0 10vh 0 10vh;
+      h2 {
+        font-size: min(2.5rem, 7.5vw);
+        margin-bottom: 7px;
+      }
+      p {
+        font-size: 1.05rem;
+
+        @include breakpoints-up(medium) {
+          max-width: 90%;
+        }
+      }
+      @include breakpoints-up(medium) {
+        flex-direction: row;
+        align-items: center;
+        background: url(../../images/bg-pattern-circles.svg),
+          var(--c-gradient-infras);
+        background-repeat: no-repeat;
+        background-size: 855px auto, auto;
+        background-position: calc(50% - 408px) -27rem, center;
+      }
+
+      .article-two {
+        margin: 50px 0 50px 0;
+        text-align: center;
+
+        @include breakpoints-up(medium) {
+          margin: 125px 0;
+          text-align: left;
+        }
+      }
+    }
+
+    .illu {
+      margin-top: -150px;
+
+      @include breakpoints-up(medium) {
+        margin-top: 0;
+        scale: 0.95;
+        // position
+        position: absolute;
+        top: -70px;
+        left: 80px;
+      }
+    }
+  }
+}

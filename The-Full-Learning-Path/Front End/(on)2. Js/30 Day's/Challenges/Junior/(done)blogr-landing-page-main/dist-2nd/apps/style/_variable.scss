@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@300;500;700&display=swap");
+
+$ff-overpass: "Overpass", sans-serif;
+
+$fw-ov-300: 300;
+$fw-ov-600: 600;
+
+$ff-ubuntu: "Ubuntu", sans-serif;
+
+$fw-ub-400: 400;
+$fw-ub-500: 500;
+$fw-ub-700: 700;
+
+// Font size
+$fs-para: 16px;
+
+.light-theme {
+  // Primary Colors
+  --cta-text: hsl(356, 100%, 66%);
+  --cta-hover: hsl(355, 100%, 74%);
+  --crl-heading: hsl(208, 49%, 24%);
+
+  // Neutral Colors
+  --crl-text: hsl(0, 0%, 100%);
+  --crl-text-sh: hsl(356, 100%, 66%);
+  --crl-f-text: hsl(240, 2%, 79%);
+  --crl-b-copy: hsl(207, 13%, 34%);
+  --crl-f-bg: hsl(0, 0%, 13%);
+
+  // Gradient Schemes
+  --c-gradient-header: linear-gradient(100deg, hsl(0, 0%, 22%), hsl(0, 0%, 0%));
+  --c-gradient-header-mobile: linear-gradient(
+    190deg,
+    hsl(0, 0%, 22%),
+    hsl(0, 0%, 0%)
+  );
+  --c-gradient-infras: linear-gradient(
+    to right,
+    hsl(0, 0%, 22%),
+    hsl(0, 0%, 0%)
+  );
+
+  --cta-gradient: linear-gradient(
+    190deg,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  --c-gradient-infras-mobile: linear-gradient(
+    to bottom,
+    hsl(0, 0%, 22%),
+    #000000
+  );
+
+  --pattern: url(../../images/bg-pattern-intro-desktop.svg);
+  --pattern-mobile: url(../../images/bg-pattern-intro-mobile.svg);
+
+  --menu: url(../../images/icon-hamburger.svg);
+  --menu-close: url(../../images/icon-close.svg);
+
+  --arrow-up: url(../../images/icon-arrow-light.svg);
+  --arrow-down: url(../../images/icon-arrow-light.svg);
+  --arrow-d-up: url(../../images/icon-arrow-dark.svg);
+  --arrow-d-down: url(../../images/icon-arrow-dark.svg);
+}
