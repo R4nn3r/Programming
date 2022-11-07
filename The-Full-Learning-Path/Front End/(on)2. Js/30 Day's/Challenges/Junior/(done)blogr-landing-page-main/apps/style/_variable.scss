@@ -36,8 +36,8 @@ $fs-para: 16px;
   );
   --c-gradient-infras: linear-gradient(
     to right,
-    hsl(237, 17%, 21%),
-    hsl(237, 23%, 32%)
+    hsl(0, 0%, 22%),
+    hsl(0, 0%, 0%)
   );
 
   --cta-gradient: linear-gradient(
@@ -47,8 +47,8 @@ $fs-para: 16px;
   );
   --c-gradient-infras-mobile: linear-gradient(
     to bottom,
-    hsl(237, 17%, 21%),
-    hsl(237, 23%, 32%)
+    hsl(0, 0%, 22%),
+    #000000
   );
 
   --pattern: url(../../images/bg-pattern-intro-desktop.svg);
