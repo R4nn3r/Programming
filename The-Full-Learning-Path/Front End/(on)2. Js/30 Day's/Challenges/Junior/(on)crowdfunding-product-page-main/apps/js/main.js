@@ -28,3 +28,8 @@ function closeMe(close) {
   selecting.classList.toggle("on");
   body.classList.toggle("overlay");
 }
+
+function pledge(card) {
+  const pledgeBottom = card.querySelector(".enterPledge");
+  pledgeBottom.classList.toggle("on");
+}

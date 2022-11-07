@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" href="./apps/style/style.css" />
   </head>
-  <body class="dark-theme">
+  <body class="light-theme">
     <!-- Header -->
     <header class="header">
       <div class="header__container container flex">
@@ -218,7 +218,6 @@
       </div>
 
       <!-- Selection modal start -->
-
       <div class="main__container container flex-cards selected">
         <!-- Card 1 -->
         <div class="main__card card-rd">
@@ -232,7 +231,7 @@
           </p>
 
           <!-- In Card 1 -->
-          <div class="in-card">
+          <div class="in-card" onclick="pledge(this)">
             <div class="in-card-top flex-jc-sb">
               <div>
                 <h3>Pledge with no reward</h3>
@@ -245,18 +244,21 @@
             </p>
 
             <!-- Enter Pledge -->
-            <div class="in-card-bottom hide-add flex-jc-sb">
-              <div class="tag">
-                <h1>101 <span>left</span></h1>
+            <div class="in-card-bottom enterPledge flex-jc-sb">
+              <div class="enter">
+                <h3>Enter your pledge</h3>
               </div>
-              <div>
+              <div class="input">
+                <input type="text" placeholder="$" />
+              </div>
+              <div class="btn">
                 <button>Continue</button>
               </div>
             </div>
           </div>
 
           <!-- In Card 2 -->
-          <div class="in-card">
+          <div class="in-card" onclick="pledge(this)">
             <div class="in-card-top flex-jc-sb">
               <div>
                 <h3>Bamboo Stand</h3>
@@ -273,18 +275,22 @@
               us launch our promotional campaign, and you'll be added to a
               special Backer member list.
             </p>
-            <div class="in-card-bottom hide-add flex-jc-sb">
-              <div class="tag">
-                <h1>101 <span>left</span></h1>
+
+            <div class="in-card-bottom enterPledge flex-jc-sb">
+              <div class="enter">
+                <h3>Enter your pledge</h3>
               </div>
-              <div>
+              <div class="input">
+                <input type="text" placeholder="$" />
+              </div>
+              <div class="btn">
                 <button>Continue</button>
               </div>
             </div>
           </div>
 
           <!-- In Card 3 -->
-          <div class="in-card">
+          <div class="in-card" onclick="pledge(this)">
             <div class="in-card-top flex-jc-sb">
               <div>
                 <h3>Black Edition Stand</h3>
@@ -301,18 +307,21 @@
               thank you. You'll be added to our Backer member list. Shipping is
               included.
             </p>
-            <div class="in-card-bottom hide-add flex-jc-sb">
-              <div class="tag">
-                <h1>64 <span>left</span></h1>
+            <div class="in-card-bottom enterPledge flex-jc-sb">
+              <div class="enter">
+                <h3>Enter your pledge</h3>
               </div>
-              <div>
+              <div class="input">
+                <input type="text" placeholder="$" />
+              </div>
+              <div class="btn">
                 <button>Continue</button>
               </div>
             </div>
           </div>
 
           <!-- In Card 4 -->
-          <div class="in-card done">
+          <div class="in-card done" onclick="pledge(this)">
             <div class="in-card-top flex-jc-sb">
               <div>
                 <h3>Mahogany Special Edition</h3>
@@ -329,11 +338,14 @@
               a personal thank you. You'll be added to our Backer member list.
               Shipping is included.
             </p>
-            <div class="in-card-bottom hide-add flex-jc-sb">
-              <div class="tag">
-                <h1>0 <span>left</span></h1>
+            <div class="in-card-bottom enterPledge flex-jc-sb">
+              <div class="enter">
+                <h3>Enter your pledge</h3>
               </div>
-              <div>
+              <div class="input">
+                <input type="text" placeholder="$" />
+              </div>
+              <div class="btn">
                 <button>Continue</button>
               </div>
             </div>
@@ -342,35 +354,12 @@
       </div>
     </main>
 
-    <!-- Selection modal start -->
-
     <!--
  
 
  
 
-  Bamboo Stand
-  Pledge $25 or more
-  You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-  you’ll be added to a special Backer member list.
-  101 left -->
 
-    <!-- Selected pledge start -->
-    <!-- Enter your pledge
-  $25
-  Continue -->
-    <!-- Selected pledge end -->
-
-    <!-- Black Edition Stand
-  Pledge $75 or more
-  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-  member list. Shipping is included.
-  64 left -->
-
-    <!-- Selected pledge start -->
-    <!-- Enter your pledge
-  $75
-  Continue -->
     <!-- Selected pledge end -->
 
     <!-- Mahogany Special Edition
