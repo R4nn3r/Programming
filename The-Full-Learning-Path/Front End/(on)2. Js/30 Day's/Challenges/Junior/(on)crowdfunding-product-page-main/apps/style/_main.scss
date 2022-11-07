@@ -288,13 +288,22 @@ span {
 
 // Selected
 .selected {
-  height: 0;
+  visibility: hidden;
   opacity: 0;
+  height: 0;
   transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: -550px;
+  left: 0;
+  right: 0;
 }
 
 .selected.on {
+  height: 100%;
+  transform: translateY(0%);
+
   scale: 1.05;
+  visibility: visible;
   opacity: 1;
   position: absolute;
   top: -85px;
