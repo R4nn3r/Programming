@@ -8,4 +8,9 @@ function changeHamburger(change) {
 
 function bookMark(mark) {
   mark.classList.toggle("marked");
+  if (mark.classList.contains("marked")) {
+    mark.querySelector(".bookmark").innerHTML = "Bookmarked";
+  } else {
+    mark.querySelector(".bookmark").innerHTML = "Bookmark";
+  }
 }

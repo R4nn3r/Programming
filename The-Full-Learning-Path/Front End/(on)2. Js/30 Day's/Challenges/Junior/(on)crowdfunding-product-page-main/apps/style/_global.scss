@@ -68,7 +68,7 @@ svg {
 .flex-jc-sb {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: self-start;
 
   @include breakpoints-up(medium) {
     flex-direction: row;
@@ -97,21 +97,19 @@ a {
   text-decoration: none;
   color: inherit;
   color: var(--text-100);
-  font-weight: $fw-500;
-  transition: font-weight, text-decoration, border-bottom;
-  border-bottom: 1px solid transparent;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
+  font-weight: $fw-400;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
 
   &:hover,
   &:active {
-    font-weight: $fw-700;
+    font-weight: $fw-500;
   }
 
   &:focus {
     outline: none;
     border-bottom: 2px solid var(--text-300);
-    font-weight: $fw-700;
+    font-weight: $fw-500;
   }
 }
 

@@ -1,18 +1,28 @@
 .main {
-  transition: all 0.5s ease-in-out;
   &__container {
     max-width: 735px;
     border-radius: 10px;
     position: relative;
     transform: translateY(-100px);
+
+    @include breakpoints-down(small) {
+      transform: translateY(-55px);
+    }
   }
 
   &__card {
     border-radius: 10px;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
     background-color: var(--bg-card);
     margin-inline: 25px;
+    box-shadow: 5px 5px 15px rgba(45, 45, 45, 0.173);
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoints-down(small) {
+      padding: 25px;
+    }
+
     h1 {
       margin-bottom: 10px;
       font-size: 1.75rem;
@@ -33,6 +43,8 @@
         display: flex;
         align-items: center;
         border-radius: 5em;
+
+        transition: all 0.3s ease-in-out;
 
         &:hover,
         &:active,
@@ -84,6 +96,7 @@
         max-width: 200px;
         min-width: 150px;
         flex: 1;
+        transition: all 0.3s ease-in-out;
         &:hover,
         &:active,
         &:focus {
@@ -173,6 +186,8 @@
 
 // Mark
 .marked {
+  transition: all 0.3s ease-in-out;
+
   circle {
     fill: var(--pri-200);
   }
@@ -183,4 +198,71 @@
   .bookmark {
     color: var(--pri-200);
   }
+}
+
+.card-rd {
+  text-align: left;
+  h3 {
+    margin-bottom: 21px;
+
+    @include breakpoints-down(small) {
+      margin-bottom: 7px;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.in-card {
+  border: 1px solid var(--bg-border);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: start;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @include breakpoints-down(small) {
+    p,
+    .tag,
+    h4 {
+      margin-bottom: 20px;
+    }
+  }
+
+  h4 {
+    color: var(--pri-100);
+    font-weight: $fw-500;
+  }
+
+  button {
+    font-family: inherit;
+    font-weight: $fw-700;
+    color: var(--text-100);
+    font-size: 0.85rem;
+    border: none;
+    outline: none;
+    height: 45px;
+    border-radius: 5em;
+
+    cursor: pointer;
+    background-color: var(--pri-100);
+    max-width: 200px;
+    min-width: 115px;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      background-color: var(--pri-200);
+    }
+  }
+}
+
+span {
+  font-weight: $fw-400;
+  font-size: 1rem;
+  color: var(--text-300);
 }

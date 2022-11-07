@@ -19,6 +19,7 @@ $fw-700: 700;
 
   //   background
   --bg: hsl(0, 0%, 96%);
+  --bg-border: hsl(0, 5%, 85%);
   --bg-card: #fff;
 
   //   Text
@@ -28,20 +29,20 @@ $fw-700: 700;
 }
 .dark-theme {
   // Primary
-  --pri-100: hsl(176, 50%, 47%);
-  --pri-200: hsl(176, 72%, 28%);
+  --pri-100: #b97375;
+  --pri-200: #2d2d34;
 
   // Neutral
-  --neu-100: hsl(0, 0%, 0%);
-  --neu-200: hsl(0, 0%, 48%);
+  --neu-100: #ceb1be;
+  --neu-200: #b97375;
 
   //   background
-  --bg: hsl(0, 0%, 96%);
-  --bg-border: hsl(0, 5%, 85%);
-  --bg-card: #fff;
+  --bg: #f1e4e8;
+  --bg-border: #b97375;
+  --bg-card: #e2dcde;
 
   //   Text
-  --text-100: #fff;
-  --text-200: hsl(0, 0%, 0%);
-  --text-300: hsl(0, 0%, 48%);
+  --text-100: #e2dcde;
+  --text-200: #2d2d34;
+  --text-300: #ceb1be;
 }
