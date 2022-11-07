@@ -115,7 +115,12 @@ a {
 
 // Visibility
 .hide-for-mobile {
-  @include breakpoints-down(small) {
+  @include breakpoints-down(medium) {
+    display: none !important;
+  }
+}
+.hide-for-mobile-plus {
+  @media (max-width: 477px) {
     display: none !important;
   }
 }
