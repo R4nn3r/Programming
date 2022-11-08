@@ -129,6 +129,11 @@ a {
     display: none !important;
   }
 }
+.hide-for-desktop-plus {
+  @include breakpoints-up(small) {
+    display: none !important;
+  }
+}
 
 .active.not {
   display: none;

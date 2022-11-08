@@ -3,14 +3,14 @@
 // 640px, 1024px, 1400px
 
 $breakpoints-up: (
-  "medium": "40em",
+  "medium": "640px",
   "large": "1024px",
   "xlarge": "87.5em",
 );
 
 // 639px, 1023px, 1399px
 $breakpoints-down: (
-  "small": "39em",
+  "small": "639px",
   "medium": "1023px",
   "large": "87.4em",
 );
