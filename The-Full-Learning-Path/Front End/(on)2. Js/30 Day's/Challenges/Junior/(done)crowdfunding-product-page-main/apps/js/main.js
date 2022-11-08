@@ -10,7 +10,6 @@ function changeHamburger(change) {
 
   menu.classList.toggle("not");
   close.classList.toggle("active");
-  // body.classList.toggle("overlay");
   toggler.classList.toggle("on");
   body.classList.toggle("fixed");
 }
