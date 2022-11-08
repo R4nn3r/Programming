@@ -46,3 +46,7 @@ function done(complete) {
   selecting.classList.remove("on");
   completed.classList.add("doneZo");
 }
+
+function theme() {
+  body.classList.toggle("dark-theme");
+}
