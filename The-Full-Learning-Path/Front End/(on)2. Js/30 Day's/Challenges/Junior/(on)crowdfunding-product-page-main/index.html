@@ -32,7 +32,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="dark-theme">
+  <body class="dark-themwe">
     <!-- Header -->
     <header class="header">
       <div class="header__container container flex">
@@ -166,7 +166,7 @@
                 <h1>101 <span>left</span></h1>
               </div>
               <div>
-                <button>Select Reward</button>
+                <button onclick="done(this)">Select Reward</button>
               </div>
             </div>
           </div>
@@ -191,7 +191,7 @@
                 <h1>64 <span>left</span></h1>
               </div>
               <div>
-                <button>Select Reward</button>
+                <button onclick="done(this)">Select Reward</button>
               </div>
             </div>
           </div>
@@ -216,7 +216,7 @@
                 <h1>0 <span>left</span></h1>
               </div>
               <div>
-                <button>Out of Stock</button>
+                <button onclick="done(this)">Out of Stock</button>
               </div>
             </div>
           </div>
@@ -225,11 +225,12 @@
 
       <!-- Selection modal start -->
       <div class="main__container container flex-cards selected">
-        <!-- Card 1 -->
         <div class="main__card card-rd">
+          
           <div class="close" onclick="closeMe(this)">
             <img src="./images/icon-close-modal.svg" alt="" />
           </div>
+
           <h3 class="title">Back this project</h3>
           <p class="paragraph">
             Want to support us in bringing Mastercraft Bamboo Monitor Riser out
@@ -316,93 +317,93 @@
               </div>
             </div>
           </div>
-        </div>
+          </div>
 
-        <!-- In Card 3 -->
-        <div class="in-card">
-          <div class="in-card-top flex-jc-sb">
-            <div>
-              <h3>Black Edition Stand</h3>
+          <!-- In Card 3 -->
+          <div class="in-card">
+            <div class="in-card-top flex-jc-sb">
+              <div>
+                <h3>Black Edition Stand</h3>
+              </div>
+              <div>
+                <h4>Pledge $75 or more</h4>
+              </div>
+              <div class="tag hide-n-s-on">
+                <h1>64 <span>left</span></h1>
+              </div>
+              <!-- Check -->
+              <div class="checkBox">
+                <input type="checkbox" name="select" id="select" />
+                <label for="select">
+                  <div class="check" onclick="pledge(this)"></div>
+                </label>
+              </div>
             </div>
-            <div>
-              <h4>Pledge $75 or more</h4>
-            </div>
-            <div class="tag hide-n-s-on">
+            <p>
+              You get a Black Special Edition computer stand and a personal thank
+              you. You'll be added to our Backer member list. Shipping is
+              included.
+            </p>
+            <div class="tag hide-n-s-off">
               <h1>64 <span>left</span></h1>
             </div>
-            <!-- Check -->
-            <div class="checkBox">
-              <input type="checkbox" name="select" id="select" />
-              <label for="select">
-                <div class="check" onclick="pledge(this)"></div>
-              </label>
-            </div>
-          </div>
-          <p>
-            You get a Black Special Edition computer stand and a personal thank
-            you. You'll be added to our Backer member list. Shipping is
-            included.
-          </p>
-          <div class="tag hide-n-s-off">
-            <h1>64 <span>left</span></h1>
-          </div>
-          <div class="in-card-bottom enterPledge flex-jc-sb">
-            <div class="enter">
-              <h3>Enter your pledge</h3>
-            </div>
-            <div class="buttons">
-              <div class="input">
-                <input type="text" placeholder="$ 75" />
+            <div class="in-card-bottom enterPledge flex-jc-sb">
+              <div class="enter">
+                <h3>Enter your pledge</h3>
               </div>
-              <div class="btn">
-                <button onclick="done(this)">Continue</button>
+              <div class="buttons">
+                <div class="input">
+                  <input type="text" placeholder="$ 75" />
+                </div>
+                <div class="btn">
+                  <button onclick="done(this)">Continue</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- In Card 4 -->
-        <div class="in-card done">
-          <div class="in-card-top flex-jc-sb">
-            <div>
-              <h3>Mahogany Special Edition</h3>
+          <!-- In Card 4 -->
+          <div class="in-card done">
+            <div class="in-card-top flex-jc-sb">
+              <div>
+                <h3>Mahogany Special Edition</h3>
+              </div>
+              <div>
+                <h4>Pledge $200 or more</h4>
+              </div>
+              <div class="tag hide-n-s-on">
+                <h1>0 <span>left</span></h1>
+              </div>
+              <!-- Check -->
+              <div class="checkBox">
+                <input type="checkbox" name="select" id="select" />
+                <label for="select">
+                  <div class="check" onclick="pledge(this)"></div>
+                </label>
+              </div>
             </div>
-            <div>
-              <h4>Pledge $200 or more</h4>
-            </div>
-            <div class="tag hide-n-s-on">
+            <p>
+              You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
+              personal thank you. You'll be added to our Backer member list.
+              Shipping is included.
+            </p>
+            <div class="tag hide-n-s-off">
               <h1>0 <span>left</span></h1>
             </div>
-            <!-- Check -->
-            <div class="checkBox">
-              <input type="checkbox" name="select" id="select" />
-              <label for="select">
-                <div class="check" onclick="pledge(this)"></div>
-              </label>
-            </div>
-          </div>
-          <p>
-            You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
-            personal thank you. You'll be added to our Backer member list.
-            Shipping is included.
-          </p>
-          <div class="tag hide-n-s-off">
-            <h1>0 <span>left</span></h1>
-          </div>
-          <div class="in-card-bottom enterPledge flex-jc-sb">
-            <div class="enter">
-              <h3>Enter your pledge</h3>
-            </div>
-            <div class="buttons">
-              <div class="input">
-                <input type="text" placeholder="$ 200" />
+            <div class="in-card-bottom enterPledge flex-jc-sb">
+              <div class="enter">
+                <h3>Enter your pledge</h3>
               </div>
-              <div class="btn">
-                <button onclick="done(this)">Continue</button>
+              <div class="buttons">
+                <div class="input">
+                  <input type="text" placeholder="$ 200" />
+                </div>
+                <div class="btn">
+                  <button onclick="done(this)">Continue</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
 
@@ -425,7 +426,7 @@
 
 
 
-
+<!-- Footer -->
       <footer class="attribution normText">
       Challenge by
       <a

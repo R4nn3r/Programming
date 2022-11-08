@@ -44,6 +44,7 @@ function pledge(card) {
 
 function done(complete) {
   selecting.classList.remove("on");
+  body.classList.add("overlay");
   completed.classList.add("doneZo");
 }
 
