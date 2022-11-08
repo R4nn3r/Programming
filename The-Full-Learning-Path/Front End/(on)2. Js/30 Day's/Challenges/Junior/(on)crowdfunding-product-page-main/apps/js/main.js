@@ -17,16 +17,21 @@ function bookMark(mark) {
 
 // Projects Selection
 const selecting = document.querySelector(".selected");
+const completed = document.querySelector(".completed");
 const body = document.querySelector("body");
 
 function selected(select) {
-  selecting.classList.toggle("on");
-  body.classList.toggle("overlay");
+  selecting.classList.add("on");
+  body.classList.add("overlay");
 }
 
 function closeMe(close) {
-  selecting.classList.toggle("on");
-  body.classList.toggle("overlay");
+  selecting.classList.remove("on");
+  body.classList.remove("overlay");
+}
+function closeMeSec(close) {
+  body.classList.remove("overlay");
+  completed.classList.remove("doneZo");
 }
 
 function pledge(card) {
@@ -35,4 +40,9 @@ function pledge(card) {
       ".enterPledge"
     );
   pledgeBottom.classList.toggle("on");
+}
+
+function done(complete) {
+  selecting.classList.remove("on");
+  completed.classList.add("doneZo");
 }

@@ -26,7 +26,7 @@
 
     <link rel="stylesheet" href="./apps/style/style.css" />
   </head>
-  <body class="light-theme">
+  <body class="dark-theme">
     <!-- Header -->
     <header class="header">
       <div class="header__container container flex">
@@ -254,18 +254,18 @@
 
             <!-- Enter Pledge -->
             <div class="in-card-bottom enterPledge flex-jc-sb">
-              <div class="enter">
-                <h3>Enter your pledge</h3>
-              </div>
-              <div class="buttons">
-                <div class="input">
-                  <input type="text" placeholder="$" />
+                <div class="enter">
+                  <h3>Enter your pledge</h3>
                 </div>
-                <div class="btn">
-                  <button>Continue</button>
+                <div class="buttons">
+                  <div class="input">
+                    <input type="text" placeholder="No Reward" />
+                  </div>
+                  <div class="btn">
+                    <button onclick="done(this)">Continue</button>
+                  </div>
                 </div>
               </div>
-            </div>
           </div>
 
           <!-- In Card 2 -->
@@ -303,10 +303,10 @@
             </div>
             <div class="buttons">
               <div class="input">
-                <input type="text" placeholder="$" />
+                <input type="text" placeholder="$ 25" />
               </div>
               <div class="btn">
-                <button>Continue</button>
+                <button onclick="done(this)">Continue</button>
               </div>
             </div>
           </div>
@@ -346,10 +346,10 @@
             </div>
             <div class="buttons">
               <div class="input">
-                <input type="text" placeholder="$" />
+                <input type="text" placeholder="$ 75" />
               </div>
               <div class="btn">
-                <button>Continue</button>
+                <button onclick="done(this)">Continue</button>
               </div>
             </div>
           </div>
@@ -389,30 +389,35 @@
             </div>
             <div class="buttons">
               <div class="input">
-                <input type="text" placeholder="$" />
+                <input type="text" placeholder="$ 200" />
               </div>
               <div class="btn">
-                <button>Continue</button>
+                <button onclick="done(this)">Continue</button>
               </div>
             </div>
           </div>
         </div>
+        </div>
       </div>
-      <!-- </div> -->
+
+      <!--  Continue -->
+      <div class="main__container container flex-cards completed">
+        <div class="main__card card-rd">
+          <h3 class="title">Thanks for your support!</h3>
+          <p class="paragraph">
+            Your pledge brings us one step closer to sharing Mastercraft Bamboo
+            Monitor Riser worldwide. You will get an email once our campaign is
+            completed.
+          </p>
+
+          <button onclick='closeMeSec(this)'>
+            Got it!
+          </button>
+        </div>
+      </div>
     </main>
 
-    <!-- Selected pledge end -->
-
-    <!-- Mahogany Special Edition
-  Pledge $200 or more
-  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-  to our Backer member list. Shipping is included.
-  0 left -->
-
-    <!-- Selected pledge  start -->
-    <!-- Enter your pledge
-  $200
-  Continue -->
+    <!--  Continue -->
     <!-- Selected pledge end -->
 
     <!-- Selection modal end -->
@@ -420,8 +425,7 @@
     <!-- Success modal start -->
     <!-- 
   Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
+ 
   Got it! -->
 
     <!-- Success modal end -->

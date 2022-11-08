@@ -527,7 +527,7 @@ span {
       input {
         font-family: inherit;
         font-weight: $fw-700;
-        color: var(--text-200);
+        color: var(--bg);
         font-size: 0.85rem;
         border: none;
         outline: none;
@@ -539,7 +539,7 @@ span {
         border: 1px solid var(--text-300);
 
         &::placeholder {
-          color: var(--text-200);
+          color: var(--bg);
         }
       }
     }
@@ -564,7 +564,6 @@ span {
     display: none;
 
     &:checked .check {
-      outline: 2px solid red;
       outline-offset: 4px;
       background-color: var(--pri-100);
     }
@@ -595,6 +594,86 @@ span {
     &-off {
       display: block;
       margin-top: 7px;
+    }
+  }
+}
+
+.completed {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 150px;
+  left: 0;
+  right: 0;
+  width: 85%;
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+  @include breakpoints-up(medium) {
+    width: 40%;
+  }
+  .card-rd {
+    text-align: center;
+
+    button {
+      font-family: inherit;
+      font-weight: $fw-700;
+      color: var(--text-100);
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      max-width: 175px;
+      height: 45px;
+      border-radius: 5em;
+
+      cursor: pointer;
+      background-color: var(--pri-100);
+      min-width: 125px;
+      transition: all 0.3s ease-in-out;
+      &:hover,
+      &:active,
+      &:focus {
+        outline: none;
+        background-color: var(--pri-200);
+      }
+    }
+  }
+}
+.completed.doneZo {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  width: 85%;
+
+  @include breakpoints-up(medium) {
+    width: 40%;
+  }
+  .card-rd {
+    text-align: center;
+
+    button {
+      font-family: inherit;
+      font-weight: $fw-700;
+      color: var(--text-100);
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      max-width: 175px;
+      height: 45px;
+      border-radius: 5em;
+
+      cursor: pointer;
+      background-color: var(--pri-100);
+      min-width: 125px;
+      transition: all 0.3s ease-in-out;
+      &:hover,
+      &:active,
+      &:focus {
+        outline: none;
+        background-color: var(--pri-200);
+      }
     }
   }
 }
