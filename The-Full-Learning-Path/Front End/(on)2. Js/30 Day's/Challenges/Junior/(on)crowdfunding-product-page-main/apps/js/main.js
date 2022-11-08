@@ -30,6 +30,9 @@ function closeMe(close) {
 }
 
 function pledge(card) {
-  const pledgeBottom = card.querySelector(".enterPledge");
+  const pledgeBottom =
+    card.parentElement.parentNode.parentElement.parentNode.querySelector(
+      ".enterPledge"
+    );
   pledgeBottom.classList.toggle("on");
 }
