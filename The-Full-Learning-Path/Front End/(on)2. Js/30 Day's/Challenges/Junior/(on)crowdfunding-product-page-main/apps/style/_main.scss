@@ -23,7 +23,7 @@
     transition: all 0.3s ease-in-out;
 
     @include breakpoints-down(small) {
-      padding: 25px;
+      padding: 30px;
     }
 
     h1 {
