@@ -1,9 +1,18 @@
+// Projects Selection
+const selecting = document.querySelector(".selected");
+const completed = document.querySelector(".completed");
+const body = document.querySelector("body");
+const toggler = document.querySelector(".toggle");
+
 function changeHamburger(change) {
   const menu = change.firstElementChild;
   const close = change.lastElementChild;
 
   menu.classList.toggle("not");
   close.classList.toggle("active");
+  // body.classList.toggle("overlay");
+  toggler.classList.toggle("on");
+  body.classList.toggle("fixed");
 }
 
 function bookMark(mark) {
@@ -14,11 +23,6 @@ function bookMark(mark) {
     mark.querySelector(".bookmark").innerHTML = "Bookmark";
   }
 }
-
-// Projects Selection
-const selecting = document.querySelector(".selected");
-const completed = document.querySelector(".completed");
-const body = document.querySelector("body");
 
 function selected(select) {
   selecting.classList.add("on");
@@ -36,9 +40,7 @@ function closeMeSec(close) {
 
 function pledge(card) {
   const pledgeBottom =
-    card.parentElement.parentNode.parentElement.parentNode.querySelector(
-      ".enterPledge"
-    );
+    card.parentElement.parentElement.parentNode.querySelector(".enterPledge");
   pledgeBottom.classList.toggle("on");
 }
 

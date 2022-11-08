@@ -27,12 +27,12 @@
     <!-- Link -->
     <link rel="stylesheet" href="./apps/style/style.css" />
     <!-- Icons -->
-      <script
+    <script
       src="https://kit.fontawesome.com/5b12988027.js"
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="dark-themwe">
+  <body class="dark-theme">
     <!-- Header -->
     <header class="header">
       <div class="header__container container flex">
@@ -64,6 +64,13 @@
             </div>
           </div>
         </nav>
+        <div class="menu-container hide-for-desktop toggle">
+          <ul class="links-nav flex-nav">
+            <li class="link"><a href="#">About</a></li>
+            <li class="link"><a href="#">Discover</a></li>
+            <li class="link"><a href="#">Get Started</a></li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -226,7 +233,6 @@
       <!-- Selection modal start -->
       <div class="main__container container flex-cards selected">
         <div class="main__card card-rd">
-          
           <div class="close" onclick="closeMe(this)">
             <img src="./images/icon-close-modal.svg" alt="" />
           </div>
@@ -246,10 +252,12 @@
 
               <!-- Check -->
               <div class="checkBox">
-                <input type="checkbox" name="select" id="select" />
-                <label for="select">
-                  <div class="check" onclick="pledge(this)"></div>
-                </label>
+                <input
+                  onclick="pledge(this)"
+                  type="checkbox"
+                  name="select"
+                  id="select"
+                />
               </div>
             </div>
 
@@ -261,62 +269,64 @@
 
             <!-- Enter Pledge -->
             <div class="in-card-bottom enterPledge flex-jc-sb">
-                <div class="enter">
-                  <h3>Enter your pledge</h3>
+              <div class="enter">
+                <h3>Enter your pledge</h3>
+              </div>
+              <div class="buttons">
+                <div class="input">
+                  <input type="text" placeholder="No Reward" />
                 </div>
-                <div class="buttons">
-                  <div class="input">
-                    <input type="text" placeholder="No Reward" />
-                  </div>
-                  <div class="btn">
-                    <button onclick="done(this)">Continue</button>
-                  </div>
+                <div class="btn">
+                  <button onclick="done(this)">Continue</button>
                 </div>
               </div>
+            </div>
           </div>
 
           <!-- In Card 2 -->
-          <div class="in-card" ">
-          <div class="in-card-top flex-jc-sb">
-            <div>
-              <h3>Bamboo Stand</h3>
+          <div class="in-card">
+            <div class="in-card-top flex-jc-sb">
+              <div>
+                <h3>Bamboo Stand</h3>
+              </div>
+              <div>
+                <h4>Pledge $25 or more</h4>
+              </div>
+              <div class="tag hide-n-s-on">
+                <h1>101 <span>left</span></h1>
+              </div>
+
+              <!-- Check -->
+              <div class="checkBox">
+                <input
+                  onclick="pledge(this)"
+                  type="checkbox"
+                  name="select"
+                  id="select"
+                />
+              </div>
             </div>
-            <div>
-              <h4>Pledge $25 or more</h4>
-            </div>
-            <div class="tag hide-n-s-on">
+            <p>
+              You get an ergonomic stand made of natural bamboo. You've helped
+              us launch our promotional campaign, and you'll be added to a
+              special Backer member list.
+            </p>
+            <div class="tag hide-n-s-off">
               <h1>101 <span>left</span></h1>
             </div>
-
-            <!-- Check -->
-            <div class="checkBox">
-              <input type="checkbox" name="select" id="select" />
-              <label for="select">
-                <div class="check" onclick="pledge(this)"></div>
-              </label>
-            </div>
-          </div>
-          <p>
-            You get an ergonomic stand made of natural bamboo. You've helped us
-            launch our promotional campaign, and you'll be added to a special
-            Backer member list.
-          </p>
-          <div class="tag hide-n-s-off">
-            <h1>101 <span>left</span></h1>
-          </div>
-          <div class="in-card-bottom enterPledge flex-jc-sb">
-            <div class="enter">
-              <h3>Enter your pledge</h3>
-            </div>
-            <div class="buttons">
-              <div class="input">
-                <input type="text" placeholder="$ 25" />
+            <div class="in-card-bottom enterPledge flex-jc-sb">
+              <div class="enter">
+                <h3>Enter your pledge</h3>
               </div>
-              <div class="btn">
-                <button onclick="done(this)">Continue</button>
+              <div class="buttons">
+                <div class="input">
+                  <input type="text" placeholder="$ 25" />
+                </div>
+                <div class="btn">
+                  <button onclick="done(this)">Continue</button>
+                </div>
               </div>
             </div>
-          </div>
           </div>
 
           <!-- In Card 3 -->
@@ -333,15 +343,17 @@
               </div>
               <!-- Check -->
               <div class="checkBox">
-                <input type="checkbox" name="select" id="select" />
-                <label for="select">
-                  <div class="check" onclick="pledge(this)"></div>
-                </label>
+                <input
+                  onclick="pledge(this)"
+                  type="checkbox"
+                  name="select"
+                  id="select"
+                />
               </div>
             </div>
             <p>
-              You get a Black Special Edition computer stand and a personal thank
-              you. You'll be added to our Backer member list. Shipping is
+              You get a Black Special Edition computer stand and a personal
+              thank you. You'll be added to our Backer member list. Shipping is
               included.
             </p>
             <div class="tag hide-n-s-off">
@@ -376,15 +388,17 @@
               </div>
               <!-- Check -->
               <div class="checkBox">
-                <input type="checkbox" name="select" id="select" />
-                <label for="select">
-                  <div class="check" onclick="pledge(this)"></div>
-                </label>
+                <input
+                  onclick="pledge(this)"
+                  type="checkbox"
+                  name="select"
+                  id="select"
+                />
               </div>
             </div>
             <p>
-              You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
-              personal thank you. You'll be added to our Backer member list.
+              You get two Special Edition Mahogany stands, a Backer T-Shirt, and
+              a personal thank you. You'll be added to our Backer member list.
               Shipping is included.
             </p>
             <div class="tag hide-n-s-off">
@@ -417,17 +431,13 @@
             completed.
           </p>
 
-          <button onclick='closeMeSec(this)'>
-            Got it!
-          </button>
+          <button onclick="closeMeSec(this)">Got it!</button>
         </div>
       </div>
     </main>
 
-
-
-<!-- Footer -->
-      <footer class="attribution normText">
+    <!-- Footer -->
+    <footer class="attribution normText">
       Challenge by
       <a
         class="impoText"
@@ -440,7 +450,7 @@
         <i class="fa-brands fa-github-alt"></i>
       </a>
       <p>
-       Old Stuff :(
+        Boring :(
         <i onclick="theme()" class="fa-solid fa-person-booth crazy"></i>
       </p>
     </footer>
