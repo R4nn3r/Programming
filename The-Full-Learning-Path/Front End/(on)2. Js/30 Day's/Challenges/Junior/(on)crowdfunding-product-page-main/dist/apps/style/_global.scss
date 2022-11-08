@@ -1,0 +1,176 @@
+// Reset
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  //   font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+li,
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// utilities
+.flex-jc-sb {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+
+  @include breakpoints-up(medium) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.flex {
+  display: flex;
+  gap: 35px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoints-down(small) {
+    gap: 7px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  color: var(--text-100);
+  font-weight: $fw-400;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:active {
+    font-weight: $fw-500;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid var(--text-300);
+    font-weight: $fw-500;
+  }
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoints-down(medium) {
+    display: none !important;
+  }
+}
+.hide-for-mobile-plus {
+  @media (max-width: 477px) {
+    display: none !important;
+  }
+}
+.hide-for-desktop {
+  @include breakpoints-up(large) {
+    display: none !important;
+  }
+}
+.hide-for-desktop-plus {
+  @include breakpoints-up(small) {
+    display: none !important;
+  }
+}
+
+.active.not {
+  display: none;
+}
+
+// General styles
+body {
+  background-color: var(--bg);
+  font-size: $fs-size;
+  font-family: $ff-family;
+  transition: all 0.5s ease-in-out;
+
+  &.overlay {
+    &::before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.809);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .main {
+      margin-top: 20em;
+    }
+  }
+}
+
+.fixed {
+  overflow: hidden;
+}
