@@ -1,6 +1,6 @@
 header {
   //   background-color: var(--neu-300);
-  padding: 40px 0;
+  padding: 20px 0;
 
   button {
     outline: 2px solid var(--pri-100);
@@ -16,4 +16,63 @@ header {
       background-color: var(--pri-100);
     }
   }
+}
+
+.header {
+  &__box {
+    &__logo {
+    }
+    &__ham {
+      padding: 25px;
+      background-color: var(--pri-100);
+
+      a {
+        color: var(--neu-300);
+      }
+
+      // position
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+// Functionality
+.menu-open,
+.menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.menu-open,
+.hamMenu,
+.menu-close {
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+
+  nav {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+  }
+}
+.menu-open.active,
+.hamMenu.active,
+.menu-close.active {
+  visibility: visible;
+  opacity: 1;
+  nav {
+    opacity: 1;
+  }
+}
+
+// animation for hamMenu
+.hamMenu {
+  top: 70px;
+  height: 0;
+}
+.hamMenu.active {
+  top: 70px;
+  height: 40vh;
 }

@@ -73,6 +73,9 @@ svg {
   @include breakpoints-up(large) {
     padding: 0 155px;
   }
+  @include breakpoints-down(small) {
+    padding: 0 25px;
+  }
 }
 .flex {
   display: flex;
@@ -80,6 +83,11 @@ svg {
   gap: 25px;
   &-sb-c {
     justify-content: space-between;
+  }
+
+  &-col {
+    flex-direction: column;
+    gap: 40px;
   }
 }
 
