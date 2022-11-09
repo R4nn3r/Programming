@@ -1,0 +1,96 @@
+.hero {
+  isolation: isolate;
+  background-color: var(--pri-100);
+  button {
+    outline: 2px solid var(--neu-300);
+    color: var(--neu-300);
+    background-color: var(--pri-100);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 2px solid var(--pri-100);
+      color: var(--pri-100);
+      background-color: var(--neu-300);
+    }
+  }
+  &__container {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 162px 155px 131px 155px;
+    gap: 30px;
+    position: relative;
+
+    @include breakpoints-down(medium) {
+      flex-direction: column;
+      padding: 0;
+    }
+    article {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h1 {
+        font-family: $ff-p;
+        font-size: min(4rem, 10vw);
+        letter-spacing: 2px;
+        line-height: 1;
+      }
+
+      @include breakpoints-down(medium) {
+        order: 2;
+        flex: 1;
+        text-align: start;
+        flex-direction: row;
+        align-items: center;
+        padding: 30px 30px 60px 30px;
+      }
+      @include breakpoints-down(small) {
+        flex-direction: column;
+        order: 2;
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    &__photo {
+      flex: 1;
+
+      picture {
+        position: absolute;
+        top: 100px;
+        z-index: 2;
+        right: 155px;
+
+        @include breakpoints-up(large) {
+          width: 35vw;
+        }
+        @include breakpoints-up(xlarge) {
+          width: 26vw;
+        }
+      }
+
+      @include breakpoints-down(medium) {
+        flex: 1;
+        order: 1;
+
+        picture {
+          position: revert;
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1;
+  @include breakpoints-down(small) {
+    align-items: center;
+  }
+}

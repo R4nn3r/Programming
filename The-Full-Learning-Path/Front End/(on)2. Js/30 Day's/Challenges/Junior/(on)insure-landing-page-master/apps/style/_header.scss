@@ -1,7 +1,6 @@
 header {
-  //   background-color: var(--neu-300);
-  padding: 20px 0;
-
+  background-color: var(--bg);
+  padding: 28px 0;
   button {
     outline: 2px solid var(--pri-100);
     color: var(--pri-100);
@@ -21,6 +20,9 @@ header {
 .header {
   &__box {
     &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     &__ham {
       padding: 25px;
@@ -51,6 +53,7 @@ header {
   position: absolute;
   visibility: hidden;
   transition: all 0.5s ease-in-out;
+  z-index: 1;
 
   nav {
     transition: all 0.3s ease-in-out;
@@ -62,6 +65,7 @@ header {
 .menu-close.active {
   visibility: visible;
   opacity: 1;
+  z-index: 1;
   nav {
     opacity: 1;
   }

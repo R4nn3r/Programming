@@ -5,12 +5,14 @@ $fw-p-400: 400;
 
 $ff-s: "Karla", sans-serif;
 $fw-s-400: 400;
-$fw-s-400: 700;
+$fw-s-700: 700;
 
 // Font Size
 $fs-size: 16px;
 
 :root {
+  --bg: hsl(0, 0%, 98%);
+
   // Primary
   --pri-100: hsl(256, 26%, 20%);
   --pri-200: hsl(216, 30%, 68%);
