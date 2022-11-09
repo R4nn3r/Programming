@@ -191,17 +191,17 @@
 
     # Categories 
 
-        - Best Case 
+        - Best Case [Big Omega]
             data: Arranged in the most advantages order 
             T(n): lower boundary 
             input size: minimum input size 
 
-        - Average Case 
+        - Average Case [Big Theta]
             data: Arranged in random order 
             T(n): optimal bound 
             input size: random or average size 
 
-        - Worse Case [Used for complexity Analysis]
+        - Worse Case [Used for complexity Analysis] [Big O]
             data: Arranged in the most disadvantages order 
             T(n): upper boundary
             input size: Infinite size 
@@ -224,7 +224,6 @@
     Definition 1: f (n) is O(g(n)) if there exist positive numbers c and N such that f (n) ≤ cg(n) for all n ≥ N.
 
 # Recursion
-
     Note:
     recursive function uses LIFO (LAST IN FIRST OUT) Structure just like the stack data structure.
 

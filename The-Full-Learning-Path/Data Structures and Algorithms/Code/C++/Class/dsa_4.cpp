@@ -16,8 +16,5 @@ int main(){
     cout <<"Size of Array 3: " << sizeof(arr3) / sizeof(arr3[0]) << endl;
 
 
-
-
     return 0;
-
 }
