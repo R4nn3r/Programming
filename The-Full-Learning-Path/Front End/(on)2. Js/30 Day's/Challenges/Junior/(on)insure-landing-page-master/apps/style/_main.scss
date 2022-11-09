@@ -43,10 +43,17 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
+      flex-wrap: wrap;
 
       @include breakpoints-up(medium) {
         flex-direction: row;
         text-align: start;
+
+        .card {
+          min-width: 240px;
+          max-width: 355px;
+          flex: 1;
+        }
       }
 
       .card {
@@ -67,14 +74,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 85px 45px;
+    padding: 80px 45px;
     text-align: center;
     gap: 45px;
 
     @include breakpoints-up(large) {
       justify-content: space-between;
       text-align: start;
-      padding: 85px;
+      padding: 80px;
       flex-direction: row;
     }
 
@@ -90,7 +97,6 @@
       font-size: min(3rem, 8.5vw);
       letter-spacing: 2px;
       color: var(--neu-300);
-      margin-top: 20px;
       line-height: 1;
       @include breakpoints-up(large) {
         text-align: start;
@@ -98,14 +104,15 @@
     }
 
     button {
-      max-width: 210px;
+      max-width: 180px;
       width: 100%;
       outline: 2px solid var(--neu-300);
       color: var(--neu-300);
+      font-weight: $fw-s-700;
       background-color: var(--pri-100);
       transition: all 0.3s ease-in-out;
       cursor: pointer;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       &:hover,
       &:focus,
       &:active {
