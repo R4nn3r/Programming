@@ -4,3 +4,8 @@ const HamClick = (ham) => {
   ham.lastElementChild.classList.toggle("active");
   ham.nextElementSibling.classList.toggle("active");
 };
+
+const body = document.querySelector("body");
+function theme() {
+  body.classList.toggle("dark-theme");
+}

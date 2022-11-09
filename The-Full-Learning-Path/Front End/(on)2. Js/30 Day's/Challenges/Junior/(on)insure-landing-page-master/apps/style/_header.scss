@@ -2,8 +2,8 @@ header {
   background-color: var(--bg);
   padding: 28px 0;
   button {
-    outline: 2px solid var(--pri-100);
-    color: var(--pri-100);
+    outline: 2px solid var(--accent);
+    color: var(--accent);
     background-color: var(--neu-300);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -12,7 +12,7 @@ header {
     &:active {
       outline: 2px solid var(--neu-300);
       color: var(--neu-300);
-      background-color: var(--pri-100);
+      background-color: var(--accent);
     }
   }
 }
@@ -26,7 +26,7 @@ header {
     }
     &__ham {
       padding: 25px;
-      background-color: var(--pri-100);
+      background-color: var(--accent);
 
       a {
         color: var(--neu-300);
