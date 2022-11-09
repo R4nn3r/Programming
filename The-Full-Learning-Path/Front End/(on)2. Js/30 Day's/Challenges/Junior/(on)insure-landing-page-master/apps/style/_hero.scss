@@ -34,9 +34,10 @@
       gap: 20px;
       h1 {
         font-family: $ff-p;
-        font-size: min(4rem, 10vw);
+        font-size: min(4rem, 10.5vw);
         letter-spacing: 2px;
         line-height: 1;
+        flex: 1;
       }
 
       @include breakpoints-down(medium) {
@@ -44,7 +45,7 @@
         flex: 1;
         text-align: start;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         padding: 30px 30px 60px 30px;
       }
       @include breakpoints-down(small) {
@@ -57,28 +58,7 @@
 
     &__photo {
       flex: 1;
-
-      picture {
-        position: absolute;
-        top: 100px;
-        z-index: 2;
-        right: 155px;
-
-        @include breakpoints-up(large) {
-          width: 35vw;
-        }
-        @include breakpoints-up(xlarge) {
-          width: 26vw;
-        }
-      }
-
-      @include breakpoints-down(medium) {
-        flex: 1;
-        order: 1;
-
-        picture {
-          position: revert;
-        }
+      .picture {
       }
     }
   }

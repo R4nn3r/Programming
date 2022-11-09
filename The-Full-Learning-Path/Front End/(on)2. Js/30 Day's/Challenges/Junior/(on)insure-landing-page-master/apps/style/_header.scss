@@ -30,6 +30,16 @@ header {
 
       a {
         color: var(--neu-300);
+
+        &:hover,
+        &:active {
+          color: var(--neu-300);
+        }
+        &:focus {
+          color: var(--neu-300);
+          outline: none;
+          border-bottom: 2px solid var(--neu-300);
+        }
       }
 
       // position

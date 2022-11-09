@@ -1,0 +1,118 @@
+.section {
+  margin-top: 105px;
+  margin-bottom: 140px;
+
+  @include breakpoints-up(medium) {
+    margin-bottom: 160px;
+    margin-top: 360px;
+  }
+
+  &-container {
+    padding-top: 45px;
+    text-align: center;
+    @include breakpoints-up(medium) {
+      padding-top: 0px;
+    }
+    h1 {
+      font-family: $ff-p;
+      font-size: min(4rem, 10.5vw);
+      letter-spacing: 2px;
+      color: var(--pri-100);
+      margin-top: 20px;
+      line-height: 1;
+      margin-bottom: 80px;
+      @include breakpoints-up(medium) {
+        margin-bottom: 95px;
+        text-align: start;
+      }
+    }
+    h2 {
+      font-family: $ff-p;
+      color: var(--pri-100);
+      font-size: min(1.5rem, 6.25vw);
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-block: 20px;
+    }
+
+    p {
+      color: var(--pri-200);
+    }
+
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @include breakpoints-up(medium) {
+        flex-direction: row;
+        text-align: start;
+      }
+
+      .card {
+        flex: 1;
+      }
+    }
+  }
+}
+
+// Banner
+.banner {
+  margin-bottom: 220px;
+  @include breakpoints-up(medium) {
+    margin-bottom: 180px;
+  }
+  .box {
+    background-color: var(--pri-100);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 85px 45px;
+    text-align: center;
+    gap: 45px;
+
+    @include breakpoints-up(large) {
+      justify-content: space-between;
+      text-align: start;
+      padding: 85px;
+      flex-direction: row;
+    }
+
+    div {
+      flex: 1;
+
+      &:last-child {
+        text-align: end;
+      }
+    }
+    h1 {
+      font-family: $ff-p;
+      font-size: min(3rem, 8.5vw);
+      letter-spacing: 2px;
+      color: var(--neu-300);
+      margin-top: 20px;
+      line-height: 1;
+      @include breakpoints-up(large) {
+        text-align: start;
+      }
+    }
+
+    button {
+      max-width: 210px;
+      width: 100%;
+      outline: 2px solid var(--neu-300);
+      color: var(--neu-300);
+      background-color: var(--pri-100);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      font-size: 1.25rem;
+      &:hover,
+      &:focus,
+      &:active {
+        outline: 2px solid var(--pri-100);
+        color: var(--pri-100);
+        background-color: var(--neu-300);
+      }
+    }
+  }
+}
