@@ -1,18 +1,30 @@
 .hero {
   isolation: isolate;
-  background-color: var(--pri-100);
+  background: url(../../images/bg-pattern-intro-right-desktop.svg),
+    var(--pri-100);
+  background-repeat: no-repeat;
+  background-position: right;
+
+  @include breakpoints-down(small) {
+    background: url(../../images/bg-pattern-intro-left-mobile.svg),
+      var(--pri-100);
+    background-repeat: no-repeat;
+    background-position: top-left;
+  }
+
   button {
-    outline: 2px solid var(--neu-300);
-    color: var(--neu-300);
+    outline: 2px solid var(--accent-w);
+    color: var(--accent-w);
     background-color: var(--pri-100);
     transition: all 0.3s ease-in-out;
+    font-size: 1rem;
     cursor: pointer;
     &:hover,
     &:focus,
     &:active {
-      outline: 2px solid var(--pri-100);
-      color: var(--pri-100);
-      background-color: var(--neu-300);
+      outline: 2px solid var(--accent);
+      color: var(--accent);
+      background-color: var(--accent2);
     }
   }
   &__container {

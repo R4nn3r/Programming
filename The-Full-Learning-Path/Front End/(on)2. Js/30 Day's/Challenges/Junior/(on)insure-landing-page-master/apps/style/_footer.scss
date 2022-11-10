@@ -1,15 +1,27 @@
 .footer {
-  background-color: var(--neu-300);
+  background-color: var(--bg);
   &-container {
     &__top {
+      flex-wrap: wrap;
+
       border-bottom: 1px solid var(--pri-200);
       padding: 60px 5px 30px 5px;
+      @include breakpoints-down(small) {
+        justify-content: center;
+      }
     }
 
     &__mid {
       padding: 30px 5px;
       text-transform: uppercase;
       align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: left;
+
+      @include breakpoints-down(small) {
+        // text-align: center;
+      }
       .nav-list {
         flex: 1;
       }
@@ -18,6 +30,8 @@
         color: var(--pri-200);
         font-size: 0.9rem;
         padding-bottom: 15px;
+        min-width: 100px;
+        width: 100%;
       }
 
       li {
@@ -25,26 +39,26 @@
       }
 
       a {
-        color: var(--pri-100);
+        color: var(--accent);
         font-weight: $fw-s-700;
         font-size: 0.8rem;
         transition: all 0.3s ease-in-out;
 
         &:hover,
         &:active {
-          color: var(--accent);
+          color: var(--pri-200);
         }
         &:focus {
-          color: var(--accent);
+          color: var(--pri-200);
           outline: none;
-          border-bottom: 2px solid var(--accent);
+          border-bottom: 2px solid var(--pri-100);
         }
       }
     }
 
     &__bottom {
       font-family: inherit;
-      color: var(--pri-100);
+      color: var(--accent);
       padding: 5em;
 
       i {
@@ -61,11 +75,14 @@ a {
   svg path {
     &:hover,
     &:active {
-      fill: var(--pri-100);
+      fill: var(--accent);
     }
     &:focus {
-      fill: var(--pri-100);
+      fill: var(--accent);
       outline: none;
     }
   }
+}
+.social {
+  flex-wrap: wrap;
 }

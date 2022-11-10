@@ -17,7 +17,7 @@
       font-family: $ff-p;
       font-size: min(3.9rem, 10.5vw);
       letter-spacing: 2px;
-      color: var(--pri-100);
+      color: var(--accent);
       margin-top: 20px;
       line-height: 1;
       margin-bottom: 80px;
@@ -28,7 +28,7 @@
     }
     h2 {
       font-family: $ff-p;
-      color: var(--pri-100);
+      color: var(--accent);
       font-size: min(1.5rem, 6.25vw);
       letter-spacing: 2px;
       line-height: 1;
@@ -36,7 +36,7 @@
     }
 
     p {
-      color: var(--pri-200);
+      color: var(--neu-200);
     }
 
     &__cards {
@@ -70,7 +70,18 @@
     margin-bottom: 180px;
   }
   .box {
-    background-color: var(--pri-100);
+    background: url(../../images/bg-pattern-intro-right-desktop.svg),
+      var(--pri-100);
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @include breakpoints-down(small) {
+      background: url(../../images/bg-pattern-intro-right-mobile.svg),
+        var(--pri-100);
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -96,7 +107,7 @@
       font-family: $ff-p;
       font-size: min(3rem, 8.5vw);
       letter-spacing: 2px;
-      color: var(--neu-300);
+      color: var(--accent-w);
       line-height: 1;
       @include breakpoints-up(large) {
         text-align: start;
@@ -106,10 +117,11 @@
     button {
       max-width: 180px;
       width: 100%;
-      outline: 2px solid var(--neu-300);
-      color: var(--neu-300);
+      outline: 2px solid var(--accent-w);
+      color: var(--accent-w);
+      background-color: var(--pri-100);
+
       font-weight: $fw-s-700;
-      background-color: var(--accent);
       transition: all 0.3s ease-in-out;
       cursor: pointer;
       font-size: 1.1rem;
@@ -117,8 +129,8 @@
       &:focus,
       &:active {
         outline: 2px solid var(--pri-100);
-        color: var(--accent);
-        background-color: var(--neu-300);
+        color: var(--pri-100);
+        background-color: var(--accent-w);
       }
     }
   }

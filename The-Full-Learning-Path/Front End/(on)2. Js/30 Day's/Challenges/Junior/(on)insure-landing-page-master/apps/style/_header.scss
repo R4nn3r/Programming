@@ -4,14 +4,14 @@ header {
   button {
     outline: 2px solid var(--accent);
     color: var(--accent);
-    background-color: var(--neu-300);
+    background-color: var(--accent2);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     &:hover,
     &:focus,
     &:active {
-      outline: 2px solid var(--neu-300);
-      color: var(--neu-300);
+      outline: 2px solid var(--accent);
+      color: var(--accent2);
       background-color: var(--accent);
     }
   }
@@ -26,19 +26,23 @@ header {
     }
     &__ham {
       padding: 25px;
-      background-color: var(--accent);
+      background: url(../../images/bg-pattern-mobile-nav.svg), var(--accent);
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: contain;
 
       a {
-        color: var(--neu-300);
+        color: var(--accent2);
 
         &:hover,
         &:active {
-          color: var(--neu-300);
+          color: var(--pri-200);
         }
         &:focus {
-          color: var(--neu-300);
+          color: var(--pri-200);
+
           outline: none;
-          border-bottom: 2px solid var(--neu-300);
+          border-bottom: 2px solid var(--accent2);
         }
       }
 
@@ -46,6 +50,21 @@ header {
       position: absolute;
       left: 0;
       right: 0;
+
+      // button
+      button {
+        width: 100%;
+        outline: 2px solid var(--accent2);
+        color: var(--accent2);
+        background-color: var(--accent);
+        &:hover,
+        &:focus,
+        &:active {
+          outline: 2px solid var(--accent2);
+          color: var(--accent);
+          background-color: var(--accent2);
+        }
+      }
     }
   }
 }
@@ -88,5 +107,10 @@ header {
 }
 .hamMenu.active {
   top: 70px;
-  height: 40vh;
+  height: 100vh;
+}
+
+// Overflow-paused
+.overflow-paused {
+  overflow-y: hidden;
 }

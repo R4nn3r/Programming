@@ -108,6 +108,7 @@ body {
   font-family: $ff-s;
   font-size: $fs-size;
   font-weight: $fw-s-400;
+  transition: background-color 0.95s ease-in-out;
   background-color: var(--bg);
 }
 
@@ -115,17 +116,18 @@ a {
   font-family: inherit;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--neu-200);
+  color: var(--accent);
   transition: all 0.3s ease-in-out;
 
   &:hover,
   &:active {
-    color: var(--pri-100);
+    color: var(--pri-200);
   }
   &:focus {
-    color: var(--pri-100);
+    color: var(--pri-200);
+
     outline: none;
-    border-bottom: 2px solid var(--pri-100);
+    border-bottom: 2px solid var(--accent);
   }
 }
 
