@@ -13,7 +13,7 @@
     background-position: top-left;
   }
 
-  &::after {
+  &::before {
     position: absolute;
     content: "";
     background-image: url(../../images/bg-pattern-intro-left-desktop.svg);
