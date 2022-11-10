@@ -5,7 +5,6 @@
     var(--pri-100);
   background-repeat: no-repeat;
   background-position: right;
-  border: 2px dashed red;
 
   @include breakpoints-down(small) {
     background: url(../../images/bg-pattern-intro-left-mobile.svg),
@@ -56,18 +55,20 @@
     padding: 162px 155px 131px 155px;
     gap: 45px;
     position: relative;
-    border: 2px dashed red;
 
     @include breakpoints-down(medium) {
       flex-direction: column;
+      gap: 5px;
       padding: 0;
+    }
+    @include breakpoints-down(small) {
+      overflow: hidden;
     }
     article {
       flex: 1;
       display: flex;
       flex-direction: column;
       gap: 20px;
-      border: 2px dashed red;
 
       h1 {
         font-family: $ff-p;
@@ -101,13 +102,35 @@
     }
 
     &__photo {
-      border: 2px dashed red;
       flex: 1;
       .picture {
+        // background-image: url(../../images/image-intro-mobile.jpg);
+        // background-size: cover;
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // display: block;
+        // height: 500px;
+        // width: 450px;
+        // picture {
+        //   display: none;
+        // }
+        @include breakpoints-down(small) {
+          background-image: url(../../images/image-intro-desktop.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: block;
+          height: 450px;
+          width: 550px;
+          picture {
+            display: none;
+          }
+        }
         @include breakpoints-up(medium) {
           position: absolute;
           top: calc(100% - 85%);
           picture {
+            display: block;
             img {
               width: 100%;
             }
