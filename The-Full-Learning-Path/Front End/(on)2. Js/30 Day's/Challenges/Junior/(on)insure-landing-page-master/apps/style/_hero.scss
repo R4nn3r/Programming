@@ -1,5 +1,6 @@
 .hero {
   isolation: isolate;
+  position: relative;
   background: url(../../images/bg-pattern-intro-right-desktop.svg),
     var(--pri-100);
   background-repeat: no-repeat;
@@ -10,6 +11,26 @@
       var(--pri-100);
     background-repeat: no-repeat;
     background-position: top-left;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../../images/bg-pattern-intro-left-desktop.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    top: calc(100% - 200px);
+    // bottom: 65px;
+    background-size: contain;
+    height: 350px;
+    width: 350px;
+    display: block;
+
+    @include breakpoints-down(small) {
+      rotate: 180deg;
+      top: calc(100% - 200px);
+      right: 0;
+    }
   }
 
   button {
