@@ -1,6 +1,15 @@
 .footer {
-  background-color: var(--bg);
+  background-color: var(--neu-300);
   &-container {
+    background: url(../../images/bg-pattern-footer-desktop.svg), var(--neu-300);
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    @include breakpoints-down(small) {
+      background: url(../../images/bg-pattern-footer-mobile.svg), var(--neu-300);
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
     &__top {
       flex-wrap: wrap;
 
@@ -75,7 +84,7 @@ a {
   svg path {
     &:hover,
     &:active {
-      fill: var(--accent);
+      fill: var(--pri-100);
     }
     &:focus {
       fill: var(--accent);
