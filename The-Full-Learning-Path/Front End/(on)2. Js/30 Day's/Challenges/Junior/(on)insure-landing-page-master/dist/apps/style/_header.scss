@@ -1,0 +1,114 @@
+header {
+  padding: 28px 0;
+  button {
+    outline: 2px solid var(--accent);
+    color: var(--accent);
+    background-color: var(--accent2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 2px solid var(--accent);
+      color: var(--accent2);
+      background-color: var(--accent);
+    }
+  }
+}
+
+.header {
+  &__box {
+    &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__ham {
+      padding: 25px;
+      background: url(../../images/bg-pattern-mobile-nav.svg), var(--bg-ham);
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: contain;
+
+      a {
+        color: var(--accent-w);
+        &:hover,
+        &:active {
+          color: var(--pri-200);
+        }
+        &:focus {
+          color: var(--pri-200);
+
+          outline: none;
+          border-bottom: 2px solid var(--accent);
+        }
+      }
+
+      // position
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      // button
+      button {
+        width: 100%;
+        outline: 2px solid var(--accent2);
+        color: var(--accent2);
+        background-color: var(--accent);
+        &:hover,
+        &:focus,
+        &:active {
+          outline: 2px solid var(--accent);
+          color: var(--accent);
+          background-color: var(--accent2);
+        }
+      }
+    }
+  }
+}
+
+// Functionality
+.menu-open,
+.menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.menu-open,
+.hamMenu,
+.menu-close {
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+
+  nav {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+  }
+}
+.menu-open.active,
+.hamMenu.active,
+.menu-close.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  nav {
+    opacity: 1;
+  }
+}
+
+// animation for hamMenu
+.hamMenu {
+  top: 70px;
+  height: 0;
+}
+.hamMenu.active {
+  top: 70px;
+  height: 100vh;
+}
+
+// Overflow-paused
+.overflow-paused {
+  overflow-y: hidden;
+}

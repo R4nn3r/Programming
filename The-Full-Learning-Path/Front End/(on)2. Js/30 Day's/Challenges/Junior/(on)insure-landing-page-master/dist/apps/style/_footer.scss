@@ -1,0 +1,108 @@
+.footer {
+  background-color: var(--neu-300);
+  &-container {
+    background: url(../../images/bg-pattern-footer-desktop.svg), var(--neu-300);
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    @include breakpoints-down(small) {
+      background: url(../../images/bg-pattern-footer-mobile.svg), var(--neu-300);
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+    &__top {
+      flex-wrap: wrap;
+
+      border-bottom: 1px solid var(--pri-200);
+      padding: 60px 5px 30px 5px;
+      @include breakpoints-down(small) {
+        justify-content: center;
+      }
+    }
+
+    &__mid {
+      padding: 30px 5px;
+      text-transform: uppercase;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: left;
+
+      @include breakpoints-down(small) {
+        // text-align: center;
+      }
+      .nav-list {
+        flex: 1;
+      }
+
+      h3 {
+        color: var(--pri-200);
+        font-size: 0.9rem;
+        padding-bottom: 15px;
+        min-width: 100px;
+        width: 100%;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      a {
+        color: var(--accent);
+        font-weight: $fw-s-700;
+        font-size: 0.8rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+          color: var(--pri-200);
+        }
+        &:focus {
+          color: var(--pri-200);
+          outline: none;
+          border-bottom: 2px solid var(--pri-100);
+        }
+      }
+    }
+
+    &__bottom {
+      font-family: inherit;
+      color: var(--accent);
+      padding: 5em;
+
+      i {
+        scale: 1.45;
+        margin-left: 0.5em;
+        &:hover {
+          scale: 1.75;
+        }
+      }
+    }
+  }
+}
+a {
+  svg path {
+    &:hover,
+    &:active {
+      fill: var(--pri-100);
+    }
+    &:focus {
+      fill: var(--accent);
+      outline: none;
+    }
+  }
+}
+.social {
+  flex-wrap: wrap;
+}
+.attribution {
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  text-align: center;
+  font-family: $ff-s;
+  font-weight: $fw-s-700;
+}
+.attribution a {
+  font-size: 0.75rem;
+  color: hsl(228, 45%, 44%);
+}

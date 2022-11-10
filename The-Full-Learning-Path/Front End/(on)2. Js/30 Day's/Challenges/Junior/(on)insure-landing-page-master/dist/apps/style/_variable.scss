@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+$ff-p: "DM Serif Display", serif;
+$fw-p-400: 400;
+
+$ff-s: "Karla", sans-serif;
+$fw-s-400: 400;
+$fw-s-700: 700;
+
+// Font Size
+$fs-size: 16px;
+
+.light-theme {
+  --bg: hsl(0, 0%, 100%);
+  --border: #837d88;
+  --bg-ham: #2b282f;
+
+  // Primary
+  --accent: #2b282f;
+  --accent2: #ffffff;
+  --accent-w: #ffffff;
+  --pri-100: hsl(256, 26%, 20%);
+  --pri-200: hsl(216, 30%, 68%);
+
+  // Neutral
+  --neu-100: hsl(270, 9%, 17%);
+  --neu-200: hsl(273, 4%, 51%);
+  --neu-300: hsl(0, 0%, 98%);
+}
+
+:root {
+  --bg: hsl(0, 0%, 14%);
+  --bg-ham: #2b282f;
+  --border: #837d88;
+
+  // Primary
+  --accent: #fcfcfc;
+  --accent-w: #ffffff;
+  --accent2: #2b282f;
+  --pri-100: hsl(256, 26%, 20%);
+  --pri-200: hsl(0, 0%, 90%);
+
+  // Neutral
+  --neu-100: hsl(270, 9%, 17%);
+  --neu-200: hsl(273, 4%, 51%);
+  --neu-300: hsl(0, 0%, 18%);
+}

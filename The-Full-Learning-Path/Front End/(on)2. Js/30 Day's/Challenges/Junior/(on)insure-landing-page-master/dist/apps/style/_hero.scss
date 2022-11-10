@@ -1,0 +1,144 @@
+.hero {
+  isolation: isolate;
+  position: relative;
+  background: url(../../images/bg-pattern-intro-right-desktop.svg),
+    var(--pri-100);
+  background-repeat: no-repeat;
+  background-position: right;
+
+  @include breakpoints-down(small) {
+    background: url(../../images/bg-pattern-intro-left-mobile.svg),
+      var(--pri-100);
+    background-repeat: no-repeat;
+    background-position: top-left;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../../images/bg-pattern-intro-left-desktop.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    top: calc(100% - 200px);
+    // bottom: 65px;
+    background-size: contain;
+    height: 350px;
+    width: 350px;
+    display: block;
+
+    @include breakpoints-down(small) {
+      rotate: 180deg;
+      top: calc(100% - 200px);
+      right: 0;
+    }
+  }
+
+  button {
+    outline: 2px solid var(--accent-w);
+    color: var(--accent-w);
+    background-color: var(--pri-100);
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      outline: 2px solid var(--accent);
+      color: var(--accent);
+      background-color: var(--accent2);
+    }
+  }
+  &__container {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 162px 155px 131px 155px;
+    gap: 45px;
+    position: relative;
+
+    @include breakpoints-down(medium) {
+      flex-direction: column;
+      gap: 5px;
+      padding: 0;
+    }
+    @include breakpoints-down(small) {
+      overflow: hidden;
+    }
+    article {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h1 {
+        font-family: $ff-p;
+        font-size: min(4rem, 6.5vw);
+        letter-spacing: 2px;
+        line-height: 1;
+        flex: 1;
+      }
+
+      @include breakpoints-down(medium) {
+        order: 2;
+        flex: 1;
+        text-align: start;
+        align-items: flex-start;
+        padding: 30px 30px 60px 30px;
+        h1,
+        p {
+          width: 45%;
+        }
+      }
+      @include breakpoints-down(small) {
+        flex-direction: column;
+        order: 2;
+        text-align: center;
+        align-items: center;
+        h1,
+        p {
+          width: 100%;
+        }
+      }
+    }
+
+    &__photo {
+      flex: 1;
+      .picture {
+        @include breakpoints-down(small) {
+          background-image: url(../../images/image-intro-desktop.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: block;
+          height: 450px;
+          width: 550px;
+          picture {
+            display: none;
+          }
+        }
+        @include breakpoints-up(medium) {
+          position: absolute;
+          top: calc(100% - 85%);
+          picture {
+            display: block;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1;
+  right: 0;
+  @include breakpoints-down(small) {
+    align-items: center;
+  }
+}
