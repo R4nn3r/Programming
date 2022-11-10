@@ -9,5 +9,5 @@ const HamClick = (ham) => {
 };
 
 function theme() {
-  body.classList.toggle("dark-theme");
+  body.classList.toggle("light-theme");
 }

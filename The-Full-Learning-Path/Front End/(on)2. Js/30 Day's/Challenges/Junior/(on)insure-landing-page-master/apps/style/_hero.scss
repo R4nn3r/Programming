@@ -104,16 +104,6 @@
     &__photo {
       flex: 1;
       .picture {
-        // background-image: url(../../images/image-intro-mobile.jpg);
-        // background-size: cover;
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // display: block;
-        // height: 500px;
-        // width: 450px;
-        // picture {
-        //   display: none;
-        // }
         @include breakpoints-down(small) {
           background-image: url(../../images/image-intro-desktop.jpg);
           background-size: cover;
