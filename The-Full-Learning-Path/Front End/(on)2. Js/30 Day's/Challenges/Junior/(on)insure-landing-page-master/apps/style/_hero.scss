@@ -5,6 +5,7 @@
     var(--pri-100);
   background-repeat: no-repeat;
   background-position: right;
+  border: 2px dashed red;
 
   @include breakpoints-down(small) {
     background: url(../../images/bg-pattern-intro-left-mobile.svg),
@@ -53,8 +54,9 @@
     display: flex;
     align-items: center;
     padding: 162px 155px 131px 155px;
-    gap: 30px;
+    gap: 45px;
     position: relative;
+    border: 2px dashed red;
 
     @include breakpoints-down(medium) {
       flex-direction: column;
@@ -65,9 +67,11 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      border: 2px dashed red;
+
       h1 {
         font-family: $ff-p;
-        font-size: min(4rem, 10.5vw);
+        font-size: min(4rem, 6.5vw);
         letter-spacing: 2px;
         line-height: 1;
         flex: 1;
@@ -77,21 +81,38 @@
         order: 2;
         flex: 1;
         text-align: start;
-        flex-direction: row;
         align-items: flex-start;
         padding: 30px 30px 60px 30px;
+        h1,
+        p {
+          width: 45%;
+        }
       }
       @include breakpoints-down(small) {
         flex-direction: column;
         order: 2;
         text-align: center;
         align-items: center;
+        h1,
+        p {
+          width: 100%;
+        }
       }
     }
 
     &__photo {
+      border: 2px dashed red;
       flex: 1;
       .picture {
+        @include breakpoints-up(medium) {
+          position: absolute;
+          top: calc(100% - 85%);
+          picture {
+            img {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
@@ -103,6 +124,7 @@
   align-items: flex-start;
   gap: 20px;
   flex: 1;
+  right: 0;
   @include breakpoints-down(small) {
     align-items: center;
   }

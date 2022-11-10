@@ -126,7 +126,22 @@
           </article>
           <!-- Photo -->
           <div class="hero__container__photo">
-            <div class="picture"></div>
+            <div class="picture">
+              <picture>
+                <!-- <source
+                  srcset="./images/image-intro-mobile.jpg"
+                  media="(max-width:650px)"
+                /> -->
+                <source
+                  srcset="./images/image-intro-desktop.jpg"
+                  media="(min-width: 640px)"
+                />
+                <img
+                  src="./images/image-intro-mobile.jpg"
+                  alt="intro desktop"
+                />
+              </picture>
+            </div>
           </div>
         </div>
       </div>
