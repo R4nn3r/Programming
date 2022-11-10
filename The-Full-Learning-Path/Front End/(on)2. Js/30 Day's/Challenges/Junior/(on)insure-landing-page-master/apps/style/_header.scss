@@ -1,5 +1,4 @@
 header {
-  background-color: var(--bg);
   padding: 28px 0;
   button {
     outline: 2px solid var(--accent);
@@ -26,14 +25,13 @@ header {
     }
     &__ham {
       padding: 25px;
-      background: url(../../images/bg-pattern-mobile-nav.svg), var(--accent);
+      background: url(../../images/bg-pattern-mobile-nav.svg), var(--bg-ham);
       background-repeat: no-repeat;
       background-position: bottom center;
       background-size: contain;
 
       a {
-        color: var(--accent2);
-
+        color: var(--accent-w);
         &:hover,
         &:active {
           color: var(--pri-200);
@@ -42,7 +40,7 @@ header {
           color: var(--pri-200);
 
           outline: none;
-          border-bottom: 2px solid var(--accent2);
+          border-bottom: 2px solid var(--accent);
         }
       }
 
@@ -60,7 +58,7 @@ header {
         &:hover,
         &:focus,
         &:active {
-          outline: 2px solid var(--accent2);
+          outline: 2px solid var(--accent);
           color: var(--accent);
           background-color: var(--accent2);
         }

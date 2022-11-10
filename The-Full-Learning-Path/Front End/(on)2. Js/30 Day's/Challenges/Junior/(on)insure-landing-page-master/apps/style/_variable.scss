@@ -13,6 +13,7 @@ $fs-size: 16px;
 .light-theme {
   --bg: hsl(0, 0%, 100%);
   --border: #837d88;
+  --bg-ham: #2b282f;
 
   // Primary
   --accent: #2b282f;
@@ -29,6 +30,7 @@ $fs-size: 16px;
 
 .dark-theme {
   --bg: hsl(0, 0%, 14%);
+  --bg-ham: #2b282f;
   --border: #837d88;
 
   // Primary
