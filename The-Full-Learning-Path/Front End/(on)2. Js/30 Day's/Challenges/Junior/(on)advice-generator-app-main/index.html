@@ -34,13 +34,11 @@
     <main class="main">
       <div class="main-container">
         <div class="num">
-          <p>Advice #117</p>
+          <p>Advice #<span class="no">117</span></p>
         </div>
         <div class="advice">
-          <p>
-            "it is easy to sit up and take notice, what's difficult is getting
-            up and taking action."
-          </p>
+          "it is easy to sit up and take notice, what's difficult is getting up
+          and taking action."
         </div>
         <div class="divider">
           <picture>
@@ -52,19 +50,22 @@
           </picture>
         </div>
         <div class="generator">
-          <div class="circle">
-            <img src="./images/icon-dice.svg" alt="dice icon" />
+          <div class="circle" onclick="dice(this)">
+            <img
+              onclick="dice(this)"
+              src="./images/icon-dice.svg"
+              alt="dice icon"
+            />
           </div>
         </div>
       </div>
     </main>
 
-    <!--  -->
     <!-- Advice ID goes here -->
 
     <!-- Advice text goes here -->
 
-    <!-- <footer class="attribution">
+    <footer class="attribution">
       Challenge by
       <a
         aria-label="Link to Frontend Mentor"
@@ -82,8 +83,7 @@
       >
         <i class="fa-brands fa-github-alt"></i>
       </a>
-      <br />
-      Don't Click!<i onclick="" class="fa-solid fa-brush"></i>
-    </footer> -->
+    </footer>
+    <script src="./apps/js/main.js"></script>
   </body>
 </html>
