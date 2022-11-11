@@ -2,6 +2,10 @@ const advice = document.querySelector(".advice");
 const number = document.querySelector(".no");
 
 const dice = () => {
+  getAdivce();
+};
+
+const getAdivce = () => {
   let testURL = "https://api.adviceslip.com/advice";
   const file = fetch(testURL)
     .then((response) => response.json())

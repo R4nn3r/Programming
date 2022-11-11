@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="./apps/style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/5b12988027.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <div class="main-container">
+        <div class="num">
+          <p>Advice #<span class="no">117</span></p>
+        </div>
+        <div class="advice">
+          "it is easy to sit up and take notice, what's difficult is getting up
+          and taking action."
+        </div>
+        <div class="divider">
+          <picture>
+            <source
+              srcset="./images/pattern-divider-mobile.svg"
+              media="(max-width: 640px)"
+            />
+            <img src="./images/pattern-divider-desktop.svg" alt="divider" />
+          </picture>
+        </div>
+        <div class="generator">
+          <div class="circle" onclick="dice(this)">
+            <img
+              onclick="dice(this)"
+              src="./images/icon-dice.svg"
+              alt="dice icon"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Advice ID goes here -->
+
+    <!-- Advice text goes here -->
+
+    <footer class="attribution">
+      Challenge by
+      <a
+        aria-label="Link to Frontend Mentor"
+        class="impoText"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Frontend Mentor</a
+      >. made with &#128151; by
+
+      <a
+        aria-label="Link to my Github"
+        target="_blank"
+        class="impoText"
+        href="https://github.com/R4nn3r"
+      >
+        <i class="fa-brands fa-github-alt"></i>
+      </a>
+    </footer>
+    <script src="./apps/js/main.js"></script>
+  </body>
+</html>

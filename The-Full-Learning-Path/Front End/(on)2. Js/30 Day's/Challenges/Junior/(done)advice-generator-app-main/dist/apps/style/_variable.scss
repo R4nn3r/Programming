@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;800&display=swap");
+
+$ff-primary: "Manrope", sans-serif;
+$fw-800: 800;
+
+:root {
+  // Primary
+  --pri-100: hsl(193, 38%, 86%);
+  --pri-200: hsl(150, 100%, 66%);
+  --pri-300: hsl(140, 100%, 66%);
+
+  // Neutral
+  --neu-100: hsl(217, 19%, 38%);
+  --neu-200: hsl(217, 19%, 24%);
+  --neu-300: hsl(218, 23%, 16%);
+}
