@@ -68,4 +68,10 @@ svg {
 
 // General styles
 body {
+  font-family: $ff-pri;
+  background-color: var(--main-bg);
+}
+
+main {
+  height: 100vh;
 }
