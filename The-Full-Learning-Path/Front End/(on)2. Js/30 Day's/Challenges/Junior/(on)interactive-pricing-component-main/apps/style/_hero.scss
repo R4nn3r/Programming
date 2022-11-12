@@ -13,7 +13,7 @@
     z-index: 2;
     h1 {
       color: var(--txt-cta-bg);
-      font-size: calc(1.25rem + 1vw);
+      font-size: calc(1.2rem + 1vw);
       margin-bottom: 7px;
     }
 
@@ -43,11 +43,16 @@
     box-shadow: 5px 5px 30px rgba(47, 47, 47, 0.134);
     border-radius: 10px;
     color: var(--txt-cta-bg);
-    max-width: 540px;
+    max-width: 600px;
     width: 100%;
     &__header {
       padding: 50px;
-
+      gap: 50px;
+      @include breakpoints-down(small) {
+        text-align: center;
+        gap: 10px;
+        justify-content: center;
+      }
       div {
         &:first-child p {
           color: var(--text);
@@ -109,6 +114,10 @@
       justify-content: flex-end;
       gap: 15px;
 
+      @include breakpoints-down(small) {
+        justify-content: center;
+      }
+
       p {
         color: var(--text);
         font-size: 0.85rem;
@@ -130,11 +139,12 @@
           display: none;
         }
         border-radius: 50px;
-        width: 45px;
+        min-width: 45px;
         height: 25px;
         background-color: var(--toggle-bg);
         label {
           .ball {
+            cursor: pointer;
             width: 18px;
             height: 18px;
             border-radius: 50%;
@@ -155,6 +165,17 @@
 
     &__info {
       padding: 50px;
+      justify-content: space-between;
+
+      @include breakpoints-down(medium) {
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+      }
+      @include breakpoints-down(small) {
+        justify-content: center;
+        gap: 20px;
+      }
 
       li {
         display: flex;
@@ -166,6 +187,12 @@
           width: 12px;
           height: 12px;
           margin-right: 10px;
+        }
+
+        @include breakpoints-down(small) {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
         }
       }
 
