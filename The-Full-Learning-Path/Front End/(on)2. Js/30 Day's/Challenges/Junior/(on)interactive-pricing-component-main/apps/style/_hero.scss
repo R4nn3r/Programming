@@ -11,7 +11,8 @@
     position: relative;
     text-align: center;
     z-index: 2;
-    h1 {
+    h1,
+    span {
       color: var(--txt-cta-bg);
       font-size: calc(1.2rem + 1vw);
       margin-bottom: 7px;

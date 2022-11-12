@@ -14,10 +14,10 @@
 
     <title>Frontend Mentor | Interactive pricing component</title>
     <link rel="stylesheet" href="./apps/style/style.css" />
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/5b12988027.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -39,10 +39,10 @@
       <div class="main__card">
         <div class="main__card__header flex-sb">
           <div>
-            <p>100K PAGEVIEWS</p>
+            <p><span class="view">100</span>K PAGEVIEWS</p>
           </div>
           <div class="flex">
-            <h1>$16.00</h1>
+            <h1>$<span class="price">16.00</span></h1>
             <p>/ month</p>
           </div>
         </div>
@@ -61,7 +61,7 @@
 
           <!-- slide -->
           <div class="min-slide">
-            <input type="checkbox" id="checkbox" />
+            <input type="checkbox" id="checkbox" onclick="check(this)" />
             <label for="checkbox" class="slide-box">
               <div class="ball"></div>
             </label>
@@ -125,5 +125,7 @@
         <i class="fa-brands fa-github-alt"></i>
       </a>
     </footer> -->
+
+    <script src="./apps/js/main.js"></script>
   </body>
 </html>
