@@ -7,7 +7,7 @@ const dice = () => {
 
 const getAdivce = () => {
   let testURL = "https://api.adviceslip.com/advice";
-  const file = fetch(testURL)
+  const file = fetch(testURL, { cache: "no-cache" })
     .then((response) => response.json())
     .then((adviceData) => {
       const adviceObj = adviceData.slip;
