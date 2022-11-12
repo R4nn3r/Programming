@@ -65,6 +65,16 @@ svg {
 }
 
 // utilities
+.flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
 
 // General styles
 body {

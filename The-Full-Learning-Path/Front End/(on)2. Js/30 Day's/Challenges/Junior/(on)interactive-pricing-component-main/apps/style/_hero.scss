@@ -41,11 +41,153 @@
   &__card {
     background-color: white;
     box-shadow: 5px 5px 30px rgba(47, 47, 47, 0.134);
-    max-width: calc(520px + 7.5vw);
-    max-height: calc(380px + 6.5vh);
-    width: 100%;
-    height: 100%;
     border-radius: 10px;
-    padding: 40px;
+    color: var(--txt-cta-bg);
+    max-width: 540px;
+    width: 100%;
+    &__header {
+      padding: 50px;
+
+      div {
+        &:first-child p {
+          color: var(--text);
+          letter-spacing: 2px;
+          font-weight: $fw-800;
+        }
+        &:last-child {
+          h1 {
+            font-weight: $fw-800;
+            font-size: 2.75rem;
+          }
+          p {
+            color: var(--text);
+          }
+        }
+      }
+    }
+
+    &__slide {
+      padding: 0 50px;
+      position: relative;
+      .bar {
+        height: 10px;
+        border-radius: 50px;
+        background-color: var(--emp-slide);
+      }
+
+      .bar-fill {
+        height: 10px;
+        border-radius: 50px;
+        width: 50%;
+        background-color: var(--slide-bar);
+      }
+
+      .bar-slider {
+        width: fit-content;
+        padding: 10px;
+        background-color: var(--slide-bg);
+        border-radius: 50%;
+        cursor: pointer;
+        // position
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px 10px 20px var(--slide-bg-s);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: var(--slide-bg-b);
+        }
+      }
+    }
+
+    &__info-1 {
+      padding: 50px 50px 25px 50px;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+
+      p {
+        color: var(--text);
+        font-size: 0.85rem;
+        font-size: 0.9rem;
+      }
+
+      span {
+        background-color: var(--discount-bg);
+        font-size: 0.75rem;
+        border-radius: 50px;
+        padding: 3px 10px;
+        font-weight: $fw-800;
+        color: var(--discount-text);
+      }
+
+      .min-slide {
+        position: relative;
+        input {
+          display: none;
+        }
+        border-radius: 50px;
+        width: 45px;
+        height: 25px;
+        background-color: var(--toggle-bg);
+        label {
+          .ball {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+          }
+        }
+      }
+
+      // Interaction
+      transition: transform 0.5s linear;
+      input:checked + label .ball {
+        transform: translateX(19px);
+      }
+    }
+
+    &__info {
+      padding: 50px;
+
+      li {
+        display: flex;
+        align-items: center;
+        color: var(--text);
+        margin-bottom: 12px;
+        font-size: 0.85rem;
+        img {
+          width: 12px;
+          height: 12px;
+          margin-right: 10px;
+        }
+      }
+
+      div > button {
+        width: 174px;
+        padding: 15px;
+        border: none;
+        font-family: inherit;
+        font-weight: $fw-800;
+        border-radius: 30px;
+        color: var(--cta-text);
+        cursor: pointer;
+        background-color: var(--txt-cta-bg);
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:active,
+        &:focus {
+          outline: none;
+          color: white;
+        }
+      }
+    }
   }
 }
