@@ -2,19 +2,65 @@ const input = document.querySelector("#checkbox");
 const price = document.querySelector(".price");
 const view = document.querySelector(".view");
 const minSlide = document.querySelector(".min-slide");
+const range = document.querySelector("#range");
+const trackForPrice = Number.parseInt(range.value);
 
-// input.addEventListener("checked", () => {
-//   let value = parseInt(price.innerHTML);
-//   price.innerHTML = `${value - value * 0.25}.00`;
-// });
-const value = price.innerHTML;
-function check(input) {
-  if (input.checked) {
-    let newValue = parseInt(price.innerHTML);
-    price.innerHTML = `${newValue - newValue * 0.25}.00`;
-    minSlide.style.backgroundColor = " var(--slide-bg)";
+// Fill the slider background based on the position of the slider
+range.addEventListener("change", () => {
+  track = Number.parseInt(range.value);
+  range.style.background = `linear-gradient(90deg, var(--slide-bg)${track}%, var(--slide-bar) ${track}%)`;
+});
+
+// Price tracing objects
+const pricing = [
+  {
+    price: 8,
+    pageViews: "10K",
+    trackPercentage: 0,
+  },
+  {
+    price: 12,
+    pageViews: "50K",
+    trackPercentage: 25,
+  },
+  {
+    price: 16,
+    pageViews: "100K",
+    trackPercentage: 50,
+  },
+  {
+    price: 24,
+    pageViews: "500K",
+    trackPercentage: 75,
+  },
+  {
+    price: 36,
+    pageViews: "1M",
+    trackPercentage: 100,
+  },
+];
+
+outPutPrice = (track) => {
+  // const viewNum = parseInt(view.innerHTML);
+  // const priceNum = parseInt(price.innerHTML);
+  const priceObjs = pricing.find(
+    (pricingOBJ) => pricingOBJ.trackPercentage === track
+  );
+  if (!range.checked) {
+    view.innerHTML = priceObjs.pageViews;
+    price.innerHTML = priceObjs.price;
   } else {
-    price.innerHTML = value;
-    minSlide.style.backgroundColor = " var(--toggle-bg)";
+    view.innerHTML = priceObjs.pageViews;
+    price.innerHTML = priceObjs.price * 0.25;
   }
-}
+};
+
+range.addEventListener("input", () => {
+  slider = Number.parseInt(range.value);
+  outPutPrice(slider);
+});
+
+window.onload = () => {
+  slider = 50;
+  outPutPrice(slider);
+};

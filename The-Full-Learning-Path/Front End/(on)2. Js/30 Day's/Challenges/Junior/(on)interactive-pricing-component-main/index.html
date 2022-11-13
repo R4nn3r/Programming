@@ -39,19 +39,24 @@
       <div class="main__card">
         <div class="main__card__header flex-sb">
           <div>
-            <p><span class="view">100</span>K PAGEVIEWS</p>
+            <p><span class="view"></span> PAGEVIEWS</p>
           </div>
           <div class="flex">
-            <h1>$<span class="price">16.00</span></h1>
+            <h1>$<span class="price"></span></h1>
             <p>/ month</p>
           </div>
         </div>
         <div class="main__card__slide">
           <div class="bar">
-            <div class="bar-fill"></div>
-            <div class="bar-slider">
-              <img src="./images/icon-slider.svg" alt="slider" />
-            </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              step="25"
+              class="slider"
+              id="range"
+            />
           </div>
         </div>
         <div class="main__card__info-1 flex">
