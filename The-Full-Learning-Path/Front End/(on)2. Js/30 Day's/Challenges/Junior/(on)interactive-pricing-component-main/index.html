@@ -66,14 +66,19 @@
 
           <!-- slide -->
           <div class="min-slide">
-            <input type="checkbox" id="checkbox" onclick="check(this)" />
+            <input
+              type="checkbox"
+              id="checkbox"
+              value="off"
+              onclick="sub(this)"
+            />
             <label for="checkbox" class="slide-box">
               <div class="ball"></div>
             </label>
           </div>
 
           <div>
-            <p>Yearly Billing <span>25% discount</span></p>
+            <p>Yearly Billing <span class="discount"></span></p>
           </div>
         </div>
         <div class="main__card__info flex-sb">
