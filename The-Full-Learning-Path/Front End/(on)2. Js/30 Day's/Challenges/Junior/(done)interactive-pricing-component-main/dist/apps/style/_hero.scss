@@ -1,0 +1,250 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  margin-block: 25px;
+  justify-content: center;
+  isolation: isolate;
+  gap: 90px;
+
+  // background decoration
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #f1f5fe;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 45%;
+    z-index: -1;
+    border-radius: 0 0 0 10vw;
+  }
+  &__title {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    h1,
+    span {
+      color: var(--txt-cta-bg);
+      font-size: calc(1.2rem + 1vw);
+      margin-bottom: 7px;
+    }
+
+    p {
+      font-size: calc(0.55rem + 0.6vw);
+      color: var(--text);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-image: url(../../images/pattern-circles.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 250px;
+      height: 250px;
+      top: -100px;
+      left: 50%;
+      z-index: -1;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__card {
+    background-color: white;
+    box-shadow: 5px 5px 30px rgba(47, 47, 47, 0.134);
+    border-radius: 10px;
+    color: var(--txt-cta-bg);
+    max-width: 600px;
+    width: 100%;
+    &__header {
+      padding: 25px 50px;
+
+      gap: 50px;
+      @include breakpoints-down(small) {
+        text-align: center;
+        gap: 10px;
+        justify-content: center;
+      }
+      div {
+        &:first-child p {
+          color: var(--text);
+          letter-spacing: 2px;
+          font-weight: $fw-800;
+        }
+        &:last-child {
+          h1 {
+            font-weight: $fw-800;
+            font-size: 2.75rem;
+          }
+          p {
+            color: var(--text);
+          }
+        }
+      }
+    }
+
+    &__info-1 {
+      padding: 50px 50px 25px 50px;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+
+      @include breakpoints-down(small) {
+        justify-content: center;
+        padding: 50px 0 25px 0px;
+      }
+
+      p {
+        color: var(--text);
+        font-size: 0.85rem;
+        font-size: 0.9rem;
+      }
+
+      span {
+        background-color: var(--discount-bg);
+        font-size: 0.75rem;
+        border-radius: 50px;
+        padding: 3px 10px;
+        font-weight: $fw-800;
+        color: var(--discount-text);
+      }
+
+      .min-slide {
+        position: relative;
+        input {
+          display: none;
+        }
+        border-radius: 50px;
+        min-width: 45px;
+        height: 25px;
+        background-color: var(--toggle-bg);
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+          background-color: var(--slide-bg);
+        }
+        label {
+          .ball {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+          }
+        }
+      }
+
+      // Interaction
+      transition: transform 0.5s linear;
+      input:checked + label .ball {
+        transform: translateX(19px);
+      }
+    }
+
+    &__info {
+      padding: 25px 50px;
+      justify-content: space-between;
+
+      @include breakpoints-down(medium) {
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+      }
+      @include breakpoints-down(small) {
+        justify-content: center;
+        gap: 20px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        color: var(--text);
+        margin-bottom: 12px;
+        font-size: 0.85rem;
+        img {
+          width: 12px;
+          height: 12px;
+          margin-right: 10px;
+        }
+
+        @include breakpoints-down(small) {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      div > button {
+        width: 174px;
+        padding: 15px;
+        border: none;
+        font-family: inherit;
+        font-weight: $fw-800;
+        border-radius: 30px;
+        color: var(--cta-text);
+        cursor: pointer;
+        background-color: var(--txt-cta-bg);
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+          outline: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.bar {
+  padding: 0 50px;
+  input {
+    -webkit-appearance: none;
+    text-align: center;
+    width: 100%;
+    height: 10px;
+    border-radius: 50px;
+    background-color: var(--emp-slide);
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 40px;
+      height: 40px;
+      background-image: url(../../images/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: var(--slide-bg);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 15px 25px -4px var(--slide-bg);
+      outline: none;
+      border: none;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: var(--slide-bg-b);
+      }
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+}
+
+.slider {
+  height: 10px;
+  background: linear-gradient(90deg, var(--slide-bg) 50%, var(--slide-bar) 50%);
+  outline: none;
+  opacity: 0.7;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}

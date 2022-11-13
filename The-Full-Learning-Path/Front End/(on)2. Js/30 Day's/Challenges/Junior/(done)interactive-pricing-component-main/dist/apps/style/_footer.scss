@@ -1,0 +1,13 @@
+footer {
+  font-family: inherit;
+  font-weight: $fw-800;
+  color: var(--slide-bg);
+
+  i {
+    scale: 1.45;
+    margin-left: 0.5em;
+    &:hover {
+      scale: 1.75;
+    }
+  }
+}
