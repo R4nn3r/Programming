@@ -16,6 +16,7 @@ screenTest = (e) => {
     discount.innerHTML = "25% discount";
   }
 };
+query.addEventListener("change", screenTest);
 
 // Price tracing objects
 const pricing = [
