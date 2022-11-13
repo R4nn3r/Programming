@@ -143,6 +143,12 @@
         min-width: 45px;
         height: 25px;
         background-color: var(--toggle-bg);
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover,
+        &:active {
+          background-color: var(--slide-bg);
+        }
         label {
           .ball {
             cursor: pointer;
@@ -208,7 +214,6 @@
         cursor: pointer;
         background-color: var(--txt-cta-bg);
         transition: all 0.3s ease-in-out;
-
         &:hover,
         &:focus {
           outline: none;
