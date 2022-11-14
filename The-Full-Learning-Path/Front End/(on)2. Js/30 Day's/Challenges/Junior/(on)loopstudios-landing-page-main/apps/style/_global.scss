@@ -65,7 +65,46 @@ svg {
 }
 
 // utilities
+.max-container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+//  visibility
+.hide-for-mobile {
+  @include breakpoints-down(small) {
+    display: none;
+  }
+  &-tab {
+    @include breakpoints-down(medium) {
+      display: none;
+    }
+  }
+}
+.hide-for-desktop {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
+
+// Hamburger
+.close {
+  display: none;
+}
+.open {
+  display: block;
+}
 
 // General styles
 body {
+  font-family: $ff-pri;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem-;
+  font-family: inherit;
+  color: var(--pri-light);
+  font-weight: var($fw-pri-400);
 }

@@ -1,0 +1,34 @@
+.header {
+  background-image: url(../../images/desktop/image-hero.jpg);
+  height: 650px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include breakpoints-down(small) {
+    background-image: url(../../images/mobile/image-hero.jpg);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-inline: 25px;
+
+    @include breakpoints-up(small) {
+      padding-inline: 160px;
+    }
+
+    .logo {
+    }
+    &__nav {
+      margin-left: auto;
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+    }
+  }
+}

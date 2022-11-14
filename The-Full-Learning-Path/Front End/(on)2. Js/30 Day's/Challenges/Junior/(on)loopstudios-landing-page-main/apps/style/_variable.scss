@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+$ff-pri: "Alata", sans-serif;
+$fw-pri-400: 400;
+$ff-sec: "Josefin Sans", sans-serif;
+$fw-sec-300: 300;
+
+$fs-size: 15px;
+
+:root {
+  --pri-light: hsl(0, 0%, 100%);
+  --pri-dark: hsl(0, 0%, 0%);
+  --pri-dg: hsl(0, 0%, 55%);
+  --pri-vdg: hsl(0, 0%, 41%);
+}
