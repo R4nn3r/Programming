@@ -1,6 +1,6 @@
 .header {
   background-image: url(../../images/desktop/image-hero.jpg);
-  // height: 650px;
+  height: 650px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,16 +19,27 @@
     @include breakpoints-down(medium) {
       padding-inline: 25px;
     }
-
-    .logo {
-    }
     &__nav {
       margin-left: auto;
       ul {
         display: flex;
         align-items: center;
         gap: 30px;
+
+        li {
+          border-bottom: 3px solid transparent;
+          padding-block: 5px;
+          transition: border-bottom 0.3s linear;
+          &:hover,
+          &:focus {
+            border-bottom: 3px solid white;
+          }
+        }
       }
+    }
+
+    &__menu {
+      cursor: pointer;
     }
   }
 
@@ -43,13 +54,14 @@
     @include breakpoints-down(medium) {
       flex-direction: column;
       padding-inline: 25px;
+      align-items: flex-start;
     }
 
     &__left {
       max-width: clamp(515px, 25.75vw, 32.75vw);
       font-family: $ff-sec;
       color: var(--pri-light);
-      font-size: clamp(1.5rem, 1.75rem, 2.75vw);
+      font-size: min(1.75rem, 4.5vw);
       h1 {
         text-transform: uppercase;
         line-height: 1.1;
