@@ -95,5 +95,45 @@ a {
 body {
   min-height: 100vh;
   background: white;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans";
+  padding: 5vw;
+}
+
+h1,
+p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.image-wrapper {
+  margin-bottom: 10px;
+  img {
+    width: 100%;
+  }
+}
+.article-summary {
+  flex: 1;
+  border: 3px solid black;
+  box-shadow: 5px 5px 0px rgb(200, 200, 200);
+  padding: 20px;
+  max-width: 300px;
+  .description {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    hyphens: auto;
+
+    .title {
+      overflow-wrap: break-word;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 14px;
 }

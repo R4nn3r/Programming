@@ -696,6 +696,31 @@ HTML (Hypertext Markup Language)
     Tip: [how to make picture responsive]
            ->  max-width: min(28rem, 100%)
 
+# Typography and Images
+
+    # Text Rendering 
+        Kerning:
+            refers to the spacing between individual character's.
+
+            ways to edit kerning:
+                - disable the built-in with font-kerning:   none;
+                - wrap each letter in a span
+                - shift letters closer/further using letter-spacing 
+    # Text Rasterization  
+    # Font Smoothing 
+        -webkit-font-smoothing
+
+    # Text Overflow 
+        browser groups characters into words and in this case a word is a collection of chars that can't be broken up.
+
+        Note:
+            &nbsp; is the code for “Non Breaking Space”. A whitespace character that connects the words on either side into a single unbreakable mega-word.
+
+    # Wrapping onto multiple lines 
+        using:
+            overflow-wrap: break-word;
+            hyphens: auto; [to add hyphens for the broken w]
+    we need overflow: hidden in order for text-overflow to work.
 
 <!-- -> Basics --> 
 
