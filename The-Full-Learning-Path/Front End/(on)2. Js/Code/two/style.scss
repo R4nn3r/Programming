@@ -95,7 +95,7 @@ a {
 body {
   min-height: 100vh;
   background: white;
-  // font-family: "Josefin Sans";
+  font-family: serif;
   padding: 2vw;
 }
 
@@ -159,8 +159,15 @@ p {
 
 .wrapper {
   columns: 2;
-  column-gap: 16px;
-  padding: 16px;
+  // column-count: 2;
+  column-gap: 64px;
+  padding: 32px;
+  border: 2px solid black;
+  background-color: rgb(255, 244, 228);
+
+  @media (max-width: 560px) {
+    column-count: 1;
+  }
 }
 
 p {
@@ -170,7 +177,8 @@ p {
 
   span {
     float: left;
-    margin-right: 20px;
+    margin-right: 10px;
+    line-height: 1em;
     font-weight: bold;
     font-size: 3rem;
   }
@@ -181,6 +189,6 @@ img {
   float: left;
   padding: 10px;
 }
-p::first-letter {
-  margin-left: 2rem;
+p:not(:first-of-type) {
+  text-indent: 2em;
 }

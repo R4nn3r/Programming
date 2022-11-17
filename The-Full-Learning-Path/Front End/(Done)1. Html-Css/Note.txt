@@ -706,7 +706,9 @@ HTML (Hypertext Markup Language)
                 - disable the built-in with font-kerning:   none;
                 - wrap each letter in a span
                 - shift letters closer/further using letter-spacing 
+    
     # Text Rasterization  
+    
     # Font Smoothing 
         -webkit-font-smoothing
 
@@ -721,6 +723,39 @@ HTML (Hypertext Markup Language)
             overflow-wrap: break-word;
             hyphens: auto; [to add hyphens for the broken w]
     we need overflow: hidden in order for text-overflow to work.
+
+# Icons 
+    What's and SVG?
+        - is a vector image format. means it stores the instructions for how to draw the image.
+
+
+    -> SVGs tend to look more crisp and sharp.
+    -> They're easier to position and use (width instead of font-size 
+       makes way more sense!).
+    -> They can be more accessible.
+    -> They can be multi-color.
+    -> They can be tweaked and animated.
+
+# Images 
+    # Writing effective alt text
+        should convey the semantic meaning of the image to the user 
+
+
+    # img vs background-image 
+
+        It's important to use an img tag for semantically-meaningful images, because background images can't be given alt text.
+
+    # Fit and Position for the img{known as a "replaced element"} tag
+            intrinsic aspect ratio. This means that if we only supply one dimension, either width or height, the other dimension scales up or down as-needed, to preserve the aspect ratio:
+    
+    -> “Object”?
+            object-fit property works on images, but it isn't exclusive to images: it can also be used on <video> tags!
+
+        # Object Position 
+            object-position: horizontal, vertical;
+
+
+
 
 <!-- -> Basics --> 
 
@@ -1119,6 +1154,12 @@ HTML (Hypertext Markup Language)
             break-inside: avoid; // prevents child from breaking across a column
             margin-bottom: 16px;
         }
+
+    # Masonry Grid with Columns 
+        -> Is a way of stacking elements in an asymmetric grid
+
+        # Limitations 
+            Because items are laid out from top to bottom it creates Limitations for accessibility through tabs when there need to be order to the items 
 
     # Floats 
         floated by passing either left or right to the float property.
