@@ -1106,6 +1106,9 @@ HTML (Hypertext Markup Language)
                     run continuously by setting that value to infinite.
 
 # Layout 
+
+    # Column 
+        
     
     # Flexbox 
         [controls the children of a parent box and turns the parent into a block]
