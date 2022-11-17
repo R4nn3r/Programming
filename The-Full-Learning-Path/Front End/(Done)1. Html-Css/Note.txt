@@ -754,7 +754,13 @@ HTML (Hypertext Markup Language)
         # Object Position 
             object-position: horizontal, vertical;
 
+    -> Aspect Ratio
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
 
+    # Responsive Images
+        - srcset attribute 
+        - picture element
 
 
 <!-- -> Basics --> 

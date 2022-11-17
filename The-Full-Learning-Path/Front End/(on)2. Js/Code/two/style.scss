@@ -185,9 +185,11 @@ p {
 }
 
 img {
-  width: 300px;
   float: left;
   padding: 10px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 p:not(:first-of-type) {
   text-indent: 2em;
