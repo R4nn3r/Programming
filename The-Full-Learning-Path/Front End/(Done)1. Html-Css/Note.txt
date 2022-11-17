@@ -1108,8 +1108,32 @@ HTML (Hypertext Markup Language)
 # Layout 
 
     # Column 
-        
-    
+        .wrapper {
+            columns: 2; // creates 2 column layout 
+            column-gap: 16px;
+            padding: 16px;
+        }
+
+        p {
+            border: 2px solid red;
+            break-inside: avoid; // prevents child from breaking across a column
+            margin-bottom: 16px;
+        }
+
+    # Floats 
+        floated by passing either left or right to the float property.
+        Floated items don't come with any default margin
+
+            Ex 
+                float: left;
+                margin-right: 16px;
+
+    # Indentation
+        You can create them using the first-letter pseudo element
+        p::first-letter {
+            margin-left: 2rem;
+        }
+
     # Flexbox 
         [controls the children of a parent box and turns the parent into a block]
 
