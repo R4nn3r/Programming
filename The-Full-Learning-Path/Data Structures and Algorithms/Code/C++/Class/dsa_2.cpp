@@ -1,4 +1,4 @@
-// Linked List's 
+// Linked List's [Doubly]
 #include <iostream>
 
 using namespace std;
@@ -28,6 +28,7 @@ int main(){
     Node* head = new Node();
     Node* second = new Node();
     Node* third = new Node();
+    Node* fourth = new Node();
 
 
     // Adding value to the Node's
@@ -35,18 +36,23 @@ int main(){
     // First Node 
     // [->] is used to access values while using pointers 
     head->value = 10;
-    head->next = second;
     head->prev = NULL;
+    head->next = second;
 
     // Second Node
     second->value = 20;
-    second->next = third;
     second->prev = head;
+    second->next = third;
 
     // Third Node
     third->value = 30;
-    third->next = NULL;
-    third->prev = third;
+    third->prev = second;
+    third->next = fourth;
+
+    // Fourth Node
+    fourth->value = 40;
+    fourth->prev = third;
+    fourth->next = NULL;
 
 
 
@@ -55,10 +61,17 @@ int main(){
     Node* temp = new Node();
     temp = head;
 
-    while(temp != NULL){
-        cout << temp->value << endl;
-        temp = temp->next;
+    if (temp != NULL){
+
+        while(temp != NULL){
+                cout << temp->value << endl;
+                temp = temp->next;
+            }
+    } else {
+        cout << "List Is Empty!" << endl;
     }
+
+  
 
     cout << "n/n/";
 
