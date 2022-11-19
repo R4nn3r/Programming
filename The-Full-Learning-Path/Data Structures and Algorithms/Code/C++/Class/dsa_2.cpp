@@ -1,18 +1,73 @@
-#include<iostream>
-#include<string>
+// Linked List's 
+#include <iostream>
 
 using namespace std;
 
+class Node {
+
+    public: 
+        int value;
+        Node* next;
+        Node* prev;
+
+};
+
+// Function to read the value of Linked Lists Node's 
+void printNodes(Node* temp){
+    while(temp != NULL){
+        cout << temp->value << endl;
+        temp = temp->next;
+
+    }
+}
+
+
 int main(){
 
-    int arr[10] {1,2,3,4,5};
-    int *p_arr;
-    p_arr = &arr[10];
+    // Creating a new Node pointers 
+    Node* head = new Node();
+    Node* second = new Node();
+    Node* third = new Node();
 
-    for (int i = 0; i < 10; i++)
-        cout << arr[i] << endl;
-    
-    std::cout << *&p_arr << endl;
+
+    // Adding value to the Node's
+
+    // First Node 
+    // [->] is used to access values while using pointers 
+    head->value = 10;
+    head->next = second;
+    head->prev = NULL;
+
+    // Second Node
+    second->value = 20;
+    second->next = third;
+    second->prev = head;
+
+    // Third Node
+    third->value = 30;
+    third->next = NULL;
+    third->prev = third;
+
+
+
+
+    //  Print the node from with is the main function by creating a temp node that tracks the head
+    Node* temp = new Node();
+    temp = head;
+
+    while(temp != NULL){
+        cout << temp->value << endl;
+        temp = temp->next;
+    }
+
+    cout << "n/n/";
+
+    cout << "Output from the outside Function: " << endl;
+    printNodes(head);
+
+
 
     return 0;
 }
+
+

@@ -1,36 +1,65 @@
-// Array's C++ Recap
+// Linked List's 
 #include <iostream>
 
 using namespace std;
 
+class Node {
+
+    public: 
+        int value;
+        Node* next;
+
+};
+
+// Function to read the value of Linked Lists Node's 
+void printNodes(Node* temp){
+    while(temp != NULL){
+        cout << temp->value << endl;
+        temp = temp->next;
+
+    }
+}
+
+
 int main(){
-    // Dynamic Array
-    int size;
-    cout << "Size of array: ";
-    cin >> size;
 
-    // Creating the Dynamic array '*'
-    string *anArray = new string[size];
+    // Creating a new Node pointers 
+    Node* head = new Node();
+    Node* second = new Node();
+    Node* third = new Node();
 
-    cout << "Enter the Numbers to store: \n";
-    for (int i = 0; i < size; i++) {
-        cout << "Enter "<<i +1 <<": ";
-        cin >> anArray[i];
+
+    // Adding value to the Node's
+
+    // First Node 
+    // [->] is used to access values while using pointers 
+    head->value = 10;
+    head->next = second;
+
+    // Second Node
+    second->value = 20;
+    second->next = third;
+
+    // Third Node
+    third->value = 30;
+    third->next = NULL;
+
+
+
+
+    //  Print the node from with is the main function by creating a temp node that tracks the head
+    Node* temp = new Node();
+    temp = head;
+
+    while(temp != NULL){
+        cout << temp->value << endl;
+        temp = temp->next;
     }
 
-    // Accessing the array through a loop using the size as a boundary value
-    for (int x = 0; x < size; x++) {
-        cout << anArray[x] << " ";
-    }
+    cout << "n/n/";
 
-    // Deleting the data from the Dynamic array
-    delete[] anArray;
-    anArray = NULL;
-
-    cout << endl << "Deleted Dynamic array" << endl;
-
-    // will output 0 cause the array is cleared
-    cout << anArray[2] << endl;
+    cout << "Output from the outside Function: " << endl;
+    printNodes(head);
 
 
 
