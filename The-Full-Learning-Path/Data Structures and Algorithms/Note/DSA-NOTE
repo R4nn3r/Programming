@@ -316,3 +316,7 @@
 
     # Circular Linked List:
         The last item in chain is linked to the first item
+
+
+    # Creating Tail's 
+        -> just like head tails keep track of the last element in the Linked List
