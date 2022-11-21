@@ -297,26 +297,48 @@
                 Merge Sort, Quick Sort, Tower of Hanoi, Fibonacci Series, Factorial Problem, etc.
 
 # Linked List: 
-    Is a collection of nodes storing data and links to other nodes in the chain.
-        Node: 
-            info [data] 
-            next [address]
+        Is a collection of nodes storing data and links to other nodes in the chain.
+            Node: 
+                info [data] 
+                next [address]
 
-    # Single Linked List:
-        [only has the address of the successor node in the sequence]
+        # Single Linked List:
+            [only has the address of the successor node in the sequence]
 
-        Items are stored in a chain of cells that don't need to be sequential memory addresses because each cell is allocated as needed and has a pointer to indicating the address of the next cell in chain.
+            Items are stored in a chain of cells that don't need to be sequential memory addresses because each cell is allocated as needed and has a pointer to indicating the address of the next cell in chain.
 
-            Drawbacks:
-                -> cant instantly retrieve the nth item you have to search starting from the first cell.
-                -> if given only an address of a single cell its not easy to remove it or move backwards with no added information about the previous cell.
-        
-    # Double Linked List:
-        It has an extra cell keeping two pointes to next/previous cells.
+                Drawbacks:
+                    -> cant instantly retrieve the nth item you have to search starting from the first cell.
+                    -> if given only an address of a single cell its not easy to remove it or move backwards with no added information about the previous cell.
+            
+        # Double Linked List:
+            It has an extra cell keeping two pointes to next/previous cells.
 
-    # Circular Linked List:
-        The last item in chain is linked to the first item
+        # Circular Linked List:
+            The last item in chain is linked to the first item
 
 
-    # Creating Tail's 
-        -> just like head tails keep track of the last element in the Linked List
+        # Creating Tail's 
+            -> just like head tails keep track of the last element in the Linked List
+
+    # Operations on Linked Lists 
+
+        # Insertion
+            [Singly Linked List]
+            
+            # Front [done]
+                [4 Steps]
+                    1, allocate node 
+                        Node* newNodeAdded = new Node();
+
+                    2, put in the data 
+                        newNodeAdded->data = "From Loop Node";
+
+                    3, make next of the node as head 
+                       newNodeAdded->next = tempTrack;
+
+                    4, move head to point to the new node 
+                        head = newNodeAdded;
+
+            # After a given Node 
+            # End 

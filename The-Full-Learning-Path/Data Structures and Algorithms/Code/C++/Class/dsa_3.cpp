@@ -26,13 +26,48 @@ int main(){
 
 
 
-    // Read through the data in the linked list 
-    Node* temp = head;
 
-    if (temp != NULL){
-        while(temp != NULL){
-            cout << temp->data << endl;
-            temp = temp->next;
+    // insert new node into the list 
+    // creat node
+    // Find the node with a prev that NULL
+    // change the newNode prev to NULL and the head prev to the newNode 
+    // change the newNode next to head 
+
+
+    for(int i = 0; i < 5; i++) {
+        Node* tempTrack = head;
+
+        // 1,
+        Node* newNodeAdded = new Node();
+        // 2,
+        newNodeAdded->data = "From Loop Node";
+
+
+
+        while (tempTrack->prev == NULL){
+            // 3,
+            newNodeAdded->next = tempTrack;
+            // 4,
+            newNodeAdded->prev = NULL;
+            tempTrack->prev = newNodeAdded;
+            head = newNodeAdded;
+        }
+
+
+    }
+    
+   
+
+
+
+
+    // Read through the data in the linked list 
+    Node* tempRead = head;
+
+    if (tempRead != NULL){
+        while(tempRead != NULL){
+            cout << tempRead->data << endl;
+            tempRead = tempRead->next;
         }
     }else {
         cout << "List is empty" << endl;

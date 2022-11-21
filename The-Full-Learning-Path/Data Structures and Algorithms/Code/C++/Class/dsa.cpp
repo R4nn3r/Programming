@@ -45,6 +45,14 @@ int main(){
     third->next = NULL;
 
 
+    Node* newNode = new Node();
+    newNode->value = 696969;
+
+
+    newNode->next = head;
+    head = newNode;
+
+
 
 
     //  Print the node from with is the main function by creating a temp node that tracks the head
