@@ -14,11 +14,15 @@ class Node {
 
 // Function to read the value of Linked Lists Node's 
 void printNodes(Node* temp){
-    while(temp != NULL){
-        cout << temp->value << endl;
-        temp = temp->next;
-
+    if (temp != NULL){
+        while(temp != NULL){
+                cout << temp->value << endl;
+                temp = temp->next;
+            }
+    }else {
+        cout << "List Is Empty!" << endl;
     }
+  
 }
 
 
