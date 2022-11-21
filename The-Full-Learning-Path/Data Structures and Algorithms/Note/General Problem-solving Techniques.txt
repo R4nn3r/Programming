@@ -54,3 +54,9 @@
             efficiently, and everything will take longer and seem harder. Even worse,
             frustration tends to feed on itself, so that what begins as mild irritation ends
             as outright anger.
+
+
+# Todo List before getting Deep into DSA.
+        -> Objects and Classes 
+        -> Pointers 
+        -> Dynamic Memory Allocations 
