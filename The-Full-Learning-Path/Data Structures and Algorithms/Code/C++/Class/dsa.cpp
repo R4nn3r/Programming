@@ -79,14 +79,23 @@ int main(){
     
     
     // Add a new node to the front of the list 
-    add_new_node(head);
- 
-
+    // add_new_node(head);
 
     // Traverse the Linked List 
     traverse_list(head);
 
+    // Add a new node to the end of the list 
+    Node* new_back_node = new Node();
+    new_back_node->data = "end of the list";
 
+    Node* temp = new Node();
+    temp = head;
+
+    while(temp->next = NULL){
+        temp->next = new_back_node;
+        new_back_node->next = NULL;
+    }
+ 
 
     return 0;
 }
