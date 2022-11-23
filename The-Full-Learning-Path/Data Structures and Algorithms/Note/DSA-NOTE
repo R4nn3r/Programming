@@ -326,24 +326,29 @@
         # Insertion
             [Singly Linked List]
 
-            # Front [done]
-                [4 Steps]
-                    1, allocate node 
-                        Node* newNodeAdded = new Node();
+                # Front [done]
+                    [4 Steps]
+                        1, allocate node 
+                            Node* newNodeAdded = new Node();
 
-                    2, put in the data 
-                        newNodeAdded->data = "From Loop Node";
+                        2, put in the data 
+                            newNodeAdded->data = "From Loop Node";
 
-                    3, make next of the node as head 
-                       newNodeAdded->next = tempTrack;
+                        3, make next of the node as head 
+                        newNodeAdded->next = tempTrack;
 
-                    4, move head to point to the new node 
-                        head = newNodeAdded;
+                        4, move head to point to the new node 
+                            head = newNodeAdded;
 
-                Time Complexity: 
-                    O(1), We have a pointer to the  head and we can directly attach a node and change the pointer. So the Time complexity of inserting a node at the head position is O(1) as it does a constant amount of work.
-                Auxiliary Space: O(1)
+                    Time Complexity: 
+                        O(1), We have a pointer to the  head and we can directly attach a node and change the pointer. So the Time complexity of inserting a node at the head position is O(1) as it does a constant amount of work.
+                    Auxiliary Space: O(1)
 
-            # After a given Node 
-            
-            # End 
+                # After a given Node 
+                
+                # End 
+
+
+
+            [Doubly Linked List]
+            [Circular Linked List]
