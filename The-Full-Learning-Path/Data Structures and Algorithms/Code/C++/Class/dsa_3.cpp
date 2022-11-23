@@ -56,11 +56,6 @@ int main(){
 
     }
     
-   
-
-
-
-
     // Read through the data in the linked list 
     Node* tempRead = head;
 

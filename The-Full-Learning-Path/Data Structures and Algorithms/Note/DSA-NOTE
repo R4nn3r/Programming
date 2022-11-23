@@ -325,7 +325,7 @@
 
         # Insertion
             [Singly Linked List]
-            
+
             # Front [done]
                 [4 Steps]
                     1, allocate node 
@@ -340,5 +340,10 @@
                     4, move head to point to the new node 
                         head = newNodeAdded;
 
+                Time Complexity: 
+                    O(1), We have a pointer to the  head and we can directly attach a node and change the pointer. So the Time complexity of inserting a node at the head position is O(1) as it does a constant amount of work.
+                Auxiliary Space: O(1)
+
             # After a given Node 
+            
             # End 
