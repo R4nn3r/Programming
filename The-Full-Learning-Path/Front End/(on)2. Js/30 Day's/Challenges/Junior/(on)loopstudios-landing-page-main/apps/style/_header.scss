@@ -27,7 +27,7 @@
         align-items: center;
         gap: 30px;
 
-        li {
+        li a {
           padding-block: 5px;
           position: relative;
 
@@ -43,7 +43,11 @@
             transition: all 0.3s linear;
           }
 
-          &:hover {
+          &:hover,
+          &:focus,
+          &:active,
+          &:focus-visible {
+            outline: none;
             &::after {
               bottom: -7px;
               width: 50%;
