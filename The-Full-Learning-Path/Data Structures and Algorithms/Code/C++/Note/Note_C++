@@ -948,7 +948,7 @@
             cout<< "*p_num is "<< *p_num <<endl; //prints value of num
             cout<< "p_num is "<< p_num <<endl; //prints value of P_num
 
-        How to creat a pointer variable
+        How to create a pointer variable
             int *pAge = &age;
             double *pGpa = &gpa;
             string *pName = &name;

@@ -7,6 +7,7 @@ using namespace std;
 struct Node {
     string data;
     Node* next;
+    
 };
 
 /* 
@@ -23,7 +24,7 @@ Traverse the linked list cout the list node data's
 void traverse_list(Node* temp){
     if (temp != NULL){
         while(temp != NULL){
-            cout << temp->data << endl;
+            cout << temp->data << "\n";
             temp = temp->next;
         }
     }else{
@@ -75,6 +76,34 @@ void add_to_back(Node** temp){
     }
 }
 
+/*
+    Adding a new node after a specified position
+  */
+
+void add_on_pos(Node** temp, int *pos){
+    Node* new_node_in = new Node();
+    new_node_in->data = "3rd Node of the list";
+    Node* head = *temp;
+    
+    // Count and position tracker
+    int count = 0;
+    int position = *pos;
+
+    if (*temp != NULL){
+        while(head != NULL){
+            count++;
+            if (count == position-1){
+                new_node_in->next = head->next;
+                head->next = new_node_in;
+            }
+            head = head->next;
+       }
+    }else{
+       *temp = new_node_in;
+        new_node_in->next = NULL;
+    }
+}
+
 
 int main(){
 
@@ -114,9 +143,16 @@ int main(){
     // Add a new node to the end of the list 
     add_to_back(&head);
 
+    // Add a new node after a specific position 
+    int pos = 3;
+    int * ptr;
+    ptr = &pos;
+
+    add_on_pos(&head, ptr);
+
 
     // Traverse the Linked List 
-    cout << "Linked List Traversed. \n";
+    // cout << "Linked List Traversed. \n";
     traverse_list(head);
 
     return 0;

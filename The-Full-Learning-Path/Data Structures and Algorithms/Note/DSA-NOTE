@@ -354,9 +354,10 @@
                             2, put in the data 
                                 newNodeAdded->data = "From Loop Node";
 
-                            3, If list is emp
+                            3, If list is empty then the new node becomes the only node
 
-                            4, 
+                            4, Else Traverse until you get to node->null and then insert the node after the last node and 
+                            node->next = newNode->next = NULL
 
 
 
