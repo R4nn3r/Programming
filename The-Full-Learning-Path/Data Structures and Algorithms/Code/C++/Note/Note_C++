@@ -908,7 +908,7 @@
 
                         }*/
 
-/*Pointers
+/* Pointers
     Whenever you see the & used with pointers, think of the words “address of.”
     The & operator always produces the memory address of whatever it
     precedes. The * operator, when used with pointers, either declares a pointer

@@ -9,6 +9,7 @@
     "tuple": "cpp",
     "type_traits": "cpp",
     "utility": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "ostream": "cpp"
   }
 }

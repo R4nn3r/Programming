@@ -347,6 +347,16 @@
                 # After a given Node 
                 
                 # End 
+                    [5 Steps]
+                            1, allocate node 
+                                Node* newNodeAdded = new Node();
+
+                            2, put in the data 
+                                newNodeAdded->data = "From Loop Node";
+
+                            3, If list is emp
+
+                            4, 
 
 
 
