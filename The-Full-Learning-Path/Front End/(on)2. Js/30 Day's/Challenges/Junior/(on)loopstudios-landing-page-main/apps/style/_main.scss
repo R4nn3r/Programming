@@ -1,0 +1,49 @@
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoints-down(small) {
+    justify-content: center;
+  }
+}
+
+.main {
+  margin-top: 50px;
+  &-intro {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h1 {
+      font-size: calc(1.75rem + 1.25vw);
+      line-height: 1;
+      font-family: $ff-sec;
+      font-weight: $fw-sec-300;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      border: none;
+      outline: none;
+      color: var(--pri-light);
+      background-color: var(--pri-dark);
+      height: 40px;
+      width: 160px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: $ff-pri;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &:focus-visible {
+        border: 2px solid var(--pri-dark);
+        background-color: var(--pri-light);
+        color: var(--pri-dark);
+      }
+    }
+  }
+}
