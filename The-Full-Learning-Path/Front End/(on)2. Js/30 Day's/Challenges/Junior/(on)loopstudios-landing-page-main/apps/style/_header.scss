@@ -7,6 +7,7 @@
 
   @include breakpoints-down(small) {
     background-image: url(../../images/mobile/image-hero.jpg);
+    height: min(100vh, 830px);
   }
 
   &__container {
@@ -27,12 +28,27 @@
         gap: 30px;
 
         li {
-          border-bottom: 3px solid transparent;
           padding-block: 5px;
-          transition: border-bottom 0.3s linear;
-          &:hover,
-          &:focus {
-            border-bottom: 3px solid white;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            content: "";
+            bottom: -7px;
+            height: 3px;
+            width: 0%;
+            display: block;
+            transition: all 0.3s linear;
+          }
+
+          &:hover {
+            &::after {
+              bottom: -7px;
+              width: 50%;
+              background-color: white;
+            }
           }
         }
       }

@@ -101,10 +101,16 @@ int main(){
     
     
     // Add a new node to the front of the list 
-    add_to_front(head);
+    // add_to_front(head);
 
+    Node* new_node = new Node();
+    new_node->data = "new_node";
+    new_node->next = head;           
+    head = new_node;
+    
+    
     // Add a new node to the end of the list 
-    // add_to_back(head);
+    add_to_back(head);
 
 
     // Traverse the Linked List 
