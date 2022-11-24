@@ -1,0 +1,35 @@
+.hero {
+  &-container {
+    position: relative;
+    @include breakpoints-down(medium) {
+      text-align: center;
+    }
+  }
+
+  &__article {
+    margin: 50px 0;
+    //  Text Format
+    text-align: center;
+    h1 {
+      font-size: calc(2rem + 1.5vw);
+      line-height: 1;
+      font-family: $ff-sec;
+      font-weight: $fw-sec-300;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: var(--pri-vdg);
+    }
+
+    @include breakpoints-up(large) {
+      position: absolute;
+      top: 205px;
+      right: 0;
+      background-color: white;
+      text-align: start;
+      padding: 100px 50px 100px 100px;
+      width: 50%;
+    }
+  }
+}

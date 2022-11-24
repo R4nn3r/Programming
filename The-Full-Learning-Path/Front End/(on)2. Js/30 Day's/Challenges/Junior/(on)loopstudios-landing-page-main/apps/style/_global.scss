@@ -70,6 +70,15 @@ svg {
   margin-inline: auto;
 }
 
+.content-box {
+  padding-top: 60px;
+  padding-inline: 160px;
+
+  @include breakpoints-down(medium) {
+    padding-inline: 25px;
+  }
+}
+
 //  visibility
 .hide-for-mobile {
   @include breakpoints-down(small) {

@@ -14,12 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 60px;
-    padding-inline: 160px;
 
-    @include breakpoints-down(medium) {
-      padding-inline: 25px;
-    }
     &__nav {
       margin-left: auto;
       ul {

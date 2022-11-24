@@ -31,7 +31,7 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header__container max-container">
+      <div class="header__container max-container content-box">
         <!-- Header Logo -->
         <div class="logo">
           <svg width="192" height="32" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +76,37 @@
         <div class="header__intro__right"></div>
       </div>
     </header>
-    <!-- Header - Introduction Section -->
+
+    <!-- hero - Introduction Section -->
+    <div class="hero">
+      <div class="hero-container max-container content-box">
+        <!-- Picture -->
+        <div class="hero__picture">
+          <div class="hero__picture__box">
+            <picture>
+              <source
+                srcset="./images/desktop/image-interactive.jpg"
+                media="(min-width: 1024px)"
+              />
+              <img
+                src="./images/mobile/image-interactive.jpg"
+                alt="A man using a VR"
+              />
+            </picture>
+          </div>
+        </div>
+        <!-- Content -->
+        <article class="hero__article">
+          <h1>The leader in interactive VR</h1>
+          <p>
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </article>
+      </div>
+    </div>
 
     <!-- Main - Hero -->
 
@@ -122,12 +152,9 @@
     <!-- 
 
 
-  The leader in interactive VR
+ 
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
+  
 
   Our creations
 
