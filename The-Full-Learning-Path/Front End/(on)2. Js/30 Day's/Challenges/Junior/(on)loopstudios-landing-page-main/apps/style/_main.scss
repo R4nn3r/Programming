@@ -74,6 +74,28 @@
         font-weight: $fw-sec-300;
         font-size: 1.5rem;
         line-height: 1.25;
+        z-index: 999;
+      }
+
+      // interaction
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: hsla(0, 0%, 100%, 0.652);
+        }
+
+        h1 {
+          color: var(--pri-dark);
+        }
       }
     }
   }
