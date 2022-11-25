@@ -21,15 +21,16 @@ Traverse the linked list cout the list node data's
     2. if list is empty
         - cout "the list is empty"
  */
-void traverse_list(Node* temp){
-    if (temp != NULL){
-        while(temp != NULL){
-            cout << temp->data << "\n";
-            temp = temp->next;
-        }
-    }else{
-        cout << "List is empty" << endl;
-    }
+void traverse_list(Node** temp){
+    // Node* temp_node = *temp;
+    // if (*temp != NULL){
+    //     while(temp_node != NULL){
+    //         cout << temp_node->data << "\n";
+    //         temp_node = temp_node->next;
+    //     }
+    // }else{
+    //     cout << "List is empty" << endl;
+    // }
 }
 
 
@@ -54,18 +55,20 @@ void add_to_front(Node** temp){
     }
 }
 
+
 /* 
     Deleting the first node on the list
 
  */
 
-void deleting_from_front(Node ** temp){
+void delete_from_front(Node** temp){
     Node * head = *temp;
     Node * to_delete = head;
     
     *temp = head->next;
     delete to_delete;
 }
+
 
 /* 
     Add to the end of the list
@@ -92,7 +95,7 @@ void add_to_back(Node** temp){
 /* 
     Deleting the node thats on the end of the list
  */
-void deleting_from_back(Node** temp){
+void delete_from_back(Node** temp){
     Node* curr = *temp;
     while(curr != NULL){
         if(curr->next->next == NULL){
@@ -137,7 +140,6 @@ void add_on_pos(Node** temp, int *pos){
 /* 
     Delete a node from the given list after finding the one with the right value.
  */
-
 void delete_node(Node** temp, string *str){
     Node* dummy = new Node();
     dummy->next = *temp;
@@ -162,7 +164,6 @@ void delete_node(Node** temp, string *str){
 
 
 int main(){
-
     // An empty list using it to check NULL case's
     // Node* head = NULL;
 
@@ -194,37 +195,33 @@ int main(){
 
     
     // Operations on The Linked List Created
-    
 
-
-    // Add a new node to the front of the list 
+    // Add a new node to the front of the list
+    // &head is the address of the pointer 
     add_to_front(&head);
-    add_to_front(&head);
-    deleting_from_front(&head);
+    delete_from_front(&head);
 
     // Add a new node to the end of the list 
     add_to_back(&head);
-    deleting_from_back(&head);
+    delete_from_back(&head);
 
 
     // Add a new node after a specific position 
     int pos = 3;
     int * ptr;
     ptr = &pos;
+    add_on_pos(&head, ptr);
 
-    // add_on_pos(&head, ptr);
-
+    //  Delete the node that has the value 
     string val = "second";
     string * str;
     str = &val;
-
-
     delete_node(&head, str);
 
 
     // Traverse the Linked List 
     // cout << "Linked List Traversed. \n";
-    traverse_list(head);
+    traverse_list(&head);
 
     return 0;
 }

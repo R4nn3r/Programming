@@ -2,20 +2,48 @@
 
 using namespace std;
 
+// Create  a linked list 
+struct Node {
+    int value; 
+    Node* next;
+};
+
 int main(){
-    // How to get the size of an Array 
-    int arr[] {1,2,3,4,5,6,7,8,9,10};
-    string arr2[] {"one", "two", "three", "four", "five"};
-    float arr3[] {1.1, 2.2, 3.3, 4.4, 5.5};
+    // Create a node in the created linked list (head)
+    Node* head = new Node();
 
-    // Divide the size of the array it self to the elements 
-    // its storing cause they always have the same size
-    /* 
-    cout <<"Size of Array 1: " << sizeof(arr) / sizeof(arr[0]) << endl;
-    cout <<"Size of Array 2: " << sizeof(arr2) / sizeof(arr2[0]) << endl;
-    cout <<"Size of Array 3: " << sizeof(arr3) / sizeof(arr3[0]) << endl;
+    // create 4 nodes within the linked list 
+    Node* second = new Node();
+    Node* third = new Node();
+    Node* fourth = new Node();
+    Node* fifth = new Node();
 
- */
-  
+    // Pointers and Data value 
+    head->value = 10;
+    head->next = second;
+
+    second->value = 20;
+    second->next = third;
+
+    third->value = 30;
+    third->next = fourth;
+
+    fourth->value = 40;
+    fourth->next = fifth;
+
+    fifth->value = 50;
+    fifth->next = NULL;
+
+
+    // traverse over the list 
+    // perform insertion on the linked list 
+        // front
+        // back
+        // after position 3
+    // perform deletion on the linked list
+        // front
+        // back
+        // after position 3
+
     return 0;
 }

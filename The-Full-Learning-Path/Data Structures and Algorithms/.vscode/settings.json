@@ -13,5 +13,8 @@
     "ostream": "cpp",
     "charconv": "cpp",
     "new": "cpp"
-  }
+  },
+  "editor.fontSize": 16.5,
+  "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontLigatures": true
 }
