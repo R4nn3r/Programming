@@ -48,12 +48,15 @@
   }
 
   &-container {
+    padding-top: 0;
   }
 
   .grid-box {
-    display: grid;
+    display: flex;
     gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    flex-wrap: wrap;
+    justify-content: center;
+    // grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
 
     /*   @include breakpoints-down(small) {
       margin-inline: 40px;
@@ -64,11 +67,13 @@
 
       h1 {
         position: absolute;
-        bottom: 30px;
-        left: 30px;
+        bottom: 25px;
+        left: 25px;
         color: var(--pri-light);
         font-family: $ff-sec;
         font-weight: $fw-sec-300;
+        font-size: 1.5rem;
+        line-height: 1.25;
       }
     }
   }
