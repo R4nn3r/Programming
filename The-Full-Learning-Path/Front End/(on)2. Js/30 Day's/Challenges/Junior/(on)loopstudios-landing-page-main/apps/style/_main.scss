@@ -46,4 +46,30 @@
       }
     }
   }
+
+  &-container {
+  }
+
+  .grid-box {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+
+    /*   @include breakpoints-down(small) {
+      margin-inline: 40px;
+    } */
+    &-item {
+      object-fit: cover;
+      position: relative;
+
+      h1 {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        color: var(--pri-light);
+        font-family: $ff-sec;
+        font-weight: $fw-sec-300;
+      }
+    }
+  }
 }
