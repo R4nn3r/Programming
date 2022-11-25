@@ -55,6 +55,19 @@ void add_to_front(Node** temp){
 }
 
 /* 
+    Deleting the first node on the list
+
+ */
+
+void deleting_from_front(Node ** temp){
+    Node * head = *temp;
+    Node * to_delete = head;
+    
+    *temp = head->next;
+    delete to_delete;
+}
+
+/* 
     Add to the end of the list
  */
 void add_to_back(Node** temp){
@@ -75,6 +88,22 @@ void add_to_back(Node** temp){
         new_back_node->next = NULL;
     }
 }
+
+/* 
+    Deleting the node thats on the end of the list
+ */
+void deleting_from_back(Node** temp){
+    Node* curr = *temp;
+    while(curr != NULL){
+        if(curr->next->next == NULL){
+            Node* to_delete = curr->next;
+            curr->next = NULL;
+            delete to_delete;
+        }
+        curr = curr->next;
+    }
+}
+
 
 /*
     Adding a new node after a specified position
@@ -170,9 +199,13 @@ int main(){
 
     // Add a new node to the front of the list 
     add_to_front(&head);
+    add_to_front(&head);
+    deleting_from_front(&head);
 
     // Add a new node to the end of the list 
     add_to_back(&head);
+    deleting_from_back(&head);
+
 
     // Add a new node after a specific position 
     int pos = 3;
