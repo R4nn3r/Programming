@@ -10,11 +10,12 @@ int main(){
 
     // Divide the size of the array it self to the elements 
     // its storing cause they always have the same size
-    
+    /* 
     cout <<"Size of Array 1: " << sizeof(arr) / sizeof(arr[0]) << endl;
     cout <<"Size of Array 2: " << sizeof(arr2) / sizeof(arr2[0]) << endl;
     cout <<"Size of Array 3: " << sizeof(arr3) / sizeof(arr3[0]) << endl;
 
-
+ */
+  
     return 0;
 }

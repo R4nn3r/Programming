@@ -86,16 +86,16 @@ void add_on_pos(Node** temp, int *pos){
     Node* head = *temp;
     
     // Count and position tracker
-    int count = 0;
+    int count = 1;
     int position = *pos;
 
     if (*temp != NULL){
         while(head != NULL){
-            count++;
             if (count == position-1){
                 new_node_in->next = head->next;
                 head->next = new_node_in;
             }
+            count++;
             head = head->next;
        }
     }else{
@@ -105,6 +105,33 @@ void add_on_pos(Node** temp, int *pos){
 }
 
 
+/* 
+    Delete a node from the given list after finding the one with the right value.
+ */
+
+void delete_node(Node** temp, string *str){
+    Node* dummy = new Node();
+    dummy->next = *temp;
+    Node* curr = dummy;
+
+    if(curr->next->data == *str){
+        delete curr;
+    }else if(*temp != NULL) {
+        while(curr->next != NULL && curr != NULL) {
+            if (curr->next->data == *str){
+                Node* delete_node = curr->next;
+                curr->next = curr->next->next;
+                free(delete_node);
+            }
+            curr = curr->next; 
+        }   
+    }else {
+        cout << "empty list" << endl;
+    }
+}
+
+
+
 int main(){
 
     // An empty list using it to check NULL case's
@@ -112,13 +139,17 @@ int main(){
 
     // Create the nodes and assign data and next
     Node* head = new Node();
+    Node* headp = new Node();
     Node* first = new Node();
     Node* second = new Node();
     Node* third = new Node();
 
     // Head
     head->data = "head";
-    head->next = first;
+    head->next = headp;
+
+    headp->data = "second";
+    headp->next = first;
 
     // 1st
     first->data = "first";
@@ -148,7 +179,14 @@ int main(){
     int * ptr;
     ptr = &pos;
 
-    add_on_pos(&head, ptr);
+    // add_on_pos(&head, ptr);
+
+    string val = "second";
+    string * str;
+    str = &val;
+
+
+    delete_node(&head, str);
 
 
     // Traverse the Linked List 

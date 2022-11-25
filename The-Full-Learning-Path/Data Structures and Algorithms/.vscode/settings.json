@@ -11,6 +11,7 @@
     "utility": "cpp",
     "variant": "cpp",
     "ostream": "cpp",
-    "charconv": "cpp"
+    "charconv": "cpp",
+    "new": "cpp"
   }
 }
