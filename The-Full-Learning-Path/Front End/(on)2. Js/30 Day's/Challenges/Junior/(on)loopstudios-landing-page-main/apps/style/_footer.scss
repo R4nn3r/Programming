@@ -58,6 +58,7 @@
     @include breakpoints-down(small) {
       flex-direction: column !important;
       justify-content: center;
+      margin-bottom: 50px;
     }
   }
 }
