@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+$ff-primary: "Space Mono", monospace;
+
+$fs-input: 24px;
+
+.light-theme {
+  /* Primary */
+  --accent: hsl(172, 67%, 45%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --neu-left-bg: hsl(183, 100%, 15%);
+  --neu-200: hsl(186, 14%, 43%);
+  --neu-300: hsl(184, 14%, 56%);
+  --neu-bg: hsl(185, 41%, 84%);
+  --neu-500: hsl(189, 41%, 97%);
+}
