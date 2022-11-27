@@ -28,9 +28,9 @@
         font-family: $ff-primary;
         color: var(--neu-left-bg);
         &::placeholder {
-          text-align: end;
           font-family: $ff-primary;
-          color: var(--neu-left-bg);
+          font-size: 1.5rem;
+          color: var(--neu-300);
         }
       }
 
