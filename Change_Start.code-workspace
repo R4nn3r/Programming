@@ -17,6 +17,7 @@
     "liveServer.settings.multiRootWorkspaceName": "Programming",
     "liveServer.settings.port": 5501,
     "liveServer.settings.CustomBrowser": null,
-    "liveServer.settings.fullReload": true
+    "liveServer.settings.fullReload": true,
+    "cSpell.words": ["Loopstudios"]
   }
 }
