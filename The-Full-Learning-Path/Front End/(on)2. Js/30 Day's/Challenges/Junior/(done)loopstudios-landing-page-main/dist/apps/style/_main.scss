@@ -1,0 +1,106 @@
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include breakpoints-down(small) {
+    justify-content: center;
+  }
+}
+
+.main {
+  margin-top: 50px;
+  &-intro {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h1 {
+      font-size: calc(1.75rem + 1.25vw);
+      line-height: 1;
+      font-family: $ff-sec;
+      font-weight: $fw-sec-300;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      border: none;
+      outline: none;
+      color: var(--pri-light);
+      background-color: var(--pri-dark);
+      height: 40px;
+      width: 160px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: $ff-pri;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &:focus-visible {
+        border: 2px solid var(--pri-dark);
+        background-color: var(--pri-light);
+        color: var(--pri-dark);
+      }
+    }
+  }
+
+  &-container {
+    padding-top: 0;
+  }
+
+  .grid-box {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    // grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+
+    /*   @include breakpoints-down(small) {
+      margin-inline: 40px;
+    } */
+    &-item {
+      object-fit: cover;
+      position: relative;
+
+      h1 {
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+        color: var(--pri-light);
+        font-family: $ff-sec;
+        font-weight: $fw-sec-300;
+        font-size: 1.5rem;
+        line-height: 1.25;
+        z-index: 999;
+
+        @media (max-width: 281px) {
+          bottom: 10px;
+        }
+      }
+
+      // interaction
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: hsla(0, 0%, 100%, 0.652);
+        }
+
+        h1 {
+          color: var(--pri-dark);
+        }
+      }
+    }
+  }
+}
