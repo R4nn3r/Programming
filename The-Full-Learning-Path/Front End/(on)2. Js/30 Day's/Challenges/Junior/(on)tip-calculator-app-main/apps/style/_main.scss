@@ -32,6 +32,10 @@
           font-size: 1.5rem;
           color: var(--neu-300);
         }
+
+        &:focus {
+          outline: 3px solid var(--accent);
+        }
       }
 
       .tip-btn {
