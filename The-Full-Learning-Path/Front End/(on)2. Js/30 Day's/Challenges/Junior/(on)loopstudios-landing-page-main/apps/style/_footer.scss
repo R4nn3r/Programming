@@ -62,3 +62,20 @@
     }
   }
 }
+
+.normText {
+  color: var(--pri-light);
+}
+
+.attribution {
+  font-family: inherit;
+  padding: 0.5em;
+
+  a i {
+    scale: 1.45;
+    margin-left: 0.5em;
+    &:hover {
+      scale: 1.75;
+    }
+  }
+}

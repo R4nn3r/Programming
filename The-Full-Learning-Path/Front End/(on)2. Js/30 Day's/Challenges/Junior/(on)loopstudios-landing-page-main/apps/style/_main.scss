@@ -75,6 +75,10 @@
         font-size: 1.5rem;
         line-height: 1.25;
         z-index: 999;
+
+        @media (max-width: 281px) {
+          bottom: 10px;
+        }
       }
 
       // interaction

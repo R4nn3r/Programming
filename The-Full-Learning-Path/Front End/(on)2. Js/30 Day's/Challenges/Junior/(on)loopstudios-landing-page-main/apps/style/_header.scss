@@ -83,6 +83,10 @@
         border: 2px solid white;
         padding: 35px;
         letter-spacing: 3px;
+
+        @media (max-width: 281px) {
+          padding: 17px;
+        }
       }
     }
   }
