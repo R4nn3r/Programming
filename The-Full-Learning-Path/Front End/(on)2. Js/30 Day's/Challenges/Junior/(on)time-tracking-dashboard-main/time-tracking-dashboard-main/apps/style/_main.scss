@@ -4,7 +4,7 @@
   place-content: center;
   &-container {
     display: flex;
-
+    justify-content: center;
     /* Media */
     @include breakpoints-down(small) {
       flex-direction: column;
@@ -172,6 +172,9 @@
           font-weight: $fw-400;
           font-size: 3rem;
         }
+        p {
+          color: var(--neu-400);
+        }
       }
       /* Media */
       @include breakpoints-up(medium) {
@@ -203,37 +206,37 @@
         grid-area: one;
         background: url(../../images/icon-work.svg), var(--work);
         background-repeat: no-repeat;
-        background-position: top right;
+        background-position: 100% -10%;
       }
       &:nth-child(2) {
         grid-area: two;
         background: url(../../images/icon-play.svg), var(--play);
         background-repeat: no-repeat;
-        background-position: top right;
+        background-position: 100% -10%;
       }
       &:nth-child(3) {
         grid-area: three;
         background: url(../../images/icon-study.svg), var(--study);
         background-repeat: no-repeat;
-        background-position: top right;
+        background-position: 100% -10%;
       }
       &:nth-child(4) {
         grid-area: four;
         background: url(../../images/icon-exercise.svg), var(--exercise);
         background-repeat: no-repeat;
-        background-position: top right;
+        background-position: 100% -10%;
       }
       &:nth-child(5) {
         grid-area: five;
         background: url(../../images/icon-social.svg), var(--social);
         background-repeat: no-repeat;
-        background-position: top right;
+        background-position: 100% -10%;
       }
       &:nth-child(6) {
         grid-area: six;
         background: url(../../images/icon-self-care.svg), var(--self);
         background-repeat: no-repeat;
-        background-position: top right;
+        background-position: 100% -10%;
       }
     }
   }
