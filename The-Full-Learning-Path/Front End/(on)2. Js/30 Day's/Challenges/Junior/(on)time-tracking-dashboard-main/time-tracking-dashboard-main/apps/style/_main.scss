@@ -1,6 +1,7 @@
 .main {
   margin-top: 100px;
   display: grid;
+  padding: 30px;
   place-content: center;
   &-container {
     display: flex;
@@ -136,6 +137,13 @@
     grid-template-areas:
       "one two three"
       "four five six";
+
+    @include breakpoints-down(medium) {
+      grid-template-areas:
+        "one two"
+        "three four"
+        "five six";
+    }
 
     @include breakpoints-down(small) {
       grid-template-areas:

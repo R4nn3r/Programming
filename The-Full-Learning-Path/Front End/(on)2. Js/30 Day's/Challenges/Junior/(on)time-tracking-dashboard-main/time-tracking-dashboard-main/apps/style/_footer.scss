@@ -1,0 +1,17 @@
+footer {
+  margin-top: 100px;
+  font-family: inherit;
+  color: var(--white);
+  padding: 2.5em 0;
+  a {
+    display: inline-block;
+  }
+  i {
+    cursor: pointer;
+    scale: 1.45;
+    margin-left: 0.5em;
+    &:hover {
+      scale: 1.75;
+    }
+  }
+}
