@@ -1,4 +1,7 @@
 .main {
+  margin-top: 100px;
+  display: grid;
+  place-content: center;
   &-container {
     display: flex;
 
@@ -145,9 +148,6 @@
     }
 
     &-card {
-      background: url(../../images/icon-work.svg), var(--work);
-      background-repeat: no-repeat;
-      background-position: top right;
       color: white;
       padding: 30px;
       border-radius: 15px;
@@ -201,21 +201,39 @@
       /* Cards */
       &:nth-child(1) {
         grid-area: one;
+        background: url(../../images/icon-work.svg), var(--work);
+        background-repeat: no-repeat;
+        background-position: top right;
       }
       &:nth-child(2) {
         grid-area: two;
+        background: url(../../images/icon-play.svg), var(--play);
+        background-repeat: no-repeat;
+        background-position: top right;
       }
       &:nth-child(3) {
         grid-area: three;
+        background: url(../../images/icon-study.svg), var(--study);
+        background-repeat: no-repeat;
+        background-position: top right;
       }
       &:nth-child(4) {
         grid-area: four;
+        background: url(../../images/icon-exercise.svg), var(--exercise);
+        background-repeat: no-repeat;
+        background-position: top right;
       }
       &:nth-child(5) {
         grid-area: five;
+        background: url(../../images/icon-social.svg), var(--social);
+        background-repeat: no-repeat;
+        background-position: top right;
       }
       &:nth-child(6) {
         grid-area: six;
+        background: url(../../images/icon-self-care.svg), var(--self);
+        background-repeat: no-repeat;
+        background-position: top right;
       }
     }
   }
