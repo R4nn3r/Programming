@@ -1,6 +1,11 @@
 .main {
   &-container {
     display: flex;
+
+    /* Media */
+    @include breakpoints-down(small) {
+      flex-direction: column;
+    }
   }
 
   &-user {
@@ -11,11 +16,31 @@
     display: flex;
     flex-direction: column;
     color: var(--white);
-    gap: 40px;
-    max-width: 255px;
-    width: 100%;
+    gap: 0px;
     position: relative;
     z-index: 1;
+    margin: 25px;
+
+    /* Media */
+    @include breakpoints-up(medium) {
+      max-width: 255px;
+      gap: 40px;
+      width: 100%;
+    }
+
+    .top {
+      display: flex;
+      gap: 40px;
+      flex-direction: column;
+
+      /* Media */
+      @include breakpoints-down(small) {
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
 
     /* Image */
     .img-box {
@@ -37,9 +62,14 @@
         color: var(--neu-400);
       }
       h1 {
-        font-size: 2.65rem;
+        font-size: 2.75rem;
         font-weight: $fw-300;
         line-height: 1;
+
+        /* Media */
+        @include breakpoints-down(small) {
+          font-size: 1.5rem;
+        }
       }
     }
 
@@ -53,7 +83,7 @@
 
       button {
         font-family: inherit;
-        background-color: var(--neu-200);
+        background-color: transparent;
         border: none;
         outline: none;
         font-size: 1rem;
@@ -64,6 +94,12 @@
         &:hover {
           color: inherit;
         }
+      }
+      /* Media */
+      @include breakpoints-down(small) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
       }
     }
 
@@ -80,6 +116,11 @@
       left: 0;
       right: 0;
       bottom: 165px;
+
+      /* Media */
+      @include breakpoints-down(small) {
+        bottom: 80px;
+      }
     }
   }
 }
