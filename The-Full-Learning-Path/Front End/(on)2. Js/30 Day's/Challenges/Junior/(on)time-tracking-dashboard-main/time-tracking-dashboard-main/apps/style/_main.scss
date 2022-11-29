@@ -206,37 +206,43 @@
         grid-area: one;
         background: url(../../images/icon-work.svg), var(--work);
         background-repeat: no-repeat;
-        background-position: 100% -10%;
+        background-size: 25%;
+        background-position: 95% -10%;
       }
       &:nth-child(2) {
         grid-area: two;
         background: url(../../images/icon-play.svg), var(--play);
         background-repeat: no-repeat;
-        background-position: 100% -10%;
+        background-size: 25%;
+        background-position: 95% -10%;
       }
       &:nth-child(3) {
         grid-area: three;
         background: url(../../images/icon-study.svg), var(--study);
         background-repeat: no-repeat;
-        background-position: 100% -10%;
+        background-size: 25%;
+        background-position: 95% -10%;
       }
       &:nth-child(4) {
         grid-area: four;
         background: url(../../images/icon-exercise.svg), var(--exercise);
         background-repeat: no-repeat;
-        background-position: 100% -10%;
+        background-size: 25%;
+        background-position: 95% 0;
       }
       &:nth-child(5) {
         grid-area: five;
         background: url(../../images/icon-social.svg), var(--social);
         background-repeat: no-repeat;
-        background-position: 100% -10%;
+        background-size: 25%;
+        background-position: 95% -10%;
       }
       &:nth-child(6) {
         grid-area: six;
         background: url(../../images/icon-self-care.svg), var(--self);
         background-repeat: no-repeat;
-        background-position: 100% -10%;
+        background-size: 25%;
+        background-position: 95% -10%;
       }
     }
   }
