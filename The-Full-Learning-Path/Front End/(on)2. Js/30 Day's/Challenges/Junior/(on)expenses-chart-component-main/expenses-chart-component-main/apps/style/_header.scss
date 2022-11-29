@@ -10,6 +10,13 @@
     width: 100%;
     .balance {
       color: white;
+
+      h1 {
+        font-size: min(40px, 7vw);
+      }
+      p {
+        font-size: min(15px, 5vw);
+      }
     }
   }
 }
