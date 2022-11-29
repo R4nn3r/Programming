@@ -18,7 +18,7 @@ The designs were created to the following widths:
 - Light red (study): hsl(348, 100%, 68%)
 - Lime green (exercise): hsl(145, 58%, 55%)
 - Violet (social): hsl(264, 64%, 52%)
-- Soft orange (self care): hsl(43, 84%, 65%)
+- Soft orange (self care):
 
 ### Neutral
 

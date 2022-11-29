@@ -1,0 +1,64 @@
+.main {
+  &-container {
+    display: flex;
+  }
+
+  &-user {
+    max-width: 340px;
+    background-color: var(--neu-200);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    gap: 40px;
+    max-width: 255px;
+    width: 100%;
+    /* Image */
+    .img-box {
+      &-circle {
+        border: 3px solid white;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .user-info {
+      font-weight: $fw-400;
+      p {
+        color: var(--neu-400);
+      }
+      h1 {
+        font-size: 2.65rem;
+        font-weight: $fw-300;
+        line-height: 1;
+      }
+    }
+    .button {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+
+      button {
+        font-family: inherit;
+        background-color: var(--neu-200);
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        color: var(--neu-400);
+        transition: color 0.2s ease-in;
+        cursor: pointer;
+
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+  }
+}

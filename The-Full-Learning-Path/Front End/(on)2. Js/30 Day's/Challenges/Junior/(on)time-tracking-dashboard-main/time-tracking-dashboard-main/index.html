@@ -14,6 +14,8 @@
 
     <title>Frontend Mentor | Time tracking dashboard</title>
 
+    <link rel="stylesheet" href="./apps/style/style.css" />
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -26,6 +28,34 @@
     </style>
   </head>
   <body>
-    <script src="./apps/js/main.js"></script>
+    <!-- Main Grid -->
+    <main class="main">
+      <div class="main-container">
+        <div class="main-user">
+          <!-- img -->
+          <div class="img-box">
+            <div class="img-box-circle">
+              <img src="./images/image-jeremy.png" alt="User Jeremy" />
+            </div>
+          </div>
+          <!-- user info -->
+          <div class="user-info">
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </div>
+          <!-- Button -->
+          <div class="button">
+            <button class="daily">Daily</button>
+            <button class="weekly">Weekly</button>
+            <button class="monthly">Monthly</button>
+          </div>
+        </div>
+        <div class="main-grid"></div>
+      </div>
+    </main>
+
+    <!-- Js Link -->
+    <script src="./data.json"></script>
+    <script type="module" src="./apps/js/main.js"></script>
   </body>
 </html>

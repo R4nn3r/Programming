@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+$ff-primary: "Rubik", sans-serif;
+$fs-size: 18;
+
+/* Weight */
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+
+:root {
+  /* Primary */
+  --blue: hsl(246, 80%, 60%);
+  --word: hsl(195, 74%, 62%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self: hsl(43, 84%, 65%);
+
+  /* Neutral */
+  --neu-100: hsl(226, 43%, 10%);
+  --neu-200: hsl(235, 46%, 20%);
+  --neu-300: hsl(235, 45%, 61%);
+  --neu-400: hsl(236, 100%, 87%);
+  --white: white;
+}

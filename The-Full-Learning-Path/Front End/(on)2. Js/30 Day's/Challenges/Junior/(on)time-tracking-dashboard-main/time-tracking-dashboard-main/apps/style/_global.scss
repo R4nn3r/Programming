@@ -65,7 +65,14 @@ svg {
 }
 
 // utilities
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 // General styles
 body {
+  background-color: var(--neu-100);
+  font-family: $ff-primary;
 }
