@@ -19,11 +19,10 @@
     gap: 0px;
     position: relative;
     z-index: 1;
-    margin: 25px;
 
     /* Media */
     @include breakpoints-up(medium) {
-      max-width: 255px;
+      max-width: 260px;
       gap: 40px;
       width: 100%;
     }
@@ -120,6 +119,99 @@
       /* Media */
       @include breakpoints-down(small) {
         bottom: 80px;
+      }
+    }
+  }
+
+  &-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-areas:
+      "one two three"
+      "four five six";
+
+    @include breakpoints-down(small) {
+      grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six";
+    }
+
+    &-card {
+      background: url(../../images/icon-work.svg), var(--work);
+      background-repeat: no-repeat;
+      background-position: top right;
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      position: relative;
+      z-index: 1;
+      margin-inline: 35px;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 40px;
+
+        .title {
+          font-weight: $fw-500;
+        }
+      }
+
+      .middle {
+        h1 {
+          font-weight: $fw-400;
+          font-size: 3rem;
+        }
+      }
+      /* Media */
+      @include breakpoints-up(medium) {
+        max-width: 260px;
+        gap: 40px;
+        width: 100%;
+      }
+
+      /* Decor */
+      &:after {
+        position: absolute;
+        content: "";
+        display: block;
+
+        /* background */
+        background-color: var(--neu-200);
+        border-radius: 15px;
+        z-index: -1;
+
+        /* position */
+        top: 45px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+      }
+
+      /* Cards */
+      &:nth-child(1) {
+        grid-area: one;
+      }
+      &:nth-child(2) {
+        grid-area: two;
+      }
+      &:nth-child(3) {
+        grid-area: three;
+      }
+      &:nth-child(4) {
+        grid-area: four;
+      }
+      &:nth-child(5) {
+        grid-area: five;
+      }
+      &:nth-child(6) {
+        grid-area: six;
       }
     }
   }
