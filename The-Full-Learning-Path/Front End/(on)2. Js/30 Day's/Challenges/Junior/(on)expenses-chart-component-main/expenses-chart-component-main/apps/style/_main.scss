@@ -1,0 +1,80 @@
+.main {
+  margin: 25px;
+  &-container {
+    background-color: white;
+    border-radius: 25px;
+    padding: 30px;
+    max-width: 540px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--neu-100);
+    margin-inline: auto;
+    font-size: $fs-size;
+
+    box-shadow: 5px 5px 15px #11111108;
+    p {
+      color: var(--neu-200);
+    }
+
+    .middle {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      //   flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+
+      p {
+        font-size: $fs-size;
+      }
+
+      .bar {
+        flex: 1 1 1;
+        height: 150px;
+        max-width: 50px;
+        width: 100%;
+        border-radius: 5px;
+
+        /* Fill */
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 5px;
+
+          background-color: var(--accent-100);
+        }
+      }
+
+      .block {
+        max-width: 50px;
+        width: 100%;
+        border-radius: 5px;
+        text-align: center;
+
+        p {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .bottom {
+      border-top: 3px solid var(--neu-400);
+      padding-top: 25px;
+      text-align: end;
+      .last-month p:first-of-type {
+        color: var(--neu-100);
+        font-weight: $fw-700;
+      }
+    }
+  }
+}

@@ -13,8 +13,7 @@
     />
 
     <title>Frontend Mentor | Expenses chart component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./apps/style/style.css" />
     <style>
       .attribution {
         font-size: 11px;
@@ -26,6 +25,73 @@
     </style>
   </head>
   <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container flex">
+        <div class="balance">
+          <p>My balance</p>
+          <h1>$921.48</h1>
+        </div>
+        <div class="icon">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="main-container">
+        <!-- Top -->
+        <div class="top">
+          <h1>Spending - Last 7 days</h1>
+        </div>
+
+        <!-- Middle -->
+        <div class="middle">
+          <div class="block">
+            <div class="bar"></div>
+            <p>mon</p>
+          </div>
+          <div class="block">
+            <div class="bar"></div>
+            <p>tue</p>
+          </div>
+          <div class="block">
+            <div class="bar"></div>
+            <p>wed</p>
+          </div>
+          <div class="block">
+            <div class="bar"></div>
+            <p>thu</p>
+          </div>
+          <div class="block">
+            <div class="bar"></div>
+            <p>fri</p>
+          </div>
+          <div class="block">
+            <div class="bar"></div>
+            <p>sat</p>
+          </div>
+          <div class="block">
+            <div class="bar"></div>
+            <p>sun</p>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="bottom flex">
+          <div class="month">
+            <p>Total this month</p>
+            <h1>$478.33</h1>
+          </div>
+          <div class="last-month">
+            <p>+2.4%</p>
+            <p>from last month</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <!--  My balance
   $921.48
 

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+$ff-primary: "DM Sans", sans-serif;
+$fw-400: 400;
+$fw-700: 700;
+
+$fs-size: 18px;
+
+:root {
+  /* Primary */
+  --accent-100: hsl(10, 79%, 65%);
+  --accent-200: hsl(186, 34%, 60%);
+
+  /* Neutral */
+  --neu-100: hsl(25, 47%, 15%);
+  --neu-200: hsl(28, 10%, 53%);
+  --neu-300: hsl(27, 66%, 92%);
+  --neu-400: hsl(33, 100%, 98%);
+}
