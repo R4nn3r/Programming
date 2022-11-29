@@ -9,7 +9,6 @@
   }
 
   &-user {
-    max-width: 340px;
     background-color: var(--neu-200);
     border-radius: 15px;
     padding: 30px;
@@ -25,6 +24,11 @@
       max-width: 260px;
       gap: 40px;
       width: 100%;
+    }
+
+    @include breakpoints-down(small) {
+      margin-inline: 35px;
+      margin-bottom: 25px;
     }
 
     .top {
