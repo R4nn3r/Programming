@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+$ff-primary: "DM Sans", sans-serif;
+$fw-400: 400;
+$fw-700: 700;
+
+$fs-size: 18px;
+
+:root {
+  /* Functionality support  */
+  --bar: 0px;
+  /* Primary */
+  --accent-100: hsl(10, 79%, 65%);
+  --accent-200: hsl(186, 34%, 60%);
+
+  /* Neutral */
+  --neu-100: hsl(25, 47%, 15%);
+  --neu-200: hsl(28, 10%, 53%);
+  --neu-300: hsl(27, 66%, 92%);
+  --neu-400: hsl(33, 100%, 98%);
+  --neu-500: hsl(0, 0%, 100%);
+}
+.dark-theme {
+  /* Primary */
+  --accent-100: hsl(240, 10%, 10%);
+  --accent-200: hsl(186, 34%, 60%);
+
+  /* Neutral */
+  --neu-100: hsl(0, 0%, 95%);
+  --neu-200: hsl(28, 10%, 53%);
+  --neu-300: hsl(27, 66%, 92%);
+  --neu-400: hsl(0, 17%, 5%);
+  --neu-500: hsl(0, 0%, 8%);
+}

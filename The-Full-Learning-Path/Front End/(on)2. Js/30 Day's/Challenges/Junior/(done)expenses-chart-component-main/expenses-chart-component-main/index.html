@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="stylesheet" href="./apps/style/style.css" />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/5b12988027.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="dark-theme">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container flex">
+        <div class="balance">
+          <p>My balance</p>
+          <h1>$921.48</h1>
+        </div>
+        <div class="icon">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="main-container">
+        <!-- Top -->
+        <div class="top">
+          <h1>Spending - Last 7 days</h1>
+        </div>
+
+        <!-- Middle -->
+        <div class="middle">
+          <div class="block">
+            <div class="bar">
+              <!-- Detail -->
+              <div class="detail">
+                <p>$50.00</p>
+              </div>
+            </div>
+            <p class="day"></p>
+          </div>
+          <div class="block">
+            <div class="bar">
+              <!-- Detail -->
+              <div class="detail">
+                <p>$50.00</p>
+              </div>
+            </div>
+            <p class="day"></p>
+          </div>
+          <div class="block">
+            <div class="bar">
+              <!-- Detail -->
+              <div class="detail">
+                <p>$50.00</p>
+              </div>
+            </div>
+            <p class="day"></p>
+          </div>
+          <div class="block">
+            <div class="bar">
+              <!-- Detail -->
+              <div class="detail">
+                <p>$50.00</p>
+              </div>
+            </div>
+            <p class="day"></p>
+          </div>
+          <div class="block">
+            <div class="bar">
+              <!-- Detail -->
+              <div class="detail">
+                <p>$50.00</p>
+              </div>
+            </div>
+            <p class="day"></p>
+          </div>
+          <div class="block">
+            <div class="bar">
+              <!-- Detail -->
+              <div class="detail">
+                <p>$50.00</p>
+              </div>
+            </div>
+            <p class="day"></p>
+          </div>
+          <div class="block">
+            <div class="bar">
+              <!-- Detail -->
+              <div class="detail">
+                <p>$50.00</p>
+              </div>
+            </div>
+            <p class="day"></p>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="bottom flex">
+          <div class="month">
+            <p>Total this month</p>
+            <h1>$478.33</h1>
+          </div>
+          <div class="last-month">
+            <p>+2.4%</p>
+            <p>from last month</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="attribution normText">
+      Challenge by
+      <a
+        class="impoText"
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        >Fem</a
+      >. made with &#128151; by
+
+      <a target="_blank" class="impoText" href="https://github.com/R4nn3r">
+        <i class="fa-brands fa-github-alt"></i>
+      </a>
+      <p>
+        Boring :(
+        <i onclick="theme()" class="fa-solid fa-person-booth crazy"></i>
+      </p>
+    </footer>
+
+    <script src="./data.json"></script>
+    <script src="./apps/js/main.js"></script>
+  </body>
+</html>

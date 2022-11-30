@@ -1,0 +1,29 @@
+.header {
+  margin: 25px;
+
+  &-container {
+    background-color: var(--accent-100);
+    border-radius: 20px;
+    padding: 20px 30px;
+    max-width: 540px;
+    margin-inline: auto;
+    width: 100%;
+    .balance {
+      color: white;
+
+      h1 {
+        font-size: min(40px, 7vw);
+      }
+      p {
+        font-size: min(15px, 5vw);
+      }
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
