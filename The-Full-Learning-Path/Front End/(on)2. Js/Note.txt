@@ -1080,6 +1080,22 @@ https://developer.mozilla.org/en-US/
         "completed": false
     }
 
+    // Create a function to access the data 
+    function showArray(data){
+        for(let prop in data){
+            console.log(prop)
+            console.log(data[prop])
+        }
+    }
+
+
+    fetch("./data.json")
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            showArray(data);
+        });
 
 
 # Note: This
