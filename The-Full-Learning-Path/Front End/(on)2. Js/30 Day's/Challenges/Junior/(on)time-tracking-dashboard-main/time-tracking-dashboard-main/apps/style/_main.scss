@@ -1,256 +1,29 @@
 .main {
-  margin-top: 100px;
-  display: grid;
-  padding: 30px;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   &-container {
-    display: flex;
-    justify-content: center;
-    /* Media */
-    @include breakpoints-down(small) {
-      flex-direction: column;
-    }
   }
 
-  &-user {
-    background-color: var(--neu-200);
-    border-radius: 15px;
-    padding: 30px;
+  .grid-items {
     display: flex;
     flex-direction: column;
-    color: var(--white);
-    gap: 0px;
-    position: relative;
-    z-index: 1;
+    gap: 10px;
 
-    /* Media */
     @include breakpoints-up(medium) {
-      max-width: 260px;
-      gap: 40px;
-      width: 100%;
-    }
-
-    @include breakpoints-down(small) {
-      margin-inline: 35px;
-      margin-bottom: 25px;
-    }
-
-    .top {
-      display: flex;
-      gap: 40px;
-      flex-direction: column;
-
-      /* Media */
-      @include breakpoints-down(small) {
-        flex-direction: row;
-        gap: 20px;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-    }
-
-    /* Image */
-    .img-box {
-      &-circle {
-        border: 4px solid white;
-        border-radius: 50%;
-        width: 90px;
-        height: 90px;
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    /* User */
-    .user-info {
-      font-weight: $fw-400;
-      p {
-        color: var(--neu-400);
-      }
-      h1 {
-        font-size: 2.75rem;
-        font-weight: $fw-300;
-        line-height: 1;
-
-        /* Media */
-        @include breakpoints-down(small) {
-          font-size: 1.5rem;
-        }
-      }
-    }
-
-    /* Button */
-    .button {
-      margin-top: 70px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: flex-start;
-
-      button {
-        font-family: inherit;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        font-size: 1rem;
-        color: var(--neu-400);
-        transition: color 0.2s ease-in;
-        cursor: pointer;
-
-        &:hover {
-          color: inherit;
-        }
-      }
-      /* Media */
-      @include breakpoints-down(small) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-      }
-    }
-
-    /* Decor */
-    &:after {
-      position: absolute;
-      content: "";
-      display: block;
-      background-color: var(--blue);
-      border-radius: 15px;
-      z-index: -1;
-      /* position */
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 165px;
-
-      /* Media */
-      @include breakpoints-down(small) {
-        bottom: 80px;
-      }
-    }
-  }
-
-  &-grid {
-    display: grid;
-    gap: 30px;
-    grid-template-areas:
-      "one two three"
-      "four five six";
-
-    @include breakpoints-down(medium) {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(4, 260px);
       grid-template-areas:
-        "one two"
-        "three four"
-        "five six";
+        "one two three four"
+        "one five six seven";
     }
-
-    @include breakpoints-down(small) {
-      grid-template-areas:
-        "one"
-        "two"
-        "three"
-        "four"
-        "five"
-        "six";
-    }
-
-    &-card {
-      color: white;
-      padding: 30px;
-      border-radius: 15px;
-      position: relative;
-      z-index: 1;
-      margin-inline: 35px;
-
-      .top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        margin-top: 40px;
-
-        .title {
-          font-weight: $fw-500;
-        }
-      }
-
-      .middle {
-        h1 {
-          font-weight: $fw-400;
-          font-size: 3rem;
-        }
-        p {
-          color: var(--neu-400);
-        }
-      }
-      /* Media */
-      @include breakpoints-up(medium) {
-        max-width: 260px;
-        gap: 40px;
-        width: 100%;
-      }
-
-      /* Decor */
-      &:after {
-        position: absolute;
-        content: "";
-        display: block;
-
-        /* background */
-        background-color: var(--neu-200);
-        border-radius: 15px;
-        z-index: -1;
-
-        /* position */
-        top: 45px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-      }
-
-      /* Cards */
+    .card {
+      padding: 20px;
+      outline: 2px dashed white;
       &:nth-child(1) {
         grid-area: one;
-        background: url(../../images/icon-work.svg), var(--work);
-        background-repeat: no-repeat;
-        background-size: 25%;
-        background-position: 95% -10%;
-      }
-      &:nth-child(2) {
-        grid-area: two;
-        background: url(../../images/icon-play.svg), var(--play);
-        background-repeat: no-repeat;
-        background-size: 25%;
-        background-position: 95% -10%;
-      }
-      &:nth-child(3) {
-        grid-area: three;
-        background: url(../../images/icon-study.svg), var(--study);
-        background-repeat: no-repeat;
-        background-size: 25%;
-        background-position: 95% -10%;
-      }
-      &:nth-child(4) {
-        grid-area: four;
-        background: url(../../images/icon-exercise.svg), var(--exercise);
-        background-repeat: no-repeat;
-        background-size: 25%;
-        background-position: 95% 0;
-      }
-      &:nth-child(5) {
-        grid-area: five;
-        background: url(../../images/icon-social.svg), var(--social);
-        background-repeat: no-repeat;
-        background-size: 25%;
-        background-position: 95% -10%;
-      }
-      &:nth-child(6) {
-        grid-area: six;
-        background: url(../../images/icon-self-care.svg), var(--self);
-        background-repeat: no-repeat;
-        background-size: 25%;
-        background-position: 95% -10%;
       }
     }
   }
