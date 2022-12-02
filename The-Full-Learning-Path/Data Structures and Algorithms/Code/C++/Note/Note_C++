@@ -731,12 +731,12 @@
 
 
                 cout << endl << endl;
-                cout << anArray[3] << endl; // answere will be 0 cause its cleared
+                cout << anArray[3] << endl; // answer will be 0 cause its cleared
 
 
             // How to get the size of any Array
 
-
+                -> Derived the sizeof(arr) / sizeof(arr[0]);
 
 
 
