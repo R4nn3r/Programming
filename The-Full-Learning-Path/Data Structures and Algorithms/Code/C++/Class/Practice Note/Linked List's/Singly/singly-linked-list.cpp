@@ -22,15 +22,15 @@ Traverse the linked list cout the list node data's
         - cout "the list is empty"
  */
 void traverse_list(Node** temp){
-    // Node* temp_node = *temp;
-    // if (*temp != NULL){
-    //     while(temp_node != NULL){
-    //         cout << temp_node->data << "\n";
-    //         temp_node = temp_node->next;
-    //     }
-    // }else{
-    //     cout << "List is empty" << endl;
-    // }
+    Node* temp_node = *temp;
+    if (*temp != NULL){
+        while(temp_node != NULL){
+            cout << temp_node->data << "\n";
+            temp_node = temp_node->next;
+        }
+    }else{
+        cout << "List is empty" << endl;
+    }
 }
 
 

@@ -14,7 +14,11 @@
     "charconv": "cpp",
     "new": "cpp",
     "*.tcc": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "ranges": "cpp",
+    "span": "cpp"
   },
   "editor.fontSize": 16.5,
   "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
