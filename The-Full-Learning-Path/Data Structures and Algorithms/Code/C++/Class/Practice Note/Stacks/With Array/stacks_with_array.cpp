@@ -11,7 +11,7 @@ class stacks{
     int top;
 
 public:
-    /* Constructor */
+    /* Constructor */ 
     stacks(int n){
         size = n;
         arr = new int[n];
