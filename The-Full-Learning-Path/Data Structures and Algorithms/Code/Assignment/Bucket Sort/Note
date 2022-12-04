@@ -1,0 +1,9 @@
+Bucket sort 
+
+is a comparison sort algorithm that operates on elements by dividing them into different buckets and then sorting these buckets individually. Each bucket is sorted individually using a separate sorting algorithm like insertion sort, or by applying the bucket sort algorithm recursively.
+
+Bucket sort is mainly useful when the input is uniformly distributed over a range. For example, imagine you have a large array of floating point integers distributed uniformly between an upper and lower bound.
+
+You could use another sorting algorithm like merge sort, heap sort, or quick sort. However, those algorithms guarantee a best case time complexity of O(nlogn).
+
+Using bucket sort, sorting the same array can be completed in O(n) time.
