@@ -385,3 +385,5 @@
                         any elements.
         len(S):     Return the number of elements in stack S; in 
                     Python, we implement this with the special method len .
+
+# Queues 
