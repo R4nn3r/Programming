@@ -1,4 +1,4 @@
-Bucket sort Implementing
+Bucket sort Implementing using arrays and linked list 
 
 is a comparison sort algorithm that operates on elements by dividing them into different buckets and then sorting these buckets individually. Each bucket is sorted individually using a separate sorting algorithm like insertion sort, or by applying the bucket sort algorithm recursively.
 
