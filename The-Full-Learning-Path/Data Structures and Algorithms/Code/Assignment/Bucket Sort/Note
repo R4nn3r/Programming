@@ -7,3 +7,11 @@ Bucket sort is mainly useful when the input is uniformly distributed over a rang
 You could use another sorting algorithm like merge sort, heap sort, or quick sort. However, those algorithms guarantee a best case time complexity of O(nlogn).
 
 Using bucket sort, sorting the same array can be completed in O(n) time.
+
+
+bucketSort(arr[], n)
+1) Create n empty buckets (Or lists).
+2) Do following for every array element arr[i].
+.......a) Insert arr[i] into bucket[n*array[i]]
+3) Sort individual buckets using insertion sort.
+4) Concatenate all sorted buckets.
