@@ -1,6 +1,7 @@
 with open('data.txt', 'r') as f:
     lines = f.readlines()
     calories = [entry.strip() for entry in lines]
+    
 elf_sums = []
 current_sum = 0
 for entry in calories:
