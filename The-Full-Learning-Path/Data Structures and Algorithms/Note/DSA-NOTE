@@ -364,7 +364,7 @@
             [Doubly Linked List]
             [Circular Linked List]
 
-# Stacks 
+# Stack's 
 
     Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).    
     
@@ -386,4 +386,10 @@
         len(S):     Return the number of elements in stack S; in 
                     Python, we implement this with the special method len .
 
-# Queues 
+# Queue's
+
+# searching 
+
+# sorting
+
+# Tree's
