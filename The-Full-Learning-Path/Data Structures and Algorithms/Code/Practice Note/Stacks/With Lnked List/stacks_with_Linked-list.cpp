@@ -1,7 +1,15 @@
 #include <iostream>
 
+/* 
+    Push - This adds a data value to the top of the stack.
+    Pop - This removes the data value on top of the stack
+    Peek - This returns the top data value of the stack
+ */
+
 using namespace std;
 
+
+/* Structure for the Stack with a single pointer of the Top */
 struct Node {
     int data;
     Node* next;
@@ -50,7 +58,7 @@ void push(int value){
     }
 }
 
-
+/* Pop the top element */
 int pop(){
     if(head == NULL){
         cout << "Stack Underflow" << endl;
@@ -75,6 +83,7 @@ int pop(){
     }
 }
 
+/* Peek element */
 void showTop(){
     if(top == NULL){
         cout << "Stack is empty" << endl;
@@ -100,22 +109,6 @@ int main(){
     traversal();
     check();
 
-
- /*    pop();
-    traversal();
-    check();
-    showTop();
-
-    pop();
-    traversal();
-    pop();
-    traversal();
-    pop();
-    traversal();
-    pop();
-    traversal();
-    pop();
-    traversal(); */
 
     return 0;
 }

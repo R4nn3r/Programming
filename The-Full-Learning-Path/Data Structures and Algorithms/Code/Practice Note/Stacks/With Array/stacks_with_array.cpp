@@ -1,67 +1,69 @@
-/* Stacks With Array Implementation*/
 #include <iostream>
-#include <bits/stdc++.h>
+
+/* 
+    Push - This adds a data value to the top of the stack.
+    Pop - This removes the data value on top of the stack
+    Peek - This returns the top data value of the stack
+ */
 
 using namespace std;
 
-/* Stack */
-class stacks{
-    int * arr;
-    int size;
-    int top;
+/* Global Definition for 
+    Stack Array, 
+    Size Var, 
+    Top Pointer
+*/
+int stack[100], n=100, top=-1;
 
-public:
-    /* Constructor */ 
-    stacks(int n){
-        size = n;
-        arr = new int[n];
-        top = n / 2 + 1;
+/* Push a new Element in a Stack */
+void push(int val){
+    if(top >= n - 1){
+        cout << "Stack Overflow" << endl;
+    }else{
+        top++;
+        stack[top] = val;
     }
-
-    /* Method to push an element x to stack  */
-    void push(int x){
-        /* at least one empty space for the new element */
-        if(top > 0){
-            top --;
-            arr[top] = x;
-        }else{
-            cout << "Stack overflow: " << x << endl;
-            return;
-        }
-    }
-
-    /* Method to pop an element from the stack */
-    int pop(){
-        if(top <= size / 2){
-            int x = arr[top];
-            top ++;
-            return x;
-        }else{
-            cout << "Stack overflow: " << endl;
-            exit(1);
-        }
-    }
-
-
-};
-
-/* Driver */
-int main(){
-    stacks ts(5);
-    ts.push(5);
-    ts.push(15);
-    ts.push(25);
-    ts.push(35);
-    ts.push(45);
-
-/*     cout << "Popped element from stack is "
-         << ": " << ts.pop() << endl; */
-    ts.push(55);
-    ts.push(65);
-/*     cout << "Popped element from stack is "
-         << ": " << ts.pop() << endl;  */
-
-    return 0;
 }
 
+/* Pop the Top element in the Stack */
+void pop(){
+    if(top == -1){
+        cout << "Stack Underflow" << endl;
+    }else{
+        cout << "Element Popped "<< stack[top] << endl;
+        top--;
+    }
+}
 
+/* Display Elements in the Stack */
+void display(){
+    if(top >= 0){
+        for(int i = top; i >= 0; i--){
+            cout << " -> " << stack[i] ;
+        }
+        cout << endl;
+    }else{
+        cout << "Stack is Empty" << endl;
+    }
+}
+
+/* Return the Peek of the Stack */
+int peek(){
+    return stack[top];
+}
+
+int main(){
+    push(10);
+    push(20);
+    push(30);
+    push(40);
+    push(50);
+
+    display();
+    
+    pop();
+
+    cout << peek();
+    cout << endl;
+    return 0;
+}
