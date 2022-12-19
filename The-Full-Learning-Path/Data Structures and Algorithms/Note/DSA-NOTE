@@ -371,22 +371,31 @@
 
 
     Formally, a stack is an abstract data type (ADT) such that an instance S supports the following two methods:
-        S.push(e):  Add element e to the top of stack S.
-        S.pop( ):   Remove and return the top element from the 
+        push(e):  Add element e to the top of stack S.
+        pop( ):   Remove and return the top element from the 
                     stack S; an error occurs if the stack is empty.
-
+    
+    Complexity O(1)
 
 
     Additionally, let us define the following accessor methods for convenience:
-        S.top( ):   Return a reference to the top element of stack 
+        top( ):   Return a reference to the top element of stack 
                     S, without removing it; an error occurs if the stack is empty.
                     
-        S.is empty( ): Return True if stack S does not contain 
+        is empty( ): Return True if stack S does not contain 
                         any elements.
         len(S):     Return the number of elements in stack S; in 
                     Python, we implement this with the special method len .
 
-# Queue's
+# Queue's 
+
+    Queue is another form of linear data structure where an item can be inserted at one end and can be removed from another end.
+    Addition of a new element occurs at one end called REAR and deletion of an element occurs at another end called FRONT
+
+    Enqueue(): Add an element to the REAR 
+    Dequeue(): Remove the element from the FRONT
+
+    Complexity O(1)
 
 # searching 
 
