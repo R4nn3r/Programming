@@ -74,6 +74,7 @@ void pop(){
             while(curr->next != top){
                 curr = curr->next;
             }
+            /* Change the top element */
             curr->next = NULL;
             free(top);
             top = curr;
