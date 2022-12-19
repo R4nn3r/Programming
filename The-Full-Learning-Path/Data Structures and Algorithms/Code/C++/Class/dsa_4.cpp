@@ -94,7 +94,7 @@ void showTop(){
 
 
 int main(){
-    check();
+    // check();
 
     push(10);
     push(20);
@@ -104,10 +104,10 @@ int main(){
     traversal();
     showTop();
 
-    pop();
-    showTop();
-    traversal();
-    check();
+    // pop();
+    // showTop();
+    // traversal();
+    // check();
 
 
     return 0;

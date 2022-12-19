@@ -8,25 +8,24 @@
 
 using namespace std;
 
-
-/* Structure for the Stack with a single pointer of the Top */
-struct Node {
+/* Structure */
+struct stack{
     int data;
-    Node* next;
+    stack * next;
 };
 
-Node* head = NULL;
-Node* top = NULL;
+/* Pointer to the Stack top and head */
+stack * head = NULL;
+stack * top = NULL;
 
-
+/* Traverse through the Stack */
 void traversal(){
     if(head == NULL){
-        cout << "Stack is Empty" << endl;
-
+        cout << "Stack is empty" << endl;
     }else{
-        cout << "Stack Elements : ";
-        Node* curr = head;
-        while (curr != NULL){
+        cout << "Stack is Elements" << " -> ";
+        stack * curr = head;
+        while(curr != NULL){
             cout << curr->data << " ";
             curr = curr->next;
         }
@@ -34,19 +33,21 @@ void traversal(){
     cout<< "\n";
 }
 
+/* Check the if the stack is empty or not */
 int check(){
-    if(top == NULL){
+    if(head != NULL){
+        cout << "Stack is Not Empty" << endl;
+        return 1;
+    }else{
         cout << "Stack is Empty" << endl;
         return 0;
-    }else{
-        cout << "No, Stack is Not Empty" << endl;
-        return 1;
     }
 }
 
-void push(int value){
-    Node * new_node = new Node();
-    new_node->data = value;
+/* Push an Element to the Stack */
+void push(int val){
+    stack * new_node = new stack();
+    new_node->data = val;
     new_node->next = NULL;
 
     if(top == NULL){
@@ -58,11 +59,10 @@ void push(int value){
     }
 }
 
-/* Pop the top element */
-int pop(){
+/* Pop the Element on the top of the stack */
+void pop(){
     if(head == NULL){
         cout << "Stack Underflow" << endl;
-        return 0;
     }else{
         int x = top->data;
         if(top == head){
@@ -70,23 +70,23 @@ int pop(){
             top = NULL;
             head = NULL;
         }else{
-            Node * curr = head;
-            while (curr->next != top){
+            stack * curr = head;
+            while(curr->next != top){
                 curr = curr->next;
             }
             curr->next = NULL;
             free(top);
             top = curr;
         }
-        cout << x << " : Popped " << endl;
-        return x;
+        cout << x << ": Popped " << endl;
     }
 }
 
-/* Peek element */
-void showTop(){
+
+/* Peak Element from the stack */
+void peek(){
     if(top == NULL){
-        cout << "Stack is empty" << endl;
+        cout << "Stack empty" << endl;
     }else{
         cout << "Top Element: " << top->data << endl;
     }
@@ -95,19 +95,18 @@ void showTop(){
 
 int main(){
     check();
-
     push(10);
     push(20);
     push(30);
     push(40);
     push(50);
-    traversal();
-    showTop();
-
-    pop();
-    showTop();
-    traversal();
     check();
+
+    traversal();
+    peek();
+    pop();
+    peek();
+
 
 
     return 0;
