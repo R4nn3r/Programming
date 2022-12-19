@@ -428,6 +428,12 @@
             -   Repeatedly check from the second point until the value is
                 found or the interval is empty.
         
+        Time Complexity
+        Best Case               O(1)
+        Average Case            O(logn)
+        Worst Case              O(logn)
+
+
         Binary Search Algorithm can be implemented in the following 
         two ways
         
@@ -461,5 +467,38 @@
                         return binarySearch(arr, x, low, mid - 1) 
 
 # Sorting
-    
+
+    A Sorting Algorithm is used to rearrange a given array or list of elements according to a comparison operator on the elements. The comparison operator is used to decide the new order of elements in the respective data structure.
+
+    # Selection Sort 
+        The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from the unsorted part and putting it at the beginning. 
+
+        The algorithm maintains two sub-arrays in a given array.
+            The sub-array which already sorted. 
+            The remaining sub-array was unsorted.
+
+        Time Complexity
+        Best Case               O(n^2)
+        Average Case            O(n^2)
+        Worst Case              O(n^2)
+
+    # Insertion Sort
+
+    # Bubble Sort 
+
+    # Bucket Sort 
+        sorting technique that uses the Scatter-Gather-Approach tries to simplify such complex problems by first scattering the complete data into clusters, solving these sub-problems individually, and finally gathering them all together to get the final result.
+
+        The algorithm works by distributing the elements of an array into a number of buckets, Sort the individual buckets, and then gather them all together to form the final sorted array. Each bucket is then sorted individually, using any of the suitable sorting algorithms, or by recursively applying the bucket sorting algorithm.
+
+
+        bucketSort(arr[], n)
+            1) Create n empty buckets (Or lists).
+            2) Do following for every array element arr[i].
+            .......a) Insert arr[i] into bucket[n*array[i]]
+            3) Sort individual buckets using insertion sort.
+            4) Concatenate all sorted buckets.
+
+    # Shell Sort 
+
 # Tree's
