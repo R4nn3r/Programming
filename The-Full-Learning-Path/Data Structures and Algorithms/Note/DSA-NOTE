@@ -397,9 +397,24 @@
 
     Complexity O(1)
 
-# searching 
+# Searching 
+
+    Searching is the process of finding some particular desired element with a particular value in a particular collection of elements.
+
+    # Linear [sequential search algorithm]
+        Linear Search is defined as a sequential search algorithm that starts at one end and goes through each element of a list until the desired element is found, otherwise the search continues till the end of the data set.
+
+        Given an array arr[] of N elements, the task is to write a function to search a given element x in arr[].
+
+
+        Time Complexity
+        Best Case               O(1)
+        Average Case            O(n)
+        Worst Case              O(n)
+
+    # Binary search
+
     
-
-# sorting
-
+# Sorting
+    
 # Tree's
