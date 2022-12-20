@@ -1,5 +1,7 @@
 #include <iostream>
 
+/* Bucket Sort Version 2 */
+
 using namespace std;
 
 int findMax(int arr[], int n)
@@ -52,6 +54,8 @@ int main()
 {
     int n,*arr,i;
     int *bucket[10];
+
+    /* Get input from user and add them to the Array*/
     cout<<"Enter no of element : ";
     cin>>n;
     arr=new int[n+1];
