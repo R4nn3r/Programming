@@ -65,7 +65,24 @@ svg {
 }
 
 // utilities
+.main-container {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+}
+.flex-row {
+  flex-direction: row;
+}
 
 // General styles
 body {
+  background-color: var(--crl-main-bg);
+  color: var(--neu-main);
 }
