@@ -1,7 +1,44 @@
 /* Header */
 .header {
   &-container {
-    outline: 2px dashed white;
     align-items: center;
+    margin-top: 65px;
+    padding: 0 75px;
   }
+  &__logo {
+    scale: 0.95;
+  }
+
+  &__nav {
+    gap: 45px;
+    font-size: $fs-pri;
+    &__menu a {
+      font-weight: 400;
+      padding: 5px;
+      margin: 5px;
+      color: var(--neu-g);
+      cursor: pointer;
+      /* Reaction */
+      transition: all 0.3s ease-in-out;
+      &:hover,
+      &:focus,
+      &:active {
+        font-weight: 700;
+        color: var(--neu-w);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__intro {
+    text-align: center;
+    &__box {
+      scale: 0.75;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
