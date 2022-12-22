@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+$ff-pri: "Open Sans", sans-serif;
+$ff-sec: "Raleway", sans-serif;
+
+$fs-pri: 14px;
+
+:root {
+  /* Primary */
+  --clr-intro: hsl(217, 28%, 15%);
+  --crl-main-bg: hsl(218, 28%, 13%);
+  --crl-footer-bg: hsl(216, 53%, 9%);
+  --crl-testimonial-bg: hsl(219, 30%, 18%);
+
+  /* Accent */
+  --acc-cto-1: hsl(176, 68%, 64%);
+  --acc-cto-2: hsl(198, 60%, 50%);
+  --acc-error: hsl(0, 100%, 63%);
+
+  /* Neutral */
+  --neu-main: hsl(0, 0%, 100%);
+}
