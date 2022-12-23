@@ -2,11 +2,7 @@
 .header {
   &-container {
     align-items: center;
-    margin-top: 65px;
-
-    @include breakpoints-down(medium) {
-      margin-top: 40px;
-    }
+    margin-top: 40px;
   }
   &__logo {
     &__img {
