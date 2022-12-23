@@ -103,6 +103,10 @@ svg {
   }
 }
 
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
 // General styles
 body {
   background-color: var(--crl-main-bg);

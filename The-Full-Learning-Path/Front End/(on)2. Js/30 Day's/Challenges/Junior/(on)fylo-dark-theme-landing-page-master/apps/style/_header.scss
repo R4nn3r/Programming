@@ -100,18 +100,39 @@ a {
 /* Hamburger */
 
 .header__ham {
+  cursor: pointer;
   .box {
     outline: 2px solid white;
     padding: 5px;
 
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 3px;
 
     .line {
-      border-bottom: 2px solid white;
-      width: 15px;
+      width: 25px;
       height: 3px;
+      background-color: var(--acc-cto-1);
+      transition: 0.4s;
+    }
+    .line:first-child {
+      width: 15px;
+    }
+    .line:nth-child(2) {
+      width: 20px;
+    }
+
+    &.change {
+      .line:first-child {
+        width: 25px;
+        transform: translate(0, 6px) rotate(-45deg);
+      }
+      .line:nth-child(2) {
+        opacity: 0;
+      }
+      .line:last-child {
+        transform: translate(0, -6px) rotate(45deg);
+      }
     }
   }
 }
