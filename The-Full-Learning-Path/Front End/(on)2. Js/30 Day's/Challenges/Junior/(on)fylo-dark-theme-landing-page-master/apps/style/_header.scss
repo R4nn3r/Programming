@@ -63,7 +63,33 @@
         margin-inline: auto;
         font-size: min(18px, calc(10px + 0.65vw));
         @include breakpoints-up(large) {
-          max-width: 75%;
+          max-width: 85%;
+        }
+        margin-bottom: 40px;
+      }
+
+      /* Button */
+      .btn {
+        max-width: 280px;
+        width: 100%;
+        height: 55px;
+        border-radius: 55px;
+        outline: none;
+        border: none;
+        background-color: var(--acc-cto-1);
+        font-weight: 700;
+        font-family: $ff-sec;
+        font-size: 14px;
+        color: var(--neu-w);
+
+        /* Interaction */
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:focus,
+        &:hover,
+        &:active {
+          background-color: var(--acc-cto-1-i);
         }
       }
     }
