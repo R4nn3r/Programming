@@ -1,0 +1,73 @@
+.hero {
+  background-color: var(--crl-main-bg);
+  &-container {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: url(../../images/bg-curvy-desktop.svg);
+      background-repeat: no-repeat;
+      max-height: 400px;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: -319px;
+      z-index: -1;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-areas:
+      "one" " two"
+      "three" " four";
+    gap: 65px;
+
+    @include breakpoints-up(medium) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "one two"
+        "three four";
+    }
+
+    .card {
+      padding: 0 10px;
+      text-align: center;
+      &__img {
+      }
+      &__article {
+        margin-top: 20px;
+        margin-inline: auto;
+        color: inherit;
+
+        h2 {
+          font-size: min(25px, calc(17px + 1.25vw));
+          font-family: $ff-sec;
+        }
+        p {
+          margin-inline: auto;
+          font-size: min(16px, calc(10px + 0.65vw));
+          @include breakpoints-up(large) {
+            max-width: min(70%, 750px);
+          }
+          margin-bottom: 40px;
+        }
+      }
+
+      &:nth-child(1) {
+        grid-area: one;
+      }
+      &:nth-child(2) {
+        grid-area: two;
+      }
+      &:nth-child(3) {
+        grid-area: three;
+      }
+      &:nth-child(4) {
+        grid-area: four;
+      }
+    }
+  }
+}

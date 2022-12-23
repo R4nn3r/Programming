@@ -109,7 +109,8 @@ svg {
 
 // General styles
 body {
-  background-color: var(--crl-main-bg);
   color: var(--neu-w);
+  background-color: var(--clr-intro);
+  overflow-x: hidden;
   font-family: $ff-pri;
 }
