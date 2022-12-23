@@ -66,8 +66,13 @@ svg {
 
 // utilities
 .main-container {
+  padding: 0 75px;
   max-width: 1440px;
   margin-inline: auto;
+
+  @include breakpoints-down(medium) {
+    padding: 0 20px;
+  }
 }
 
 .flex {
@@ -81,9 +86,26 @@ svg {
   flex-direction: row;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* Visibility */
+.hide_for_desktop {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
+
+.hide_for_mobile {
+  @include breakpoints-down(medium) {
+    display: none;
+  }
+}
+
 // General styles
 body {
   background-color: var(--crl-main-bg);
-  color: var(--neu-main);
+  color: var(--neu-w);
   font-family: $ff-pri;
 }

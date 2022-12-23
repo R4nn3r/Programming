@@ -3,15 +3,24 @@
   &-container {
     align-items: center;
     margin-top: 65px;
-    padding: 0 75px;
+
+    @include breakpoints-down(medium) {
+      margin-top: 40px;
+    }
   }
   &__logo {
-    scale: 0.95;
+    &__img {
+      max-width: calc(100px + 15vw);
+    }
   }
 
   &__nav {
     gap: 45px;
-    font-size: $fs-pri;
+    font-size: min(14px, calc(7.5px + 0.75vw));
+
+    @include breakpoints-down(medium) {
+      gap: 25px;
+    }
     &__menu a {
       font-weight: 400;
       padding: 5px;
@@ -32,8 +41,31 @@
 
   &__intro {
     text-align: center;
+    padding: 10px;
     &__box {
-      scale: 0.75;
+      scale: 0.9;
+    }
+
+    &__article {
+      padding: 20px;
+      margin-inline: auto;
+      color: inherit;
+      @include breakpoints-up(medium) {
+        max-width: min(50%, 750px);
+      }
+
+      h1 {
+        font-size: min(35px, calc(17px + 1.25vw));
+        font-family: $ff-sec;
+        margin-bottom: 25px;
+      }
+      p {
+        margin-inline: auto;
+        font-size: min(18px, calc(10px + 0.65vw));
+        @include breakpoints-up(large) {
+          max-width: 75%;
+        }
+      }
     }
   }
 }
@@ -41,4 +73,23 @@
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Hamburger */
+
+.header__ham {
+  .box {
+    outline: 2px solid white;
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .line {
+      border-bottom: 2px solid white;
+      width: 15px;
+      height: 3px;
+    }
+  }
 }

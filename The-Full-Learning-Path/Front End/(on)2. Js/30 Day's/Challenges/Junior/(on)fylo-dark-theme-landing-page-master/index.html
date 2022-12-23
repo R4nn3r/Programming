@@ -33,13 +33,15 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header-container main-container flex flex-jc-sb flex-row">
+      <div
+        class="header-container main-container wrap flex flex-jc-sb flex-row"
+      >
         <!-- Logo -->
         <div class="header__logo">
           <img src="./images/logo.svg" alt="Fylo" class="header__logo__img" />
         </div>
         <!-- Navigation -->
-        <div class="header__nav flex flex-row">
+        <div class="header__nav flex flex-row wrap hide_for_mobile">
           <div class="header__nav__menu">
             <a href="#">Features</a>
           </div>
@@ -48,6 +50,14 @@
           </div>
           <div class="header__nav__menu">
             <a href="#">Sign In</a>
+          </div>
+        </div>
+
+        <div class="header__ham hide_for_desktop">
+          <div class="box">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
           </div>
         </div>
       </div>
@@ -60,6 +70,14 @@
             alt="illustrations for the intro"
           />
         </div>
+        <article class="header__intro__article">
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p>
+            Fylo stores all your most important files in one secure location.
+            Access them wherever you need, share and collaborate with friends
+            family, and co-workers.
+          </p>
+        </article>
       </div>
     </header>
 
@@ -67,10 +85,9 @@
   
  
 
-  All your files in one secure location, accessible anywhere.
+  
 
-  Fylo stores all your most important files in one secure location. Access them wherever 
-  you need, share and collaborate with friends family, and co-workers.
+ 
 
   Get Started
 
