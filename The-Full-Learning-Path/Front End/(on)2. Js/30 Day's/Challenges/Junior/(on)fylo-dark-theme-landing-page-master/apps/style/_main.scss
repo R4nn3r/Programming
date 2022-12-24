@@ -59,27 +59,32 @@
 
   /* Testimonials */
   &-test {
+    padding-bottom: 250px;
+    isolation: isolate;
     &__cards {
-      padding: 10px;
+      padding: 20px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 40px;
+      margin-inline: auto;
 
       .card {
         padding: 40px 30px 30px 30px;
         border-radius: 5px;
-        background-color: var(--clr-intro);
+        background-color: var(--crl-testimonial-bg);
         box-shadow: 5px 5px 15px rgba(23, 23, 23, 0.36);
 
         @include breakpoints-up(large) {
-          max-width: 400px;
+          max-width: 385px;
           width: 100%;
         }
 
         .text {
           line-height: 1.5;
           margin-bottom: 20px;
+          font-size: 0.85em;
         }
         .user {
           display: flex;
@@ -110,9 +115,8 @@
 
         &:nth-child(1) {
           position: relative;
-          z-index: 1;
-
-          &::before {
+          z-index: 2;
+          &::after {
             content: "";
             background-image: url(../../images/bg-quotes.png);
             background-position: left;
@@ -123,7 +127,7 @@
             top: -60px;
             left: -10px;
             right: 0;
-            z-index: -1;
+            z-index: 1;
           }
         }
       }
