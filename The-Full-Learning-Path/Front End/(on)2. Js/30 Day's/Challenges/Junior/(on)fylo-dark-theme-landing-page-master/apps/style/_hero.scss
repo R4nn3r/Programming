@@ -1,6 +1,7 @@
 .hero {
   background-color: var(--crl-main-bg);
   &-container {
+    padding-top: 50px;
     position: relative;
     &::before {
       content: "";
@@ -35,8 +36,7 @@
     .card {
       padding: 0 10px;
       text-align: center;
-      &__img {
-      }
+
       &__article {
         margin-top: 20px;
         margin-inline: auto;
