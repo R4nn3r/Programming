@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--crl-footer-bg);
-
+  padding: 20px 0;
   &-container {
     position: relative;
   }
@@ -13,10 +13,8 @@
     box-shadow: 5px 5px 15px rgba(23, 23, 23, 0.36);
     outline: 1px dashed white;
     /* position */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -175px;
+    margin-top: -150px;
+    margin-inline: auto;
     h1 {
       font-size: min(30px, calc(15px + 1.25vw));
       font-family: $ff-sec;
@@ -49,7 +47,7 @@
       }
       button {
         padding: 15px 25px;
-        flex: 1;
+        flex: 1/4;
         border: none;
         outline: none;
         border-radius: 50px;
@@ -64,14 +62,67 @@
     }
   }
 
-  &__box {
+  &__grid {
+    margin-top: 30px;
+    display: grid;
+    gap: 40px;
+
+    // Position
+    grid-template-columns: repeat();
+    .grid {
+    }
   }
+}
+
+.grid {
+  .icon {
+    flex: 1/10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    flex: 1;
+  }
+}
+.high {
+  align-self: flex-start;
 }
 
 /* Flex */
 .f {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 5px;
+  align-items: center;
+  gap: 15px;
+}
+.f-c {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.f-s {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid white;
+  padding: 5px;
+  width: 22.5px;
+  hight: 20px;
+  border-radius: 50%;
 }
