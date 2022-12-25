@@ -1,0 +1,136 @@
+.main {
+  background-color: var(--crl-main-bg);
+
+  &-box {
+    display: flex;
+    margin-bottom: 150px;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+
+    @include breakpoints-up(large) {
+      flex-direction: row;
+      align-items: center;
+      padding: 80px;
+      gap: 90px;
+    }
+  }
+
+  &__illu {
+    flex: 1;
+    text-align: center;
+  }
+  &__content {
+    flex: 1;
+    h2 {
+      font-size: min(45px, calc(20px + 1.25vw));
+      font-family: $ff-sec;
+      line-height: 1;
+      margin-bottom: 20px;
+      @include breakpoints-up(large) {
+        max-width: 75%;
+      }
+    }
+    p {
+      font-size: min(16px, calc(10px + 0.65vw));
+    }
+
+    .how {
+      margin-top: 10px;
+      border-bottom: 1px solid var(--acc-cto-1);
+      width: max-content;
+      color: var(--acc-cto-1);
+
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 5px 5px 0;
+
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid var(--neu-w);
+        color: var(--neu-w);
+      }
+    }
+  }
+
+  /* Testimonials */
+  &-test {
+    padding-bottom: 250px;
+    isolation: isolate;
+    &__cards {
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-inline: auto;
+
+      .card {
+        padding: 40px 30px 30px 30px;
+        border-radius: 5px;
+        background-color: var(--crl-testimonial-bg);
+        box-shadow: 5px 5px 15px rgba(23, 23, 23, 0.36);
+
+        @include breakpoints-up(large) {
+          max-width: 385px;
+          width: 100%;
+        }
+
+        .text {
+          line-height: 1.5;
+          margin-bottom: 20px;
+          font-size: 0.85em;
+        }
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          &__img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+
+            img {
+              border-radius: 50%;
+            }
+          }
+          &__info {
+            line-height: 1.25;
+            &__name {
+              font-family: $ff-sec;
+              font-weight: 700;
+              letter-spacing: 1px;
+            }
+            &__pos {
+              font-size: 0.75em;
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          position: relative;
+          z-index: 2;
+          &::after {
+            content: "";
+            background-image: url(../../images/bg-quotes.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            position: absolute;
+            height: 100px;
+            display: block;
+            top: -60px;
+            left: -10px;
+            right: 0;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.footer {
+  background-color: var(--crl-footer-bg);
+  padding: 50px 0;
+  &-container {
+    position: relative;
+  }
+  &__email {
+    text-align: center;
+    padding: 30px 20px 0 20px;
+    border-radius: 5px;
+    background-color: var(--clr-intro);
+    box-shadow: 5px 5px 15px rgba(23, 23, 23, 0.36);
+    margin-inline: auto;
+    max-width: 855px;
+
+    margin-top: -200px;
+    margin-bottom: 100px;
+    h1 {
+      font-size: min(30px, calc(15px + 1.25vw));
+      font-family: $ff-sec;
+      margin-bottom: 25px;
+    }
+    p {
+      margin-inline: auto;
+      font-size: min(14px, calc(18px + 0.65vw));
+      @include breakpoints-up(large) {
+        max-width: 85%;
+      }
+      margin-bottom: 10px;
+    }
+
+    /* input */
+    &__input {
+      padding: 30px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      input {
+        flex: 1;
+        padding: 15px 20px;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+      }
+      button {
+        padding: 15px 25px;
+        flex: 1/4;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        background-color: var(--acc-cto-1);
+        color: white;
+        font-weight: 700;
+
+        @include breakpoints-down(medium) {
+          flex: 1;
+          min-width: max-content;
+        }
+      }
+    }
+  }
+
+  &__grid {
+    margin-top: 30px;
+    display: grid;
+    gap: 40px;
+
+    // Position
+    grid-template-columns: 1fr;
+
+    @include breakpoints-up(large) {
+      grid-template-columns: repeat(5, 1fr);
+      justify-content: space-between;
+    }
+    .grid {
+    }
+  }
+}
+
+.grid {
+  .icon {
+    flex: 1/10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content {
+    flex: 1;
+  }
+}
+.high {
+  align-self: flex-start;
+}
+
+/* Flex */
+.f {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.f-c {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.f-s {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+
+  @include breakpoints-down(medium) {
+    justify-content: center;
+  }
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid white;
+  padding: 5px;
+  width: 22.5px;
+  border-radius: 50%;
+
+  i {
+    width: 15px;
+    height: 15px;
+  }
+}
