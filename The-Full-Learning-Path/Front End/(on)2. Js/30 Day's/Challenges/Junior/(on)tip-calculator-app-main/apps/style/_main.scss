@@ -1,12 +1,12 @@
 .main {
   &-container {
-    padding: 30px;
+    padding: 25px;
     background-color: var(--white);
     border-radius: 25px;
     max-width: 920px;
     width: 100%;
     margin-inline: auto;
-    gap: 40px;
+    gap: 20px;
     box-shadow: 5px 5px 15px #00000017;
     &__left {
       flex: 1;
@@ -29,7 +29,7 @@
         color: var(--neu-left-bg);
         &::placeholder {
           font-family: $ff-primary;
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           color: var(--neu-300);
         }
 
@@ -42,9 +42,9 @@
         background-color: var(--neu-left-bg);
         font-family: $ff-primary;
         color: var(--white);
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         border: none;
-        padding: 10px 35px;
+        padding: 10px 20px;
         width: 100%;
         border-radius: 5px;
         flex: 1;
@@ -85,7 +85,7 @@
       .top {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
         gap: 15px;
         margin-bottom: 15px;
@@ -107,6 +107,10 @@
       justify-content: space-between;
 
       gap: 30px;
+
+      @include breakpoints-down(medium) {
+        gap: 10px;
+      }
 
       .middle {
         margin-bottom: 50px;
@@ -153,4 +157,9 @@
   text-align: center;
   margin-bottom: 85px;
   margin-top: 40px;
+
+  @include breakpoints-down(medium) {
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
 }
