@@ -1,20 +1,20 @@
 .footer {
   background-color: var(--crl-footer-bg);
-  padding: 20px 0;
+  padding: 50px 0;
   &-container {
     position: relative;
   }
   &__email {
-    padding: 30px 20px 0 20px;
-    max-width: 855px;
     text-align: center;
+    padding: 30px 20px 0 20px;
     border-radius: 5px;
     background-color: var(--clr-intro);
     box-shadow: 5px 5px 15px rgba(23, 23, 23, 0.36);
-    outline: 1px dashed white;
-    /* position */
-    margin-top: -150px;
     margin-inline: auto;
+    max-width: 855px;
+
+    margin-top: -200px;
+    margin-bottom: 100px;
     h1 {
       font-size: min(30px, calc(15px + 1.25vw));
       font-family: $ff-sec;
@@ -55,8 +55,9 @@
         color: white;
         font-weight: 700;
 
-        @include breakpoints-up(large) {
-          flex: 1/4;
+        @include breakpoints-down(medium) {
+          flex: 1;
+          min-width: max-content;
         }
       }
     }
@@ -68,7 +69,12 @@
     gap: 40px;
 
     // Position
-    grid-template-columns: repeat();
+    grid-template-columns: 1fr;
+
+    @include breakpoints-up(large) {
+      grid-template-columns: repeat(5, 1fr);
+      justify-content: space-between;
+    }
     .grid {
     }
   }
@@ -106,8 +112,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  gap: 15px;
+
+  @include breakpoints-down(medium) {
+    justify-content: center;
+  }
 }
 
 .start {
@@ -123,6 +132,10 @@
   outline: 1px solid white;
   padding: 5px;
   width: 22.5px;
-  hight: 20px;
   border-radius: 50%;
+
+  i {
+    width: 15px;
+    height: 15px;
+  }
 }
