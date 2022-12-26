@@ -52,6 +52,7 @@
                 id="billInput"
                 placeholder="0"
                 dir="rtl"
+                data-bill-input
               />
             </div>
             <img class="dollar" src="./images/icon-dollar.svg" alt="dollar" />
@@ -60,13 +61,18 @@
             <p>Select Tip %</p>
             <div>
               <div class="top">
-                <button class="tip-btn">5%</button>
-                <button class="tip-btn">10%</button>
-                <button class="tip-btn">15%</button>
+                <button class="tip-btn" data-percent>5%</button>
+                <button class="tip-btn" data-percent>10%</button>
+                <button class="tip-btn" data-percent>15%</button>
 
-                <button class="tip-btn">25%</button>
-                <button class="tip-btn">50%</button>
-                <input type="text" class="tip-input" placeholder="Custom" />
+                <button class="tip-btn" data-percent>25%</button>
+                <button class="tip-btn" data-percent>50%</button>
+                <input
+                  data-percent-input
+                  type="text"
+                  class="tip-input"
+                  placeholder="Custom"
+                />
               </div>
             </div>
           </div>
@@ -79,6 +85,7 @@
                 id="peopleInput"
                 dir="rtl"
                 placeholder="0"
+                data-people-input
               />
             </div>
             <img class="person" src="./images/icon-person.svg" alt="person" />
@@ -91,7 +98,7 @@
               <p>/ person</p>
             </div>
             <div>
-              <h1 class="tip-amount">$0.00</h1>
+              <h1 class="tip-amount" data-tip>$0.00</h1>
             </div>
           </div>
           <div class="middle flex-out">
@@ -100,12 +107,12 @@
               <p>/ person</p>
             </div>
             <div>
-              <h1 class="total-amount">$0.00</h1>
+              <h1 class="total-amount" data-total>$0.00</h1>
             </div>
           </div>
 
           <div class="bottom">
-            <button class="disabled" disabled="true">RESET</button>
+            <button class="disabled" disabled="true" data-reset>RESET</button>
           </div>
         </div>
       </div>
