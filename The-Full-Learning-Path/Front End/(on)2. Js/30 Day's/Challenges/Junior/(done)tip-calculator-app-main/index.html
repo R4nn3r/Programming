@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="./apps/style/style.css" />
 
     <!-- Icons -->
-    <script
+    <!--  <script
       src="https://kit.fontawesome.com/5b12988027.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
 
     <!-- Starter Design for Footer -->
     <style>
@@ -61,12 +61,22 @@
             <p>Select Tip %</p>
             <div>
               <div class="top">
-                <button class="tip-btn" data-percent>5%</button>
-                <button class="tip-btn" data-percent>10%</button>
-                <button class="tip-btn" data-percent>15%</button>
+                <button class="tip-btn" data-value="0.05" data-percent>
+                  5%
+                </button>
+                <button class="tip-btn" data-value="0.10" data-percent>
+                  10%
+                </button>
+                <button class="tip-btn" data-value="0.15" data-percent>
+                  15%
+                </button>
 
-                <button class="tip-btn" data-percent>25%</button>
-                <button class="tip-btn" data-percent>50%</button>
+                <button class="tip-btn" data-value="0.25" data-percent>
+                  25%
+                </button>
+                <button class="tip-btn" data-value="0.5" data-percent>
+                  50%
+                </button>
                 <input
                   data-percent-input
                   type="text"

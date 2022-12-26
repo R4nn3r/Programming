@@ -1,5 +1,10 @@
 /* Class */
-class Calculator {}
+class Calculator {
+  constructor(tipAmount, totalAmount) {
+    this.tipAmount = tipAmount;
+    this.totalAmount = totalAmount;
+  }
+}
 
 /* Selectors */
 const billInput = document.querySelector("[data-bill-input]");
@@ -15,3 +20,10 @@ const resetButton = document.querySelector("[data-reset]");
 
 /* Creating an object from the class */
 const calculator = new Calculator();
+
+/* percentile's */
+percent.forEach((per) => {
+  per.addEventListener("click", (e) => {
+    console.log(e.target.dataset.value);
+  });
+});
