@@ -77,6 +77,10 @@ svg {
   }
 }
 
+.selected {
+  background-color: var(--accent) !important;
+}
+
 // General styles
 body {
   background-color: var(--neu-bg);
