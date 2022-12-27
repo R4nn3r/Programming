@@ -12,6 +12,65 @@ Type of data structure :
             Elements are arranged in one-many, many-one and many-many dimensions.
             Example: tree, graph, table, etc.
 
+# Object-Oriented Programming
+    - What are the Goals, Principles and Patterns?
+
+
+    [Main Concept's]
+        - Class 
+                : blueprint, prototype from which the objects are being created.
+
+                class ClassName:
+                    # Statement-1
+                    .
+                    .
+                    .
+                    # Statement-N
+
+        - Objects
+                : an entity that has a state and behavior associated with the class.
+            -> Consists of 
+                - state, identity, behavior
+
+            [Nb]
+                -The Self 
+                    : first argument to be passed in Constructor and Instance Method.
+
+        - Inheritance
+                :Inheritance is the capability of one class to derive or inherit the properties from another class
+
+             [Different types of Inheritance:]
+                [Single] inheritance: 
+                    When a child class inherits from only one parent class, it is
+                    called single inheritance. We saw an example above.
+                [Multiple] inheritances: 
+                    When a child class inherits from multiple parent classes, 
+                    it is called multiple inheritances.
+                [Multilevel] Inheritance:
+                    the base class and the derived class are further inherited into the new 
+                    derived class. This is similar to a relationship representing a child and 
+                    a grandfather. 
+                [Hierarchical] Inheritance: 
+                    more than one derived class are created from a single base this type of 
+                    inheritance is called hierarchical inheritance
+                [Hybrid] Inheritance: 
+
+                syntax:
+                    Class BaseClass:
+                        {Body}
+                    Class DerivedClass(BaseClass):
+                        {Body}
+                    Class DerivedClassTwo(DerivedClass):
+                        {Body}
+
+
+
+        - Encapsulation
+        - Polymorphism
+        - Data Abstraction
+
+    
+        
 # Array & Hashing
     
     # Array [List]
@@ -33,7 +92,6 @@ Type of data structure :
             -> Set's    , set = {1,2,2} 
 
     # Hashing 
-
 
 # Recursion
 
