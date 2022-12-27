@@ -294,8 +294,7 @@
         # (Having duplicate values)
             List = [1, 2, 4, 4, 3, 3, 3, 6, 5]
             
-        # mixed type of values
-        # (Having numbers and strings)
+        # mixed type of values (Having numbers and strings)
             List = [1, 2, 'Geeks', 4, 'For', 6, 'Geeks']
             
             -> How to find the size of the list?
@@ -309,7 +308,7 @@
                         for i in range(len(fruits)):
                             print(fruits[i])
                             
-            -> Using append() method
+        -> Using append() method
             Elements can be added to the List by using the built-in append() function. Only one 
             element at a time can be added to the list by using the append() method, for the addition
             of multiple elements with the append() method, loops are used
@@ -319,19 +318,19 @@
                         fruits.append('Pineapple')
 
                             
-            -> Using insert() method
+        -> Using insert() method
             insert() method is used. Unlike append() which takes only one argument, the insert()
             method requires two arguments(position, value).
 
                         fruits.insert(0, 'Pine')
                         fruits.insert(1, 'Papaye')
-            -> Using extend() method
+        -> Using extend() method
             extend(), this method is used to add multiple elements at the same time at the 
             end of the list.
 
                         fruits.extend(['one', 'two', 'three'])
                 
-            -> Accessing elements from the List
+        -> Accessing elements from the List
             In order to access the list items refer to the index number. Use the index operator [ ] 
             to access an item in a list. The index must be an integer. Nested lists are accessed 
             using nested indexing.    
@@ -347,11 +346,11 @@
                         for i in range(len(fruits)):
                             print(fruits[-i])
                             
-            -> Using remove() method
+        -> Using remove() method
             Elements can be removed from the List by using the built-in remove() function but an 
             Error arises if the element doesn’t exist in the list.
             
-            -> Using pop() method
+        -> Using pop() method
             Pop() function can also be used to remove and return an element from the list, but by 
             default it removes only the last element of the list, to remove an element from a 
             specific position of the List, the index of the element is passed as an argument to 

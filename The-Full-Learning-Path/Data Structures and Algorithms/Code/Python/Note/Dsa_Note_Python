@@ -15,7 +15,24 @@ Type of data structure :
 # Array & Hashing
     
     # Array [List]
-        
+        [Things To know]
+            -> List's are mutable and tuple's are immutable
+                " mutable object is an object whose state can be modified after it is defined."
+
+                    Examples,
+                        Mutable -> List, Dict, set, Custom Class
+                        Immutable [easier code to debug] -> strings, tuple, frozenset([1,2,3,])
+
+            -> Methods in List 
+                -   list.append, list.extend, list.insert(i, x), 
+                    list.remove, list.pop, list.clear, list.index(x [, start[, end]])
+                    list.count, list.sort, list.reverse, list.copy 
+
+        [Other sequence data types that are similar]
+            -> Tuple's , tuple = (1,2,3,4,5, "cat")
+            -> Set's    , set = {1,2,2} 
+
+    # Hashing 
 
 
 # Recursion
