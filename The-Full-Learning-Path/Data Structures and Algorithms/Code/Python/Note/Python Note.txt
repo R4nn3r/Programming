@@ -1556,9 +1556,6 @@
                 - Abstraction 
                 - Encapsulation 
 
-
-
-
     - Objects (instance)
         Object is an instance of a Class. A class is like a blueprint while an instance 
         is a copy of the class with actual values. 
@@ -1698,7 +1695,6 @@
             if __name__ == "__main__":
                 main()
 
-
     - Inheritance
         Inheritance is the capability of one class to derive or inherit the properties 
         from another class
@@ -1831,7 +1827,6 @@
                 import file_name 
 
 
-
     NOTE::: 
     - Styling Classes
             #   Class names should be written in CamelCase
@@ -1844,8 +1839,6 @@
     - Overloading methods
            https://www.youtube.com/watch?v=sxTmJE4k0ho ->(03:03:13)
       
-
-
     - Static and class methods 
         class methods 
             Thus are Decorators that used for special methods 
@@ -1895,9 +1888,6 @@
 
         class name:         -> public
             // class code
-
-
-       
 
     - Setters and Getters 
             - decorators 

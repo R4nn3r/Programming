@@ -17,14 +17,14 @@ class stu(teacher):
         self._gpa = gpa
 
     def get_name(self):
-        return self._name
+        return self._Id
 
 
 per1 = person("Glow Bob", 50, "M")
 
 tech1 = teacher("Floyd.M",38, "M", "101/Tech", "Computer Engineering")
 
-stu1 = stu("Yonatan Afewerk", 22, "M", "917/13", "Software engineering", 4.00)
+stu1 = stu("Yonatan Afewerk", 22, "M", "917/SWE", "Software engineering", 4.00)
 
 
 
