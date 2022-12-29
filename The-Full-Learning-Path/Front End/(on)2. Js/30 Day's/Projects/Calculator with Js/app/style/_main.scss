@@ -1,0 +1,66 @@
+.main {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  .calc-grid {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.107);
+    display: grid;
+    margin: 30px;
+
+    /* Grid Design */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-max(1fr, auto) repeat(5, 1fr);
+
+    .output {
+      border-radius: 5px 5px 0 0;
+      grid-column: 1 / -1;
+      padding: 10px;
+      min-height: 100px;
+      border: 2px solid rgba(0, 0, 0, 0.15);
+      background-color: rgba(0, 0, 0, 0.75);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-around;
+      word-wrap: break-word;
+      word-break: break-all;
+
+      /* Output Screen  */
+      &__previous-operand {
+        color: rgb(204, 204, 204);
+        padding: 5px;
+      }
+      &__current-operand {
+        font-size: 2rem;
+        font-weight: 900;
+        padding: 5px;
+      }
+    }
+    /* Button's */
+    button {
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.75rem;
+      border: 2px solid white;
+      background-color: rgba(255, 255, 255, 0.75);
+
+      /* Interaction */
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: #bb00ff19;
+        color: white;
+      }
+    }
+  }
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.bold {
+  font-family: cursive;
+  font-weight: 900;
+}
