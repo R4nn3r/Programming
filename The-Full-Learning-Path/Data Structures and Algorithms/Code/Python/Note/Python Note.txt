@@ -2028,7 +2028,7 @@
 
 
 📘 Intermediate Python 📘
-
+ 
 # Optional Parameters
 # Static and Class Methods
 # Map Function
