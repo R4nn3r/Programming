@@ -1,1 +1,190 @@
 # Learn Java
+
+    System is a built-in Java class that contains useful members, such as out, which is short for "output". The println() method, short for "print line", is used to print a value to the screen (or a file).
+
+# Output 
+    print()
+    println()
+
+# Variables 
+        String 
+            - stores text, such as "Hello". String values are surrounded by double quotes
+        int 
+            - stores integers (whole numbers), without decimals, such as 123 or -123
+        float 
+            - stores floating point numbers, with decimals, such as 19.99 or -19.99
+        char 
+            - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+        boolean 
+            - stores values with two states: true or false
+
+
+        Example:
+            int myNum = 5;
+            float myFloatNum = 5.99f;
+            char myLetter = 'D';
+            boolean myBool = true;
+            String myText = "Hello";
+
+
+    # Declaring 
+        - type variableName = value;
+
+                string str = "variable";
+
+       - type variableName;
+                
+                variableName = value;
+    
+    # Final Variables
+        - unchangeable and read-only
+                
+                final int myNum = 15;
+
+    # Casting 
+        Widening Casting (automatically) 
+            - converting a smaller type to a larger type size
+
+            byte -> short -> char -> int -> long -> float -> double
+
+        Narrowing Casting (manually) 
+            - converting a larger type to a smaller size type
+
+            double -> float -> long -> int -> char -> short -> byte
+
+# Operators 
+
+    Arithmetic operators
+    Assignment operators
+    Comparison operators
+    Logical operators
+    Bitwise operators
+
+# Strings 
+    
+    String txt = "hello"
+    String txtSec = "world"
+
+        - txt.length()
+        - txt.toLowerCase() & .toUpperCase()
+        - txt.index("find") 
+
+    # Concatenation 
+    
+        - txt.concat(txtSec)
+
+# Math 
+    
+    - Math.max(x, y) & min(x, y)
+    - Math.sqrt(x)
+    - Math.abs(x)
+    - Math.random(x) 
+        //  returns a random number between 0.0 (inclusive), and 1.0 (exclusive):
+
+# Booleans 
+    - A boolean type is declared with the boolean keyword and can only take the values true or false:
+
+        boolean isJavaFun = true;
+        boolean isFishTasty = false;
+        System.out.println(isJavaFun);     // Outputs true
+        System.out.println(isFishTasty);   // Outputs false
+
+# Conditionals 
+
+    # if 
+        if (condition) {
+            // block of code to be executed if the condition is true
+        }
+
+    # if else 
+        if (condition) {
+            // block of code to be executed if the condition is true
+        } else {
+            // block of code to be executed if the condition is false
+        }
+
+    # else if 
+        if (condition1) {
+            // block of code to be executed if condition1 is true
+        } else if (condition2) {
+            // block of code to be executed if the condition1 is false and condition2 is true
+        } else {
+            // block of code to be executed if the condition1 is false and condition2 is false
+        }
+
+    # Switch 
+
+        switch(expression) {
+            case x:
+                // code block
+                break;
+            case y:
+                // code block
+                break;
+            default:
+                // code block
+        }
+
+    # Ternary operators
+    
+        - varType variable = (condition) ? expressionTrue :  expressionFalse;
+
+# Loop 
+    # While 
+
+        while (condition) {
+            // code block to be executed
+        }
+
+    # For 
+
+        for (statement 1; statement 2; statement 3) {
+            // code block to be executed
+        }
+
+    # Do while 
+
+        do {
+            // code block to be executed
+        }
+        while (condition);
+
+    # For-Each 
+
+        for (type variableName : arrayName) {
+            // code block to be executed
+        }
+
+
+        - Example 
+            String [] cars = {"BMW","Mazda", "Volvo"};
+
+            for (String i : cars){
+                System.out.println(i);
+            }
+
+# Break & Continue
+    - Break 
+
+    - Continue             
+
+# Array 
+
+        String[] cars;
+
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+        - Get the length 
+        int carsLength = cars.length;
+
+
+    # Multidimensional
+
+        int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+
+         for(int i = 0; i < myNumbers.length; i++) {
+            for (int j = 0; j < myNumbers[i].length; j++){
+                System.out.print(myNumbers[i][j] + " ");
+            }
+            System.out.println();
+        }
