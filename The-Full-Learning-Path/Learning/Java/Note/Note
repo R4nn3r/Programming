@@ -188,3 +188,15 @@
             }
             System.out.println();
         }
+
+# Method 
+
+    public class Main{
+        static void myMethod(){
+            System.out.println("myMethod");
+        }
+    }
+
+# Naming 
+    - Classes [PascalNamingConvention]
+    - Methods [camelNamingConvention]

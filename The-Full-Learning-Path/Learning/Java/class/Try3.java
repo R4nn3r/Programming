@@ -2,7 +2,7 @@ public class Try3 {
   public static void main(String[] args) {
 
     // Conditional 
-    int myAge = 25;
+    int myAge = 23;
     int votingAge = 18;
 
 
@@ -31,7 +31,5 @@ public class Try3 {
       }
       System.out.println();
     }
-
-
   }
 }
