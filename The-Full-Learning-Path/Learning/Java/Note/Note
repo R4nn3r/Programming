@@ -1,6 +1,14 @@
 # Learn Java
+    # source code *.java 
+        -> java compiler 
+            
+            => byte bode *.class
 
-    System is a built-in Java class that contains useful members, such as out, which is short for "output". The println() method, short for "print line", is used to print a value to the screen (or a file).
+
+    - System is a built-in Java class that contains useful members, such as out, which is short for "output". The println() method, short for "print line", is used to print a value to the screen (or a file).
+
+
+
 
 # Output 
     print()
@@ -191,9 +199,13 @@
 
 # Method 
 
-    public class Main{
-        static void myMethod(){
-            System.out.println("myMethod");
+    public class Main {
+        static void myMethod() {
+            System.out.println("I just got executed!");
+        }
+
+        public static void main(String[] args) {
+            myMethod();
         }
     }
 
